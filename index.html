@@ -1862,8 +1862,8 @@
        - Never modifies pre-kickoff predictions (P(H), P(D), P(A), PRED, scores, Draw Risk)
        - Only updates: ACTUAL SCORE, MATCH STATUS, and LIVE MINUTE
        ========================================================================== */
-    // Configurable Railway backend URL (can be overridden via window.LIVE_SCORES_API_URL)
-    var LIVE_SCORES_API_URL = (window.LIVE_SCORES_API_URL || 'http://127.0.0.1:8000').replace(/\/+$/, '') + '/api/live-scores';
+    // Configurable Railway backend URL (defaults to production Railway endpoint)
+    var LIVE_SCORES_API_URL = (window.LIVE_SCORES_API_URL || 'https://web-production-d8a09.up.railway.app').replace(/\/+$/, '') + '/api/live-scores';
     var POLLING_INTERVAL_MS = 30000;
     var consecutiveFailures = 0;
     var pollingTimer = null;

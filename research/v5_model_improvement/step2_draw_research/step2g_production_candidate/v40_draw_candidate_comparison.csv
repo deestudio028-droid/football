@@ -1,0 +1,13 @@
+Dataset,Metric,V4.0 Baseline,Draw-Enhanced Candidate,Delta (Candidate - V4.0)
+Historical Training Era (2020/21 - 2024/25),Overall Accuracy (%),52.77,52.73,-0.04
+Historical Training Era (2020/21 - 2024/25),Draw ECE,0.0239,0.0134,-0.0105
+Historical Training Era (2020/21 - 2024/25),Draw Brier Score,0.188244,0.187915,-0.000329
+Historical Training Era (2020/21 - 2024/25),Multiclass Log Loss,0.991588,0.990344,-0.001244
+Untouched Holdout Season (2025/2026),Overall Accuracy (%),51.97,51.86,-0.11
+Untouched Holdout Season (2025/2026),Draw ECE,0.0261,0.012,-0.0141
+Untouched Holdout Season (2025/2026),Draw Brier Score,0.18787,0.18737,-0.0005
+Untouched Holdout Season (2025/2026),Multiclass Log Loss,0.992146,0.990422,-0.001724
+"Full Combined Historical (N=10,734)",Overall Accuracy (%),52.64,52.59,-0.05
+"Full Combined Historical (N=10,734)",Draw ECE,0.0242,0.0129,-0.0113
+"Full Combined Historical (N=10,734)",Draw Brier Score,0.188183,0.187826,-0.000357
+"Full Combined Historical (N=10,734)",Multiclass Log Loss,0.991679,0.990357,-0.001322

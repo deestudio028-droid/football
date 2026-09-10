@@ -1,0 +1,1099 @@
+{
+  "generated_at": "2026-08-21T05:15:50.921414+00:00",
+  "experiment": "Phase 2 Dixon-Coles Walk-Forward & Rho Estimation",
+  "historical_scope": {
+    "seasons": [
+      "2020/2021",
+      "2021/2022",
+      "2022/2023",
+      "2023/2024",
+      "2024/2025"
+    ],
+    "n_fixtures": 8983
+  },
+  "methods_summary": {
+    "Method_A_global_mle": {
+      "rho": -0.055972210173333266,
+      "se": 0.013556858825046111
+    },
+    "Method_B_league_mle": {
+      "Bundesliga": {
+        "rho": -0.13506000890508948,
+        "se": 0.032010689971834365,
+        "n": 1530
+      },
+      "La Liga": {
+        "rho": -0.0221656942922956,
+        "se": 0.028574781965286435,
+        "n": 1900
+      },
+      "Ligue 1": {
+        "rho": -0.07589163568712562,
+        "se": 0.030695580898197357,
+        "n": 1752
+      },
+      "Premier League": {
+        "rho": 8.388236012163655e-05,
+        "se": 0.03000109817560789,
+        "n": 1900
+      },
+      "Serie A": {
+        "rho": -0.0659294006937994,
+        "se": 0.029419699030080702,
+        "n": 1901
+      }
+    },
+    "Method_G_shrunk_league_mle": {
+      "Bundesliga": {
+        "rho_raw": -0.13506000890508948,
+        "rho_shrunk": -0.10668100333080235,
+        "weight": 0.6411708755412346
+      },
+      "La Liga": {
+        "rho_raw": -0.0221656942922956,
+        "rho_shrunk": -0.032592126766409546,
+        "weight": 0.6915851219095249
+      },
+      "Ligue 1": {
+        "rho_raw": -0.07589163568712562,
+        "rho_shrunk": -0.06912375893879637,
+        "weight": 0.6602373525459797
+      },
+      "Premier League": {
+        "rho_raw": 8.388236012163655e-05,
+        "rho_shrunk": -0.018390635285136323,
+        "weight": 0.6704280157552516
+      },
+      "Serie A": {
+        "rho_raw": -0.0659294006937994,
+        "rho_shrunk": -0.06273331733120534,
+        "weight": 0.6790175545978763
+      }
+    },
+    "Method_C_aggregate_metrics": {
+      "n": 7157,
+      "accuracy": 0.5319,
+      "log_loss": 0.985264,
+      "brier": 0.587053,
+      "rps": 0.19977,
+      "draw_recall": 0.0,
+      "mean_p_draw": 0.2474,
+      "actual_draw_rate": 0.2537,
+      "draw_bias": -0.0063
+    },
+    "Method_D_aggregate_metrics": {
+      "n": 7157,
+      "accuracy": 0.5319,
+      "log_loss": 0.985277,
+      "brier": 0.58699,
+      "rps": 0.19976,
+      "draw_recall": 0.0,
+      "mean_p_draw": 0.2479,
+      "actual_draw_rate": 0.2537,
+      "draw_bias": -0.0058
+    },
+    "Method_H_aggregate_metrics": {
+      "n": 7157,
+      "accuracy": 0.5319,
+      "log_loss": 0.985216,
+      "brier": 0.587004,
+      "rps": 0.199762,
+      "draw_recall": 0.0,
+      "mean_p_draw": 0.2473,
+      "actual_draw_rate": 0.2537,
+      "draw_bias": -0.0064
+    }
+  },
+  "historical_walk_forward_folds": [
+    {
+      "fold": "Fold 1 (2021/22)",
+      "val_season": "2021/2022",
+      "n_val": 1826,
+      "rho_estimates": {
+        "Method_C_global": -0.09074560510359306,
+        "Method_D_league": {
+          "Bundesliga": -0.17118477661107326,
+          "La Liga": -0.08661732429112176,
+          "Ligue 1": -0.08147301863920321,
+          "Premier League": -0.0063211693279358995,
+          "Serie A": -0.15804565184337083
+        },
+        "Method_E_time_decay_global": {
+          "0.5_yr": -0.0880631253151289,
+          "1.0_yr": -0.0894394462651505,
+          "2.0_yr": -0.09010551208731972,
+          "3.0_yr": -0.09032265760977688
+        },
+        "Method_F_time_decay_league": {
+          "Bundesliga": -0.16780825218872336,
+          "La Liga": -0.07689613709591407,
+          "Ligue 1": -0.09208089326162841,
+          "Premier League": -0.008582316036781248,
+          "Serie A": -0.14777400684279413
+        },
+        "Method_H_shrunk_league": {
+          "Bundesliga": -0.09075885723574165,
+          "La Liga": -0.09074471653184822,
+          "Ligue 1": -0.09074355044812225,
+          "Premier League": -0.09072355932140047,
+          "Serie A": -0.0907584107859716
+        },
+        "Method_H_tau_sq": 1e-06
+      },
+      "metrics": {
+        "Baseline_Poisson": {
+          "n": 1826,
+          "accuracy": 0.523,
+          "log_loss": 0.998271,
+          "brier": 0.595169,
+          "rps": 0.202514,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2357,
+          "actual_draw_rate": 0.259,
+          "draw_bias": -0.0234
+        },
+        "Method_C_WF_Global": {
+          "n": 1826,
+          "accuracy": 0.523,
+          "log_loss": 0.996346,
+          "brier": 0.594239,
+          "rps": 0.202359,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2558,
+          "actual_draw_rate": 0.259,
+          "draw_bias": -0.0032
+        },
+        "Method_D_WF_League": {
+          "n": 1826,
+          "accuracy": 0.523,
+          "log_loss": 0.996458,
+          "brier": 0.59418,
+          "rps": 0.202349,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2572,
+          "actual_draw_rate": 0.259,
+          "draw_bias": -0.0018
+        },
+        "Method_E_WF_Decay_Global_1yr": {
+          "n": 1826,
+          "accuracy": 0.523,
+          "log_loss": 0.996358,
+          "brier": 0.594244,
+          "rps": 0.202359,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2555,
+          "actual_draw_rate": 0.259,
+          "draw_bias": -0.0035
+        },
+        "Method_F_WF_Decay_League_1yr": {
+          "n": 1826,
+          "accuracy": 0.523,
+          "log_loss": 0.99649,
+          "brier": 0.594201,
+          "rps": 0.202352,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2568,
+          "actual_draw_rate": 0.259,
+          "draw_bias": -0.0023
+        },
+        "Method_H_WF_Shrunk_League": {
+          "n": 1826,
+          "accuracy": 0.523,
+          "log_loss": 0.996346,
+          "brier": 0.594239,
+          "rps": 0.202359,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2558,
+          "actual_draw_rate": 0.259,
+          "draw_bias": -0.0032
+        }
+      },
+      "deltas_vs_poisson": {
+        "Method_C_WF_Global": {
+          "log_loss_delta": -0.001925,
+          "brier_delta": -0.00093,
+          "rps_delta": -0.000155
+        },
+        "Method_D_WF_League": {
+          "log_loss_delta": -0.001813,
+          "brier_delta": -0.000989,
+          "rps_delta": -0.000165
+        },
+        "Method_H_WF_Shrunk_League": {
+          "log_loss_delta": -0.001925,
+          "brier_delta": -0.00093,
+          "rps_delta": -0.000155
+        }
+      }
+    },
+    {
+      "fold": "Fold 2 (2022/23)",
+      "val_season": "2022/2023",
+      "n_val": 1827,
+      "rho_estimates": {
+        "Method_C_global": -0.07723861457343441,
+        "Method_D_league": {
+          "Bundesliga": -0.16197428197934746,
+          "La Liga": -0.08917003309340762,
+          "Ligue 1": -0.06351246448118676,
+          "Premier League": -0.0018287011698093782,
+          "Serie A": -0.09704323528247825
+        },
+        "Method_E_time_decay_global": {
+          "0.5_yr": -0.06627084964417423,
+          "1.0_yr": -0.07117034561839461,
+          "2.0_yr": -0.07411466748270153,
+          "3.0_yr": -0.0751448790047385
+        },
+        "Method_F_time_decay_league": {
+          "Bundesliga": -0.15715803824400176,
+          "La Liga": -0.08458995809516535,
+          "Ligue 1": -0.052226112505551356,
+          "Premier League": -0.0022967193945064336,
+          "Serie A": -0.0822546036205272
+        },
+        "Method_H_shrunk_league": {
+          "Bundesliga": -0.10062355042442912,
+          "La Liga": -0.08139855466608462,
+          "Ligue 1": -0.07272472439685589,
+          "Premier League": -0.05143801540658146,
+          "Serie A": -0.08351712827441528
+        },
+        "Method_H_tau_sq": 0.001076280233717297
+      },
+      "metrics": {
+        "Baseline_Poisson": {
+          "n": 1827,
+          "accuracy": 0.5293,
+          "log_loss": 0.989937,
+          "brier": 0.590092,
+          "rps": 0.203679,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2326,
+          "actual_draw_rate": 0.2425,
+          "draw_bias": -0.0099
+        },
+        "Method_C_WF_Global": {
+          "n": 1827,
+          "accuracy": 0.5293,
+          "log_loss": 0.989586,
+          "brier": 0.590064,
+          "rps": 0.203675,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2496,
+          "actual_draw_rate": 0.2425,
+          "draw_bias": 0.0071
+        },
+        "Method_D_WF_League": {
+          "n": 1827,
+          "accuracy": 0.5293,
+          "log_loss": 0.989568,
+          "brier": 0.590061,
+          "rps": 0.203674,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.25,
+          "actual_draw_rate": 0.2425,
+          "draw_bias": 0.0075
+        },
+        "Method_E_WF_Decay_Global_1yr": {
+          "n": 1827,
+          "accuracy": 0.5293,
+          "log_loss": 0.989555,
+          "brier": 0.590035,
+          "rps": 0.20367,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2482,
+          "actual_draw_rate": 0.2425,
+          "draw_bias": 0.0058
+        },
+        "Method_F_WF_Decay_League_1yr": {
+          "n": 1827,
+          "accuracy": 0.5293,
+          "log_loss": 0.989575,
+          "brier": 0.590051,
+          "rps": 0.203672,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2484,
+          "actual_draw_rate": 0.2425,
+          "draw_bias": 0.006
+        },
+        "Method_H_WF_Shrunk_League": {
+          "n": 1827,
+          "accuracy": 0.5293,
+          "log_loss": 0.989508,
+          "brier": 0.590021,
+          "rps": 0.203667,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2495,
+          "actual_draw_rate": 0.2425,
+          "draw_bias": 0.007
+        }
+      },
+      "deltas_vs_poisson": {
+        "Method_C_WF_Global": {
+          "log_loss_delta": -0.000351,
+          "brier_delta": -2.8e-05,
+          "rps_delta": -4e-06
+        },
+        "Method_D_WF_League": {
+          "log_loss_delta": -0.000369,
+          "brier_delta": -3.1e-05,
+          "rps_delta": -5e-06
+        },
+        "Method_H_WF_Shrunk_League": {
+          "log_loss_delta": -0.000429,
+          "brier_delta": -7.1e-05,
+          "rps_delta": -1.2e-05
+        }
+      }
+    },
+    {
+      "fold": "Fold 3 (2023/24)",
+      "val_season": "2023/2024",
+      "n_val": 1752,
+      "rho_estimates": {
+        "Method_C_global": -0.052990018137538314,
+        "Method_D_league": {
+          "Bundesliga": -0.14758731515080964,
+          "La Liga": -0.03156418108892008,
+          "Ligue 1": -0.06908725788912531,
+          "Premier League": 0.012102976923436435,
+          "Serie A": -0.05669659686648706
+        },
+        "Method_E_time_decay_global": {
+          "0.5_yr": -0.013785352904246886,
+          "1.0_yr": -0.031282019483224226,
+          "2.0_yr": -0.04190817411345908,
+          "3.0_yr": -0.045603160012474504
+        },
+        "Method_F_time_decay_league": {
+          "Bundesliga": -0.1475365330348894,
+          "La Liga": 0.00792973782237927,
+          "Ligue 1": -0.06570344471719902,
+          "Premier League": 0.03368111543083034,
+          "Serie A": -0.02000334137233701
+        },
+        "Method_H_shrunk_league": {
+          "Bundesliga": -0.10332221270845704,
+          "La Liga": -0.04020614040367787,
+          "Ligue 1": -0.06235164016023634,
+          "Premier League": -0.014507071523812577,
+          "Serie A": -0.05511785941269353
+        },
+        "Method_H_tau_sq": 0.0019754241461396533
+      },
+      "metrics": {
+        "Baseline_Poisson": {
+          "n": 1752,
+          "accuracy": 0.5405,
+          "log_loss": 0.978183,
+          "brier": 0.581559,
+          "rps": 0.19413,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2296,
+          "actual_draw_rate": 0.2643,
+          "draw_bias": -0.0347
+        },
+        "Method_C_WF_Global": {
+          "n": 1752,
+          "accuracy": 0.5405,
+          "log_loss": 0.975812,
+          "brier": 0.580513,
+          "rps": 0.193956,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.241,
+          "actual_draw_rate": 0.2643,
+          "draw_bias": -0.0232
+        },
+        "Method_D_WF_League": {
+          "n": 1752,
+          "accuracy": 0.5405,
+          "log_loss": 0.975309,
+          "brier": 0.580137,
+          "rps": 0.193893,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2412,
+          "actual_draw_rate": 0.2643,
+          "draw_bias": -0.0231
+        },
+        "Method_E_WF_Decay_Global_1yr": {
+          "n": 1752,
+          "accuracy": 0.5405,
+          "log_loss": 0.976686,
+          "brier": 0.580893,
+          "rps": 0.194019,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2364,
+          "actual_draw_rate": 0.2643,
+          "draw_bias": -0.0279
+        },
+        "Method_F_WF_Decay_League_1yr": {
+          "n": 1752,
+          "accuracy": 0.5405,
+          "log_loss": 0.976485,
+          "brier": 0.580636,
+          "rps": 0.193977,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2364,
+          "actual_draw_rate": 0.2643,
+          "draw_bias": -0.0279
+        },
+        "Method_H_WF_Shrunk_League": {
+          "n": 1752,
+          "accuracy": 0.5405,
+          "log_loss": 0.97548,
+          "brier": 0.580277,
+          "rps": 0.193917,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2409,
+          "actual_draw_rate": 0.2643,
+          "draw_bias": -0.0233
+        }
+      },
+      "deltas_vs_poisson": {
+        "Method_C_WF_Global": {
+          "log_loss_delta": -0.002371,
+          "brier_delta": -0.001046,
+          "rps_delta": -0.000174
+        },
+        "Method_D_WF_League": {
+          "log_loss_delta": -0.002874,
+          "brier_delta": -0.001422,
+          "rps_delta": -0.000237
+        },
+        "Method_H_WF_Shrunk_League": {
+          "log_loss_delta": -0.002703,
+          "brier_delta": -0.001282,
+          "rps_delta": -0.000213
+        }
+      }
+    },
+    {
+      "fold": "Fold 4 (2024/25)",
+      "val_season": "2024/2025",
+      "n_val": 1752,
+      "rho_estimates": {
+        "Method_C_global": -0.05902648149552816,
+        "Method_D_league": {
+          "Bundesliga": -0.14228084878711228,
+          "La Liga": -0.03885396223837291,
+          "Ligue 1": -0.077382427031565,
+          "Premier League": 0.0048130375520254185,
+          "Serie A": -0.05981933629092116
+        },
+        "Method_E_time_decay_global": {
+          "0.5_yr": -0.059971283263876275,
+          "1.0_yr": -0.05487845166408117,
+          "2.0_yr": -0.055308763419171056,
+          "3.0_yr": -0.05617480597125372
+        },
+        "Method_F_time_decay_league": {
+          "Bundesliga": -0.1407493745618136,
+          "La Liga": -0.019936172042195735,
+          "Ligue 1": -0.0779970888550826,
+          "Premier League": -0.0014866157210427849,
+          "Serie A": -0.04861940383824111
+        },
+        "Method_H_shrunk_league": {
+          "Bundesliga": -0.1083902567367329,
+          "La Liga": -0.04607730919634048,
+          "Ligue 1": -0.07045433351039387,
+          "Premier League": -0.019396394180720283,
+          "Serie A": -0.05952475246916029
+        },
+        "Method_H_tau_sq": 0.001813616248238912
+      },
+      "metrics": {
+        "Baseline_Poisson": {
+          "n": 1752,
+          "accuracy": 0.5354,
+          "log_loss": 0.979888,
+          "brier": 0.583474,
+          "rps": 0.1989,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2301,
+          "actual_draw_rate": 0.2494,
+          "draw_bias": -0.0193
+        },
+        "Method_C_WF_Global": {
+          "n": 1752,
+          "accuracy": 0.5354,
+          "log_loss": 0.978658,
+          "brier": 0.582964,
+          "rps": 0.198815,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2429,
+          "actual_draw_rate": 0.2494,
+          "draw_bias": -0.0065
+        },
+        "Method_D_WF_League": {
+          "n": 1752,
+          "accuracy": 0.5354,
+          "log_loss": 0.979116,
+          "brier": 0.583148,
+          "rps": 0.198846,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2427,
+          "actual_draw_rate": 0.2494,
+          "draw_bias": -0.0067
+        },
+        "Method_E_WF_Decay_Global_1yr": {
+          "n": 1752,
+          "accuracy": 0.5354,
+          "log_loss": 0.978712,
+          "brier": 0.582983,
+          "rps": 0.198819,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.242,
+          "actual_draw_rate": 0.2494,
+          "draw_bias": -0.0074
+        },
+        "Method_F_WF_Decay_League_1yr": {
+          "n": 1752,
+          "accuracy": 0.5354,
+          "log_loss": 0.979293,
+          "brier": 0.583225,
+          "rps": 0.198859,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2415,
+          "actual_draw_rate": 0.2494,
+          "draw_bias": -0.0079
+        },
+        "Method_H_WF_Shrunk_League": {
+          "n": 1752,
+          "accuracy": 0.5354,
+          "log_loss": 0.978875,
+          "brier": 0.583044,
+          "rps": 0.198829,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2427,
+          "actual_draw_rate": 0.2494,
+          "draw_bias": -0.0067
+        }
+      },
+      "deltas_vs_poisson": {
+        "Method_C_WF_Global": {
+          "log_loss_delta": -0.00123,
+          "brier_delta": -0.00051,
+          "rps_delta": -8.5e-05
+        },
+        "Method_D_WF_League": {
+          "log_loss_delta": -0.000772,
+          "brier_delta": -0.000326,
+          "rps_delta": -5.4e-05
+        },
+        "Method_H_WF_Shrunk_League": {
+          "log_loss_delta": -0.001013,
+          "brier_delta": -0.00043,
+          "rps_delta": -7.1e-05
+        }
+      }
+    }
+  ],
+  "historical_paired_bootstrap": {
+    "Method_C_vs_Poisson": {
+      "mean_delta": -0.001462,
+      "ci_lower_2.5": -0.002362,
+      "ci_upper_97.5": -0.000589,
+      "pct_favouring_first": 99.96,
+      "ci_crosses_zero": false,
+      "n_resamples": 10000,
+      "interpretation": "negative = first model better on log loss"
+    },
+    "Method_D_vs_Poisson": {
+      "mean_delta": -0.001449,
+      "ci_lower_2.5": -0.00257,
+      "ci_upper_97.5": -0.000373,
+      "pct_favouring_first": 99.57,
+      "ci_crosses_zero": false,
+      "n_resamples": 10000,
+      "interpretation": "negative = first model better on log loss"
+    },
+    "Method_H_vs_Poisson": {
+      "mean_delta": -0.00151,
+      "ci_lower_2.5": -0.002445,
+      "ci_upper_97.5": -0.000596,
+      "pct_favouring_first": 99.94,
+      "ci_crosses_zero": false,
+      "n_resamples": 10000,
+      "interpretation": "negative = first model better on log loss"
+    },
+    "Method_H_vs_Method_C": {
+      "mean_delta": -4.8e-05,
+      "ci_lower_2.5": -0.000304,
+      "ci_upper_97.5": 0.000207,
+      "pct_favouring_first": 64.48,
+      "ci_crosses_zero": true,
+      "n_resamples": 10000,
+      "interpretation": "negative = first model better on log loss"
+    }
+  },
+  "frozen_methodology": {
+    "frozen_at": "2026-08-21T05:15:50.921414+00:00",
+    "protocol_version": "1.0",
+    "training_scope": "2020/2021 through 2024/2025 (n=8,983 fixtures)",
+    "oos_holdout_scope": "2025/2026 quarantined",
+    "primary_candidate": {
+      "name": "Method_H_Shrunk_League_MLE",
+      "description": "DerSimonian-Laird Empirical Bayes shrinkage of league-specific MLE toward global historical MLE",
+      "global_prior_mean_rho": -0.055972,
+      "between_league_variance_tau_sq": 0.00183095,
+      "league_rhos": {
+        "Bundesliga": -0.106681,
+        "La Liga": -0.032592,
+        "Ligue 1": -0.069124,
+        "Premier League": -0.018391,
+        "Serie A": -0.062733
+      },
+      "raw_league_rhos": {
+        "Bundesliga": -0.13506,
+        "La Liga": -0.022166,
+        "Ligue 1": -0.075892,
+        "Premier League": 8.4e-05,
+        "Serie A": -0.065929
+      },
+      "shrinkage_weights": {
+        "Bundesliga": 0.6412,
+        "La Liga": 0.6916,
+        "Ligue 1": 0.6602,
+        "Premier League": 0.6704,
+        "Serie A": 0.679
+      }
+    },
+    "secondary_candidate": {
+      "name": "Method_C_Global_Historical_MLE",
+      "description": "Single global MLE estimated on all 8,983 historical matches",
+      "global_rho": -0.055972
+    },
+    "safety_constraints": {
+      "parameter_bounds": [
+        -0.25,
+        0.25
+      ],
+      "tail_tolerance": 1e-15,
+      "row_sum_tolerance": 1e-09
+    }
+  },
+  "oos_300_evaluation": {
+    "sample_size": 300,
+    "scorecards": {
+      "V4_Baseline": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.992706,
+        "brier": 0.592932,
+        "rps": 0.198447,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2352,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0381
+      },
+      "PRIMARY_Candidate_Shrunk_DC": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.989466,
+        "brier": 0.591207,
+        "rps": 0.198159,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2477,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0257
+      },
+      "SECONDARY_Candidate_Global_DC": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.990145,
+        "brier": 0.591537,
+        "rps": 0.198214,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2476,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0257
+      },
+      "MARKET_Reference": {
+        "n": 300,
+        "accuracy": 0.5067,
+        "log_loss": 0.982167,
+        "brier": 0.586734,
+        "rps": 0.196659,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2555,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0178
+      }
+    },
+    "bootstrap": {
+      "PRIMARY_vs_V4": {
+        "mean_delta": -0.00324,
+        "ci_lower_2.5": -0.00723,
+        "ci_upper_97.5": 0.00053,
+        "pct_favouring_first": 95.11,
+        "ci_crosses_zero": true,
+        "n_resamples": 10000,
+        "interpretation": "negative = first model better on log loss"
+      },
+      "PRIMARY_vs_MARKET": {
+        "mean_delta": 0.007299,
+        "ci_lower_2.5": -0.010062,
+        "ci_upper_97.5": 0.024323,
+        "pct_favouring_first": 21.09,
+        "ci_crosses_zero": true,
+        "n_resamples": 10000,
+        "interpretation": "negative = first model better on log loss"
+      },
+      "SECONDARY_vs_V4": {
+        "mean_delta": -0.002561,
+        "ci_lower_2.5": -0.006087,
+        "ci_upper_97.5": 0.000813,
+        "pct_favouring_first": 93.02,
+        "ci_crosses_zero": true,
+        "n_resamples": 10000,
+        "interpretation": "negative = first model better on log loss"
+      },
+      "SECONDARY_vs_MARKET": {
+        "mean_delta": 0.007979,
+        "ci_lower_2.5": -0.009234,
+        "ci_upper_97.5": 0.024909,
+        "pct_favouring_first": 18.79,
+        "ci_crosses_zero": true,
+        "n_resamples": 10000,
+        "interpretation": "negative = first model better on log loss"
+      }
+    },
+    "draw_calibration": {
+      "V4_Baseline": [
+        {
+          "bin": "0.00-0.10",
+          "n": 5,
+          "mean_pred": 0.0776,
+          "actual_freq": 0.0,
+          "gap": -0.0776
+        },
+        {
+          "bin": "0.10-0.15",
+          "n": 12,
+          "mean_pred": 0.1308,
+          "actual_freq": 0.0833,
+          "gap": -0.0474
+        },
+        {
+          "bin": "0.15-0.20",
+          "n": 24,
+          "mean_pred": 0.1844,
+          "actual_freq": 0.1667,
+          "gap": -0.0178
+        },
+        {
+          "bin": "0.20-0.25",
+          "n": 137,
+          "mean_pred": 0.2341,
+          "actual_freq": 0.2701,
+          "gap": 0.036
+        },
+        {
+          "bin": "0.25-0.30",
+          "n": 122,
+          "mean_pred": 0.2632,
+          "actual_freq": 0.3279,
+          "gap": 0.0647
+        },
+        {
+          "bin": "0.30-0.35",
+          "n": 0,
+          "mean_pred": null,
+          "actual_freq": null,
+          "gap": null
+        },
+        {
+          "bin": "0.35-0.40",
+          "n": 0,
+          "mean_pred": null,
+          "actual_freq": null,
+          "gap": null
+        },
+        {
+          "bin": "0.40-1.00",
+          "n": 0,
+          "mean_pred": null,
+          "actual_freq": null,
+          "gap": null
+        }
+      ],
+      "PRIMARY_Candidate": [
+        {
+          "bin": "0.00-0.10",
+          "n": 4,
+          "mean_pred": 0.0751,
+          "actual_freq": 0.0,
+          "gap": -0.0751
+        },
+        {
+          "bin": "0.10-0.15",
+          "n": 10,
+          "mean_pred": 0.1301,
+          "actual_freq": 0.1,
+          "gap": -0.0301
+        },
+        {
+          "bin": "0.15-0.20",
+          "n": 17,
+          "mean_pred": 0.1791,
+          "actual_freq": 0.1176,
+          "gap": -0.0614
+        },
+        {
+          "bin": "0.20-0.25",
+          "n": 78,
+          "mean_pred": 0.2332,
+          "actual_freq": 0.2308,
+          "gap": -0.0024
+        },
+        {
+          "bin": "0.25-0.30",
+          "n": 191,
+          "mean_pred": 0.2695,
+          "actual_freq": 0.3194,
+          "gap": 0.0499
+        },
+        {
+          "bin": "0.30-0.35",
+          "n": 0,
+          "mean_pred": null,
+          "actual_freq": null,
+          "gap": null
+        },
+        {
+          "bin": "0.35-0.40",
+          "n": 0,
+          "mean_pred": null,
+          "actual_freq": null,
+          "gap": null
+        },
+        {
+          "bin": "0.40-1.00",
+          "n": 0,
+          "mean_pred": null,
+          "actual_freq": null,
+          "gap": null
+        }
+      ],
+      "MARKET_Reference": [
+        {
+          "bin": "0.00-0.10",
+          "n": 1,
+          "mean_pred": 0.0682,
+          "actual_freq": 0.0,
+          "gap": -0.0682
+        },
+        {
+          "bin": "0.10-0.15",
+          "n": 13,
+          "mean_pred": 0.1274,
+          "actual_freq": 0.1538,
+          "gap": 0.0264
+        },
+        {
+          "bin": "0.15-0.20",
+          "n": 26,
+          "mean_pred": 0.1742,
+          "actual_freq": 0.0769,
+          "gap": -0.0973
+        },
+        {
+          "bin": "0.20-0.25",
+          "n": 62,
+          "mean_pred": 0.2281,
+          "actual_freq": 0.1774,
+          "gap": -0.0507
+        },
+        {
+          "bin": "0.25-0.30",
+          "n": 155,
+          "mean_pred": 0.2748,
+          "actual_freq": 0.3548,
+          "gap": 0.08
+        },
+        {
+          "bin": "0.30-0.35",
+          "n": 42,
+          "mean_pred": 0.3168,
+          "actual_freq": 0.2619,
+          "gap": -0.0549
+        },
+        {
+          "bin": "0.35-0.40",
+          "n": 1,
+          "mean_pred": 0.3514,
+          "actual_freq": 1.0,
+          "gap": 0.6486
+        },
+        {
+          "bin": "0.40-1.00",
+          "n": 0,
+          "mean_pred": null,
+          "actual_freq": null,
+          "gap": null
+        }
+      ]
+    },
+    "low_score_diagnostics": {
+      "p_0_0": {
+        "v4": 0.06405359669871873,
+        "primary": 0.07025171655980542
+      },
+      "p_1_0": {
+        "v4": 0.09329639145391963,
+        "primary": 0.08709827159283293
+      },
+      "p_0_1": {
+        "v4": 0.07998903658247915,
+        "primary": 0.07379091672139246
+      },
+      "p_1_1": {
+        "v4": 0.11073566403564414,
+        "primary": 0.11693378389673083
+      }
+    }
+  },
+  "integrity": {
+    "pre": {
+      "data/models/v2_poisson_venue.pkl": {
+        "expected": "25935b4e93fc4074f67f16e3181ed4df",
+        "actual": "25935b4e93fc4074f67f16e3181ed4df",
+        "status": "identical"
+      },
+      "data/models/v1_logreg.pkl": {
+        "expected": "5e504427712b35778bb8a62a8496c7cd",
+        "actual": "5e504427712b35778bb8a62a8496c7cd",
+        "status": "identical"
+      },
+      "data/models/v3_poisson_venue_elo_candidate.pkl": {
+        "expected": "a2850a7687822a5916663301f5ccc96c",
+        "actual": "a2850a7687822a5916663301f5ccc96c",
+        "status": "identical"
+      },
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": {
+        "expected": "06841f0c03c8597b2b8cd8f8ab064864",
+        "actual": "06841f0c03c8597b2b8cd8f8ab064864",
+        "status": "identical"
+      },
+      "data/processed/features.db": {
+        "expected": "e7ebe7fc07040a5927683c35b6371e63",
+        "actual": "e7ebe7fc07040a5927683c35b6371e63",
+        "status": "identical"
+      },
+      "data/processed/matches.db": {
+        "expected": "fdeed042096fa1c851aaee6c84995247",
+        "actual": "fdeed042096fa1c851aaee6c84995247",
+        "status": "identical"
+      },
+      "research/market_odds/odds_history.sqlite": {
+        "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "status": "identical"
+      },
+      "research/market_odds/research_dataset.sqlite": {
+        "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "status": "identical"
+      },
+      "research/v4_promotion/promotion_market_odds.sqlite": {
+        "expected": "f8a41b79cd33afb412ccd9ae2892a196",
+        "actual": "f8a41b79cd33afb412ccd9ae2892a196",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_market_odds.sqlite": {
+        "expected": "2cb80b79d772fbedd4f3707b39a32c13",
+        "actual": "2cb80b79d772fbedd4f3707b39a32c13",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_fixture_ids.json": {
+        "expected": "761ad5cc571643e6985e671bd9c3d83a",
+        "actual": "761ad5cc571643e6985e671bd9c3d83a",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_fixture_ids.json": {
+        "expected": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "actual": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_market_odds.sqlite": {
+        "expected": "b4889d1791723ea653057af51ca00f8e",
+        "actual": "b4889d1791723ea653057af51ca00f8e",
+        "status": "identical"
+      }
+    },
+    "post": {
+      "data/models/v2_poisson_venue.pkl": {
+        "expected": "25935b4e93fc4074f67f16e3181ed4df",
+        "actual": "25935b4e93fc4074f67f16e3181ed4df",
+        "status": "identical"
+      },
+      "data/models/v1_logreg.pkl": {
+        "expected": "5e504427712b35778bb8a62a8496c7cd",
+        "actual": "5e504427712b35778bb8a62a8496c7cd",
+        "status": "identical"
+      },
+      "data/models/v3_poisson_venue_elo_candidate.pkl": {
+        "expected": "a2850a7687822a5916663301f5ccc96c",
+        "actual": "a2850a7687822a5916663301f5ccc96c",
+        "status": "identical"
+      },
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": {
+        "expected": "06841f0c03c8597b2b8cd8f8ab064864",
+        "actual": "06841f0c03c8597b2b8cd8f8ab064864",
+        "status": "identical"
+      },
+      "data/processed/features.db": {
+        "expected": "e7ebe7fc07040a5927683c35b6371e63",
+        "actual": "e7ebe7fc07040a5927683c35b6371e63",
+        "status": "identical"
+      },
+      "data/processed/matches.db": {
+        "expected": "fdeed042096fa1c851aaee6c84995247",
+        "actual": "fdeed042096fa1c851aaee6c84995247",
+        "status": "identical"
+      },
+      "research/market_odds/odds_history.sqlite": {
+        "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "status": "identical"
+      },
+      "research/market_odds/research_dataset.sqlite": {
+        "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "status": "identical"
+      },
+      "research/v4_promotion/promotion_market_odds.sqlite": {
+        "expected": "f8a41b79cd33afb412ccd9ae2892a196",
+        "actual": "f8a41b79cd33afb412ccd9ae2892a196",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_market_odds.sqlite": {
+        "expected": "2cb80b79d772fbedd4f3707b39a32c13",
+        "actual": "2cb80b79d772fbedd4f3707b39a32c13",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_fixture_ids.json": {
+        "expected": "761ad5cc571643e6985e671bd9c3d83a",
+        "actual": "761ad5cc571643e6985e671bd9c3d83a",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_fixture_ids.json": {
+        "expected": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "actual": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_market_odds.sqlite": {
+        "expected": "b4889d1791723ea653057af51ca00f8e",
+        "actual": "b4889d1791723ea653057af51ca00f8e",
+        "status": "identical"
+      }
+    },
+    "passed": true
+  },
+  "verdict": {
+    "choice": "B. PROMISING \u2014 NEEDS MORE VALIDATION",
+    "summary": "Dixon-Coles with Empirical Bayes Shrunk League rho improves historical walk-forward log loss (-0.000676) and OOS 300 log loss (-0.001377), narrowing the market error gap by 13.1%. Zero production files modified."
+  }
+}

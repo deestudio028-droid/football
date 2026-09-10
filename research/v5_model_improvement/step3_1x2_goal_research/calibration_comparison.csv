@@ -1,0 +1,7 @@
+candidate,mean_ece,home_ece,draw_ece,away_ece,log_loss,brier_score
+V4.0 Baseline,0.0266,0.0232,0.0261,0.0306,0.9921,0.5907
+Candidate 1: Temperature Scaling,0.0268,0.024,0.0266,0.0296,0.9922,0.5907
+Candidate 2: Vector Scaling,0.0175,0.0203,0.0108,0.0213,0.9897,0.5898
+Candidate 3: Multinomial Logistic Calibration,0.2005,0.3002,0.0067,0.2947,1.4083,0.8531
+Candidate 4: Platt Calibrated Draw (Step 2D/2E),0.025,0.0322,0.012,0.0309,0.9904,0.5903
+Candidate 5: Coherent Score-Space Bivariate Matrix,0.0219,0.0279,0.01,0.0277,0.9907,0.5904

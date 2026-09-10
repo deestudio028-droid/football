@@ -1,0 +1,25 @@
+{
+  "method_name": "v4_2_draw_resolution_candidate",
+  "method_version": "v4.2-dibp-calibrated-stacking",
+  "frozen_timestamp": "2026-08-22T06:25:00Z",
+  "classification": "SHADOW_RESEARCH_CANDIDATE_ONLY",
+  "parameters": {
+    "use_dibp": true,
+    "dibp_inflation_p": 0.05,
+    "stacking_intercept": 0.245,
+    "stacking_weight_dc": 0.6037,
+    "stacking_weight_elo": 0.4812,
+    "global_fallback_rho": -0.056,
+    "operational_decision_threshold": 0.28,
+    "operational_decision_margin": 0.08
+  },
+  "performance_1301_oos": {
+    "log_loss": 0.9918655405104241,
+    "brier": 0.5911498820678617,
+    "rps": 0.20153580435597032,
+    "draw_ece": 0.009665944270178903,
+    "draw_fix_score": 65.94,
+    "macro_f1_at_theta_028": 0.4584069725711056,
+    "draw_recall_at_theta_028": 36.5558912386707
+  }
+}

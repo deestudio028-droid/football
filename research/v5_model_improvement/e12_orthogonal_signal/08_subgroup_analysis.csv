@@ -1,0 +1,7 @@
+subgroup,n_matches,e10_champion_rps,e10_champion_log_loss,e12_bounded_rps,e12_bounded_log_loss,delta_rps
+High_Elo_Parity_dElo_le_50,1317.0,0.226214,1.073342,0.227048,1.075652,0.000834
+Low_Elo_Parity_dElo_gt_120,3973.0,0.18198,0.920069,0.181478,0.918593,-0.000502
+Low_Expected_Goals_lam_le_240,266.0,0.223735,1.089626,0.224281,1.091363,0.000546
+High_Expected_Goals_lam_gt_300,1732.0,0.167657,0.849556,0.167978,0.850646,0.000321
+Home_Heavy_Favorites,3550.0,0.185173,0.932624,0.18459,0.930739,-0.000583
+Away_Favorites,1961.0,0.203775,0.998632,0.203769,0.998901,-6e-06

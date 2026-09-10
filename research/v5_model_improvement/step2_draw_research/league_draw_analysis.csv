@@ -1,0 +1,6 @@
+League,Matches,Actual Draws,Actual Draw Rate (%),Average P(D) (%),Primary Draw Preds,Draw Recall (%),Draw Precision (%),Draw Binary Brier Score,Draw Binary Log Loss,Draw ECE
+Premier League,2280,537,23.55,21.98,0,0.0,0.0,0.179772,0.544864,0.0157
+La Liga,2280,606,26.58,24.24,0,0.0,0.0,0.192365,0.570569,0.0284
+Serie A,2281,614,26.92,23.13,0,0.0,0.0,0.196283,0.581454,0.038
+Bundesliga,1836,463,25.22,22.07,0,0.0,0.0,0.187776,0.563505,0.0315
+Ligue 1,2057,506,24.6,23.6,0,0.0,0.0,0.184253,0.554657,0.0108

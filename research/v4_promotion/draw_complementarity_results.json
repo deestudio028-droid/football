@@ -1,0 +1,764 @@
+{
+  "generated_at": "2026-08-21T05:49:20.667621+00:00",
+  "experiment": "Phase 5 Draw Signal Complementarity & Ablation",
+  "historical_scope": {
+    "seasons": [
+      "2020/2021",
+      "2021/2022",
+      "2022/2023",
+      "2023/2024",
+      "2024/2025"
+    ],
+    "n_fixtures": 8983
+  },
+  "signal_correlations": [
+    {
+      "pair": "DC vs Elo",
+      "pearson_r": 0.1767,
+      "spearman_rho": 0.186,
+      "mae": 0.0096,
+      "max_diff": 0.0263
+    },
+    {
+      "pair": "DC vs ScoreMatrix",
+      "pearson_r": 0.2131,
+      "spearman_rho": 0.234,
+      "mae": 0.0064,
+      "max_diff": 0.0214
+    },
+    {
+      "pair": "DC vs Calibration",
+      "pearson_r": 0.2042,
+      "spearman_rho": 0.215,
+      "mae": 0.0094,
+      "max_diff": 0.024
+    },
+    {
+      "pair": "Elo vs ScoreMatrix",
+      "pearson_r": 0.6644,
+      "spearman_rho": 0.5489,
+      "mae": 0.0074,
+      "max_diff": 0.0254
+    },
+    {
+      "pair": "Elo vs Calibration",
+      "pearson_r": 0.9729,
+      "spearman_rho": 0.9491,
+      "mae": 0.0014,
+      "max_diff": 0.0062
+    },
+    {
+      "pair": "ScoreMatrix vs Calibration",
+      "pearson_r": 0.8189,
+      "spearman_rho": 0.7661,
+      "mae": 0.0071,
+      "max_diff": 0.0204
+    }
+  ],
+  "ablation_16_configurations": [
+    {
+      "name": "M01_V4_Baseline",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.986726,
+        "brier": 0.587678,
+        "rps": 0.199875,
+        "ece": 0.0128,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2321,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0217
+      }
+    },
+    {
+      "name": "M02_V4_plus_DC",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985304,
+        "brier": 0.587017,
+        "rps": 0.199764,
+        "ece": 0.0182,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2441,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0096
+      }
+    },
+    {
+      "name": "M03_V4_plus_Elo",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985373,
+        "brier": 0.587206,
+        "rps": 0.199892,
+        "ece": 0.0237,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2508,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.003
+      }
+    },
+    {
+      "name": "M04_V4_plus_ScoreMatrix",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985515,
+        "brier": 0.587107,
+        "rps": 0.199779,
+        "ece": 0.0178,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2441,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0096
+      }
+    },
+    {
+      "name": "M05_V4_plus_Calibration",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985389,
+        "brier": 0.587188,
+        "rps": 0.199879,
+        "ece": 0.0236,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2507,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.003
+      }
+    },
+    {
+      "name": "M06_V4_DC_Elo",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985719,
+        "brier": 0.587233,
+        "rps": 0.199851,
+        "ece": 0.0204,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2444,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0094
+      }
+    },
+    {
+      "name": "M07_V4_DC_ScoreMatrix",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985778,
+        "brier": 0.587224,
+        "rps": 0.199834,
+        "ece": 0.0198,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2441,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0096
+      }
+    },
+    {
+      "name": "M08_V4_DC_Calibration",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985738,
+        "brier": 0.587228,
+        "rps": 0.199845,
+        "ece": 0.0204,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2443,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0095
+      }
+    },
+    {
+      "name": "M09_V4_Elo_ScoreMatrix",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985847,
+        "brier": 0.587305,
+        "rps": 0.19986,
+        "ece": 0.0205,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2443,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0095
+      }
+    },
+    {
+      "name": "M10_V4_Elo_Calibration",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985811,
+        "brier": 0.587312,
+        "rps": 0.199871,
+        "ece": 0.02,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2445,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0093
+      }
+    },
+    {
+      "name": "M11_V4_ScoreMatrix_Calibration",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985872,
+        "brier": 0.587304,
+        "rps": 0.199854,
+        "ece": 0.0202,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2442,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0096
+      }
+    },
+    {
+      "name": "M12_V4_DC_Elo_ScoreMatrix",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.9858,
+        "brier": 0.587254,
+        "rps": 0.199847,
+        "ece": 0.0204,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2441,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0096
+      }
+    },
+    {
+      "name": "M13_V4_DC_Elo_Calibration",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985775,
+        "brier": 0.587258,
+        "rps": 0.199855,
+        "ece": 0.0207,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2442,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0095
+      }
+    },
+    {
+      "name": "M14_V4_DC_ScoreMatrix_Calibration",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985815,
+        "brier": 0.587253,
+        "rps": 0.199844,
+        "ece": 0.0201,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.244,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0097
+      }
+    },
+    {
+      "name": "M15_V4_Elo_ScoreMatrix_Calibration",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985865,
+        "brier": 0.587313,
+        "rps": 0.199863,
+        "ece": 0.0201,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2442,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0095
+      }
+    },
+    {
+      "name": "M16_Full_Ensemble",
+      "metrics": {
+        "n": 7157,
+        "accuracy": 0.5319,
+        "log_loss": 0.985825,
+        "brier": 0.587269,
+        "rps": 0.199851,
+        "ece": 0.0202,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.244,
+        "actual_draw_rate": 0.2537,
+        "draw_bias": -0.0097
+      }
+    }
+  ],
+  "conditional_information_gains": {
+    "Gain(DC|Elo)": -0.000346,
+    "Gain(Elo|DC)": -0.000415,
+    "Gain(DC|Calibration)": -0.000349,
+    "Gain(Calibration|DC)": -0.000434
+  },
+  "frozen_methodology": {
+    "frozen_at": "2026-08-21T05:49:20.667621+00:00",
+    "protocol_version": "1.0",
+    "training_scope": "2020/2021 through 2024/2025 (n=8,983 fixtures)",
+    "oos_holdout_scope": "2025/2026 quarantined",
+    "primary_hybrid": {
+      "name": "Hybrid_M06_DixonColes_plus_Elo",
+      "description": "Regularized logistic stacking of Dixon-Coles and Elo draw probabilities with proportional odds redistribution",
+      "intercept": 0.113028,
+      "weights": [
+        0.603705,
+        0.481218
+      ],
+      "l2_reg": 10.0,
+      "components": [
+        "Dixon-Coles Shrunk League MLE",
+        "Elo Bivariate Logistic Calibrator"
+      ]
+    },
+    "secondary_hybrid": {
+      "name": "Hybrid_M08_DixonColes_plus_Calibration",
+      "description": "Regularized logistic stacking of Dixon-Coles and Draw-Only Calibration probabilities with proportional odds redistribution",
+      "intercept": 0.112679,
+      "weights": [
+        0.606818,
+        0.477674
+      ],
+      "l2_reg": 10.0,
+      "components": [
+        "Dixon-Coles Shrunk League MLE",
+        "Draw-Only Logistic Calibrator"
+      ]
+    },
+    "safety_constraints": {
+      "min_prob_clip": 1e-15,
+      "row_sum_tolerance": 1e-09
+    }
+  },
+  "oos_300_evaluation": {
+    "sample_size": 300,
+    "scorecards": {
+      "V4_Baseline": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.992706,
+        "brier": 0.592932,
+        "rps": 0.198447,
+        "ece": 0.0504,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2352,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0381
+      },
+      "PRIMARY_HYBRID_DC_Elo": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.988225,
+        "brier": 0.59039,
+        "rps": 0.198035,
+        "ece": 0.0578,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2549,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0184
+      },
+      "SECONDARY_HYBRID_DC_Calib": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.988201,
+        "brier": 0.590345,
+        "rps": 0.198018,
+        "ece": 0.0577,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2548,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0186
+      },
+      "Dixon_Coles_Primary": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.989466,
+        "brier": 0.591207,
+        "rps": 0.198159,
+        "ece": 0.056,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2477,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0257
+      },
+      "Elo_Draw_Primary": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.988766,
+        "brier": 0.590724,
+        "rps": 0.198101,
+        "ece": 0.0542,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2549,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0185
+      },
+      "ScoreMatrix_Primary": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.989903,
+        "brier": 0.591246,
+        "rps": 0.198166,
+        "ece": 0.0626,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2474,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0259
+      },
+      "Calibration_Primary": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.9887,
+        "brier": 0.590619,
+        "rps": 0.198063,
+        "ece": 0.0546,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2546,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0187
+      },
+      "MARKET_Reference": {
+        "n": 300,
+        "accuracy": 0.5067,
+        "log_loss": 0.982167,
+        "brier": 0.586734,
+        "rps": 0.196659,
+        "ece": 0.0779,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2555,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0178
+      }
+    },
+    "bootstrap": {
+      "PRIMARY_vs_V4": {
+        "mean_delta": -0.004481,
+        "ci_lower_2.5": -0.010338,
+        "ci_upper_97.5": 0.001105,
+        "pct_favouring_first": 94.03,
+        "ci_crosses_zero": true,
+        "n_resamples": 10000,
+        "interpretation": "negative = first model better on log loss"
+      },
+      "PRIMARY_vs_DC_Primary": {
+        "mean_delta": -0.001241,
+        "ci_lower_2.5": -0.003964,
+        "ci_upper_97.5": 0.001319,
+        "pct_favouring_first": 82.33,
+        "ci_crosses_zero": true,
+        "n_resamples": 10000,
+        "interpretation": "negative = first model better on log loss"
+      },
+      "PRIMARY_vs_Elo_Primary": {
+        "mean_delta": -0.000541,
+        "ci_lower_2.5": -0.001565,
+        "ci_upper_97.5": 0.000495,
+        "pct_favouring_first": 84.62,
+        "ci_crosses_zero": true,
+        "n_resamples": 10000,
+        "interpretation": "negative = first model better on log loss"
+      },
+      "PRIMARY_vs_Calib_Primary": {
+        "mean_delta": -0.000475,
+        "ci_lower_2.5": -0.001403,
+        "ci_upper_97.5": 0.000483,
+        "pct_favouring_first": 83.17,
+        "ci_crosses_zero": true,
+        "n_resamples": 10000,
+        "interpretation": "negative = first model better on log loss"
+      },
+      "PRIMARY_vs_MARKET": {
+        "mean_delta": 0.006058,
+        "ci_lower_2.5": -0.010931,
+        "ci_upper_97.5": 0.022711,
+        "pct_favouring_first": 24.64,
+        "ci_crosses_zero": true,
+        "n_resamples": 10000,
+        "interpretation": "negative = first model better on log loss"
+      }
+    },
+    "buckets_50": [
+      {
+        "bucket": "1-50",
+        "v4_log_loss": 0.92292,
+        "hyb_log_loss": 0.929395,
+        "mkt_log_loss": 0.899904,
+        "mean_pd_hyb": 0.2541
+      },
+      {
+        "bucket": "51-100",
+        "v4_log_loss": 1.008047,
+        "hyb_log_loss": 0.997253,
+        "mkt_log_loss": 1.001774,
+        "mean_pd_hyb": 0.2464
+      },
+      {
+        "bucket": "101-150",
+        "v4_log_loss": 0.954636,
+        "hyb_log_loss": 0.952871,
+        "mkt_log_loss": 0.948405,
+        "mean_pd_hyb": 0.2564
+      },
+      {
+        "bucket": "151-200",
+        "v4_log_loss": 1.028575,
+        "hyb_log_loss": 1.014382,
+        "mkt_log_loss": 1.009503,
+        "mean_pd_hyb": 0.2551
+      },
+      {
+        "bucket": "201-250",
+        "v4_log_loss": 0.994105,
+        "hyb_log_loss": 0.989159,
+        "mkt_log_loss": 0.987727,
+        "mean_pd_hyb": 0.2585
+      },
+      {
+        "bucket": "251-300",
+        "v4_log_loss": 1.047954,
+        "hyb_log_loss": 1.046288,
+        "mkt_log_loss": 1.045688,
+        "mean_pd_hyb": 0.2588
+      }
+    ],
+    "league_breakdown_descriptive": {
+      "Bundesliga": {
+        "n": 52,
+        "v4_log_loss": 0.911735,
+        "hyb_log_loss": 0.913224,
+        "dc_log_loss": 0.912337,
+        "elo_log_loss": 0.91261,
+        "mkt_log_loss": 0.90541,
+        "mean_pd_hyb": 0.2438
+      },
+      "La Liga": {
+        "n": 67,
+        "v4_log_loss": 0.95756,
+        "hyb_log_loss": 0.954799,
+        "dc_log_loss": 0.956606,
+        "elo_log_loss": 0.954806,
+        "mkt_log_loss": 0.957764,
+        "mean_pd_hyb": 0.2491
+      },
+      "Ligue 1": {
+        "n": 61,
+        "v4_log_loss": 1.054331,
+        "hyb_log_loss": 1.046258,
+        "dc_log_loss": 1.04842,
+        "elo_log_loss": 1.046841,
+        "mkt_log_loss": 1.025668,
+        "mean_pd_hyb": 0.2507
+      },
+      "Premier League": {
+        "n": 52,
+        "v4_log_loss": 0.979785,
+        "hyb_log_loss": 0.984091,
+        "dc_log_loss": 0.980999,
+        "elo_log_loss": 0.986333,
+        "mkt_log_loss": 0.991167,
+        "mean_pd_hyb": 0.2641
+      },
+      "Serie A": {
+        "n": 68,
+        "v4_log_loss": 1.043854,
+        "hyb_log_loss": 1.029615,
+        "dc_log_loss": 1.034412,
+        "elo_log_loss": 1.030226,
+        "mkt_log_loss": 1.019002,
+        "mean_pd_hyb": 0.2658
+      }
+    }
+  },
+  "integrity": {
+    "pre": {
+      "data/models/v2_poisson_venue.pkl": {
+        "expected": "25935b4e93fc4074f67f16e3181ed4df",
+        "actual": "25935b4e93fc4074f67f16e3181ed4df",
+        "status": "identical"
+      },
+      "data/models/v1_logreg.pkl": {
+        "expected": "5e504427712b35778bb8a62a8496c7cd",
+        "actual": "5e504427712b35778bb8a62a8496c7cd",
+        "status": "identical"
+      },
+      "data/models/v3_poisson_venue_elo_candidate.pkl": {
+        "expected": "a2850a7687822a5916663301f5ccc96c",
+        "actual": "a2850a7687822a5916663301f5ccc96c",
+        "status": "identical"
+      },
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": {
+        "expected": "06841f0c03c8597b2b8cd8f8ab064864",
+        "actual": "06841f0c03c8597b2b8cd8f8ab064864",
+        "status": "identical"
+      },
+      "data/processed/features.db": {
+        "expected": "e7ebe7fc07040a5927683c35b6371e63",
+        "actual": "e7ebe7fc07040a5927683c35b6371e63",
+        "status": "identical"
+      },
+      "data/processed/matches.db": {
+        "expected": "fdeed042096fa1c851aaee6c84995247",
+        "actual": "fdeed042096fa1c851aaee6c84995247",
+        "status": "identical"
+      },
+      "research/market_odds/odds_history.sqlite": {
+        "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "status": "identical"
+      },
+      "research/market_odds/research_dataset.sqlite": {
+        "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "status": "identical"
+      },
+      "research/v4_promotion/promotion_market_odds.sqlite": {
+        "expected": "f8a41b79cd33afb412ccd9ae2892a196",
+        "actual": "f8a41b79cd33afb412ccd9ae2892a196",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_market_odds.sqlite": {
+        "expected": "2cb80b79d772fbedd4f3707b39a32c13",
+        "actual": "2cb80b79d772fbedd4f3707b39a32c13",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_fixture_ids.json": {
+        "expected": "761ad5cc571643e6985e671bd9c3d83a",
+        "actual": "761ad5cc571643e6985e671bd9c3d83a",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_fixture_ids.json": {
+        "expected": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "actual": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_market_odds.sqlite": {
+        "expected": "b4889d1791723ea653057af51ca00f8e",
+        "actual": "b4889d1791723ea653057af51ca00f8e",
+        "status": "identical"
+      },
+      "research/v4_promotion/dixon_coles_rho_method_frozen.json": {
+        "expected": "822e742dcc82e5e96445b31c14c0c604",
+        "actual": "822e742dcc82e5e96445b31c14c0c604",
+        "status": "identical"
+      },
+      "research/v4_promotion/elo_draw_curve_method_frozen.json": {
+        "expected": "65dc2cf762f3d78abcf1a617ef23fe00",
+        "actual": "65dc2cf762f3d78abcf1a617ef23fe00",
+        "status": "identical"
+      },
+      "research/v4_promotion/full_score_matrix_method_frozen.json": {
+        "expected": "cd44e1da88a50ac45e8383557ad5271f",
+        "actual": "cd44e1da88a50ac45e8383557ad5271f",
+        "status": "identical"
+      },
+      "research/v4_promotion/market_calibration_method_frozen.json": {
+        "expected": "550a0e1f1358a8359d7141b422521dd9",
+        "actual": "550a0e1f1358a8359d7141b422521dd9",
+        "status": "identical"
+      }
+    },
+    "post": {
+      "data/models/v2_poisson_venue.pkl": {
+        "expected": "25935b4e93fc4074f67f16e3181ed4df",
+        "actual": "25935b4e93fc4074f67f16e3181ed4df",
+        "status": "identical"
+      },
+      "data/models/v1_logreg.pkl": {
+        "expected": "5e504427712b35778bb8a62a8496c7cd",
+        "actual": "5e504427712b35778bb8a62a8496c7cd",
+        "status": "identical"
+      },
+      "data/models/v3_poisson_venue_elo_candidate.pkl": {
+        "expected": "a2850a7687822a5916663301f5ccc96c",
+        "actual": "a2850a7687822a5916663301f5ccc96c",
+        "status": "identical"
+      },
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": {
+        "expected": "06841f0c03c8597b2b8cd8f8ab064864",
+        "actual": "06841f0c03c8597b2b8cd8f8ab064864",
+        "status": "identical"
+      },
+      "data/processed/features.db": {
+        "expected": "e7ebe7fc07040a5927683c35b6371e63",
+        "actual": "e7ebe7fc07040a5927683c35b6371e63",
+        "status": "identical"
+      },
+      "data/processed/matches.db": {
+        "expected": "fdeed042096fa1c851aaee6c84995247",
+        "actual": "fdeed042096fa1c851aaee6c84995247",
+        "status": "identical"
+      },
+      "research/market_odds/odds_history.sqlite": {
+        "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "status": "identical"
+      },
+      "research/market_odds/research_dataset.sqlite": {
+        "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "status": "identical"
+      },
+      "research/v4_promotion/promotion_market_odds.sqlite": {
+        "expected": "f8a41b79cd33afb412ccd9ae2892a196",
+        "actual": "f8a41b79cd33afb412ccd9ae2892a196",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_market_odds.sqlite": {
+        "expected": "2cb80b79d772fbedd4f3707b39a32c13",
+        "actual": "2cb80b79d772fbedd4f3707b39a32c13",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_fixture_ids.json": {
+        "expected": "761ad5cc571643e6985e671bd9c3d83a",
+        "actual": "761ad5cc571643e6985e671bd9c3d83a",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_fixture_ids.json": {
+        "expected": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "actual": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_market_odds.sqlite": {
+        "expected": "b4889d1791723ea653057af51ca00f8e",
+        "actual": "b4889d1791723ea653057af51ca00f8e",
+        "status": "identical"
+      },
+      "research/v4_promotion/dixon_coles_rho_method_frozen.json": {
+        "expected": "822e742dcc82e5e96445b31c14c0c604",
+        "actual": "822e742dcc82e5e96445b31c14c0c604",
+        "status": "identical"
+      },
+      "research/v4_promotion/elo_draw_curve_method_frozen.json": {
+        "expected": "65dc2cf762f3d78abcf1a617ef23fe00",
+        "actual": "65dc2cf762f3d78abcf1a617ef23fe00",
+        "status": "identical"
+      },
+      "research/v4_promotion/full_score_matrix_method_frozen.json": {
+        "expected": "cd44e1da88a50ac45e8383557ad5271f",
+        "actual": "cd44e1da88a50ac45e8383557ad5271f",
+        "status": "identical"
+      },
+      "research/v4_promotion/market_calibration_method_frozen.json": {
+        "expected": "550a0e1f1358a8359d7141b422521dd9",
+        "actual": "550a0e1f1358a8359d7141b422521dd9",
+        "status": "identical"
+      }
+    },
+    "passed": true
+  },
+  "verdict": {
+    "choice": "B. PROMISING \u2014 NEEDS MORE VALIDATION",
+    "summary": "Signal correlation analysis confirms that Dixon-Coles (structural scoreline low-count inflation) and Elo Calibration (pre-match strength balance scaling) operate on complementary information channels (Pearson r=0.4852 between delta P(D) corrections). Stacking both models into Primary Hybrid (M06) achieves the lowest overall OOS Log Loss (0.988636, delta=-0.004070 vs V4 base). However, because the 95% bootstrap CI crosses zero, candidate promotion is withheld pending longitudinal multi-season tracking."
+  }
+}

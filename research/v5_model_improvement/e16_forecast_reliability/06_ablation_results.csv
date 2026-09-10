@@ -1,0 +1,10 @@
+ablation_arm,description,spearman_corr,pearson_corr,mae_expected_rps,calibration_slope,calibration_intercept,roc_auc_top1_correctness,brier_score,draw_ece
+ARM_A_Pure_E10,Pure E10 Frozen Benchmark (No Reliability Layer),0.0,0.0,0.093021,0.0,0.199489,0.5,0.585881,0.0069
+ARM_B_Entropy_Only,ARM B Entropy Only,0.4299,0.2621,0.086551,1.0064,-0.000618,0.6245,0.2441,0.0069
+ARM_C_E15_Risk_Signal,ARM C E15 Risk Signal,0.4244,0.2544,0.086319,0.9289,0.015359,0.6244,0.2442,0.0069
+ARM_D_Prediction_Geometry,ARM D Prediction Geometry,0.4151,0.2448,0.087004,0.9233,0.015494,0.6185,0.2445,0.0069
+ARM_E_Elo_Parity,ARM E Elo Parity,0.346,0.2304,0.08692,0.8766,0.027868,0.6047,0.2465,0.0069
+ARM_F_Combined_All,ARM F Combined All,0.4109,0.2558,0.086771,0.9425,0.011732,0.6158,0.244,0.0069
+ARM_G_Best_Calibrated,ARM G Best Calibrated,0.4078,0.2443,0.085066,0.5939,0.081849,0.6129,0.2437,0.0069
+ARM_H_Analytical,ARM H Analytical,0.4428,0.2707,0.091494,1.9353,-0.206012,0.6314,0.2447,0.0069
+ARM_I_Selective_Prediction_90pct,Selective Forecasting @ 90% Coverage (Discard Lowest Reliability 10%),0.252,0.2612,0.197163,1.0,0.0,0.638,0.580098,0.008

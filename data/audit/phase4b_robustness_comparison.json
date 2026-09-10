@@ -1,0 +1,3223 @@
+{
+  "phase": "4B_regularization_sensitivity",
+  "sklearn_version": "1.9.0",
+  "python_version": "3.13.14",
+  "n_total_labeled_rows": 10734,
+  "C_grid": [
+    0.01,
+    0.1,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    10.0,
+    100.0
+  ],
+  "v1_C_value": 1.0,
+  "logreg_base_kwargs": {
+    "max_iter": 2000,
+    "random_state": 0
+  },
+  "models_studied": {
+    "model_a": 44,
+    "model_b": 80
+  },
+  "feature_columns": {
+    "model_a": [
+      "home_goals_for_per_match_last5",
+      "home_goals_against_per_match_last5",
+      "home_goals_diff_last5",
+      "home_goals_for_per_match_last10",
+      "home_goals_against_per_match_last10",
+      "home_goals_diff_last10",
+      "home_goals_for_per_match_season",
+      "home_goals_against_per_match_season",
+      "home_goals_diff_season",
+      "away_goals_for_per_match_last5",
+      "away_goals_against_per_match_last5",
+      "away_goals_diff_last5",
+      "away_goals_for_per_match_last10",
+      "away_goals_against_per_match_last10",
+      "away_goals_diff_last10",
+      "away_goals_for_per_match_season",
+      "away_goals_against_per_match_season",
+      "away_goals_diff_season",
+      "home_points_last5",
+      "home_win_rate_last5",
+      "home_draw_rate_last5",
+      "home_loss_rate_last5",
+      "home_goal_diff_last5",
+      "home_points_last10",
+      "home_win_rate_last10",
+      "home_draw_rate_last10",
+      "home_loss_rate_last10",
+      "home_goal_diff_last10",
+      "away_points_last5",
+      "away_win_rate_last5",
+      "away_draw_rate_last5",
+      "away_loss_rate_last5",
+      "away_goal_diff_last5",
+      "away_points_last10",
+      "away_win_rate_last10",
+      "away_draw_rate_last10",
+      "away_loss_rate_last10",
+      "away_goal_diff_last10",
+      "home_attack_strength_score",
+      "home_defence_strength_score",
+      "away_attack_strength_score",
+      "away_defence_strength_score",
+      "strength_diff",
+      "competition_id"
+    ],
+    "model_b": [
+      "home_goals_for_per_match_last5",
+      "home_goals_against_per_match_last5",
+      "home_goals_diff_last5",
+      "home_goals_for_per_match_last10",
+      "home_goals_against_per_match_last10",
+      "home_goals_diff_last10",
+      "home_goals_for_per_match_season",
+      "home_goals_against_per_match_season",
+      "home_goals_diff_season",
+      "away_goals_for_per_match_last5",
+      "away_goals_against_per_match_last5",
+      "away_goals_diff_last5",
+      "away_goals_for_per_match_last10",
+      "away_goals_against_per_match_last10",
+      "away_goals_diff_last10",
+      "away_goals_for_per_match_season",
+      "away_goals_against_per_match_season",
+      "away_goals_diff_season",
+      "home_points_last5",
+      "home_win_rate_last5",
+      "home_draw_rate_last5",
+      "home_loss_rate_last5",
+      "home_goal_diff_last5",
+      "home_points_last10",
+      "home_win_rate_last10",
+      "home_draw_rate_last10",
+      "home_loss_rate_last10",
+      "home_goal_diff_last10",
+      "away_points_last5",
+      "away_win_rate_last5",
+      "away_draw_rate_last5",
+      "away_loss_rate_last5",
+      "away_goal_diff_last5",
+      "away_points_last10",
+      "away_win_rate_last10",
+      "away_draw_rate_last10",
+      "away_loss_rate_last10",
+      "away_goal_diff_last10",
+      "home_attack_strength_score",
+      "home_defence_strength_score",
+      "away_attack_strength_score",
+      "away_defence_strength_score",
+      "strength_diff",
+      "competition_id",
+      "home_shots_for_per_match_last5",
+      "home_shots_against_per_match_last5",
+      "home_shots_diff_last5",
+      "home_shots_for_per_match_last10",
+      "home_shots_against_per_match_last10",
+      "home_shots_diff_last10",
+      "home_shots_for_per_match_season",
+      "home_shots_against_per_match_season",
+      "home_shots_diff_season",
+      "away_shots_for_per_match_last5",
+      "away_shots_against_per_match_last5",
+      "away_shots_diff_last5",
+      "away_shots_for_per_match_last10",
+      "away_shots_against_per_match_last10",
+      "away_shots_diff_last10",
+      "away_shots_for_per_match_season",
+      "away_shots_against_per_match_season",
+      "away_shots_diff_season",
+      "home_shots_on_for_per_match_last5",
+      "home_shots_on_against_per_match_last5",
+      "home_shots_on_diff_last5",
+      "home_shots_on_for_per_match_last10",
+      "home_shots_on_against_per_match_last10",
+      "home_shots_on_diff_last10",
+      "home_shots_on_for_per_match_season",
+      "home_shots_on_against_per_match_season",
+      "home_shots_on_diff_season",
+      "away_shots_on_for_per_match_last5",
+      "away_shots_on_against_per_match_last5",
+      "away_shots_on_diff_last5",
+      "away_shots_on_for_per_match_last10",
+      "away_shots_on_against_per_match_last10",
+      "away_shots_on_diff_last10",
+      "away_shots_on_for_per_match_season",
+      "away_shots_on_against_per_match_season",
+      "away_shots_on_diff_season"
+    ]
+  },
+  "protocol": {
+    "folds": "3 approved walk-forward folds only; 2025/26 never loaded or evaluated",
+    "basis": "mean validation log loss across folds 1-3",
+    "purpose": "robustness check of the Phase 4A A->B result; NOT model selection"
+  },
+  "phase4a_equivalence_at_C1": {
+    "tolerance": 1e-09,
+    "checks": {
+      "model_a": {
+        "phase4a_recorded": 1.004013383939449,
+        "phase4b_at_C1": 1.004013383939449,
+        "abs_difference": 0.0,
+        "match": true
+      },
+      "model_b": {
+        "phase4a_recorded": 0.9993791056968738,
+        "phase4b_at_C1": 0.9993791056968738,
+        "abs_difference": 0.0,
+        "match": true
+      }
+    },
+    "all_match": true
+  },
+  "cell_records": [
+    {
+      "model": "model_a",
+      "C": 0.01,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.009366146536019,
+      "brier": 0.6037737044950334,
+      "macro_f1": 0.3846773951871498,
+      "balanced_accuracy": 0.4411769470306653,
+      "accuracy": 0.5150519978106185,
+      "confusion_matrix": [
+        [
+          628,
+          3,
+          204
+        ],
+        [
+          263,
+          3,
+          177
+        ],
+        [
+          234,
+          5,
+          310
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_a",
+      "C": 0.1,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.012171923759015,
+      "brier": 0.6054565668584232,
+      "macro_f1": 0.3858189628110731,
+      "balanced_accuracy": 0.4384359012673194,
+      "accuracy": 0.5101258894362343,
+      "confusion_matrix": [
+        [
+          617,
+          8,
+          210
+        ],
+        [
+          263,
+          6,
+          174
+        ],
+        [
+          231,
+          9,
+          309
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_a",
+      "C": 0.25,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0125107680579195,
+      "brier": 0.6056215780048746,
+      "macro_f1": 0.3879583820482573,
+      "balanced_accuracy": 0.4372582133056743,
+      "accuracy": 0.5084838533114395,
+      "confusion_matrix": [
+        [
+          616,
+          9,
+          210
+        ],
+        [
+          261,
+          9,
+          173
+        ],
+        [
+          231,
+          14,
+          304
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_a",
+      "C": 0.5,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0124798728775535,
+      "brier": 0.6055693040250218,
+      "macro_f1": 0.389094948863225,
+      "balanced_accuracy": 0.43847254238885586,
+      "accuracy": 0.5095785440613027,
+      "confusion_matrix": [
+        [
+          616,
+          10,
+          209
+        ],
+        [
+          261,
+          9,
+          173
+        ],
+        [
+          229,
+          14,
+          306
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_a",
+      "C": 1.0,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0123374747844809,
+      "brier": 0.605444990099314,
+      "macro_f1": 0.38711666075451895,
+      "balanced_accuracy": 0.4369049694547756,
+      "accuracy": 0.5084838533114395,
+      "confusion_matrix": [
+        [
+          617,
+          11,
+          207
+        ],
+        [
+          261,
+          8,
+          174
+        ],
+        [
+          230,
+          15,
+          304
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_a",
+      "C": 2.0,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0119861821759346,
+      "brier": 0.6051811344883192,
+      "macro_f1": 0.38779277172216403,
+      "balanced_accuracy": 0.4379280598859352,
+      "accuracy": 0.5090311986863711,
+      "confusion_matrix": [
+        [
+          615,
+          11,
+          209
+        ],
+        [
+          259,
+          8,
+          176
+        ],
+        [
+          228,
+          14,
+          307
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_a",
+      "C": 4.0,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0117303704991352,
+      "brier": 0.6049967270651523,
+      "macro_f1": 0.3871699393528139,
+      "balanced_accuracy": 0.43732089534434443,
+      "accuracy": 0.5084838533114395,
+      "confusion_matrix": [
+        [
+          615,
+          10,
+          210
+        ],
+        [
+          259,
+          8,
+          176
+        ],
+        [
+          229,
+          14,
+          306
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_a",
+      "C": 10.0,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0114311245881944,
+      "brier": 0.6047846653247761,
+      "macro_f1": 0.38788103950338176,
+      "balanced_accuracy": 0.43811929853795717,
+      "accuracy": 0.5095785440613027,
+      "confusion_matrix": [
+        [
+          617,
+          10,
+          208
+        ],
+        [
+          258,
+          8,
+          177
+        ],
+        [
+          229,
+          14,
+          306
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_a",
+      "C": 100.0,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0110271255762027,
+      "brier": 0.6045586623586386,
+      "macro_f1": 0.38780559710494217,
+      "balanced_accuracy": 0.4381360228307196,
+      "accuracy": 0.5090311986863711,
+      "confusion_matrix": [
+        [
+          614,
+          10,
+          211
+        ],
+        [
+          258,
+          8,
+          177
+        ],
+        [
+          227,
+          14,
+          308
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_b",
+      "C": 0.01,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0054223751687867,
+      "brier": 0.6003436644869037,
+      "macro_f1": 0.38998248029175864,
+      "balanced_accuracy": 0.4434844562520676,
+      "accuracy": 0.5150519978106185,
+      "confusion_matrix": [
+        [
+          619,
+          5,
+          211
+        ],
+        [
+          252,
+          6,
+          185
+        ],
+        [
+          219,
+          14,
+          316
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_b",
+      "C": 0.1,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0101289064384484,
+      "brier": 0.6031861003174146,
+      "macro_f1": 0.3961206754933131,
+      "balanced_accuracy": 0.44574179259518276,
+      "accuracy": 0.5166940339354132,
+      "confusion_matrix": [
+        [
+          619,
+          13,
+          203
+        ],
+        [
+          248,
+          9,
+          186
+        ],
+        [
+          210,
+          23,
+          316
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_b",
+      "C": 0.25,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0107092969893734,
+      "brier": 0.6035103806579732,
+      "macro_f1": 0.3951854767779018,
+      "balanced_accuracy": 0.4424228157433914,
+      "accuracy": 0.5123152709359606,
+      "confusion_matrix": [
+        [
+          613,
+          16,
+          206
+        ],
+        [
+          248,
+          11,
+          184
+        ],
+        [
+          213,
+          24,
+          312
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_b",
+      "C": 0.5,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0109808027278704,
+      "brier": 0.603631976207441,
+      "macro_f1": 0.3946903493245076,
+      "balanced_accuracy": 0.44015616277590497,
+      "accuracy": 0.5095785440613027,
+      "confusion_matrix": [
+        [
+          610,
+          21,
+          204
+        ],
+        [
+          250,
+          12,
+          181
+        ],
+        [
+          214,
+          26,
+          309
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_b",
+      "C": 1.0,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.010986668383243,
+      "brier": 0.6036136927857372,
+      "macro_f1": 0.39477031576496896,
+      "balanced_accuracy": 0.44015616277590497,
+      "accuracy": 0.5095785440613027,
+      "confusion_matrix": [
+        [
+          610,
+          21,
+          204
+        ],
+        [
+          250,
+          12,
+          181
+        ],
+        [
+          213,
+          27,
+          309
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_b",
+      "C": 2.0,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0108092344130173,
+      "brier": 0.6035118253377517,
+      "macro_f1": 0.3955568093191822,
+      "balanced_accuracy": 0.44095456596951776,
+      "accuracy": 0.5106732348111659,
+      "confusion_matrix": [
+        [
+          612,
+          21,
+          202
+        ],
+        [
+          252,
+          12,
+          179
+        ],
+        [
+          213,
+          27,
+          309
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_b",
+      "C": 4.0,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0105063921655164,
+      "brier": 0.6033400315617843,
+      "macro_f1": 0.3972813184295811,
+      "balanced_accuracy": 0.4425054146108356,
+      "accuracy": 0.5123152709359606,
+      "confusion_matrix": [
+        [
+          614,
+          18,
+          203
+        ],
+        [
+          249,
+          13,
+          181
+        ],
+        [
+          214,
+          26,
+          309
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_b",
+      "C": 10.0,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0102353913749522,
+      "brier": 0.6032304577957285,
+      "macro_f1": 0.39620190049080706,
+      "balanced_accuracy": 0.4423601337047213,
+      "accuracy": 0.5123152709359606,
+      "confusion_matrix": [
+        [
+          614,
+          17,
+          204
+        ],
+        [
+          250,
+          12,
+          181
+        ],
+        [
+          214,
+          25,
+          310
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_b",
+      "C": 100.0,
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_validation": 1827,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0096976727828397,
+      "brier": 0.6030408990295686,
+      "macro_f1": 0.3977962472981436,
+      "balanced_accuracy": 0.44311257915242636,
+      "accuracy": 0.5128626163108921,
+      "confusion_matrix": [
+        [
+          614,
+          18,
+          203
+        ],
+        [
+          249,
+          13,
+          181
+        ],
+        [
+          213,
+          26,
+          310
+        ]
+      ],
+      "n": 1827
+    },
+    {
+      "model": "model_a",
+      "C": 0.01,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9899276918879018,
+      "brier": 0.590637884981473,
+      "macro_f1": 0.3974523556707978,
+      "balanced_accuracy": 0.4595876740903216,
+      "accuracy": 0.5205479452054794,
+      "confusion_matrix": [
+        [
+          603,
+          3,
+          149
+        ],
+        [
+          299,
+          5,
+          159
+        ],
+        [
+          225,
+          5,
+          304
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 0.1,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9913624390932713,
+      "brier": 0.5916007987072276,
+      "macro_f1": 0.4005092444265028,
+      "balanced_accuracy": 0.46155605594561583,
+      "accuracy": 0.5222602739726028,
+      "confusion_matrix": [
+        [
+          603,
+          4,
+          148
+        ],
+        [
+          306,
+          6,
+          151
+        ],
+        [
+          223,
+          5,
+          306
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 0.25,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.991603788493713,
+      "brier": 0.5917572725511215,
+      "macro_f1": 0.40052877441768286,
+      "balanced_accuracy": 0.46093183622027256,
+      "accuracy": 0.521689497716895,
+      "confusion_matrix": [
+        [
+          603,
+          7,
+          145
+        ],
+        [
+          307,
+          6,
+          150
+        ],
+        [
+          223,
+          6,
+          305
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 0.5,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9917000829299703,
+      "brier": 0.5918283191334339,
+      "macro_f1": 0.399397497989505,
+      "balanced_accuracy": 0.4596833967695859,
+      "accuracy": 0.5205479452054794,
+      "confusion_matrix": [
+        [
+          603,
+          7,
+          145
+        ],
+        [
+          306,
+          6,
+          151
+        ],
+        [
+          225,
+          6,
+          303
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 1.0,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9916580668496657,
+      "brier": 0.5918195665137633,
+      "macro_f1": 0.3989998881194934,
+      "balanced_accuracy": 0.45924189566583323,
+      "accuracy": 0.5199771689497716,
+      "confusion_matrix": [
+        [
+          602,
+          7,
+          146
+        ],
+        [
+          306,
+          6,
+          151
+        ],
+        [
+          225,
+          6,
+          303
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 2.0,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9916969576535363,
+      "brier": 0.5918664147485656,
+      "macro_f1": 0.40065772442914227,
+      "balanced_accuracy": 0.45996183807044083,
+      "accuracy": 0.5205479452054794,
+      "confusion_matrix": [
+        [
+          602,
+          8,
+          145
+        ],
+        [
+          306,
+          7,
+          150
+        ],
+        [
+          225,
+          6,
+          303
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 4.0,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9917813842031145,
+      "brier": 0.5919128951401463,
+      "macro_f1": 0.39909535646961053,
+      "balanced_accuracy": 0.45924189566583323,
+      "accuracy": 0.5199771689497716,
+      "confusion_matrix": [
+        [
+          602,
+          8,
+          145
+        ],
+        [
+          305,
+          6,
+          152
+        ],
+        [
+          225,
+          6,
+          303
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 10.0,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9917027590444165,
+      "brier": 0.5918843532693374,
+      "macro_f1": 0.40021494395028245,
+      "balanced_accuracy": 0.45952033696668804,
+      "accuracy": 0.5199771689497716,
+      "confusion_matrix": [
+        [
+          601,
+          8,
+          146
+        ],
+        [
+          305,
+          7,
+          151
+        ],
+        [
+          225,
+          6,
+          303
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 100.0,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9916829322402861,
+      "brier": 0.5918623228037931,
+      "macro_f1": 0.40017070239129815,
+      "balanced_accuracy": 0.45952033696668804,
+      "accuracy": 0.5199771689497716,
+      "confusion_matrix": [
+        [
+          601,
+          8,
+          146
+        ],
+        [
+          304,
+          7,
+          152
+        ],
+        [
+          225,
+          6,
+          303
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 0.01,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9874175746673686,
+      "brier": 0.5887497457962476,
+      "macro_f1": 0.40405630239467677,
+      "balanced_accuracy": 0.4632437911552387,
+      "accuracy": 0.5245433789954338,
+      "confusion_matrix": [
+        [
+          609,
+          2,
+          144
+        ],
+        [
+          296,
+          9,
+          158
+        ],
+        [
+          228,
+          5,
+          301
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 0.1,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9904927223968546,
+      "brier": 0.5908847071660114,
+      "macro_f1": 0.4028459149787374,
+      "balanced_accuracy": 0.46197569288585943,
+      "accuracy": 0.523972602739726,
+      "confusion_matrix": [
+        [
+          612,
+          5,
+          138
+        ],
+        [
+          294,
+          8,
+          161
+        ],
+        [
+          226,
+          10,
+          298
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 0.25,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9908349713665727,
+      "brier": 0.5910937335816099,
+      "macro_f1": 0.4037577836963637,
+      "balanced_accuracy": 0.4620714155651237,
+      "accuracy": 0.523972602739726,
+      "confusion_matrix": [
+        [
+          612,
+          5,
+          138
+        ],
+        [
+          293,
+          9,
+          161
+        ],
+        [
+          227,
+          10,
+          297
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 0.5,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9908298221512166,
+      "brier": 0.5910922902988327,
+      "macro_f1": 0.4046233295831341,
+      "balanced_accuracy": 0.4621671382443881,
+      "accuracy": 0.523972602739726,
+      "confusion_matrix": [
+        [
+          612,
+          5,
+          138
+        ],
+        [
+          291,
+          10,
+          162
+        ],
+        [
+          228,
+          10,
+          296
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 1.0,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9909502394658608,
+      "brier": 0.5911835324345082,
+      "macro_f1": 0.4036798772859716,
+      "balanced_accuracy": 0.4611014174152919,
+      "accuracy": 0.5228310502283106,
+      "confusion_matrix": [
+        [
+          611,
+          5,
+          139
+        ],
+        [
+          291,
+          10,
+          162
+        ],
+        [
+          229,
+          10,
+          295
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 2.0,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.991007715387289,
+      "brier": 0.5912286247717783,
+      "macro_f1": 0.4042300203408174,
+      "balanced_accuracy": 0.4617256371406353,
+      "accuracy": 0.5234018264840182,
+      "confusion_matrix": [
+        [
+          611,
+          5,
+          139
+        ],
+        [
+          291,
+          10,
+          162
+        ],
+        [
+          228,
+          10,
+          296
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 4.0,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9908289523376489,
+      "brier": 0.5910991107266057,
+      "macro_f1": 0.4034762846257871,
+      "balanced_accuracy": 0.4602944790683581,
+      "accuracy": 0.5222602739726028,
+      "confusion_matrix": [
+        [
+          612,
+          8,
+          135
+        ],
+        [
+          292,
+          10,
+          161
+        ],
+        [
+          230,
+          11,
+          293
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 10.0,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9910580207901338,
+      "brier": 0.591235987907131,
+      "macro_f1": 0.4051150614279977,
+      "balanced_accuracy": 0.46119714009455626,
+      "accuracy": 0.5228310502283106,
+      "confusion_matrix": [
+        [
+          611,
+          8,
+          136
+        ],
+        [
+          292,
+          11,
+          160
+        ],
+        [
+          229,
+          11,
+          294
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 100.0,
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9918843535807139,
+      "brier": 0.5917343808428494,
+      "macro_f1": 0.405626807342428,
+      "balanced_accuracy": 0.46004442332313394,
+      "accuracy": 0.521689497716895,
+      "confusion_matrix": [
+        [
+          611,
+          9,
+          135
+        ],
+        [
+          292,
+          12,
+          159
+        ],
+        [
+          225,
+          18,
+          291
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 0.01,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0074186872269681,
+      "brier": 0.6022714476081895,
+      "macro_f1": 0.38663205470751844,
+      "balanced_accuracy": 0.4429064584379023,
+      "accuracy": 0.5085616438356164,
+      "confusion_matrix": [
+        [
+          578,
+          4,
+          154
+        ],
+        [
+          287,
+          5,
+          145
+        ],
+        [
+          269,
+          2,
+          308
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 0.1,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.008266814104493,
+      "brier": 0.6026759968992591,
+      "macro_f1": 0.3861415905811903,
+      "balanced_accuracy": 0.4419623331344054,
+      "accuracy": 0.5079908675799086,
+      "confusion_matrix": [
+        [
+          581,
+          6,
+          149
+        ],
+        [
+          287,
+          5,
+          145
+        ],
+        [
+          271,
+          4,
+          304
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 0.25,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0083315775034014,
+      "brier": 0.6026892685306292,
+      "macro_f1": 0.3869615757083455,
+      "balanced_accuracy": 0.44286813023585475,
+      "accuracy": 0.5091324200913242,
+      "confusion_matrix": [
+        [
+          583,
+          5,
+          148
+        ],
+        [
+          289,
+          5,
+          143
+        ],
+        [
+          270,
+          5,
+          304
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 0.5,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0082216037595668,
+      "brier": 0.602605709189387,
+      "macro_f1": 0.3895250399391068,
+      "balanced_accuracy": 0.4446595105319806,
+      "accuracy": 0.5108447488584474,
+      "confusion_matrix": [
+        [
+          584,
+          5,
+          147
+        ],
+        [
+          290,
+          6,
+          141
+        ],
+        [
+          269,
+          5,
+          305
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 1.0,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0080446101842002,
+      "brier": 0.602494904964806,
+      "macro_f1": 0.3890950855454946,
+      "balanced_accuracy": 0.444206611981256,
+      "accuracy": 0.5102739726027398,
+      "confusion_matrix": [
+        [
+          583,
+          5,
+          148
+        ],
+        [
+          289,
+          6,
+          142
+        ],
+        [
+          269,
+          5,
+          305
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 2.0,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0078573867432083,
+      "brier": 0.6023628313036279,
+      "macro_f1": 0.3910776411226742,
+      "balanced_accuracy": 0.44638662624873365,
+      "accuracy": 0.5125570776255708,
+      "confusion_matrix": [
+        [
+          584,
+          5,
+          147
+        ],
+        [
+          289,
+          6,
+          142
+        ],
+        [
+          266,
+          5,
+          308
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 4.0,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.007712789944787,
+      "brier": 0.6022729630532865,
+      "macro_f1": 0.39064698979100565,
+      "balanced_accuracy": 0.44593372769800904,
+      "accuracy": 0.511986301369863,
+      "confusion_matrix": [
+        [
+          583,
+          5,
+          148
+        ],
+        [
+          288,
+          6,
+          143
+        ],
+        [
+          266,
+          5,
+          308
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 10.0,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0075795300854544,
+      "brier": 0.602186806219266,
+      "macro_f1": 0.39132438850483964,
+      "balanced_accuracy": 0.44554509372665724,
+      "accuracy": 0.5114155251141552,
+      "confusion_matrix": [
+        [
+          583,
+          5,
+          148
+        ],
+        [
+          287,
+          7,
+          143
+        ],
+        [
+          266,
+          7,
+          306
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_a",
+      "C": 100.0,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 44,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.0075305500132523,
+      "brier": 0.6021967553278385,
+      "macro_f1": 0.3913611725428197,
+      "balanced_accuracy": 0.44554509372665724,
+      "accuracy": 0.5114155251141552,
+      "confusion_matrix": [
+        [
+          583,
+          5,
+          148
+        ],
+        [
+          288,
+          7,
+          142
+        ],
+        [
+          266,
+          7,
+          306
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 0.01,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.994309909718149,
+      "brier": 0.593642269560171,
+      "macro_f1": 0.40513526393944505,
+      "balanced_accuracy": 0.45583475448213534,
+      "accuracy": 0.5211187214611872,
+      "confusion_matrix": [
+        [
+          585,
+          10,
+          141
+        ],
+        [
+          283,
+          11,
+          143
+        ],
+        [
+          249,
+          13,
+          317
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 0.1,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9962657747110243,
+      "brier": 0.5947724856212361,
+      "macro_f1": 0.41013759708275294,
+      "balanced_accuracy": 0.45677011081996505,
+      "accuracy": 0.5211187214611872,
+      "confusion_matrix": [
+        [
+          585,
+          9,
+          142
+        ],
+        [
+          280,
+          16,
+          141
+        ],
+        [
+          250,
+          17,
+          312
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 0.25,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9964484723289668,
+      "brier": 0.5948712581655896,
+      "macro_f1": 0.4100993226438474,
+      "balanced_accuracy": 0.456892917508158,
+      "accuracy": 0.5211187214611872,
+      "confusion_matrix": [
+        [
+          584,
+          9,
+          143
+        ],
+        [
+          279,
+          16,
+          142
+        ],
+        [
+          251,
+          15,
+          313
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 0.5,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9964342454422693,
+      "brier": 0.5948469458220415,
+      "macro_f1": 0.4103349828659019,
+      "balanced_accuracy": 0.45701572419635106,
+      "accuracy": 0.5211187214611872,
+      "confusion_matrix": [
+        [
+          583,
+          10,
+          143
+        ],
+        [
+          279,
+          16,
+          142
+        ],
+        [
+          250,
+          15,
+          314
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 1.0,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.996200409241518,
+      "brier": 0.594707862053424,
+      "macro_f1": 0.4120006208960765,
+      "balanced_accuracy": 0.4586200332249111,
+      "accuracy": 0.5228310502283106,
+      "confusion_matrix": [
+        [
+          584,
+          10,
+          142
+        ],
+        [
+          281,
+          16,
+          140
+        ],
+        [
+          246,
+          17,
+          316
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 2.0,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9963896449798475,
+      "brier": 0.5948137123466726,
+      "macro_f1": 0.41155845969025323,
+      "balanced_accuracy": 0.45816713467418646,
+      "accuracy": 0.5222602739726028,
+      "confusion_matrix": [
+        [
+          583,
+          10,
+          143
+        ],
+        [
+          278,
+          16,
+          143
+        ],
+        [
+          245,
+          18,
+          316
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 4.0,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9960099163363146,
+      "brier": 0.5945757768662937,
+      "macro_f1": 0.41170746830875826,
+      "balanced_accuracy": 0.45816713467418646,
+      "accuracy": 0.5222602739726028,
+      "confusion_matrix": [
+        [
+          583,
+          10,
+          143
+        ],
+        [
+          282,
+          16,
+          139
+        ],
+        [
+          245,
+          18,
+          316
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 10.0,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9960311471982773,
+      "brier": 0.5945880368017429,
+      "macro_f1": 0.41324979292819725,
+      "balanced_accuracy": 0.45905271786886304,
+      "accuracy": 0.5228310502283106,
+      "confusion_matrix": [
+        [
+          582,
+          10,
+          144
+        ],
+        [
+          280,
+          17,
+          140
+        ],
+        [
+          244,
+          18,
+          317
+        ]
+      ],
+      "n": 1752
+    },
+    {
+      "model": "model_b",
+      "C": 100.0,
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_validation": 1752,
+      "n_feature_columns": 80,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9959769116008635,
+      "brier": 0.5945581321556049,
+      "macro_f1": 0.4128249562663086,
+      "balanced_accuracy": 0.45847701262994534,
+      "accuracy": 0.5222602739726028,
+      "confusion_matrix": [
+        [
+          582,
+          10,
+          144
+        ],
+        [
+          281,
+          17,
+          139
+        ],
+        [
+          244,
+          19,
+          316
+        ]
+      ],
+      "n": 1752
+    }
+  ],
+  "summary_by_model_and_C": {
+    "model_a": {
+      "0.01": {
+        "n_folds": 3,
+        "mean_log_loss": 1.0022375085502964,
+        "std_log_loss": 0.008740588810693386,
+        "by_fold_log_loss": {
+          "fold_1": 1.009366146536019,
+          "fold_2": 0.9899276918879018,
+          "fold_3": 1.0074186872269681
+        },
+        "mean_brier": 0.5988943456948986,
+        "std_brier": 0.00587032376011032,
+        "by_fold_brier": {
+          "fold_1": 0.6037737044950334,
+          "fold_2": 0.590637884981473,
+          "fold_3": 0.6022714476081895
+        },
+        "mean_macro_f1": 0.389587268521822,
+        "std_macro_f1": 0.005618414388175133,
+        "by_fold_macro_f1": {
+          "fold_1": 0.3846773951871498,
+          "fold_2": 0.3974523556707978,
+          "fold_3": 0.38663205470751844
+        },
+        "mean_balanced_accuracy": 0.44789035985296305,
+        "std_balanced_accuracy": 0.008301332130149303,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.4411769470306653,
+          "fold_2": 0.4595876740903216,
+          "fold_3": 0.4429064584379023
+        },
+        "mean_accuracy": 0.5147205289505715,
+        "std_accuracy": 0.0048989970971060745,
+        "by_fold_accuracy": {
+          "fold_1": 0.5150519978106185,
+          "fold_2": 0.5205479452054794,
+          "fold_3": 0.5085616438356164
+        }
+      },
+      "0.1": {
+        "n_folds": 3,
+        "mean_log_loss": 1.0039337256522598,
+        "std_log_loss": 0.009031072459924638,
+        "by_fold_log_loss": {
+          "fold_1": 1.012171923759015,
+          "fold_2": 0.9913624390932713,
+          "fold_3": 1.008266814104493
+        },
+        "mean_brier": 0.5999111208216367,
+        "std_brier": 0.00598492453633173,
+        "by_fold_brier": {
+          "fold_1": 0.6054565668584232,
+          "fold_2": 0.5916007987072276,
+          "fold_3": 0.6026759968992591
+        },
+        "mean_macro_f1": 0.3908232659395887,
+        "std_macro_f1": 0.006850287420064191,
+        "by_fold_macro_f1": {
+          "fold_1": 0.3858189628110731,
+          "fold_2": 0.4005092444265028,
+          "fold_3": 0.3861415905811903
+        },
+        "mean_balanced_accuracy": 0.4473180967824469,
+        "std_balanced_accuracy": 0.010170170148604524,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.4384359012673194,
+          "fold_2": 0.46155605594561583,
+          "fold_3": 0.4419623331344054
+        },
+        "mean_accuracy": 0.5134590103295819,
+        "std_accuracy": 0.0062841738182632485,
+        "by_fold_accuracy": {
+          "fold_1": 0.5101258894362343,
+          "fold_2": 0.5222602739726028,
+          "fold_3": 0.5079908675799086
+        }
+      },
+      "0.25": {
+        "n_folds": 3,
+        "mean_log_loss": 1.004148711351678,
+        "std_log_loss": 0.00903318790376031,
+        "by_fold_log_loss": {
+          "fold_1": 1.0125107680579195,
+          "fold_2": 0.991603788493713,
+          "fold_3": 1.0083315775034014
+        },
+        "mean_brier": 0.6000227063622084,
+        "std_brier": 0.005965883939941691,
+        "by_fold_brier": {
+          "fold_1": 0.6056215780048746,
+          "fold_2": 0.5917572725511215,
+          "fold_3": 0.6026892685306292
+        },
+        "mean_macro_f1": 0.39181624405809523,
+        "std_macro_f1": 0.00617411503347508,
+        "by_fold_macro_f1": {
+          "fold_1": 0.3879583820482573,
+          "fold_2": 0.40052877441768286,
+          "fold_3": 0.3869615757083455
+        },
+        "mean_balanced_accuracy": 0.4470193932539339,
+        "std_balanced_accuracy": 0.01010065489492641,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.4372582133056743,
+          "fold_2": 0.46093183622027256,
+          "fold_3": 0.44286813023585475
+        },
+        "mean_accuracy": 0.5131019237065528,
+        "std_accuracy": 0.0060781016912804615,
+        "by_fold_accuracy": {
+          "fold_1": 0.5084838533114395,
+          "fold_2": 0.521689497716895,
+          "fold_3": 0.5091324200913242
+        }
+      },
+      "0.5": {
+        "n_folds": 3,
+        "mean_log_loss": 1.00413385318903,
+        "std_log_loss": 0.00896222428163947,
+        "by_fold_log_loss": {
+          "fold_1": 1.0124798728775535,
+          "fold_2": 0.9917000829299703,
+          "fold_3": 1.0082216037595668
+        },
+        "mean_brier": 0.6000011107826143,
+        "std_brier": 0.00590432700613905,
+        "by_fold_brier": {
+          "fold_1": 0.6055693040250218,
+          "fold_2": 0.5918283191334339,
+          "fold_3": 0.602605709189387
+        },
+        "mean_macro_f1": 0.3926724955972789,
+        "std_macro_f1": 0.004758535311414862,
+        "by_fold_macro_f1": {
+          "fold_1": 0.389094948863225,
+          "fold_2": 0.399397497989505,
+          "fold_3": 0.3895250399391068
+        },
+        "mean_balanced_accuracy": 0.44760514989680744,
+        "std_balanced_accuracy": 0.00890627791095873,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.43847254238885586,
+          "fold_2": 0.4596833967695859,
+          "fold_3": 0.4446595105319806
+        },
+        "mean_accuracy": 0.5136570793750765,
+        "std_accuracy": 0.0048999212623972496,
+        "by_fold_accuracy": {
+          "fold_1": 0.5095785440613027,
+          "fold_2": 0.5205479452054794,
+          "fold_3": 0.5108447488584474
+        }
+      },
+      "1.0": {
+        "n_folds": 3,
+        "mean_log_loss": 1.004013383939449,
+        "std_log_loss": 0.008910576745677112,
+        "by_fold_log_loss": {
+          "fold_1": 1.0123374747844809,
+          "fold_2": 0.9916580668496657,
+          "fold_3": 1.0080446101842002
+        },
+        "mean_brier": 0.5999198205259612,
+        "std_brier": 0.005852995635957461,
+        "by_fold_brier": {
+          "fold_1": 0.605444990099314,
+          "fold_2": 0.5918195665137633,
+          "fold_3": 0.602494904964806
+        },
+        "mean_macro_f1": 0.391737211473169,
+        "std_macro_f1": 0.005198614893423453,
+        "by_fold_macro_f1": {
+          "fold_1": 0.38711666075451895,
+          "fold_2": 0.3989998881194934,
+          "fold_3": 0.3890950855454946
+        },
+        "mean_balanced_accuracy": 0.4467844923672883,
+        "std_balanced_accuracy": 0.009299414626848867,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.4369049694547756,
+          "fold_2": 0.45924189566583323,
+          "fold_3": 0.444206611981256
+        },
+        "mean_accuracy": 0.5129116649546503,
+        "std_accuracy": 0.0050492337239148085,
+        "by_fold_accuracy": {
+          "fold_1": 0.5084838533114395,
+          "fold_2": 0.5199771689497716,
+          "fold_3": 0.5102739726027398
+        }
+      },
+      "2.0": {
+        "n_folds": 3,
+        "mean_log_loss": 1.003846842190893,
+        "std_log_loss": 0.008755056011039252,
+        "by_fold_log_loss": {
+          "fold_1": 1.0119861821759346,
+          "fold_2": 0.9916969576535363,
+          "fold_3": 1.0078573867432083
+        },
+        "mean_brier": 0.5998034601801709,
+        "std_brier": 0.0057290619271532445,
+        "by_fold_brier": {
+          "fold_1": 0.6051811344883192,
+          "fold_2": 0.5918664147485656,
+          "fold_3": 0.6023628313036279
+        },
+        "mean_macro_f1": 0.39317604575799353,
+        "std_macro_f1": 0.005457669133023967,
+        "by_fold_macro_f1": {
+          "fold_1": 0.38779277172216403,
+          "fold_2": 0.40065772442914227,
+          "fold_3": 0.3910776411226742
+        },
+        "mean_balanced_accuracy": 0.4480921747350366,
+        "std_balanced_accuracy": 0.009075737509071343,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.4379280598859352,
+          "fold_2": 0.45996183807044083,
+          "fold_3": 0.44638662624873365
+        },
+        "mean_accuracy": 0.5140454071724737,
+        "std_accuracy": 0.004818035991735396,
+        "by_fold_accuracy": {
+          "fold_1": 0.5090311986863711,
+          "fold_2": 0.5205479452054794,
+          "fold_3": 0.5125570776255708
+        }
+      },
+      "4.0": {
+        "n_folds": 3,
+        "mean_log_loss": 1.0037415148823456,
+        "std_log_loss": 0.008614668992514372,
+        "by_fold_log_loss": {
+          "fold_1": 1.0117303704991352,
+          "fold_2": 0.9917813842031145,
+          "fold_3": 1.007712789944787
+        },
+        "mean_brier": 0.5997275284195284,
+        "std_brier": 0.0056365528807657325,
+        "by_fold_brier": {
+          "fold_1": 0.6049967270651523,
+          "fold_2": 0.5919128951401463,
+          "fold_3": 0.6022729630532865
+        },
+        "mean_macro_f1": 0.3923040952044767,
+        "std_macro_f1": 0.0050075537684524,
+        "by_fold_macro_f1": {
+          "fold_1": 0.3871699393528139,
+          "fold_2": 0.39909535646961053,
+          "fold_3": 0.39064698979100565
+        },
+        "mean_balanced_accuracy": 0.44749883956939557,
+        "std_balanced_accuracy": 0.00901738118491706,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.43732089534434443,
+          "fold_2": 0.45924189566583323,
+          "fold_3": 0.44593372769800904
+        },
+        "mean_accuracy": 0.5134824412103581,
+        "std_accuracy": 0.004809913506313102,
+        "by_fold_accuracy": {
+          "fold_1": 0.5084838533114395,
+          "fold_2": 0.5199771689497716,
+          "fold_3": 0.511986301369863
+        }
+      },
+      "10.0": {
+        "n_folds": 3,
+        "mean_log_loss": 1.0035711379060217,
+        "std_log_loss": 0.008538247581923479,
+        "by_fold_log_loss": {
+          "fold_1": 1.0114311245881944,
+          "fold_2": 0.9917027590444165,
+          "fold_3": 1.0075795300854544
+        },
+        "mean_brier": 0.5996186082711265,
+        "std_brier": 0.0055708313746720296,
+        "by_fold_brier": {
+          "fold_1": 0.6047846653247761,
+          "fold_2": 0.5918843532693374,
+          "fold_3": 0.602186806219266
+        },
+        "mean_macro_f1": 0.393140123986168,
+        "std_macro_f1": 0.00519640717098106,
+        "by_fold_macro_f1": {
+          "fold_1": 0.38788103950338176,
+          "fold_2": 0.40021494395028245,
+          "fold_3": 0.39132438850483964
+        },
+        "mean_balanced_accuracy": 0.4477282430771008,
+        "std_balanced_accuracy": 0.00887226830341826,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.43811929853795717,
+          "fold_2": 0.45952033696668804,
+          "fold_3": 0.44554509372665724
+        },
+        "mean_accuracy": 0.5136570793750765,
+        "std_accuracy": 0.004531465842400406,
+        "by_fold_accuracy": {
+          "fold_1": 0.5095785440613027,
+          "fold_2": 0.5199771689497716,
+          "fold_3": 0.5114155251141552
+        }
+      },
+      "100.0": {
+        "n_folds": 3,
+        "mean_log_loss": 1.003413535943247,
+        "std_log_loss": 0.008416721752709319,
+        "by_fold_log_loss": {
+          "fold_1": 1.0110271255762027,
+          "fold_2": 0.9916829322402861,
+          "fold_3": 1.0075305500132523
+        },
+        "mean_brier": 0.5995392468300901,
+        "std_brier": 0.00551337906579303,
+        "by_fold_brier": {
+          "fold_1": 0.6045586623586386,
+          "fold_2": 0.5918623228037931,
+          "fold_3": 0.6021967553278385
+        },
+        "mean_macro_f1": 0.3931124906796866,
+        "std_macro_f1": 0.005197710624114976,
+        "by_fold_macro_f1": {
+          "fold_1": 0.38780559710494217,
+          "fold_2": 0.40017070239129815,
+          "fold_3": 0.3913611725428197
+        },
+        "mean_balanced_accuracy": 0.44773381784135496,
+        "std_balanced_accuracy": 0.008866232108554313,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.4381360228307196,
+          "fold_2": 0.45952033696668804,
+          "fold_3": 0.44554509372665724
+        },
+        "mean_accuracy": 0.513474630916766,
+        "std_accuracy": 0.004699893884019865,
+        "by_fold_accuracy": {
+          "fold_1": 0.5090311986863711,
+          "fold_2": 0.5199771689497716,
+          "fold_3": 0.5114155251141552
+        }
+      }
+    },
+    "model_b": {
+      "0.01": {
+        "n_folds": 3,
+        "mean_log_loss": 0.9957166198514348,
+        "std_log_loss": 0.007417427016752894,
+        "by_fold_log_loss": {
+          "fold_1": 1.0054223751687867,
+          "fold_2": 0.9874175746673686,
+          "fold_3": 0.994309909718149
+        },
+        "mean_brier": 0.5942452266144408,
+        "std_brier": 0.004752361206695489,
+        "by_fold_brier": {
+          "fold_1": 0.6003436644869037,
+          "fold_2": 0.5887497457962476,
+          "fold_3": 0.593642269560171
+        },
+        "mean_macro_f1": 0.39972468220862684,
+        "std_macro_f1": 0.006902845458965683,
+        "by_fold_macro_f1": {
+          "fold_1": 0.38998248029175864,
+          "fold_2": 0.40405630239467677,
+          "fold_3": 0.40513526393944505
+        },
+        "mean_balanced_accuracy": 0.4541876672964806,
+        "std_balanced_accuracy": 0.00815035791041433,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.4434844562520676,
+          "fold_2": 0.4632437911552387,
+          "fold_3": 0.45583475448213534
+        },
+        "mean_accuracy": 0.5202380327557465,
+        "std_accuracy": 0.003924562705642891,
+        "by_fold_accuracy": {
+          "fold_1": 0.5150519978106185,
+          "fold_2": 0.5245433789954338,
+          "fold_3": 0.5211187214611872
+        }
+      },
+      "0.1": {
+        "n_folds": 3,
+        "mean_log_loss": 0.9989624678487758,
+        "std_log_loss": 0.008240107051822126,
+        "by_fold_log_loss": {
+          "fold_1": 1.0101289064384484,
+          "fold_2": 0.9904927223968546,
+          "fold_3": 0.9962657747110243
+        },
+        "mean_brier": 0.5962810977015539,
+        "std_brier": 0.005134069287482617,
+        "by_fold_brier": {
+          "fold_1": 0.6031861003174146,
+          "fold_2": 0.5908847071660114,
+          "fold_3": 0.5947724856212361
+        },
+        "mean_macro_f1": 0.4030347291849345,
+        "std_macro_f1": 0.005723941579859842,
+        "by_fold_macro_f1": {
+          "fold_1": 0.3961206754933131,
+          "fold_2": 0.4028459149787374,
+          "fold_3": 0.41013759708275294
+        },
+        "mean_balanced_accuracy": 0.4548291987670024,
+        "std_balanced_accuracy": 0.00676807379588953,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.44574179259518276,
+          "fold_2": 0.46197569288585943,
+          "fold_3": 0.45677011081996505
+        },
+        "mean_accuracy": 0.5205951193787755,
+        "std_accuracy": 0.0029944404391369643,
+        "by_fold_accuracy": {
+          "fold_1": 0.5166940339354132,
+          "fold_2": 0.523972602739726,
+          "fold_3": 0.5211187214611872
+        }
+      },
+      "0.25": {
+        "n_folds": 3,
+        "mean_log_loss": 0.9993309135616378,
+        "std_log_loss": 0.008365745845813888,
+        "by_fold_log_loss": {
+          "fold_1": 1.0107092969893734,
+          "fold_2": 0.9908349713665727,
+          "fold_3": 0.9964484723289668
+        },
+        "mean_brier": 0.5964917908017243,
+        "std_brier": 0.005196978331897861,
+        "by_fold_brier": {
+          "fold_1": 0.6035103806579732,
+          "fold_2": 0.5910937335816099,
+          "fold_3": 0.5948712581655896
+        },
+        "mean_macro_f1": 0.4030141943727043,
+        "std_macro_f1": 0.006111213378699361,
+        "by_fold_macro_f1": {
+          "fold_1": 0.3951854767779018,
+          "fold_2": 0.4037577836963637,
+          "fold_3": 0.4100993226438474
+        },
+        "mean_balanced_accuracy": 0.45379571627222437,
+        "std_balanced_accuracy": 0.008315101136308034,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.4424228157433914,
+          "fold_2": 0.4620714155651237,
+          "fold_3": 0.456892917508158
+        },
+        "mean_accuracy": 0.5191355317122913,
+        "std_accuracy": 0.004961392773597911,
+        "by_fold_accuracy": {
+          "fold_1": 0.5123152709359606,
+          "fold_2": 0.523972602739726,
+          "fold_3": 0.5211187214611872
+        }
+      },
+      "0.5": {
+        "n_folds": 3,
+        "mean_log_loss": 0.9994149567737854,
+        "std_log_loss": 0.00849230964192666,
+        "by_fold_log_loss": {
+          "fold_1": 1.0109808027278704,
+          "fold_2": 0.9908298221512166,
+          "fold_3": 0.9964342454422693
+        },
+        "mean_brier": 0.5965237374427718,
+        "std_brier": 0.005254817045730579,
+        "by_fold_brier": {
+          "fold_1": 0.603631976207441,
+          "fold_2": 0.5910922902988327,
+          "fold_3": 0.5948469458220415
+        },
+        "mean_macro_f1": 0.4032162205911812,
+        "std_macro_f1": 0.006463931025186669,
+        "by_fold_macro_f1": {
+          "fold_1": 0.3946903493245076,
+          "fold_2": 0.4046233295831341,
+          "fold_3": 0.4103349828659019
+        },
+        "mean_balanced_accuracy": 0.4531130084055481,
+        "std_balanced_accuracy": 0.009400147274604406,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.44015616277590497,
+          "fold_2": 0.4621671382443881,
+          "fold_3": 0.45701572419635106
+        },
+        "mean_accuracy": 0.5182232894207387,
+        "std_accuracy": 0.006222800887870129,
+        "by_fold_accuracy": {
+          "fold_1": 0.5095785440613027,
+          "fold_2": 0.523972602739726,
+          "fold_3": 0.5211187214611872
+        }
+      },
+      "1.0": {
+        "n_folds": 3,
+        "mean_log_loss": 0.9993791056968738,
+        "std_log_loss": 0.008483030288239995,
+        "by_fold_log_loss": {
+          "fold_1": 1.010986668383243,
+          "fold_2": 0.9909502394658608,
+          "fold_3": 0.996200409241518
+        },
+        "mean_brier": 0.5965016957578898,
+        "std_brier": 0.005230717038722613,
+        "by_fold_brier": {
+          "fold_1": 0.6036136927857372,
+          "fold_2": 0.5911835324345082,
+          "fold_3": 0.594707862053424
+        },
+        "mean_macro_f1": 0.40348360464900573,
+        "std_macro_f1": 0.007035611602828553,
+        "by_fold_macro_f1": {
+          "fold_1": 0.39477031576496896,
+          "fold_2": 0.4036798772859716,
+          "fold_3": 0.4120006208960765
+        },
+        "mean_balanced_accuracy": 0.4532925378053693,
+        "std_balanced_accuracy": 0.009343895638726528,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.44015616277590497,
+          "fold_2": 0.4611014174152919,
+          "fold_3": 0.4586200332249111
+        },
+        "mean_accuracy": 0.5184135481726413,
+        "std_accuracy": 0.006247291318938553,
+        "by_fold_accuracy": {
+          "fold_1": 0.5095785440613027,
+          "fold_2": 0.5228310502283106,
+          "fold_3": 0.5228310502283106
+        }
+      },
+      "2.0": {
+        "n_folds": 3,
+        "mean_log_loss": 0.9994021982600513,
+        "std_log_loss": 0.008359890225799192,
+        "by_fold_log_loss": {
+          "fold_1": 1.0108092344130173,
+          "fold_2": 0.991007715387289,
+          "fold_3": 0.9963896449798475
+        },
+        "mean_brier": 0.5965180541520675,
+        "std_brier": 0.005157379165053712,
+        "by_fold_brier": {
+          "fold_1": 0.6035118253377517,
+          "fold_2": 0.5912286247717783,
+          "fold_3": 0.5948137123466726
+        },
+        "mean_macro_f1": 0.4037817631167509,
+        "std_macro_f1": 0.006540331518289437,
+        "by_fold_macro_f1": {
+          "fold_1": 0.3955568093191822,
+          "fold_2": 0.4042300203408174,
+          "fold_3": 0.41155845969025323
+        },
+        "mean_balanced_accuracy": 0.45361577926144653,
+        "std_balanced_accuracy": 0.009069931145226166,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.44095456596951776,
+          "fold_2": 0.4617256371406353,
+          "fold_3": 0.45816713467418646
+        },
+        "mean_accuracy": 0.5187784450892623,
+        "std_accuracy": 0.0057501658395330635,
+        "by_fold_accuracy": {
+          "fold_1": 0.5106732348111659,
+          "fold_2": 0.5234018264840182,
+          "fold_3": 0.5222602739726028
+        }
+      },
+      "4.0": {
+        "n_folds": 3,
+        "mean_log_loss": 0.9991150869464933,
+        "std_log_loss": 0.008327943841212137,
+        "by_fold_log_loss": {
+          "fold_1": 1.0105063921655164,
+          "fold_2": 0.9908289523376489,
+          "fold_3": 0.9960099163363146
+        },
+        "mean_brier": 0.5963383063848946,
+        "std_brier": 0.005150399237032135,
+        "by_fold_brier": {
+          "fold_1": 0.6033400315617843,
+          "fold_2": 0.5910991107266057,
+          "fold_3": 0.5945757768662937
+        },
+        "mean_macro_f1": 0.4041550237880422,
+        "std_macro_f1": 0.005908974260783616,
+        "by_fold_macro_f1": {
+          "fold_1": 0.3972813184295811,
+          "fold_2": 0.4034762846257871,
+          "fold_3": 0.41170746830875826
+        },
+        "mean_balanced_accuracy": 0.4536556761177934,
+        "std_balanced_accuracy": 0.007932113938415648,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.4425054146108356,
+          "fold_2": 0.4602944790683581,
+          "fold_3": 0.45816713467418646
+        },
+        "mean_accuracy": 0.5189452729603887,
+        "std_accuracy": 0.004688119390753643,
+        "by_fold_accuracy": {
+          "fold_1": 0.5123152709359606,
+          "fold_2": 0.5222602739726028,
+          "fold_3": 0.5222602739726028
+        }
+      },
+      "10.0": {
+        "n_folds": 3,
+        "mean_log_loss": 0.9991081864544545,
+        "std_log_loss": 0.008125844102816054,
+        "by_fold_log_loss": {
+          "fold_1": 1.0102353913749522,
+          "fold_2": 0.9910580207901338,
+          "fold_3": 0.9960311471982773
+        },
+        "mean_brier": 0.5963514941682008,
+        "std_brier": 0.005052996694345751,
+        "by_fold_brier": {
+          "fold_1": 0.6032304577957285,
+          "fold_2": 0.591235987907131,
+          "fold_3": 0.5945880368017429
+        },
+        "mean_macro_f1": 0.4048555849490007,
+        "std_macro_f1": 0.006962190994774127,
+        "by_fold_macro_f1": {
+          "fold_1": 0.39620190049080706,
+          "fold_2": 0.4051150614279977,
+          "fold_3": 0.41324979292819725
+        },
+        "mean_balanced_accuracy": 0.4542033305560469,
+        "std_balanced_accuracy": 0.008420040396377651,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.4423601337047213,
+          "fold_2": 0.46119714009455626,
+          "fold_3": 0.45905271786886304
+        },
+        "mean_accuracy": 0.5193257904641939,
+        "std_accuracy": 0.0049571858980544704,
+        "by_fold_accuracy": {
+          "fold_1": 0.5123152709359606,
+          "fold_2": 0.5228310502283106,
+          "fold_3": 0.5228310502283106
+        }
+      },
+      "100.0": {
+        "n_folds": 3,
+        "mean_log_loss": 0.9991863126548056,
+        "std_log_loss": 0.0076181264797844685,
+        "by_fold_log_loss": {
+          "fold_1": 1.0096976727828397,
+          "fold_2": 0.9918843535807139,
+          "fold_3": 0.9959769116008635
+        },
+        "mean_brier": 0.5964444706760076,
+        "std_brier": 0.004804722894321064,
+        "by_fold_brier": {
+          "fold_1": 0.6030408990295686,
+          "fold_2": 0.5917343808428494,
+          "fold_3": 0.5945581321556049
+        },
+        "mean_macro_f1": 0.40541600363562674,
+        "std_macro_f1": 0.0061372551934640186,
+        "by_fold_macro_f1": {
+          "fold_1": 0.3977962472981436,
+          "fold_2": 0.405626807342428,
+          "fold_3": 0.4128249562663086
+        },
+        "mean_balanced_accuracy": 0.45387800503516856,
+        "std_balanced_accuracy": 0.007639153089965409,
+        "by_fold_balanced_accuracy": {
+          "fold_1": 0.44311257915242636,
+          "fold_2": 0.46004442332313394,
+          "fold_3": 0.45847701262994534
+        },
+        "mean_accuracy": 0.5189374626667966,
+        "std_accuracy": 0.004301880601892196,
+        "by_fold_accuracy": {
+          "fold_1": 0.5128626163108921,
+          "fold_2": 0.521689497716895,
+          "fold_3": 0.5222602739726028
+        }
+      }
+    }
+  },
+  "robustness_analysis": {
+    "q1_best_C_model_a": {
+      "C": 0.01,
+      "mean_log_loss": 1.0022375085502964
+    },
+    "q2_best_C_model_b": {
+      "C": 0.01,
+      "mean_log_loss": 0.9957166198514348
+    },
+    "q3_b_beats_a_at_same_C": {
+      "0.01": true,
+      "0.1": true,
+      "0.25": true,
+      "0.5": true,
+      "1.0": true,
+      "2.0": true,
+      "4.0": true,
+      "10.0": true,
+      "100.0": true
+    },
+    "q4_n_C_values_where_b_beats_a": 9,
+    "q4_total_C_values": 9,
+    "q5_per_fold_b_beats_a_by_C": {
+      "0.01": {
+        "fold_1": true,
+        "fold_2": true,
+        "fold_3": true
+      },
+      "0.1": {
+        "fold_1": true,
+        "fold_2": true,
+        "fold_3": true
+      },
+      "0.25": {
+        "fold_1": true,
+        "fold_2": true,
+        "fold_3": true
+      },
+      "0.5": {
+        "fold_1": true,
+        "fold_2": true,
+        "fold_3": true
+      },
+      "1.0": {
+        "fold_1": true,
+        "fold_2": true,
+        "fold_3": true
+      },
+      "2.0": {
+        "fold_1": true,
+        "fold_2": true,
+        "fold_3": true
+      },
+      "4.0": {
+        "fold_1": true,
+        "fold_2": true,
+        "fold_3": true
+      },
+      "10.0": {
+        "fold_1": true,
+        "fold_2": true,
+        "fold_3": true
+      },
+      "100.0": {
+        "fold_1": true,
+        "fold_2": false,
+        "fold_3": true
+      }
+    },
+    "q6_delta_range": {
+      "min_delta": -0.006520888698861582,
+      "max_delta": -0.004227223288441384,
+      "deltas_by_C": {
+        "0.01": -0.006520888698861582,
+        "0.1": -0.004971257803483953,
+        "0.25": -0.0048177977900402125,
+        "0.5": -0.004718896415244589,
+        "1.0": -0.004634278242575118,
+        "2.0": -0.004444643930841763,
+        "4.0": -0.004626427935852329,
+        "10.0": -0.004462951451567165,
+        "100.0": -0.004227223288441384
+      }
+    },
+    "q7_leave_one_C_out_dependence": {
+      "0.01": {
+        "n_b_wins_excluding_this_C": 8,
+        "n_other_C_values": 8
+      },
+      "0.1": {
+        "n_b_wins_excluding_this_C": 8,
+        "n_other_C_values": 8
+      },
+      "0.25": {
+        "n_b_wins_excluding_this_C": 8,
+        "n_other_C_values": 8
+      },
+      "0.5": {
+        "n_b_wins_excluding_this_C": 8,
+        "n_other_C_values": 8
+      },
+      "1.0": {
+        "n_b_wins_excluding_this_C": 8,
+        "n_other_C_values": 8
+      },
+      "2.0": {
+        "n_b_wins_excluding_this_C": 8,
+        "n_other_C_values": 8
+      },
+      "4.0": {
+        "n_b_wins_excluding_this_C": 8,
+        "n_other_C_values": 8
+      },
+      "10.0": {
+        "n_b_wins_excluding_this_C": 8,
+        "n_other_C_values": 8
+      },
+      "100.0": {
+        "n_b_wins_excluding_this_C": 8,
+        "n_other_C_values": 8
+      }
+    },
+    "q8_delta_at_v1_C": {
+      "C": 1.0,
+      "delta": -0.004634278242575118,
+      "b_better": true
+    },
+    "q9_secondary_metric_consistency": {
+      "brier": {
+        "b_better_at_each_C": {
+          "0.01": true,
+          "0.1": true,
+          "0.25": true,
+          "0.5": true,
+          "1.0": true,
+          "2.0": true,
+          "4.0": true,
+          "10.0": true,
+          "100.0": true
+        },
+        "n_C_where_b_better": 9
+      },
+      "macro_f1": {
+        "b_better_at_each_C": {
+          "0.01": true,
+          "0.1": true,
+          "0.25": true,
+          "0.5": true,
+          "1.0": true,
+          "2.0": true,
+          "4.0": true,
+          "10.0": true,
+          "100.0": true
+        },
+        "n_C_where_b_better": 9
+      },
+      "balanced_accuracy": {
+        "b_better_at_each_C": {
+          "0.01": true,
+          "0.1": true,
+          "0.25": true,
+          "0.5": true,
+          "1.0": true,
+          "2.0": true,
+          "4.0": true,
+          "10.0": true,
+          "100.0": true
+        },
+        "n_C_where_b_better": 9
+      },
+      "accuracy": {
+        "b_better_at_each_C": {
+          "0.01": true,
+          "0.1": true,
+          "0.25": true,
+          "0.5": true,
+          "1.0": true,
+          "2.0": true,
+          "4.0": true,
+          "10.0": true,
+          "100.0": true
+        },
+        "n_C_where_b_better": 9
+      }
+    },
+    "q10_edge_of_grid_flags": {
+      "model_a_best_at_grid_edge": true,
+      "model_b_best_at_grid_edge": true,
+      "note": "A best-C at the grid edge suggests the optimum may lie outside the frozen grid (over- or under-regularization); this is reported, not acted upon."
+    },
+    "interpretation_guard": "Robustness is descriptive only. No statistical test was performed, so no significance claim may be made. No causal claim. This does not select a production model and does not authorize changing V1."
+  }
+}

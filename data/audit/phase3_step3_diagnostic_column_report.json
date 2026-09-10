@@ -1,0 +1,7928 @@
+{
+  "fold_1": [
+    {
+      "column": "competition_id",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 5,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3489,
+      "null": 163,
+      "unique_non_null": 41,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3489,
+      "null": 163,
+      "unique_non_null": 41,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_diff_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3489,
+      "null": 163,
+      "unique_non_null": 117,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3376,
+      "null": 276,
+      "unique_non_null": 84,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3376,
+      "null": 276,
+      "unique_non_null": 84,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_diff_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3376,
+      "null": 276,
+      "unique_non_null": 246,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3458,
+      "null": 194,
+      "unique_non_null": 716,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3458,
+      "null": 194,
+      "unique_non_null": 668,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_diff_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3458,
+      "null": 194,
+      "unique_non_null": 1459,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_xg_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_xg_diff_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_xg_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_xg_diff_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_xg_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_xg_diff_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3485,
+      "null": 167,
+      "unique_non_null": 156,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3485,
+      "null": 167,
+      "unique_non_null": 154,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_diff_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3485,
+      "null": 167,
+      "unique_non_null": 441,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 324,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 319,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_diff_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 771,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3452,
+      "null": 200,
+      "unique_non_null": 1609,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3452,
+      "null": 200,
+      "unique_non_null": 1661,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_diff_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3452,
+      "null": 200,
+      "unique_non_null": 2242,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3485,
+      "null": 167,
+      "unique_non_null": 80,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3485,
+      "null": 167,
+      "unique_non_null": 79,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_diff_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3485,
+      "null": 167,
+      "unique_non_null": 237,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 174,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 165,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_diff_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 467,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3452,
+      "null": 200,
+      "unique_non_null": 1128,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3452,
+      "null": 200,
+      "unique_non_null": 1062,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_diff_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3452,
+      "null": 200,
+      "unique_non_null": 1888,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3482,
+      "null": 170,
+      "unique_non_null": 40,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3482,
+      "null": 170,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_diff_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3482,
+      "null": 170,
+      "unique_non_null": 120,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 85,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 81,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_diff_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 240,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3454,
+      "null": 198,
+      "unique_non_null": 708,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3454,
+      "null": 198,
+      "unique_non_null": 666,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_diff_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3454,
+      "null": 198,
+      "unique_non_null": 1471,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_xg_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_xg_diff_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_xg_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_xg_diff_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_xg_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_xg_diff_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3478,
+      "null": 174,
+      "unique_non_null": 159,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3478,
+      "null": 174,
+      "unique_non_null": 149,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_diff_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3478,
+      "null": 174,
+      "unique_non_null": 457,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3370,
+      "null": 282,
+      "unique_non_null": 328,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3370,
+      "null": 282,
+      "unique_non_null": 317,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_diff_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3370,
+      "null": 282,
+      "unique_non_null": 766,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3448,
+      "null": 204,
+      "unique_non_null": 1643,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3448,
+      "null": 204,
+      "unique_non_null": 1635,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_diff_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3448,
+      "null": 204,
+      "unique_non_null": 2215,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3478,
+      "null": 174,
+      "unique_non_null": 83,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3478,
+      "null": 174,
+      "unique_non_null": 75,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_diff_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3478,
+      "null": 174,
+      "unique_non_null": 232,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3370,
+      "null": 282,
+      "unique_non_null": 179,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3370,
+      "null": 282,
+      "unique_non_null": 167,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_diff_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3370,
+      "null": 282,
+      "unique_non_null": 481,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3448,
+      "null": 204,
+      "unique_non_null": 1147,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3448,
+      "null": 204,
+      "unique_non_null": 1082,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_diff_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3448,
+      "null": 204,
+      "unique_non_null": 1940,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_attacks_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3452,
+      "null": 200,
+      "unique_non_null": 2566,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_attacks_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_attacks_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_dang_attacks_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3452,
+      "null": 200,
+      "unique_non_null": 2355,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_dang_attacks_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_dang_attacks_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_pressure_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3450,
+      "null": 202,
+      "unique_non_null": 3426,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_pressure_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_pressure_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_fouls_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3452,
+      "null": 200,
+      "unique_non_null": 1485,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_fouls_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_fouls_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_yellow_cards_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3458,
+      "null": 194,
+      "unique_non_null": 780,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_yellow_cards_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_yellow_cards_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_attacks_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3448,
+      "null": 204,
+      "unique_non_null": 2569,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_attacks_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_attacks_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_dang_attacks_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3448,
+      "null": 204,
+      "unique_non_null": 2373,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_dang_attacks_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_dang_attacks_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_pressure_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3444,
+      "null": 208,
+      "unique_non_null": 3429,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_pressure_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_pressure_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_fouls_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3448,
+      "null": 204,
+      "unique_non_null": 1444,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_fouls_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_fouls_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_yellow_cards_per_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3454,
+      "null": 198,
+      "unique_non_null": 770,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_yellow_cards_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_yellow_cards_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_home_venue_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3260,
+      "null": 392,
+      "unique_non_null": 298,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_home_venue_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 19,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_home_venue_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3260,
+      "null": 392,
+      "unique_non_null": 230,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_home_venue_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 19,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_away_venue_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3260,
+      "null": 392,
+      "unique_non_null": 240,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_away_venue_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 19,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_away_venue_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3260,
+      "null": 392,
+      "unique_non_null": 266,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_away_venue_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 19,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3489,
+      "null": 163,
+      "unique_non_null": 28,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_win_rate_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3489,
+      "null": 163,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_draw_rate_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3489,
+      "null": 163,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_loss_rate_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3489,
+      "null": 163,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goal_diff_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3489,
+      "null": 163,
+      "unique_non_null": 60,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_points_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3376,
+      "null": 276,
+      "unique_non_null": 83,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_win_rate_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3376,
+      "null": 276,
+      "unique_non_null": 31,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_draw_rate_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3376,
+      "null": 276,
+      "unique_non_null": 25,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_loss_rate_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3376,
+      "null": 276,
+      "unique_non_null": 32,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goal_diff_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3376,
+      "null": 276,
+      "unique_non_null": 129,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_points_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3482,
+      "null": 170,
+      "unique_non_null": 28,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_win_rate_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3482,
+      "null": 170,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_draw_rate_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3482,
+      "null": 170,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_loss_rate_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3482,
+      "null": 170,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goal_diff_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3482,
+      "null": 170,
+      "unique_non_null": 59,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last5",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last5_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_points_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 83,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_win_rate_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 30,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_draw_rate_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 26,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_loss_rate_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 33,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goal_diff_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3373,
+      "null": 279,
+      "unique_non_null": 129,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last10",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 0,
+      "null": 3652,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last10_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_team_home_goal_diff_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3260,
+      "null": 392,
+      "unique_non_null": 388,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_team_home_goal_diff_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 19,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_team_away_goal_diff_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3260,
+      "null": 392,
+      "unique_non_null": 391,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_team_away_goal_diff_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 19,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "league_home_advantage_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3642,
+      "null": 10,
+      "unique_non_null": 2796,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "league_home_advantage_season_n",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 380,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_matches_played_before_target",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 76,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_matches_played_before_target",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 76,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_insufficient_history",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 2,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_insufficient_history",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 2,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_attack_strength_score",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3642,
+      "null": 10,
+      "unique_non_null": 3534,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_defence_strength_score",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3642,
+      "null": 10,
+      "unique_non_null": 3538,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_attack_strength_score",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3642,
+      "null": 10,
+      "unique_non_null": 3535,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_defence_strength_score",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3642,
+      "null": 10,
+      "unique_non_null": 3538,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "strength_diff",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3642,
+      "null": 10,
+      "unique_non_null": 2430,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "league_mean_goals_per_team_match_season",
+      "dtype": "float64",
+      "n_rows": 3652,
+      "non_null": 3642,
+      "null": 10,
+      "unique_non_null": 3009,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "shrinkage_k",
+      "dtype": "int64",
+      "n_rows": 3652,
+      "non_null": 3652,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    }
+  ],
+  "fold_2": [
+    {
+      "column": "competition_id",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 5,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5300,
+      "null": 179,
+      "unique_non_null": 42,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5300,
+      "null": 179,
+      "unique_non_null": 41,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_diff_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5300,
+      "null": 179,
+      "unique_non_null": 123,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5178,
+      "null": 301,
+      "unique_non_null": 87,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5178,
+      "null": 301,
+      "unique_non_null": 86,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_diff_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5178,
+      "null": 301,
+      "unique_non_null": 256,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5187,
+      "null": 292,
+      "unique_non_null": 809,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5187,
+      "null": 292,
+      "unique_non_null": 739,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_diff_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5187,
+      "null": 292,
+      "unique_non_null": 1819,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_xg_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_xg_diff_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_xg_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_xg_diff_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_xg_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_xg_diff_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5296,
+      "null": 183,
+      "unique_non_null": 160,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5296,
+      "null": 183,
+      "unique_non_null": 160,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_diff_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5296,
+      "null": 183,
+      "unique_non_null": 480,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 339,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 333,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_diff_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 852,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5181,
+      "null": 298,
+      "unique_non_null": 2058,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5181,
+      "null": 298,
+      "unique_non_null": 2068,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_diff_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5181,
+      "null": 298,
+      "unique_non_null": 3014,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5296,
+      "null": 183,
+      "unique_non_null": 87,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5296,
+      "null": 183,
+      "unique_non_null": 80,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_diff_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5296,
+      "null": 183,
+      "unique_non_null": 251,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 184,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 170,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_diff_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 503,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5181,
+      "null": 298,
+      "unique_non_null": 1340,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5181,
+      "null": 298,
+      "unique_non_null": 1274,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_diff_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5181,
+      "null": 298,
+      "unique_non_null": 2557,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5295,
+      "null": 184,
+      "unique_non_null": 41,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5295,
+      "null": 184,
+      "unique_non_null": 38,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_diff_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5295,
+      "null": 184,
+      "unique_non_null": 123,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 87,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 85,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_diff_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 251,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5183,
+      "null": 296,
+      "unique_non_null": 809,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5183,
+      "null": 296,
+      "unique_non_null": 738,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_diff_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5183,
+      "null": 296,
+      "unique_non_null": 1833,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_xg_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_xg_diff_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_xg_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_xg_diff_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_xg_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_xg_diff_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5291,
+      "null": 188,
+      "unique_non_null": 168,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5291,
+      "null": 188,
+      "unique_non_null": 157,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_diff_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5291,
+      "null": 188,
+      "unique_non_null": 499,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5172,
+      "null": 307,
+      "unique_non_null": 342,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5172,
+      "null": 307,
+      "unique_non_null": 328,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_diff_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5172,
+      "null": 307,
+      "unique_non_null": 840,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5177,
+      "null": 302,
+      "unique_non_null": 2073,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5177,
+      "null": 302,
+      "unique_non_null": 2085,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_diff_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5177,
+      "null": 302,
+      "unique_non_null": 3033,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5291,
+      "null": 188,
+      "unique_non_null": 89,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5291,
+      "null": 188,
+      "unique_non_null": 78,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_diff_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5291,
+      "null": 188,
+      "unique_non_null": 252,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5172,
+      "null": 307,
+      "unique_non_null": 188,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5172,
+      "null": 307,
+      "unique_non_null": 171,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_diff_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5172,
+      "null": 307,
+      "unique_non_null": 506,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5177,
+      "null": 302,
+      "unique_non_null": 1361,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5177,
+      "null": 302,
+      "unique_non_null": 1294,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_diff_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5177,
+      "null": 302,
+      "unique_non_null": 2604,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_attacks_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5181,
+      "null": 298,
+      "unique_non_null": 3566,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_attacks_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_attacks_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_dang_attacks_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5181,
+      "null": 298,
+      "unique_non_null": 3206,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_dang_attacks_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_dang_attacks_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_pressure_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5179,
+      "null": 300,
+      "unique_non_null": 5140,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_pressure_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_pressure_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_fouls_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5181,
+      "null": 298,
+      "unique_non_null": 1871,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_fouls_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_fouls_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_yellow_cards_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5187,
+      "null": 292,
+      "unique_non_null": 894,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_yellow_cards_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_yellow_cards_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_attacks_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5177,
+      "null": 302,
+      "unique_non_null": 3573,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_attacks_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_attacks_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_dang_attacks_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5177,
+      "null": 302,
+      "unique_non_null": 3223,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_dang_attacks_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_dang_attacks_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_pressure_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5173,
+      "null": 306,
+      "unique_non_null": 5145,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_pressure_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_pressure_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_fouls_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5177,
+      "null": 302,
+      "unique_non_null": 1815,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_fouls_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_fouls_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_yellow_cards_per_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5183,
+      "null": 296,
+      "unique_non_null": 903,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_yellow_cards_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_yellow_cards_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_home_venue_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 4891,
+      "null": 588,
+      "unique_non_null": 320,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_home_venue_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 20,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_home_venue_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 4891,
+      "null": 588,
+      "unique_non_null": 244,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_home_venue_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 20,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_away_venue_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 4891,
+      "null": 588,
+      "unique_non_null": 259,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_away_venue_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 20,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_away_venue_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 4891,
+      "null": 588,
+      "unique_non_null": 291,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_away_venue_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 20,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5300,
+      "null": 179,
+      "unique_non_null": 28,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_win_rate_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5300,
+      "null": 179,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_draw_rate_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5300,
+      "null": 179,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_loss_rate_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5300,
+      "null": 179,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goal_diff_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5300,
+      "null": 179,
+      "unique_non_null": 63,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_points_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5178,
+      "null": 301,
+      "unique_non_null": 83,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_win_rate_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5178,
+      "null": 301,
+      "unique_non_null": 31,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_draw_rate_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5178,
+      "null": 301,
+      "unique_non_null": 25,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_loss_rate_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5178,
+      "null": 301,
+      "unique_non_null": 32,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goal_diff_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5178,
+      "null": 301,
+      "unique_non_null": 135,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_points_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5295,
+      "null": 184,
+      "unique_non_null": 28,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_win_rate_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5295,
+      "null": 184,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_draw_rate_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5295,
+      "null": 184,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_loss_rate_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5295,
+      "null": 184,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goal_diff_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5295,
+      "null": 184,
+      "unique_non_null": 59,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last5",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last5_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "away_points_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 83,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_win_rate_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 30,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_draw_rate_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 26,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_loss_rate_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 33,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goal_diff_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5175,
+      "null": 304,
+      "unique_non_null": 137,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last10",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 0,
+      "null": 5479,
+      "unique_non_null": 0,
+      "all_null": true,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last10_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    },
+    {
+      "column": "home_team_home_goal_diff_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 4891,
+      "null": 588,
+      "unique_non_null": 420,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_team_home_goal_diff_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 20,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_team_away_goal_diff_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 4891,
+      "null": 588,
+      "unique_non_null": 435,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_team_away_goal_diff_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 20,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "league_home_advantage_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5464,
+      "null": 15,
+      "unique_non_null": 4074,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "league_home_advantage_season_n",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 381,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_matches_played_before_target",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 115,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_matches_played_before_target",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 115,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_insufficient_history",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 2,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_insufficient_history",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 2,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_attack_strength_score",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5464,
+      "null": 15,
+      "unique_non_null": 5265,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_defence_strength_score",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5464,
+      "null": 15,
+      "unique_non_null": 5263,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_attack_strength_score",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5464,
+      "null": 15,
+      "unique_non_null": 5262,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_defence_strength_score",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5464,
+      "null": 15,
+      "unique_non_null": 5264,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "strength_diff",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5464,
+      "null": 15,
+      "unique_non_null": 3272,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "league_mean_goals_per_team_match_season",
+      "dtype": "float64",
+      "n_rows": 5479,
+      "non_null": 5464,
+      "null": 15,
+      "unique_non_null": 4249,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "shrinkage_k",
+      "dtype": "int64",
+      "n_rows": 5479,
+      "non_null": 5479,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    }
+  ],
+  "fold_3": [
+    {
+      "column": "competition_id",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 5,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7044,
+      "null": 187,
+      "unique_non_null": 43,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7044,
+      "null": 187,
+      "unique_non_null": 41,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_diff_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7044,
+      "null": 187,
+      "unique_non_null": 129,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6917,
+      "null": 314,
+      "unique_non_null": 87,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6917,
+      "null": 314,
+      "unique_non_null": 89,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_diff_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6917,
+      "null": 314,
+      "unique_non_null": 261,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6843,
+      "null": 388,
+      "unique_non_null": 875,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6843,
+      "null": 388,
+      "unique_non_null": 786,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_diff_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6843,
+      "null": 388,
+      "unique_non_null": 2112,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 273,
+      "null": 6958,
+      "unique_non_null": 265,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 273,
+      "null": 6958,
+      "unique_non_null": 266,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 273,
+      "null": 6958,
+      "unique_non_null": 266,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 162,
+      "null": 7069,
+      "unique_non_null": 127,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 9,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 162,
+      "null": 7069,
+      "unique_non_null": 127,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 9,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 162,
+      "null": 7069,
+      "unique_non_null": 127,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 369,
+      "null": 6862,
+      "unique_non_null": 319,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 9,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 369,
+      "null": 6862,
+      "unique_non_null": 319,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 9,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 369,
+      "null": 6862,
+      "unique_non_null": 320,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7040,
+      "null": 191,
+      "unique_non_null": 166,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7040,
+      "null": 191,
+      "unique_non_null": 169,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_diff_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7040,
+      "null": 191,
+      "unique_non_null": 507,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6914,
+      "null": 317,
+      "unique_non_null": 347,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6914,
+      "null": 317,
+      "unique_non_null": 347,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_diff_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6914,
+      "null": 317,
+      "unique_non_null": 909,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6837,
+      "null": 394,
+      "unique_non_null": 2376,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6837,
+      "null": 394,
+      "unique_non_null": 2418,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_diff_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6837,
+      "null": 394,
+      "unique_non_null": 3672,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7040,
+      "null": 191,
+      "unique_non_null": 87,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7040,
+      "null": 191,
+      "unique_non_null": 84,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_diff_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7040,
+      "null": 191,
+      "unique_non_null": 261,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6914,
+      "null": 317,
+      "unique_non_null": 189,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6914,
+      "null": 317,
+      "unique_non_null": 175,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_diff_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6914,
+      "null": 317,
+      "unique_non_null": 527,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6837,
+      "null": 394,
+      "unique_non_null": 1514,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6837,
+      "null": 394,
+      "unique_non_null": 1433,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_shots_on_diff_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6837,
+      "null": 394,
+      "unique_non_null": 3029,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7037,
+      "null": 194,
+      "unique_non_null": 41,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7037,
+      "null": 194,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_diff_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7037,
+      "null": 194,
+      "unique_non_null": 128,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6910,
+      "null": 321,
+      "unique_non_null": 87,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6910,
+      "null": 321,
+      "unique_non_null": 87,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_diff_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6910,
+      "null": 321,
+      "unique_non_null": 256,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6839,
+      "null": 392,
+      "unique_non_null": 874,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6839,
+      "null": 392,
+      "unique_non_null": 790,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_diff_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6839,
+      "null": 392,
+      "unique_non_null": 2117,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 274,
+      "null": 6957,
+      "unique_non_null": 266,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 274,
+      "null": 6957,
+      "unique_non_null": 266,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 274,
+      "null": 6957,
+      "unique_non_null": 266,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 165,
+      "null": 7066,
+      "unique_non_null": 133,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 9,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 165,
+      "null": 7066,
+      "unique_non_null": 133,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 9,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 165,
+      "null": 7066,
+      "unique_non_null": 133,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 367,
+      "null": 6864,
+      "unique_non_null": 320,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 9,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 367,
+      "null": 6864,
+      "unique_non_null": 319,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 9,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 367,
+      "null": 6864,
+      "unique_non_null": 320,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7033,
+      "null": 198,
+      "unique_non_null": 172,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7033,
+      "null": 198,
+      "unique_non_null": 164,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_diff_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7033,
+      "null": 198,
+      "unique_non_null": 528,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6907,
+      "null": 324,
+      "unique_non_null": 351,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6907,
+      "null": 324,
+      "unique_non_null": 337,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_diff_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6907,
+      "null": 324,
+      "unique_non_null": 892,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6833,
+      "null": 398,
+      "unique_non_null": 2400,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6833,
+      "null": 398,
+      "unique_non_null": 2433,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_diff_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6833,
+      "null": 398,
+      "unique_non_null": 3668,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7033,
+      "null": 198,
+      "unique_non_null": 90,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7033,
+      "null": 198,
+      "unique_non_null": 80,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_diff_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7033,
+      "null": 198,
+      "unique_non_null": 266,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6907,
+      "null": 324,
+      "unique_non_null": 190,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6907,
+      "null": 324,
+      "unique_non_null": 176,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_diff_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6907,
+      "null": 324,
+      "unique_non_null": 525,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6833,
+      "null": 398,
+      "unique_non_null": 1524,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_for_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6833,
+      "null": 398,
+      "unique_non_null": 1452,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_against_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_shots_on_diff_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6833,
+      "null": 398,
+      "unique_non_null": 3119,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_attacks_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6837,
+      "null": 394,
+      "unique_non_null": 4390,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_attacks_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_attacks_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_dang_attacks_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6837,
+      "null": 394,
+      "unique_non_null": 3908,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_dang_attacks_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_dang_attacks_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_pressure_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6833,
+      "null": 398,
+      "unique_non_null": 6767,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_pressure_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_pressure_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_fouls_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6837,
+      "null": 394,
+      "unique_non_null": 2095,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_fouls_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_fouls_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_yellow_cards_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6843,
+      "null": 388,
+      "unique_non_null": 937,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_yellow_cards_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_yellow_cards_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_attacks_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6833,
+      "null": 398,
+      "unique_non_null": 4392,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_attacks_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_attacks_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_dang_attacks_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6833,
+      "null": 398,
+      "unique_non_null": 3943,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_dang_attacks_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_dang_attacks_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_pressure_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6828,
+      "null": 403,
+      "unique_non_null": 6771,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_pressure_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_pressure_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_fouls_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6833,
+      "null": 398,
+      "unique_non_null": 2052,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_fouls_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_fouls_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_yellow_cards_per_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6839,
+      "null": 392,
+      "unique_non_null": 951,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_yellow_cards_per_match_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_yellow_cards_per_match_season_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 39,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_home_venue_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6451,
+      "null": 780,
+      "unique_non_null": 333,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_for_home_venue_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 20,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_home_venue_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6451,
+      "null": 780,
+      "unique_non_null": 254,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goals_against_home_venue_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 20,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_away_venue_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6451,
+      "null": 780,
+      "unique_non_null": 265,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_for_away_venue_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 20,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_away_venue_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6451,
+      "null": 780,
+      "unique_non_null": 299,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goals_against_away_venue_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 20,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7044,
+      "null": 187,
+      "unique_non_null": 28,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_win_rate_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7044,
+      "null": 187,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_draw_rate_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7044,
+      "null": 187,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_loss_rate_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7044,
+      "null": 187,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goal_diff_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7044,
+      "null": 187,
+      "unique_non_null": 66,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 273,
+      "null": 6958,
+      "unique_non_null": 266,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6917,
+      "null": 314,
+      "unique_non_null": 83,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_points_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_win_rate_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6917,
+      "null": 314,
+      "unique_non_null": 31,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_draw_rate_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6917,
+      "null": 314,
+      "unique_non_null": 25,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_loss_rate_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6917,
+      "null": 314,
+      "unique_non_null": 32,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_goal_diff_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6917,
+      "null": 314,
+      "unique_non_null": 137,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 162,
+      "null": 7069,
+      "unique_non_null": 127,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_xg_diff_form_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 9,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7037,
+      "null": 194,
+      "unique_non_null": 28,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_win_rate_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7037,
+      "null": 194,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_draw_rate_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7037,
+      "null": 194,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_loss_rate_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7037,
+      "null": 194,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goal_diff_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7037,
+      "null": 194,
+      "unique_non_null": 60,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last5",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 274,
+      "null": 6957,
+      "unique_non_null": 266,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last5_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last5_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 6,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6910,
+      "null": 321,
+      "unique_non_null": 83,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_points_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_win_rate_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6910,
+      "null": 321,
+      "unique_non_null": 30,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_draw_rate_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6910,
+      "null": 321,
+      "unique_non_null": 26,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_loss_rate_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6910,
+      "null": 321,
+      "unique_non_null": 33,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_goal_diff_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6910,
+      "null": 321,
+      "unique_non_null": 138,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last10",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 165,
+      "null": 7066,
+      "unique_non_null": 133,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last10_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 11,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_xg_diff_form_last10_coverage_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 9,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_team_home_goal_diff_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6451,
+      "null": 780,
+      "unique_non_null": 443,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_team_home_goal_diff_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 20,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_team_away_goal_diff_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 6451,
+      "null": 780,
+      "unique_non_null": 449,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_team_away_goal_diff_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 20,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "league_home_advantage_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7211,
+      "null": 20,
+      "unique_non_null": 4988,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "league_home_advantage_season_n",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 381,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_matches_played_before_target",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 153,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_matches_played_before_target",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 152,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_insufficient_history",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 2,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_insufficient_history",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 2,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_attack_strength_score",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7211,
+      "null": 20,
+      "unique_non_null": 6892,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "home_defence_strength_score",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7211,
+      "null": 20,
+      "unique_non_null": 6900,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_attack_strength_score",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7211,
+      "null": 20,
+      "unique_non_null": 6891,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "away_defence_strength_score",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7211,
+      "null": 20,
+      "unique_non_null": 6890,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "strength_diff",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7211,
+      "null": 20,
+      "unique_non_null": 3977,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "league_mean_goals_per_team_match_season",
+      "dtype": "float64",
+      "n_rows": 7231,
+      "non_null": 7211,
+      "null": 20,
+      "unique_non_null": 5357,
+      "all_null": false,
+      "constant": false
+    },
+    {
+      "column": "shrinkage_k",
+      "dtype": "int64",
+      "n_rows": 7231,
+      "non_null": 7231,
+      "null": 0,
+      "unique_non_null": 1,
+      "all_null": false,
+      "constant": true
+    }
+  ]
+}

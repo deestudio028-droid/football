@@ -1,0 +1,13 @@
+subgroup,n_matches,mean_reliability_score,actual_mean_rps,actual_mean_log_loss,top1_accuracy_pct,mean_entropy
+High_Elo_Parity_le_25,649,0.5386,0.226607,1.082293,40.83,1.0748
+Moderate_Elo_Parity_25_to_75,1342,0.5456,0.223431,1.064979,44.11,1.0717
+Large_Elo_Mismatch_gt_75,5091,0.6276,0.189721,0.949233,57.06,0.9674
+High_Entropy_gt_1.05,3444,0.5403,0.224823,1.073359,43.44,1.0789
+Medium_Entropy_0.90_to_1.05,2492,0.6124,0.19495,0.978752,56.54,0.9939
+Low_Entropy_lt_0.90,1146,0.7765,0.133224,0.72291,74.78,0.7576
+High_Draw_Prob_gt_0.28,1387,0.5423,0.22354,1.085315,41.24,1.0841
+Low_Draw_Prob_lt_0.24,2005,0.7181,0.157737,0.827505,67.33,0.8417
+First_3_Matches_Of_Season,99,0.6029,0.190724,0.950343,56.57,1.0343
+Remaining_Season_Matches,6983,0.6039,0.199613,0.983828,53.07,0.9965
+Promoted_Sparse_lt_5_matches,130,0.5983,0.183828,0.951771,56.15,1.0216
+Established_Teams_gt_10_matches,6800,0.6039,0.199458,0.982774,53.21,0.9964

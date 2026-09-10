@@ -1,0 +1,14 @@
+{
+  "candidate_id": "v4_6_historical_draw_candidate",
+  "version": "v4.6-historical-only-retrained",
+  "training_cutoff_season": "2024/2025 (pre-2025/26)",
+  "training_match_count": 8983,
+  "stacking_intercept": 0.245,
+  "dibp_inflation_p": 0.05,
+  "dixon_coles_rho": -0.056,
+  "draw_prob_threshold": 0.26,
+  "winner_margin_cap": 0.1,
+  "v4_winner_conf_cap": 0.45,
+  "abs_elo_cap": 100.0,
+  "tot_expected_goals_cap": 2.5
+}

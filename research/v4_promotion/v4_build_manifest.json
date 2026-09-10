@@ -1,0 +1,164 @@
+{
+  "generated_at": "2026-08-20T15:25:44.747457+00:00",
+  "artifact": {
+    "path": "data\\models\\v4_poisson_venue_elo_online_ad.pkl",
+    "md5": "06841f0c03c8597b2b8cd8f8ab064864",
+    "sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5",
+    "bytes": 13534
+  },
+  "training": {
+    "rows": 8983,
+    "seasons": [
+      "2020/2021",
+      "2021/2022",
+      "2022/2023",
+      "2023/2024",
+      "2024/2025"
+    ],
+    "quarantined_rows_excluded": 1751,
+    "features": 91
+  },
+  "contract": {
+    "n": 91,
+    "v3_prefix_verified": true,
+    "ad_suffix_verified": true,
+    "market_columns_present": false
+  },
+  "elo_config": {
+    "implementation": "src/features/elo.py",
+    "init_rating": 1500.0,
+    "k_factor": 20.0,
+    "home_advantage": 100.0,
+    "mean_reversion": 0.0,
+    "columns": [
+      "home_elo",
+      "away_elo",
+      "elo_diff"
+    ],
+    "experiment": "E1",
+    "status": "PASS"
+  },
+  "online_ad_config": {
+    "implementation": "src/features/online_attack_defense.py",
+    "module_md5": "ddab69c105e1233ac4972bb41273f1f8",
+    "init_attack": 0.0,
+    "init_defense": 0.0,
+    "state_clip": 1.5,
+    "exp_clip": 3.0,
+    "learning_rate": 0.02,
+    "baseline_mu_home": 1.5344539686073695,
+    "baseline_mu_away": 1.2826449961037516,
+    "baseline_n_train": 8983,
+    "cross_season_persistence": true,
+    "season_reset": false,
+    "two_pass_timestamps": true,
+    "columns": [
+      "A_home",
+      "D_home",
+      "A_away",
+      "D_away"
+    ],
+    "experiment": "E6",
+    "status": "PASS"
+  },
+  "determinism": {
+    "preprocessing_max_diff": 0.0,
+    "home_max_diff": 0.0,
+    "away_max_diff": 0.0,
+    "passed": true
+  },
+  "integrity": {
+    "protected_pre": {
+      "data/models/v2_poisson_venue.pkl": {
+        "expected": "25935b4e93fc4074f67f16e3181ed4df",
+        "actual": "25935b4e93fc4074f67f16e3181ed4df",
+        "sha256": "9e662d0dfb0a69e4fd6119dad7d089179aaa7f7248d80a1bddc1a03eee835b78",
+        "status": "identical"
+      },
+      "data/models/v1_logreg.pkl": {
+        "expected": "5e504427712b35778bb8a62a8496c7cd",
+        "actual": "5e504427712b35778bb8a62a8496c7cd",
+        "sha256": "20eca80229c39222541fe56f61800a75f744898c291f97c0848509aeeb50b6a2",
+        "status": "identical"
+      },
+      "data/models/v3_poisson_venue_elo_candidate.pkl": {
+        "expected": "a2850a7687822a5916663301f5ccc96c",
+        "actual": "a2850a7687822a5916663301f5ccc96c",
+        "sha256": "97cd5c4bdb63ba31424d8fa74ebe147471eca0376c637e4527e5e7bf05756362",
+        "status": "identical"
+      },
+      "data/processed/features.db": {
+        "expected": "e7ebe7fc07040a5927683c35b6371e63",
+        "actual": "e7ebe7fc07040a5927683c35b6371e63",
+        "sha256": "04b71da9b03efb7a5816ee68fc29ccada165bf3b6b1f6d2c552a9a557327816e",
+        "status": "identical"
+      },
+      "data/processed/matches.db": {
+        "expected": "fdeed042096fa1c851aaee6c84995247",
+        "actual": "fdeed042096fa1c851aaee6c84995247",
+        "sha256": "10d86d374bfd5c41afbe236f34255a5e01a3a03c0251ac7bc94f5d18f1c7bb42",
+        "status": "identical"
+      }
+    },
+    "protected_post": {
+      "data/models/v2_poisson_venue.pkl": {
+        "expected": "25935b4e93fc4074f67f16e3181ed4df",
+        "actual": "25935b4e93fc4074f67f16e3181ed4df",
+        "sha256": "9e662d0dfb0a69e4fd6119dad7d089179aaa7f7248d80a1bddc1a03eee835b78",
+        "status": "identical"
+      },
+      "data/models/v1_logreg.pkl": {
+        "expected": "5e504427712b35778bb8a62a8496c7cd",
+        "actual": "5e504427712b35778bb8a62a8496c7cd",
+        "sha256": "20eca80229c39222541fe56f61800a75f744898c291f97c0848509aeeb50b6a2",
+        "status": "identical"
+      },
+      "data/models/v3_poisson_venue_elo_candidate.pkl": {
+        "expected": "a2850a7687822a5916663301f5ccc96c",
+        "actual": "a2850a7687822a5916663301f5ccc96c",
+        "sha256": "97cd5c4bdb63ba31424d8fa74ebe147471eca0376c637e4527e5e7bf05756362",
+        "status": "identical"
+      },
+      "data/processed/features.db": {
+        "expected": "e7ebe7fc07040a5927683c35b6371e63",
+        "actual": "e7ebe7fc07040a5927683c35b6371e63",
+        "sha256": "04b71da9b03efb7a5816ee68fc29ccada165bf3b6b1f6d2c552a9a557327816e",
+        "status": "identical"
+      },
+      "data/processed/matches.db": {
+        "expected": "fdeed042096fa1c851aaee6c84995247",
+        "actual": "fdeed042096fa1c851aaee6c84995247",
+        "sha256": "10d86d374bfd5c41afbe236f34255a5e01a3a03c0251ac7bc94f5d18f1c7bb42",
+        "status": "identical"
+      }
+    },
+    "e2_pre": {
+      "research/market_odds/odds_history.sqlite": {
+        "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "sha256": "be370874f1f20a69c8550811816ac10805feec133d97495bda58a9d4e4983710",
+        "status": "identical"
+      },
+      "research/market_odds/research_dataset.sqlite": {
+        "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "sha256": "c6ef881171806b6b9d1d665a53707367cba809c1fb46d53e3c0b9b1af89953aa",
+        "status": "identical"
+      }
+    },
+    "e2_post": {
+      "research/market_odds/odds_history.sqlite": {
+        "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "sha256": "be370874f1f20a69c8550811816ac10805feec133d97495bda58a9d4e4983710",
+        "status": "identical"
+      },
+      "research/market_odds/research_dataset.sqlite": {
+        "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "sha256": "c6ef881171806b6b9d1d665a53707367cba809c1fb46d53e3c0b9b1af89953aa",
+        "status": "identical"
+      }
+    }
+  }
+}

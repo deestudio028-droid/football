@@ -1,0 +1,32 @@
+{
+  "2020/2021": {
+    "tackles": 43.4,
+    "goal_kicks": 93.2,
+    "throw_ins": 92.1
+  },
+  "2021/2022": {
+    "tackles": 47.1,
+    "goal_kicks": 92.2,
+    "throw_ins": 91.5
+  },
+  "2022/2023": {
+    "tackles": 0.0,
+    "goal_kicks": 54.7,
+    "throw_ins": 51.9
+  },
+  "2023/2024": {
+    "tackles": 0.0,
+    "goal_kicks": 0.8,
+    "throw_ins": 0.8
+  },
+  "2024/2025": {
+    "tackles": 0.1,
+    "goal_kicks": 0.0,
+    "throw_ins": 0.1
+  },
+  "2025/2026": {
+    "tackles": 0.0,
+    "goal_kicks": 0.0,
+    "throw_ins": 0.0
+  }
+}

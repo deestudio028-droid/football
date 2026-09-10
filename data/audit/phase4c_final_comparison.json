@@ -1,0 +1,351 @@
+{
+  "phase": "4C_v1_vs_model_b_final_comparison",
+  "protocol": "docs/PHASE4C_V1_REPLACEMENT_DECISION_PROTOCOL.md",
+  "authorized_decisions": {
+    "C": 1.0,
+    "epsilon_tie_threshold": null,
+    "epsilon_authorized": false,
+    "protocol": "docs/PHASE4C_V1_REPLACEMENT_DECISION_PROTOCOL.md"
+  },
+  "environment": {
+    "sklearn_version": "1.9.0",
+    "python_version": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "sklearn_version": "1.9.0",
+  "n_train": 8983,
+  "n_test": 1751,
+  "test_class_distribution": {
+    "H": 771,
+    "A": 535,
+    "D": 445
+  },
+  "arms": {
+    "v1_logistic_regression": {
+      "arm": "v1_logistic_regression",
+      "n_features": 15,
+      "feature_columns": [
+        "home_goals_for_per_match_season",
+        "home_goals_against_per_match_season",
+        "away_goals_for_per_match_season",
+        "away_goals_against_per_match_season",
+        "home_goals_for_per_match_last5",
+        "away_goals_for_per_match_last5",
+        "home_points_last5",
+        "away_points_last5",
+        "home_attack_strength_score",
+        "home_defence_strength_score",
+        "away_attack_strength_score",
+        "away_defence_strength_score",
+        "strength_diff",
+        "league_home_advantage_season",
+        "competition_id"
+      ],
+      "estimator_kwargs": {
+        "max_iter": 2000,
+        "C": 1.0,
+        "random_state": 0
+      },
+      "calibration": "none",
+      "n_train": 8983,
+      "n_test": 1751,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 1.012643607907126,
+      "brier": 0.6059500599589396,
+      "macro_f1": 0.3712753915810083,
+      "balanced_accuracy": 0.4321797560315324,
+      "accuracy": 0.500856653340948,
+      "confusion_matrix": [
+        [
+          599,
+          2,
+          170
+        ],
+        [
+          293,
+          0,
+          152
+        ],
+        [
+          257,
+          0,
+          278
+        ]
+      ],
+      "n": 1751,
+      "per_class": {
+        "H": {
+          "tp": 599,
+          "fp": 550,
+          "fn": 172,
+          "support": 771,
+          "precision": 0.5213228894691035,
+          "recall": 0.7769130998702983,
+          "f1": 0.6239583333333333
+        },
+        "D": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 445,
+          "support": 445,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "tp": 278,
+          "fp": 322,
+          "fn": 257,
+          "support": 535,
+          "precision": 0.4633333333333333,
+          "recall": 0.5196261682242991,
+          "f1": 0.4898678414096916
+        }
+      }
+    },
+    "model_b_logistic_regression": {
+      "arm": "model_b_logistic_regression",
+      "n_features": 80,
+      "feature_columns": [
+        "home_goals_for_per_match_last5",
+        "home_goals_against_per_match_last5",
+        "home_goals_diff_last5",
+        "home_goals_for_per_match_last10",
+        "home_goals_against_per_match_last10",
+        "home_goals_diff_last10",
+        "home_goals_for_per_match_season",
+        "home_goals_against_per_match_season",
+        "home_goals_diff_season",
+        "away_goals_for_per_match_last5",
+        "away_goals_against_per_match_last5",
+        "away_goals_diff_last5",
+        "away_goals_for_per_match_last10",
+        "away_goals_against_per_match_last10",
+        "away_goals_diff_last10",
+        "away_goals_for_per_match_season",
+        "away_goals_against_per_match_season",
+        "away_goals_diff_season",
+        "home_points_last5",
+        "home_win_rate_last5",
+        "home_draw_rate_last5",
+        "home_loss_rate_last5",
+        "home_goal_diff_last5",
+        "home_points_last10",
+        "home_win_rate_last10",
+        "home_draw_rate_last10",
+        "home_loss_rate_last10",
+        "home_goal_diff_last10",
+        "away_points_last5",
+        "away_win_rate_last5",
+        "away_draw_rate_last5",
+        "away_loss_rate_last5",
+        "away_goal_diff_last5",
+        "away_points_last10",
+        "away_win_rate_last10",
+        "away_draw_rate_last10",
+        "away_loss_rate_last10",
+        "away_goal_diff_last10",
+        "home_attack_strength_score",
+        "home_defence_strength_score",
+        "away_attack_strength_score",
+        "away_defence_strength_score",
+        "strength_diff",
+        "competition_id",
+        "home_shots_for_per_match_last5",
+        "home_shots_against_per_match_last5",
+        "home_shots_diff_last5",
+        "home_shots_for_per_match_last10",
+        "home_shots_against_per_match_last10",
+        "home_shots_diff_last10",
+        "home_shots_for_per_match_season",
+        "home_shots_against_per_match_season",
+        "home_shots_diff_season",
+        "away_shots_for_per_match_last5",
+        "away_shots_against_per_match_last5",
+        "away_shots_diff_last5",
+        "away_shots_for_per_match_last10",
+        "away_shots_against_per_match_last10",
+        "away_shots_diff_last10",
+        "away_shots_for_per_match_season",
+        "away_shots_against_per_match_season",
+        "away_shots_diff_season",
+        "home_shots_on_for_per_match_last5",
+        "home_shots_on_against_per_match_last5",
+        "home_shots_on_diff_last5",
+        "home_shots_on_for_per_match_last10",
+        "home_shots_on_against_per_match_last10",
+        "home_shots_on_diff_last10",
+        "home_shots_on_for_per_match_season",
+        "home_shots_on_against_per_match_season",
+        "home_shots_on_diff_season",
+        "away_shots_on_for_per_match_last5",
+        "away_shots_on_against_per_match_last5",
+        "away_shots_on_diff_last5",
+        "away_shots_on_for_per_match_last10",
+        "away_shots_on_against_per_match_last10",
+        "away_shots_on_diff_last10",
+        "away_shots_on_for_per_match_season",
+        "away_shots_on_against_per_match_season",
+        "away_shots_on_diff_season"
+      ],
+      "estimator_kwargs": {
+        "max_iter": 2000,
+        "C": 1.0,
+        "random_state": 0
+      },
+      "calibration": "none",
+      "n_train": 8983,
+      "n_test": 1751,
+      "probability_validity": "valid_3class_finite_nonnegative_sum_to_1",
+      "log_loss": 0.9960487649063601,
+      "brier": 0.5947186313129067,
+      "macro_f1": 0.3938491505819635,
+      "balanced_accuracy": 0.4489548797121166,
+      "accuracy": 0.5151342090234152,
+      "confusion_matrix": [
+        [
+          598,
+          4,
+          169
+        ],
+        [
+          273,
+          8,
+          164
+        ],
+        [
+          231,
+          8,
+          296
+        ]
+      ],
+      "n": 1751,
+      "per_class": {
+        "H": {
+          "tp": 598,
+          "fp": 504,
+          "fn": 173,
+          "support": 771,
+          "precision": 0.542649727767695,
+          "recall": 0.7756160830090791,
+          "f1": 0.6385477843032568
+        },
+        "D": {
+          "tp": 8,
+          "fp": 12,
+          "fn": 437,
+          "support": 445,
+          "precision": 0.4,
+          "recall": 0.017977528089887642,
+          "f1": 0.03440860215053764
+        },
+        "A": {
+          "tp": 296,
+          "fp": 333,
+          "fn": 239,
+          "support": 535,
+          "precision": 0.47058823529411764,
+          "recall": 0.5532710280373832,
+          "f1": 0.5085910652920962
+        }
+      }
+    }
+  },
+  "paired_deltas_b_minus_v1": {
+    "log_loss": {
+      "v1": 1.012643607907126,
+      "model_b": 0.9960487649063601,
+      "delta_b_minus_v1": -0.016594843000765858,
+      "b_numerically_better": true,
+      "lower_is_better": true
+    },
+    "brier": {
+      "v1": 0.6059500599589396,
+      "model_b": 0.5947186313129067,
+      "delta_b_minus_v1": -0.011231428646032882,
+      "b_numerically_better": true,
+      "lower_is_better": true
+    },
+    "accuracy": {
+      "v1": 0.500856653340948,
+      "model_b": 0.5151342090234152,
+      "delta_b_minus_v1": 0.014277555682467247,
+      "b_numerically_better": true,
+      "lower_is_better": false
+    },
+    "macro_f1": {
+      "v1": 0.3712753915810083,
+      "model_b": 0.3938491505819635,
+      "delta_b_minus_v1": 0.022573759000955207,
+      "b_numerically_better": true,
+      "lower_is_better": false
+    },
+    "balanced_accuracy": {
+      "v1": 0.4321797560315324,
+      "model_b": 0.4489548797121166,
+      "delta_b_minus_v1": 0.016775123680584203,
+      "b_numerically_better": true,
+      "lower_is_better": false
+    },
+    "_note": "Deltas are numerical only. No epsilon tie-threshold was authorized, so no delta may be described as 'meaningful' or 'significant'; zone assignment defers to the protocol's human-review boundary."
+  },
+  "v1_reproduction_check": {
+    "tolerance": 1e-09,
+    "all_match": true,
+    "checks": {
+      "log_loss": {
+        "locked": 1.012643607907126,
+        "reproduced": 1.012643607907126,
+        "abs_difference": 0.0,
+        "match": true
+      },
+      "brier": {
+        "locked": 0.6059500599589396,
+        "reproduced": 0.6059500599589396,
+        "abs_difference": 0.0,
+        "match": true
+      },
+      "accuracy": {
+        "locked": 0.500856653340948,
+        "reproduced": 0.500856653340948,
+        "abs_difference": 0.0,
+        "match": true
+      },
+      "macro_f1": {
+        "locked": 0.3712753915810083,
+        "reproduced": 0.3712753915810083,
+        "abs_difference": 0.0,
+        "match": true
+      },
+      "balanced_accuracy": {
+        "locked": 0.4321797560315324,
+        "reproduced": 0.4321797560315324,
+        "abs_difference": 0.0,
+        "match": true
+      },
+      "n": {
+        "locked": 1751,
+        "reproduced": 1751,
+        "abs_difference": 0,
+        "match": true
+      }
+    }
+  },
+  "validity_checks": {
+    "n_test_equals_1751_both": true,
+    "identical_fixture_sets": true,
+    "fixture_order_aligned": true,
+    "no_duplicate_fixtures": true,
+    "no_missing_rows": true,
+    "abandoned_fixture_absent": true,
+    "no_train_test_overlap": true,
+    "identical_y_true_both_arms": true,
+    "class_order_correct": true,
+    "temporal_safety_verified": true,
+    "all_passed": true,
+    "failures": []
+  },
+  "decision_zone": "PENDING_HUMAN_REVIEW",
+  "decision_note": "No zone is assigned automatically by this runner. Zone assignment follows the pre-registered protocol \u00a76/\u00a78 and, with no epsilon authorized, requires explicit human review. Model B is NOT promoted, MODEL_VERSION is unchanged, no V2 created.",
+  "model_version_unchanged": "v1.0"
+}

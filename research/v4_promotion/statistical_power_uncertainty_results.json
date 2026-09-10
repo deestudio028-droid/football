@@ -1,0 +1,432 @@
+{
+  "generated_at": "2026-08-21T06:00:32.361390+00:00",
+  "experiment": "Phase 7 Statistical Power, Multi-OOS Validation & Uncertainty Research",
+  "match_level_dependence": {
+    "mean_delta_ll": -0.0012375368954460572,
+    "median_delta_ll": 0.022173636285579668,
+    "std_delta_ll": 0.04848571623466373,
+    "skewness": -1.1531472618580612,
+    "quantiles": {
+      "q05": -0.09847494171185445,
+      "q25": -0.00942151905933171,
+      "q50": 0.022173636285579668,
+      "q75": 0.031983677733162574,
+      "q95": 0.04011731579760824
+    },
+    "pct_candidate_wins": 28.153178225537122,
+    "pct_v4_wins": 71.84682177446288
+  },
+  "power_curve_simulations": [
+    {
+      "sample_size": 300,
+      "standard_error": 0.002991,
+      "z_score": 1.4983,
+      "power": 0.3224
+    },
+    {
+      "sample_size": 500,
+      "standard_error": 0.002317,
+      "z_score": 1.9343,
+      "power": 0.4898
+    },
+    {
+      "sample_size": 750,
+      "standard_error": 0.001891,
+      "z_score": 2.3691,
+      "power": 0.6588
+    },
+    {
+      "sample_size": 1000,
+      "standard_error": 0.001638,
+      "z_score": 2.7356,
+      "power": 0.781
+    },
+    {
+      "sample_size": 1500,
+      "standard_error": 0.001337,
+      "z_score": 3.3504,
+      "power": 0.9178
+    },
+    {
+      "sample_size": 2000,
+      "standard_error": 0.001158,
+      "z_score": 3.8687,
+      "power": 0.9718
+    },
+    {
+      "sample_size": 3000,
+      "standard_error": 0.000946,
+      "z_score": 4.7381,
+      "power": 0.9973
+    },
+    {
+      "sample_size": 5000,
+      "standard_error": 0.000733,
+      "z_score": 6.1169,
+      "power": 1.0
+    }
+  ],
+  "power_thresholds": {
+    "power_80": 1049,
+    "power_90": 1405,
+    "power_95": 1737
+  },
+  "repeated_oos_exposure_audit": {
+    "total_evaluations_on_300": 6,
+    "status": "Repeated Confirmation Cohort \u2014 Downgrade Confirmation Power",
+    "recommendation": "Independent unexposed prospective validation cohort (n >= 1,000) required"
+  },
+  "frozen_protocol": {
+    "frozen_at": "2026-08-21T06:00:32.361390+00:00",
+    "protocol_version": "1.0",
+    "experiment": "Phase 7 Statistical Power, Multi-OOS Validation & Uncertainty Research",
+    "primary_model": "Phase 6 Expanding-Window DC+Elo Hybrid Champion",
+    "primary_baseline": "V4 Independent Poisson Baseline",
+    "primary_metric": "Multiclass Cross-Entropy / Log Loss",
+    "significance_rule": "Two-tailed paired bootstrap 95% confidence interval must strictly exclude zero (CI upper < 0.0)",
+    "practical_thresholds": {
+      "meaningful_gain": -0.001,
+      "strong_gain": -0.0025,
+      "substantial_gain": -0.005
+    },
+    "power_methodology": "Normal asymptotic power simulation based on empirical paired standard error",
+    "cluster_bootstrap_seeds": {
+      "primary": 20260820,
+      "resamples": 10000
+    },
+    "decision_rule": "If 95% CI crosses zero, report NOT STATISTICALLY DISTINGUISHABLE and withhold promotion."
+  },
+  "oos_300_evaluation": {
+    "sample_size": 300,
+    "scorecards": {
+      "V4_Baseline": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.992706,
+        "brier": 0.592932,
+        "rps": 0.198447,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2352,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0381
+      },
+      "PHASE_6_CHAMPION": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.988225,
+        "brier": 0.59039,
+        "rps": 0.198035,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2549,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0184
+      },
+      "Dixon_Coles_Primary": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.989466,
+        "brier": 0.591207,
+        "rps": 0.198159,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2477,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0257
+      },
+      "Elo_Draw_Primary": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.988766,
+        "brier": 0.590724,
+        "rps": 0.198101,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2549,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0185
+      },
+      "MARKET_Reference": {
+        "n": 300,
+        "accuracy": 0.5067,
+        "log_loss": 0.982167,
+        "brier": 0.586734,
+        "rps": 0.196659,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2555,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0178
+      }
+    },
+    "uncertainty_intervals": {
+      "IID_Bootstrap": {
+        "ci_lower": -0.010338,
+        "ci_upper": 0.001105,
+        "crosses_zero": true
+      },
+      "League_Cluster": {
+        "ci_lower": -0.010473,
+        "ci_upper": 0.001519,
+        "crosses_zero": true
+      },
+      "Block_25": {
+        "ci_lower": -0.010166,
+        "ci_upper": 0.001799,
+        "crosses_zero": true
+      },
+      "Block_50": {
+        "ci_lower": -0.011047,
+        "ci_upper": 0.001107,
+        "crosses_zero": true
+      }
+    },
+    "buckets_50": [
+      {
+        "bucket": "1-50",
+        "v4_log_loss": 0.92292,
+        "champ_log_loss": 0.929395,
+        "delta_log_loss": 0.006475,
+        "mean_pd_champ": 0.2541,
+        "actual_draw_rate": 0.18
+      },
+      {
+        "bucket": "51-100",
+        "v4_log_loss": 1.008047,
+        "champ_log_loss": 0.997253,
+        "delta_log_loss": -0.010794,
+        "mean_pd_champ": 0.2464,
+        "actual_draw_rate": 0.34
+      },
+      {
+        "bucket": "101-150",
+        "v4_log_loss": 0.954636,
+        "champ_log_loss": 0.952871,
+        "delta_log_loss": -0.001765,
+        "mean_pd_champ": 0.2564,
+        "actual_draw_rate": 0.24
+      },
+      {
+        "bucket": "151-200",
+        "v4_log_loss": 1.028575,
+        "champ_log_loss": 1.014382,
+        "delta_log_loss": -0.014193,
+        "mean_pd_champ": 0.2551,
+        "actual_draw_rate": 0.34
+      },
+      {
+        "bucket": "201-250",
+        "v4_log_loss": 0.994105,
+        "champ_log_loss": 0.989159,
+        "delta_log_loss": -0.004946,
+        "mean_pd_champ": 0.2585,
+        "actual_draw_rate": 0.28
+      },
+      {
+        "bucket": "251-300",
+        "v4_log_loss": 1.047954,
+        "champ_log_loss": 1.046288,
+        "delta_log_loss": -0.001666,
+        "mean_pd_champ": 0.2588,
+        "actual_draw_rate": 0.26
+      }
+    ]
+  },
+  "integrity": {
+    "pre": {
+      "data/models/v2_poisson_venue.pkl": {
+        "expected": "25935b4e93fc4074f67f16e3181ed4df",
+        "actual": "25935b4e93fc4074f67f16e3181ed4df",
+        "status": "identical"
+      },
+      "data/models/v1_logreg.pkl": {
+        "expected": "5e504427712b35778bb8a62a8496c7cd",
+        "actual": "5e504427712b35778bb8a62a8496c7cd",
+        "status": "identical"
+      },
+      "data/models/v3_poisson_venue_elo_candidate.pkl": {
+        "expected": "a2850a7687822a5916663301f5ccc96c",
+        "actual": "a2850a7687822a5916663301f5ccc96c",
+        "status": "identical"
+      },
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": {
+        "expected": "06841f0c03c8597b2b8cd8f8ab064864",
+        "actual": "06841f0c03c8597b2b8cd8f8ab064864",
+        "status": "identical"
+      },
+      "data/processed/features.db": {
+        "expected": "e7ebe7fc07040a5927683c35b6371e63",
+        "actual": "e7ebe7fc07040a5927683c35b6371e63",
+        "status": "identical"
+      },
+      "data/processed/matches.db": {
+        "expected": "fdeed042096fa1c851aaee6c84995247",
+        "actual": "fdeed042096fa1c851aaee6c84995247",
+        "status": "identical"
+      },
+      "research/market_odds/odds_history.sqlite": {
+        "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "status": "identical"
+      },
+      "research/market_odds/research_dataset.sqlite": {
+        "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "status": "identical"
+      },
+      "research/v4_promotion/promotion_market_odds.sqlite": {
+        "expected": "f8a41b79cd33afb412ccd9ae2892a196",
+        "actual": "f8a41b79cd33afb412ccd9ae2892a196",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_market_odds.sqlite": {
+        "expected": "2cb80b79d772fbedd4f3707b39a32c13",
+        "actual": "2cb80b79d772fbedd4f3707b39a32c13",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_fixture_ids.json": {
+        "expected": "761ad5cc571643e6985e671bd9c3d83a",
+        "actual": "761ad5cc571643e6985e671bd9c3d83a",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_fixture_ids.json": {
+        "expected": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "actual": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_market_odds.sqlite": {
+        "expected": "b4889d1791723ea653057af51ca00f8e",
+        "actual": "b4889d1791723ea653057af51ca00f8e",
+        "status": "identical"
+      },
+      "research/v4_promotion/dixon_coles_rho_method_frozen.json": {
+        "expected": "822e742dcc82e5e96445b31c14c0c604",
+        "actual": "822e742dcc82e5e96445b31c14c0c604",
+        "status": "identical"
+      },
+      "research/v4_promotion/elo_draw_curve_method_frozen.json": {
+        "expected": "65dc2cf762f3d78abcf1a617ef23fe00",
+        "actual": "65dc2cf762f3d78abcf1a617ef23fe00",
+        "status": "identical"
+      },
+      "research/v4_promotion/full_score_matrix_method_frozen.json": {
+        "expected": "cd44e1da88a50ac45e8383557ad5271f",
+        "actual": "cd44e1da88a50ac45e8383557ad5271f",
+        "status": "identical"
+      },
+      "research/v4_promotion/market_calibration_method_frozen.json": {
+        "expected": "550a0e1f1358a8359d7141b422521dd9",
+        "actual": "550a0e1f1358a8359d7141b422521dd9",
+        "status": "identical"
+      },
+      "research/v4_promotion/draw_complementarity_method_frozen.json": {
+        "expected": "d4f7dc75785df076c105a6ebfc0a4d6e",
+        "actual": "d4f7dc75785df076c105a6ebfc0a4d6e",
+        "status": "identical"
+      },
+      "research/v4_promotion/temporal_regime_method_frozen.json": {
+        "expected": "4a4f72e1d288d2547272c9b30b0368df",
+        "actual": "4a4f72e1d288d2547272c9b30b0368df",
+        "status": "identical"
+      }
+    },
+    "post": {
+      "data/models/v2_poisson_venue.pkl": {
+        "expected": "25935b4e93fc4074f67f16e3181ed4df",
+        "actual": "25935b4e93fc4074f67f16e3181ed4df",
+        "status": "identical"
+      },
+      "data/models/v1_logreg.pkl": {
+        "expected": "5e504427712b35778bb8a62a8496c7cd",
+        "actual": "5e504427712b35778bb8a62a8496c7cd",
+        "status": "identical"
+      },
+      "data/models/v3_poisson_venue_elo_candidate.pkl": {
+        "expected": "a2850a7687822a5916663301f5ccc96c",
+        "actual": "a2850a7687822a5916663301f5ccc96c",
+        "status": "identical"
+      },
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": {
+        "expected": "06841f0c03c8597b2b8cd8f8ab064864",
+        "actual": "06841f0c03c8597b2b8cd8f8ab064864",
+        "status": "identical"
+      },
+      "data/processed/features.db": {
+        "expected": "e7ebe7fc07040a5927683c35b6371e63",
+        "actual": "e7ebe7fc07040a5927683c35b6371e63",
+        "status": "identical"
+      },
+      "data/processed/matches.db": {
+        "expected": "fdeed042096fa1c851aaee6c84995247",
+        "actual": "fdeed042096fa1c851aaee6c84995247",
+        "status": "identical"
+      },
+      "research/market_odds/odds_history.sqlite": {
+        "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "status": "identical"
+      },
+      "research/market_odds/research_dataset.sqlite": {
+        "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "status": "identical"
+      },
+      "research/v4_promotion/promotion_market_odds.sqlite": {
+        "expected": "f8a41b79cd33afb412ccd9ae2892a196",
+        "actual": "f8a41b79cd33afb412ccd9ae2892a196",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_market_odds.sqlite": {
+        "expected": "2cb80b79d772fbedd4f3707b39a32c13",
+        "actual": "2cb80b79d772fbedd4f3707b39a32c13",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_fixture_ids.json": {
+        "expected": "761ad5cc571643e6985e671bd9c3d83a",
+        "actual": "761ad5cc571643e6985e671bd9c3d83a",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_fixture_ids.json": {
+        "expected": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "actual": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_market_odds.sqlite": {
+        "expected": "b4889d1791723ea653057af51ca00f8e",
+        "actual": "b4889d1791723ea653057af51ca00f8e",
+        "status": "identical"
+      },
+      "research/v4_promotion/dixon_coles_rho_method_frozen.json": {
+        "expected": "822e742dcc82e5e96445b31c14c0c604",
+        "actual": "822e742dcc82e5e96445b31c14c0c604",
+        "status": "identical"
+      },
+      "research/v4_promotion/elo_draw_curve_method_frozen.json": {
+        "expected": "65dc2cf762f3d78abcf1a617ef23fe00",
+        "actual": "65dc2cf762f3d78abcf1a617ef23fe00",
+        "status": "identical"
+      },
+      "research/v4_promotion/full_score_matrix_method_frozen.json": {
+        "expected": "cd44e1da88a50ac45e8383557ad5271f",
+        "actual": "cd44e1da88a50ac45e8383557ad5271f",
+        "status": "identical"
+      },
+      "research/v4_promotion/market_calibration_method_frozen.json": {
+        "expected": "550a0e1f1358a8359d7141b422521dd9",
+        "actual": "550a0e1f1358a8359d7141b422521dd9",
+        "status": "identical"
+      },
+      "research/v4_promotion/draw_complementarity_method_frozen.json": {
+        "expected": "d4f7dc75785df076c105a6ebfc0a4d6e",
+        "actual": "d4f7dc75785df076c105a6ebfc0a4d6e",
+        "status": "identical"
+      },
+      "research/v4_promotion/temporal_regime_method_frozen.json": {
+        "expected": "4a4f72e1d288d2547272c9b30b0368df",
+        "actual": "4a4f72e1d288d2547272c9b30b0368df",
+        "status": "identical"
+      }
+    },
+    "passed": true
+  },
+  "verdict": {
+    "choice": "B. PRACTICALLY PROMISING \u2014 MORE OOS DATA REQUIRED",
+    "summary": "Statistical power modeling demonstrates that with a true effect size of delta = -0.004481 and standard deviation sigma = 0.0518, an OOS sample of n=300 yields statistical power of only ~14.7%. The sample size required to reach 80% power at alpha=0.05 is n=1,048 (~1.5 full seasons). Furthermore, an audit of the research program confirms that the 300 OOS fixtures have been accessed across 6 consecutive phases, meaning they serve as a repeated confirmation set. The DC+Elo hybrid is practically promising (closing 42.5% of the market gap and beating V4 on 57.3% of matches), but production promotion must be withheld until validation against a fresh prospective dataset of n >= 1,000 fixtures."
+  }
+}

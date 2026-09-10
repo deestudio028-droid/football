@@ -1,0 +1,3053 @@
+{
+  "generated_at": "2026-08-21T04:20:00.262957+00:00",
+  "purpose": "Extended fresh OOS validation \u2014 fixture IDs FROZEN before evaluation",
+  "selection_rule": "season_id IN (2025/26 ids) AND status='FT' ORDER BY unix ASC, fixture_id ASC LIMIT 300 OFFSET 150",
+  "n": 300,
+  "fixture_ids": [
+    367857787,
+    367857369,
+    367857020,
+    367857041,
+    365992310,
+    367857070,
+    367857071,
+    367857370,
+    367857327,
+    367330015,
+    367857371,
+    367857374,
+    367857375,
+    367857376,
+    365992314,
+    367857748,
+    367857752,
+    367857768,
+    367857377,
+    367857785,
+    367857788,
+    368529072,
+    368529075,
+    368374798,
+    371465499,
+    368376654,
+    372580136,
+    368374827,
+    365992354,
+    368374979,
+    372580130,
+    372014866,
+    372014867,
+    372014868,
+    372014869,
+    365992297,
+    365992318,
+    365992319,
+    365992353,
+    368374828,
+    368376658,
+    372580133,
+    365992313,
+    368374825,
+    368374831,
+    372015145,
+    368376662,
+    372580139,
+    365992316,
+    368374830,
+    368376648,
+    372580135,
+    368375062,
+    365992309,
+    365992352,
+    368376657,
+    372580131,
+    372580138,
+    372580358,
+    368375070,
+    368376652,
+    368376653,
+    368376656,
+    365992312,
+    372580695,
+    372580132,
+    368374826,
+    372580716,
+    372580134,
+    368374824,
+    368376659,
+    372580137,
+    368374834,
+    368375072,
+    368374829,
+    368374839,
+    368374833,
+    368374832,
+    368374838,
+    368374835,
+    368374836,
+    373089875,
+    368376629,
+    368374840,
+    365992323,
+    368375071,
+    374120009,
+    373089876,
+    373089877,
+    373090053,
+    373090054,
+    365992299,
+    365992308,
+    365992322,
+    365992360,
+    368374800,
+    368376646,
+    374120010,
+    365992325,
+    368374841,
+    373090082,
+    368376651,
+    374120032,
+    365992355,
+    368374845,
+    368376649,
+    374120038,
+    368374842,
+    365992320,
+    368376655,
+    374120035,
+    374120039,
+    373090052,
+    368375063,
+    368376647,
+    368376650,
+    368376661,
+    365992321,
+    373089895,
+    374120036,
+    368374837,
+    373089878,
+    368376660,
+    374120034,
+    368374843,
+    374120037,
+    374120086,
+    365992324,
+    368374844,
+    373090090,
+    368376460,
+    374120041,
+    365992328,
+    368374801,
+    365992338,
+    368374855,
+    374119966,
+    374120042,
+    373089969,
+    373090051,
+    373090055,
+    373090084,
+    365992326,
+    365992335,
+    368374854,
+    368376459,
+    374120088,
+    365992330,
+    368374847,
+    373089968,
+    368376461,
+    374120031,
+    368374853,
+    368376608,
+    374120044,
+    368374849,
+    365992298,
+    365992327,
+    365992334,
+    365992345,
+    368376607,
+    374120033,
+    374120040,
+    373090083,
+    368374851,
+    368376457,
+    368376458,
+    368376462,
+    365992329,
+    373089970,
+    374120011,
+    368374850,
+    368374856,
+    373090086,
+    368376456,
+    374119963,
+    368374848,
+    373089966,
+    368376611,
+    368374864,
+    365992332,
+    368374860,
+    374120047,
+    374120048,
+    373089971,
+    373089973,
+    373089974,
+    373090057,
+    373090085,
+    365992336,
+    365992346,
+    365992348,
+    365992518,
+    365992569,
+    368374852,
+    368376597,
+    374120049,
+    365992349,
+    368374866,
+    373089972,
+    368376613,
+    374119962,
+    368374858,
+    368376464,
+    374120087,
+    368374863,
+    365992522,
+    368376467,
+    374120043,
+    374120046,
+    373089967,
+    368374861,
+    368376465,
+    368376466,
+    368376615,
+    365992333,
+    373090058,
+    374120045,
+    368374846,
+    368376463,
+    374119961,
+    368374857,
+    374120062,
+    365992337,
+    368374862,
+    373089975,
+    368376476,
+    374120287,
+    365992570,
+    368375121,
+    368374868,
+    374120065,
+    374120193,
+    373089978,
+    373090056,
+    373090059,
+    373090095,
+    373090094,
+    365992347,
+    365992361,
+    368374867,
+    368376473,
+    374120197,
+    365992351,
+    368375118,
+    373089977,
+    368376471,
+    374120063,
+    365992568,
+    368374859,
+    368376469,
+    374120050,
+    368375073,
+    365992331,
+    365992350,
+    365992356,
+    365992357,
+    368376472,
+    374120194,
+    374120201,
+    373089976,
+    368374871,
+    368376470,
+    368376474,
+    368376475,
+    365992557,
+    373089980,
+    374120064,
+    368374869,
+    368376468,
+    374120202,
+    368374870,
+    368374802,
+    374120199,
+    374120190,
+    374120067,
+    374120068,
+    374120195,
+    368376449,
+    368376631,
+    368376667,
+    368376671,
+    374119967,
+    374120051,
+    374120066,
+    368376446,
+    368376447,
+    368376664,
+    368376665,
+    368376675,
+    374120198,
+    374120200,
+    373089983,
+    368374874,
+    368375113,
+    374120054,
+    373089979,
+    373089982,
+    373089984,
+    373090060
+  ],
+  "fixtures": [
+    {
+      "seq": 1,
+      "fixture_id": 367857787,
+      "date": "2025-09-13",
+      "league": "La Liga",
+      "home": "Atl\u00e9tico de Madrid",
+      "away": "Villarreal",
+      "actual": "H"
+    },
+    {
+      "seq": 2,
+      "fixture_id": 367857369,
+      "date": "2025-09-13",
+      "league": "Ligue 1",
+      "home": "Auxerre",
+      "away": "Monaco",
+      "actual": "A"
+    },
+    {
+      "seq": 3,
+      "fixture_id": 367857020,
+      "date": "2025-09-14",
+      "league": "Serie A",
+      "home": "Roma",
+      "away": "Torino",
+      "actual": "A"
+    },
+    {
+      "seq": 4,
+      "fixture_id": 367857041,
+      "date": "2025-09-14",
+      "league": "La Liga",
+      "home": "Celta de Vigo",
+      "away": "Girona",
+      "actual": "D"
+    },
+    {
+      "seq": 5,
+      "fixture_id": 365992310,
+      "date": "2025-09-14",
+      "league": "Premier League",
+      "home": "Burnley",
+      "away": "Liverpool",
+      "actual": "A"
+    },
+    {
+      "seq": 6,
+      "fixture_id": 367857070,
+      "date": "2025-09-14",
+      "league": "Serie A",
+      "home": "Atalanta",
+      "away": "Lecce",
+      "actual": "H"
+    },
+    {
+      "seq": 7,
+      "fixture_id": 367857071,
+      "date": "2025-09-14",
+      "league": "Serie A",
+      "home": "Pisa",
+      "away": "Udinese",
+      "actual": "A"
+    },
+    {
+      "seq": 8,
+      "fixture_id": 367857370,
+      "date": "2025-09-14",
+      "league": "Ligue 1",
+      "home": "LOSC Lille",
+      "away": "Toulouse",
+      "actual": "H"
+    },
+    {
+      "seq": 9,
+      "fixture_id": 367857327,
+      "date": "2025-09-14",
+      "league": "Bundesliga",
+      "home": "St. Pauli",
+      "away": "FC Augsburg",
+      "actual": "H"
+    },
+    {
+      "seq": 10,
+      "fixture_id": 367330015,
+      "date": "2025-09-14",
+      "league": "La Liga",
+      "home": "Levante",
+      "away": "Real Betis",
+      "actual": "D"
+    },
+    {
+      "seq": 11,
+      "fixture_id": 367857371,
+      "date": "2025-09-14",
+      "league": "Ligue 1",
+      "home": "Metz",
+      "away": "Angers SCO",
+      "actual": "D"
+    },
+    {
+      "seq": 12,
+      "fixture_id": 367857374,
+      "date": "2025-09-14",
+      "league": "Ligue 1",
+      "home": "Paris Saint Germain",
+      "away": "Lens",
+      "actual": "H"
+    },
+    {
+      "seq": 13,
+      "fixture_id": 367857375,
+      "date": "2025-09-14",
+      "league": "Ligue 1",
+      "home": "Strasbourg",
+      "away": "Le Havre",
+      "actual": "H"
+    },
+    {
+      "seq": 14,
+      "fixture_id": 367857376,
+      "date": "2025-09-14",
+      "league": "Ligue 1",
+      "home": "Brest",
+      "away": "Paris",
+      "actual": "A"
+    },
+    {
+      "seq": 15,
+      "fixture_id": 365992314,
+      "date": "2025-09-14",
+      "league": "Premier League",
+      "home": "Manchester City",
+      "away": "Manchester United",
+      "actual": "H"
+    },
+    {
+      "seq": 16,
+      "fixture_id": 367857748,
+      "date": "2025-09-14",
+      "league": "Bundesliga",
+      "home": "Borussia M\u00f6nchengladbach",
+      "away": "Werder Bremen",
+      "actual": "A"
+    },
+    {
+      "seq": 17,
+      "fixture_id": 367857752,
+      "date": "2025-09-14",
+      "league": "Serie A",
+      "home": "Sassuolo",
+      "away": "Lazio",
+      "actual": "H"
+    },
+    {
+      "seq": 18,
+      "fixture_id": 367857768,
+      "date": "2025-09-14",
+      "league": "La Liga",
+      "home": "Osasuna",
+      "away": "Rayo Vallecano",
+      "actual": "H"
+    },
+    {
+      "seq": 19,
+      "fixture_id": 367857377,
+      "date": "2025-09-14",
+      "league": "Ligue 1",
+      "home": "Rennes",
+      "away": "Olympique Lyonnais",
+      "actual": "H"
+    },
+    {
+      "seq": 20,
+      "fixture_id": 367857785,
+      "date": "2025-09-14",
+      "league": "Serie A",
+      "home": "AC Milan",
+      "away": "Bologna",
+      "actual": "H"
+    },
+    {
+      "seq": 21,
+      "fixture_id": 367857788,
+      "date": "2025-09-14",
+      "league": "La Liga",
+      "home": "FC Barcelona",
+      "away": "Valencia",
+      "actual": "H"
+    },
+    {
+      "seq": 22,
+      "fixture_id": 368529072,
+      "date": "2025-09-15",
+      "league": "Serie A",
+      "home": "Hellas Verona",
+      "away": "Cremonese",
+      "actual": "D"
+    },
+    {
+      "seq": 23,
+      "fixture_id": 368529075,
+      "date": "2025-09-15",
+      "league": "Serie A",
+      "home": "Como",
+      "away": "Genoa",
+      "actual": "D"
+    },
+    {
+      "seq": 24,
+      "fixture_id": 368374798,
+      "date": "2025-09-15",
+      "league": "La Liga",
+      "home": "Espanyol",
+      "away": "Mallorca",
+      "actual": "H"
+    },
+    {
+      "seq": 25,
+      "fixture_id": 371465499,
+      "date": "2025-09-19",
+      "league": "Bundesliga",
+      "home": "VfB Stuttgart",
+      "away": "St. Pauli",
+      "actual": "H"
+    },
+    {
+      "seq": 26,
+      "fixture_id": 368376654,
+      "date": "2025-09-19",
+      "league": "Ligue 1",
+      "home": "Olympique Lyonnais",
+      "away": "Angers SCO",
+      "actual": "H"
+    },
+    {
+      "seq": 27,
+      "fixture_id": 372580136,
+      "date": "2025-09-19",
+      "league": "Serie A",
+      "home": "Lecce",
+      "away": "Cagliari",
+      "actual": "A"
+    },
+    {
+      "seq": 28,
+      "fixture_id": 368374827,
+      "date": "2025-09-19",
+      "league": "La Liga",
+      "home": "Real Betis",
+      "away": "Real Sociedad",
+      "actual": "H"
+    },
+    {
+      "seq": 29,
+      "fixture_id": 365992354,
+      "date": "2025-09-20",
+      "league": "Premier League",
+      "home": "Liverpool",
+      "away": "Everton",
+      "actual": "H"
+    },
+    {
+      "seq": 30,
+      "fixture_id": 368374979,
+      "date": "2025-09-20",
+      "league": "La Liga",
+      "home": "Girona",
+      "away": "Levante",
+      "actual": "A"
+    },
+    {
+      "seq": 31,
+      "fixture_id": 372580130,
+      "date": "2025-09-20",
+      "league": "Serie A",
+      "home": "Bologna",
+      "away": "Genoa",
+      "actual": "H"
+    },
+    {
+      "seq": 32,
+      "fixture_id": 372014866,
+      "date": "2025-09-20",
+      "league": "Bundesliga",
+      "home": "FC Augsburg",
+      "away": "FSV Mainz 05",
+      "actual": "A"
+    },
+    {
+      "seq": 33,
+      "fixture_id": 372014867,
+      "date": "2025-09-20",
+      "league": "Bundesliga",
+      "home": "Hamburger SV",
+      "away": "Heidenheim",
+      "actual": "H"
+    },
+    {
+      "seq": 34,
+      "fixture_id": 372014868,
+      "date": "2025-09-20",
+      "league": "Bundesliga",
+      "home": "Werder Bremen",
+      "away": "SC Freiburg",
+      "actual": "A"
+    },
+    {
+      "seq": 35,
+      "fixture_id": 372014869,
+      "date": "2025-09-20",
+      "league": "Bundesliga",
+      "home": "TSG Hoffenheim",
+      "away": "FC Bayern M\u00fcnchen",
+      "actual": "A"
+    },
+    {
+      "seq": 36,
+      "fixture_id": 365992297,
+      "date": "2025-09-20",
+      "league": "Premier League",
+      "home": "Brighton & Hove Albion",
+      "away": "Tottenham Hotspur",
+      "actual": "D"
+    },
+    {
+      "seq": 37,
+      "fixture_id": 365992318,
+      "date": "2025-09-20",
+      "league": "Premier League",
+      "home": "West Ham United",
+      "away": "Crystal Palace",
+      "actual": "A"
+    },
+    {
+      "seq": 38,
+      "fixture_id": 365992319,
+      "date": "2025-09-20",
+      "league": "Premier League",
+      "home": "Wolverhampton Wanderers",
+      "away": "Leeds United",
+      "actual": "A"
+    },
+    {
+      "seq": 39,
+      "fixture_id": 365992353,
+      "date": "2025-09-20",
+      "league": "Premier League",
+      "home": "Burnley",
+      "away": "Nottingham Forest",
+      "actual": "D"
+    },
+    {
+      "seq": 40,
+      "fixture_id": 368374828,
+      "date": "2025-09-20",
+      "league": "La Liga",
+      "home": "Real Madrid",
+      "away": "Espanyol",
+      "actual": "H"
+    },
+    {
+      "seq": 41,
+      "fixture_id": 368376658,
+      "date": "2025-09-20",
+      "league": "Ligue 1",
+      "home": "Nantes",
+      "away": "Rennes",
+      "actual": "D"
+    },
+    {
+      "seq": 42,
+      "fixture_id": 372580133,
+      "date": "2025-09-20",
+      "league": "Serie A",
+      "home": "Hellas Verona",
+      "away": "Juventus",
+      "actual": "D"
+    },
+    {
+      "seq": 43,
+      "fixture_id": 365992313,
+      "date": "2025-09-20",
+      "league": "Premier League",
+      "home": "Manchester United",
+      "away": "Chelsea",
+      "actual": "H"
+    },
+    {
+      "seq": 44,
+      "fixture_id": 368374825,
+      "date": "2025-09-20",
+      "league": "La Liga",
+      "home": "Deportivo Alav\u00e9s",
+      "away": "Sevilla",
+      "actual": "A"
+    },
+    {
+      "seq": 45,
+      "fixture_id": 368374831,
+      "date": "2025-09-20",
+      "league": "La Liga",
+      "home": "Villarreal",
+      "away": "Osasuna",
+      "actual": "H"
+    },
+    {
+      "seq": 46,
+      "fixture_id": 372015145,
+      "date": "2025-09-20",
+      "league": "Bundesliga",
+      "home": "RB Leipzig",
+      "away": "FC K\u00f6ln",
+      "actual": "H"
+    },
+    {
+      "seq": 47,
+      "fixture_id": 368376662,
+      "date": "2025-09-20",
+      "league": "Ligue 1",
+      "home": "Brest",
+      "away": "Nice",
+      "actual": "H"
+    },
+    {
+      "seq": 48,
+      "fixture_id": 372580139,
+      "date": "2025-09-20",
+      "league": "Serie A",
+      "home": "Udinese",
+      "away": "AC Milan",
+      "actual": "A"
+    },
+    {
+      "seq": 49,
+      "fixture_id": 365992316,
+      "date": "2025-09-20",
+      "league": "Premier League",
+      "home": "Fulham",
+      "away": "Brentford",
+      "actual": "H"
+    },
+    {
+      "seq": 50,
+      "fixture_id": 368374830,
+      "date": "2025-09-20",
+      "league": "La Liga",
+      "home": "Valencia",
+      "away": "Athletic Club",
+      "actual": "H"
+    },
+    {
+      "seq": 51,
+      "fixture_id": 368376648,
+      "date": "2025-09-20",
+      "league": "Ligue 1",
+      "home": "Lens",
+      "away": "LOSC Lille",
+      "actual": "H"
+    },
+    {
+      "seq": 52,
+      "fixture_id": 372580135,
+      "date": "2025-09-21",
+      "league": "Serie A",
+      "home": "Lazio",
+      "away": "Roma",
+      "actual": "A"
+    },
+    {
+      "seq": 53,
+      "fixture_id": 368375062,
+      "date": "2025-09-21",
+      "league": "La Liga",
+      "home": "Rayo Vallecano",
+      "away": "Celta de Vigo",
+      "actual": "D"
+    },
+    {
+      "seq": 54,
+      "fixture_id": 365992309,
+      "date": "2025-09-21",
+      "league": "Premier League",
+      "home": "AFC Bournemouth",
+      "away": "Newcastle United",
+      "actual": "D"
+    },
+    {
+      "seq": 55,
+      "fixture_id": 365992352,
+      "date": "2025-09-21",
+      "league": "Premier League",
+      "home": "Sunderland",
+      "away": "Aston Villa",
+      "actual": "D"
+    },
+    {
+      "seq": 56,
+      "fixture_id": 368376657,
+      "date": "2025-09-21",
+      "league": "Ligue 1",
+      "home": "Paris",
+      "away": "Strasbourg",
+      "actual": "A"
+    },
+    {
+      "seq": 57,
+      "fixture_id": 372580131,
+      "date": "2025-09-21",
+      "league": "Serie A",
+      "home": "Cremonese",
+      "away": "Parma",
+      "actual": "D"
+    },
+    {
+      "seq": 58,
+      "fixture_id": 372580138,
+      "date": "2025-09-21",
+      "league": "Serie A",
+      "home": "Torino",
+      "away": "Atalanta",
+      "actual": "A"
+    },
+    {
+      "seq": 59,
+      "fixture_id": 372580358,
+      "date": "2025-09-21",
+      "league": "Bundesliga",
+      "home": "Eintracht Frankfurt",
+      "away": "FC Union Berlin",
+      "actual": "A"
+    },
+    {
+      "seq": 60,
+      "fixture_id": 368375070,
+      "date": "2025-09-21",
+      "league": "La Liga",
+      "home": "Mallorca",
+      "away": "Atl\u00e9tico de Madrid",
+      "actual": "D"
+    },
+    {
+      "seq": 61,
+      "fixture_id": 368376652,
+      "date": "2025-09-21",
+      "league": "Ligue 1",
+      "home": "Le Havre",
+      "away": "Lorient",
+      "actual": "D"
+    },
+    {
+      "seq": 62,
+      "fixture_id": 368376653,
+      "date": "2025-09-21",
+      "league": "Ligue 1",
+      "home": "Monaco",
+      "away": "Metz",
+      "actual": "H"
+    },
+    {
+      "seq": 63,
+      "fixture_id": 368376656,
+      "date": "2025-09-21",
+      "league": "Ligue 1",
+      "home": "Auxerre",
+      "away": "Toulouse",
+      "actual": "H"
+    },
+    {
+      "seq": 64,
+      "fixture_id": 365992312,
+      "date": "2025-09-21",
+      "league": "Premier League",
+      "home": "Arsenal",
+      "away": "Manchester City",
+      "actual": "D"
+    },
+    {
+      "seq": 65,
+      "fixture_id": 372580695,
+      "date": "2025-09-21",
+      "league": "Bundesliga",
+      "home": "Bayer 04 Leverkusen",
+      "away": "Borussia M\u00f6nchengladbach",
+      "actual": "D"
+    },
+    {
+      "seq": 66,
+      "fixture_id": 372580132,
+      "date": "2025-09-21",
+      "league": "Serie A",
+      "home": "Fiorentina",
+      "away": "Como",
+      "actual": "A"
+    },
+    {
+      "seq": 67,
+      "fixture_id": 368374826,
+      "date": "2025-09-21",
+      "league": "La Liga",
+      "home": "Elche",
+      "away": "Real Oviedo",
+      "actual": "H"
+    },
+    {
+      "seq": 68,
+      "fixture_id": 372580716,
+      "date": "2025-09-21",
+      "league": "Bundesliga",
+      "home": "Borussia Dortmund",
+      "away": "VfL Wolfsburg",
+      "actual": "H"
+    },
+    {
+      "seq": 69,
+      "fixture_id": 372580134,
+      "date": "2025-09-21",
+      "league": "Serie A",
+      "home": "Inter",
+      "away": "Sassuolo",
+      "actual": "H"
+    },
+    {
+      "seq": 70,
+      "fixture_id": 368374824,
+      "date": "2025-09-21",
+      "league": "La Liga",
+      "home": "FC Barcelona",
+      "away": "Getafe",
+      "actual": "H"
+    },
+    {
+      "seq": 71,
+      "fixture_id": 368376659,
+      "date": "2025-09-22",
+      "league": "Ligue 1",
+      "home": "Olympique Marseille",
+      "away": "Paris Saint Germain",
+      "actual": "H"
+    },
+    {
+      "seq": 72,
+      "fixture_id": 372580137,
+      "date": "2025-09-22",
+      "league": "Serie A",
+      "home": "Napoli",
+      "away": "Pisa",
+      "actual": "H"
+    },
+    {
+      "seq": 73,
+      "fixture_id": 368374834,
+      "date": "2025-09-23",
+      "league": "La Liga",
+      "home": "Espanyol",
+      "away": "Valencia",
+      "actual": "D"
+    },
+    {
+      "seq": 74,
+      "fixture_id": 368375072,
+      "date": "2025-09-23",
+      "league": "La Liga",
+      "home": "Athletic Club",
+      "away": "Girona",
+      "actual": "D"
+    },
+    {
+      "seq": 75,
+      "fixture_id": 368374829,
+      "date": "2025-09-23",
+      "league": "La Liga",
+      "home": "Levante",
+      "away": "Real Madrid",
+      "actual": "A"
+    },
+    {
+      "seq": 76,
+      "fixture_id": 368374839,
+      "date": "2025-09-23",
+      "league": "La Liga",
+      "home": "Sevilla",
+      "away": "Villarreal",
+      "actual": "A"
+    },
+    {
+      "seq": 77,
+      "fixture_id": 368374833,
+      "date": "2025-09-24",
+      "league": "La Liga",
+      "home": "Getafe",
+      "away": "Deportivo Alav\u00e9s",
+      "actual": "D"
+    },
+    {
+      "seq": 78,
+      "fixture_id": 368374832,
+      "date": "2025-09-24",
+      "league": "La Liga",
+      "home": "Atl\u00e9tico de Madrid",
+      "away": "Rayo Vallecano",
+      "actual": "H"
+    },
+    {
+      "seq": 79,
+      "fixture_id": 368374838,
+      "date": "2025-09-24",
+      "league": "La Liga",
+      "home": "Real Sociedad",
+      "away": "Mallorca",
+      "actual": "H"
+    },
+    {
+      "seq": 80,
+      "fixture_id": 368374835,
+      "date": "2025-09-25",
+      "league": "La Liga",
+      "home": "Osasuna",
+      "away": "Elche",
+      "actual": "D"
+    },
+    {
+      "seq": 81,
+      "fixture_id": 368374836,
+      "date": "2025-09-25",
+      "league": "La Liga",
+      "home": "Real Oviedo",
+      "away": "FC Barcelona",
+      "actual": "A"
+    },
+    {
+      "seq": 82,
+      "fixture_id": 373089875,
+      "date": "2025-09-26",
+      "league": "Bundesliga",
+      "home": "FC Bayern M\u00fcnchen",
+      "away": "Werder Bremen",
+      "actual": "H"
+    },
+    {
+      "seq": 83,
+      "fixture_id": 368376629,
+      "date": "2025-09-26",
+      "league": "Ligue 1",
+      "home": "Strasbourg",
+      "away": "Olympique Marseille",
+      "actual": "A"
+    },
+    {
+      "seq": 84,
+      "fixture_id": 368374840,
+      "date": "2025-09-26",
+      "league": "La Liga",
+      "home": "Girona",
+      "away": "Espanyol",
+      "actual": "D"
+    },
+    {
+      "seq": 85,
+      "fixture_id": 365992323,
+      "date": "2025-09-27",
+      "league": "Premier League",
+      "home": "Brentford",
+      "away": "Manchester United",
+      "actual": "H"
+    },
+    {
+      "seq": 86,
+      "fixture_id": 368375071,
+      "date": "2025-09-27",
+      "league": "La Liga",
+      "home": "Getafe",
+      "away": "Levante",
+      "actual": "D"
+    },
+    {
+      "seq": 87,
+      "fixture_id": 374120009,
+      "date": "2025-09-27",
+      "league": "Serie A",
+      "home": "Como",
+      "away": "Cremonese",
+      "actual": "D"
+    },
+    {
+      "seq": 88,
+      "fixture_id": 373089876,
+      "date": "2025-09-27",
+      "league": "Bundesliga",
+      "home": "Heidenheim",
+      "away": "FC Augsburg",
+      "actual": "H"
+    },
+    {
+      "seq": 89,
+      "fixture_id": 373089877,
+      "date": "2025-09-27",
+      "league": "Bundesliga",
+      "home": "VfL Wolfsburg",
+      "away": "RB Leipzig",
+      "actual": "A"
+    },
+    {
+      "seq": 90,
+      "fixture_id": 373090053,
+      "date": "2025-09-27",
+      "league": "Bundesliga",
+      "home": "FSV Mainz 05",
+      "away": "Borussia Dortmund",
+      "actual": "A"
+    },
+    {
+      "seq": 91,
+      "fixture_id": 373090054,
+      "date": "2025-09-27",
+      "league": "Bundesliga",
+      "home": "St. Pauli",
+      "away": "Bayer 04 Leverkusen",
+      "actual": "A"
+    },
+    {
+      "seq": 92,
+      "fixture_id": 365992299,
+      "date": "2025-09-27",
+      "league": "Premier League",
+      "home": "Manchester City",
+      "away": "Burnley",
+      "actual": "H"
+    },
+    {
+      "seq": 93,
+      "fixture_id": 365992308,
+      "date": "2025-09-27",
+      "league": "Premier League",
+      "home": "Crystal Palace",
+      "away": "Liverpool",
+      "actual": "H"
+    },
+    {
+      "seq": 94,
+      "fixture_id": 365992322,
+      "date": "2025-09-27",
+      "league": "Premier League",
+      "home": "Chelsea",
+      "away": "Brighton & Hove Albion",
+      "actual": "A"
+    },
+    {
+      "seq": 95,
+      "fixture_id": 365992360,
+      "date": "2025-09-27",
+      "league": "Premier League",
+      "home": "Leeds United",
+      "away": "AFC Bournemouth",
+      "actual": "D"
+    },
+    {
+      "seq": 96,
+      "fixture_id": 368374800,
+      "date": "2025-09-27",
+      "league": "La Liga",
+      "home": "Atl\u00e9tico de Madrid",
+      "away": "Real Madrid",
+      "actual": "H"
+    },
+    {
+      "seq": 97,
+      "fixture_id": 368376646,
+      "date": "2025-09-27",
+      "league": "Ligue 1",
+      "home": "Lorient",
+      "away": "Monaco",
+      "actual": "H"
+    },
+    {
+      "seq": 98,
+      "fixture_id": 374120010,
+      "date": "2025-09-27",
+      "league": "Serie A",
+      "home": "Juventus",
+      "away": "Atalanta",
+      "actual": "D"
+    },
+    {
+      "seq": 99,
+      "fixture_id": 365992325,
+      "date": "2025-09-27",
+      "league": "Premier League",
+      "home": "Nottingham Forest",
+      "away": "Sunderland",
+      "actual": "A"
+    },
+    {
+      "seq": 100,
+      "fixture_id": 368374841,
+      "date": "2025-09-27",
+      "league": "La Liga",
+      "home": "Mallorca",
+      "away": "Deportivo Alav\u00e9s",
+      "actual": "H"
+    },
+    {
+      "seq": 101,
+      "fixture_id": 373090082,
+      "date": "2025-09-27",
+      "league": "Bundesliga",
+      "home": "Borussia M\u00f6nchengladbach",
+      "away": "Eintracht Frankfurt",
+      "actual": "A"
+    },
+    {
+      "seq": 102,
+      "fixture_id": 368376651,
+      "date": "2025-09-27",
+      "league": "Ligue 1",
+      "home": "Toulouse",
+      "away": "Nantes",
+      "actual": "D"
+    },
+    {
+      "seq": 103,
+      "fixture_id": 374120032,
+      "date": "2025-09-27",
+      "league": "Serie A",
+      "home": "Cagliari",
+      "away": "Inter",
+      "actual": "A"
+    },
+    {
+      "seq": 104,
+      "fixture_id": 365992355,
+      "date": "2025-09-27",
+      "league": "Premier League",
+      "home": "Tottenham Hotspur",
+      "away": "Wolverhampton Wanderers",
+      "actual": "D"
+    },
+    {
+      "seq": 105,
+      "fixture_id": 368374845,
+      "date": "2025-09-27",
+      "league": "La Liga",
+      "home": "Villarreal",
+      "away": "Athletic Club",
+      "actual": "H"
+    },
+    {
+      "seq": 106,
+      "fixture_id": 368376649,
+      "date": "2025-09-27",
+      "league": "Ligue 1",
+      "home": "Paris Saint Germain",
+      "away": "Auxerre",
+      "actual": "H"
+    },
+    {
+      "seq": 107,
+      "fixture_id": 374120038,
+      "date": "2025-09-28",
+      "league": "Serie A",
+      "home": "Sassuolo",
+      "away": "Udinese",
+      "actual": "H"
+    },
+    {
+      "seq": 108,
+      "fixture_id": 368374842,
+      "date": "2025-09-28",
+      "league": "La Liga",
+      "home": "Rayo Vallecano",
+      "away": "Sevilla",
+      "actual": "A"
+    },
+    {
+      "seq": 109,
+      "fixture_id": 365992320,
+      "date": "2025-09-28",
+      "league": "Premier League",
+      "home": "Aston Villa",
+      "away": "Fulham",
+      "actual": "H"
+    },
+    {
+      "seq": 110,
+      "fixture_id": 368376655,
+      "date": "2025-09-28",
+      "league": "Ligue 1",
+      "home": "Nice",
+      "away": "Paris",
+      "actual": "D"
+    },
+    {
+      "seq": 111,
+      "fixture_id": 374120035,
+      "date": "2025-09-28",
+      "league": "Serie A",
+      "home": "Pisa",
+      "away": "Fiorentina",
+      "actual": "D"
+    },
+    {
+      "seq": 112,
+      "fixture_id": 374120039,
+      "date": "2025-09-28",
+      "league": "Serie A",
+      "home": "Roma",
+      "away": "Hellas Verona",
+      "actual": "H"
+    },
+    {
+      "seq": 113,
+      "fixture_id": 373090052,
+      "date": "2025-09-28",
+      "league": "Bundesliga",
+      "home": "SC Freiburg",
+      "away": "TSG Hoffenheim",
+      "actual": "D"
+    },
+    {
+      "seq": 114,
+      "fixture_id": 368375063,
+      "date": "2025-09-28",
+      "league": "La Liga",
+      "home": "Elche",
+      "away": "Celta de Vigo",
+      "actual": "H"
+    },
+    {
+      "seq": 115,
+      "fixture_id": 368376647,
+      "date": "2025-09-28",
+      "league": "Ligue 1",
+      "home": "LOSC Lille",
+      "away": "Olympique Lyonnais",
+      "actual": "A"
+    },
+    {
+      "seq": 116,
+      "fixture_id": 368376650,
+      "date": "2025-09-28",
+      "league": "Ligue 1",
+      "home": "Angers SCO",
+      "away": "Brest",
+      "actual": "A"
+    },
+    {
+      "seq": 117,
+      "fixture_id": 368376661,
+      "date": "2025-09-28",
+      "league": "Ligue 1",
+      "home": "Metz",
+      "away": "Le Havre",
+      "actual": "D"
+    },
+    {
+      "seq": 118,
+      "fixture_id": 365992321,
+      "date": "2025-09-28",
+      "league": "Premier League",
+      "home": "Newcastle United",
+      "away": "Arsenal",
+      "actual": "A"
+    },
+    {
+      "seq": 119,
+      "fixture_id": 373089895,
+      "date": "2025-09-28",
+      "league": "Bundesliga",
+      "home": "FC K\u00f6ln",
+      "away": "VfB Stuttgart",
+      "actual": "A"
+    },
+    {
+      "seq": 120,
+      "fixture_id": 374120036,
+      "date": "2025-09-28",
+      "league": "Serie A",
+      "home": "Lecce",
+      "away": "Bologna",
+      "actual": "D"
+    },
+    {
+      "seq": 121,
+      "fixture_id": 368374837,
+      "date": "2025-09-28",
+      "league": "La Liga",
+      "home": "FC Barcelona",
+      "away": "Real Sociedad",
+      "actual": "H"
+    },
+    {
+      "seq": 122,
+      "fixture_id": 373089878,
+      "date": "2025-09-28",
+      "league": "Bundesliga",
+      "home": "FC Union Berlin",
+      "away": "Hamburger SV",
+      "actual": "D"
+    },
+    {
+      "seq": 123,
+      "fixture_id": 368376660,
+      "date": "2025-09-28",
+      "league": "Ligue 1",
+      "home": "Rennes",
+      "away": "Lens",
+      "actual": "D"
+    },
+    {
+      "seq": 124,
+      "fixture_id": 374120034,
+      "date": "2025-09-28",
+      "league": "Serie A",
+      "home": "AC Milan",
+      "away": "Napoli",
+      "actual": "H"
+    },
+    {
+      "seq": 125,
+      "fixture_id": 368374843,
+      "date": "2025-09-28",
+      "league": "La Liga",
+      "home": "Real Betis",
+      "away": "Osasuna",
+      "actual": "H"
+    },
+    {
+      "seq": 126,
+      "fixture_id": 374120037,
+      "date": "2025-09-29",
+      "league": "Serie A",
+      "home": "Parma",
+      "away": "Torino",
+      "actual": "H"
+    },
+    {
+      "seq": 127,
+      "fixture_id": 374120086,
+      "date": "2025-09-29",
+      "league": "Serie A",
+      "home": "Genoa",
+      "away": "Lazio",
+      "actual": "A"
+    },
+    {
+      "seq": 128,
+      "fixture_id": 365992324,
+      "date": "2025-09-29",
+      "league": "Premier League",
+      "home": "Everton",
+      "away": "West Ham United",
+      "actual": "D"
+    },
+    {
+      "seq": 129,
+      "fixture_id": 368374844,
+      "date": "2025-09-30",
+      "league": "La Liga",
+      "home": "Valencia",
+      "away": "Real Oviedo",
+      "actual": "A"
+    },
+    {
+      "seq": 130,
+      "fixture_id": 373090090,
+      "date": "2025-10-03",
+      "league": "Bundesliga",
+      "home": "TSG Hoffenheim",
+      "away": "FC K\u00f6ln",
+      "actual": "A"
+    },
+    {
+      "seq": 131,
+      "fixture_id": 368376460,
+      "date": "2025-10-03",
+      "league": "Ligue 1",
+      "home": "Paris",
+      "away": "Lorient",
+      "actual": "H"
+    },
+    {
+      "seq": 132,
+      "fixture_id": 374120041,
+      "date": "2025-10-03",
+      "league": "Serie A",
+      "home": "Hellas Verona",
+      "away": "Sassuolo",
+      "actual": "A"
+    },
+    {
+      "seq": 133,
+      "fixture_id": 365992328,
+      "date": "2025-10-03",
+      "league": "Premier League",
+      "home": "AFC Bournemouth",
+      "away": "Fulham",
+      "actual": "H"
+    },
+    {
+      "seq": 134,
+      "fixture_id": 368374801,
+      "date": "2025-10-03",
+      "league": "La Liga",
+      "home": "Osasuna",
+      "away": "Getafe",
+      "actual": "H"
+    },
+    {
+      "seq": 135,
+      "fixture_id": 365992338,
+      "date": "2025-10-04",
+      "league": "Premier League",
+      "home": "Leeds United",
+      "away": "Tottenham Hotspur",
+      "actual": "A"
+    },
+    {
+      "seq": 136,
+      "fixture_id": 368374855,
+      "date": "2025-10-04",
+      "league": "La Liga",
+      "home": "Real Oviedo",
+      "away": "Levante",
+      "actual": "A"
+    },
+    {
+      "seq": 137,
+      "fixture_id": 374119966,
+      "date": "2025-10-04",
+      "league": "Serie A",
+      "home": "Lazio",
+      "away": "Torino",
+      "actual": "D"
+    },
+    {
+      "seq": 138,
+      "fixture_id": 374120042,
+      "date": "2025-10-04",
+      "league": "Serie A",
+      "home": "Parma",
+      "away": "Lecce",
+      "actual": "A"
+    },
+    {
+      "seq": 139,
+      "fixture_id": 373089969,
+      "date": "2025-10-04",
+      "league": "Bundesliga",
+      "home": "FC Augsburg",
+      "away": "VfL Wolfsburg",
+      "actual": "H"
+    },
+    {
+      "seq": 140,
+      "fixture_id": 373090051,
+      "date": "2025-10-04",
+      "league": "Bundesliga",
+      "home": "Bayer 04 Leverkusen",
+      "away": "FC Union Berlin",
+      "actual": "H"
+    },
+    {
+      "seq": 141,
+      "fixture_id": 373090055,
+      "date": "2025-10-04",
+      "league": "Bundesliga",
+      "home": "Borussia Dortmund",
+      "away": "RB Leipzig",
+      "actual": "D"
+    },
+    {
+      "seq": 142,
+      "fixture_id": 373090084,
+      "date": "2025-10-04",
+      "league": "Bundesliga",
+      "home": "Werder Bremen",
+      "away": "St. Pauli",
+      "actual": "H"
+    },
+    {
+      "seq": 143,
+      "fixture_id": 365992326,
+      "date": "2025-10-04",
+      "league": "Premier League",
+      "home": "Arsenal",
+      "away": "West Ham United",
+      "actual": "H"
+    },
+    {
+      "seq": 144,
+      "fixture_id": 365992335,
+      "date": "2025-10-04",
+      "league": "Premier League",
+      "home": "Manchester United",
+      "away": "Sunderland",
+      "actual": "H"
+    },
+    {
+      "seq": 145,
+      "fixture_id": 368374854,
+      "date": "2025-10-04",
+      "league": "La Liga",
+      "home": "Girona",
+      "away": "Valencia",
+      "actual": "H"
+    },
+    {
+      "seq": 146,
+      "fixture_id": 368376459,
+      "date": "2025-10-04",
+      "league": "Ligue 1",
+      "home": "Metz",
+      "away": "Olympique Marseille",
+      "actual": "A"
+    },
+    {
+      "seq": 147,
+      "fixture_id": 374120088,
+      "date": "2025-10-04",
+      "league": "Serie A",
+      "home": "Inter",
+      "away": "Cremonese",
+      "actual": "H"
+    },
+    {
+      "seq": 148,
+      "fixture_id": 365992330,
+      "date": "2025-10-04",
+      "league": "Premier League",
+      "home": "Chelsea",
+      "away": "Liverpool",
+      "actual": "H"
+    },
+    {
+      "seq": 149,
+      "fixture_id": 368374847,
+      "date": "2025-10-04",
+      "league": "La Liga",
+      "home": "Athletic Club",
+      "away": "Mallorca",
+      "actual": "H"
+    },
+    {
+      "seq": 150,
+      "fixture_id": 373089968,
+      "date": "2025-10-04",
+      "league": "Bundesliga",
+      "home": "Eintracht Frankfurt",
+      "away": "FC Bayern M\u00fcnchen",
+      "actual": "A"
+    },
+    {
+      "seq": 151,
+      "fixture_id": 368376461,
+      "date": "2025-10-04",
+      "league": "Ligue 1",
+      "home": "Brest",
+      "away": "Nantes",
+      "actual": "D"
+    },
+    {
+      "seq": 152,
+      "fixture_id": 374120031,
+      "date": "2025-10-04",
+      "league": "Serie A",
+      "home": "Atalanta",
+      "away": "Como",
+      "actual": "D"
+    },
+    {
+      "seq": 153,
+      "fixture_id": 368374853,
+      "date": "2025-10-04",
+      "league": "La Liga",
+      "home": "Real Madrid",
+      "away": "Villarreal",
+      "actual": "H"
+    },
+    {
+      "seq": 154,
+      "fixture_id": 368376608,
+      "date": "2025-10-04",
+      "league": "Ligue 1",
+      "home": "Auxerre",
+      "away": "Lens",
+      "actual": "A"
+    },
+    {
+      "seq": 155,
+      "fixture_id": 374120044,
+      "date": "2025-10-05",
+      "league": "Serie A",
+      "home": "Udinese",
+      "away": "Cagliari",
+      "actual": "D"
+    },
+    {
+      "seq": 156,
+      "fixture_id": 368374849,
+      "date": "2025-10-05",
+      "league": "La Liga",
+      "home": "Deportivo Alav\u00e9s",
+      "away": "Elche",
+      "actual": "H"
+    },
+    {
+      "seq": 157,
+      "fixture_id": 365992298,
+      "date": "2025-10-05",
+      "league": "Premier League",
+      "home": "Everton",
+      "away": "Crystal Palace",
+      "actual": "H"
+    },
+    {
+      "seq": 158,
+      "fixture_id": 365992327,
+      "date": "2025-10-05",
+      "league": "Premier League",
+      "home": "Aston Villa",
+      "away": "Burnley",
+      "actual": "H"
+    },
+    {
+      "seq": 159,
+      "fixture_id": 365992334,
+      "date": "2025-10-05",
+      "league": "Premier League",
+      "home": "Newcastle United",
+      "away": "Nottingham Forest",
+      "actual": "H"
+    },
+    {
+      "seq": 160,
+      "fixture_id": 365992345,
+      "date": "2025-10-05",
+      "league": "Premier League",
+      "home": "Wolverhampton Wanderers",
+      "away": "Brighton & Hove Albion",
+      "actual": "D"
+    },
+    {
+      "seq": 161,
+      "fixture_id": 368376607,
+      "date": "2025-10-05",
+      "league": "Ligue 1",
+      "home": "Olympique Lyonnais",
+      "away": "Toulouse",
+      "actual": "A"
+    },
+    {
+      "seq": 162,
+      "fixture_id": 374120033,
+      "date": "2025-10-05",
+      "league": "Serie A",
+      "home": "Fiorentina",
+      "away": "Roma",
+      "actual": "A"
+    },
+    {
+      "seq": 163,
+      "fixture_id": 374120040,
+      "date": "2025-10-05",
+      "league": "Serie A",
+      "home": "Bologna",
+      "away": "Pisa",
+      "actual": "H"
+    },
+    {
+      "seq": 164,
+      "fixture_id": 373090083,
+      "date": "2025-10-05",
+      "league": "Bundesliga",
+      "home": "VfB Stuttgart",
+      "away": "Heidenheim",
+      "actual": "H"
+    },
+    {
+      "seq": 165,
+      "fixture_id": 368374851,
+      "date": "2025-10-05",
+      "league": "La Liga",
+      "home": "Sevilla",
+      "away": "FC Barcelona",
+      "actual": "H"
+    },
+    {
+      "seq": 166,
+      "fixture_id": 368376457,
+      "date": "2025-10-05",
+      "league": "Ligue 1",
+      "home": "Strasbourg",
+      "away": "Angers SCO",
+      "actual": "H"
+    },
+    {
+      "seq": 167,
+      "fixture_id": 368376458,
+      "date": "2025-10-05",
+      "league": "Ligue 1",
+      "home": "Le Havre",
+      "away": "Rennes",
+      "actual": "D"
+    },
+    {
+      "seq": 168,
+      "fixture_id": 368376462,
+      "date": "2025-10-05",
+      "league": "Ligue 1",
+      "home": "Monaco",
+      "away": "Nice",
+      "actual": "D"
+    },
+    {
+      "seq": 169,
+      "fixture_id": 365992329,
+      "date": "2025-10-05",
+      "league": "Premier League",
+      "home": "Brentford",
+      "away": "Manchester City",
+      "actual": "A"
+    },
+    {
+      "seq": 170,
+      "fixture_id": 373089970,
+      "date": "2025-10-05",
+      "league": "Bundesliga",
+      "home": "Hamburger SV",
+      "away": "FSV Mainz 05",
+      "actual": "H"
+    },
+    {
+      "seq": 171,
+      "fixture_id": 374120011,
+      "date": "2025-10-05",
+      "league": "Serie A",
+      "home": "Napoli",
+      "away": "Genoa",
+      "actual": "H"
+    },
+    {
+      "seq": 172,
+      "fixture_id": 368374850,
+      "date": "2025-10-05",
+      "league": "La Liga",
+      "home": "Espanyol",
+      "away": "Real Betis",
+      "actual": "A"
+    },
+    {
+      "seq": 173,
+      "fixture_id": 368374856,
+      "date": "2025-10-05",
+      "league": "La Liga",
+      "home": "Real Sociedad",
+      "away": "Rayo Vallecano",
+      "actual": "A"
+    },
+    {
+      "seq": 174,
+      "fixture_id": 373090086,
+      "date": "2025-10-05",
+      "league": "Bundesliga",
+      "home": "Borussia M\u00f6nchengladbach",
+      "away": "SC Freiburg",
+      "actual": "D"
+    },
+    {
+      "seq": 175,
+      "fixture_id": 368376456,
+      "date": "2025-10-05",
+      "league": "Ligue 1",
+      "home": "LOSC Lille",
+      "away": "Paris Saint Germain",
+      "actual": "D"
+    },
+    {
+      "seq": 176,
+      "fixture_id": 374119963,
+      "date": "2025-10-05",
+      "league": "Serie A",
+      "home": "Juventus",
+      "away": "AC Milan",
+      "actual": "D"
+    },
+    {
+      "seq": 177,
+      "fixture_id": 368374848,
+      "date": "2025-10-05",
+      "league": "La Liga",
+      "home": "Celta de Vigo",
+      "away": "Atl\u00e9tico de Madrid",
+      "actual": "D"
+    },
+    {
+      "seq": 178,
+      "fixture_id": 373089966,
+      "date": "2025-10-17",
+      "league": "Bundesliga",
+      "home": "FC Union Berlin",
+      "away": "Borussia M\u00f6nchengladbach",
+      "actual": "H"
+    },
+    {
+      "seq": 179,
+      "fixture_id": 368376611,
+      "date": "2025-10-17",
+      "league": "Ligue 1",
+      "home": "Paris Saint Germain",
+      "away": "Strasbourg",
+      "actual": "D"
+    },
+    {
+      "seq": 180,
+      "fixture_id": 368374864,
+      "date": "2025-10-17",
+      "league": "La Liga",
+      "home": "Real Oviedo",
+      "away": "Espanyol",
+      "actual": "A"
+    },
+    {
+      "seq": 181,
+      "fixture_id": 365992332,
+      "date": "2025-10-18",
+      "league": "Premier League",
+      "home": "Nottingham Forest",
+      "away": "Chelsea",
+      "actual": "A"
+    },
+    {
+      "seq": 182,
+      "fixture_id": 368374860,
+      "date": "2025-10-18",
+      "league": "La Liga",
+      "home": "Sevilla",
+      "away": "Mallorca",
+      "actual": "A"
+    },
+    {
+      "seq": 183,
+      "fixture_id": 374120047,
+      "date": "2025-10-18",
+      "league": "Serie A",
+      "home": "Pisa",
+      "away": "Hellas Verona",
+      "actual": "D"
+    },
+    {
+      "seq": 184,
+      "fixture_id": 374120048,
+      "date": "2025-10-18",
+      "league": "Serie A",
+      "home": "Lecce",
+      "away": "Sassuolo",
+      "actual": "D"
+    },
+    {
+      "seq": 185,
+      "fixture_id": 373089971,
+      "date": "2025-10-18",
+      "league": "Bundesliga",
+      "home": "FSV Mainz 05",
+      "away": "Bayer 04 Leverkusen",
+      "actual": "A"
+    },
+    {
+      "seq": 186,
+      "fixture_id": 373089973,
+      "date": "2025-10-18",
+      "league": "Bundesliga",
+      "home": "RB Leipzig",
+      "away": "Hamburger SV",
+      "actual": "H"
+    },
+    {
+      "seq": 187,
+      "fixture_id": 373089974,
+      "date": "2025-10-18",
+      "league": "Bundesliga",
+      "home": "VfL Wolfsburg",
+      "away": "VfB Stuttgart",
+      "actual": "A"
+    },
+    {
+      "seq": 188,
+      "fixture_id": 373090057,
+      "date": "2025-10-18",
+      "league": "Bundesliga",
+      "home": "Heidenheim",
+      "away": "Werder Bremen",
+      "actual": "D"
+    },
+    {
+      "seq": 189,
+      "fixture_id": 373090085,
+      "date": "2025-10-18",
+      "league": "Bundesliga",
+      "home": "FC K\u00f6ln",
+      "away": "FC Augsburg",
+      "actual": "D"
+    },
+    {
+      "seq": 190,
+      "fixture_id": 365992336,
+      "date": "2025-10-18",
+      "league": "Premier League",
+      "home": "Manchester City",
+      "away": "Everton",
+      "actual": "H"
+    },
+    {
+      "seq": 191,
+      "fixture_id": 365992346,
+      "date": "2025-10-18",
+      "league": "Premier League",
+      "home": "Burnley",
+      "away": "Leeds United",
+      "actual": "H"
+    },
+    {
+      "seq": 192,
+      "fixture_id": 365992348,
+      "date": "2025-10-18",
+      "league": "Premier League",
+      "home": "Crystal Palace",
+      "away": "AFC Bournemouth",
+      "actual": "D"
+    },
+    {
+      "seq": 193,
+      "fixture_id": 365992518,
+      "date": "2025-10-18",
+      "league": "Premier League",
+      "home": "Brighton & Hove Albion",
+      "away": "Newcastle United",
+      "actual": "H"
+    },
+    {
+      "seq": 194,
+      "fixture_id": 365992569,
+      "date": "2025-10-18",
+      "league": "Premier League",
+      "home": "Sunderland",
+      "away": "Wolverhampton Wanderers",
+      "actual": "H"
+    },
+    {
+      "seq": 195,
+      "fixture_id": 368374852,
+      "date": "2025-10-18",
+      "league": "La Liga",
+      "home": "FC Barcelona",
+      "away": "Girona",
+      "actual": "H"
+    },
+    {
+      "seq": 196,
+      "fixture_id": 368376597,
+      "date": "2025-10-18",
+      "league": "Ligue 1",
+      "home": "Nice",
+      "away": "Olympique Lyonnais",
+      "actual": "H"
+    },
+    {
+      "seq": 197,
+      "fixture_id": 374120049,
+      "date": "2025-10-18",
+      "league": "Serie A",
+      "home": "Torino",
+      "away": "Napoli",
+      "actual": "H"
+    },
+    {
+      "seq": 198,
+      "fixture_id": 365992349,
+      "date": "2025-10-18",
+      "league": "Premier League",
+      "home": "Fulham",
+      "away": "Arsenal",
+      "actual": "A"
+    },
+    {
+      "seq": 199,
+      "fixture_id": 368374866,
+      "date": "2025-10-18",
+      "league": "La Liga",
+      "home": "Villarreal",
+      "away": "Real Betis",
+      "actual": "D"
+    },
+    {
+      "seq": 200,
+      "fixture_id": 373089972,
+      "date": "2025-10-18",
+      "league": "Bundesliga",
+      "home": "FC Bayern M\u00fcnchen",
+      "away": "Borussia Dortmund",
+      "actual": "H"
+    },
+    {
+      "seq": 201,
+      "fixture_id": 368376613,
+      "date": "2025-10-18",
+      "league": "Ligue 1",
+      "home": "Angers SCO",
+      "away": "Monaco",
+      "actual": "D"
+    },
+    {
+      "seq": 202,
+      "fixture_id": 374119962,
+      "date": "2025-10-18",
+      "league": "Serie A",
+      "home": "Roma",
+      "away": "Inter",
+      "actual": "A"
+    },
+    {
+      "seq": 203,
+      "fixture_id": 368374858,
+      "date": "2025-10-18",
+      "league": "La Liga",
+      "home": "Atl\u00e9tico de Madrid",
+      "away": "Osasuna",
+      "actual": "H"
+    },
+    {
+      "seq": 204,
+      "fixture_id": 368376464,
+      "date": "2025-10-18",
+      "league": "Ligue 1",
+      "home": "Olympique Marseille",
+      "away": "Le Havre",
+      "actual": "H"
+    },
+    {
+      "seq": 205,
+      "fixture_id": 374120087,
+      "date": "2025-10-19",
+      "league": "Serie A",
+      "home": "Como",
+      "away": "Juventus",
+      "actual": "H"
+    },
+    {
+      "seq": 206,
+      "fixture_id": 368374863,
+      "date": "2025-10-19",
+      "league": "La Liga",
+      "home": "Elche",
+      "away": "Athletic Club",
+      "actual": "D"
+    },
+    {
+      "seq": 207,
+      "fixture_id": 365992522,
+      "date": "2025-10-19",
+      "league": "Premier League",
+      "home": "Tottenham Hotspur",
+      "away": "Aston Villa",
+      "actual": "A"
+    },
+    {
+      "seq": 208,
+      "fixture_id": 368376467,
+      "date": "2025-10-19",
+      "league": "Ligue 1",
+      "home": "Lens",
+      "away": "Paris",
+      "actual": "H"
+    },
+    {
+      "seq": 209,
+      "fixture_id": 374120043,
+      "date": "2025-10-19",
+      "league": "Serie A",
+      "home": "Genoa",
+      "away": "Parma",
+      "actual": "D"
+    },
+    {
+      "seq": 210,
+      "fixture_id": 374120046,
+      "date": "2025-10-19",
+      "league": "Serie A",
+      "home": "Cagliari",
+      "away": "Bologna",
+      "actual": "A"
+    },
+    {
+      "seq": 211,
+      "fixture_id": 373089967,
+      "date": "2025-10-19",
+      "league": "Bundesliga",
+      "home": "SC Freiburg",
+      "away": "Eintracht Frankfurt",
+      "actual": "D"
+    },
+    {
+      "seq": 212,
+      "fixture_id": 368374861,
+      "date": "2025-10-19",
+      "league": "La Liga",
+      "home": "Celta de Vigo",
+      "away": "Real Sociedad",
+      "actual": "D"
+    },
+    {
+      "seq": 213,
+      "fixture_id": 368376465,
+      "date": "2025-10-19",
+      "league": "Ligue 1",
+      "home": "Lorient",
+      "away": "Brest",
+      "actual": "D"
+    },
+    {
+      "seq": 214,
+      "fixture_id": 368376466,
+      "date": "2025-10-19",
+      "league": "Ligue 1",
+      "home": "Toulouse",
+      "away": "Metz",
+      "actual": "H"
+    },
+    {
+      "seq": 215,
+      "fixture_id": 368376615,
+      "date": "2025-10-19",
+      "league": "Ligue 1",
+      "home": "Rennes",
+      "away": "Auxerre",
+      "actual": "D"
+    },
+    {
+      "seq": 216,
+      "fixture_id": 365992333,
+      "date": "2025-10-19",
+      "league": "Premier League",
+      "home": "Liverpool",
+      "away": "Manchester United",
+      "actual": "A"
+    },
+    {
+      "seq": 217,
+      "fixture_id": 373090058,
+      "date": "2025-10-19",
+      "league": "Bundesliga",
+      "home": "St. Pauli",
+      "away": "TSG Hoffenheim",
+      "actual": "A"
+    },
+    {
+      "seq": 218,
+      "fixture_id": 374120045,
+      "date": "2025-10-19",
+      "league": "Serie A",
+      "home": "Atalanta",
+      "away": "Lazio",
+      "actual": "D"
+    },
+    {
+      "seq": 219,
+      "fixture_id": 368374846,
+      "date": "2025-10-19",
+      "league": "La Liga",
+      "home": "Levante",
+      "away": "Rayo Vallecano",
+      "actual": "A"
+    },
+    {
+      "seq": 220,
+      "fixture_id": 368376463,
+      "date": "2025-10-19",
+      "league": "Ligue 1",
+      "home": "Nantes",
+      "away": "LOSC Lille",
+      "actual": "A"
+    },
+    {
+      "seq": 221,
+      "fixture_id": 374119961,
+      "date": "2025-10-19",
+      "league": "Serie A",
+      "home": "AC Milan",
+      "away": "Fiorentina",
+      "actual": "H"
+    },
+    {
+      "seq": 222,
+      "fixture_id": 368374857,
+      "date": "2025-10-19",
+      "league": "La Liga",
+      "home": "Getafe",
+      "away": "Real Madrid",
+      "actual": "A"
+    },
+    {
+      "seq": 223,
+      "fixture_id": 374120062,
+      "date": "2025-10-20",
+      "league": "Serie A",
+      "home": "Cremonese",
+      "away": "Udinese",
+      "actual": "D"
+    },
+    {
+      "seq": 224,
+      "fixture_id": 365992337,
+      "date": "2025-10-20",
+      "league": "Premier League",
+      "home": "West Ham United",
+      "away": "Brentford",
+      "actual": "A"
+    },
+    {
+      "seq": 225,
+      "fixture_id": 368374862,
+      "date": "2025-10-20",
+      "league": "La Liga",
+      "home": "Deportivo Alav\u00e9s",
+      "away": "Valencia",
+      "actual": "D"
+    },
+    {
+      "seq": 226,
+      "fixture_id": 373089975,
+      "date": "2025-10-24",
+      "league": "Bundesliga",
+      "home": "Werder Bremen",
+      "away": "FC Union Berlin",
+      "actual": "H"
+    },
+    {
+      "seq": 227,
+      "fixture_id": 368376476,
+      "date": "2025-10-24",
+      "league": "Ligue 1",
+      "home": "Paris",
+      "away": "Nantes",
+      "actual": "A"
+    },
+    {
+      "seq": 228,
+      "fixture_id": 374120287,
+      "date": "2025-10-24",
+      "league": "Serie A",
+      "home": "AC Milan",
+      "away": "Pisa",
+      "actual": "D"
+    },
+    {
+      "seq": 229,
+      "fixture_id": 365992570,
+      "date": "2025-10-24",
+      "league": "Premier League",
+      "home": "Leeds United",
+      "away": "West Ham United",
+      "actual": "H"
+    },
+    {
+      "seq": 230,
+      "fixture_id": 368375121,
+      "date": "2025-10-24",
+      "league": "La Liga",
+      "home": "Real Sociedad",
+      "away": "Sevilla",
+      "actual": "H"
+    },
+    {
+      "seq": 231,
+      "fixture_id": 368374868,
+      "date": "2025-10-25",
+      "league": "La Liga",
+      "home": "Girona",
+      "away": "Real Oviedo",
+      "actual": "D"
+    },
+    {
+      "seq": 232,
+      "fixture_id": 374120065,
+      "date": "2025-10-25",
+      "league": "Serie A",
+      "home": "Udinese",
+      "away": "Lecce",
+      "actual": "H"
+    },
+    {
+      "seq": 233,
+      "fixture_id": 374120193,
+      "date": "2025-10-25",
+      "league": "Serie A",
+      "home": "Parma",
+      "away": "Como",
+      "actual": "D"
+    },
+    {
+      "seq": 234,
+      "fixture_id": 373089978,
+      "date": "2025-10-25",
+      "league": "Bundesliga",
+      "home": "Hamburger SV",
+      "away": "VfL Wolfsburg",
+      "actual": "A"
+    },
+    {
+      "seq": 235,
+      "fixture_id": 373090056,
+      "date": "2025-10-25",
+      "league": "Bundesliga",
+      "home": "Eintracht Frankfurt",
+      "away": "St. Pauli",
+      "actual": "H"
+    },
+    {
+      "seq": 236,
+      "fixture_id": 373090059,
+      "date": "2025-10-25",
+      "league": "Bundesliga",
+      "home": "FC Augsburg",
+      "away": "RB Leipzig",
+      "actual": "A"
+    },
+    {
+      "seq": 237,
+      "fixture_id": 373090095,
+      "date": "2025-10-25",
+      "league": "Bundesliga",
+      "home": "TSG Hoffenheim",
+      "away": "Heidenheim",
+      "actual": "H"
+    },
+    {
+      "seq": 238,
+      "fixture_id": 373090094,
+      "date": "2025-10-25",
+      "league": "Bundesliga",
+      "home": "Borussia M\u00f6nchengladbach",
+      "away": "FC Bayern M\u00fcnchen",
+      "actual": "A"
+    },
+    {
+      "seq": 239,
+      "fixture_id": 365992347,
+      "date": "2025-10-25",
+      "league": "Premier League",
+      "home": "Newcastle United",
+      "away": "Fulham",
+      "actual": "H"
+    },
+    {
+      "seq": 240,
+      "fixture_id": 365992361,
+      "date": "2025-10-25",
+      "league": "Premier League",
+      "home": "Chelsea",
+      "away": "Sunderland",
+      "actual": "A"
+    },
+    {
+      "seq": 241,
+      "fixture_id": 368374867,
+      "date": "2025-10-25",
+      "league": "La Liga",
+      "home": "Espanyol",
+      "away": "Elche",
+      "actual": "H"
+    },
+    {
+      "seq": 242,
+      "fixture_id": 368376473,
+      "date": "2025-10-25",
+      "league": "Ligue 1",
+      "home": "Brest",
+      "away": "Paris Saint Germain",
+      "actual": "A"
+    },
+    {
+      "seq": 243,
+      "fixture_id": 374120197,
+      "date": "2025-10-25",
+      "league": "Serie A",
+      "home": "Napoli",
+      "away": "Inter",
+      "actual": "H"
+    },
+    {
+      "seq": 244,
+      "fixture_id": 365992351,
+      "date": "2025-10-25",
+      "league": "Premier League",
+      "home": "Manchester United",
+      "away": "Brighton & Hove Albion",
+      "actual": "H"
+    },
+    {
+      "seq": 245,
+      "fixture_id": 368375118,
+      "date": "2025-10-25",
+      "league": "La Liga",
+      "home": "Athletic Club",
+      "away": "Getafe",
+      "actual": "A"
+    },
+    {
+      "seq": 246,
+      "fixture_id": 373089977,
+      "date": "2025-10-25",
+      "league": "Bundesliga",
+      "home": "Borussia Dortmund",
+      "away": "FC K\u00f6ln",
+      "actual": "H"
+    },
+    {
+      "seq": 247,
+      "fixture_id": 368376471,
+      "date": "2025-10-25",
+      "league": "Ligue 1",
+      "home": "Monaco",
+      "away": "Toulouse",
+      "actual": "H"
+    },
+    {
+      "seq": 248,
+      "fixture_id": 374120063,
+      "date": "2025-10-25",
+      "league": "Serie A",
+      "home": "Cremonese",
+      "away": "Atalanta",
+      "actual": "D"
+    },
+    {
+      "seq": 249,
+      "fixture_id": 365992568,
+      "date": "2025-10-25",
+      "league": "Premier League",
+      "home": "Brentford",
+      "away": "Liverpool",
+      "actual": "H"
+    },
+    {
+      "seq": 250,
+      "fixture_id": 368374859,
+      "date": "2025-10-25",
+      "league": "La Liga",
+      "home": "Valencia",
+      "away": "Villarreal",
+      "actual": "A"
+    },
+    {
+      "seq": 251,
+      "fixture_id": 368376469,
+      "date": "2025-10-25",
+      "league": "Ligue 1",
+      "home": "Lens",
+      "away": "Olympique Marseille",
+      "actual": "H"
+    },
+    {
+      "seq": 252,
+      "fixture_id": 374120050,
+      "date": "2025-10-26",
+      "league": "Serie A",
+      "home": "Torino",
+      "away": "Genoa",
+      "actual": "H"
+    },
+    {
+      "seq": 253,
+      "fixture_id": 368375073,
+      "date": "2025-10-26",
+      "league": "La Liga",
+      "home": "Mallorca",
+      "away": "Levante",
+      "actual": "D"
+    },
+    {
+      "seq": 254,
+      "fixture_id": 365992331,
+      "date": "2025-10-26",
+      "league": "Premier League",
+      "home": "Wolverhampton Wanderers",
+      "away": "Burnley",
+      "actual": "A"
+    },
+    {
+      "seq": 255,
+      "fixture_id": 365992350,
+      "date": "2025-10-26",
+      "league": "Premier League",
+      "home": "Aston Villa",
+      "away": "Manchester City",
+      "actual": "H"
+    },
+    {
+      "seq": 256,
+      "fixture_id": 365992356,
+      "date": "2025-10-26",
+      "league": "Premier League",
+      "home": "AFC Bournemouth",
+      "away": "Nottingham Forest",
+      "actual": "H"
+    },
+    {
+      "seq": 257,
+      "fixture_id": 365992357,
+      "date": "2025-10-26",
+      "league": "Premier League",
+      "home": "Arsenal",
+      "away": "Crystal Palace",
+      "actual": "H"
+    },
+    {
+      "seq": 258,
+      "fixture_id": 368376472,
+      "date": "2025-10-26",
+      "league": "Ligue 1",
+      "home": "LOSC Lille",
+      "away": "Metz",
+      "actual": "H"
+    },
+    {
+      "seq": 259,
+      "fixture_id": 374120194,
+      "date": "2025-10-26",
+      "league": "Serie A",
+      "home": "Sassuolo",
+      "away": "Roma",
+      "actual": "A"
+    },
+    {
+      "seq": 260,
+      "fixture_id": 374120201,
+      "date": "2025-10-26",
+      "league": "Serie A",
+      "home": "Hellas Verona",
+      "away": "Cagliari",
+      "actual": "D"
+    },
+    {
+      "seq": 261,
+      "fixture_id": 373089976,
+      "date": "2025-10-26",
+      "league": "Bundesliga",
+      "home": "Bayer 04 Leverkusen",
+      "away": "SC Freiburg",
+      "actual": "H"
+    },
+    {
+      "seq": 262,
+      "fixture_id": 368374871,
+      "date": "2025-10-26",
+      "league": "La Liga",
+      "home": "Real Madrid",
+      "away": "FC Barcelona",
+      "actual": "H"
+    },
+    {
+      "seq": 263,
+      "fixture_id": 368376470,
+      "date": "2025-10-26",
+      "league": "Ligue 1",
+      "home": "Auxerre",
+      "away": "Le Havre",
+      "actual": "A"
+    },
+    {
+      "seq": 264,
+      "fixture_id": 368376474,
+      "date": "2025-10-26",
+      "league": "Ligue 1",
+      "home": "Rennes",
+      "away": "Nice",
+      "actual": "A"
+    },
+    {
+      "seq": 265,
+      "fixture_id": 368376475,
+      "date": "2025-10-26",
+      "league": "Ligue 1",
+      "home": "Angers SCO",
+      "away": "Lorient",
+      "actual": "H"
+    },
+    {
+      "seq": 266,
+      "fixture_id": 365992557,
+      "date": "2025-10-26",
+      "league": "Premier League",
+      "home": "Everton",
+      "away": "Tottenham Hotspur",
+      "actual": "A"
+    },
+    {
+      "seq": 267,
+      "fixture_id": 373089980,
+      "date": "2025-10-26",
+      "league": "Bundesliga",
+      "home": "VfB Stuttgart",
+      "away": "FSV Mainz 05",
+      "actual": "H"
+    },
+    {
+      "seq": 268,
+      "fixture_id": 374120064,
+      "date": "2025-10-26",
+      "league": "Serie A",
+      "home": "Fiorentina",
+      "away": "Bologna",
+      "actual": "D"
+    },
+    {
+      "seq": 269,
+      "fixture_id": 368374869,
+      "date": "2025-10-26",
+      "league": "La Liga",
+      "home": "Osasuna",
+      "away": "Celta de Vigo",
+      "actual": "A"
+    },
+    {
+      "seq": 270,
+      "fixture_id": 368376468,
+      "date": "2025-10-26",
+      "league": "Ligue 1",
+      "home": "Olympique Lyonnais",
+      "away": "Strasbourg",
+      "actual": "H"
+    },
+    {
+      "seq": 271,
+      "fixture_id": 374120202,
+      "date": "2025-10-26",
+      "league": "Serie A",
+      "home": "Lazio",
+      "away": "Juventus",
+      "actual": "H"
+    },
+    {
+      "seq": 272,
+      "fixture_id": 368374870,
+      "date": "2025-10-26",
+      "league": "La Liga",
+      "home": "Rayo Vallecano",
+      "away": "Deportivo Alav\u00e9s",
+      "actual": "H"
+    },
+    {
+      "seq": 273,
+      "fixture_id": 368374802,
+      "date": "2025-10-27",
+      "league": "La Liga",
+      "home": "Real Betis",
+      "away": "Atl\u00e9tico de Madrid",
+      "actual": "A"
+    },
+    {
+      "seq": 274,
+      "fixture_id": 374120199,
+      "date": "2025-10-28",
+      "league": "Serie A",
+      "home": "Lecce",
+      "away": "Napoli",
+      "actual": "A"
+    },
+    {
+      "seq": 275,
+      "fixture_id": 374120190,
+      "date": "2025-10-28",
+      "league": "Serie A",
+      "home": "Atalanta",
+      "away": "AC Milan",
+      "actual": "D"
+    },
+    {
+      "seq": 276,
+      "fixture_id": 374120067,
+      "date": "2025-10-29",
+      "league": "Serie A",
+      "home": "Juventus",
+      "away": "Udinese",
+      "actual": "H"
+    },
+    {
+      "seq": 277,
+      "fixture_id": 374120068,
+      "date": "2025-10-29",
+      "league": "Serie A",
+      "home": "Roma",
+      "away": "Parma",
+      "actual": "H"
+    },
+    {
+      "seq": 278,
+      "fixture_id": 374120195,
+      "date": "2025-10-29",
+      "league": "Serie A",
+      "home": "Como",
+      "away": "Hellas Verona",
+      "actual": "H"
+    },
+    {
+      "seq": 279,
+      "fixture_id": 368376449,
+      "date": "2025-10-29",
+      "league": "Ligue 1",
+      "home": "Lorient",
+      "away": "Paris Saint Germain",
+      "actual": "D"
+    },
+    {
+      "seq": 280,
+      "fixture_id": 368376631,
+      "date": "2025-10-29",
+      "league": "Ligue 1",
+      "home": "Nice",
+      "away": "LOSC Lille",
+      "actual": "H"
+    },
+    {
+      "seq": 281,
+      "fixture_id": 368376667,
+      "date": "2025-10-29",
+      "league": "Ligue 1",
+      "home": "Le Havre",
+      "away": "Brest",
+      "actual": "H"
+    },
+    {
+      "seq": 282,
+      "fixture_id": 368376671,
+      "date": "2025-10-29",
+      "league": "Ligue 1",
+      "home": "Metz",
+      "away": "Lens",
+      "actual": "H"
+    },
+    {
+      "seq": 283,
+      "fixture_id": 374119967,
+      "date": "2025-10-29",
+      "league": "Serie A",
+      "home": "Inter",
+      "away": "Fiorentina",
+      "actual": "H"
+    },
+    {
+      "seq": 284,
+      "fixture_id": 374120051,
+      "date": "2025-10-29",
+      "league": "Serie A",
+      "home": "Genoa",
+      "away": "Cremonese",
+      "actual": "A"
+    },
+    {
+      "seq": 285,
+      "fixture_id": 374120066,
+      "date": "2025-10-29",
+      "league": "Serie A",
+      "home": "Bologna",
+      "away": "Torino",
+      "actual": "D"
+    },
+    {
+      "seq": 286,
+      "fixture_id": 368376446,
+      "date": "2025-10-29",
+      "league": "Ligue 1",
+      "home": "Paris",
+      "away": "Olympique Lyonnais",
+      "actual": "D"
+    },
+    {
+      "seq": 287,
+      "fixture_id": 368376447,
+      "date": "2025-10-29",
+      "league": "Ligue 1",
+      "home": "Olympique Marseille",
+      "away": "Angers SCO",
+      "actual": "D"
+    },
+    {
+      "seq": 288,
+      "fixture_id": 368376664,
+      "date": "2025-10-29",
+      "league": "Ligue 1",
+      "home": "Strasbourg",
+      "away": "Auxerre",
+      "actual": "H"
+    },
+    {
+      "seq": 289,
+      "fixture_id": 368376665,
+      "date": "2025-10-29",
+      "league": "Ligue 1",
+      "home": "Toulouse",
+      "away": "Rennes",
+      "actual": "D"
+    },
+    {
+      "seq": 290,
+      "fixture_id": 368376675,
+      "date": "2025-10-29",
+      "league": "Ligue 1",
+      "home": "Nantes",
+      "away": "Monaco",
+      "actual": "A"
+    },
+    {
+      "seq": 291,
+      "fixture_id": 374120198,
+      "date": "2025-10-30",
+      "league": "Serie A",
+      "home": "Cagliari",
+      "away": "Sassuolo",
+      "actual": "A"
+    },
+    {
+      "seq": 292,
+      "fixture_id": 374120200,
+      "date": "2025-10-30",
+      "league": "Serie A",
+      "home": "Pisa",
+      "away": "Lazio",
+      "actual": "D"
+    },
+    {
+      "seq": 293,
+      "fixture_id": 373089983,
+      "date": "2025-10-31",
+      "league": "Bundesliga",
+      "home": "FC Augsburg",
+      "away": "Borussia Dortmund",
+      "actual": "A"
+    },
+    {
+      "seq": 294,
+      "fixture_id": 368374874,
+      "date": "2025-10-31",
+      "league": "La Liga",
+      "home": "Getafe",
+      "away": "Girona",
+      "actual": "H"
+    },
+    {
+      "seq": 295,
+      "fixture_id": 368375113,
+      "date": "2025-11-01",
+      "league": "La Liga",
+      "home": "Villarreal",
+      "away": "Rayo Vallecano",
+      "actual": "H"
+    },
+    {
+      "seq": 296,
+      "fixture_id": 374120054,
+      "date": "2025-11-01",
+      "league": "Serie A",
+      "home": "Udinese",
+      "away": "Atalanta",
+      "actual": "H"
+    },
+    {
+      "seq": 297,
+      "fixture_id": 373089979,
+      "date": "2025-11-01",
+      "league": "Bundesliga",
+      "home": "Heidenheim",
+      "away": "Eintracht Frankfurt",
+      "actual": "D"
+    },
+    {
+      "seq": 298,
+      "fixture_id": 373089982,
+      "date": "2025-11-01",
+      "league": "Bundesliga",
+      "home": "FC Union Berlin",
+      "away": "SC Freiburg",
+      "actual": "D"
+    },
+    {
+      "seq": 299,
+      "fixture_id": 373089984,
+      "date": "2025-11-01",
+      "league": "Bundesliga",
+      "home": "St. Pauli",
+      "away": "Borussia M\u00f6nchengladbach",
+      "actual": "A"
+    },
+    {
+      "seq": 300,
+      "fixture_id": 373090060,
+      "date": "2025-11-01",
+      "league": "Bundesliga",
+      "home": "FSV Mainz 05",
+      "away": "Werder Bremen",
+      "actual": "D"
+    }
+  ],
+  "first_fixture": {
+    "fixture_id": 367857787,
+    "date": "2025-09-13",
+    "league": "La Liga",
+    "match": "Atl\u00e9tico de Madrid v Villarreal"
+  },
+  "last_fixture": {
+    "fixture_id": 373090060,
+    "date": "2025-11-01",
+    "league": "Bundesliga",
+    "match": "FSV Mainz 05 v Werder Bremen"
+  },
+  "date_span": [
+    "2025-09-13",
+    "2025-11-01"
+  ],
+  "league_composition": {
+    "Serie A": 68,
+    "La Liga": 67,
+    "Ligue 1": 61,
+    "Premier League": 52,
+    "Bundesliga": 52
+  },
+  "outcome_distribution": {
+    "H": 131,
+    "D": 82,
+    "A": 87
+  },
+  "overlap": {
+    "frozen_20": 0,
+    "frozen_50": 0,
+    "fresh_100": 0,
+    "all_prior_150": 0
+  },
+  "verified": {
+    "exactly_300": true,
+    "zero_duplicates": true,
+    "all_FT": true,
+    "chronological": true,
+    "starts_after_prior_150": true,
+    "zero_overlap_all_prior": true
+  },
+  "market_status": "pending ingestion"
+}

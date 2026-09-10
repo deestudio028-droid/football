@@ -1,0 +1,6 @@
+segment,n_matches,mean_predicted_risk,actual_mean_rps,actual_mean_log_loss,top10_risk_concentration_pct
+First_1_Match_Of_Season,24,0.0466,0.175214,0.880985,0.0
+First_3_Matches_Of_Season,99,0.0442,0.190724,0.950343,0.0
+First_5_Matches_Of_Season,151,0.041,0.194253,0.984182,0.0
+First_10_Matches_Of_Season,296,0.0619,0.196683,0.982951,1.35
+Remaining_Season_Matches,6786,0.1034,0.199611,0.983378,10.39

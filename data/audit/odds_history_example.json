@@ -1,0 +1,51 @@
+{
+  "info": {
+    "count": 314
+  },
+  "data": [
+    {
+      "fixture_id": 50299569,
+      "market_key": "ft_result",
+      "market_id": 6,
+      "outcome": "away",
+      "opening": "2.63",
+      "closing": "2.90",
+      "peak": "2.90",
+      "bookmaker_id": 2,
+      "bookmaker_name": "Bet365"
+    },
+    {
+      "fixture_id": 50299569,
+      "market_key": "ft_result",
+      "market_id": 6,
+      "outcome": "away",
+      "opening": "2.71",
+      "closing": "2.86",
+      "peak": "3.17",
+      "bookmaker_id": 1,
+      "bookmaker_name": "Pinnacle"
+    },
+    {
+      "fixture_id": 50299569,
+      "market_key": "ft_result",
+      "market_id": 6,
+      "outcome": "away",
+      "opening": "2.38",
+      "closing": "2.62",
+      "peak": "2.70",
+      "bookmaker_id": 4,
+      "bookmaker_name": "WilliamHill"
+    },
+    {
+      "fixture_id": 50299569,
+      "market_key": "ft_result",
+      "market_id": 6,
+      "outcome": "away",
+      "opening": "2.44",
+      "closing": "2.81",
+      "peak": "3.00",
+      "bookmaker_id": 3,
+      "bookmaker_name": "1xBet"
+    }
+  ]
+}

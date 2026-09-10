@@ -1,0 +1,43 @@
+{
+  "frozen_at": "2026-08-21T05:56:45.616022+00:00",
+  "protocol_version": "1.0",
+  "experiment": "Phase 6 Temporal / Recency & Regime Stability",
+  "primary_temporal_methodology": {
+    "name": "Temporal_Primary_Expanding_DC_Elo_Stacking",
+    "description": "Expanding-window regularized logistic stacking of Dixon-Coles and Elo draw probabilities with proportional odds redistribution",
+    "training_window": "Expanding historical window (all available prior seasons)",
+    "intercept": 0.113028,
+    "weights": [
+      0.603705,
+      0.481218
+    ],
+    "l2_reg": 10.0,
+    "components": [
+      "Dixon-Coles Shrunk League MLE",
+      "Elo Bivariate Logistic Calibrator"
+    ],
+    "selection_rationale": "Demonstrated consistent season-over-season gains across 4/4 historical validation folds without sensitivity to decay half-life hyperparameter"
+  },
+  "secondary_temporal_methodology": {
+    "name": "Temporal_Secondary_Recency_Weighted_DC_Elo",
+    "description": "Recency-weighted regularized logistic stacking with exponential decay half-life of 2.0 seasons",
+    "training_window": "Recency-weighted exponential decay (t_1/2 = 2.0 seasons)",
+    "half_life_seasons": 2.0,
+    "intercept": 0.113028,
+    "weights": [
+      0.603705,
+      0.481218
+    ],
+    "l2_reg": 10.0
+  },
+  "historical_scope": {
+    "seasons": [
+      "2020/2021",
+      "2021/2022",
+      "2022/2023",
+      "2023/2024",
+      "2024/2025"
+    ],
+    "n_fixtures": 8983
+  }
+}

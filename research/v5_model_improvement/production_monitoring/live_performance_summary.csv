@@ -1,0 +1,2 @@
+total_locked_forecasts,completed_matches,pending_matches,cancelled_postponed,v4_0_correct,v4_0_accuracy_pct,accuracy_95ci_lower,accuracy_95ci_upper,home_accuracy_pct,draw_accuracy_pct,away_accuracy_pct,multiclass_brier_score,multiclass_log_loss
+87,33,54,0,20,60.61,43.68,75.32,84.62,0.0,75.0,0.5497,0.9365

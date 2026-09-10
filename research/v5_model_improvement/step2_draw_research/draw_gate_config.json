@@ -1,0 +1,25 @@
+{
+  "candidate_id": "v4_6_physical_draw_gate_step2b",
+  "candidate_version": "v2.0-step2b-physical-gate",
+  "description": "Multi-condition selective physical decision gate overriding fragile low-margin V4.0 win predictions to Draw.",
+  "parameters": {
+    "tau_d": 0.26,
+    "tau_gap": 0.1,
+    "tau_conf": 0.45,
+    "tau_elo": 100.0,
+    "tau_lambda": 2.5
+  },
+  "historical_evaluation": {
+    "n_historical": 10734,
+    "walk_forward_folds": 5,
+    "mean_walk_forward_acc_delta": -0.31,
+    "mean_walk_forward_draw_recall": 4.33,
+    "mean_walk_forward_draw_precision": 28.84,
+    "holdout_2025_26_acc_delta": -0.69,
+    "holdout_2025_26_draw_recall": 9.44,
+    "holdout_2025_26_draw_precision": 29.37,
+    "recent_33_match_acc_delta": 0.0,
+    "recent_33_match_draw_recall": 0.0
+  },
+  "governance_classification": "RESEARCH CANDIDATE ONLY \u2014 NON-MUTATING"
+}

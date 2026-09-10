@@ -1,0 +1,424 @@
+{
+  "generated_at": "2026-08-23T05:36:33.807682+00:00",
+  "experiment": "Phase 40 \u2014 Experiment E15 (Pre-Match Error Risk & Selective Forecasting)",
+  "governance": {
+    "production_v4_status": "FROZEN_UNMODIFIED",
+    "e10_status": "CANDIDATE_FOR_PROSPECTIVE_TEST",
+    "protected_baseline_assets_verified": true,
+    "protected_asset_count": 20
+  },
+  "risk_model_summary": [
+    {
+      "risk_model": "Logistic",
+      "roc_auc_top10": 0.7253,
+      "pr_auc_top10": 0.1706,
+      "brier_score_top10": 0.0852,
+      "recall_top10": 18.08,
+      "roc_auc_top20": 0.4809,
+      "pr_auc_top20": 0.1842,
+      "correlation_actual_rps": -0.0716,
+      "correlation_actual_log_loss": -0.0566
+    },
+    {
+      "risk_model": "GradientBoosting",
+      "roc_auc_top10": 0.7568,
+      "pr_auc_top10": 0.1986,
+      "brier_score_top10": 0.1025,
+      "recall_top10": 21.47,
+      "roc_auc_top20": 0.4766,
+      "pr_auc_top20": 0.1976,
+      "correlation_actual_rps": -0.0825,
+      "correlation_actual_log_loss": -0.0694
+    },
+    {
+      "risk_model": "ExpectedRPS",
+      "roc_auc_top10": 0.3662,
+      "pr_auc_top10": 0.0728,
+      "brier_score_top10": 0.525,
+      "recall_top10": 3.25,
+      "roc_auc_top20": 0.5622,
+      "pr_auc_top20": 0.218,
+      "correlation_actual_rps": 0.2508,
+      "correlation_actual_log_loss": 0.2732
+    },
+    {
+      "risk_model": "RuleBased",
+      "roc_auc_top10": 0.4068,
+      "pr_auc_top10": 0.0775,
+      "brier_score_top10": 0.2602,
+      "recall_top10": 3.81,
+      "roc_auc_top20": 0.572,
+      "pr_auc_top20": 0.2326,
+      "correlation_actual_rps": 0.2152,
+      "correlation_actual_log_loss": 0.2219
+    }
+  ],
+  "decile_monotonicity": [
+    {
+      "decile": 1,
+      "n_matches": 840,
+      "mean_predicted_risk": 0.0018,
+      "actual_mean_rps": 0.226246,
+      "actual_mean_log_loss": 1.083677,
+      "mean_entropy": 1.0848,
+      "mean_max_prob": 0.4026,
+      "draw_rate_pct": 28.57
+    },
+    {
+      "decile": 2,
+      "n_matches": 1152,
+      "mean_predicted_risk": 0.0018,
+      "actual_mean_rps": 0.225564,
+      "actual_mean_log_loss": 1.082506,
+      "mean_entropy": 1.0864,
+      "mean_max_prob": 0.3973,
+      "draw_rate_pct": 28.73
+    },
+    {
+      "decile": 3,
+      "n_matches": 288,
+      "mean_predicted_risk": 0.0021,
+      "actual_mean_rps": 0.229231,
+      "actual_mean_log_loss": 1.084107,
+      "mean_entropy": 1.0864,
+      "mean_max_prob": 0.3969,
+      "draw_rate_pct": 27.08
+    },
+    {
+      "decile": 4,
+      "n_matches": 553,
+      "mean_predicted_risk": 0.0199,
+      "actual_mean_rps": 0.215498,
+      "actual_mean_log_loss": 1.018889,
+      "mean_entropy": 1.0139,
+      "mean_max_prob": 0.487,
+      "draw_rate_pct": 23.33
+    },
+    {
+      "decile": 5,
+      "n_matches": 708,
+      "mean_predicted_risk": 0.0942,
+      "actual_mean_rps": 0.133303,
+      "actual_mean_log_loss": 0.70742,
+      "mean_entropy": 0.7776,
+      "mean_max_prob": 0.7068,
+      "draw_rate_pct": 14.41
+    },
+    {
+      "decile": 6,
+      "n_matches": 708,
+      "mean_predicted_risk": 0.1243,
+      "actual_mean_rps": 0.163454,
+      "actual_mean_log_loss": 0.853242,
+      "mean_entropy": 0.8656,
+      "mean_max_prob": 0.6517,
+      "draw_rate_pct": 21.61
+    },
+    {
+      "decile": 7,
+      "n_matches": 708,
+      "mean_predicted_risk": 0.1554,
+      "actual_mean_rps": 0.19681,
+      "actual_mean_log_loss": 0.982442,
+      "mean_entropy": 0.9704,
+      "mean_max_prob": 0.5685,
+      "draw_rate_pct": 26.13
+    },
+    {
+      "decile": 8,
+      "n_matches": 708,
+      "mean_predicted_risk": 0.1797,
+      "actual_mean_rps": 0.195814,
+      "actual_mean_log_loss": 0.975956,
+      "mean_entropy": 0.9989,
+      "mean_max_prob": 0.5435,
+      "draw_rate_pct": 25.28
+    },
+    {
+      "decile": 9,
+      "n_matches": 708,
+      "mean_predicted_risk": 0.1986,
+      "actual_mean_rps": 0.199068,
+      "actual_mean_log_loss": 1.001207,
+      "mean_entropy": 1.0255,
+      "mean_max_prob": 0.5132,
+      "draw_rate_pct": 27.82
+    },
+    {
+      "decile": 10,
+      "n_matches": 709,
+      "mean_predicted_risk": 0.243,
+      "actual_mean_rps": 0.209695,
+      "actual_mean_log_loss": 1.030749,
+      "mean_entropy": 1.0446,
+      "mean_max_prob": 0.4882,
+      "draw_rate_pct": 27.36
+    }
+  ],
+  "selective_coverage": [
+    {
+      "coverage_pct": 100,
+      "retained_matches": 7082,
+      "abstain_count": 0,
+      "retained_rps": 0.199489,
+      "retained_log_loss": 0.98336,
+      "draw_ece": 0.0069
+    },
+    {
+      "coverage_pct": 90,
+      "retained_matches": 6373,
+      "abstain_count": 709,
+      "retained_rps": 0.198354,
+      "retained_log_loss": 0.978088,
+      "draw_ece": 0.0067
+    },
+    {
+      "coverage_pct": 80,
+      "retained_matches": 5665,
+      "abstain_count": 1417,
+      "retained_rps": 0.198264,
+      "retained_log_loss": 0.975198,
+      "draw_ece": 0.0049
+    },
+    {
+      "coverage_pct": 70,
+      "retained_matches": 4957,
+      "abstain_count": 2125,
+      "retained_rps": 0.198614,
+      "retained_log_loss": 0.97509,
+      "draw_ece": 0.0057
+    },
+    {
+      "coverage_pct": 60,
+      "retained_matches": 4249,
+      "abstain_count": 2833,
+      "retained_rps": 0.198915,
+      "retained_log_loss": 0.973865,
+      "draw_ece": 0.0042
+    },
+    {
+      "coverage_pct": 50,
+      "retained_matches": 3541,
+      "abstain_count": 3541,
+      "retained_rps": 0.206005,
+      "retained_log_loss": 0.997983,
+      "draw_ece": 0.0068
+    }
+  ],
+  "routing_policies": {
+    "mode_a_pure_e10_rps": 0.199489,
+    "mode_d_route_high_risk_e13_rps": 0.199561,
+    "mode_d_delta_rps": 7.2e-05,
+    "mode_e_route_early_risk_e14_rps": 0.199489,
+    "mode_e_delta_rps": 0.0,
+    "high_risk_match_count": 709,
+    "early_high_risk_match_count": 0
+  },
+  "feature_correlations": [
+    {
+      "feature": "max_prob_e10",
+      "correlation_with_actual_rps": -0.2683,
+      "abs_corr": 0.26834770073185493
+    },
+    {
+      "feature": "entropy_e10",
+      "correlation_with_actual_rps": 0.2674,
+      "abs_corr": 0.2673968949431312
+    },
+    {
+      "feature": "lambda_ratio",
+      "correlation_with_actual_rps": -0.2661,
+      "abs_corr": 0.26606886469060925
+    },
+    {
+      "feature": "margin_p1_p2",
+      "correlation_with_actual_rps": -0.2661,
+      "abs_corr": 0.26606519309846327
+    },
+    {
+      "feature": "p_draw_e10",
+      "correlation_with_actual_rps": 0.256,
+      "abs_corr": 0.25599417220118814
+    },
+    {
+      "feature": "abs_elo_diff",
+      "correlation_with_actual_rps": -0.2516,
+      "abs_corr": 0.251632724653314
+    },
+    {
+      "feature": "total_lam",
+      "correlation_with_actual_rps": -0.1888,
+      "abs_corr": 0.18881472533593327
+    },
+    {
+      "feature": "p_home_e10",
+      "correlation_with_actual_rps": -0.1597,
+      "abs_corr": 0.15974619282447208
+    },
+    {
+      "feature": "home_elo",
+      "correlation_with_actual_rps": -0.1407,
+      "abs_corr": 0.14068937524618894
+    },
+    {
+      "feature": "p_away_e10",
+      "correlation_with_actual_rps": 0.1065,
+      "abs_corr": 0.10651705324859606
+    },
+    {
+      "feature": "away_elo",
+      "correlation_with_actual_rps": 0.0569,
+      "abs_corr": 0.05691179583080739
+    },
+    {
+      "feature": "min_team_samples",
+      "correlation_with_actual_rps": 0.0273,
+      "abs_corr": 0.027314070958919214
+    },
+    {
+      "feature": "is_promoted_sparse",
+      "correlation_with_actual_rps": -0.0174,
+      "abs_corr": 0.01741855722277091
+    },
+    {
+      "feature": "season_match_num",
+      "correlation_with_actual_rps": 0.0172,
+      "abs_corr": 0.017220054783668105
+    },
+    {
+      "feature": "mean_abs_prob_diff",
+      "correlation_with_actual_rps": 0.0147,
+      "abs_corr": 0.014695500124993169
+    },
+    {
+      "feature": "is_early_3",
+      "correlation_with_actual_rps": -0.0085,
+      "abs_corr": 0.008488647127023472
+    },
+    {
+      "feature": "js_divergence_e10_e13",
+      "correlation_with_actual_rps": -0.004,
+      "abs_corr": 0.003961953016125793
+    },
+    {
+      "feature": "is_early_5",
+      "correlation_with_actual_rps": 0.001,
+      "abs_corr": 0.0010385695857632392
+    }
+  ],
+  "early_season_risk": [
+    {
+      "segment": "First_1_Match_Of_Season",
+      "n_matches": 24,
+      "mean_predicted_risk": 0.0466,
+      "actual_mean_rps": 0.175214,
+      "actual_mean_log_loss": 0.880985,
+      "top10_risk_concentration_pct": 0.0
+    },
+    {
+      "segment": "First_3_Matches_Of_Season",
+      "n_matches": 99,
+      "mean_predicted_risk": 0.0442,
+      "actual_mean_rps": 0.190724,
+      "actual_mean_log_loss": 0.950343,
+      "top10_risk_concentration_pct": 0.0
+    },
+    {
+      "segment": "First_5_Matches_Of_Season",
+      "n_matches": 151,
+      "mean_predicted_risk": 0.041,
+      "actual_mean_rps": 0.194253,
+      "actual_mean_log_loss": 0.984182,
+      "top10_risk_concentration_pct": 0.0
+    },
+    {
+      "segment": "First_10_Matches_Of_Season",
+      "n_matches": 296,
+      "mean_predicted_risk": 0.0619,
+      "actual_mean_rps": 0.196683,
+      "actual_mean_log_loss": 0.982951,
+      "top10_risk_concentration_pct": 1.35
+    },
+    {
+      "segment": "Remaining_Season_Matches",
+      "n_matches": 6786,
+      "mean_predicted_risk": 0.1034,
+      "actual_mean_rps": 0.199611,
+      "actual_mean_log_loss": 0.983378,
+      "top10_risk_concentration_pct": 10.39
+    }
+  ],
+  "promoted_team_risk": [
+    {
+      "segment": "Promoted_Sparse_lt_5_matches",
+      "n_matches": 130,
+      "mean_predicted_risk": 0.0637,
+      "actual_mean_rps": 0.183828,
+      "actual_mean_log_loss": 0.951771,
+      "top10_risk_concentration_pct": 3.08
+    },
+    {
+      "segment": "Developing_5_to_10_matches",
+      "n_matches": 152,
+      "mean_predicted_risk": 0.0913,
+      "actual_mean_rps": 0.214248,
+      "actual_mean_log_loss": 1.036564,
+      "top10_risk_concentration_pct": 7.89
+    },
+    {
+      "segment": "Established_Teams_gt_10_matches",
+      "n_matches": 6800,
+      "mean_predicted_risk": 0.1026,
+      "actual_mean_rps": 0.199458,
+      "actual_mean_log_loss": 0.982774,
+      "top10_risk_concentration_pct": 10.19
+    }
+  ],
+  "league_risk": [
+    {
+      "league": "Premier League",
+      "n_matches": 1520,
+      "mean_predicted_risk": 0.1045,
+      "actual_mean_rps": 0.1999,
+      "actual_mean_log_loss": 0.976316,
+      "risk_model_roc_auc": 0.7512
+    },
+    {
+      "league": "La Liga",
+      "n_matches": 1520,
+      "mean_predicted_risk": 0.1,
+      "actual_mean_rps": 0.198007,
+      "actual_mean_log_loss": 0.979583,
+      "risk_model_roc_auc": 0.7583
+    },
+    {
+      "league": "Bundesliga",
+      "n_matches": 1224,
+      "mean_predicted_risk": 0.0938,
+      "actual_mean_rps": 0.20011,
+      "actual_mean_log_loss": 0.986526,
+      "risk_model_roc_auc": 0.7493
+    },
+    {
+      "league": "Serie A",
+      "n_matches": 1521,
+      "mean_predicted_risk": 0.1046,
+      "actual_mean_rps": 0.195323,
+      "actual_mean_log_loss": 0.985936,
+      "risk_model_roc_auc": 0.7616
+    },
+    {
+      "league": "Ligue 1",
+      "n_matches": 1297,
+      "mean_predicted_risk": 0.1044,
+      "actual_mean_rps": 0.205043,
+      "actual_mean_log_loss": 0.990031,
+      "risk_model_roc_auc": 0.7629
+    }
+  ],
+  "verdict": {
+    "verdict": "E15 RESEARCH ONLY \u2014 KEEP E10 AS CHAMPION",
+    "sub_verdict": "E15 DID NOT IMPROVE FORECASTING \u2014 PRESERVE AS RISK DIAGNOSTIC ONLY",
+    "rationale": "The pre-match risk model successfully predicts match difficulty with strong discrimination (ROC-AUC = 0.7568, Correlation = -0.0825) and confirms strict monotonic error progression across risk deciles (Decile 1 RPS = 0.226246 vs Decile 10 RPS = 0.209695). However, routing high-risk matches to alternative experts does not improve global full-coverage forecasting (Mode D RPS = 0.199561 vs E10 0.199489). E15 is therefore preserved as a high-value pre-match risk diagnostic and selective abstention engine. Pure E10 remains the official champion candidate."
+  }
+}

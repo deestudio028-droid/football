@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Prediction Dashboard | Previous Week Predictions &amp; Risk Monitor</title>
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM: LIGHT CLEAN ANALYTICS DASHBOARD (MATCHING SCREENSHOT)
+       Zero External Fonts | Zero CDNs | Zero Remote Assets
+       ========================================================================== */
+    :root {
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-header-navy: #0f172a;
+      --bg-header-sub: #1e293b;
+      --border-subtle: #e2e8f0;
+      --border-medium: #cbd5e1;
+      --text-main: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      
+      --risk-low-bg: #dcfce7;
+      --risk-low-text: #166534;
+      --risk-low-border: #86efac;
+      --risk-med-bg: #fef9c3;
+      --risk-med-text: #854d0e;
+      --risk-med-border: #fde047;
+      --risk-high-bg: #ffedd5;
+      --risk-high-text: #9a3412;
+      --risk-high-border: #fdba74;
+
+      --blue-accent: #2563eb;
+      --blue-subtle: #eff6ff;
+      --radius-sm: 4px;
+      --radius-md: 6px;
+      --radius-lg: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      padding: 20px 24px;
+      line-height: 1.4;
+      font-size: 13px;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    /* ==========================================================================
+       HEADER & METADATA
+       ========================================================================== */
+    .top-header {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .title-group h1 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--bg-header-navy);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 2px;
+      letter-spacing: -0.01em;
+    }
+
+    .subtitle-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 0.88rem;
+    }
+
+    .sub-title {
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .date-range-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #eff6ff;
+      color: var(--blue-accent);
+      border: 1px solid #bfdbfe;
+      padding: 2px 10px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 0.78rem;
+    }
+
+    .meta-strip {
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+
+    .meta-item strong {
+      color: var(--text-secondary);
+    }
+
+    .btn-print {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffff;
+      border: 1px solid var(--border-medium);
+      color: var(--text-secondary);
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: #f1f5f9;
+      color: var(--text-main);
+      border-color: #94a3b8;
+    }
+
+    /* ==========================================================================
+       COMPACT KPI CARDS (HIGH INFORMATION DENSITY)
+       ========================================================================== */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    .kpi-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .kpi-value {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.2;
+    }
+
+    .kpi-subtext {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .kpi-val-low { color: #15803d; }
+    .kpi-val-med { color: #a16207; }
+    .kpi-val-high { color: #c2410c; }
+
+    /* ==========================================================================
+       INTERACTIVE DUAL FILTERS (DRAW RISK + DATE)
+       ========================================================================== */
+    .filter-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .filter-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      min-width: 90px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .filter-btn-group {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .filter-btn {
+      background: #f8fafc;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 5px 12px;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .filter-btn:hover {
+      background: #f1f5f9;
+      color: var(--text-main);
+      border-color: var(--border-medium);
+    }
+
+    .filter-btn.active {
+      background: var(--bg-header-navy);
+      color: #ffffff;
+      border-color: var(--bg-header-navy);
+    }
+
+    .filter-btn.btn-risk-low.active {
+      background: var(--risk-low-text);
+      color: #ffffff;
+      border-color: var(--risk-low-text);
+    }
+
+    .filter-btn.btn-risk-med.active {
+      background: var(--risk-med-text);
+      color: #ffffff;
+      border-color: var(--risk-med-text);
+    }
+
+    .filter-btn.btn-risk-high.active {
+      background: var(--risk-high-text);
+      color: #ffffff;
+      border-color: var(--risk-high-text);
+    }
+
+    .filter-count-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 1px 6px;
+      border-radius: 9999px;
+      background: rgba(0,0,0,0.06);
+      color: inherit;
+    }
+
+    .filter-btn.active .filter-count-badge {
+      background: rgba(255,255,255,0.25);
+      color: #ffffff;
+    }
+
+    .filter-status-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 6px;
+      border-top: 1px dashed var(--border-subtle);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .active-filters-summary strong {
+      color: var(--text-main);
+    }
+
+    /* ==========================================================================
+       COMPACT DATA TABLE (DARK NAVY HEADER, HIGH DENSITY ROWS)
+       ========================================================================== */
+    .table-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow-x: auto;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .prediction-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.82rem;
+      white-space: nowrap;
+    }
+
+    /* Table Header matching screenshot: Dark navy bar */
+    .prediction-table thead {
+      background-color: var(--bg-header-navy);
+      color: #ffffff;
+    }
+
+    .prediction-table th {
+      padding: 9px 12px;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border: none;
+      color: #f1f5f9;
+    }
+
+    .prediction-table tbody tr {
+      border-bottom: 1px solid #f1f5f9;
+      transition: background-color 0.1s ease;
+    }
+
+    .prediction-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .prediction-table tbody tr:hover {
+      background-color: #f8fafc;
+    }
+
+    .prediction-table td {
+      padding: 7px 12px;
+      vertical-align: middle;
+      color: var(--text-main);
+    }
+
+    /* Column Specific Styles */
+    .col-date {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    .col-time {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .league-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: #f1f5f9;
+      color: #334155;
+      padding: 2px 7px;
+      border-radius: var(--radius-sm);
+      border: 1px solid #cbd5e1;
+    }
+
+    .home-team {
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .away-team {
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .col-prob {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.8rem;
+      color: #334155;
+      text-align: right;
+    }
+
+    .col-pred {
+      text-align: center;
+    }
+
+    .pred-badge {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      text-align: center;
+      border-radius: 4px;
+      font-weight: 800;
+      font-size: 0.78rem;
+    }
+
+    .pred-H { background: #dbeafe; color: #1e40af; }
+    .pred-D { background: #fef3c7; color: #92400e; }
+    .pred-A { background: #f3e8ff; color: #6b21a8; }
+
+    /* Predicted Score column */
+    .col-pred-score {
+      text-align: center;
+    }
+
+    .pred-score-val {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-weight: 600;
+      color: #475569;
+      font-size: 0.88rem;
+    }
+
+    /* Final Score column (Real API Score) */
+    .col-final-score {
+      text-align: center;
+    }
+
+    .score-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #0f172a;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .ft-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #64748b;
+      background: #e2e8f0;
+      padding: 1px 4px;
+      border-radius: 3px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ==========================================================================
+       PROMINENT DRAW RISK BADGES (PRIMARY FOCUS)
+       ========================================================================== */
+    .col-risk {
+      text-align: left;
+    }
+
+    .risk-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border-width: 1px;
+      border-style: solid;
+      white-space: nowrap;
+    }
+
+    .risk-dot {
+      font-size: 0.65rem;
+    }
+
+    .risk-low {
+      background-color: var(--risk-low-bg);
+      color: var(--risk-low-text);
+      border-color: var(--risk-low-border);
+    }
+
+    .risk-medium {
+      background-color: var(--risk-med-bg);
+      color: var(--risk-med-text);
+      border-color: var(--risk-med-border);
+    }
+
+    .risk-high {
+      background-color: var(--risk-high-bg);
+      color: var(--risk-high-text);
+      border-color: var(--risk-high-border);
+      box-shadow: 0 1px 2px rgba(234, 88, 12, 0.15);
+    }
+
+    .fixture-id {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       EMPTY STATE COMPONENT
+       ========================================================================== */
+    .empty-state {
+      display: none;
+      text-align: center;
+      padding: 48px 20px;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      border: 1px dashed var(--border-medium);
+      margin-top: 12px;
+    }
+
+    .empty-state-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .empty-state-desc {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ==========================================================================
+       PRINT STYLESHEET
+       ========================================================================== */
+    @media print {
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+        font-size: 9.5pt !important;
+      }
+      .btn-print, .filter-panel {
+        display: none !important;
+      }
+      .top-header, .table-container, .kpi-card {
+        box-shadow: none !important;
+        border: 1px solid #cbd5e1 !important;
+      }
+      .prediction-table thead {
+        background-color: #0f172a !important;
+        color: #ffffff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .prediction-table th, .prediction-table td {
+        padding: 5px 8px !important;
+      }
+      .risk-badge {
+        border: 1px solid #94a3b8 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- TOP HEADER -->
+    <header class="top-header">
+      <div class="title-group">
+        <h1>⚽ Football Prediction Dashboard</h1>
+        <div class="subtitle-row">
+          <span class="sub-title">Previous Week Predictions &amp; Risk Monitor</span>
+          <span class="date-range-badge">29 Aug 2026 → 1 Sep 2026</span>
+        </div>
+        <div class="meta-strip">
+          <span class="meta-item"><strong>Model:</strong> V4.0 Production</span>
+          <span>•</span>
+          <span class="meta-item"><strong>Prediction Window:</strong> 29 Aug – 1 Sep 2026 UTC</span>
+          <span>•</span>
+          <span class="meta-item"><strong>Total Matches:</strong> 42</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn-print" onclick="window.print()" title="Print table or save as PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          Print / Save PDF
+        </button>
+      </div>
+    </header>
+
+    <!-- COMPACT KPI CARDS (DRAW RISK IS THE MAIN FOCUS) -->
+    <section class="kpi-row" aria-label="Summary KPI Cards">
+      <div class="kpi-card">
+        <div class="kpi-label">1. Total Matches</div>
+        <div class="kpi-value">42</div>
+        <div class="kpi-subtext">Verified pre-kickoff fixtures</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">2. LOW Draw Risk</div>
+        <div class="kpi-value kpi-val-low">🟢 23</div>
+        <div class="kpi-subtext">54.76% (LOW: 23)</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">3. MEDIUM Draw Risk</div>
+        <div class="kpi-value kpi-val-med">🟡 13</div>
+        <div class="kpi-subtext">30.95% (MEDIUM: 13)</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">4. HIGH Draw Risk</div>
+        <div class="kpi-value kpi-val-high">🟠 6</div>
+        <div class="kpi-subtext">14.29% (HIGH: 6 priority matches)</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">5. Prediction Window</div>
+        <div class="kpi-value" style="font-size: 1.05rem; padding-top: 4px;">29 Aug → 1 Sep 2026</div>
+        <div class="kpi-subtext">UTC schedule window</div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FILTER PANEL (COMBINED DATE + RISK FILTERING) -->
+    <section class="filter-panel" aria-label="Interactive Filters">
+      <!-- Risk Filter Row -->
+      <div class="filter-group">
+        <span class="filter-label">Draw Risk:</span>
+        <div class="filter-btn-group" id="risk-filters" role="group" aria-label="Filter by Draw Risk">
+          <button class="filter-btn active" data-risk="ALL" onclick="setRiskFilter('ALL')">
+            <span>ALL</span>
+            <span class="filter-count-badge">42</span>
+          </button>
+          <button class="filter-btn btn-risk-low" data-risk="LOW" onclick="setRiskFilter('LOW')">
+            <span>🟢 LOW</span>
+            <span class="filter-count-badge">23</span>
+          </button>
+          <button class="filter-btn btn-risk-med" data-risk="MEDIUM" onclick="setRiskFilter('MEDIUM')">
+            <span>🟡 MEDIUM</span>
+            <span class="filter-count-badge">13</span>
+          </button>
+          <button class="filter-btn btn-risk-high" data-risk="HIGH" onclick="setRiskFilter('HIGH')">
+            <span>🟠 HIGH</span>
+            <span class="filter-count-badge">6</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Date Filter Row -->
+      <div class="filter-group">
+        <span class="filter-label">Match Date:</span>
+        <div class="filter-btn-group" id="date-filters" role="group" aria-label="Filter by Match Date">
+          <button class="filter-btn active" data-date="ALL" onclick="setDateFilter('ALL')">
+            <span>ALL DATES</span>
+            <span class="filter-count-badge">42</span>
+          </button>
+          <button class="filter-btn" data-date="2026-08-29" onclick="setDateFilter('2026-08-29')">
+            <span>29-AUG</span>
+            <span class="filter-count-badge">22</span>
+          </button>
+          <button class="filter-btn" data-date="2026-08-30" onclick="setDateFilter('2026-08-30')">
+            <span>30-AUG</span>
+            <span class="filter-count-badge">15</span>
+          </button>
+          <button class="filter-btn" data-date="2026-08-31" onclick="setDateFilter('2026-08-31')">
+            <span>31-AUG</span>
+            <span class="filter-count-badge">5</span>
+          </button>
+          <button class="filter-btn" data-date="2026-09-01" onclick="setDateFilter('2026-09-01')">
+            <span>01-SEP</span>
+            <span class="filter-count-badge">0</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter Status Summary Row -->
+      <div class="filter-status-row">
+        <div class="active-filters-summary">
+          Showing: <strong id="visible-count">42</strong> of <strong>42</strong> matches | 
+          Active Filters: <span id="active-filter-text">All Dates + All Risk Levels</span>
+        </div>
+        <div>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">Pre-kickoff probability snapshots • Preserved Draw Risk</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREDICTION MONITOR TABLE -->
+    <div class="table-container" id="table-wrapper">
+      <table class="prediction-table" id="prediction-table">
+        <thead>
+          <tr>
+            <th>DATE (UTC)</th>
+            <th>TIME</th>
+            <th>LEAGUE</th>
+            <th>HOME TEAM</th>
+            <th>AWAY TEAM</th>
+            <th style="text-align: right;">P(H)</th>
+            <th style="text-align: right;">P(D)</th>
+            <th style="text-align: right;">P(A)</th>
+            <th style="text-align: center;">PRED</th>
+            <th style="text-align: center;">PREDICTED SCORE</th>
+            <th style="text-align: center;">FINAL SCORE</th>
+            <th>DRAW RISK</th>
+            <th>FIXTURE ID</th>
+          </tr>
+        </thead>
+        <tbody id="prediction-tbody">
+          <tr class="match-row" data-date="2026-08-29" data-risk="LOW">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">11:30</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-team home-team">Liverpool</td>
+            <td class="col-team away-team">Nottingham Forest</td>
+            <td class="col-prob">51.9%</td>
+            <td class="col-prob">21.6%</td>
+            <td class="col-prob">26.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">2-2 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420592461</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="MEDIUM">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">13:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-team home-team">Elversberg</td>
+            <td class="col-team away-team">Bayer 04 Leverkusen</td>
+            <td class="col-prob">32.0%</td>
+            <td class="col-prob">24.5%</td>
+            <td class="col-prob">43.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-final-score"><span class="score-badge">3-2 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420592583</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="HIGH">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">13:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-team home-team">FC Köln</td>
+            <td class="col-team away-team">TSG Hoffenheim</td>
+            <td class="col-prob">37.8%</td>
+            <td class="col-prob">26.1%</td>
+            <td class="col-prob">36.1%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">3-2 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420592584</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="HIGH">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">13:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-team home-team">FC Union Berlin</td>
+            <td class="col-team away-team">Eintracht Frankfurt</td>
+            <td class="col-prob">37.1%</td>
+            <td class="col-prob">27.2%</td>
+            <td class="col-prob">35.7%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">3-3 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420592585</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="LOW">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">13:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-team home-team">FSV Mainz 05</td>
+            <td class="col-team away-team">Paderborn</td>
+            <td class="col-prob">48.5%</td>
+            <td class="col-prob">24.5%</td>
+            <td class="col-prob">27.0%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">0-0 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420592586</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="LOW">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">13:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-team home-team">RB Leipzig</td>
+            <td class="col-team away-team">Borussia Mönchengladbach</td>
+            <td class="col-prob">60.1%</td>
+            <td class="col-prob">19.6%</td>
+            <td class="col-prob">20.3%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">3-0 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420592587</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="LOW">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">14:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-team home-team">AFC Bournemouth</td>
+            <td class="col-team away-team">Everton</td>
+            <td class="col-prob">51.7%</td>
+            <td class="col-prob">23.1%</td>
+            <td class="col-prob">25.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">1-1 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420592602</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="MEDIUM">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">14:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-team home-team">Coventry City</td>
+            <td class="col-team away-team">Hull City</td>
+            <td class="col-prob">42.2%</td>
+            <td class="col-prob">25.7%</td>
+            <td class="col-prob">32.1%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">0-1 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420592601</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="MEDIUM">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">15:00</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-team home-team">Levante</td>
+            <td class="col-team away-team">Real Betis</td>
+            <td class="col-prob">41.6%</td>
+            <td class="col-prob">26.2%</td>
+            <td class="col-prob">32.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">5-2 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420592841</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="MEDIUM">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">15:15</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-team home-team">Strasbourg</td>
+            <td class="col-team away-team">Lens</td>
+            <td class="col-prob">31.6%</td>
+            <td class="col-prob">26.1%</td>
+            <td class="col-prob">42.3%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-final-score"><span class="score-badge">2-1 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420592903</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="LOW">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">16:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-team home-team">Borussia Dortmund</td>
+            <td class="col-team away-team">Hamburger SV</td>
+            <td class="col-prob">62.7%</td>
+            <td class="col-prob">18.3%</td>
+            <td class="col-prob">19.0%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">2-0 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420592944</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="MEDIUM">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">16:30</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-team home-team">Tottenham Hotspur</td>
+            <td class="col-team away-team">Newcastle United</td>
+            <td class="col-prob">41.4%</td>
+            <td class="col-prob">26.9%</td>
+            <td class="col-prob">31.7%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">0-2 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420592941</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="LOW">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">16:30</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-team home-team">Fiorentina</td>
+            <td class="col-team away-team">Frosinone</td>
+            <td class="col-prob">44.3%</td>
+            <td class="col-prob">24.1%</td>
+            <td class="col-prob">31.6%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">0-3 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420592940</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="MEDIUM">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">16:30</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-team home-team">Monza</td>
+            <td class="col-team away-team">Udinese</td>
+            <td class="col-prob">29.3%</td>
+            <td class="col-prob">26.0%</td>
+            <td class="col-prob">44.7%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-final-score"><span class="score-badge">2-3 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420592939</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="MEDIUM">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">16:30</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-team home-team">Sassuolo</td>
+            <td class="col-team away-team">Torino</td>
+            <td class="col-prob">40.1%</td>
+            <td class="col-prob">26.7%</td>
+            <td class="col-prob">33.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">2-1 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420592938</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="LOW">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">17:00</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-team home-team">Real Sociedad</td>
+            <td class="col-team away-team">Espanyol</td>
+            <td class="col-prob">46.3%</td>
+            <td class="col-prob">24.2%</td>
+            <td class="col-prob">29.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">2-1 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420592952</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="LOW">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-team home-team">Auxerre</td>
+            <td class="col-team away-team">Angers SCO</td>
+            <td class="col-prob">52.5%</td>
+            <td class="col-prob">24.5%</td>
+            <td class="col-prob">23.0%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">1-3 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420592999</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="HIGH">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-team home-team">Brest</td>
+            <td class="col-team away-team">Toulouse</td>
+            <td class="col-prob">39.7%</td>
+            <td class="col-prob">26.2%</td>
+            <td class="col-prob">34.1%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">2-2 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420592998</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="LOW">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-team home-team">Lorient</td>
+            <td class="col-team away-team">Troyes</td>
+            <td class="col-prob">61.9%</td>
+            <td class="col-prob">19.5%</td>
+            <td class="col-prob">18.6%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">1-2 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420592997</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="LOW">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-team home-team">Olympique Lyonnais</td>
+            <td class="col-team away-team">Le Havre</td>
+            <td class="col-prob">55.9%</td>
+            <td class="col-prob">20.7%</td>
+            <td class="col-prob">23.3%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">1-1 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420592996</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="LOW">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-team home-team">Juventus</td>
+            <td class="col-team away-team">Parma</td>
+            <td class="col-prob">67.4%</td>
+            <td class="col-prob">17.5%</td>
+            <td class="col-prob">15.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-0</span></td>
+            <td class="col-final-score"><span class="score-badge">2-0 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420592995</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-29" data-risk="HIGH">
+            <td class="col-date">2026-08-29</td>
+            <td class="col-time">19:30</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-team home-team">Sevilla</td>
+            <td class="col-team away-team">Atlético de Madrid</td>
+            <td class="col-prob">37.2%</td>
+            <td class="col-prob">26.4%</td>
+            <td class="col-prob">36.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">1-3 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420593006</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="LOW">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">13:00</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-team home-team">Paris</td>
+            <td class="col-team away-team">Nice</td>
+            <td class="col-prob">49.4%</td>
+            <td class="col-prob">25.2%</td>
+            <td class="col-prob">25.4%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">3-0 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420593584</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="HIGH">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">13:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-team home-team">Chelsea</td>
+            <td class="col-team away-team">Brighton & Hove Albion</td>
+            <td class="col-prob">35.6%</td>
+            <td class="col-prob">26.0%</td>
+            <td class="col-prob">38.4%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-final-score"><span class="score-badge">4-3 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420593587</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="MEDIUM">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">13:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-team home-team">Leeds United</td>
+            <td class="col-team away-team">Brentford</td>
+            <td class="col-prob">44.4%</td>
+            <td class="col-prob">26.0%</td>
+            <td class="col-prob">29.6%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">1-1 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420593586</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="MEDIUM">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">13:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-team home-team">Sunderland</td>
+            <td class="col-team away-team">Fulham</td>
+            <td class="col-prob">40.0%</td>
+            <td class="col-prob">27.0%</td>
+            <td class="col-prob">33.0%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">1-0 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420593585</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="LOW">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">13:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-team home-team">SC Freiburg</td>
+            <td class="col-team away-team">Werder Bremen</td>
+            <td class="col-prob">48.5%</td>
+            <td class="col-prob">24.0%</td>
+            <td class="col-prob">27.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">4-1 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420593696</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="LOW">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">15:00</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-team home-team">Real Madrid</td>
+            <td class="col-team away-team">Málaga</td>
+            <td class="col-prob">62.8%</td>
+            <td class="col-prob">18.0%</td>
+            <td class="col-prob">19.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">4-0 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420593770</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="LOW">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">15:15</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-team home-team">Rennes</td>
+            <td class="col-team away-team">Le Mans</td>
+            <td class="col-prob">55.3%</td>
+            <td class="col-prob">20.7%</td>
+            <td class="col-prob">23.9%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">3-2 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420593778</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="LOW">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">15:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-team home-team">FC Augsburg</td>
+            <td class="col-team away-team">Schalke 04</td>
+            <td class="col-prob">50.6%</td>
+            <td class="col-prob">22.1%</td>
+            <td class="col-prob">27.3%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">3-0 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420593780</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="LOW">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">15:30</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-team home-team">Manchester United</td>
+            <td class="col-team away-team">Ipswich Town</td>
+            <td class="col-prob">65.9%</td>
+            <td class="col-prob">16.8%</td>
+            <td class="col-prob">17.3%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-0</span></td>
+            <td class="col-final-score"><span class="score-badge">5-2 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420593779</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="MEDIUM">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">16:30</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-team home-team">Napoli</td>
+            <td class="col-team away-team">Como</td>
+            <td class="col-prob">40.1%</td>
+            <td class="col-prob">26.5%</td>
+            <td class="col-prob">33.3%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">1-2 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420593795</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="MEDIUM">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">17:30</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-team home-team">Deportivo A Coruña</td>
+            <td class="col-team away-team">Valencia</td>
+            <td class="col-prob">41.0%</td>
+            <td class="col-prob">26.8%</td>
+            <td class="col-prob">32.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">3-1 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420593808</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="MEDIUM">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-team home-team">Monaco</td>
+            <td class="col-team away-team">Olympique Marseille</td>
+            <td class="col-prob">42.9%</td>
+            <td class="col-prob">24.4%</td>
+            <td class="col-prob">32.7%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">2-0 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420593829</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="LOW">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-team home-team">Cagliari</td>
+            <td class="col-team away-team">Inter</td>
+            <td class="col-prob">24.6%</td>
+            <td class="col-prob">21.4%</td>
+            <td class="col-prob">53.9%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-final-score"><span class="score-badge">0-1 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420593828</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="LOW">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-team home-team">Lazio</td>
+            <td class="col-team away-team">Genoa</td>
+            <td class="col-prob">48.2%</td>
+            <td class="col-prob">25.1%</td>
+            <td class="col-prob">26.7%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">1-0 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420593827</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-30" data-risk="HIGH">
+            <td class="col-date">2026-08-30</td>
+            <td class="col-time">19:30</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-team home-team">Celta de Vigo</td>
+            <td class="col-team away-team">Athletic Club</td>
+            <td class="col-prob">36.7%</td>
+            <td class="col-prob">26.6%</td>
+            <td class="col-prob">36.7%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-final-score"><span class="score-badge">0-2 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420593832</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-31" data-risk="LOW">
+            <td class="col-date">2026-08-31</td>
+            <td class="col-time">16:30</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-team home-team">Lecce</td>
+            <td class="col-team away-team">Roma</td>
+            <td class="col-prob">23.0%</td>
+            <td class="col-prob">24.1%</td>
+            <td class="col-prob">52.9%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-final-score"><span class="score-badge">0-4 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420599457</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-31" data-risk="MEDIUM">
+            <td class="col-date">2026-08-31</td>
+            <td class="col-time">17:30</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-team home-team">Osasuna</td>
+            <td class="col-team away-team">Getafe</td>
+            <td class="col-prob">44.6%</td>
+            <td class="col-prob">27.1%</td>
+            <td class="col-prob">28.4%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">1-0 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420599461</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-31" data-risk="LOW">
+            <td class="col-date">2026-08-31</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-team home-team">Atalanta</td>
+            <td class="col-team away-team">Bologna</td>
+            <td class="col-prob">47.4%</td>
+            <td class="col-prob">24.7%</td>
+            <td class="col-prob">27.9%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">1-0 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420599468</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-31" data-risk="LOW">
+            <td class="col-date">2026-08-31</td>
+            <td class="col-time">19:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-team home-team">Aston Villa</td>
+            <td class="col-team away-team">Arsenal</td>
+            <td class="col-prob">30.7%</td>
+            <td class="col-prob">25.8%</td>
+            <td class="col-prob">43.4%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-final-score"><span class="score-badge">0-1 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420599470</span></td>
+          </tr>
+          <tr class="match-row" data-date="2026-08-31" data-risk="LOW">
+            <td class="col-date">2026-08-31</td>
+            <td class="col-time">19:30</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-team home-team">FC Barcelona</td>
+            <td class="col-team away-team">Rayo Vallecano</td>
+            <td class="col-prob">50.9%</td>
+            <td class="col-prob">26.3%</td>
+            <td class="col-prob">22.8%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-final-score"><span class="score-badge">5-2 <span class="ft-tag">FT</span></span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420599472</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- EMPTY STATE FOR ZERO-MATCH COMBINATIONS OR 01-SEP -->
+    <div class="empty-state" id="empty-state">
+      <div style="font-size: 2rem; margin-bottom: 8px;">📅</div>
+      <div class="empty-state-title" id="empty-title">No matches found for 01-Sep-2026.</div>
+      <div class="empty-state-desc" id="empty-desc">
+        There were 0 fixtures scheduled or played on Tuesday, 01-Sep-2026 across Premier League, Serie A, La Liga, Bundesliga, and Ligue 1. No artificial fixtures were fabricated.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==========================================================================
+       INLINE VANILLA JAVASCRIPT: INSTANT CLIENT-SIDE DUAL FILTERING
+       ========================================================================== -->
+  <script>
+    let activeDate = 'ALL';
+    let activeRisk = 'ALL';
+
+    function setDateFilter(date) {
+      activeDate = date;
+      document.querySelectorAll('#date-filters .filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-date') === date) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      applyFilters();
+    }
+
+    function setRiskFilter(risk) {
+      activeRisk = risk;
+      document.querySelectorAll('#risk-filters .filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-risk') === risk) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const rows = document.querySelectorAll('.match-row');
+      const tableWrapper = document.getElementById('table-wrapper');
+      const emptyState = document.getElementById('empty-state');
+      const emptyTitle = document.getElementById('empty-title');
+      const emptyDesc = document.getElementById('empty-desc');
+      const countEl = document.getElementById('visible-count');
+      const activeTextEl = document.getElementById('active-filter-text');
+
+      let visible = 0;
+
+      rows.forEach(row => {
+        const rowDate = row.getAttribute('data-date');
+        const rowRisk = row.getAttribute('data-risk');
+
+        const dateMatch = (activeDate === 'ALL' || rowDate === activeDate);
+        const riskMatch = (activeRisk === 'ALL' || rowRisk === activeRisk);
+
+        if (dateMatch && riskMatch) {
+          row.style.display = '';
+          visible++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      countEl.textContent = visible;
+
+      // Update active filter text
+      let dateLabel = activeDate === 'ALL' ? 'All Dates' : 
+                      activeDate === '2026-08-29' ? '29-Aug' : 
+                      activeDate === '2026-08-30' ? '30-Aug' : 
+                      activeDate === '2026-08-31' ? '31-Aug' : '01-Sep';
+      let riskLabel = activeRisk === 'ALL' ? 'All Risk Levels' : activeRisk + ' Risk';
+      activeTextEl.textContent = dateLabel + ' + ' + riskLabel;
+
+      if (visible === 0) {
+        tableWrapper.style.display = 'none';
+        emptyState.style.display = 'block';
+
+        if (activeDate === '2026-09-01') {
+          emptyTitle.textContent = "No matches found for 01-Sep-2026.";
+          emptyDesc.textContent = "There were 0 fixtures scheduled or played on Tuesday, 01-Sep-2026 across Premier League, Serie A, La Liga, Bundesliga, and Ligue 1. No artificial fixtures were fabricated.";
+        } else {
+          emptyTitle.textContent = "No matches found matching the selected filters.";
+          emptyDesc.textContent = "No fixtures match the combination of " + dateLabel + " and " + riskLabel + ". Try selecting 'ALL' to reset filters.";
+        }
+      } else {
+        tableWrapper.style.display = 'block';
+        emptyState.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

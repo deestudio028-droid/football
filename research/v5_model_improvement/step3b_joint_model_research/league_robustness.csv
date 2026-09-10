@@ -1,0 +1,6 @@
+league,match_count,v4_accuracy_pct,joint_accuracy_pct,v4_log_loss,joint_log_loss,v4_brier,joint_brier,v4_total_goal_mae,joint_total_goal_mae,v4_exact_score_pct,joint_exact_score_pct
+Premier League,380,47.63,47.63,1.0255,1.0201,0.6152,0.6127,1.2523,1.2549,13.68,13.68
+La Liga,380,51.84,51.84,0.9731,0.9767,0.5784,0.5801,1.1935,1.1891,16.84,16.84
+Serie A,380,53.16,53.16,0.9979,0.9946,0.5956,0.5943,1.272,1.2665,10.0,10.0
+Bundesliga,306,55.56,55.56,0.9711,0.9679,0.5712,0.5718,1.3403,1.3447,11.76,11.76
+Ligue 1,305,52.46,52.46,0.9883,0.9873,0.5889,0.5886,1.4708,1.4689,9.51,9.51

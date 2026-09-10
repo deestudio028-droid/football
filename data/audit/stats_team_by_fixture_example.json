@@ -1,0 +1,2241 @@
+{
+  "info": {
+    "page": 1,
+    "pages": 1,
+    "per_page": 100,
+    "total": 2,
+    "include_frozen": false,
+    "last_x": false,
+    "include_avg": false
+  },
+  "data": [
+    {
+      "team_id": 5303,
+      "fixture_id": null,
+      "season_id": 667780,
+      "name": "Arsenal",
+      "played": {
+        "total": 7,
+        "home": 4,
+        "away": 3
+      },
+      "won": {
+        "total": 5,
+        "home": 3,
+        "away": 2,
+        "total_percentage": 71.43,
+        "home_percentage": 75,
+        "away_percentage": 66.67
+      },
+      "drawn": {
+        "total": 1,
+        "home": 1,
+        "away": 0,
+        "total_percentage": 14.29,
+        "home_percentage": 25,
+        "away_percentage": 0
+      },
+      "lost": {
+        "total": 1,
+        "home": 0,
+        "away": 1,
+        "total_percentage": 14.29,
+        "home_percentage": 0,
+        "away_percentage": 33.33
+      },
+      "points": {
+        "total": 16,
+        "home": 10,
+        "away": 6,
+        "total_avg": 2.29,
+        "home_avg": 2.5,
+        "away_avg": 2
+      },
+      "goals_total": {
+        "total": 17,
+        "home": 12,
+        "away": 5,
+        "total_avg": 2.43,
+        "home_avg": 3,
+        "away_avg": 1.67
+      },
+      "goals_for": {
+        "total": 14,
+        "home": 11,
+        "away": 3,
+        "total_avg": 2,
+        "home_avg": 2.75,
+        "away_avg": 1
+      },
+      "goals_against": {
+        "total": 3,
+        "home": 1,
+        "away": 2,
+        "total_avg": 0.43,
+        "home_avg": 0.25,
+        "away_avg": 0.67
+      },
+      "goals_difference": {
+        "total": 11,
+        "home": 10,
+        "away": 1
+      },
+      "goals_over": {
+        "o0": {
+          "total": 7,
+          "home": 4,
+          "away": 3,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "o1": {
+          "total": 5,
+          "home": 4,
+          "away": 1,
+          "total_percentage": 71.43,
+          "home_percentage": 100,
+          "away_percentage": 33.33
+        },
+        "o2": {
+          "total": 3,
+          "home": 2,
+          "away": 1,
+          "total_percentage": 42.86,
+          "home_percentage": 50,
+          "away_percentage": 33.33
+        },
+        "o3": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 25,
+          "away_percentage": 0
+        }
+      },
+      "goals_for_over": {
+        "o0": {
+          "total": 6,
+          "home": 4,
+          "away": 2,
+          "total_percentage": 85.71,
+          "home_percentage": 100,
+          "away_percentage": 66.67
+        },
+        "o1": {
+          "total": 4,
+          "home": 3,
+          "away": 1,
+          "total_percentage": 57.14,
+          "home_percentage": 75,
+          "away_percentage": 33.33
+        },
+        "o2": {
+          "total": 2,
+          "home": 2,
+          "away": 0,
+          "total_percentage": 28.57,
+          "home_percentage": 50,
+          "away_percentage": 0
+        },
+        "o3": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 25,
+          "away_percentage": 0
+        }
+      },
+      "goals_against_over": {
+        "o0": {
+          "total": 3,
+          "home": 1,
+          "away": 2,
+          "total_percentage": 42.86,
+          "home_percentage": 25,
+          "away_percentage": 66.67
+        },
+        "o1": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o2": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o3": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "btts": {
+        "total": 2,
+        "home": 1,
+        "away": 1,
+        "total_percentage": 28.57,
+        "home_percentage": 25,
+        "away_percentage": 33.33
+      },
+      "scored_first": {
+        "total": 4,
+        "home": 3,
+        "away": 1,
+        "total_percentage": 57.14,
+        "home_percentage": 75,
+        "away_percentage": 33.33
+      },
+      "conceded_first": {
+        "total": 3,
+        "home": 1,
+        "away": 2,
+        "total_percentage": 42.86,
+        "home_percentage": 25,
+        "away_percentage": 66.67
+      },
+      "goals_1h": {
+        "total": 7,
+        "home": 5,
+        "away": 2,
+        "total_avg": 1,
+        "home_avg": 1.25,
+        "away_avg": 0.67
+      },
+      "goals_2h": {
+        "total": 10,
+        "home": 7,
+        "away": 3,
+        "total_avg": 1.43,
+        "home_avg": 1.75,
+        "away_avg": 1
+      },
+      "goals_for_1h": {
+        "total": 5,
+        "home": 4,
+        "away": 1,
+        "total_avg": 0.71,
+        "home_avg": 1,
+        "away_avg": 0.33
+      },
+      "goals_for_2h": {
+        "total": 9,
+        "home": 7,
+        "away": 2,
+        "total_avg": 1.29,
+        "home_avg": 1.75,
+        "away_avg": 0.67
+      },
+      "goals_against_1h": {
+        "total": 2,
+        "home": 1,
+        "away": 1,
+        "total_avg": 0.29,
+        "home_avg": 0.25,
+        "away_avg": 0.33
+      },
+      "goals_against_2h": {
+        "total": 1,
+        "home": 0,
+        "away": 1,
+        "total_avg": 0.14,
+        "home_avg": 0,
+        "away_avg": 0.33
+      },
+      "goals_1h_over": {
+        "o0": {
+          "total": 6,
+          "home": 4,
+          "away": 2,
+          "total_percentage": 85.71,
+          "home_percentage": 100,
+          "away_percentage": 66.67
+        },
+        "o1": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 25,
+          "away_percentage": 0
+        },
+        "o2": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o3": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "goals_2h_over": {
+        "o0": {
+          "total": 6,
+          "home": 4,
+          "away": 2,
+          "total_percentage": 85.71,
+          "home_percentage": 100,
+          "away_percentage": 66.67
+        },
+        "o1": {
+          "total": 3,
+          "home": 2,
+          "away": 1,
+          "total_percentage": 42.86,
+          "home_percentage": 50,
+          "away_percentage": 33.33
+        },
+        "o2": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 25,
+          "away_percentage": 0
+        },
+        "o3": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "goals_for_1h_over": {
+        "o0": {
+          "total": 4,
+          "home": 3,
+          "away": 1,
+          "total_percentage": 57.14,
+          "home_percentage": 75,
+          "away_percentage": 33.33
+        },
+        "o1": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 25,
+          "away_percentage": 0
+        },
+        "o2": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o3": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "goals_for_2h_over": {
+        "o0": {
+          "total": 5,
+          "home": 4,
+          "away": 1,
+          "total_percentage": 71.43,
+          "home_percentage": 100,
+          "away_percentage": 33.33
+        },
+        "o1": {
+          "total": 3,
+          "home": 2,
+          "away": 1,
+          "total_percentage": 42.86,
+          "home_percentage": 50,
+          "away_percentage": 33.33
+        },
+        "o2": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 25,
+          "away_percentage": 0
+        },
+        "o3": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "goals_against_2h_over": {
+        "o0": {
+          "total": 1,
+          "home": 0,
+          "away": 1,
+          "total_percentage": 14.29,
+          "home_percentage": 0,
+          "away_percentage": 33.33
+        },
+        "o1": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o2": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o3": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "btts_1h": {
+        "total": 0,
+        "home": 0,
+        "away": 0,
+        "total_percentage": 0,
+        "home_percentage": 0,
+        "away_percentage": 0
+      },
+      "btts_2h": {
+        "total": 0,
+        "home": 0,
+        "away": 0,
+        "total_percentage": 0,
+        "home_percentage": 0,
+        "away_percentage": 0
+      },
+      "most_goals_1h": {
+        "total": 1,
+        "home": 0,
+        "away": 1,
+        "total_percentage": 14.29,
+        "home_percentage": 0,
+        "away_percentage": 33.33
+      },
+      "most_goals_2h": {
+        "total": 4,
+        "home": 2,
+        "away": 2,
+        "total_percentage": 57.14,
+        "home_percentage": 50,
+        "away_percentage": 66.67
+      },
+      "most_goals_tie": {
+        "total": 2,
+        "home": 2,
+        "away": 0,
+        "total_percentage": 28.57,
+        "home_percentage": 50,
+        "away_percentage": 0
+      },
+      "fouls_total": {
+        "total": 150,
+        "home": 87,
+        "away": 63,
+        "total_avg": 21.43,
+        "home_avg": 21.75,
+        "away_avg": 21
+      },
+      "fouls_won": {
+        "total": 79,
+        "home": 41,
+        "away": 38,
+        "total_avg": 11.29,
+        "home_avg": 10.25,
+        "away_avg": 12.67
+      },
+      "fouls_committed": {
+        "total": 71,
+        "home": 46,
+        "away": 25,
+        "total_avg": 10.14,
+        "home_avg": 11.5,
+        "away_avg": 8.33
+      },
+      "yellow_cards_total": {
+        "total": 21,
+        "home": 9,
+        "away": 12,
+        "total_avg": 3,
+        "home_avg": 2.25,
+        "away_avg": 4
+      },
+      "yellow_cards_for": {
+        "total": 9,
+        "home": 2,
+        "away": 7,
+        "total_avg": 1.29,
+        "home_avg": 0.5,
+        "away_avg": 2.33
+      },
+      "yellow_cards_opponent": {
+        "total": 12,
+        "home": 7,
+        "away": 5,
+        "total_avg": 1.71,
+        "home_avg": 1.75,
+        "away_avg": 1.67
+      },
+      "red_cards_total": {
+        "total": 0,
+        "home": 0,
+        "away": 0,
+        "total_avg": 0,
+        "home_avg": 0,
+        "away_avg": 0
+      },
+      "red_cards_for": {
+        "total": 0,
+        "home": 0,
+        "away": 0,
+        "total_avg": 0,
+        "home_avg": 0,
+        "away_avg": 0
+      },
+      "red_cards_opponent": {
+        "total": 0,
+        "home": 0,
+        "away": 0,
+        "total_avg": 0,
+        "home_avg": 0,
+        "away_avg": 0
+      },
+      "cards_over": {
+        "o0": {
+          "total": 7,
+          "home": 4,
+          "away": 3,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "o1": {
+          "total": 7,
+          "home": 4,
+          "away": 3,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "o2": {
+          "total": 4,
+          "home": 1,
+          "away": 3,
+          "total_percentage": 57.14,
+          "home_percentage": 25,
+          "away_percentage": 100
+        },
+        "o3": {
+          "total": 2,
+          "home": 0,
+          "away": 2,
+          "total_percentage": 28.57,
+          "home_percentage": 0,
+          "away_percentage": 66.67
+        },
+        "o4": {
+          "total": 1,
+          "home": 0,
+          "away": 1,
+          "total_percentage": 14.29,
+          "home_percentage": 0,
+          "away_percentage": 33.33
+        },
+        "o5": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o6": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "corners_total": {
+        "total": 75,
+        "home": 38,
+        "away": 37,
+        "total_avg": 10.71,
+        "home_avg": 9.5,
+        "away_avg": 12.33
+      },
+      "corners_for": {
+        "total": 53,
+        "home": 29,
+        "away": 24,
+        "total_avg": 7.57,
+        "home_avg": 7.25,
+        "away_avg": 8
+      },
+      "corners_against": {
+        "total": 22,
+        "home": 9,
+        "away": 13,
+        "total_avg": 3.14,
+        "home_avg": 2.25,
+        "away_avg": 4.33
+      },
+      "corners_over": {
+        "o5": {
+          "total": 6,
+          "home": 3,
+          "away": 3,
+          "total_percentage": 85.71,
+          "home_percentage": 75,
+          "away_percentage": 100
+        },
+        "o6": {
+          "total": 6,
+          "home": 3,
+          "away": 3,
+          "total_percentage": 85.71,
+          "home_percentage": 75,
+          "away_percentage": 100
+        },
+        "o7": {
+          "total": 5,
+          "home": 3,
+          "away": 2,
+          "total_percentage": 71.43,
+          "home_percentage": 75,
+          "away_percentage": 66.67
+        },
+        "o8": {
+          "total": 5,
+          "home": 3,
+          "away": 2,
+          "total_percentage": 71.43,
+          "home_percentage": 75,
+          "away_percentage": 66.67
+        },
+        "o9": {
+          "total": 5,
+          "home": 3,
+          "away": 2,
+          "total_percentage": 71.43,
+          "home_percentage": 75,
+          "away_percentage": 66.67
+        },
+        "o10": {
+          "total": 5,
+          "home": 3,
+          "away": 2,
+          "total_percentage": 71.43,
+          "home_percentage": 75,
+          "away_percentage": 66.67
+        },
+        "o11": {
+          "total": 2,
+          "home": 1,
+          "away": 1,
+          "total_percentage": 28.57,
+          "home_percentage": 25,
+          "away_percentage": 33.33
+        },
+        "o12": {
+          "total": 1,
+          "home": 0,
+          "away": 1,
+          "total_percentage": 14.29,
+          "home_percentage": 0,
+          "away_percentage": 33.33
+        }
+      },
+      "corners_for_over": {
+        "o4": {
+          "total": 5,
+          "home": 3,
+          "away": 2,
+          "total_percentage": 71.43,
+          "home_percentage": 75,
+          "away_percentage": 66.67
+        },
+        "o5": {
+          "total": 5,
+          "home": 3,
+          "away": 2,
+          "total_percentage": 71.43,
+          "home_percentage": 75,
+          "away_percentage": 66.67
+        },
+        "o6": {
+          "total": 5,
+          "home": 3,
+          "away": 2,
+          "total_percentage": 71.43,
+          "home_percentage": 75,
+          "away_percentage": 66.67
+        },
+        "o7": {
+          "total": 5,
+          "home": 3,
+          "away": 2,
+          "total_percentage": 71.43,
+          "home_percentage": 75,
+          "away_percentage": 66.67
+        },
+        "o8": {
+          "total": 2,
+          "home": 1,
+          "away": 1,
+          "total_percentage": 28.57,
+          "home_percentage": 25,
+          "away_percentage": 33.33
+        },
+        "o9": {
+          "total": 2,
+          "home": 1,
+          "away": 1,
+          "total_percentage": 28.57,
+          "home_percentage": 25,
+          "away_percentage": 33.33
+        },
+        "o10": {
+          "total": 2,
+          "home": 1,
+          "away": 1,
+          "total_percentage": 28.57,
+          "home_percentage": 25,
+          "away_percentage": 33.33
+        },
+        "o11": {
+          "total": 1,
+          "home": 0,
+          "away": 1,
+          "total_percentage": 14.29,
+          "home_percentage": 0,
+          "away_percentage": 33.33
+        },
+        "o12": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "corners_against_over": {
+        "o4": {
+          "total": 1,
+          "home": 0,
+          "away": 1,
+          "total_percentage": 14.29,
+          "home_percentage": 0,
+          "away_percentage": 33.33
+        },
+        "o5": {
+          "total": 1,
+          "home": 0,
+          "away": 1,
+          "total_percentage": 14.29,
+          "home_percentage": 0,
+          "away_percentage": 33.33
+        },
+        "o6": {
+          "total": 1,
+          "home": 0,
+          "away": 1,
+          "total_percentage": 14.29,
+          "home_percentage": 0,
+          "away_percentage": 33.33
+        },
+        "o7": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o8": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o9": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o10": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o11": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o12": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "tackles_total": {
+        "total": 218,
+        "home": 128,
+        "away": 90,
+        "total_avg": 31.14,
+        "home_avg": 32,
+        "away_avg": 30
+      },
+      "tackles_for": {
+        "total": 113,
+        "home": 68,
+        "away": 45,
+        "total_avg": 16.14,
+        "home_avg": 17,
+        "away_avg": 15
+      },
+      "tackles_opponent": {
+        "total": 105,
+        "home": 60,
+        "away": 45,
+        "total_avg": 15,
+        "home_avg": 15,
+        "away_avg": 15
+      },
+      "offsides_total": {
+        "total": 15,
+        "home": 10,
+        "away": 5,
+        "total_avg": 2.14,
+        "home_avg": 2.5,
+        "away_avg": 1.67
+      },
+      "offsides_for": {
+        "total": 9,
+        "home": 7,
+        "away": 2,
+        "total_avg": 1.29,
+        "home_avg": 1.75,
+        "away_avg": 0.67
+      },
+      "offsides_opponent": {
+        "total": 6,
+        "home": 3,
+        "away": 3,
+        "total_avg": 0.86,
+        "home_avg": 0.75,
+        "away_avg": 1
+      },
+      "goal_kicks_total": {
+        "total": 87,
+        "home": 51,
+        "away": 36,
+        "total_avg": 12.43,
+        "home_avg": 12.75,
+        "away_avg": 12
+      },
+      "goal_kicks_for": {
+        "total": 30,
+        "home": 13,
+        "away": 17,
+        "total_avg": 4.29,
+        "home_avg": 3.25,
+        "away_avg": 5.67
+      },
+      "goal_kicks_opponent": {
+        "total": 57,
+        "home": 38,
+        "away": 19,
+        "total_avg": 8.14,
+        "home_avg": 9.5,
+        "away_avg": 6.33
+      },
+      "throw_ins_total": {
+        "total": 265,
+        "home": 155,
+        "away": 110,
+        "total_avg": 37.86,
+        "home_avg": 38.75,
+        "away_avg": 36.67
+      },
+      "throw_ins_for": {
+        "total": 126,
+        "home": 76,
+        "away": 50,
+        "total_avg": 18,
+        "home_avg": 19,
+        "away_avg": 16.67
+      },
+      "throw_ins_opponent": {
+        "total": 139,
+        "home": 79,
+        "away": 60,
+        "total_avg": 19.86,
+        "home_avg": 19.75,
+        "away_avg": 20
+      },
+      "xg_total": {
+        "total": 18.9796,
+        "home": 11.7303,
+        "away": 7.2493,
+        "total_avg": 2.71,
+        "home_avg": 2.93,
+        "away_avg": 2.42
+      },
+      "xg_for": {
+        "total": 13.7513,
+        "home": 9.8215,
+        "away": 3.9298,
+        "total_avg": 1.96,
+        "home_avg": 2.46,
+        "away_avg": 1.31
+      },
+      "xg_against": {
+        "total": 5.2283,
+        "home": 1.9088,
+        "away": 3.3194999999999997,
+        "total_avg": 0.75,
+        "home_avg": 0.48,
+        "away_avg": 1.11
+      },
+      "shots_total": {
+        "total": 163,
+        "home": 84,
+        "away": 79,
+        "total_avg": 23.29,
+        "home_avg": 21,
+        "away_avg": 26.33
+      },
+      "shots_for": {
+        "total": 107,
+        "home": 67,
+        "away": 40,
+        "total_avg": 15.29,
+        "home_avg": 16.75,
+        "away_avg": 13.33
+      },
+      "shots_against": {
+        "total": 56,
+        "home": 17,
+        "away": 39,
+        "total_avg": 8,
+        "home_avg": 4.25,
+        "away_avg": 13
+      },
+      "shots_on_total": {
+        "total": 47,
+        "home": 23,
+        "away": 24,
+        "total_avg": 6.71,
+        "home_avg": 5.75,
+        "away_avg": 8
+      },
+      "shots_on_for": {
+        "total": 29,
+        "home": 18,
+        "away": 11,
+        "total_avg": 4.14,
+        "home_avg": 4.5,
+        "away_avg": 3.67
+      },
+      "shots_on_against": {
+        "total": 18,
+        "home": 5,
+        "away": 13,
+        "total_avg": 2.57,
+        "home_avg": 1.25,
+        "away_avg": 4.33
+      },
+      "most_cards": {
+        "total": 1,
+        "home": 0,
+        "away": 1,
+        "total_percentage": 14.29,
+        "home_percentage": 0,
+        "away_percentage": 33.33
+      },
+      "most_corners": {
+        "total": 6,
+        "home": 3,
+        "away": 3,
+        "total_percentage": 85.71,
+        "home_percentage": 75,
+        "away_percentage": 100
+      },
+      "most_shots": {
+        "total": 6,
+        "home": 4,
+        "away": 2,
+        "total_percentage": 85.71,
+        "home_percentage": 100,
+        "away_percentage": 66.67
+      },
+      "most_shots_on": {
+        "total": 4,
+        "home": 3,
+        "away": 1,
+        "total_percentage": 57.14,
+        "home_percentage": 75,
+        "away_percentage": 33.33
+      },
+      "most_xg": {
+        "total": 5,
+        "home": 4,
+        "away": 1,
+        "total_percentage": 71.43,
+        "home_percentage": 100,
+        "away_percentage": 33.33
+      },
+      "coverage": {
+        "xg": {
+          "total": 7,
+          "home": 4,
+          "away": 3,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "ht_score": {
+          "total": 7,
+          "home": 4,
+          "away": 3,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "goal_timings": {
+          "total": 7,
+          "home": 4,
+          "away": 3,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "card_data": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "corner_data": {
+          "total": 7,
+          "home": 4,
+          "away": 3,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "shots_data": {
+          "total": 7,
+          "home": 4,
+          "away": 3,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "tackles_data": {
+          "total": 7,
+          "home": 4,
+          "away": 3,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "offsides_data": {
+          "total": 6,
+          "home": 3,
+          "away": 3,
+          "total_percentage": 85.71,
+          "home_percentage": 75,
+          "away_percentage": 100
+        },
+        "goal_kicks_data": {
+          "total": 7,
+          "home": 4,
+          "away": 3,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "throw_ins_data": {
+          "total": 7,
+          "home": 4,
+          "away": 3,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        }
+      }
+    },
+    {
+      "team_id": 10719,
+      "fixture_id": null,
+      "season_id": 667780,
+      "name": "Fulham",
+      "played": {
+        "total": 7,
+        "home": 3,
+        "away": 4
+      },
+      "won": {
+        "total": 2,
+        "home": 2,
+        "away": 0,
+        "total_percentage": 28.57,
+        "home_percentage": 66.67,
+        "away_percentage": 0
+      },
+      "drawn": {
+        "total": 2,
+        "home": 1,
+        "away": 1,
+        "total_percentage": 28.57,
+        "home_percentage": 33.33,
+        "away_percentage": 25
+      },
+      "lost": {
+        "total": 3,
+        "home": 0,
+        "away": 3,
+        "total_percentage": 42.86,
+        "home_percentage": 0,
+        "away_percentage": 75
+      },
+      "points": {
+        "total": 8,
+        "home": 7,
+        "away": 1,
+        "total_avg": 1.14,
+        "home_avg": 2.33,
+        "away_avg": 0.25
+      },
+      "goals_total": {
+        "total": 19,
+        "home": 7,
+        "away": 12,
+        "total_avg": 2.71,
+        "home_avg": 2.33,
+        "away_avg": 3
+      },
+      "goals_for": {
+        "total": 8,
+        "home": 5,
+        "away": 3,
+        "total_avg": 1.14,
+        "home_avg": 1.67,
+        "away_avg": 0.75
+      },
+      "goals_against": {
+        "total": 11,
+        "home": 2,
+        "away": 9,
+        "total_avg": 1.57,
+        "home_avg": 0.67,
+        "away_avg": 2.25
+      },
+      "goals_difference": {
+        "total": -3,
+        "home": 3,
+        "away": -6
+      },
+      "goals_over": {
+        "o0": {
+          "total": 7,
+          "home": 3,
+          "away": 4,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "o1": {
+          "total": 6,
+          "home": 2,
+          "away": 4,
+          "total_percentage": 85.71,
+          "home_percentage": 66.67,
+          "away_percentage": 100
+        },
+        "o2": {
+          "total": 3,
+          "home": 1,
+          "away": 2,
+          "total_percentage": 42.86,
+          "home_percentage": 33.33,
+          "away_percentage": 50
+        },
+        "o3": {
+          "total": 3,
+          "home": 1,
+          "away": 2,
+          "total_percentage": 42.86,
+          "home_percentage": 33.33,
+          "away_percentage": 50
+        }
+      },
+      "goals_for_over": {
+        "o0": {
+          "total": 6,
+          "home": 3,
+          "away": 3,
+          "total_percentage": 85.71,
+          "home_percentage": 100,
+          "away_percentage": 75
+        },
+        "o1": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 33.33,
+          "away_percentage": 0
+        },
+        "o2": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 33.33,
+          "away_percentage": 0
+        },
+        "o3": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "goals_against_over": {
+        "o0": {
+          "total": 6,
+          "home": 2,
+          "away": 4,
+          "total_percentage": 85.71,
+          "home_percentage": 66.67,
+          "away_percentage": 100
+        },
+        "o1": {
+          "total": 3,
+          "home": 0,
+          "away": 3,
+          "total_percentage": 42.86,
+          "home_percentage": 0,
+          "away_percentage": 75
+        },
+        "o2": {
+          "total": 2,
+          "home": 0,
+          "away": 2,
+          "total_percentage": 28.57,
+          "home_percentage": 0,
+          "away_percentage": 50
+        },
+        "o3": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "btts": {
+        "total": 5,
+        "home": 2,
+        "away": 3,
+        "total_percentage": 71.43,
+        "home_percentage": 66.67,
+        "away_percentage": 75
+      },
+      "scored_first": {
+        "total": 3,
+        "home": 1,
+        "away": 2,
+        "total_percentage": 42.86,
+        "home_percentage": 33.33,
+        "away_percentage": 50
+      },
+      "conceded_first": {
+        "total": 4,
+        "home": 2,
+        "away": 2,
+        "total_percentage": 57.14,
+        "home_percentage": 66.67,
+        "away_percentage": 50
+      },
+      "goals_1h": {
+        "total": 6,
+        "home": 3,
+        "away": 3,
+        "total_avg": 0.86,
+        "home_avg": 1,
+        "away_avg": 0.75
+      },
+      "goals_2h": {
+        "total": 13,
+        "home": 4,
+        "away": 9,
+        "total_avg": 1.86,
+        "home_avg": 1.33,
+        "away_avg": 2.25
+      },
+      "goals_for_1h": {
+        "total": 3,
+        "home": 2,
+        "away": 1,
+        "total_avg": 0.43,
+        "home_avg": 0.67,
+        "away_avg": 0.25
+      },
+      "goals_for_2h": {
+        "total": 5,
+        "home": 3,
+        "away": 2,
+        "total_avg": 0.71,
+        "home_avg": 1,
+        "away_avg": 0.5
+      },
+      "goals_against_1h": {
+        "total": 3,
+        "home": 1,
+        "away": 2,
+        "total_avg": 0.43,
+        "home_avg": 0.33,
+        "away_avg": 0.5
+      },
+      "goals_against_2h": {
+        "total": 8,
+        "home": 1,
+        "away": 7,
+        "total_avg": 1.14,
+        "home_avg": 0.33,
+        "away_avg": 1.75
+      },
+      "goals_1h_over": {
+        "o0": {
+          "total": 3,
+          "home": 1,
+          "away": 2,
+          "total_percentage": 42.86,
+          "home_percentage": 33.33,
+          "away_percentage": 50
+        },
+        "o1": {
+          "total": 2,
+          "home": 1,
+          "away": 1,
+          "total_percentage": 28.57,
+          "home_percentage": 33.33,
+          "away_percentage": 25
+        },
+        "o2": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 33.33,
+          "away_percentage": 0
+        },
+        "o3": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "goals_2h_over": {
+        "o0": {
+          "total": 7,
+          "home": 3,
+          "away": 4,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "o1": {
+          "total": 4,
+          "home": 1,
+          "away": 3,
+          "total_percentage": 57.14,
+          "home_percentage": 33.33,
+          "away_percentage": 75
+        },
+        "o2": {
+          "total": 1,
+          "home": 0,
+          "away": 1,
+          "total_percentage": 14.29,
+          "home_percentage": 0,
+          "away_percentage": 25
+        },
+        "o3": {
+          "total": 1,
+          "home": 0,
+          "away": 1,
+          "total_percentage": 14.29,
+          "home_percentage": 0,
+          "away_percentage": 25
+        }
+      },
+      "goals_for_1h_over": {
+        "o0": {
+          "total": 2,
+          "home": 1,
+          "away": 1,
+          "total_percentage": 28.57,
+          "home_percentage": 33.33,
+          "away_percentage": 25
+        },
+        "o1": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 33.33,
+          "away_percentage": 0
+        },
+        "o2": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o3": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "goals_for_2h_over": {
+        "o0": {
+          "total": 5,
+          "home": 3,
+          "away": 2,
+          "total_percentage": 71.43,
+          "home_percentage": 100,
+          "away_percentage": 50
+        },
+        "o1": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o2": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o3": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "goals_against_2h_over": {
+        "o0": {
+          "total": 5,
+          "home": 1,
+          "away": 4,
+          "total_percentage": 71.43,
+          "home_percentage": 33.33,
+          "away_percentage": 100
+        },
+        "o1": {
+          "total": 2,
+          "home": 0,
+          "away": 2,
+          "total_percentage": 28.57,
+          "home_percentage": 0,
+          "away_percentage": 50
+        },
+        "o2": {
+          "total": 1,
+          "home": 0,
+          "away": 1,
+          "total_percentage": 14.29,
+          "home_percentage": 0,
+          "away_percentage": 25
+        },
+        "o3": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "btts_1h": {
+        "total": 2,
+        "home": 1,
+        "away": 1,
+        "total_percentage": 28.57,
+        "home_percentage": 33.33,
+        "away_percentage": 25
+      },
+      "btts_2h": {
+        "total": 3,
+        "home": 1,
+        "away": 2,
+        "total_percentage": 42.86,
+        "home_percentage": 33.33,
+        "away_percentage": 50
+      },
+      "most_goals_1h": {
+        "total": 1,
+        "home": 1,
+        "away": 0,
+        "total_percentage": 14.29,
+        "home_percentage": 33.33,
+        "away_percentage": 0
+      },
+      "most_goals_2h": {
+        "total": 4,
+        "home": 2,
+        "away": 2,
+        "total_percentage": 57.14,
+        "home_percentage": 66.67,
+        "away_percentage": 50
+      },
+      "most_goals_tie": {
+        "total": 2,
+        "home": 0,
+        "away": 2,
+        "total_percentage": 28.57,
+        "home_percentage": 0,
+        "away_percentage": 50
+      },
+      "fouls_total": {
+        "total": 181,
+        "home": 81,
+        "away": 100,
+        "total_avg": 25.86,
+        "home_avg": 27,
+        "away_avg": 25
+      },
+      "fouls_won": {
+        "total": 98,
+        "home": 43,
+        "away": 55,
+        "total_avg": 14,
+        "home_avg": 14.33,
+        "away_avg": 13.75
+      },
+      "fouls_committed": {
+        "total": 83,
+        "home": 38,
+        "away": 45,
+        "total_avg": 11.86,
+        "home_avg": 12.67,
+        "away_avg": 11.25
+      },
+      "yellow_cards_total": {
+        "total": 26,
+        "home": 10,
+        "away": 16,
+        "total_avg": 3.71,
+        "home_avg": 3.33,
+        "away_avg": 4
+      },
+      "yellow_cards_for": {
+        "total": 16,
+        "home": 6,
+        "away": 10,
+        "total_avg": 2.29,
+        "home_avg": 2,
+        "away_avg": 2.5
+      },
+      "yellow_cards_opponent": {
+        "total": 10,
+        "home": 4,
+        "away": 6,
+        "total_avg": 1.43,
+        "home_avg": 1.33,
+        "away_avg": 1.5
+      },
+      "red_cards_total": {
+        "total": 0,
+        "home": 0,
+        "away": 0,
+        "total_avg": 0,
+        "home_avg": 0,
+        "away_avg": 0
+      },
+      "red_cards_for": {
+        "total": 0,
+        "home": 0,
+        "away": 0,
+        "total_avg": 0,
+        "home_avg": 0,
+        "away_avg": 0
+      },
+      "red_cards_opponent": {
+        "total": 0,
+        "home": 0,
+        "away": 0,
+        "total_avg": 0,
+        "home_avg": 0,
+        "away_avg": 0
+      },
+      "cards_over": {
+        "o0": {
+          "total": 7,
+          "home": 3,
+          "away": 4,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "o1": {
+          "total": 6,
+          "home": 3,
+          "away": 3,
+          "total_percentage": 85.71,
+          "home_percentage": 100,
+          "away_percentage": 75
+        },
+        "o2": {
+          "total": 5,
+          "home": 2,
+          "away": 3,
+          "total_percentage": 71.43,
+          "home_percentage": 66.67,
+          "away_percentage": 75
+        },
+        "o3": {
+          "total": 4,
+          "home": 1,
+          "away": 3,
+          "total_percentage": 57.14,
+          "home_percentage": 33.33,
+          "away_percentage": 75
+        },
+        "o4": {
+          "total": 3,
+          "home": 1,
+          "away": 2,
+          "total_percentage": 42.86,
+          "home_percentage": 33.33,
+          "away_percentage": 50
+        },
+        "o5": {
+          "total": 1,
+          "home": 0,
+          "away": 1,
+          "total_percentage": 14.29,
+          "home_percentage": 0,
+          "away_percentage": 25
+        },
+        "o6": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "corners_total": {
+        "total": 67,
+        "home": 33,
+        "away": 34,
+        "total_avg": 9.57,
+        "home_avg": 11,
+        "away_avg": 8.5
+      },
+      "corners_for": {
+        "total": 32,
+        "home": 14,
+        "away": 18,
+        "total_avg": 4.57,
+        "home_avg": 4.67,
+        "away_avg": 4.5
+      },
+      "corners_against": {
+        "total": 35,
+        "home": 19,
+        "away": 16,
+        "total_avg": 5,
+        "home_avg": 6.33,
+        "away_avg": 4
+      },
+      "corners_over": {
+        "o5": {
+          "total": 7,
+          "home": 3,
+          "away": 4,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "o6": {
+          "total": 6,
+          "home": 2,
+          "away": 4,
+          "total_percentage": 85.71,
+          "home_percentage": 66.67,
+          "away_percentage": 100
+        },
+        "o7": {
+          "total": 4,
+          "home": 2,
+          "away": 2,
+          "total_percentage": 57.14,
+          "home_percentage": 66.67,
+          "away_percentage": 50
+        },
+        "o8": {
+          "total": 4,
+          "home": 2,
+          "away": 2,
+          "total_percentage": 57.14,
+          "home_percentage": 66.67,
+          "away_percentage": 50
+        },
+        "o9": {
+          "total": 4,
+          "home": 2,
+          "away": 2,
+          "total_percentage": 57.14,
+          "home_percentage": 66.67,
+          "away_percentage": 50
+        },
+        "o10": {
+          "total": 2,
+          "home": 2,
+          "away": 0,
+          "total_percentage": 28.57,
+          "home_percentage": 66.67,
+          "away_percentage": 0
+        },
+        "o11": {
+          "total": 2,
+          "home": 2,
+          "away": 0,
+          "total_percentage": 28.57,
+          "home_percentage": 66.67,
+          "away_percentage": 0
+        },
+        "o12": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 33.33,
+          "away_percentage": 0
+        }
+      },
+      "corners_for_over": {
+        "o4": {
+          "total": 2,
+          "home": 1,
+          "away": 1,
+          "total_percentage": 28.57,
+          "home_percentage": 33.33,
+          "away_percentage": 25
+        },
+        "o5": {
+          "total": 2,
+          "home": 1,
+          "away": 1,
+          "total_percentage": 28.57,
+          "home_percentage": 33.33,
+          "away_percentage": 25
+        },
+        "o6": {
+          "total": 2,
+          "home": 1,
+          "away": 1,
+          "total_percentage": 28.57,
+          "home_percentage": 33.33,
+          "away_percentage": 25
+        },
+        "o7": {
+          "total": 2,
+          "home": 1,
+          "away": 1,
+          "total_percentage": 28.57,
+          "home_percentage": 33.33,
+          "away_percentage": 25
+        },
+        "o8": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 33.33,
+          "away_percentage": 0
+        },
+        "o9": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o10": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o11": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o12": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "corners_against_over": {
+        "o4": {
+          "total": 3,
+          "home": 2,
+          "away": 1,
+          "total_percentage": 42.86,
+          "home_percentage": 66.67,
+          "away_percentage": 25
+        },
+        "o5": {
+          "total": 3,
+          "home": 2,
+          "away": 1,
+          "total_percentage": 42.86,
+          "home_percentage": 66.67,
+          "away_percentage": 25
+        },
+        "o6": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 33.33,
+          "away_percentage": 0
+        },
+        "o7": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 33.33,
+          "away_percentage": 0
+        },
+        "o8": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 33.33,
+          "away_percentage": 0
+        },
+        "o9": {
+          "total": 1,
+          "home": 1,
+          "away": 0,
+          "total_percentage": 14.29,
+          "home_percentage": 33.33,
+          "away_percentage": 0
+        },
+        "o10": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o11": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "o12": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        }
+      },
+      "tackles_total": {
+        "total": 230,
+        "home": 101,
+        "away": 129,
+        "total_avg": 32.86,
+        "home_avg": 33.67,
+        "away_avg": 32.25
+      },
+      "tackles_for": {
+        "total": 124,
+        "home": 53,
+        "away": 71,
+        "total_avg": 17.71,
+        "home_avg": 17.67,
+        "away_avg": 17.75
+      },
+      "tackles_opponent": {
+        "total": 106,
+        "home": 48,
+        "away": 58,
+        "total_avg": 15.14,
+        "home_avg": 16,
+        "away_avg": 14.5
+      },
+      "offsides_total": {
+        "total": 30,
+        "home": 11,
+        "away": 19,
+        "total_avg": 4.29,
+        "home_avg": 3.67,
+        "away_avg": 4.75
+      },
+      "offsides_for": {
+        "total": 14,
+        "home": 5,
+        "away": 9,
+        "total_avg": 2,
+        "home_avg": 1.67,
+        "away_avg": 2.25
+      },
+      "offsides_opponent": {
+        "total": 16,
+        "home": 6,
+        "away": 10,
+        "total_avg": 2.29,
+        "home_avg": 2,
+        "away_avg": 2.5
+      },
+      "goal_kicks_total": {
+        "total": 108,
+        "home": 42,
+        "away": 66,
+        "total_avg": 15.43,
+        "home_avg": 14,
+        "away_avg": 16.5
+      },
+      "goal_kicks_for": {
+        "total": 57,
+        "home": 21,
+        "away": 36,
+        "total_avg": 8.14,
+        "home_avg": 7,
+        "away_avg": 9
+      },
+      "goal_kicks_opponent": {
+        "total": 51,
+        "home": 21,
+        "away": 30,
+        "total_avg": 7.29,
+        "home_avg": 7,
+        "away_avg": 7.5
+      },
+      "throw_ins_total": {
+        "total": 260,
+        "home": 117,
+        "away": 143,
+        "total_avg": 37.14,
+        "home_avg": 39,
+        "away_avg": 35.75
+      },
+      "throw_ins_for": {
+        "total": 139,
+        "home": 62,
+        "away": 77,
+        "total_avg": 19.86,
+        "home_avg": 20.67,
+        "away_avg": 19.25
+      },
+      "throw_ins_opponent": {
+        "total": 121,
+        "home": 55,
+        "away": 66,
+        "total_avg": 17.29,
+        "home_avg": 18.33,
+        "away_avg": 16.5
+      },
+      "xg_total": {
+        "total": 16.5625,
+        "home": 6.8828,
+        "away": 9.6797,
+        "total_avg": 2.37,
+        "home_avg": 2.29,
+        "away_avg": 2.42
+      },
+      "xg_for": {
+        "total": 7.669999999999999,
+        "home": 3.6873,
+        "away": 3.9827,
+        "total_avg": 1.1,
+        "home_avg": 1.23,
+        "away_avg": 1
+      },
+      "xg_against": {
+        "total": 8.892500000000002,
+        "home": 3.1955,
+        "away": 5.697,
+        "total_avg": 1.27,
+        "home_avg": 1.07,
+        "away_avg": 1.42
+      },
+      "shots_total": {
+        "total": 144,
+        "home": 60,
+        "away": 84,
+        "total_avg": 20.57,
+        "home_avg": 20,
+        "away_avg": 21
+      },
+      "shots_for": {
+        "total": 73,
+        "home": 32,
+        "away": 41,
+        "total_avg": 10.43,
+        "home_avg": 10.67,
+        "away_avg": 10.25
+      },
+      "shots_against": {
+        "total": 71,
+        "home": 28,
+        "away": 43,
+        "total_avg": 10.14,
+        "home_avg": 9.33,
+        "away_avg": 10.75
+      },
+      "shots_on_total": {
+        "total": 52,
+        "home": 19,
+        "away": 33,
+        "total_avg": 7.43,
+        "home_avg": 6.33,
+        "away_avg": 8.25
+      },
+      "shots_on_for": {
+        "total": 23,
+        "home": 10,
+        "away": 13,
+        "total_avg": 3.29,
+        "home_avg": 3.33,
+        "away_avg": 3.25
+      },
+      "shots_on_against": {
+        "total": 29,
+        "home": 9,
+        "away": 20,
+        "total_avg": 4.14,
+        "home_avg": 3,
+        "away_avg": 5
+      },
+      "most_cards": {
+        "total": 3,
+        "home": 1,
+        "away": 2,
+        "total_percentage": 42.86,
+        "home_percentage": 33.33,
+        "away_percentage": 50
+      },
+      "most_corners": {
+        "total": 2,
+        "home": 1,
+        "away": 1,
+        "total_percentage": 28.57,
+        "home_percentage": 33.33,
+        "away_percentage": 25
+      },
+      "most_shots": {
+        "total": 4,
+        "home": 2,
+        "away": 2,
+        "total_percentage": 57.14,
+        "home_percentage": 66.67,
+        "away_percentage": 50
+      },
+      "most_shots_on": {
+        "total": 1,
+        "home": 1,
+        "away": 0,
+        "total_percentage": 14.29,
+        "home_percentage": 33.33,
+        "away_percentage": 0
+      },
+      "most_xg": {
+        "total": 2,
+        "home": 2,
+        "away": 0,
+        "total_percentage": 28.57,
+        "home_percentage": 66.67,
+        "away_percentage": 0
+      },
+      "coverage": {
+        "xg": {
+          "total": 7,
+          "home": 3,
+          "away": 4,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "ht_score": {
+          "total": 7,
+          "home": 3,
+          "away": 4,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "goal_timings": {
+          "total": 7,
+          "home": 3,
+          "away": 4,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "card_data": {
+          "total": 0,
+          "home": 0,
+          "away": 0,
+          "total_percentage": 0,
+          "home_percentage": 0,
+          "away_percentage": 0
+        },
+        "corner_data": {
+          "total": 7,
+          "home": 3,
+          "away": 4,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "shots_data": {
+          "total": 7,
+          "home": 3,
+          "away": 4,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "tackles_data": {
+          "total": 7,
+          "home": 3,
+          "away": 4,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "offsides_data": {
+          "total": 7,
+          "home": 3,
+          "away": 4,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "goal_kicks_data": {
+          "total": 7,
+          "home": 3,
+          "away": 4,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        },
+        "throw_ins_data": {
+          "total": 7,
+          "home": 3,
+          "away": 4,
+          "total_percentage": 100,
+          "home_percentage": 100,
+          "away_percentage": 100
+        }
+      }
+    }
+  ]
+}

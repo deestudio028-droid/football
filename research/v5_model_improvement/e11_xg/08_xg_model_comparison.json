@@ -1,0 +1,194 @@
+{
+  "V4_Baseline_Poisson_GLM": {
+    "accuracy_pct": 53.12,
+    "balanced_accuracy_pct": 46.24,
+    "correct": 3762,
+    "total": 7082,
+    "log_loss": 0.984955,
+    "brier_score": 0.586532,
+    "rps": 0.199598,
+    "macro_f1": 0.3973,
+    "draw_precision_pct": 0.0,
+    "draw_recall_pct": 0.0,
+    "draw_f1": 0.0,
+    "draw_brier": 0.187337,
+    "draw_ece": 0.0207,
+    "ece_by_class": {
+      "H": 0.0164,
+      "D": 0.0207,
+      "A": 0.0262
+    },
+    "metrics_by_class": {
+      "H": {
+        "predicted_count": 4465,
+        "actual_count": 3097,
+        "precision_pct": 55.03,
+        "recall_pct": 79.33,
+        "f1": 0.6498
+      },
+      "D": {
+        "predicted_count": 0,
+        "actual_count": 1788,
+        "precision_pct": 0.0,
+        "recall_pct": 0.0,
+        "f1": 0.0
+      },
+      "A": {
+        "predicted_count": 2617,
+        "actual_count": 2197,
+        "precision_pct": 49.87,
+        "recall_pct": 59.4,
+        "f1": 0.5422
+      }
+    },
+    "mean_probabilities": {
+      "H": 0.4358,
+      "D": 0.2318,
+      "A": 0.3325
+    }
+  },
+  "V4_Plus_xG_Fatigue_Poisson_GLM": {
+    "accuracy_pct": 52.88,
+    "balanced_accuracy_pct": 46.18,
+    "correct": 3745,
+    "total": 7082,
+    "log_loss": 0.986888,
+    "brier_score": 0.58785,
+    "rps": 0.200068,
+    "macro_f1": 0.3964,
+    "draw_precision_pct": 0.0,
+    "draw_recall_pct": 0.0,
+    "draw_f1": 0.0,
+    "draw_brier": 0.187713,
+    "draw_ece": 0.0253,
+    "ece_by_class": {
+      "H": 0.0099,
+      "D": 0.0253,
+      "A": 0.024
+    },
+    "metrics_by_class": {
+      "H": {
+        "predicted_count": 4373,
+        "actual_count": 3097,
+        "precision_pct": 55.18,
+        "recall_pct": 77.91,
+        "f1": 0.6461
+      },
+      "D": {
+        "predicted_count": 0,
+        "actual_count": 1788,
+        "precision_pct": 0.0,
+        "recall_pct": 0.0,
+        "f1": 0.0
+      },
+      "A": {
+        "predicted_count": 2709,
+        "actual_count": 2197,
+        "precision_pct": 49.17,
+        "recall_pct": 60.63,
+        "f1": 0.543
+      }
+    },
+    "mean_probabilities": {
+      "H": 0.4386,
+      "D": 0.2272,
+      "A": 0.3342
+    }
+  },
+  "V4_Plus_E10_Plus_xG_Dixon_Coles": {
+    "accuracy_pct": 52.88,
+    "balanced_accuracy_pct": 46.18,
+    "correct": 3745,
+    "total": 7082,
+    "log_loss": 0.985179,
+    "brier_score": 0.587029,
+    "rps": 0.199931,
+    "macro_f1": 0.3964,
+    "draw_precision_pct": 0.0,
+    "draw_recall_pct": 0.0,
+    "draw_f1": 0.0,
+    "draw_brier": 0.187167,
+    "draw_ece": 0.0104,
+    "ece_by_class": {
+      "H": 0.0113,
+      "D": 0.0104,
+      "A": 0.0176
+    },
+    "metrics_by_class": {
+      "H": {
+        "predicted_count": 4373,
+        "actual_count": 3097,
+        "precision_pct": 55.18,
+        "recall_pct": 77.91,
+        "f1": 0.6461
+      },
+      "D": {
+        "predicted_count": 0,
+        "actual_count": 1788,
+        "precision_pct": 0.0,
+        "recall_pct": 0.0,
+        "f1": 0.0
+      },
+      "A": {
+        "predicted_count": 2709,
+        "actual_count": 2197,
+        "precision_pct": 49.17,
+        "recall_pct": 60.63,
+        "f1": 0.543
+      }
+    },
+    "mean_probabilities": {
+      "H": 0.4301,
+      "D": 0.2443,
+      "A": 0.3257
+    }
+  },
+  "LightGBM_Dual_Poisson_Regressor": {
+    "accuracy_pct": 52.87,
+    "balanced_accuracy_pct": 45.9,
+    "correct": 3744,
+    "total": 7082,
+    "log_loss": 0.990024,
+    "brier_score": 0.590174,
+    "rps": 0.201516,
+    "macro_f1": 0.3945,
+    "draw_precision_pct": 0.0,
+    "draw_recall_pct": 0.0,
+    "draw_f1": 0.0,
+    "draw_brier": 0.187143,
+    "draw_ece": 0.0078,
+    "ece_by_class": {
+      "H": 0.0287,
+      "D": 0.0078,
+      "A": 0.0245
+    },
+    "metrics_by_class": {
+      "H": {
+        "predicted_count": 4530,
+        "actual_count": 3097,
+        "precision_pct": 54.61,
+        "recall_pct": 79.88,
+        "f1": 0.6487
+      },
+      "D": {
+        "predicted_count": 0,
+        "actual_count": 1788,
+        "precision_pct": 0.0,
+        "recall_pct": 0.0,
+        "f1": 0.0
+      },
+      "A": {
+        "predicted_count": 2552,
+        "actual_count": 2197,
+        "precision_pct": 49.76,
+        "recall_pct": 57.81,
+        "f1": 0.5348
+      }
+    },
+    "mean_probabilities": {
+      "H": 0.4301,
+      "D": 0.2519,
+      "A": 0.3179
+    }
+  }
+}

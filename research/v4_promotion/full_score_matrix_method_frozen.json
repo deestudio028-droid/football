@@ -1,0 +1,44 @@
+{
+  "frozen_at": "2026-08-21T05:28:58.764083+00:00",
+  "protocol_version": "1.0",
+  "training_scope": "2020/2021 through 2024/2025 (n=8,983 fixtures)",
+  "oos_holdout_scope": "2025/2026 quarantined",
+  "primary_candidate": {
+    "name": "Candidate_E_Hybrid_DixonColes_Elo",
+    "description": "Joint score matrix model combining Dixon-Coles bivariate tau tensor with linear Elo modulation rho(|Delta Elo|)",
+    "formula": "P(x,y) = P_Poisson(x,y) * tau(x,y; rho(abs_elo)), where rho(abs_elo) = r0 + r1 * (|Delta Elo| / 100)",
+    "coefficients": {
+      "r0_intercept": -0.083933,
+      "r1_elo_slope": 0.020378
+    },
+    "grid_size_K": 12
+  },
+  "secondary_candidate": {
+    "name": "Candidate_G_Regularized_LogLinear_ScoreCell",
+    "description": "L2-regularized log-linear score cell offsets on 3x3 low-score matrix",
+    "l2_regularization": 50.0,
+    "theta_matrix_3x3": [
+      [
+        0.036372,
+        -0.080091,
+        0.016167
+      ],
+      [
+        -0.00083,
+        0.125215,
+        0.00803
+      ],
+      [
+        -0.051223,
+        0.031039,
+        0.101628
+      ]
+    ],
+    "grid_size_K": 12
+  },
+  "safety_constraints": {
+    "score_grid_K": 12,
+    "tail_tolerance": 1e-12,
+    "row_sum_tolerance": 1e-09
+  }
+}

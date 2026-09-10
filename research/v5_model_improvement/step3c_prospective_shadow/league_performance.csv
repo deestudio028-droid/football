@@ -1,0 +1,5 @@
+league,match_count,v40_accuracy_pct,candidate_accuracy_pct,v40_log_loss,candidate_log_loss,actual_draw_rate_pct,mean_candidate_p_D
+Ligue 1,9,55.56,55.56,1.0188,0.987,44.44,0.2677
+Premier League,9,55.56,55.56,0.9061,0.9784,11.11,0.2658
+La Liga,7,57.14,57.14,0.9693,0.9877,28.57,0.2664
+Serie A,8,75.0,75.0,0.8494,0.8783,12.5,0.2671

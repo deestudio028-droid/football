@@ -1,0 +1,7 @@
+archetype,home_team,away_team,league,p_Home,p_Draw,p_Away,v4_decision,draw_risk_score,draw_risk_tier,runs_tested,is_deterministic,status
+Strong Home Favorite,Manchester City,Luton Town,Premier League,0.798,0.104,0.098,H,0.0,LOW,5,True,PASS
+Strong Away Favorite,Elche,FC Barcelona,La Liga,0.243,0.213,0.544,A,0.1477,LOW,5,True,PASS
+Balanced Derby Matchup,Real Betis,Sevilla,La Liga,0.494,0.229,0.277,H,0.2452,LOW,5,True,PASS
+High Draw Risk Match,Nice,Lorient,Ligue 1,0.393,0.266,0.341,H,0.6991,HIGH,5,True,PASS
+Critical Draw Risk Match,Torino,AC Milan,Serie A,0.362,0.271,0.367,A,0.8046,CRITICAL,5,True,PASS
+Historical Competitive Clash,Inter,Juventus,Serie A,0.493,0.228,0.28,H,0.2421,LOW,5,True,PASS

@@ -1,0 +1,8 @@
+{
+  "mean_parameter_variance_home": 0.1239,
+  "mean_parameter_variance_away": 0.1239,
+  "mean_prediction_entropy_e10": 0.997,
+  "mean_prediction_entropy_e13_unc": 1.0093,
+  "sharpness_e10": 0.5137,
+  "sharpness_e13_unc": 0.5043
+}

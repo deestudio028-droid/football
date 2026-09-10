@@ -1,0 +1,73 @@
+{
+  "candidate_id": "v4_0_draw_probability_refinement_step2c",
+  "candidate_version": "v1.0-step2c-feature-aware-logistic",
+  "category": "Continuous Probability Calibrator",
+  "methodology": "Feature-Aware Regularized Logistic Regression with Proportional Odds Redistribution",
+  "input_features": [
+    "v4_p_D",
+    "prob_gap",
+    "lambda_total",
+    "lambda_gap",
+    "abs_elo_diff",
+    "p_dc_draw",
+    "p_00",
+    "p_11",
+    "p_low_score",
+    "p_score_draw",
+    "ad_balance"
+  ],
+  "parameters": {
+    "model_type": "LogisticRegression",
+    "C": 0.1,
+    "solver": "lbfgs",
+    "weights": [
+      -0.09571119103602957,
+      0.09987976498657453,
+      0.08942914402708217,
+      -0.1870239952594303,
+      0.0042100914187644025,
+      0.19593102775311205,
+      0.1096498984483419,
+      -0.09390618441555842,
+      -0.043127884703833996,
+      0.19565887245322933,
+      0.004630552985746054
+    ],
+    "intercept": -1.0953629047044873,
+    "feature_means": [
+      0.23064127368536155,
+      0.26789758338819686,
+      2.8170985960203843,
+      0.628651135676669,
+      146.69672613509766,
+      0.24484242995395564,
+      0.06764534549240613,
+      0.11552449066663137,
+      0.46908482707954086,
+      0.2448450801606604,
+      0.46032303984913264
+    ],
+    "feature_scales": [
+      0.049044413475768246,
+      0.19886093871688487,
+      0.32337199240857134,
+      0.5268161744088931,
+      107.65831736819129,
+      0.03785176127132013,
+      0.01787560521184292,
+      0.018502374937823175,
+      0.0712897322478446,
+      0.03784466840940848,
+      0.29460267335934565
+    ]
+  },
+  "holdout_2025_26_evaluation": {
+    "draw_brier_improvement": 0.000238,
+    "draw_logloss_improvement": 0.001232,
+    "draw_ece_improvement": 0.0231,
+    "draw_auc_improvement": -0.0062,
+    "mc_brier_improvement": -8e-05,
+    "mc_logloss_improvement": 0.001232
+  },
+  "governance_classification": "RESEARCH CANDIDATE ONLY \u2014 NON-MUTATING"
+}

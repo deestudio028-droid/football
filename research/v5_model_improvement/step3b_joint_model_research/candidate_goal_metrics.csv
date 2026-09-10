@@ -1,0 +1,6 @@
+candidate,home_goal_mae,away_goal_mae,total_goal_mae,exact_score_accuracy_pct
+V4.0 Baseline,0.9544,0.8539,1.2972,12.51
+Pure G2 Score-Space 1X2,0.9513,0.8494,1.2961,12.51
+Platt Draw Calibration (Step 2D/2E),0.9513,0.8494,1.2961,12.51
+Joint Coherent Model (Platt + G2 Score-Space Blend),0.9513,0.8494,1.2961,12.51
+Stacked Risk-Informed Multiclass Model,0.9513,0.8494,1.2961,12.51

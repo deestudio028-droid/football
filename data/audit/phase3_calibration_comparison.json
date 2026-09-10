@@ -1,0 +1,163 @@
+{
+  "comparison": {
+    "methodology": "Nested expanding-window calibration comparison: for each assessment fold, calibrators are fit ONLY on validation predictions from folds strictly earlier in time, then scored on the assessment fold's own validation predictions (never the data the calibrator was fit on). fold_1 is never an assessment target. 2025/26 never appears here.",
+    "isotonic_skipped_rounds": [],
+    "isotonic_min_samples_per_class": 50,
+    "per_method_summary": {
+      "uncalibrated": {
+        "mean_log_loss": 1.0006233634207131,
+        "mean_brier": 0.5978281980608899,
+        "mean_ece": 0.011659095496372078,
+        "rounds": [
+          {
+            "assessment_fold": "fold_2",
+            "fit_folds": [
+              "fold_1"
+            ],
+            "n_fit": 1827,
+            "n_assess": 1752,
+            "log_loss": 0.9909156903035883,
+            "brier": 0.5915024107750169,
+            "ece": 0.014182226838139038,
+            "macro_f1": 0.3981750671264897,
+            "balanced_accuracy": 0.4594246142874237,
+            "accuracy": 0.5199771689497716
+          },
+          {
+            "assessment_fold": "fold_3",
+            "fit_folds": [
+              "fold_1",
+              "fold_2"
+            ],
+            "n_fit": 3579,
+            "n_assess": 1752,
+            "log_loss": 1.0103310365378382,
+            "brier": 0.6041539853467631,
+            "ece": 0.009135964154605119,
+            "macro_f1": 0.37620124735299987,
+            "balanced_accuracy": 0.4344926564646956,
+            "accuracy": 0.5011415525114156
+          }
+        ]
+      },
+      "platt_sigmoid": {
+        "mean_log_loss": 1.0053671615638624,
+        "mean_brier": 0.601090766750884,
+        "mean_ece": 0.0231419689616065,
+        "rounds": [
+          {
+            "assessment_fold": "fold_2",
+            "fit_folds": [
+              "fold_1"
+            ],
+            "n_fit": 1827,
+            "n_assess": 1752,
+            "log_loss": 0.9971821384918916,
+            "brier": 0.5956903886351604,
+            "ece": 0.021706603630161907,
+            "macro_f1": 0.3780467176485398,
+            "balanced_accuracy": 0.4422997742887616,
+            "accuracy": 0.5136986301369864
+          },
+          {
+            "assessment_fold": "fold_3",
+            "fit_folds": [
+              "fold_1",
+              "fold_2"
+            ],
+            "n_fit": 3579,
+            "n_assess": 1752,
+            "log_loss": 1.013552184635833,
+            "brier": 0.6064911448666076,
+            "ece": 0.0245773342930511,
+            "macro_f1": 0.3778203830387817,
+            "balanced_accuracy": 0.43391810395365904,
+            "accuracy": 0.5034246575342466
+          }
+        ]
+      },
+      "isotonic": {
+        "mean_log_loss": 1.0503368331234915,
+        "mean_brier": 0.6018488170528399,
+        "mean_ece": 0.02846338903304358,
+        "rounds": [
+          {
+            "assessment_fold": "fold_2",
+            "fit_folds": [
+              "fold_1"
+            ],
+            "n_fit": 1827,
+            "n_assess": 1752,
+            "log_loss": 1.0655520281886992,
+            "brier": 0.5954278968276406,
+            "ece": 0.029201060441640003,
+            "macro_f1": 0.37495234032759234,
+            "balanced_accuracy": 0.43825415047233757,
+            "accuracy": 0.5114155251141552
+          },
+          {
+            "assessment_fold": "fold_3",
+            "fit_folds": [
+              "fold_1",
+              "fold_2"
+            ],
+            "n_fit": 3579,
+            "n_assess": 1752,
+            "log_loss": 1.0351216380582837,
+            "brier": 0.6082697372780391,
+            "ece": 0.027725717624447154,
+            "macro_f1": 0.3708582003238492,
+            "balanced_accuracy": 0.43183133713799404,
+            "accuracy": 0.502283105022831
+          }
+        ]
+      }
+    }
+  },
+  "selection": {
+    "selected_calibration_method": "uncalibrated",
+    "selection_rule": "Select a calibrated method only if it improves mean log loss over uncalibrated by more than 0.005 across the nested assessment rounds AND does not worsen mean Brier by more than the same margin. Otherwise remain uncalibrated. This decision never sees 2025/26 data.",
+    "reason": "No candidate calibration method improved mean log loss beyond the margin; remaining uncalibrated.",
+    "baseline_mean_log_loss": 1.0006233634207131,
+    "baseline_mean_brier": 0.5978281980608899,
+    "candidate_mean_log_loss": {
+      "platt_sigmoid": 1.0053671615638624,
+      "isotonic": 1.0503368331234915
+    },
+    "candidate_mean_brier": {
+      "platt_sigmoid": 0.601090766750884,
+      "isotonic": 0.6018488170528399
+    }
+  },
+  "final_test": {
+    "calibration_method_applied": "uncalibrated",
+    "pre_calibration": {
+      "log_loss": 1.012643607907126,
+      "brier": 0.6059500599589396,
+      "macro_f1": 0.3712753915810083,
+      "balanced_accuracy": 0.4321797560315324,
+      "accuracy": 0.500856653340948,
+      "confusion_matrix": [
+        [
+          599,
+          2,
+          170
+        ],
+        [
+          293,
+          0,
+          152
+        ],
+        [
+          257,
+          0,
+          278
+        ]
+      ],
+      "n": 1751,
+      "ece": 0.01731559581035984
+    },
+    "post_calibration": null,
+    "note": "Reported strictly AFTER calibration method selection was frozen using folds 1-3 only. This result never fed back into method selection."
+  }
+}

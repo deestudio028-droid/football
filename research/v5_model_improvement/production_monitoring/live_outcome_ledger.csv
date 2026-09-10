@@ -1,0 +1,34 @@
+fixture_id,competition,season,home_team,away_team,scheduled_kickoff,prediction_timestamp,status,v4_p_home,v4_p_draw,v4_p_away,v4_decision,draw_risk_score,draw_risk_tier,draw_risk_label,actual_home_goals,actual_away_goals,actual_result,v4_correct,draw_occurred,draw_risk_detected,is_pending
+420581351,Ligue 1,2025/2026,Olympique Marseille,Strasbourg,12:15 AM IST,2026-08-22T00:00:00Z,FT,0.509,0.232,0.259,H,0.2081,LOW,Low draw vulnerability,4.0,0.0,H,True,False,False,False
+420581362,Premier League,2025/2026,Arsenal,Coventry City,12:30 AM IST,2026-08-22T00:00:00Z,FT,0.62,0.184,0.196,H,0.065,LOW,Low draw vulnerability,3.0,0.0,H,True,False,False,False
+420581363,La Liga,2025/2026,Real Betis,Real Sociedad,12:30 AM IST,2026-08-22T00:00:00Z,FT,0.543,0.222,0.236,H,0.177,LOW,Low draw vulnerability,1.0,0.0,H,True,False,False,False
+420581845,Premier League,2025/2026,Hull City,Manchester United,05:00 PM IST,2026-08-22T00:00:00Z,FT,0.342,0.262,0.396,A,0.6765,HIGH,High draw vulnerability,2.0,0.0,H,False,False,True,False
+420582048,Premier League,2025/2026,Nottingham Forest,Leeds United,07:30 PM IST,2026-08-22T00:00:00Z,FT,0.454,0.245,0.301,H,0.4093,MEDIUM,Moderate draw vulnerability,0.0,1.0,A,False,False,True,False
+420582049,Premier League,2025/2026,Ipswich Town,Sunderland,07:30 PM IST,2026-08-22T00:00:00Z,FT,0.316,0.271,0.413,A,0.5673,MEDIUM,Moderate draw vulnerability,2.0,1.0,H,False,False,True,False
+420582050,Premier League,2025/2026,Everton,Crystal Palace,07:30 PM IST,2026-08-22T00:00:00Z,FT,0.44,0.258,0.303,H,0.4708,MEDIUM,Moderate draw vulnerability,2.0,0.0,H,True,False,True,False
+420582189,La Liga,2025/2026,Athletic Club,Sevilla,08:30 PM IST,2026-08-22T00:00:00Z,FT,0.455,0.252,0.293,H,0.4177,MEDIUM,Moderate draw vulnerability,1.0,3.0,A,False,False,True,False
+420582220,Ligue 1,2025/2026,Lens,Auxerre,08:45 PM IST,2026-08-22T00:00:00Z,FT,0.61,0.195,0.195,H,0.0946,LOW,Low draw vulnerability,5.0,2.0,H,True,False,False,False
+420582255,Serie A,2025/2026,Inter,Monza,10:00 PM IST,2026-08-22T00:00:00Z,FT,0.789,0.108,0.103,H,0.065,LOW,Low draw vulnerability,4.0,1.0,H,True,False,False,False
+420582256,Premier League,2025/2026,Brentford,Tottenham Hotspur,10:00 PM IST,2026-08-22T00:00:00Z,FT,0.422,0.243,0.335,H,0.4973,MEDIUM,Moderate draw vulnerability,3.0,0.0,H,True,False,True,False
+420582254,Serie A,2025/2026,Udinese,Como,10:00 PM IST,2026-08-22T00:00:00Z,FT,0.292,0.275,0.432,A,0.5187,MEDIUM,Moderate draw vulnerability,1.0,1.0,D,False,True,True,False
+420582269,La Liga,2025/2026,Valencia,Celta de Vigo,11:00 PM IST,2026-08-22T00:00:00Z,FT,0.464,0.264,0.272,H,0.4112,MEDIUM,Moderate draw vulnerability,0.0,0.0,D,False,True,True,False
+420582305,Ligue 1,2025/2026,Nice,Lorient,12:15 AM IST,2026-08-22T00:00:00Z,FT,0.393,0.265,0.341,H,0.689,HIGH,High draw vulnerability,0.0,0.0,D,False,True,True,False
+420582304,Ligue 1,2025/2026,Toulouse,Olympique Lyonnais,12:15 AM IST,2026-08-22T00:00:00Z,FT,0.338,0.267,0.395,A,0.6872,HIGH,High draw vulnerability,0.0,2.0,A,True,False,True,False
+420582303,Ligue 1,2025/2026,Troyes,Paris,12:15 AM IST,2026-08-22T00:00:00Z,FT,0.226,0.233,0.541,A,0.2111,LOW,Low draw vulnerability,0.0,0.0,D,False,True,False,False
+420582302,Serie A,2025/2026,Genoa,Napoli,12:15 AM IST,2026-08-22T00:00:00Z,FT,0.277,0.263,0.46,A,0.421,MEDIUM,Moderate draw vulnerability,0.0,2.0,A,True,False,True,False
+420582301,Serie A,2025/2026,Parma,Cagliari,12:15 AM IST,2026-08-22T00:00:00Z,FT,0.353,0.274,0.373,A,0.7606,HIGH,High draw vulnerability,0.0,1.0,A,True,False,True,False
+420582306,Ligue 1,2025/2026,Le Mans,Brest,12:15 AM IST,2026-08-22T00:00:00Z,FT,0.458,0.26,0.281,H,0.421,MEDIUM,Moderate draw vulnerability,2.0,2.0,D,False,True,True,False
+420582312,La Liga,2025/2026,Espanyol,Real Madrid,01:00 AM IST,2026-08-22T00:00:00Z,FT,0.255,0.226,0.518,A,0.1906,LOW,Low draw vulnerability,1.0,2.0,A,True,False,False,False
+420583619,Ligue 1,2025/2026,Angers SCO,LOSC Lille,06:30 PM IST,2026-08-22T00:00:00Z,FT,0.222,0.245,0.533,A,0.3274,LOW,Low draw vulnerability,0.0,2.0,A,True,False,False,False
+420583623,Premier League,2025/2026,Brighton & Hove Albion,Aston Villa,06:30 PM IST,2026-08-22T00:00:00Z,FT,0.481,0.244,0.275,H,0.3307,LOW,Low draw vulnerability,4.0,0.0,H,True,False,False,False
+420583622,Premier League,2025/2026,Manchester City,AFC Bournemouth,06:30 PM IST,2026-08-22T00:00:00Z,FT,0.607,0.192,0.201,H,0.0853,LOW,Low draw vulnerability,2.0,1.0,H,True,False,False,False
+420583743,La Liga,2025/2026,Atlético de Madrid,Villarreal,08:30 PM IST,2026-08-22T00:00:00Z,FT,0.402,0.249,0.348,H,0.6382,MEDIUM,Moderate draw vulnerability,2.0,2.0,D,False,True,True,False
+420583751,Ligue 1,2025/2026,Le Havre,Monaco,08:45 PM IST,2026-08-22T00:00:00Z,FT,0.33,0.265,0.404,A,0.5827,MEDIUM,Moderate draw vulnerability,0.0,1.0,A,True,False,True,False
+420583753,Premier League,2025/2026,Newcastle United,Liverpool,09:00 PM IST,2026-08-22T00:00:00Z,FT,0.353,0.263,0.384,A,0.7122,HIGH,High draw vulnerability,2.0,2.0,D,False,True,True,False
+420583777,Serie A,2025/2026,Venezia,Lecce,10:00 PM IST,2026-08-22T00:00:00Z,FT,0.4,0.284,0.316,H,0.6244,MEDIUM,Moderate draw vulnerability,0.0,2.0,A,False,False,True,False
+420583778,Serie A,2025/2026,Frosinone,Juventus,10:00 PM IST,2026-08-22T00:00:00Z,FT,0.284,0.248,0.467,A,0.3761,LOW,Low draw vulnerability,0.0,1.0,A,True,False,False,False
+420583789,La Liga,2025/2026,Getafe,Racing Santander,11:00 PM IST,2026-08-22T00:00:00Z,FT,0.389,0.277,0.334,H,0.7198,HIGH,High draw vulnerability,1.0,0.0,H,True,False,True,False
+420583814,Ligue 1,2025/2026,Rennes,Paris Saint Germain,12:15 AM IST,2026-08-22T00:00:00Z,FT,0.343,0.245,0.412,A,0.529,MEDIUM,Moderate draw vulnerability,2.0,2.0,D,False,True,True,False
+420583813,Serie A,2025/2026,Atalanta,Sassuolo,12:15 AM IST,2026-08-22T00:00:00Z,FT,0.554,0.214,0.232,H,0.1532,LOW,Low draw vulnerability,2.0,1.0,H,True,False,False,False
+420583812,Serie A,2025/2026,Torino,AC Milan,12:15 AM IST,2026-08-22T00:00:00Z,FT,0.361,0.272,0.367,A,0.7746,HIGH,High draw vulnerability,1.0,2.0,A,True,False,True,False
+420583819,La Liga,2025/2026,Elche,FC Barcelona,01:00 AM IST,2026-08-22T00:00:00Z,FT,0.248,0.216,0.536,A,0.1593,LOW,Low draw vulnerability,0.0,5.0,A,True,False,False,False

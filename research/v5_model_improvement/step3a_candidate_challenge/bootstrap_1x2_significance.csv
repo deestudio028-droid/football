@@ -1,0 +1,6 @@
+candidate,metric,mean_difference,ci_95_lower,ci_95_upper,statistically_significant,verdict
+C2 (Platt Draw Calibration),Accuracy (%),-0.1124,-0.2856,0.0,NO,NOT STATISTICALLY ESTABLISHED (95% CI spans 0)
+C2 (Platt Draw Calibration),Multiclass Log Loss,-0.0017,-0.0055,0.0021,NO,NOT STATISTICALLY ESTABLISHED (95% CI spans 0)
+C2 (Platt Draw Calibration),Multiclass Brier Score,-0.0004,-0.0026,0.0019,NO,NOT STATISTICALLY ESTABLISHED (95% CI spans 0)
+C4 (Platt + Score-Space Blend),Accuracy (%),-0.0588,-0.2284,0.0,NO,NOT STATISTICALLY ESTABLISHED (95% CI spans 0)
+C4 (Platt + Score-Space Blend),Multiclass Log Loss,-0.0019,-0.0055,0.0017,NO,NOT STATISTICALLY ESTABLISHED (95% CI spans 0)

@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-08-20T15:35:15.594194+00:00",
+  "purpose": "V4 20-Match Validation Manifest",
+  "files": {
+    "run_v4_20_validation.py": {
+      "md5": "7c219fbf347ddec0e2751e0e20bfc564",
+      "bytes": 46846
+    },
+    "test_v4_20_validation.py": {
+      "md5": "dc78b4ac7de10f73acb8d5ca56f8babf",
+      "bytes": 22772
+    },
+    "v4_20_validation_results.json": {
+      "md5": "1b2adfd88c5a4781bdf662b871ef2283",
+      "bytes": 41070
+    },
+    "promotion_market_odds.sqlite": {
+      "md5": "f1714e2fdb138e63af080346cf19e3ac",
+      "bytes": 28672
+    },
+    "v4_poisson_venue_elo_online_ad.pkl": {
+      "md5": "06841f0c03c8597b2b8cd8f8ab064864",
+      "bytes": 13534
+    }
+  },
+  "validation_gates": {
+    "integrity_audit": "PASS",
+    "exact_20_fixtures": "PASS",
+    "v4_contract_91": "PASS",
+    "v3_contract_87": "PASS",
+    "v2_contract_84": "PASS",
+    "market_isolation": "PASS",
+    "causality_insulation": "PASS",
+    "determinism": "PASS",
+    "promotion_status": "DO_NOT_PROMOTE"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-08-22T10:15:00Z",
+  "phase": "Phase 31 — Model Evaluation & 2026/27 Fresh Match Validation Dashboard",
+  "dashboard_status": "OPERATIONAL",
+  "technology_stack": {
+    "framework": "Streamlit 1.62.0",
+    "entrypoint": "src/dashboard/app.py",
+    "launcher": "scripts/run_dashboard.bat"
+  },
+  "model_registry": {
+    "production_model": {
+      "model_id": "v4_0_draw_champion",
+      "version": "v4.0-champion-dc-elo-stacking",
+      "status": "FROZEN",
+      "md5_hash": "9c396e7e5364f93f079313726c1ba499"
+    },
+    "shadow_model": {
+      "model_id": "v4_6_physical_draw_gate",
+      "version": "v4.6-physical-draw-gate",
+      "status": "FROZEN",
+      "md5_hash": "a181165cbdfd908eb8ff7bfa7c5ea2d8"
+    },
+    "research_model": {
+      "model_id": "historical_candidate_h",
+      "version": "v4.6-historical-only-retrained",
+      "status": "FROZEN",
+      "md5_hash": "19aa786c57f2081f2fcb6c006e87a205"
+    }
+  },
+  "season_2026_27_status": {
+    "discovered_fixtures": 0,
+    "completed_matches": 0,
+    "sample_power_status": "EARLY / INSUFFICIENT (N=0 Completed 2026/27 Matches)",
+    "mandatory_power_gate": 1050
+  },
+  "historical_and_validation_benchmarks": {
+    "diagnostic_1301": {
+      "v4_accuracy": 52.19,
+      "v46_accuracy": 52.50,
+      "net_wins_gained": 4,
+      "draw_precision_pct": 31.2
+    },
+    "prospective_450": {
+      "v4_accuracy": 51.33,
+      "v46_accuracy": 51.56,
+      "net_wins_gained": 1,
+      "draw_precision_pct": 33.3
+    }
+  },
+  "governance_and_safety": {
+    "read_only_model_loading": true,
+    "pre_kickoff_causality_enforced": true,
+    "protected_hashes_verified": "20/20 BIT-IDENTICAL"
+  }
+}

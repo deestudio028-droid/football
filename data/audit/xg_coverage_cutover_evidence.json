@@ -1,0 +1,14 @@
+{
+  "finding": "xG and xGOT (home_xg/away_xg/home_xgot/away_xgot on fixtures.stats, and xg_total/xg_for/xg_against on team-stats endpoints) are NOT populated for the full historical window claimed in the original DATA_AUDIT.md. There is a platform-wide data-vendor cutover somewhere between 2024-02-11 and 2024-05-02, before which xG fields are null across every league tested, and after which they are consistently populated.",
+  "method": "Live GET /api/fixtures/between?include=stats calls at four bracketing time points, cross-checked across 3 of the 5 target leagues to rule out a league-specific gap.",
+  "evidence": [
+    {"league": "Premier League", "window": "2023-08-11 to 2023-09-09", "fixtures_checked": 39, "xg_populated": "0/39", "possession_populated": "39/39", "has_odds_true": "39/39"},
+    {"league": "Premier League", "window": "2024-01-01 to 2024-01-08", "fixtures_checked": 2, "xg_populated": "0/2"},
+    {"league": "Bundesliga", "window": "2024-02-09 to 2024-02-16", "fixtures_checked": 9, "xg_populated": "0/9"},
+    {"league": "Ligue 1", "window": "2024-02-09 to 2024-02-16", "fixtures_checked": 9, "xg_populated": "0/9"},
+    {"league": "Premier League", "window": "2024-05-01 to 2024-05-08", "fixtures_checked": 11, "xg_populated": "11/11"},
+    {"league": "Premier League", "window": "2024-08-16 to 2024-08-23", "fixtures_checked": 10, "xg_populated": "10/10"}
+  ],
+  "conclusion": "xG/xGOT should be treated as reliably available from approximately Q1/Q2 2024 onward (exact date not yet pinned down beyond the Feb 11 - May 2 2024 bracket), not from 2020/21 as the raw season-list endpoint would suggest. All other match stats fields tested (possession, cards, corners, fouls, shots, shots_on, tackles, offsides, goal_kicks, throw_ins, has_odds) were populated as far back as August 2023, the earliest point tested.",
+  "recommendation": "Before finalizing the historical training window for any xG-based feature, run a short bisection script against fixtures/between to pin the exact cutover date/matchday per league. Do not assume it is identical across all 5 leagues without checking the remaining two (La Liga, Serie A) the same way."
+}

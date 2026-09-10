@@ -1,0 +1,2972 @@
+{
+  "Ligue 1 2020/2021": {
+    "competition_id": 200,
+    "season_id": 209,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 2,
+        "pct": 0.5
+      },
+      "shots_on": {
+        "null": 2,
+        "pct": 0.5
+      },
+      "possession": {
+        "null": 2,
+        "pct": 0.5
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 2,
+        "pct": 0.5
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 2,
+        "pct": 0.5
+      },
+      "dang_attacks": {
+        "null": 2,
+        "pct": 0.5
+      },
+      "pressure": {
+        "null": 5,
+        "pct": 1.3
+      },
+      "tackles": {
+        "null": 219,
+        "pct": 57.6
+      },
+      "offsides": {
+        "null": 231,
+        "pct": 60.8
+      },
+      "goal_kicks": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "throw_ins": {
+        "null": 372,
+        "pct": 97.9
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Ligue 1 2021/2022": {
+    "competition_id": 200,
+    "season_id": 1400,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 2,
+        "pct": 0.5
+      },
+      "shots_on": {
+        "null": 2,
+        "pct": 0.5
+      },
+      "possession": {
+        "null": 2,
+        "pct": 0.5
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 2,
+        "pct": 0.5
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 2,
+        "pct": 0.5
+      },
+      "dang_attacks": {
+        "null": 2,
+        "pct": 0.5
+      },
+      "pressure": {
+        "null": 3,
+        "pct": 0.8
+      },
+      "tackles": {
+        "null": 170,
+        "pct": 44.7
+      },
+      "offsides": {
+        "null": 180,
+        "pct": 47.4
+      },
+      "goal_kicks": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "throw_ins": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Ligue 1 2022/2023": {
+    "competition_id": 200,
+    "season_id": 2748,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 20,
+        "pct": 5.3
+      },
+      "goal_kicks": {
+        "null": 240,
+        "pct": 63.2
+      },
+      "throw_ins": {
+        "null": 230,
+        "pct": 60.5
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Ligue 1 2023/2024": {
+    "competition_id": 200,
+    "season_id": 4629,
+    "n": 306,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 257,
+        "pct": 84.0
+      },
+      "xgot": {
+        "null": 257,
+        "pct": 84.0
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 16,
+        "pct": 5.2
+      },
+      "goal_kicks": {
+        "null": 2,
+        "pct": 0.7
+      },
+      "throw_ins": {
+        "null": 2,
+        "pct": 0.7
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Ligue 1 2024/2025": {
+    "competition_id": 200,
+    "season_id": 6527,
+    "n": 306,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 3,
+        "pct": 1.0
+      },
+      "xgot": {
+        "null": 3,
+        "pct": 1.0
+      },
+      "shots": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 11,
+        "pct": 3.6
+      },
+      "red_cards": {
+        "null": 247,
+        "pct": 80.7
+      },
+      "attacks": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "dang_attacks": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "pressure": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "tackles": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "offsides": {
+        "null": 23,
+        "pct": 7.5
+      },
+      "goal_kicks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "throw_ins": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Ligue 1 2025/2026": {
+    "competition_id": 200,
+    "season_id": 725793,
+    "n": 306,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "away_goals": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "xg": {
+        "null": 4,
+        "pct": 1.3
+      },
+      "xgot": {
+        "null": 4,
+        "pct": 1.3
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 8,
+        "pct": 2.6
+      },
+      "red_cards": {
+        "null": 238,
+        "pct": 77.8
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 24,
+        "pct": 7.8
+      },
+      "goal_kicks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "throw_ins": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "La Liga 2020/2021": {
+    "competition_id": 419,
+    "season_id": 429,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 5,
+        "pct": 1.3
+      },
+      "tackles": {
+        "null": 68,
+        "pct": 17.9
+      },
+      "offsides": {
+        "null": 77,
+        "pct": 20.3
+      },
+      "goal_kicks": {
+        "null": 377,
+        "pct": 99.2
+      },
+      "throw_ins": {
+        "null": 372,
+        "pct": 97.9
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "La Liga 2021/2022": {
+    "competition_id": 419,
+    "season_id": 1248,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 4,
+        "pct": 1.1
+      },
+      "shots_on": {
+        "null": 4,
+        "pct": 1.1
+      },
+      "possession": {
+        "null": 4,
+        "pct": 1.1
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 4,
+        "pct": 1.1
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 4,
+        "pct": 1.1
+      },
+      "dang_attacks": {
+        "null": 4,
+        "pct": 1.1
+      },
+      "pressure": {
+        "null": 4,
+        "pct": 1.1
+      },
+      "tackles": {
+        "null": 190,
+        "pct": 50.0
+      },
+      "offsides": {
+        "null": 196,
+        "pct": 51.6
+      },
+      "goal_kicks": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "throw_ins": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "La Liga 2022/2023": {
+    "competition_id": 419,
+    "season_id": 2858,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 8,
+        "pct": 2.1
+      },
+      "goal_kicks": {
+        "null": 218,
+        "pct": 57.4
+      },
+      "throw_ins": {
+        "null": 207,
+        "pct": 54.5
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "La Liga 2023/2024": {
+    "competition_id": 419,
+    "season_id": 4634,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 329,
+        "pct": 86.6
+      },
+      "xgot": {
+        "null": 329,
+        "pct": 86.6
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 3,
+        "pct": 0.8
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 7,
+        "pct": 1.8
+      },
+      "goal_kicks": {
+        "null": 4,
+        "pct": 1.1
+      },
+      "throw_ins": {
+        "null": 4,
+        "pct": 1.1
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "La Liga 2024/2025": {
+    "competition_id": 419,
+    "season_id": 6435,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "xgot": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 10,
+        "pct": 2.6
+      },
+      "red_cards": {
+        "null": 310,
+        "pct": 81.6
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 3,
+        "pct": 0.8
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 13,
+        "pct": 3.4
+      },
+      "goal_kicks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "throw_ins": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "La Liga 2025/2026": {
+    "competition_id": 419,
+    "season_id": 762170,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 3,
+        "pct": 0.8
+      },
+      "xgot": {
+        "null": 3,
+        "pct": 0.8
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 6,
+        "pct": 1.6
+      },
+      "red_cards": {
+        "null": 292,
+        "pct": 76.8
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 16,
+        "pct": 4.2
+      },
+      "goal_kicks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "throw_ins": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Premier League 2020/2021": {
+    "competition_id": 423,
+    "season_id": 433,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 3,
+        "pct": 0.8
+      },
+      "tackles": {
+        "null": 160,
+        "pct": 42.1
+      },
+      "offsides": {
+        "null": 173,
+        "pct": 45.5
+      },
+      "goal_kicks": {
+        "null": 259,
+        "pct": 68.2
+      },
+      "throw_ins": {
+        "null": 257,
+        "pct": 67.6
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Premier League 2021/2022": {
+    "competition_id": 423,
+    "season_id": 1470,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 6,
+        "pct": 1.6
+      },
+      "shots_on": {
+        "null": 6,
+        "pct": 1.6
+      },
+      "possession": {
+        "null": 6,
+        "pct": 1.6
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 6,
+        "pct": 1.6
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 6,
+        "pct": 1.6
+      },
+      "dang_attacks": {
+        "null": 6,
+        "pct": 1.6
+      },
+      "pressure": {
+        "null": 6,
+        "pct": 1.6
+      },
+      "tackles": {
+        "null": 87,
+        "pct": 22.9
+      },
+      "offsides": {
+        "null": 105,
+        "pct": 27.6
+      },
+      "goal_kicks": {
+        "null": 244,
+        "pct": 64.2
+      },
+      "throw_ins": {
+        "null": 244,
+        "pct": 64.2
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Premier League 2022/2023": {
+    "competition_id": 423,
+    "season_id": 2747,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 9,
+        "pct": 2.4
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 14,
+        "pct": 3.7
+      },
+      "goal_kicks": {
+        "null": 123,
+        "pct": 32.4
+      },
+      "throw_ins": {
+        "null": 113,
+        "pct": 29.7
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Premier League 2023/2024": {
+    "competition_id": 423,
+    "season_id": 4630,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 318,
+        "pct": 83.7
+      },
+      "xgot": {
+        "null": 318,
+        "pct": 83.7
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 6,
+        "pct": 1.6
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 13,
+        "pct": 3.4
+      },
+      "goal_kicks": {
+        "null": 3,
+        "pct": 0.8
+      },
+      "throw_ins": {
+        "null": 3,
+        "pct": 0.8
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Premier League 2024/2025": {
+    "competition_id": 423,
+    "season_id": 6484,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xgot": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 17,
+        "pct": 4.5
+      },
+      "red_cards": {
+        "null": 334,
+        "pct": 87.9
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 21,
+        "pct": 5.5
+      },
+      "goal_kicks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "throw_ins": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Premier League 2025/2026": {
+    "competition_id": 423,
+    "season_id": 667780,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "xgot": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 14,
+        "pct": 3.7
+      },
+      "red_cards": {
+        "null": 340,
+        "pct": 89.5
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 21,
+        "pct": 5.5
+      },
+      "goal_kicks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "throw_ins": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Bundesliga 2020/2021": {
+    "competition_id": 477,
+    "season_id": 487,
+    "n": 306,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 306,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 306,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "tackles": {
+        "null": 99,
+        "pct": 32.4
+      },
+      "offsides": {
+        "null": 107,
+        "pct": 35.0
+      },
+      "goal_kicks": {
+        "null": 306,
+        "pct": 100.0
+      },
+      "throw_ins": {
+        "null": 301,
+        "pct": 98.4
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Bundesliga 2021/2022": {
+    "competition_id": 477,
+    "season_id": 1468,
+    "n": 306,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 306,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 306,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 8,
+        "pct": 2.6
+      },
+      "shots_on": {
+        "null": 8,
+        "pct": 2.6
+      },
+      "possession": {
+        "null": 8,
+        "pct": 2.6
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 8,
+        "pct": 2.6
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 8,
+        "pct": 2.6
+      },
+      "dang_attacks": {
+        "null": 8,
+        "pct": 2.6
+      },
+      "pressure": {
+        "null": 7,
+        "pct": 2.3
+      },
+      "tackles": {
+        "null": 166,
+        "pct": 54.2
+      },
+      "offsides": {
+        "null": 171,
+        "pct": 55.9
+      },
+      "goal_kicks": {
+        "null": 306,
+        "pct": 100.0
+      },
+      "throw_ins": {
+        "null": 306,
+        "pct": 100.0
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Bundesliga 2022/2023": {
+    "competition_id": 477,
+    "season_id": 2745,
+    "n": 306,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 306,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 306,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 10,
+        "pct": 3.3
+      },
+      "goal_kicks": {
+        "null": 189,
+        "pct": 61.8
+      },
+      "throw_ins": {
+        "null": 180,
+        "pct": 58.8
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Bundesliga 2023/2024": {
+    "competition_id": 477,
+    "season_id": 4675,
+    "n": 306,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 254,
+        "pct": 83.0
+      },
+      "xgot": {
+        "null": 254,
+        "pct": 83.0
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 2,
+        "pct": 0.7
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 15,
+        "pct": 4.9
+      },
+      "goal_kicks": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "throw_ins": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Bundesliga 2024/2025": {
+    "competition_id": 477,
+    "season_id": 6597,
+    "n": 306,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "xgot": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 9,
+        "pct": 2.9
+      },
+      "red_cards": {
+        "null": 258,
+        "pct": 84.3
+      },
+      "attacks": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "dang_attacks": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "pressure": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 11,
+        "pct": 3.6
+      },
+      "goal_kicks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "throw_ins": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Bundesliga 2025/2026": {
+    "competition_id": 477,
+    "season_id": 725788,
+    "n": 306,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 4,
+        "pct": 1.3
+      },
+      "xgot": {
+        "null": 4,
+        "pct": 1.3
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 9,
+        "pct": 2.9
+      },
+      "red_cards": {
+        "null": 257,
+        "pct": 84.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 9,
+        "pct": 2.9
+      },
+      "goal_kicks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "throw_ins": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Serie A 2020/2021": {
+    "competition_id": 499,
+    "season_id": 509,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 10,
+        "pct": 2.6
+      },
+      "shots_on": {
+        "null": 10,
+        "pct": 2.6
+      },
+      "possession": {
+        "null": 10,
+        "pct": 2.6
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 10,
+        "pct": 2.6
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 10,
+        "pct": 2.6
+      },
+      "dang_attacks": {
+        "null": 10,
+        "pct": 2.6
+      },
+      "pressure": {
+        "null": 12,
+        "pct": 3.2
+      },
+      "tackles": {
+        "null": 246,
+        "pct": 64.7
+      },
+      "offsides": {
+        "null": 248,
+        "pct": 65.3
+      },
+      "goal_kicks": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "throw_ins": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Serie A 2021/2022": {
+    "competition_id": 499,
+    "season_id": 1555,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 380,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 10,
+        "pct": 2.6
+      },
+      "shots_on": {
+        "null": 10,
+        "pct": 2.6
+      },
+      "possession": {
+        "null": 10,
+        "pct": 2.6
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 10,
+        "pct": 2.6
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 10,
+        "pct": 2.6
+      },
+      "dang_attacks": {
+        "null": 10,
+        "pct": 2.6
+      },
+      "pressure": {
+        "null": 3,
+        "pct": 0.8
+      },
+      "tackles": {
+        "null": 247,
+        "pct": 65.0
+      },
+      "offsides": {
+        "null": 254,
+        "pct": 66.8
+      },
+      "goal_kicks": {
+        "null": 374,
+        "pct": 98.4
+      },
+      "throw_ins": {
+        "null": 360,
+        "pct": 94.7
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Serie A 2022/2023": {
+    "competition_id": 499,
+    "season_id": 2894,
+    "n": 381,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 381,
+        "pct": 100.0
+      },
+      "xgot": {
+        "null": 381,
+        "pct": 100.0
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 1,
+        "pct": 0.3
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 22,
+        "pct": 5.8
+      },
+      "goal_kicks": {
+        "null": 230,
+        "pct": 60.4
+      },
+      "throw_ins": {
+        "null": 219,
+        "pct": 57.5
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Serie A 2023/2024": {
+    "competition_id": 499,
+    "season_id": 4724,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 321,
+        "pct": 84.5
+      },
+      "xgot": {
+        "null": 322,
+        "pct": 84.7
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "red_cards": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 22,
+        "pct": 5.8
+      },
+      "goal_kicks": {
+        "null": 4,
+        "pct": 1.1
+      },
+      "throw_ins": {
+        "null": 4,
+        "pct": 1.1
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Serie A 2024/2025": {
+    "competition_id": 499,
+    "season_id": 6526,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 5,
+        "pct": 1.3
+      },
+      "xgot": {
+        "null": 5,
+        "pct": 1.3
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 9,
+        "pct": 2.4
+      },
+      "red_cards": {
+        "null": 310,
+        "pct": 81.6
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 4,
+        "pct": 1.1
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 17,
+        "pct": 4.5
+      },
+      "goal_kicks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "throw_ins": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "Serie A 2025/2026": {
+    "competition_id": 499,
+    "season_id": 602681,
+    "n": 380,
+    "fields": {
+      "home_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_name": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_id": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "home_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "away_goals": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "xg": {
+        "null": 3,
+        "pct": 0.8
+      },
+      "xgot": {
+        "null": 3,
+        "pct": 0.8
+      },
+      "shots": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "shots_on": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "possession": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "corners": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "fouls": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "yellow_cards": {
+        "null": 9,
+        "pct": 2.4
+      },
+      "red_cards": {
+        "null": 326,
+        "pct": 85.8
+      },
+      "attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "dang_attacks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "pressure": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "tackles": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "offsides": {
+        "null": 24,
+        "pct": 6.3
+      },
+      "goal_kicks": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "throw_ins": {
+        "null": 0,
+        "pct": 0.0
+      },
+      "has_odds": {
+        "null": 0,
+        "pct": 0.0
+      }
+    }
+  }
+}

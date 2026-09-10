@@ -1,0 +1,28 @@
+{
+  "training_summary": {
+    "total_matches": 10734,
+    "home_goals_mean": 1.5348425563629589,
+    "away_goals_mean": 1.2739891932178125,
+    "lambda_home_mean": 1.5348414205787122,
+    "lambda_away_mean": 1.2740630872095526,
+    "lambda_home_range": [
+      0.6064462463600419,
+      4.5024996657270275
+    ],
+    "lambda_away_range": [
+      0.5114652182219108,
+      3.6497777056374314
+    ],
+    "ad_baseline_rates": {
+      "mu_home": 1.5348425563629589,
+      "mu_away": 1.2739891932178125,
+      "n_train": 10734
+    }
+  },
+  "sanity_check": {
+    "probability_simplex_valid": true,
+    "no_nan_or_inf": true,
+    "deterministic_inference": true,
+    "serialization_verified": true
+  }
+}

@@ -1,0 +1,9 @@
+regime,n_matches,e10_champion_rps,e10_champion_log_loss,e14_moe_rps,e14_moe_log_loss,delta_rps
+High_Elo_Parity_le_25,649,0.226607,1.082293,0.226511,1.082025,-9.6e-05
+Moderate_Elo_Parity_25_to_75,1342,0.223431,1.064979,0.223411,1.064913,-2e-05
+Large_Elo_Mismatch_gt_75,5091,0.189721,0.949233,0.189724,0.949235,3e-06
+Low_Expected_Goals_lt_2.4,266,0.223735,1.089626,0.223747,1.089666,1.2e-05
+Medium_Expected_Goals_2.4_to_3.0,5084,0.209065,1.023383,0.209047,1.023337,-1.7e-05
+High_Expected_Goals_gt_3.0,1732,0.167657,0.849556,0.167664,0.849543,7e-06
+Promoted_Sparse_lt_5_matches,130,0.183828,0.951771,0.183814,0.951664,-1.4e-05
+Established_Teams_gt_10_matches,6800,0.199458,0.982774,0.199448,0.982739,-1e-05

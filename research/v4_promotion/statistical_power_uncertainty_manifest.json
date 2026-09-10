@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-21T06:00:32.361390+00:00",
+  "historical_fixtures": 8983,
+  "oos_fixtures": 300,
+  "results_file": "statistical_power_uncertainty_results.json",
+  "report_file": "statistical_power_uncertainty_report.md",
+  "frozen_method_file": "statistical_power_uncertainty_method_frozen.json",
+  "frozen_method_hash": "68d55b30789d40440a0c14cbfe225c7f",
+  "integrity_passed": true,
+  "verdict": "B. PRACTICALLY PROMISING \u2014 MORE OOS DATA REQUIRED",
+  "production_modified": false
+}

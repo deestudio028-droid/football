@@ -1,0 +1,43 @@
+{
+  "manifest_version": "1.0",
+  "phase": "Phase 25 \u2014 Fresh Prospective Validation & Production-Readiness Gate",
+  "frozen_at": "2026-08-22T09:00:00Z",
+  "model_id": "v4_6_physical_draw_gate",
+  "model_implementation_md5": "7aae0e7e22702facb32e5a67f66f9933",
+  "frozen_rule_parameters": {
+    "draw_prob_threshold": 0.26,
+    "winner_margin_cap": 0.1,
+    "v4_winner_conf_cap": 0.45,
+    "abs_elo_cap": 100.0,
+    "tot_expected_goals_cap": 2.5,
+    "low_score_prob_floor": 0.0
+  },
+  "target_competitions": [
+    {
+      "id": 200,
+      "name": "Bundesliga"
+    },
+    {
+      "id": 419,
+      "name": "La Liga"
+    },
+    {
+      "id": 423,
+      "name": "Ligue 1"
+    },
+    {
+      "id": 477,
+      "name": "Premier League"
+    },
+    {
+      "id": 499,
+      "name": "Serie A"
+    }
+  ],
+  "statistical_power_requirements": {
+    "minimum_sample_size_power_80pct": 1050,
+    "preferred_sample_size": 1301,
+    "paired_bootstrap_resamples": 10000,
+    "alpha_significance_level": 0.05
+  }
+}

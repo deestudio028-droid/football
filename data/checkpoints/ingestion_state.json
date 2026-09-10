@@ -1,0 +1,214 @@
+{
+  "windows": {
+    "423:6484": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T16:47:33.842385+00:00",
+      "completed_at": "2026-08-16T16:47:33.846351+00:00"
+    },
+    "423:433": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:25.061763+00:00",
+      "completed_at": "2026-08-16T17:02:25.065097+00:00"
+    },
+    "423:1470": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:26.394223+00:00",
+      "completed_at": "2026-08-16T17:02:26.398709+00:00"
+    },
+    "423:2747": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:28.257949+00:00",
+      "completed_at": "2026-08-16T17:02:28.263235+00:00"
+    },
+    "423:4630": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:29.767486+00:00",
+      "completed_at": "2026-08-16T17:02:29.771456+00:00"
+    },
+    "423:667780": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:31.484834+00:00",
+      "completed_at": "2026-08-16T17:02:31.486375+00:00"
+    },
+    "419:429": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:32.922896+00:00",
+      "completed_at": "2026-08-16T17:02:32.925869+00:00"
+    },
+    "419:1248": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:34.490064+00:00",
+      "completed_at": "2026-08-16T17:02:34.492462+00:00"
+    },
+    "419:2858": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:35.808502+00:00",
+      "completed_at": "2026-08-16T17:02:35.811901+00:00"
+    },
+    "419:4634": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:36.909668+00:00",
+      "completed_at": "2026-08-16T17:02:36.910883+00:00"
+    },
+    "419:6435": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:38.184185+00:00",
+      "completed_at": "2026-08-16T17:02:38.185338+00:00"
+    },
+    "419:762170": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:39.438391+00:00",
+      "completed_at": "2026-08-16T17:02:39.440400+00:00"
+    },
+    "477:487": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 306,
+      "last_updated": "2026-08-16T17:02:40.740962+00:00",
+      "completed_at": "2026-08-16T17:02:40.745240+00:00"
+    },
+    "477:1468": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 306,
+      "last_updated": "2026-08-16T17:02:41.879526+00:00",
+      "completed_at": "2026-08-16T17:02:41.882861+00:00"
+    },
+    "477:2745": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 306,
+      "last_updated": "2026-08-16T17:02:43.336601+00:00",
+      "completed_at": "2026-08-16T17:02:43.341423+00:00"
+    },
+    "477:4675": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 306,
+      "last_updated": "2026-08-16T17:02:44.554735+00:00",
+      "completed_at": "2026-08-16T17:02:44.559418+00:00"
+    },
+    "477:6597": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 306,
+      "last_updated": "2026-08-16T17:02:45.886928+00:00",
+      "completed_at": "2026-08-16T17:02:45.891962+00:00"
+    },
+    "477:725788": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 306,
+      "last_updated": "2026-08-16T17:02:47.458816+00:00",
+      "completed_at": "2026-08-16T17:02:47.462359+00:00"
+    },
+    "499:509": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:48.759519+00:00",
+      "completed_at": "2026-08-16T17:02:48.763466+00:00"
+    },
+    "499:1555": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:50.275390+00:00",
+      "completed_at": "2026-08-16T17:02:50.276301+00:00"
+    },
+    "499:2894": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 381,
+      "last_updated": "2026-08-16T17:02:51.526170+00:00",
+      "completed_at": "2026-08-16T17:02:51.531310+00:00"
+    },
+    "499:4724": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:52.875253+00:00",
+      "completed_at": "2026-08-16T17:02:52.877810+00:00"
+    },
+    "499:6526": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:54.126476+00:00",
+      "completed_at": "2026-08-16T17:02:54.128498+00:00"
+    },
+    "499:602681": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:55.487775+00:00",
+      "completed_at": "2026-08-16T17:02:55.491324+00:00"
+    },
+    "200:209": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:56.997875+00:00",
+      "completed_at": "2026-08-16T17:02:57.001341+00:00"
+    },
+    "200:1400": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:58.311077+00:00",
+      "completed_at": "2026-08-16T17:02:58.314264+00:00"
+    },
+    "200:2748": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 380,
+      "last_updated": "2026-08-16T17:02:59.651183+00:00",
+      "completed_at": "2026-08-16T17:02:59.653504+00:00"
+    },
+    "200:4629": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 306,
+      "last_updated": "2026-08-16T17:03:01.028271+00:00",
+      "completed_at": "2026-08-16T17:03:01.032323+00:00"
+    },
+    "200:6527": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 306,
+      "last_updated": "2026-08-16T17:03:02.781677+00:00",
+      "completed_at": "2026-08-16T17:03:02.783198+00:00"
+    },
+    "200:725793": {
+      "status": "complete",
+      "pages_fetched": 2,
+      "fixture_count": 306,
+      "last_updated": "2026-08-16T17:03:04.337144+00:00",
+      "completed_at": "2026-08-16T17:03:04.340526+00:00"
+    }
+  }
+}

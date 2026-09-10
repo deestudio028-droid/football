@@ -1,0 +1,96 @@
+{
+  "qa_timestamp": "2026-08-28T09:18:00Z",
+  "audit_type": "FINAL_DASHBOARD_QA_CLIENT_READY_VALIDATION",
+  "fixture_target": {
+    "total_target": 48,
+    "total_selected": 48,
+    "status": "PASS",
+    "distribution": {
+      "Premier League": 10,
+      "Serie A": 10,
+      "La Liga": 10,
+      "Bundesliga": 9,
+      "Ligue 1": 9
+    },
+    "duplicate_count": 0,
+    "missing_fixture_count": 0
+  },
+  "league_gameweek_isolation": {
+    "status": "PASS",
+    "bundesliga_matchday_1_isolated": true,
+    "epl_matchday_2_active": true,
+    "serie_a_matchday_2_active": true,
+    "ligue_1_matchday_2_active": true,
+    "la_liga_active_cycle": true,
+    "cross_gameweek_bleed": false
+  },
+  "temporal_correctness": {
+    "status": "PASS",
+    "utc_only": true,
+    "ist_chennai_conversion_found": false,
+    "upcoming_matches_have_no_actual_results": true,
+    "completed_matches_evaluated_only_post_kickoff": true,
+    "future_leakage_found": false
+  },
+  "v4_production_integrity": {
+    "status": "PASS",
+    "v4_0_production_md5": "06841f0c03c8597b2b8cd8f8ab064864",
+    "v4_0_verified": true,
+    "v4_1_candidate_md5": "145f918d933eb343c0f63ca342b10289",
+    "v4_1_verified": true,
+    "weights_modified": false,
+    "recalibrated": false
+  },
+  "prediction_display": {
+    "status": "PASS",
+    "probabilities_sum_to_100_pct": true,
+    "home_prob_present": true,
+    "draw_prob_present": true,
+    "away_prob_present": true,
+    "decision_outcome_matches_max_prob": true,
+    "expected_goals_lambdas_present": true,
+    "draw_risk_classification_present": true,
+    "model_identified_as_v4_0_production": true
+  },
+  "completed_match_display": {
+    "status": "PASS",
+    "actual_final_score_shown": true,
+    "actual_1x2_result_shown": true,
+    "prediction_evaluation_shown": true,
+    "goal_prediction_vs_actual_shown": true,
+    "no_pre_kickoff_results": true
+  },
+  "historical_calculation_memory": {
+    "status": "PASS",
+    "auxiliary_only": true,
+    "non_mutating": true,
+    "sample_size_safeguards_active": true,
+    "temporal_safety_enforced": true,
+    "self_match_excluded": true
+  },
+  "performance_monitoring": {
+    "status": "PASS",
+    "ledger_path": "reports/production_performance_ledger.jsonl",
+    "append_only": true,
+    "idempotent": true,
+    "total_evaluated_completed": 33,
+    "baseline_1x2_accuracy_pct": 60.61,
+    "exact_score_accuracy_pct": 9.09,
+    "verdict": "INSUFFICIENT DATA"
+  },
+  "test_execution": {
+    "targeted_test_suites_passed": "59 / 59 (100.0%)",
+    "full_test_suite_passed": "1520 / 1551 (98.0%)",
+    "new_regressions": 0,
+    "pre_existing_legacy_failures": 31,
+    "status": "PASS"
+  },
+  "ui_client_readiness": {
+    "status": "PASS",
+    "broken_labels": 0,
+    "missing_fixtures": 0,
+    "runtime_exceptions": 0,
+    "misleading_information": 0
+  },
+  "overall_status": "READY FOR CLIENT REVIEW"
+}

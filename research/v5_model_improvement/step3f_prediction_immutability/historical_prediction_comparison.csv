@@ -1,0 +1,6 @@
+fixture_id,league,home_team,away_team,kickoff_utc,actual_outcome,original_locked_p_H,original_locked_p_D,original_locked_p_A,original_locked_decision,dashboard_p_H,dashboard_p_D,dashboard_p_A,dashboard_decision,dashboard_eval,draw_risk_tier,is_value_identical,reproduction_verdict
+420587320,Serie A,Bologna,Lazio,2026-08-24T16:30:00.000000Z,A,0.421,0.278,0.3,H,0.421,0.278,0.3,H,False,LOW,True,EXACT (Locked Snapshot Authoritative)
+420587324,La Liga,Osasuna,Levante,2026-08-24T17:30:00.000000Z,D,0.417,0.251,0.332,H,0.417,0.251,0.332,H,False,LOW,True,EXACT (Locked Snapshot Authoritative)
+420587329,Serie A,Roma,Fiorentina,2026-08-24T18:45:00.000000Z,H,0.568,0.22,0.212,H,0.568,0.22,0.212,H,True,LOW,True,EXACT (Locked Snapshot Authoritative)
+420587333,Premier League,Fulham,Chelsea,2026-08-24T19:00:00.000000Z,A,0.419,0.271,0.31,H,0.419,0.271,0.31,H,False,LOW,True,EXACT (Locked Snapshot Authoritative)
+420587334,La Liga,Málaga,Deportivo A Coruña,2026-08-24T19:30:00.000000Z,D,0.426,0.261,0.313,H,0.426,0.261,0.313,H,False,LOW,True,EXACT (Locked Snapshot Authoritative)

@@ -1,0 +1,2610 @@
+{
+  "generated_at": "2026-08-20T14:58:54.514057+00:00",
+  "experiment": "E9 \u2014 LightGBM Poisson vs V3 linear Poisson",
+  "environment": {
+    "lightgbm": "4.7.0",
+    "sklearn": "1.9.0",
+    "python": "3.13.14"
+  },
+  "missing_data_policy": "median imputation for BOTH arms, medians from training-fold rows only; native NaN handling deliberately NOT used",
+  "dataset": {
+    "n_fixtures": 8983,
+    "primary_oos_n": 5331,
+    "market_overlap_n": 3479,
+    "leagues": [
+      "Bundesliga",
+      "La Liga",
+      "Ligue 1",
+      "Premier League",
+      "Serie A"
+    ],
+    "seasons": [
+      "2020/2021",
+      "2021/2022",
+      "2022/2023",
+      "2023/2024",
+      "2024/2025"
+    ],
+    "quarantined_season": "2025/2026"
+  },
+  "feature_contract": {
+    "n": 87,
+    "columns": [
+      "home_goals_for_per_match_last5",
+      "home_goals_against_per_match_last5",
+      "home_goals_diff_last5",
+      "home_goals_for_per_match_last10",
+      "home_goals_against_per_match_last10",
+      "home_goals_diff_last10",
+      "home_goals_for_per_match_season",
+      "home_goals_against_per_match_season",
+      "home_goals_diff_season",
+      "away_goals_for_per_match_last5",
+      "away_goals_against_per_match_last5",
+      "away_goals_diff_last5",
+      "away_goals_for_per_match_last10",
+      "away_goals_against_per_match_last10",
+      "away_goals_diff_last10",
+      "away_goals_for_per_match_season",
+      "away_goals_against_per_match_season",
+      "away_goals_diff_season",
+      "home_points_last5",
+      "home_win_rate_last5",
+      "home_draw_rate_last5",
+      "home_loss_rate_last5",
+      "home_goal_diff_last5",
+      "home_points_last10",
+      "home_win_rate_last10",
+      "home_draw_rate_last10",
+      "home_loss_rate_last10",
+      "home_goal_diff_last10",
+      "away_points_last5",
+      "away_win_rate_last5",
+      "away_draw_rate_last5",
+      "away_loss_rate_last5",
+      "away_goal_diff_last5",
+      "away_points_last10",
+      "away_win_rate_last10",
+      "away_draw_rate_last10",
+      "away_loss_rate_last10",
+      "away_goal_diff_last10",
+      "home_attack_strength_score",
+      "home_defence_strength_score",
+      "away_attack_strength_score",
+      "away_defence_strength_score",
+      "strength_diff",
+      "competition_id",
+      "home_shots_for_per_match_last5",
+      "home_shots_against_per_match_last5",
+      "home_shots_diff_last5",
+      "home_shots_for_per_match_last10",
+      "home_shots_against_per_match_last10",
+      "home_shots_diff_last10",
+      "home_shots_for_per_match_season",
+      "home_shots_against_per_match_season",
+      "home_shots_diff_season",
+      "away_shots_for_per_match_last5",
+      "away_shots_against_per_match_last5",
+      "away_shots_diff_last5",
+      "away_shots_for_per_match_last10",
+      "away_shots_against_per_match_last10",
+      "away_shots_diff_last10",
+      "away_shots_for_per_match_season",
+      "away_shots_against_per_match_season",
+      "away_shots_diff_season",
+      "home_shots_on_for_per_match_last5",
+      "home_shots_on_against_per_match_last5",
+      "home_shots_on_diff_last5",
+      "home_shots_on_for_per_match_last10",
+      "home_shots_on_against_per_match_last10",
+      "home_shots_on_diff_last10",
+      "home_shots_on_for_per_match_season",
+      "home_shots_on_against_per_match_season",
+      "home_shots_on_diff_season",
+      "away_shots_on_for_per_match_last5",
+      "away_shots_on_against_per_match_last5",
+      "away_shots_on_diff_last5",
+      "away_shots_on_for_per_match_last10",
+      "away_shots_on_against_per_match_last10",
+      "away_shots_on_diff_last10",
+      "away_shots_on_for_per_match_season",
+      "away_shots_on_against_per_match_season",
+      "away_shots_on_diff_season",
+      "home_goals_for_home_venue_season",
+      "home_goals_against_home_venue_season",
+      "away_goals_for_away_venue_season",
+      "away_goals_against_away_venue_season",
+      "home_elo",
+      "away_elo",
+      "elo_diff"
+    ]
+  },
+  "hyperparameter_grid": {
+    "_comment": "E9 pre-registered LightGBM configuration set, frozen in the Phase 1 audit BEFORE any outer-test result was produced. DO NOT expand or edit after seeing results. All values lie inside the grid permitted by the E9 specification section 8. Config 1 is the specification section 9 default. Configs 2-10 vary one axis at a time from the default (clean sensitivity analysis). Configs 11-16 sample the low-capacity corner, which is where a ~3.6k-row training fold most plausibly wants to live.",
+    "frozen_at": "E9 Phase 1 audit, 2026-08-20",
+    "fixed_for_all_configs": {
+      "objective": "poisson",
+      "random_state": 42,
+      "n_jobs": 1,
+      "deterministic": true,
+      "force_row_wise": true,
+      "verbose": -1
+    },
+    "configurations": [
+      {
+        "id": 1,
+        "num_leaves": 15,
+        "learning_rate": 0.05,
+        "n_estimators": 250,
+        "min_child_samples": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "note": "spec section 9 default"
+      },
+      {
+        "id": 2,
+        "num_leaves": 7,
+        "learning_rate": 0.05,
+        "n_estimators": 250,
+        "min_child_samples": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "note": "leaves down"
+      },
+      {
+        "id": 3,
+        "num_leaves": 31,
+        "learning_rate": 0.05,
+        "n_estimators": 250,
+        "min_child_samples": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "note": "leaves up"
+      },
+      {
+        "id": 4,
+        "num_leaves": 15,
+        "learning_rate": 0.02,
+        "n_estimators": 250,
+        "min_child_samples": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "note": "lr down"
+      },
+      {
+        "id": 5,
+        "num_leaves": 15,
+        "learning_rate": 0.05,
+        "n_estimators": 100,
+        "min_child_samples": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "note": "trees down"
+      },
+      {
+        "id": 6,
+        "num_leaves": 15,
+        "learning_rate": 0.05,
+        "n_estimators": 500,
+        "min_child_samples": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "note": "trees up"
+      },
+      {
+        "id": 7,
+        "num_leaves": 15,
+        "learning_rate": 0.05,
+        "n_estimators": 250,
+        "min_child_samples": 20,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "note": "min_child down"
+      },
+      {
+        "id": 8,
+        "num_leaves": 15,
+        "learning_rate": 0.05,
+        "n_estimators": 250,
+        "min_child_samples": 50,
+        "subsample": 1.0,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "note": "no row subsampling"
+      },
+      {
+        "id": 9,
+        "num_leaves": 15,
+        "learning_rate": 0.05,
+        "n_estimators": 250,
+        "min_child_samples": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "reg_lambda": 1.0,
+        "note": "no column subsampling"
+      },
+      {
+        "id": 10,
+        "num_leaves": 15,
+        "learning_rate": 0.05,
+        "n_estimators": 250,
+        "min_child_samples": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 0.0,
+        "note": "no L2"
+      },
+      {
+        "id": 11,
+        "num_leaves": 7,
+        "learning_rate": 0.02,
+        "n_estimators": 500,
+        "min_child_samples": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "note": "slow + shallow"
+      },
+      {
+        "id": 12,
+        "num_leaves": 7,
+        "learning_rate": 0.02,
+        "n_estimators": 250,
+        "min_child_samples": 20,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "note": "shallow, small leaves"
+      },
+      {
+        "id": 13,
+        "num_leaves": 31,
+        "learning_rate": 0.02,
+        "n_estimators": 500,
+        "min_child_samples": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "note": "high capacity, slow"
+      },
+      {
+        "id": 14,
+        "num_leaves": 7,
+        "learning_rate": 0.05,
+        "n_estimators": 100,
+        "min_child_samples": 50,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_lambda": 1.0,
+        "note": "minimal capacity, no subsampling"
+      },
+      {
+        "id": 15,
+        "num_leaves": 31,
+        "learning_rate": 0.05,
+        "n_estimators": 100,
+        "min_child_samples": 20,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 0.0,
+        "note": "wide, few trees, unregularised"
+      },
+      {
+        "id": 16,
+        "num_leaves": 7,
+        "learning_rate": 0.02,
+        "n_estimators": 250,
+        "min_child_samples": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "note": "conservative"
+      }
+    ]
+  },
+  "folds": [
+    {
+      "fold": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "test_season": "2022/2023",
+      "n_train": 3652,
+      "n_test": 1827,
+      "n_inner_splits": 1,
+      "selected_config_id": 12,
+      "selected_params": {
+        "objective": "poisson",
+        "random_state": 42,
+        "n_jobs": 1,
+        "deterministic": true,
+        "force_row_wise": true,
+        "num_leaves": 7,
+        "learning_rate": 0.02,
+        "n_estimators": 250,
+        "min_child_samples": 20,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "subsample_freq": 1
+      },
+      "mean_inner_log_loss": 1.007944,
+      "config_curve": [
+        {
+          "config_id": 1,
+          "note": "spec section 9 default",
+          "mean_inner_log_loss": 1.02577248,
+          "per_split_log_loss": [
+            1.02577248
+          ]
+        },
+        {
+          "config_id": 2,
+          "note": "leaves down",
+          "mean_inner_log_loss": 1.01605408,
+          "per_split_log_loss": [
+            1.01605408
+          ]
+        },
+        {
+          "config_id": 3,
+          "note": "leaves up",
+          "mean_inner_log_loss": 1.02606791,
+          "per_split_log_loss": [
+            1.02606791
+          ]
+        },
+        {
+          "config_id": 4,
+          "note": "lr down",
+          "mean_inner_log_loss": 1.01184427,
+          "per_split_log_loss": [
+            1.01184427
+          ]
+        },
+        {
+          "config_id": 5,
+          "note": "trees down",
+          "mean_inner_log_loss": 1.01338435,
+          "per_split_log_loss": [
+            1.01338435
+          ]
+        },
+        {
+          "config_id": 6,
+          "note": "trees up",
+          "mean_inner_log_loss": 1.03996373,
+          "per_split_log_loss": [
+            1.03996373
+          ]
+        },
+        {
+          "config_id": 7,
+          "note": "min_child down",
+          "mean_inner_log_loss": 1.02036406,
+          "per_split_log_loss": [
+            1.02036406
+          ]
+        },
+        {
+          "config_id": 8,
+          "note": "no row subsampling",
+          "mean_inner_log_loss": 1.02562879,
+          "per_split_log_loss": [
+            1.02562879
+          ]
+        },
+        {
+          "config_id": 9,
+          "note": "no column subsampling",
+          "mean_inner_log_loss": 1.02864005,
+          "per_split_log_loss": [
+            1.02864005
+          ]
+        },
+        {
+          "config_id": 10,
+          "note": "no L2",
+          "mean_inner_log_loss": 1.02362925,
+          "per_split_log_loss": [
+            1.02362925
+          ]
+        },
+        {
+          "config_id": 11,
+          "note": "slow + shallow",
+          "mean_inner_log_loss": 1.01384736,
+          "per_split_log_loss": [
+            1.01384736
+          ]
+        },
+        {
+          "config_id": 12,
+          "note": "shallow, small leaves",
+          "mean_inner_log_loss": 1.00794386,
+          "per_split_log_loss": [
+            1.00794386
+          ]
+        },
+        {
+          "config_id": 13,
+          "note": "high capacity, slow",
+          "mean_inner_log_loss": 1.02014488,
+          "per_split_log_loss": [
+            1.02014488
+          ]
+        },
+        {
+          "config_id": 14,
+          "note": "minimal capacity, no subsampling",
+          "mean_inner_log_loss": 1.01145296,
+          "per_split_log_loss": [
+            1.01145296
+          ]
+        },
+        {
+          "config_id": 15,
+          "note": "wide, few trees, unregularised",
+          "mean_inner_log_loss": 1.01390539,
+          "per_split_log_loss": [
+            1.01390539
+          ]
+        },
+        {
+          "config_id": 16,
+          "note": "conservative",
+          "mean_inner_log_loss": 1.0088149,
+          "per_split_log_loss": [
+            1.0088149
+          ]
+        }
+      ],
+      "shared_grid_K": 28,
+      "arm_a_v3": {
+        "n": 1827,
+        "log_loss": 0.994877,
+        "brier": 0.593531,
+        "rps": 0.205141,
+        "accuracy": 0.527641,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.008683,
+        "home_goal_mae": 0.970544,
+        "away_goal_mae": 0.849845
+      },
+      "arm_b_lgbm": {
+        "n": 1827,
+        "log_loss": 0.994972,
+        "brier": 0.593649,
+        "rps": 0.205351,
+        "accuracy": 0.525999,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.012126,
+        "home_goal_mae": 0.96673,
+        "away_goal_mae": 0.85067
+      },
+      "deltas_b_minus_a": {
+        "log_loss": -9.5e-05,
+        "brier": -0.000118,
+        "rps": -0.00021,
+        "ece": -0.003443
+      },
+      "lambda_diagnostics": {
+        "arm_a": {
+          "lambda_home": {
+            "min": 0.591057,
+            "max": 4.080818,
+            "mean": 1.554056,
+            "p01": 0.756433,
+            "p50": 1.470086,
+            "p99": 3.22048
+          },
+          "lambda_away": {
+            "min": 0.531611,
+            "max": 3.930153,
+            "mean": 1.330634,
+            "p01": 0.674859,
+            "p50": 1.241965,
+            "p99": 2.669061
+          },
+          "all_finite": true,
+          "all_positive": true,
+          "within_plausible": true,
+          "any_nan": false,
+          "any_inf": false,
+          "passed": true,
+          "clipping_applied": false
+        },
+        "arm_b": {
+          "lambda_home": {
+            "min": 0.83725,
+            "max": 3.282589,
+            "mean": 1.548142,
+            "p01": 0.918201,
+            "p50": 1.472548,
+            "p99": 2.605004
+          },
+          "lambda_away": {
+            "min": 0.722659,
+            "max": 2.643953,
+            "mean": 1.322339,
+            "p01": 0.779386,
+            "p50": 1.247033,
+            "p99": 2.356712
+          },
+          "all_finite": true,
+          "all_positive": true,
+          "within_plausible": true,
+          "any_nan": false,
+          "any_inf": false,
+          "passed": true,
+          "clipping_applied": false
+        }
+      },
+      "overfitting": {
+        "arm_a": {
+          "train_log_loss": 0.999372,
+          "inner_val_log_loss": null,
+          "test_log_loss": 0.994877,
+          "train_test_gap": -0.004495,
+          "val_test_gap": null
+        },
+        "arm_b": {
+          "train_log_loss": 0.976597,
+          "inner_val_log_loss": 1.007944,
+          "test_log_loss": 0.994972,
+          "train_test_gap": 0.018375,
+          "val_test_gap": -0.012972
+        }
+      },
+      "prediction_change": {
+        "mean_abs_prob_change": 0.0230086,
+        "max_prob_change": 0.22987546,
+        "pct_materially_changed": 84.2365,
+        "pct_top_class_changed": 4.9261,
+        "mean_abs_lambda_home_change": 0.11543185,
+        "mean_abs_lambda_away_change": 0.07772258,
+        "material_threshold": 0.01
+      },
+      "feature_importance_top5_home": [
+        {
+          "feature": "away_elo",
+          "gain": 3765.2338,
+          "gain_pct": 23.0312,
+          "split": 113
+        },
+        {
+          "feature": "strength_diff",
+          "gain": 3241.3277,
+          "gain_pct": 19.8265,
+          "split": 122
+        },
+        {
+          "feature": "home_shots_on_diff_last10",
+          "gain": 830.946,
+          "gain_pct": 5.0827,
+          "split": 51
+        },
+        {
+          "feature": "home_shots_diff_last10",
+          "gain": 758.924,
+          "gain_pct": 4.6422,
+          "split": 87
+        },
+        {
+          "feature": "home_shots_on_diff_last5",
+          "gain": 445.3051,
+          "gain_pct": 2.7238,
+          "split": 45
+        }
+      ]
+    },
+    {
+      "fold": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "test_season": "2023/2024",
+      "n_train": 5479,
+      "n_test": 1752,
+      "n_inner_splits": 2,
+      "selected_config_id": 12,
+      "selected_params": {
+        "objective": "poisson",
+        "random_state": 42,
+        "n_jobs": 1,
+        "deterministic": true,
+        "force_row_wise": true,
+        "num_leaves": 7,
+        "learning_rate": 0.02,
+        "n_estimators": 250,
+        "min_child_samples": 20,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "subsample_freq": 1
+      },
+      "mean_inner_log_loss": 1.001458,
+      "config_curve": [
+        {
+          "config_id": 1,
+          "note": "spec section 9 default",
+          "mean_inner_log_loss": 1.01390181,
+          "per_split_log_loss": [
+            1.02577248,
+            1.00203114
+          ]
+        },
+        {
+          "config_id": 2,
+          "note": "leaves down",
+          "mean_inner_log_loss": 1.00695555,
+          "per_split_log_loss": [
+            1.01605408,
+            0.99785702
+          ]
+        },
+        {
+          "config_id": 3,
+          "note": "leaves up",
+          "mean_inner_log_loss": 1.01715449,
+          "per_split_log_loss": [
+            1.02606791,
+            1.00824106
+          ]
+        },
+        {
+          "config_id": 4,
+          "note": "lr down",
+          "mean_inner_log_loss": 1.00434974,
+          "per_split_log_loss": [
+            1.01184427,
+            0.99685521
+          ]
+        },
+        {
+          "config_id": 5,
+          "note": "trees down",
+          "mean_inner_log_loss": 1.00521115,
+          "per_split_log_loss": [
+            1.01338435,
+            0.99703795
+          ]
+        },
+        {
+          "config_id": 6,
+          "note": "trees up",
+          "mean_inner_log_loss": 1.02371092,
+          "per_split_log_loss": [
+            1.03996373,
+            1.00745811
+          ]
+        },
+        {
+          "config_id": 7,
+          "note": "min_child down",
+          "mean_inner_log_loss": 1.01209101,
+          "per_split_log_loss": [
+            1.02036406,
+            1.00381796
+          ]
+        },
+        {
+          "config_id": 8,
+          "note": "no row subsampling",
+          "mean_inner_log_loss": 1.01333336,
+          "per_split_log_loss": [
+            1.02562879,
+            1.00103793
+          ]
+        },
+        {
+          "config_id": 9,
+          "note": "no column subsampling",
+          "mean_inner_log_loss": 1.01555773,
+          "per_split_log_loss": [
+            1.02864005,
+            1.00247541
+          ]
+        },
+        {
+          "config_id": 10,
+          "note": "no L2",
+          "mean_inner_log_loss": 1.01231087,
+          "per_split_log_loss": [
+            1.02362925,
+            1.0009925
+          ]
+        },
+        {
+          "config_id": 11,
+          "note": "slow + shallow",
+          "mean_inner_log_loss": 1.00519463,
+          "per_split_log_loss": [
+            1.01384736,
+            0.99654189
+          ]
+        },
+        {
+          "config_id": 12,
+          "note": "shallow, small leaves",
+          "mean_inner_log_loss": 1.001458,
+          "per_split_log_loss": [
+            1.00794386,
+            0.99497213
+          ]
+        },
+        {
+          "config_id": 13,
+          "note": "high capacity, slow",
+          "mean_inner_log_loss": 1.01095905,
+          "per_split_log_loss": [
+            1.02014488,
+            1.00177322
+          ]
+        },
+        {
+          "config_id": 14,
+          "note": "minimal capacity, no subsampling",
+          "mean_inner_log_loss": 1.00401719,
+          "per_split_log_loss": [
+            1.01145296,
+            0.99658141
+          ]
+        },
+        {
+          "config_id": 15,
+          "note": "wide, few trees, unregularised",
+          "mean_inner_log_loss": 1.00605062,
+          "per_split_log_loss": [
+            1.01390539,
+            0.99819585
+          ]
+        },
+        {
+          "config_id": 16,
+          "note": "conservative",
+          "mean_inner_log_loss": 1.00220681,
+          "per_split_log_loss": [
+            1.0088149,
+            0.99559872
+          ]
+        }
+      ],
+      "shared_grid_K": 31,
+      "arm_a_v3": {
+        "n": 1752,
+        "log_loss": 0.98199,
+        "brier": 0.584213,
+        "rps": 0.1953,
+        "accuracy": 0.538242,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.016254,
+        "home_goal_mae": 0.972738,
+        "away_goal_mae": 0.877238
+      },
+      "arm_b_lgbm": {
+        "n": 1752,
+        "log_loss": 0.980839,
+        "brier": 0.583601,
+        "rps": 0.194914,
+        "accuracy": 0.535959,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.019087,
+        "home_goal_mae": 0.968907,
+        "away_goal_mae": 0.871401
+      },
+      "deltas_b_minus_a": {
+        "log_loss": 0.001151,
+        "brier": 0.000612,
+        "rps": 0.000386,
+        "ece": -0.002833
+      },
+      "lambda_diagnostics": {
+        "arm_a": {
+          "lambda_home": {
+            "min": 0.599149,
+            "max": 4.785967,
+            "mean": 1.588758,
+            "p01": 0.81068,
+            "p50": 1.496334,
+            "p99": 3.325075
+          },
+          "lambda_away": {
+            "min": 0.538476,
+            "max": 3.520322,
+            "mean": 1.300517,
+            "p01": 0.683536,
+            "p50": 1.229815,
+            "p99": 2.610115
+          },
+          "all_finite": true,
+          "all_positive": true,
+          "within_plausible": true,
+          "any_nan": false,
+          "any_inf": false,
+          "passed": true,
+          "clipping_applied": false
+        },
+        "arm_b": {
+          "lambda_home": {
+            "min": 0.888694,
+            "max": 3.478749,
+            "mean": 1.583418,
+            "p01": 0.953693,
+            "p50": 1.506713,
+            "p99": 2.932524
+          },
+          "lambda_away": {
+            "min": 0.739959,
+            "max": 2.61572,
+            "mean": 1.294698,
+            "p01": 0.79936,
+            "p50": 1.227497,
+            "p99": 2.270458
+          },
+          "all_finite": true,
+          "all_positive": true,
+          "within_plausible": true,
+          "any_nan": false,
+          "any_inf": false,
+          "passed": true,
+          "clipping_applied": false
+        }
+      },
+      "overfitting": {
+        "arm_a": {
+          "train_log_loss": 0.997074,
+          "inner_val_log_loss": null,
+          "test_log_loss": 0.98199,
+          "train_test_gap": -0.015084,
+          "val_test_gap": null
+        },
+        "arm_b": {
+          "train_log_loss": 0.980776,
+          "inner_val_log_loss": 1.001458,
+          "test_log_loss": 0.980839,
+          "train_test_gap": 6.3e-05,
+          "val_test_gap": -0.020619
+        }
+      },
+      "prediction_change": {
+        "mean_abs_prob_change": 0.02343881,
+        "max_prob_change": 0.21137539,
+        "pct_materially_changed": 85.4452,
+        "pct_top_class_changed": 4.6233,
+        "mean_abs_lambda_home_change": 0.10992776,
+        "mean_abs_lambda_away_change": 0.07769388,
+        "material_threshold": 0.01
+      },
+      "feature_importance_top5_home": [
+        {
+          "feature": "away_elo",
+          "gain": 8112.9206,
+          "gain_pct": 36.6709,
+          "split": 174
+        },
+        {
+          "feature": "strength_diff",
+          "gain": 3266.6077,
+          "gain_pct": 14.7653,
+          "split": 111
+        },
+        {
+          "feature": "home_shots_diff_last10",
+          "gain": 1465.4719,
+          "gain_pct": 6.624,
+          "split": 118
+        },
+        {
+          "feature": "home_shots_diff_last5",
+          "gain": 947.6253,
+          "gain_pct": 4.2833,
+          "split": 75
+        },
+        {
+          "feature": "home_shots_against_per_match_season",
+          "gain": 544.5031,
+          "gain_pct": 2.4612,
+          "split": 53
+        }
+      ]
+    },
+    {
+      "fold": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "test_season": "2024/2025",
+      "n_train": 7231,
+      "n_test": 1752,
+      "n_inner_splits": 3,
+      "selected_config_id": 12,
+      "selected_params": {
+        "objective": "poisson",
+        "random_state": 42,
+        "n_jobs": 1,
+        "deterministic": true,
+        "force_row_wise": true,
+        "num_leaves": 7,
+        "learning_rate": 0.02,
+        "n_estimators": 250,
+        "min_child_samples": 20,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "subsample_freq": 1
+      },
+      "mean_inner_log_loss": 0.994585,
+      "config_curve": [
+        {
+          "config_id": 1,
+          "note": "spec section 9 default",
+          "mean_inner_log_loss": 1.00336524,
+          "per_split_log_loss": [
+            1.02577248,
+            1.00203114,
+            0.98229212
+          ]
+        },
+        {
+          "config_id": 2,
+          "note": "leaves down",
+          "mean_inner_log_loss": 0.99797266,
+          "per_split_log_loss": [
+            1.01605408,
+            0.99785702,
+            0.98000688
+          ]
+        },
+        {
+          "config_id": 3,
+          "note": "leaves up",
+          "mean_inner_log_loss": 1.00600217,
+          "per_split_log_loss": [
+            1.02606791,
+            1.00824106,
+            0.98369753
+          ]
+        },
+        {
+          "config_id": 4,
+          "note": "lr down",
+          "mean_inner_log_loss": 0.99639146,
+          "per_split_log_loss": [
+            1.01184427,
+            0.99685521,
+            0.9804749
+          ]
+        },
+        {
+          "config_id": 5,
+          "note": "trees down",
+          "mean_inner_log_loss": 0.99696228,
+          "per_split_log_loss": [
+            1.01338435,
+            0.99703795,
+            0.98046453
+          ]
+        },
+        {
+          "config_id": 6,
+          "note": "trees up",
+          "mean_inner_log_loss": 1.0111919,
+          "per_split_log_loss": [
+            1.03996373,
+            1.00745811,
+            0.98615386
+          ]
+        },
+        {
+          "config_id": 7,
+          "note": "min_child down",
+          "mean_inner_log_loss": 1.00162908,
+          "per_split_log_loss": [
+            1.02036406,
+            1.00381796,
+            0.98070522
+          ]
+        },
+        {
+          "config_id": 8,
+          "note": "no row subsampling",
+          "mean_inner_log_loss": 1.00221759,
+          "per_split_log_loss": [
+            1.02562879,
+            1.00103793,
+            0.97998604
+          ]
+        },
+        {
+          "config_id": 9,
+          "note": "no column subsampling",
+          "mean_inner_log_loss": 1.00405097,
+          "per_split_log_loss": [
+            1.02864005,
+            1.00247541,
+            0.98103745
+          ]
+        },
+        {
+          "config_id": 10,
+          "note": "no L2",
+          "mean_inner_log_loss": 1.00198329,
+          "per_split_log_loss": [
+            1.02362925,
+            1.0009925,
+            0.98132813
+          ]
+        },
+        {
+          "config_id": 11,
+          "note": "slow + shallow",
+          "mean_inner_log_loss": 0.99656421,
+          "per_split_log_loss": [
+            1.01384736,
+            0.99654189,
+            0.97930338
+          ]
+        },
+        {
+          "config_id": 12,
+          "note": "shallow, small leaves",
+          "mean_inner_log_loss": 0.99458503,
+          "per_split_log_loss": [
+            1.00794386,
+            0.99497213,
+            0.98083911
+          ]
+        },
+        {
+          "config_id": 13,
+          "note": "high capacity, slow",
+          "mean_inner_log_loss": 1.00114344,
+          "per_split_log_loss": [
+            1.02014488,
+            1.00177322,
+            0.98151224
+          ]
+        },
+        {
+          "config_id": 14,
+          "note": "minimal capacity, no subsampling",
+          "mean_inner_log_loss": 0.99706521,
+          "per_split_log_loss": [
+            1.01145296,
+            0.99658141,
+            0.98316126
+          ]
+        },
+        {
+          "config_id": 15,
+          "note": "wide, few trees, unregularised",
+          "mean_inner_log_loss": 0.99791937,
+          "per_split_log_loss": [
+            1.01390539,
+            0.99819585,
+            0.98165687
+          ]
+        },
+        {
+          "config_id": 16,
+          "note": "conservative",
+          "mean_inner_log_loss": 0.99504655,
+          "per_split_log_loss": [
+            1.0088149,
+            0.99559872,
+            0.98072604
+          ]
+        }
+      ],
+      "shared_grid_K": 29,
+      "arm_a_v3": {
+        "n": 1752,
+        "log_loss": 0.983873,
+        "brier": 0.586181,
+        "rps": 0.200116,
+        "accuracy": 0.528539,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.012004,
+        "home_goal_mae": 0.945322,
+        "away_goal_mae": 0.87564
+      },
+      "arm_b_lgbm": {
+        "n": 1752,
+        "log_loss": 0.985961,
+        "brier": 0.587146,
+        "rps": 0.200662,
+        "accuracy": 0.533105,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.013052,
+        "home_goal_mae": 0.941462,
+        "away_goal_mae": 0.87061
+      },
+      "deltas_b_minus_a": {
+        "log_loss": -0.002088,
+        "brier": -0.000965,
+        "rps": -0.000546,
+        "ece": -0.001048
+      },
+      "lambda_diagnostics": {
+        "arm_a": {
+          "lambda_home": {
+            "min": 0.602691,
+            "max": 4.391552,
+            "mean": 1.568364,
+            "p01": 0.771091,
+            "p50": 1.476391,
+            "p99": 3.222595
+          },
+          "lambda_away": {
+            "min": 0.55161,
+            "max": 3.62728,
+            "mean": 1.286925,
+            "p01": 0.661125,
+            "p50": 1.214424,
+            "p99": 2.708067
+          },
+          "all_finite": true,
+          "all_positive": true,
+          "within_plausible": true,
+          "any_nan": false,
+          "any_inf": false,
+          "passed": true,
+          "clipping_applied": false
+        },
+        "arm_b": {
+          "lambda_home": {
+            "min": 0.886799,
+            "max": 3.45555,
+            "mean": 1.56874,
+            "p01": 0.948951,
+            "p50": 1.481849,
+            "p99": 2.789981
+          },
+          "lambda_away": {
+            "min": 0.779134,
+            "max": 2.688631,
+            "mean": 1.285366,
+            "p01": 0.799763,
+            "p50": 1.214025,
+            "p99": 2.340199
+          },
+          "all_finite": true,
+          "all_positive": true,
+          "within_plausible": true,
+          "any_nan": false,
+          "any_inf": false,
+          "passed": true,
+          "clipping_applied": false
+        }
+      },
+      "overfitting": {
+        "arm_a": {
+          "train_log_loss": 0.993359,
+          "inner_val_log_loss": null,
+          "test_log_loss": 0.983873,
+          "train_test_gap": -0.009486,
+          "val_test_gap": null
+        },
+        "arm_b": {
+          "train_log_loss": 0.980081,
+          "inner_val_log_loss": 0.994585,
+          "test_log_loss": 0.985961,
+          "train_test_gap": 0.00588,
+          "val_test_gap": -0.008624
+        }
+      },
+      "prediction_change": {
+        "mean_abs_prob_change": 0.02262604,
+        "max_prob_change": 0.20028195,
+        "pct_materially_changed": 83.9041,
+        "pct_top_class_changed": 5.8219,
+        "mean_abs_lambda_home_change": 0.10016176,
+        "mean_abs_lambda_away_change": 0.0816745,
+        "material_threshold": 0.01
+      },
+      "feature_importance_top5_home": [
+        {
+          "feature": "away_elo",
+          "gain": 10727.0929,
+          "gain_pct": 39.3522,
+          "split": 185
+        },
+        {
+          "feature": "strength_diff",
+          "gain": 3578.8285,
+          "gain_pct": 13.1289,
+          "split": 89
+        },
+        {
+          "feature": "home_shots_diff_last10",
+          "gain": 1418.2146,
+          "gain_pct": 5.2027,
+          "split": 96
+        },
+        {
+          "feature": "home_shots_diff_last5",
+          "gain": 862.5028,
+          "gain_pct": 3.1641,
+          "split": 65
+        },
+        {
+          "feature": "home_goals_for_per_match_season",
+          "gain": 704.4517,
+          "gain_pct": 2.5843,
+          "split": 56
+        }
+      ]
+    }
+  ],
+  "primary_universe": {
+    "n": 5331,
+    "arm_a_v3": {
+      "n": 5331,
+      "log_loss": 0.987025,
+      "brier": 0.588053,
+      "rps": 0.200255,
+      "accuracy": 0.53142,
+      "draw_recall": 0.0,
+      "draw_predicted_rate": 0.0,
+      "ece": 0.01132,
+      "home_goal_mae": 0.962976,
+      "away_goal_mae": 0.867325
+    },
+    "arm_b_lgbm": {
+      "n": 5331,
+      "log_loss": 0.987366,
+      "brier": 0.58821,
+      "rps": 0.20038,
+      "accuracy": 0.531608,
+      "draw_recall": 0.0,
+      "draw_predicted_rate": 0.0,
+      "ece": 0.012551,
+      "home_goal_mae": 0.959141,
+      "away_goal_mae": 0.864036
+    },
+    "deltas_b_minus_a": {
+      "log_loss": -0.000341,
+      "brier": -0.000157,
+      "rps": -0.000125,
+      "ece": -0.001231
+    },
+    "honest_v3_reference": 0.987025
+  },
+  "market_overlap_universe": {
+    "n": 3479,
+    "arm_a_v3": {
+      "n": 3479,
+      "log_loss": 0.983152,
+      "brier": 0.585345,
+      "rps": 0.197673,
+      "accuracy": 0.533199,
+      "draw_recall": 0.0,
+      "draw_predicted_rate": 0.0,
+      "ece": 0.013425
+    },
+    "arm_b_lgbm": {
+      "n": 3479,
+      "log_loss": 0.983747,
+      "brier": 0.585618,
+      "rps": 0.197793,
+      "accuracy": 0.534062,
+      "draw_recall": 0.0,
+      "draw_predicted_rate": 0.0,
+      "ece": 0.015535
+    },
+    "market_reference_log_loss": 0.955905,
+    "v3_reference_log_loss": 0.990435,
+    "lgbm_vs_market_log_loss": -0.027842,
+    "lgbm_beats_market": false
+  },
+  "by_league": {
+    "Bundesliga": {
+      "n": 918,
+      "arm_a_v3": {
+        "n": 918,
+        "log_loss": 1.001078,
+        "brier": 0.597237,
+        "rps": 0.20398,
+        "accuracy": 0.504357,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.022586
+      },
+      "arm_b_lgbm": {
+        "n": 918,
+        "log_loss": 0.99745,
+        "brier": 0.595559,
+        "rps": 0.203475,
+        "accuracy": 0.504357,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.023651
+      },
+      "deltas": {
+        "log_loss": 0.003628,
+        "brier": 0.001678,
+        "rps": 0.000505,
+        "ece": -0.001065
+      }
+    },
+    "La Liga": {
+      "n": 1140,
+      "arm_a_v3": {
+        "n": 1140,
+        "log_loss": 0.984913,
+        "brier": 0.585874,
+        "rps": 0.198417,
+        "accuracy": 0.534211,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.021476
+      },
+      "arm_b_lgbm": {
+        "n": 1140,
+        "log_loss": 0.984946,
+        "brier": 0.585664,
+        "rps": 0.198372,
+        "accuracy": 0.542982,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.02456
+      },
+      "deltas": {
+        "log_loss": -3.3e-05,
+        "brier": 0.00021,
+        "rps": 4.5e-05,
+        "ece": -0.003084
+      }
+    },
+    "Ligue 1": {
+      "n": 992,
+      "arm_a_v3": {
+        "n": 992,
+        "log_loss": 0.994429,
+        "brier": 0.593534,
+        "rps": 0.206445,
+        "accuracy": 0.533266,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.004063
+      },
+      "arm_b_lgbm": {
+        "n": 992,
+        "log_loss": 0.996992,
+        "brier": 0.59521,
+        "rps": 0.207381,
+        "accuracy": 0.530242,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.021531
+      },
+      "deltas": {
+        "log_loss": -0.002563,
+        "brier": -0.001676,
+        "rps": -0.000936,
+        "ece": -0.017468
+      }
+    },
+    "Premier League": {
+      "n": 1140,
+      "arm_a_v3": {
+        "n": 1140,
+        "log_loss": 0.966594,
+        "brier": 0.574172,
+        "rps": 0.198985,
+        "accuracy": 0.55614,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.012263
+      },
+      "arm_b_lgbm": {
+        "n": 1140,
+        "log_loss": 0.968588,
+        "brier": 0.575087,
+        "rps": 0.199431,
+        "accuracy": 0.553509,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.01554
+      },
+      "deltas": {
+        "log_loss": -0.001994,
+        "brier": -0.000915,
+        "rps": -0.000446,
+        "ece": -0.003277
+      }
+    },
+    "Serie A": {
+      "n": 1141,
+      "arm_a_v3": {
+        "n": 1141,
+        "log_loss": 0.991807,
+        "brier": 0.591944,
+        "rps": 0.194983,
+        "accuracy": 0.524102,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.022706
+      },
+      "arm_b_lgbm": {
+        "n": 1141,
+        "log_loss": 0.992063,
+        "brier": 0.591865,
+        "rps": 0.194756,
+        "accuracy": 0.521472,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.021921
+      },
+      "deltas": {
+        "log_loss": -0.000256,
+        "brier": 7.9e-05,
+        "rps": 0.000227,
+        "ece": 0.000785
+      }
+    }
+  },
+  "by_season": {
+    "2022/2023": {
+      "n": 1827,
+      "arm_a_v3": {
+        "n": 1827,
+        "log_loss": 0.994877,
+        "brier": 0.593531,
+        "rps": 0.205141,
+        "accuracy": 0.527641,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.008683
+      },
+      "arm_b_lgbm": {
+        "n": 1827,
+        "log_loss": 0.994972,
+        "brier": 0.593649,
+        "rps": 0.205351,
+        "accuracy": 0.525999,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.012126
+      },
+      "deltas": {
+        "log_loss": -9.5e-05,
+        "brier": -0.000118,
+        "rps": -0.00021,
+        "ece": -0.003443
+      }
+    },
+    "2023/2024": {
+      "n": 1752,
+      "arm_a_v3": {
+        "n": 1752,
+        "log_loss": 0.98199,
+        "brier": 0.584213,
+        "rps": 0.1953,
+        "accuracy": 0.538242,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.016254
+      },
+      "arm_b_lgbm": {
+        "n": 1752,
+        "log_loss": 0.980839,
+        "brier": 0.583601,
+        "rps": 0.194914,
+        "accuracy": 0.535959,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.019087
+      },
+      "deltas": {
+        "log_loss": 0.001151,
+        "brier": 0.000612,
+        "rps": 0.000386,
+        "ece": -0.002833
+      }
+    },
+    "2024/2025": {
+      "n": 1752,
+      "arm_a_v3": {
+        "n": 1752,
+        "log_loss": 0.983873,
+        "brier": 0.586181,
+        "rps": 0.200116,
+        "accuracy": 0.528539,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.012004
+      },
+      "arm_b_lgbm": {
+        "n": 1752,
+        "log_loss": 0.985961,
+        "brier": 0.587146,
+        "rps": 0.200662,
+        "accuracy": 0.533105,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "ece": 0.013052
+      },
+      "deltas": {
+        "log_loss": -0.002088,
+        "brier": -0.000965,
+        "rps": -0.000546,
+        "ece": -0.001048
+      }
+    }
+  },
+  "prediction_change_pooled": {
+    "mean_abs_prob_change": 0.02302426,
+    "max_prob_change": 0.22987546,
+    "pct_materially_changed": 84.5245,
+    "pct_top_class_changed": 5.121,
+    "mean_abs_lambda_home_change": 0.10860455,
+    "mean_abs_lambda_away_change": 0.07901192,
+    "material_threshold": 0.01
+  },
+  "lambda_diagnostics_pooled": {
+    "arm_a": {
+      "lambda_home": {
+        "min": 0.591057,
+        "max": 4.785967,
+        "mean": 1.570163,
+        "p01": 0.771772,
+        "p50": 1.479742,
+        "p99": 3.281099
+      },
+      "lambda_away": {
+        "min": 0.531611,
+        "max": 3.930153,
+        "mean": 1.306372,
+        "p01": 0.676768,
+        "p50": 1.229033,
+        "p99": 2.659955
+      },
+      "all_finite": true,
+      "all_positive": true,
+      "within_plausible": true,
+      "any_nan": false,
+      "any_inf": false,
+      "passed": true,
+      "clipping_applied": false
+    },
+    "arm_b": {
+      "lambda_home": {
+        "min": 0.83725,
+        "max": 3.478749,
+        "mean": 1.566505,
+        "p01": 0.939393,
+        "p50": 1.486458,
+        "p99": 2.772341
+      },
+      "lambda_away": {
+        "min": 0.722659,
+        "max": 2.688631,
+        "mean": 1.301104,
+        "p01": 0.792354,
+        "p50": 1.230345,
+        "p99": 2.329882
+      },
+      "all_finite": true,
+      "all_positive": true,
+      "within_plausible": true,
+      "any_nan": false,
+      "any_inf": false,
+      "passed": true,
+      "clipping_applied": false
+    }
+  },
+  "feature_importance": {
+    "fold_1": {
+      "home": [
+        {
+          "feature": "away_elo",
+          "gain": 3765.2338,
+          "gain_pct": 23.0312,
+          "split": 113
+        },
+        {
+          "feature": "strength_diff",
+          "gain": 3241.3277,
+          "gain_pct": 19.8265,
+          "split": 122
+        },
+        {
+          "feature": "home_shots_on_diff_last10",
+          "gain": 830.946,
+          "gain_pct": 5.0827,
+          "split": 51
+        },
+        {
+          "feature": "home_shots_diff_last10",
+          "gain": 758.924,
+          "gain_pct": 4.6422,
+          "split": 87
+        },
+        {
+          "feature": "home_shots_on_diff_last5",
+          "gain": 445.3051,
+          "gain_pct": 2.7238,
+          "split": 45
+        },
+        {
+          "feature": "home_shots_against_per_match_season",
+          "gain": 419.3637,
+          "gain_pct": 2.5652,
+          "split": 50
+        },
+        {
+          "feature": "home_shots_diff_last5",
+          "gain": 334.988,
+          "gain_pct": 2.0491,
+          "split": 38
+        },
+        {
+          "feature": "away_shots_against_per_match_season",
+          "gain": 284.0264,
+          "gain_pct": 1.7373,
+          "split": 37
+        },
+        {
+          "feature": "away_shots_for_per_match_season",
+          "gain": 281.1917,
+          "gain_pct": 1.72,
+          "split": 37
+        },
+        {
+          "feature": "home_goals_for_home_venue_season",
+          "gain": 250.5187,
+          "gain_pct": 1.5324,
+          "split": 38
+        },
+        {
+          "feature": "away_defence_strength_score",
+          "gain": 242.284,
+          "gain_pct": 1.482,
+          "split": 37
+        },
+        {
+          "feature": "away_shots_diff_last10",
+          "gain": 235.4282,
+          "gain_pct": 1.4401,
+          "split": 37
+        },
+        {
+          "feature": "home_goals_for_per_match_season",
+          "gain": 214.6894,
+          "gain_pct": 1.3132,
+          "split": 27
+        },
+        {
+          "feature": "away_points_last10",
+          "gain": 212.013,
+          "gain_pct": 1.2968,
+          "split": 32
+        },
+        {
+          "feature": "away_shots_on_for_per_match_season",
+          "gain": 207.9969,
+          "gain_pct": 1.2723,
+          "split": 28
+        },
+        {
+          "feature": "away_goals_for_away_venue_season",
+          "gain": 207.7484,
+          "gain_pct": 1.2708,
+          "split": 29
+        },
+        {
+          "feature": "competition_id",
+          "gain": 191.1717,
+          "gain_pct": 1.1694,
+          "split": 26
+        },
+        {
+          "feature": "away_shots_on_against_per_match_season",
+          "gain": 190.3507,
+          "gain_pct": 1.1643,
+          "split": 24
+        },
+        {
+          "feature": "away_goals_against_per_match_season",
+          "gain": 185.7372,
+          "gain_pct": 1.1361,
+          "split": 29
+        },
+        {
+          "feature": "home_shots_for_per_match_season",
+          "gain": 181.3279,
+          "gain_pct": 1.1091,
+          "split": 25
+        }
+      ],
+      "home_n_trees": 250,
+      "away": [
+        {
+          "feature": "strength_diff",
+          "gain": 2185.9925,
+          "gain_pct": 14.5434,
+          "split": 72
+        },
+        {
+          "feature": "away_elo",
+          "gain": 2099.857,
+          "gain_pct": 13.9703,
+          "split": 107
+        },
+        {
+          "feature": "away_shots_diff_last10",
+          "gain": 1332.2515,
+          "gain_pct": 8.8635,
+          "split": 88
+        },
+        {
+          "feature": "away_shots_on_against_per_match_season",
+          "gain": 693.5565,
+          "gain_pct": 4.6142,
+          "split": 31
+        },
+        {
+          "feature": "away_shots_on_diff_last10",
+          "gain": 644.9134,
+          "gain_pct": 4.2906,
+          "split": 49
+        },
+        {
+          "feature": "home_shots_for_per_match_season",
+          "gain": 570.5033,
+          "gain_pct": 3.7956,
+          "split": 68
+        },
+        {
+          "feature": "home_defence_strength_score",
+          "gain": 475.045,
+          "gain_pct": 3.1605,
+          "split": 63
+        },
+        {
+          "feature": "away_attack_strength_score",
+          "gain": 472.9096,
+          "gain_pct": 3.1463,
+          "split": 28
+        },
+        {
+          "feature": "away_shots_against_per_match_season",
+          "gain": 420.5715,
+          "gain_pct": 2.7981,
+          "split": 50
+        },
+        {
+          "feature": "home_elo",
+          "gain": 342.7425,
+          "gain_pct": 2.2803,
+          "split": 29
+        },
+        {
+          "feature": "away_shots_against_per_match_last10",
+          "gain": 329.1503,
+          "gain_pct": 2.1898,
+          "split": 39
+        },
+        {
+          "feature": "home_shots_for_per_match_last10",
+          "gain": 295.1381,
+          "gain_pct": 1.9635,
+          "split": 41
+        },
+        {
+          "feature": "home_shots_against_per_match_season",
+          "gain": 292.356,
+          "gain_pct": 1.945,
+          "split": 37
+        },
+        {
+          "feature": "home_shots_diff_season",
+          "gain": 268.8902,
+          "gain_pct": 1.7889,
+          "split": 32
+        },
+        {
+          "feature": "home_shots_on_against_per_match_last10",
+          "gain": 258.8308,
+          "gain_pct": 1.722,
+          "split": 40
+        },
+        {
+          "feature": "home_shots_on_diff_season",
+          "gain": 203.6709,
+          "gain_pct": 1.355,
+          "split": 30
+        },
+        {
+          "feature": "away_shots_on_against_per_match_last10",
+          "gain": 194.839,
+          "gain_pct": 1.2963,
+          "split": 23
+        },
+        {
+          "feature": "home_shots_for_per_match_last5",
+          "gain": 178.8622,
+          "gain_pct": 1.19,
+          "split": 29
+        },
+        {
+          "feature": "away_shots_diff_last5",
+          "gain": 168.1245,
+          "gain_pct": 1.1185,
+          "split": 26
+        },
+        {
+          "feature": "home_shots_on_diff_last5",
+          "gain": 165.0246,
+          "gain_pct": 1.0979,
+          "split": 28
+        }
+      ],
+      "away_n_trees": 250
+    },
+    "fold_2": {
+      "home": [
+        {
+          "feature": "away_elo",
+          "gain": 8112.9206,
+          "gain_pct": 36.6709,
+          "split": 174
+        },
+        {
+          "feature": "strength_diff",
+          "gain": 3266.6077,
+          "gain_pct": 14.7653,
+          "split": 111
+        },
+        {
+          "feature": "home_shots_diff_last10",
+          "gain": 1465.4719,
+          "gain_pct": 6.624,
+          "split": 118
+        },
+        {
+          "feature": "home_shots_diff_last5",
+          "gain": 947.6253,
+          "gain_pct": 4.2833,
+          "split": 75
+        },
+        {
+          "feature": "home_shots_against_per_match_season",
+          "gain": 544.5031,
+          "gain_pct": 2.4612,
+          "split": 53
+        },
+        {
+          "feature": "away_shots_for_per_match_season",
+          "gain": 522.6955,
+          "gain_pct": 2.3626,
+          "split": 59
+        },
+        {
+          "feature": "away_shots_against_per_match_season",
+          "gain": 474.4044,
+          "gain_pct": 2.1443,
+          "split": 46
+        },
+        {
+          "feature": "col_89",
+          "gain": 459.6887,
+          "gain_pct": 2.0778,
+          "split": 62
+        },
+        {
+          "feature": "home_shots_on_diff_last5",
+          "gain": 413.9848,
+          "gain_pct": 1.8712,
+          "split": 29
+        },
+        {
+          "feature": "home_shots_on_diff_last10",
+          "gain": 405.0648,
+          "gain_pct": 1.8309,
+          "split": 30
+        },
+        {
+          "feature": "home_shots_against_per_match_last10",
+          "gain": 398.9863,
+          "gain_pct": 1.8034,
+          "split": 41
+        },
+        {
+          "feature": "away_defence_strength_score",
+          "gain": 291.9001,
+          "gain_pct": 1.3194,
+          "split": 38
+        },
+        {
+          "feature": "away_goals_for_away_venue_season",
+          "gain": 234.3782,
+          "gain_pct": 1.0594,
+          "split": 26
+        },
+        {
+          "feature": "home_attack_strength_score",
+          "gain": 230.162,
+          "gain_pct": 1.0403,
+          "split": 28
+        },
+        {
+          "feature": "away_goals_for_per_match_season",
+          "gain": 191.7217,
+          "gain_pct": 0.8666,
+          "split": 27
+        },
+        {
+          "feature": "away_shots_for_per_match_last5",
+          "gain": 190.5419,
+          "gain_pct": 0.8613,
+          "split": 24
+        },
+        {
+          "feature": "home_goals_for_per_match_season",
+          "gain": 185.3709,
+          "gain_pct": 0.8379,
+          "split": 23
+        },
+        {
+          "feature": "away_goals_diff_season",
+          "gain": 181.4137,
+          "gain_pct": 0.82,
+          "split": 26
+        },
+        {
+          "feature": "away_shots_diff_last10",
+          "gain": 169.0623,
+          "gain_pct": 0.7642,
+          "split": 28
+        },
+        {
+          "feature": "home_shots_on_against_per_match_season",
+          "gain": 164.4742,
+          "gain_pct": 0.7434,
+          "split": 11
+        }
+      ],
+      "home_n_trees": 250,
+      "away": [
+        {
+          "feature": "away_elo",
+          "gain": 4917.0775,
+          "gain_pct": 26.9518,
+          "split": 144
+        },
+        {
+          "feature": "strength_diff",
+          "gain": 1281.8976,
+          "gain_pct": 7.0264,
+          "split": 33
+        },
+        {
+          "feature": "away_attack_strength_score",
+          "gain": 1139.2043,
+          "gain_pct": 6.2443,
+          "split": 56
+        },
+        {
+          "feature": "away_shots_diff_last10",
+          "gain": 731.1532,
+          "gain_pct": 4.0077,
+          "split": 49
+        },
+        {
+          "feature": "away_shots_on_diff_last10",
+          "gain": 682.7559,
+          "gain_pct": 3.7424,
+          "split": 54
+        },
+        {
+          "feature": "home_shots_for_per_match_season",
+          "gain": 603.0196,
+          "gain_pct": 3.3053,
+          "split": 66
+        },
+        {
+          "feature": "away_shots_against_per_match_last10",
+          "gain": 459.2822,
+          "gain_pct": 2.5175,
+          "split": 47
+        },
+        {
+          "feature": "away_shots_against_per_match_season",
+          "gain": 458.9508,
+          "gain_pct": 2.5156,
+          "split": 50
+        },
+        {
+          "feature": "away_goals_against_away_venue_season",
+          "gain": 403.8929,
+          "gain_pct": 2.2138,
+          "split": 42
+        },
+        {
+          "feature": "home_defence_strength_score",
+          "gain": 400.8004,
+          "gain_pct": 2.1969,
+          "split": 46
+        },
+        {
+          "feature": "away_shots_on_against_per_match_last10",
+          "gain": 393.7679,
+          "gain_pct": 2.1583,
+          "split": 47
+        },
+        {
+          "feature": "away_shots_against_per_match_last5",
+          "gain": 379.0637,
+          "gain_pct": 2.0778,
+          "split": 43
+        },
+        {
+          "feature": "away_shots_on_against_per_match_season",
+          "gain": 321.5914,
+          "gain_pct": 1.7627,
+          "split": 31
+        },
+        {
+          "feature": "away_shots_on_against_per_match_last5",
+          "gain": 301.4572,
+          "gain_pct": 1.6524,
+          "split": 25
+        },
+        {
+          "feature": "home_elo",
+          "gain": 276.1118,
+          "gain_pct": 1.5134,
+          "split": 21
+        },
+        {
+          "feature": "home_shots_on_diff_last5",
+          "gain": 266.5576,
+          "gain_pct": 1.4611,
+          "split": 37
+        },
+        {
+          "feature": "home_shots_on_against_per_match_last10",
+          "gain": 251.2248,
+          "gain_pct": 1.377,
+          "split": 29
+        },
+        {
+          "feature": "away_shots_on_diff_last5",
+          "gain": 250.8394,
+          "gain_pct": 1.3749,
+          "split": 26
+        },
+        {
+          "feature": "home_shots_for_per_match_last10",
+          "gain": 235.3398,
+          "gain_pct": 1.29,
+          "split": 29
+        },
+        {
+          "feature": "home_shots_diff_season",
+          "gain": 228.4056,
+          "gain_pct": 1.252,
+          "split": 23
+        }
+      ],
+      "away_n_trees": 250
+    },
+    "fold_3": {
+      "home": [
+        {
+          "feature": "away_elo",
+          "gain": 10727.0929,
+          "gain_pct": 39.3522,
+          "split": 185
+        },
+        {
+          "feature": "strength_diff",
+          "gain": 3578.8285,
+          "gain_pct": 13.1289,
+          "split": 89
+        },
+        {
+          "feature": "home_shots_diff_last10",
+          "gain": 1418.2146,
+          "gain_pct": 5.2027,
+          "split": 96
+        },
+        {
+          "feature": "home_shots_diff_last5",
+          "gain": 862.5028,
+          "gain_pct": 3.1641,
+          "split": 65
+        },
+        {
+          "feature": "home_goals_for_per_match_season",
+          "gain": 704.4517,
+          "gain_pct": 2.5843,
+          "split": 56
+        },
+        {
+          "feature": "away_shots_for_per_match_last10",
+          "gain": 696.9246,
+          "gain_pct": 2.5567,
+          "split": 70
+        },
+        {
+          "feature": "home_shots_on_diff_last5",
+          "gain": 649.5282,
+          "gain_pct": 2.3828,
+          "split": 37
+        },
+        {
+          "feature": "away_shots_for_per_match_season",
+          "gain": 616.4103,
+          "gain_pct": 2.2613,
+          "split": 58
+        },
+        {
+          "feature": "home_attack_strength_score",
+          "gain": 609.7128,
+          "gain_pct": 2.2367,
+          "split": 45
+        },
+        {
+          "feature": "away_goals_against_away_venue_season",
+          "gain": 591.5645,
+          "gain_pct": 2.1701,
+          "split": 20
+        },
+        {
+          "feature": "col_89",
+          "gain": 538.6901,
+          "gain_pct": 1.9762,
+          "split": 61
+        },
+        {
+          "feature": "home_shots_against_per_match_season",
+          "gain": 448.6587,
+          "gain_pct": 1.6459,
+          "split": 46
+        },
+        {
+          "feature": "home_shots_against_per_match_last10",
+          "gain": 386.0925,
+          "gain_pct": 1.4164,
+          "split": 36
+        },
+        {
+          "feature": "away_shots_against_per_match_season",
+          "gain": 330.1303,
+          "gain_pct": 1.2111,
+          "split": 35
+        },
+        {
+          "feature": "competition_id",
+          "gain": 281.4086,
+          "gain_pct": 1.0323,
+          "split": 28
+        },
+        {
+          "feature": "away_shots_on_for_per_match_season",
+          "gain": 274.4202,
+          "gain_pct": 1.0067,
+          "split": 26
+        },
+        {
+          "feature": "away_defence_strength_score",
+          "gain": 259.934,
+          "gain_pct": 0.9536,
+          "split": 26
+        },
+        {
+          "feature": "home_shots_on_diff_last10",
+          "gain": 255.3298,
+          "gain_pct": 0.9367,
+          "split": 21
+        },
+        {
+          "feature": "away_shots_for_per_match_last5",
+          "gain": 236.9172,
+          "gain_pct": 0.8691,
+          "split": 27
+        },
+        {
+          "feature": "away_shots_on_against_per_match_last10",
+          "gain": 213.6875,
+          "gain_pct": 0.7839,
+          "split": 26
+        }
+      ],
+      "home_n_trees": 250,
+      "away": [
+        {
+          "feature": "away_elo",
+          "gain": 8167.9334,
+          "gain_pct": 34.7859,
+          "split": 201
+        },
+        {
+          "feature": "strength_diff",
+          "gain": 3233.9332,
+          "gain_pct": 13.7728,
+          "split": 52
+        },
+        {
+          "feature": "away_attack_strength_score",
+          "gain": 1432.0166,
+          "gain_pct": 6.0987,
+          "split": 86
+        },
+        {
+          "feature": "home_shots_for_per_match_season",
+          "gain": 825.0338,
+          "gain_pct": 3.5137,
+          "split": 76
+        },
+        {
+          "feature": "away_shots_diff_last10",
+          "gain": 596.6917,
+          "gain_pct": 2.5412,
+          "split": 34
+        },
+        {
+          "feature": "away_shots_on_diff_last5",
+          "gain": 469.4376,
+          "gain_pct": 1.9993,
+          "split": 44
+        },
+        {
+          "feature": "away_shots_against_per_match_season",
+          "gain": 450.534,
+          "gain_pct": 1.9188,
+          "split": 47
+        },
+        {
+          "feature": "away_goals_against_away_venue_season",
+          "gain": 423.7222,
+          "gain_pct": 1.8046,
+          "split": 46
+        },
+        {
+          "feature": "away_shots_on_diff_last10",
+          "gain": 374.0084,
+          "gain_pct": 1.5928,
+          "split": 31
+        },
+        {
+          "feature": "away_shots_on_against_per_match_last10",
+          "gain": 363.6883,
+          "gain_pct": 1.5489,
+          "split": 34
+        },
+        {
+          "feature": "home_shots_diff_season",
+          "gain": 362.7451,
+          "gain_pct": 1.5449,
+          "split": 35
+        },
+        {
+          "feature": "home_shots_for_per_match_last5",
+          "gain": 356.733,
+          "gain_pct": 1.5193,
+          "split": 38
+        },
+        {
+          "feature": "away_shots_against_per_match_last5",
+          "gain": 346.908,
+          "gain_pct": 1.4774,
+          "split": 38
+        },
+        {
+          "feature": "home_shots_against_per_match_season",
+          "gain": 305.6455,
+          "gain_pct": 1.3017,
+          "split": 31
+        },
+        {
+          "feature": "home_defence_strength_score",
+          "gain": 298.9149,
+          "gain_pct": 1.273,
+          "split": 35
+        },
+        {
+          "feature": "away_goals_for_per_match_season",
+          "gain": 293.3517,
+          "gain_pct": 1.2493,
+          "split": 21
+        },
+        {
+          "feature": "home_shots_for_per_match_last10",
+          "gain": 293.2102,
+          "gain_pct": 1.2487,
+          "split": 32
+        },
+        {
+          "feature": "away_shots_diff_last5",
+          "gain": 277.9662,
+          "gain_pct": 1.1838,
+          "split": 34
+        },
+        {
+          "feature": "away_shots_against_per_match_last10",
+          "gain": 261.0641,
+          "gain_pct": 1.1118,
+          "split": 27
+        },
+        {
+          "feature": "away_shots_on_against_per_match_last5",
+          "gain": 251.7595,
+          "gain_pct": 1.0722,
+          "split": 23
+        }
+      ],
+      "away_n_trees": 250
+    }
+  },
+  "config_stability": {
+    "selected": [
+      12,
+      12,
+      12
+    ],
+    "stable": true
+  },
+  "calibration": {
+    "arm_a_v3": [
+      {
+        "bin_lo": 0.0,
+        "bin_hi": 0.1,
+        "n": 407,
+        "mean_predicted": 0.07111,
+        "observed_freq": 0.076167,
+        "gap": 0.005057
+      },
+      {
+        "bin_lo": 0.1,
+        "bin_hi": 0.2,
+        "n": 2160,
+        "mean_predicted": 0.159724,
+        "observed_freq": 0.150463,
+        "gap": -0.009261
+      },
+      {
+        "bin_lo": 0.2,
+        "bin_hi": 0.3,
+        "n": 6448,
+        "mean_predicted": 0.246322,
+        "observed_freq": 0.254808,
+        "gap": 0.008486
+      },
+      {
+        "bin_lo": 0.3,
+        "bin_hi": 0.4,
+        "n": 2279,
+        "mean_predicted": 0.348425,
+        "observed_freq": 0.327337,
+        "gap": -0.021088
+      },
+      {
+        "bin_lo": 0.4,
+        "bin_hi": 0.5,
+        "n": 1976,
+        "mean_predicted": 0.446552,
+        "observed_freq": 0.456984,
+        "gap": 0.010431
+      },
+      {
+        "bin_lo": 0.5,
+        "bin_hi": 0.6,
+        "n": 1372,
+        "mean_predicted": 0.545944,
+        "observed_freq": 0.552478,
+        "gap": 0.006534
+      },
+      {
+        "bin_lo": 0.6,
+        "bin_hi": 0.7,
+        "n": 778,
+        "mean_predicted": 0.644639,
+        "observed_freq": 0.622108,
+        "gap": -0.022531
+      },
+      {
+        "bin_lo": 0.7,
+        "bin_hi": 0.8,
+        "n": 412,
+        "mean_predicted": 0.739879,
+        "observed_freq": 0.75,
+        "gap": 0.010121
+      },
+      {
+        "bin_lo": 0.8,
+        "bin_hi": 0.9,
+        "n": 141,
+        "mean_predicted": 0.840715,
+        "observed_freq": 0.815603,
+        "gap": -0.025113
+      },
+      {
+        "bin_lo": 0.9,
+        "bin_hi": 1.0,
+        "n": 20,
+        "mean_predicted": 0.919354,
+        "observed_freq": 0.85,
+        "gap": -0.069354
+      }
+    ],
+    "arm_b_lgbm": [
+      {
+        "bin_lo": 0.0,
+        "bin_hi": 0.1,
+        "n": 106,
+        "mean_predicted": 0.084699,
+        "observed_freq": 0.056604,
+        "gap": -0.028095
+      },
+      {
+        "bin_lo": 0.1,
+        "bin_hi": 0.2,
+        "n": 2309,
+        "mean_predicted": 0.163255,
+        "observed_freq": 0.14162,
+        "gap": -0.021635
+      },
+      {
+        "bin_lo": 0.2,
+        "bin_hi": 0.3,
+        "n": 6704,
+        "mean_predicted": 0.244753,
+        "observed_freq": 0.252387,
+        "gap": 0.007633
+      },
+      {
+        "bin_lo": 0.3,
+        "bin_hi": 0.4,
+        "n": 2126,
+        "mean_predicted": 0.348141,
+        "observed_freq": 0.325964,
+        "gap": -0.022177
+      },
+      {
+        "bin_lo": 0.4,
+        "bin_hi": 0.5,
+        "n": 1935,
+        "mean_predicted": 0.447371,
+        "observed_freq": 0.457364,
+        "gap": 0.009994
+      },
+      {
+        "bin_lo": 0.5,
+        "bin_hi": 0.6,
+        "n": 1495,
+        "mean_predicted": 0.546678,
+        "observed_freq": 0.546488,
+        "gap": -0.000189
+      },
+      {
+        "bin_lo": 0.6,
+        "bin_hi": 0.7,
+        "n": 997,
+        "mean_predicted": 0.645495,
+        "observed_freq": 0.651956,
+        "gap": 0.006461
+      },
+      {
+        "bin_lo": 0.7,
+        "bin_hi": 0.8,
+        "n": 297,
+        "mean_predicted": 0.733817,
+        "observed_freq": 0.804714,
+        "gap": 0.070897
+      },
+      {
+        "bin_lo": 0.8,
+        "bin_hi": 0.9,
+        "n": 24,
+        "mean_predicted": 0.818552,
+        "observed_freq": 0.916667,
+        "gap": 0.098114
+      },
+      {
+        "bin_lo": 0.9,
+        "bin_hi": 1.0,
+        "n": 0,
+        "mean_predicted": null,
+        "observed_freq": null,
+        "gap": null
+      }
+    ]
+  },
+  "determinism_verified": true,
+  "leakage_checks": {
+    "no_2025_26": true,
+    "all_folds_chronological": true,
+    "config_from_inner_training_only": true,
+    "medians_from_training_only": true,
+    "identical_matrix_both_arms": true,
+    "shared_score_grid_K": true,
+    "market_used_as_feature": false,
+    "online_ad_used": false,
+    "dixon_coles_used": false,
+    "time_decay_used": false,
+    "quadratic_elo_used": false,
+    "early_stopping_used": false,
+    "clipping_applied": false
+  },
+  "decision": "FAIL",
+  "champion_candidate": false,
+  "rationale": "LightGBM did not beat honest V3 on the primary metric (-0.00034100). V3's linear Poisson structure is sufficient for this feature representation.",
+  "integrity_pre": {
+    "data/models/v2_poisson_venue.pkl": {
+      "expected": "25935b4e93fc4074f67f16e3181ed4df",
+      "actual": "25935b4e93fc4074f67f16e3181ed4df",
+      "status": "identical"
+    },
+    "data/models/v1_logreg.pkl": {
+      "expected": "5e504427712b35778bb8a62a8496c7cd",
+      "actual": "5e504427712b35778bb8a62a8496c7cd",
+      "status": "identical"
+    },
+    "data/models/v3_poisson_venue_elo_candidate.pkl": {
+      "expected": "a2850a7687822a5916663301f5ccc96c",
+      "actual": "a2850a7687822a5916663301f5ccc96c",
+      "status": "identical"
+    },
+    "data/processed/features.db": {
+      "expected": "e7ebe7fc07040a5927683c35b6371e63",
+      "actual": "e7ebe7fc07040a5927683c35b6371e63",
+      "status": "identical"
+    },
+    "data/processed/matches.db": {
+      "expected": "fdeed042096fa1c851aaee6c84995247",
+      "actual": "fdeed042096fa1c851aaee6c84995247",
+      "status": "identical"
+    }
+  },
+  "integrity_post": {
+    "data/models/v2_poisson_venue.pkl": {
+      "expected": "25935b4e93fc4074f67f16e3181ed4df",
+      "actual": "25935b4e93fc4074f67f16e3181ed4df",
+      "status": "identical"
+    },
+    "data/models/v1_logreg.pkl": {
+      "expected": "5e504427712b35778bb8a62a8496c7cd",
+      "actual": "5e504427712b35778bb8a62a8496c7cd",
+      "status": "identical"
+    },
+    "data/models/v3_poisson_venue_elo_candidate.pkl": {
+      "expected": "a2850a7687822a5916663301f5ccc96c",
+      "actual": "a2850a7687822a5916663301f5ccc96c",
+      "status": "identical"
+    },
+    "data/processed/features.db": {
+      "expected": "e7ebe7fc07040a5927683c35b6371e63",
+      "actual": "e7ebe7fc07040a5927683c35b6371e63",
+      "status": "identical"
+    },
+    "data/processed/matches.db": {
+      "expected": "fdeed042096fa1c851aaee6c84995247",
+      "actual": "fdeed042096fa1c851aaee6c84995247",
+      "status": "identical"
+    }
+  }
+}

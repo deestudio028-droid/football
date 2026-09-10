@@ -1,0 +1,6 @@
+test_case,inputs,expected_behavior,crashed,returned_prediction_object,error_message,status
+Non-existent Team Name,"(Atlantis FC, Chelsea, Premier League)",Returns gracefully with initialization notes / fallback without throwing uncaught exceptions,False,False,,PASS
+Non-existent Opponent,"(Arsenal, Mordor United, Premier League)",Returns gracefully with initialization notes without uncaught exceptions,False,False,,PASS
+Invalid League Name,"(Arsenal, Chelsea, Martian Premier League)",Gracefully falls back to global parameters without crash,False,True,,PASS
+Empty String Team Names,"(, , Premier League)",Gracefully handles empty strings,False,False,,PASS
+Promoted Team First Top-Flight Match,"(Luton Town, Arsenal, Premier League)",Successfully triggers promoted-team initialization flag without corrupting prediction,False,True,,PASS

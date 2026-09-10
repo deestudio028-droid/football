@@ -1,0 +1,657 @@
+{
+  "generated_at": "2026-08-22T16:20:40.764959+00:00",
+  "experiment": "Phase 37 \u2014 Experiment E12 (Orthogonal Signal & Bounded Lambda Adjustment)",
+  "governance": {
+    "production_v4_status": "FROZEN_UNMODIFIED",
+    "e10_status": "CANDIDATE_FOR_PROSPECTIVE_TEST",
+    "protected_baseline_assets_verified": true,
+    "protected_asset_count": 20
+  },
+  "pooled_out_of_sample_metrics": {
+    "ARM_A_Pure_E10_Champion": {
+      "accuracy_pct": 53.12,
+      "correct": 3762,
+      "total": 7082,
+      "log_loss": 0.98336,
+      "brier_score": 0.585881,
+      "rps": 0.199489,
+      "macro_f1": 0.3973,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0069,
+      "ece_by_class": {
+        "H": 0.02,
+        "D": 0.0069,
+        "A": 0.021
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4465,
+          "actual_count": 3097,
+          "precision_pct": 55.03,
+          "recall_pct": 79.33,
+          "f1": 0.6498
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2617,
+          "actual_count": 2197,
+          "precision_pct": 49.87,
+          "recall_pct": 59.4,
+          "f1": 0.5422
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4271,
+        "D": 0.2492,
+        "A": 0.3237
+      }
+    },
+    "ARM_B_E10_xG_Residual": {
+      "accuracy_pct": 52.95,
+      "correct": 3750,
+      "total": 7082,
+      "log_loss": 0.984488,
+      "brier_score": 0.586754,
+      "rps": 0.199849,
+      "macro_f1": 0.3963,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0061,
+      "ece_by_class": {
+        "H": 0.0161,
+        "D": 0.0061,
+        "A": 0.0182
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4428,
+          "actual_count": 3097,
+          "precision_pct": 55.06,
+          "recall_pct": 78.72,
+          "f1": 0.648
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2654,
+          "actual_count": 2197,
+          "precision_pct": 49.43,
+          "recall_pct": 59.72,
+          "f1": 0.5409
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4281,
+        "D": 0.2484,
+        "A": 0.3235
+      }
+    },
+    "ARM_C_E10_xG_Trend": {
+      "accuracy_pct": 53.04,
+      "correct": 3756,
+      "total": 7082,
+      "log_loss": 0.983653,
+      "brier_score": 0.586018,
+      "rps": 0.199539,
+      "macro_f1": 0.3969,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0081,
+      "ece_by_class": {
+        "H": 0.0178,
+        "D": 0.0081,
+        "A": 0.0234
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4446,
+          "actual_count": 3097,
+          "precision_pct": 55.02,
+          "recall_pct": 78.98,
+          "f1": 0.6485
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2636,
+          "actual_count": 2197,
+          "precision_pct": 49.7,
+          "recall_pct": 59.63,
+          "f1": 0.5421
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4268,
+        "D": 0.249,
+        "A": 0.3242
+      }
+    },
+    "ARM_D_E10_Venue_Specialization": {
+      "accuracy_pct": 52.87,
+      "correct": 3744,
+      "total": 7082,
+      "log_loss": 0.982788,
+      "brier_score": 0.585583,
+      "rps": 0.199288,
+      "macro_f1": 0.3958,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0104,
+      "ece_by_class": {
+        "H": 0.0086,
+        "D": 0.0104,
+        "A": 0.0175
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4405,
+          "actual_count": 3097,
+          "precision_pct": 55.12,
+          "recall_pct": 78.4,
+          "f1": 0.6473
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2677,
+          "actual_count": 2197,
+          "precision_pct": 49.16,
+          "recall_pct": 59.9,
+          "f1": 0.54
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4323,
+        "D": 0.243,
+        "A": 0.3248
+      }
+    },
+    "ARM_E_E10_xG_Matchup": {
+      "accuracy_pct": 52.82,
+      "correct": 3741,
+      "total": 7082,
+      "log_loss": 0.982996,
+      "brier_score": 0.585651,
+      "rps": 0.199344,
+      "macro_f1": 0.3966,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.011,
+      "ece_by_class": {
+        "H": 0.0121,
+        "D": 0.011,
+        "A": 0.0185
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4275,
+          "actual_count": 3097,
+          "precision_pct": 55.65,
+          "recall_pct": 76.82,
+          "f1": 0.6454
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2807,
+          "actual_count": 2197,
+          "precision_pct": 48.52,
+          "recall_pct": 61.99,
+          "f1": 0.5444
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4283,
+        "D": 0.243,
+        "A": 0.3287
+      }
+    },
+    "ARM_F_E10_Fatigue_Interactions": {
+      "accuracy_pct": 53.09,
+      "correct": 3760,
+      "total": 7082,
+      "log_loss": 0.983721,
+      "brier_score": 0.586124,
+      "rps": 0.199591,
+      "macro_f1": 0.3971,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.007,
+      "ece_by_class": {
+        "H": 0.0162,
+        "D": 0.007,
+        "A": 0.0194
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4471,
+          "actual_count": 3097,
+          "precision_pct": 54.95,
+          "recall_pct": 79.33,
+          "f1": 0.6493
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2611,
+          "actual_count": 2197,
+          "precision_pct": 49.9,
+          "recall_pct": 59.31,
+          "f1": 0.542
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4288,
+        "D": 0.2477,
+        "A": 0.3235
+      }
+    },
+    "ARM_G_E10_Elo_xG_Orthogonal": {
+      "accuracy_pct": 52.85,
+      "correct": 3743,
+      "total": 7082,
+      "log_loss": 0.983053,
+      "brier_score": 0.585713,
+      "rps": 0.199381,
+      "macro_f1": 0.3967,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0095,
+      "ece_by_class": {
+        "H": 0.0133,
+        "D": 0.0095,
+        "A": 0.0174
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4283,
+          "actual_count": 3097,
+          "precision_pct": 55.66,
+          "recall_pct": 76.98,
+          "f1": 0.6461
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2799,
+          "actual_count": 2197,
+          "precision_pct": 48.55,
+          "recall_pct": 61.86,
+          "f1": 0.544
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4293,
+        "D": 0.243,
+        "A": 0.3277
+      }
+    },
+    "ARM_H_E10_Best_Orthogonal_Combo": {
+      "accuracy_pct": 52.99,
+      "correct": 3753,
+      "total": 7082,
+      "log_loss": 0.982804,
+      "brier_score": 0.585612,
+      "rps": 0.199312,
+      "macro_f1": 0.3973,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0108,
+      "ece_by_class": {
+        "H": 0.0139,
+        "D": 0.0108,
+        "A": 0.0161
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4343,
+          "actual_count": 3097,
+          "precision_pct": 55.49,
+          "recall_pct": 77.82,
+          "f1": 0.6478
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2739,
+          "actual_count": 2197,
+          "precision_pct": 49.03,
+          "recall_pct": 61.13,
+          "f1": 0.5442
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4304,
+        "D": 0.2433,
+        "A": 0.3263
+      }
+    },
+    "ARM_I_E10_Bounded_Adjustment_Tight_B02": {
+      "accuracy_pct": 52.84,
+      "correct": 3742,
+      "total": 7082,
+      "log_loss": 0.982837,
+      "brier_score": 0.585578,
+      "rps": 0.199328,
+      "macro_f1": 0.3955,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0068,
+      "ece_by_class": {
+        "H": 0.0137,
+        "D": 0.0068,
+        "A": 0.0173
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4408,
+          "actual_count": 3097,
+          "precision_pct": 55.1,
+          "recall_pct": 78.43,
+          "f1": 0.6473
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2674,
+          "actual_count": 2197,
+          "precision_pct": 49.1,
+          "recall_pct": 59.76,
+          "f1": 0.5391
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4285,
+        "D": 0.2468,
+        "A": 0.3247
+      }
+    },
+    "ARM_J_E10_Best_Signal_Bounded_B05": {
+      "accuracy_pct": 52.99,
+      "correct": 3753,
+      "total": 7082,
+      "log_loss": 0.982804,
+      "brier_score": 0.585612,
+      "rps": 0.199312,
+      "macro_f1": 0.3973,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0108,
+      "ece_by_class": {
+        "H": 0.0139,
+        "D": 0.0108,
+        "A": 0.0161
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4343,
+          "actual_count": 3097,
+          "precision_pct": 55.49,
+          "recall_pct": 77.82,
+          "f1": 0.6478
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2739,
+          "actual_count": 2197,
+          "precision_pct": 49.03,
+          "recall_pct": 61.13,
+          "f1": 0.5442
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4304,
+        "D": 0.2433,
+        "A": 0.3263
+      }
+    }
+  },
+  "statistical_significance": {
+    "bootstrap_replicates": 1000,
+    "cluster_level": "Matchweek",
+    "e10_to_e12_bounded_adjustment": {
+      "delta_rps": -0.000177,
+      "ci_rps_95": [
+        -0.000651,
+        0.000237
+      ],
+      "p_value_rps": 0.422,
+      "delta_log_loss": -0.000556,
+      "ci_log_loss_95": [
+        -0.002011,
+        0.000801
+      ],
+      "p_value_log_loss": 0.42,
+      "is_statistically_significant": false
+    }
+  },
+  "scoreline_analysis": {
+    "0-0": {
+      "actual_count": 436,
+      "actual_frequency_pct": 6.16,
+      "e10_mean_prob_pct": 7.0,
+      "e12_mean_prob_pct": 6.86,
+      "delta_prob_pct": -0.14
+    },
+    "1-0": {
+      "actual_count": 665,
+      "actual_frequency_pct": 9.39,
+      "e10_mean_prob_pct": 8.16,
+      "e12_mean_prob_pct": 8.04,
+      "delta_prob_pct": -0.12
+    },
+    "0-1": {
+      "actual_count": 503,
+      "actual_frequency_pct": 7.1,
+      "e10_mean_prob_pct": 6.94,
+      "e12_mean_prob_pct": 6.86,
+      "delta_prob_pct": -0.07
+    },
+    "1-1": {
+      "actual_count": 855,
+      "actual_frequency_pct": 12.07,
+      "e10_mean_prob_pct": 11.78,
+      "e12_mean_prob_pct": 11.5,
+      "delta_prob_pct": -0.28
+    },
+    "2-0": {
+      "actual_count": 470,
+      "actual_frequency_pct": 6.64,
+      "e10_mean_prob_pct": 7.14,
+      "e12_mean_prob_pct": 7.16,
+      "delta_prob_pct": 0.02
+    },
+    "0-2": {
+      "actual_count": 373,
+      "actual_frequency_pct": 5.27,
+      "e10_mean_prob_pct": 5.34,
+      "e12_mean_prob_pct": 5.39,
+      "delta_prob_pct": 0.05
+    },
+    "2-1": {
+      "actual_count": 619,
+      "actual_frequency_pct": 8.74,
+      "e10_mean_prob_pct": 8.16,
+      "e12_mean_prob_pct": 7.99,
+      "delta_prob_pct": -0.16
+    },
+    "1-2": {
+      "actual_count": 500,
+      "actual_frequency_pct": 7.06,
+      "e10_mean_prob_pct": 7.05,
+      "e12_mean_prob_pct": 6.93,
+      "delta_prob_pct": -0.12
+    },
+    "2-2": {
+      "actual_count": 407,
+      "actual_frequency_pct": 5.75,
+      "e10_mean_prob_pct": 4.98,
+      "e12_mean_prob_pct": 4.84,
+      "delta_prob_pct": -0.14
+    }
+  },
+  "league_breakdown": {
+    "Premier League": {
+      "n_matches": 1520,
+      "e10_champion_rps": 0.1999,
+      "e10_champion_log_loss": 0.976316,
+      "e12_bounded_rps": 0.199829,
+      "e12_bounded_log_loss": 0.976144,
+      "delta_rps_vs_e10": -7.1e-05,
+      "delta_log_loss_vs_e10": -0.000171
+    },
+    "La Liga": {
+      "n_matches": 1520,
+      "e10_champion_rps": 0.198007,
+      "e10_champion_log_loss": 0.979583,
+      "e12_bounded_rps": 0.197254,
+      "e12_bounded_log_loss": 0.977025,
+      "delta_rps_vs_e10": -0.000753,
+      "delta_log_loss_vs_e10": -0.002558
+    },
+    "Bundesliga": {
+      "n_matches": 1224,
+      "e10_champion_rps": 0.20011,
+      "e10_champion_log_loss": 0.986526,
+      "e12_bounded_rps": 0.200596,
+      "e12_bounded_log_loss": 0.988327,
+      "delta_rps_vs_e10": 0.000486,
+      "delta_log_loss_vs_e10": 0.001801
+    },
+    "Serie A": {
+      "n_matches": 1521,
+      "e10_champion_rps": 0.195323,
+      "e10_champion_log_loss": 0.985936,
+      "e12_bounded_rps": 0.194791,
+      "e12_bounded_log_loss": 0.98419,
+      "delta_rps_vs_e10": -0.000532,
+      "delta_log_loss_vs_e10": -0.001747
+    },
+    "Ligue 1": {
+      "n_matches": 1297,
+      "e10_champion_rps": 0.205043,
+      "e10_champion_log_loss": 0.990031,
+      "e12_bounded_rps": 0.205209,
+      "e12_bounded_log_loss": 0.990542,
+      "delta_rps_vs_e10": 0.000166,
+      "delta_log_loss_vs_e10": 0.00051
+    }
+  },
+  "subgroup_analysis": {
+    "High_Elo_Parity_dElo_le_50": {
+      "n_matches": 1317,
+      "e10_champion_rps": 0.226214,
+      "e10_champion_log_loss": 1.073342,
+      "e12_bounded_rps": 0.227048,
+      "e12_bounded_log_loss": 1.075652,
+      "delta_rps": 0.000834
+    },
+    "Low_Elo_Parity_dElo_gt_120": {
+      "n_matches": 3973,
+      "e10_champion_rps": 0.18198,
+      "e10_champion_log_loss": 0.920069,
+      "e12_bounded_rps": 0.181478,
+      "e12_bounded_log_loss": 0.918593,
+      "delta_rps": -0.000502
+    },
+    "Low_Expected_Goals_lam_le_240": {
+      "n_matches": 266,
+      "e10_champion_rps": 0.223735,
+      "e10_champion_log_loss": 1.089626,
+      "e12_bounded_rps": 0.224281,
+      "e12_bounded_log_loss": 1.091363,
+      "delta_rps": 0.000546
+    },
+    "High_Expected_Goals_lam_gt_300": {
+      "n_matches": 1732,
+      "e10_champion_rps": 0.167657,
+      "e10_champion_log_loss": 0.849556,
+      "e12_bounded_rps": 0.167978,
+      "e12_bounded_log_loss": 0.850646,
+      "delta_rps": 0.000321
+    },
+    "Home_Heavy_Favorites": {
+      "n_matches": 3550,
+      "e10_champion_rps": 0.185173,
+      "e10_champion_log_loss": 0.932624,
+      "e12_bounded_rps": 0.18459,
+      "e12_bounded_log_loss": 0.930739,
+      "delta_rps": -0.000583
+    },
+    "Away_Favorites": {
+      "n_matches": 1961,
+      "e10_champion_rps": 0.203775,
+      "e10_champion_log_loss": 0.998632,
+      "e12_bounded_rps": 0.203769,
+      "e12_bounded_log_loss": 0.998901,
+      "delta_rps": -6e-06
+    }
+  },
+  "promotion_verdict": {
+    "verdict": "E12 RESEARCH ONLY \u2014 KEEP E10 AS CHAMPION",
+    "rationale": "Bounded lambda adjustment (+/-5%) on top of V4 with Dixon-Coles yields an RPS of 0.199312 vs Pure E10 Champion 0.199489 (Delta RPS = -0.000177, p = 0.4220). While bounded adjustment successfully avoided the severe collinear degradation of E11 (+0.000470 RPS), it provides no statistically significant out-of-sample edge over Pure E10. Pure E10 remains the champion."
+  }
+}

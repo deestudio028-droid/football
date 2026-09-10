@@ -1,0 +1,1070 @@
+{
+  "generated_at": "2026-08-20T14:05:01.239890+00:00",
+  "experiment": "E6 \u2014 V3 vs V3 + Online Attack/Defense",
+  "solver": "sklearn PoissonRegressor (project V3 path, not IRLS)",
+  "dataset": {
+    "n_fixtures": 8983,
+    "leagues": [
+      "Bundesliga",
+      "La Liga",
+      "Ligue 1",
+      "Premier League",
+      "Serie A"
+    ],
+    "seasons": [
+      "2020/2021",
+      "2021/2022",
+      "2022/2023",
+      "2023/2024",
+      "2024/2025"
+    ],
+    "quarantined_season": "2025/2026",
+    "market_used": false,
+    "dixon_coles_used": false,
+    "time_decay_used": false,
+    "quadratic_elo_used": false
+  },
+  "feature_contract": {
+    "v3_n": 87,
+    "e6_n": 91,
+    "added_columns": [
+      "A_home",
+      "D_home",
+      "A_away",
+      "D_away"
+    ],
+    "e6_first_87_equals_v3": true
+  },
+  "estimator_config": {
+    "alpha": 1.0,
+    "max_iter": 2000,
+    "model": "PoissonRegressor"
+  },
+  "lr_grid": [
+    0.005,
+    0.01,
+    0.02,
+    0.035,
+    0.05
+  ],
+  "state_clip": 1.5,
+  "zero_online_control": {
+    "max_abs_dlambda": 1.7763568394002505e-15,
+    "max_abs_dP": 6.661338147750939e-16,
+    "passed": true
+  },
+  "folds": [
+    {
+      "fold": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "test_season": "2022/2023",
+      "n_train": 3652,
+      "n_test": 1827,
+      "n_inner_splits": 1,
+      "selected_lr": 0.01,
+      "mean_inner_log_loss": 1.003914,
+      "lr_curve": [
+        {
+          "lr": 0.005,
+          "mean_inner_log_loss": 1.00408192,
+          "per_split_log_loss": [
+            1.00408192
+          ]
+        },
+        {
+          "lr": 0.01,
+          "mean_inner_log_loss": 1.00391371,
+          "per_split_log_loss": [
+            1.00391371
+          ]
+        },
+        {
+          "lr": 0.02,
+          "mean_inner_log_loss": 1.00395972,
+          "per_split_log_loss": [
+            1.00395972
+          ]
+        },
+        {
+          "lr": 0.035,
+          "mean_inner_log_loss": 1.0041861,
+          "per_split_log_loss": [
+            1.0041861
+          ]
+        },
+        {
+          "lr": 0.05,
+          "mean_inner_log_loss": 1.00432359,
+          "per_split_log_loss": [
+            1.00432359
+          ]
+        }
+      ],
+      "baseline_rates": {
+        "mu_home": 1.5120481927710843,
+        "mu_away": 1.2929901423877328,
+        "n_train": 3652
+      },
+      "state_diagnostics": {
+        "A_home": {
+          "mean": 0.022719,
+          "std": 0.182173,
+          "min": -0.299605,
+          "max": 0.629648
+        },
+        "D_home": {
+          "mean": 0.046993,
+          "std": 0.137904,
+          "min": -0.339751,
+          "max": 0.395354
+        },
+        "A_away": {
+          "mean": 0.023239,
+          "std": 0.182001,
+          "min": -0.301426,
+          "max": 0.654396
+        },
+        "D_away": {
+          "mean": 0.04731,
+          "std": 0.137106,
+          "min": -0.327462,
+          "max": 0.40224
+        },
+        "all_finite": true,
+        "within_clip": true,
+        "collapsed": false,
+        "exploded": false,
+        "stable": true
+      },
+      "extreme_safety": {
+        "A": {
+          "lambda_home_range": [
+            0.591057,
+            4.080818
+          ],
+          "lambda_away_range": [
+            0.531611,
+            3.930153
+          ],
+          "lambda_finite": true,
+          "lambda_positive": true,
+          "lambda_within_max": true,
+          "prob_finite": true,
+          "prob_in_unit": true,
+          "prob_sums_to_one": true,
+          "max_rowsum_deviation": 0.0,
+          "passed": true
+        },
+        "B": {
+          "lambda_home_range": [
+            0.558691,
+            4.162965
+          ],
+          "lambda_away_range": [
+            0.522997,
+            4.094165
+          ],
+          "lambda_finite": true,
+          "lambda_positive": true,
+          "lambda_within_max": true,
+          "prob_finite": true,
+          "prob_in_unit": true,
+          "prob_sums_to_one": true,
+          "max_rowsum_deviation": 0.0,
+          "passed": true
+        }
+      },
+      "test_A_v3": {
+        "n": 1827,
+        "log_loss": 0.994877,
+        "brier": 0.593531,
+        "rps": 0.205141,
+        "accuracy": 0.527641,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.227919,
+        "ece": 0.008683,
+        "home_goal_mae": 0.970544,
+        "away_goal_mae": 0.849845
+      },
+      "test_B_e6": {
+        "n": 1827,
+        "log_loss": 0.994881,
+        "brier": 0.593293,
+        "rps": 0.205061,
+        "accuracy": 0.52983,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.226746,
+        "ece": 0.013246,
+        "home_goal_mae": 0.966757,
+        "away_goal_mae": 0.850073
+      },
+      "prediction_change": {
+        "mean_abs_lambda_home_delta": 0.036523,
+        "mean_abs_lambda_away_delta": 0.033632,
+        "max_lambda_delta": 0.404717,
+        "mean_abs_probability_delta": 0.008279,
+        "max_probability_delta": 0.050566,
+        "pct_fixtures_materially_changed": 51.1221,
+        "pct_top_prediction_changed": 2.0252,
+        "material_threshold": 0.01
+      }
+    },
+    {
+      "fold": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "test_season": "2023/2024",
+      "n_train": 5479,
+      "n_test": 1752,
+      "n_inner_splits": 2,
+      "selected_lr": 0.02,
+      "mean_inner_log_loss": 0.999213,
+      "lr_curve": [
+        {
+          "lr": 0.005,
+          "mean_inner_log_loss": 0.99972488,
+          "per_split_log_loss": [
+            1.00408192,
+            0.99536783
+          ]
+        },
+        {
+          "lr": 0.01,
+          "mean_inner_log_loss": 0.9993976,
+          "per_split_log_loss": [
+            1.00391371,
+            0.99488149
+          ]
+        },
+        {
+          "lr": 0.02,
+          "mean_inner_log_loss": 0.99921303,
+          "per_split_log_loss": [
+            1.00395972,
+            0.99446634
+          ]
+        },
+        {
+          "lr": 0.035,
+          "mean_inner_log_loss": 0.99926482,
+          "per_split_log_loss": [
+            1.0041861,
+            0.99434355
+          ]
+        },
+        {
+          "lr": 0.05,
+          "mean_inner_log_loss": 0.99933886,
+          "per_split_log_loss": [
+            1.00432359,
+            0.99435413
+          ]
+        }
+      ],
+      "baseline_rates": {
+        "mu_home": 1.5272860010950904,
+        "mu_away": 1.265011863478737,
+        "n_train": 5479
+      },
+      "state_diagnostics": {
+        "A_home": {
+          "mean": 0.047009,
+          "std": 0.250942,
+          "min": -0.484842,
+          "max": 0.769375
+        },
+        "D_home": {
+          "mean": 0.092783,
+          "std": 0.194188,
+          "min": -0.502322,
+          "max": 0.596887
+        },
+        "A_away": {
+          "mean": 0.047403,
+          "std": 0.250428,
+          "min": -0.485284,
+          "max": 0.77661
+        },
+        "D_away": {
+          "mean": 0.092016,
+          "std": 0.195177,
+          "min": -0.522358,
+          "max": 0.600178
+        },
+        "all_finite": true,
+        "within_clip": true,
+        "collapsed": false,
+        "exploded": false,
+        "stable": true
+      },
+      "extreme_safety": {
+        "A": {
+          "lambda_home_range": [
+            0.599149,
+            4.785967
+          ],
+          "lambda_away_range": [
+            0.538476,
+            3.520322
+          ],
+          "lambda_finite": true,
+          "lambda_positive": true,
+          "lambda_within_max": true,
+          "prob_finite": true,
+          "prob_in_unit": true,
+          "prob_sums_to_one": true,
+          "max_rowsum_deviation": 0.0,
+          "passed": true
+        },
+        "B": {
+          "lambda_home_range": [
+            0.572478,
+            4.835046
+          ],
+          "lambda_away_range": [
+            0.524961,
+            3.493402
+          ],
+          "lambda_finite": true,
+          "lambda_positive": true,
+          "lambda_within_max": true,
+          "prob_finite": true,
+          "prob_in_unit": true,
+          "prob_sums_to_one": true,
+          "max_rowsum_deviation": 0.0,
+          "passed": true
+        }
+      },
+      "test_A_v3": {
+        "n": 1752,
+        "log_loss": 0.98199,
+        "brier": 0.584213,
+        "rps": 0.1953,
+        "accuracy": 0.538242,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.228837,
+        "ece": 0.016254,
+        "home_goal_mae": 0.972738,
+        "away_goal_mae": 0.877238
+      },
+      "test_B_e6": {
+        "n": 1752,
+        "log_loss": 0.979988,
+        "brier": 0.58296,
+        "rps": 0.194715,
+        "accuracy": 0.540525,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.229121,
+        "ece": 0.018658,
+        "home_goal_mae": 0.968786,
+        "away_goal_mae": 0.874537
+      },
+      "prediction_change": {
+        "mean_abs_lambda_home_delta": 0.025398,
+        "mean_abs_lambda_away_delta": 0.018255,
+        "max_lambda_delta": 0.106193,
+        "mean_abs_probability_delta": 0.004493,
+        "max_probability_delta": 0.030593,
+        "pct_fixtures_materially_changed": 21.8037,
+        "pct_top_prediction_changed": 0.8562,
+        "material_threshold": 0.01
+      }
+    },
+    {
+      "fold": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "test_season": "2024/2025",
+      "n_train": 7231,
+      "n_test": 1752,
+      "n_inner_splits": 3,
+      "selected_lr": 0.01,
+      "mean_inner_log_loss": 0.992738,
+      "lr_curve": [
+        {
+          "lr": 0.005,
+          "mean_inner_log_loss": 0.99291842,
+          "per_split_log_loss": [
+            1.00408192,
+            0.99536783,
+            0.97930549
+          ]
+        },
+        {
+          "lr": 0.01,
+          "mean_inner_log_loss": 0.99273752,
+          "per_split_log_loss": [
+            1.00391371,
+            0.99488149,
+            0.97941737
+          ]
+        },
+        {
+          "lr": 0.02,
+          "mean_inner_log_loss": 0.99280483,
+          "per_split_log_loss": [
+            1.00395972,
+            0.99446634,
+            0.97998843
+          ]
+        },
+        {
+          "lr": 0.035,
+          "mean_inner_log_loss": 0.99307424,
+          "per_split_log_loss": [
+            1.0041861,
+            0.99434355,
+            0.98069306
+          ]
+        },
+        {
+          "lr": 0.05,
+          "mean_inner_log_loss": 0.9932766,
+          "per_split_log_loss": [
+            1.00432359,
+            0.99435413,
+            0.98115209
+          ]
+        }
+      ],
+      "baseline_rates": {
+        "mu_home": 1.5429401189323746,
+        "mu_away": 1.271746646383626,
+        "n_train": 7231
+      },
+      "state_diagnostics": {
+        "A_home": {
+          "mean": 0.050165,
+          "std": 0.225436,
+          "min": -0.329107,
+          "max": 0.693859
+        },
+        "D_home": {
+          "mean": 0.072792,
+          "std": 0.162486,
+          "min": -0.343061,
+          "max": 0.445829
+        },
+        "A_away": {
+          "mean": 0.049127,
+          "std": 0.225065,
+          "min": -0.331338,
+          "max": 0.684061
+        },
+        "D_away": {
+          "mean": 0.072186,
+          "std": 0.162837,
+          "min": -0.331749,
+          "max": 0.441701
+        },
+        "all_finite": true,
+        "within_clip": true,
+        "collapsed": false,
+        "exploded": false,
+        "stable": true
+      },
+      "extreme_safety": {
+        "A": {
+          "lambda_home_range": [
+            0.602691,
+            4.391552
+          ],
+          "lambda_away_range": [
+            0.55161,
+            3.62728
+          ],
+          "lambda_finite": true,
+          "lambda_positive": true,
+          "lambda_within_max": true,
+          "prob_finite": true,
+          "prob_in_unit": true,
+          "prob_sums_to_one": true,
+          "max_rowsum_deviation": 0.0,
+          "passed": true
+        },
+        "B": {
+          "lambda_home_range": [
+            0.587262,
+            4.578993
+          ],
+          "lambda_away_range": [
+            0.533027,
+            3.826296
+          ],
+          "lambda_finite": true,
+          "lambda_positive": true,
+          "lambda_within_max": true,
+          "prob_finite": true,
+          "prob_in_unit": true,
+          "prob_sums_to_one": true,
+          "max_rowsum_deviation": 0.0,
+          "passed": true
+        }
+      },
+      "test_A_v3": {
+        "n": 1752,
+        "log_loss": 0.983873,
+        "brier": 0.586181,
+        "rps": 0.200116,
+        "accuracy": 0.528539,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.229648,
+        "ece": 0.012004,
+        "home_goal_mae": 0.945322,
+        "away_goal_mae": 0.87564
+      },
+      "test_B_e6": {
+        "n": 1752,
+        "log_loss": 0.981452,
+        "brier": 0.584677,
+        "rps": 0.199465,
+        "accuracy": 0.528539,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.228508,
+        "ece": 0.011986,
+        "home_goal_mae": 0.940894,
+        "away_goal_mae": 0.874265
+      },
+      "prediction_change": {
+        "mean_abs_lambda_home_delta": 0.03726,
+        "mean_abs_lambda_away_delta": 0.029182,
+        "max_lambda_delta": 0.255652,
+        "mean_abs_probability_delta": 0.007222,
+        "max_probability_delta": 0.04185,
+        "pct_fixtures_materially_changed": 46.6324,
+        "pct_top_prediction_changed": 1.6553,
+        "material_threshold": 0.01
+      }
+    }
+  ],
+  "pooled_out_of_sample": {
+    "n": 5331,
+    "A_v3": {
+      "n": 5331,
+      "log_loss": 0.987025,
+      "brier": 0.588053,
+      "rps": 0.200255,
+      "accuracy": 0.53142,
+      "draw_recall": 0.0,
+      "draw_predicted_rate": 0.0,
+      "mean_p_draw": 0.228789,
+      "ece": 0.01132,
+      "home_goal_mae": 0.962976,
+      "away_goal_mae": 0.867325
+    },
+    "B_e6": {
+      "n": 5331,
+      "log_loss": 0.985574,
+      "brier": 0.587066,
+      "rps": 0.199822,
+      "accuracy": 0.532921,
+      "draw_recall": 0.0,
+      "draw_predicted_rate": 0.0,
+      "mean_p_draw": 0.228106,
+      "ece": 0.011302,
+      "home_goal_mae": 0.958924,
+      "away_goal_mae": 0.866063
+    }
+  },
+  "deltas_B_minus_A": {
+    "log_loss": 0.001451,
+    "brier": 0.000987,
+    "rps": 0.000433,
+    "ece": 1.8e-05
+  },
+  "prediction_change_pooled": {
+    "mean_abs_lambda_home_delta": 0.033109,
+    "mean_abs_lambda_away_delta": 0.027116,
+    "max_lambda_delta": 0.404717,
+    "mean_abs_probability_delta": 0.006687,
+    "max_probability_delta": 0.050566,
+    "pct_fixtures_materially_changed": 40.0113,
+    "pct_top_prediction_changed": 1.5194,
+    "material_threshold": 0.01
+  },
+  "by_league": {
+    "Bundesliga": {
+      "n": 918,
+      "A_v3": {
+        "n": 918,
+        "log_loss": 1.001078,
+        "brier": 0.597237,
+        "rps": 0.20398,
+        "accuracy": 0.504357,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.217732,
+        "ece": 0.022586
+      },
+      "B_e6": {
+        "n": 918,
+        "log_loss": 1.000539,
+        "brier": 0.596651,
+        "rps": 0.203607,
+        "accuracy": 0.510893,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.215676,
+        "ece": 0.025122
+      },
+      "delta_log_loss": 0.000539,
+      "delta_brier": 0.000586,
+      "delta_rps": 0.000373
+    },
+    "La Liga": {
+      "n": 1140,
+      "A_v3": {
+        "n": 1140,
+        "log_loss": 0.984913,
+        "brier": 0.585874,
+        "rps": 0.198417,
+        "accuracy": 0.534211,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.23904,
+        "ece": 0.021476
+      },
+      "B_e6": {
+        "n": 1140,
+        "log_loss": 0.98214,
+        "brier": 0.583942,
+        "rps": 0.197625,
+        "accuracy": 0.534211,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.239683,
+        "ece": 0.020606
+      },
+      "delta_log_loss": 0.002773,
+      "delta_brier": 0.001932,
+      "delta_rps": 0.000792
+    },
+    "Ligue 1": {
+      "n": 992,
+      "A_v3": {
+        "n": 992,
+        "log_loss": 0.994429,
+        "brier": 0.593534,
+        "rps": 0.206445,
+        "accuracy": 0.533266,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.229835,
+        "ece": 0.004063
+      },
+      "B_e6": {
+        "n": 992,
+        "log_loss": 0.993504,
+        "brier": 0.592952,
+        "rps": 0.20626,
+        "accuracy": 0.530242,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.229514,
+        "ece": 0.013721
+      },
+      "delta_log_loss": 0.000925,
+      "delta_brier": 0.000582,
+      "delta_rps": 0.000185
+    },
+    "Premier League": {
+      "n": 1140,
+      "A_v3": {
+        "n": 1140,
+        "log_loss": 0.966594,
+        "brier": 0.574172,
+        "rps": 0.198985,
+        "accuracy": 0.55614,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.220479,
+        "ece": 0.012263
+      },
+      "B_e6": {
+        "n": 1140,
+        "log_loss": 0.966387,
+        "brier": 0.57401,
+        "rps": 0.198923,
+        "accuracy": 0.555263,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.219017,
+        "ece": 0.011818
+      },
+      "delta_log_loss": 0.000207,
+      "delta_brier": 0.000162,
+      "delta_rps": 6.2e-05
+    },
+    "Serie A": {
+      "n": 1141,
+      "A_v3": {
+        "n": 1141,
+        "log_loss": 0.991807,
+        "brier": 0.591944,
+        "rps": 0.194983,
+        "accuracy": 0.524102,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.234836,
+        "ece": 0.022706
+      },
+      "B_e6": {
+        "n": 1141,
+        "log_loss": 0.989238,
+        "brier": 0.590402,
+        "rps": 0.194271,
+        "accuracy": 0.52936,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.234395,
+        "ece": 0.022839
+      },
+      "delta_log_loss": 0.002569,
+      "delta_brier": 0.001542,
+      "delta_rps": 0.000712
+    }
+  },
+  "by_season": {
+    "2022/2023": {
+      "n": 1827,
+      "A_v3": {
+        "n": 1827,
+        "log_loss": 0.994877,
+        "brier": 0.593531,
+        "rps": 0.205141,
+        "accuracy": 0.527641,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.227919,
+        "ece": 0.008683
+      },
+      "B_e6": {
+        "n": 1827,
+        "log_loss": 0.994881,
+        "brier": 0.593293,
+        "rps": 0.205061,
+        "accuracy": 0.52983,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.226746,
+        "ece": 0.013246
+      },
+      "delta_log_loss": -4e-06
+    },
+    "2023/2024": {
+      "n": 1752,
+      "A_v3": {
+        "n": 1752,
+        "log_loss": 0.98199,
+        "brier": 0.584213,
+        "rps": 0.1953,
+        "accuracy": 0.538242,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.228837,
+        "ece": 0.016254
+      },
+      "B_e6": {
+        "n": 1752,
+        "log_loss": 0.979988,
+        "brier": 0.58296,
+        "rps": 0.194715,
+        "accuracy": 0.540525,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.229121,
+        "ece": 0.018658
+      },
+      "delta_log_loss": 0.002002
+    },
+    "2024/2025": {
+      "n": 1752,
+      "A_v3": {
+        "n": 1752,
+        "log_loss": 0.983873,
+        "brier": 0.586181,
+        "rps": 0.200116,
+        "accuracy": 0.528539,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.229648,
+        "ece": 0.012004
+      },
+      "B_e6": {
+        "n": 1752,
+        "log_loss": 0.981452,
+        "brier": 0.584677,
+        "rps": 0.199465,
+        "accuracy": 0.528539,
+        "draw_recall": 0.0,
+        "draw_predicted_rate": 0.0,
+        "mean_p_draw": 0.228508,
+        "ece": 0.011986
+      },
+      "delta_log_loss": 0.002421
+    }
+  },
+  "lr_stability": {
+    "selected": [
+      0.01,
+      0.02,
+      0.01
+    ],
+    "spread": 2.0,
+    "stable": true
+  },
+  "states_stable": true,
+  "extreme_value_safety_passed": true,
+  "calibration": {
+    "A_v3": [
+      {
+        "bin_lo": 0.0,
+        "bin_hi": 0.1,
+        "n": 407,
+        "mean_predicted": 0.07111,
+        "observed_freq": 0.076167,
+        "gap": 0.005057
+      },
+      {
+        "bin_lo": 0.1,
+        "bin_hi": 0.2,
+        "n": 2160,
+        "mean_predicted": 0.159724,
+        "observed_freq": 0.150463,
+        "gap": -0.009261
+      },
+      {
+        "bin_lo": 0.2,
+        "bin_hi": 0.3,
+        "n": 6448,
+        "mean_predicted": 0.246322,
+        "observed_freq": 0.254808,
+        "gap": 0.008486
+      },
+      {
+        "bin_lo": 0.3,
+        "bin_hi": 0.4,
+        "n": 2279,
+        "mean_predicted": 0.348425,
+        "observed_freq": 0.327337,
+        "gap": -0.021088
+      },
+      {
+        "bin_lo": 0.4,
+        "bin_hi": 0.5,
+        "n": 1976,
+        "mean_predicted": 0.446552,
+        "observed_freq": 0.456984,
+        "gap": 0.010431
+      },
+      {
+        "bin_lo": 0.5,
+        "bin_hi": 0.6,
+        "n": 1372,
+        "mean_predicted": 0.545944,
+        "observed_freq": 0.552478,
+        "gap": 0.006534
+      },
+      {
+        "bin_lo": 0.6,
+        "bin_hi": 0.7,
+        "n": 778,
+        "mean_predicted": 0.644639,
+        "observed_freq": 0.622108,
+        "gap": -0.022531
+      },
+      {
+        "bin_lo": 0.7,
+        "bin_hi": 0.8,
+        "n": 412,
+        "mean_predicted": 0.739879,
+        "observed_freq": 0.75,
+        "gap": 0.010121
+      },
+      {
+        "bin_lo": 0.8,
+        "bin_hi": 0.9,
+        "n": 141,
+        "mean_predicted": 0.840715,
+        "observed_freq": 0.815603,
+        "gap": -0.025113
+      },
+      {
+        "bin_lo": 0.9,
+        "bin_hi": 1.0,
+        "n": 20,
+        "mean_predicted": 0.919354,
+        "observed_freq": 0.85,
+        "gap": -0.069354
+      }
+    ],
+    "B_e6": [
+      {
+        "bin_lo": 0.0,
+        "bin_hi": 0.1,
+        "n": 476,
+        "mean_predicted": 0.070523,
+        "observed_freq": 0.081933,
+        "gap": 0.01141
+      },
+      {
+        "bin_lo": 0.1,
+        "bin_hi": 0.2,
+        "n": 2246,
+        "mean_predicted": 0.159143,
+        "observed_freq": 0.158059,
+        "gap": -0.001084
+      },
+      {
+        "bin_lo": 0.2,
+        "bin_hi": 0.3,
+        "n": 6342,
+        "mean_predicted": 0.246661,
+        "observed_freq": 0.25544,
+        "gap": 0.008779
+      },
+      {
+        "bin_lo": 0.3,
+        "bin_hi": 0.4,
+        "n": 2218,
+        "mean_predicted": 0.347813,
+        "observed_freq": 0.32101,
+        "gap": -0.026804
+      },
+      {
+        "bin_lo": 0.4,
+        "bin_hi": 0.5,
+        "n": 1922,
+        "mean_predicted": 0.44652,
+        "observed_freq": 0.461498,
+        "gap": 0.014978
+      },
+      {
+        "bin_lo": 0.5,
+        "bin_hi": 0.6,
+        "n": 1362,
+        "mean_predicted": 0.546135,
+        "observed_freq": 0.544053,
+        "gap": -0.002082
+      },
+      {
+        "bin_lo": 0.6,
+        "bin_hi": 0.7,
+        "n": 802,
+        "mean_predicted": 0.645636,
+        "observed_freq": 0.619701,
+        "gap": -0.025935
+      },
+      {
+        "bin_lo": 0.7,
+        "bin_hi": 0.8,
+        "n": 435,
+        "mean_predicted": 0.741417,
+        "observed_freq": 0.742529,
+        "gap": 0.001112
+      },
+      {
+        "bin_lo": 0.8,
+        "bin_hi": 0.9,
+        "n": 161,
+        "mean_predicted": 0.8397,
+        "observed_freq": 0.819876,
+        "gap": -0.019825
+      },
+      {
+        "bin_lo": 0.9,
+        "bin_hi": 1.0,
+        "n": 29,
+        "mean_predicted": 0.919458,
+        "observed_freq": 0.862069,
+        "gap": -0.057389
+      }
+    ]
+  },
+  "determinism_verified": true,
+  "leakage_checks": {
+    "no_2025_26": true,
+    "all_folds_chronological": true,
+    "lr_from_inner_training_splits_only": true,
+    "baseline_rates_from_training_only": true,
+    "identical_fixtures_A_B": true,
+    "only_four_columns_differ": true,
+    "market_used": false,
+    "dixon_coles_used": false,
+    "time_decay_used": false,
+    "quadratic_elo_used": false,
+    "zero_online_control_passed": true
+  },
+  "decision": "PASS",
+  "rationale": "Log loss improved +0.001451, 3/3 secondary metrics improved, 5/5 leagues improved, lr stable ([0.01, 0.02, 0.01]).",
+  "integrity_pre": {
+    "data/models/v2_poisson_venue.pkl": {
+      "expected": "25935b4e93fc4074f67f16e3181ed4df",
+      "actual": "25935b4e93fc4074f67f16e3181ed4df",
+      "status": "identical"
+    },
+    "data/models/v1_logreg.pkl": {
+      "expected": "5e504427712b35778bb8a62a8496c7cd",
+      "actual": "5e504427712b35778bb8a62a8496c7cd",
+      "status": "identical"
+    },
+    "data/models/v3_poisson_venue_elo_candidate.pkl": {
+      "expected": "a2850a7687822a5916663301f5ccc96c",
+      "actual": "a2850a7687822a5916663301f5ccc96c",
+      "status": "identical"
+    },
+    "data/processed/features.db": {
+      "expected": "e7ebe7fc07040a5927683c35b6371e63",
+      "actual": "e7ebe7fc07040a5927683c35b6371e63",
+      "status": "identical"
+    },
+    "data/processed/matches.db": {
+      "expected": "fdeed042096fa1c851aaee6c84995247",
+      "actual": "fdeed042096fa1c851aaee6c84995247",
+      "status": "identical"
+    }
+  },
+  "integrity_post": {
+    "data/models/v2_poisson_venue.pkl": {
+      "expected": "25935b4e93fc4074f67f16e3181ed4df",
+      "actual": "25935b4e93fc4074f67f16e3181ed4df",
+      "status": "identical"
+    },
+    "data/models/v1_logreg.pkl": {
+      "expected": "5e504427712b35778bb8a62a8496c7cd",
+      "actual": "5e504427712b35778bb8a62a8496c7cd",
+      "status": "identical"
+    },
+    "data/models/v3_poisson_venue_elo_candidate.pkl": {
+      "expected": "a2850a7687822a5916663301f5ccc96c",
+      "actual": "a2850a7687822a5916663301f5ccc96c",
+      "status": "identical"
+    },
+    "data/processed/features.db": {
+      "expected": "e7ebe7fc07040a5927683c35b6371e63",
+      "actual": "e7ebe7fc07040a5927683c35b6371e63",
+      "status": "identical"
+    },
+    "data/processed/matches.db": {
+      "expected": "fdeed042096fa1c851aaee6c84995247",
+      "actual": "fdeed042096fa1c851aaee6c84995247",
+      "status": "identical"
+    }
+  }
+}

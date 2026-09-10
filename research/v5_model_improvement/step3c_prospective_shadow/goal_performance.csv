@@ -1,0 +1,3 @@
+model,home_goal_mae,away_goal_mae,total_goal_mae,exact_score_accuracy_pct,btts_accuracy_pct,over_25_accuracy_pct
+V4.0 Production Baseline,1.0939,0.8424,1.3121,0.0,60.61,51.52
+Joint Coherent Candidate (Step 3B),1.0933,0.8385,1.3136,0.0,60.61,51.52

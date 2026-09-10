@@ -1,0 +1,71 @@
+{
+  "frozen_at": "2026-08-21T06:07:45.406390+00:00",
+  "status": "RESEARCH_FROZEN_NOT_PRODUCTION",
+  "champion_name": "V4_Expanding_Window_DixonColes_plus_Elo_Stacking",
+  "version": "1.0",
+  "base_model": {
+    "name": "V4_poisson_venue_elo_online_ad",
+    "artifact_path": "data/models/v4_poisson_venue_elo_online_ad.pkl",
+    "artifact_md5": "06841f0c03c8597b2b8cd8f8ab064864",
+    "description": "Bivariate Poisson with causal pre-match Elo and causal online attack/defense states"
+  },
+  "component_a_dixon_coles": {
+    "methodology": "Shrunk League Empirical Bayes MLE (Phase 2)",
+    "frozen_source": "research/v4_promotion/dixon_coles_rho_method_frozen.json",
+    "frozen_md5": "822e742dcc82e5e96445b31c14c0c604",
+    "league_rhos": {
+      "Bundesliga": -0.0768,
+      "Ligue 1": -0.0583,
+      "Serie A": -0.0468,
+      "La Liga": -0.0387,
+      "Premier League": -0.0163
+    },
+    "global_fallback_rho": -0.056
+  },
+  "component_b_elo_draw": {
+    "methodology": "Bivariate Logistic Elo Draw Calibrator (Phase 3)",
+    "frozen_source": "research/v4_promotion/elo_draw_curve_method_frozen.json",
+    "frozen_md5": "65dc2cf762f3d78abcf1a617ef23fe00",
+    "coefficients": {
+      "a0_intercept": 0.2227,
+      "a1_logit_v4": 1.1278,
+      "a2_abs_elo": -0.1652
+    },
+    "formula": "logit(P(D)_Elo) = 0.2227 + 1.1278 * logit(P(D)_V4) - 0.1652 * (|dElo| / 100.0)"
+  },
+  "stacking_integration_layer": {
+    "formula": "logit(P(D)_new) = 0.1130 + 0.6037 * logit(P(D)_DC) + 0.4812 * logit(P(D)_Elo)",
+    "coefficients": {
+      "intercept": 0.113,
+      "weight_dc": 0.6037,
+      "weight_elo": 0.4812
+    },
+    "l2_regularization": 10.0,
+    "training_window": "Expanding historical window (all available prior domestic seasons)"
+  },
+  "redistribution_rule": {
+    "name": "Proportional Odds Simplex Redistribution",
+    "formula_home": "P(H)_new = P(H)_V4 * (1 - P(D)_new) / (1 - P(D)_V4)",
+    "formula_away": "P(A)_new = P(A)_V4 * (1 - P(D)_new) / (1 - P(D)_V4)",
+    "invariants": [
+      "P(H)_new + P(D)_new + P(A)_new == 1.0",
+      "P(H)_new >= 0, P(D)_new >= 0, P(A)_new >= 0",
+      "P(H)_new / P(A)_new == P(H)_V4 / P(A)_V4"
+    ],
+    "numerical_clipping": {
+      "min_prob": 1e-15,
+      "max_prob": 1.0
+    }
+  },
+  "historical_reused_oos_classification": {
+    "dataset": "research/v4_promotion/fresh_extended_fixture_ids.json",
+    "n_fixtures": 300,
+    "classification": "REUSED_HISTORICAL_RESEARCH_OOS",
+    "warning": "The 300 OOS fixtures were repeatedly evaluated across Phases 2-7. They must NOT be treated as an untouched prospective cohort."
+  },
+  "production_status": {
+    "promoted_to_production": false,
+    "production_models_modified": false,
+    "statement": "No production model modification occurred. All production artifacts remain strictly frozen."
+  }
+}

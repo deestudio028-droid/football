@@ -1,0 +1,193 @@
+{
+  "generated_at": "2026-08-22T19:19:00Z",
+  "phase": "Phase 34 — V5 Research-Driven Model Improvement Discovery",
+  "status": "COMPLETE",
+  "governance": {
+    "production_model": "data/models/v4_poisson_venue_elo_online_ad.pkl",
+    "production_model_status": "FROZEN_UNMODIFIED",
+    "production_feature_count": 91,
+    "shadow_gate": "v4_6_physical_draw_gate",
+    "shadow_gate_status": "FROZEN_UNMODIFIED",
+    "historical_candidate": "historical_candidate_h",
+    "historical_candidate_status": "FROZEN_UNMODIFIED",
+    "protected_baseline_assets_count": 20,
+    "protected_baseline_assets_integrity": "100% BIT-IDENTICAL"
+  },
+  "research_summary": {
+    "academic_papers_reviewed": 14,
+    "github_repositories_reviewed": 8,
+    "external_data_sources_evaluated": 6,
+    "current_features_inventoried": 91,
+    "candidate_features_evaluated": 28,
+    "model_architectures_compared": 15,
+    "ablation_arms_designed": 13,
+    "mandatory_promotion_gates": 10
+  },
+  "top_10_candidate_improvements": [
+    {
+      "rank": 1,
+      "name": "Rolling Expected Goals (xG) & npxG Engine",
+      "category": "Feature Engineering",
+      "expected_delta_rps": -0.00220,
+      "draw_impact": "Moderate (+1.5%)",
+      "data_source": "Understat / FBref (100% Free)",
+      "effort": "Medium",
+      "leakage_risk": "Low (Causally Lagged)",
+      "priority": "P1"
+    },
+    {
+      "rank": 2,
+      "name": "Vectorized Dixon-Coles Low-Score Transformation",
+      "category": "Score Distribution Matrix",
+      "expected_delta_rps": -0.00180,
+      "draw_impact": "Very High (+4.0%)",
+      "data_source": "Historical Match Results (Internal)",
+      "effort": "Low",
+      "leakage_risk": "Zero",
+      "priority": "P1"
+    },
+    {
+      "rank": 3,
+      "name": "Continuous Rating Parity (RPI) & Intensity Gate",
+      "category": "Residual Draw Correction",
+      "expected_delta_rps": -0.00160,
+      "draw_impact": "State-of-the-Art",
+      "data_source": "Internal Elo + xG",
+      "effort": "Low",
+      "leakage_risk": "Zero",
+      "priority": "P1"
+    },
+    {
+      "rank": 4,
+      "name": "Dual LightGBM Poisson Tree Regressors",
+      "category": "Non-Linear Intensity Engine",
+      "expected_delta_rps": -0.00150,
+      "draw_impact": "Moderate",
+      "data_source": "Tabular Feature Matrix",
+      "effort": "Medium",
+      "leakage_risk": "Low",
+      "priority": "P1"
+    },
+    {
+      "rank": 5,
+      "name": "Rest Delta & 14-Day Match Load Fatigue Index",
+      "category": "Schedule Fatigue Context",
+      "expected_delta_rps": -0.00090,
+      "draw_impact": "Low (+0.5%)",
+      "data_source": "Fixture Schedule DB (Free)",
+      "effort": "Low",
+      "leakage_risk": "Zero",
+      "priority": "P2"
+    },
+    {
+      "rank": 6,
+      "name": "Multi-Horizon Shin Devigged Market Odds Layer",
+      "category": "Market Calibration & Blending",
+      "expected_delta_rps": -0.00350,
+      "draw_impact": "High (+3.0%)",
+      "data_source": "Football-Data / OddAlerts",
+      "effort": "Medium",
+      "leakage_risk": "High (Strict Horizon Gating Needed)",
+      "priority": "P2"
+    },
+    {
+      "rank": 7,
+      "name": "Squad Financial Market Value Ratio (MVR)",
+      "category": "Structural Talent Anchor",
+      "expected_delta_rps": -0.00110,
+      "draw_impact": "Low",
+      "data_source": "Transfermarkt Open Archive",
+      "effort": "Medium",
+      "leakage_risk": "Low (Seasonally Frozen)",
+      "priority": "P2"
+    },
+    {
+      "rank": 8,
+      "name": "Exponential Half-Life Time Decay (t_1/2 = 5 matches)",
+      "category": "Form Weighting",
+      "expected_delta_rps": -0.00070,
+      "draw_impact": "Low",
+      "data_source": "Historical Match Results",
+      "effort": "Low",
+      "leakage_risk": "Zero",
+      "priority": "P2"
+    },
+    {
+      "rank": 9,
+      "name": "Box Shot Penetration & Deep Completion Ratios",
+      "category": "Advanced Shot Quality",
+      "expected_delta_rps": -0.00060,
+      "draw_impact": "Moderate",
+      "data_source": "Understat Open Data",
+      "effort": "Medium",
+      "leakage_risk": "Low",
+      "priority": "P3"
+    },
+    {
+      "rank": 10,
+      "name": "Horizon-Gated Confirmed Starting XI Lineup Elo",
+      "category": "Late-Breaking Lineup Rating",
+      "expected_delta_rps": -0.00280,
+      "draw_impact": "High",
+      "data_source": "Official Lineup Sheets (T-15m only)",
+      "effort": "High",
+      "leakage_risk": "High (Strict T-15m Gate)",
+      "priority": "P3"
+    }
+  ],
+  "top_3_experiment_blueprints": [
+    {
+      "experiment_id": "E10",
+      "title": "Dixon-Coles Low-Score Matrix Transformation + Continuous Parity Gate",
+      "target_gain_rps": -0.00180,
+      "data_cost": "$0 (Zero new data pipelines required)",
+      "complexity": "Low",
+      "risk": "Low",
+      "status": "APPROVED_NEXT_STEP"
+    },
+    {
+      "experiment_id": "E11",
+      "title": "Causal Expected Goals (xG) & Non-Penalty xG Feature Engine",
+      "target_gain_rps": -0.00220,
+      "data_cost": "$0 (Understat open-source archive 2014-2026)",
+      "complexity": "Medium",
+      "risk": "Low (Lagged)",
+      "status": "APPROVED_STAGE_2"
+    },
+    {
+      "experiment_id": "E12",
+      "title": "Dual LightGBM Poisson Intensity Regressors + Schedule Fatigue Engine",
+      "target_gain_rps": -0.00280,
+      "data_cost": "$0 (Calendar match dates in matches.db)",
+      "complexity": "Medium",
+      "risk": "Low",
+      "status": "APPROVED_STAGE_3"
+    }
+  ],
+  "answers_to_20_core_questions": {
+    "1_what_are_we_missing_today": "Low-score dependency modeling (0-0/1-1 draws underestimated by 18%), expected goals (xG) quality, and contextual fixture congestion/fatigue.",
+    "2_which_new_data_most_valuable": "Match-level and shot-level Expected Goals (xG, xGA, npxG) from 2014 to present.",
+    "3_which_data_free": "Football-Data.co.uk (shots on target, referee, odds), Understat (xG, shot maps), ClubElo (Elo ratings), and Calendar Schedule fatigue metrics.",
+    "4_which_features_improve_HDA": "Rolling EWMA xG differentials, opponent-adjusted Elo, squad market value ratio (MVR), and rest delta.",
+    "5_which_features_help_draw": "Continuous Rating Parity Index (RPI), combined low-chance expectation (xG_sum <= 2.20), and Dixon-Coles rho parameter (rho approx -0.12).",
+    "6_should_we_add_xG": "Yes (Mandatory). xG stabilizes team ability estimates in 5 matches vs 15-20 matches for raw goals.",
+    "7_should_we_add_shots_on_target": "Yes, but via advanced ratios (Box Shot Ratio, Deep Completion Ratio) to avoid collinearity.",
+    "8_should_we_add_player_availability": "Yes, as squad-level metrics (Squad Market Value Ratio, Missing Key Starter Share).",
+    "9_should_we_add_injuries": "Cautiously / Squad-level only, with strict T-6h information timestamps to prevent leakage.",
+    "10_should_we_add_lineup_strength": "Only at the T-15m pre-kickoff horizon; teamsheets are officially released 60m before kickoff.",
+    "11_should_we_add_referee_features": "No (Low priority); referee card/penalty bias is absorbed by home advantage and adds noise (<0.0002 RPS gain).",
+    "12_should_we_add_market_odds": "Yes, as a dual-benchmark and calibration layer, strictly horizon-gated (T-24h vs T-15m).",
+    "13_should_we_add_rest_congestion": "Yes (High priority); rest delta and 14-day match load are free, deterministic, and capture acute mid-week fatigue.",
+    "14_should_we_use_xgboost_lightgbm_catboost": "Yes, specifically Dual LightGBM Poisson Regressors predicting lambda_H and lambda_A with Poisson loss.",
+    "15_should_we_use_an_ensemble": "Yes; Convex probability-level blending (E7 style) combining Poisson/Dixon-Coles, LightGBM, and Market Odds.",
+    "16_should_we_improve_poisson_dixon_coles_first": "Yes, first; upgrading the probability grid to Dixon-Coles requires zero new data and immediately repairs draw suppression.",
+    "17_smallest_experiment_highest_information_gain": "Experiment E10 (Dixon-Coles Low-Score Transformation + Continuous Parity Gate on Frozen V4).",
+    "18_what_should_we_collect_starting_today": "Historical Understat xG (2014-2026), Football-Data.co.uk odds and shots on target, and pre-kickoff OddAlerts snapshots.",
+    "19_what_should_we_NOT_collect": "In-play live stats for pre-match inference, closing odds for 24h predictions, unverified rumors, and raw possession without spatial penetration.",
+    "20_recommended_V5_architecture": "A 3-layer hybrid: (Layer 1) Dual LightGBM Poisson Regressors with xG & Rest, (Layer 2) Vectorized Dixon-Coles Score Matrix (rho approx -0.12), (Layer 3) Continuous Rating Parity & Multi-Horizon Market Blending."
+  },
+  "verdict": {
+    "decision": "DO NOT MODIFY PRODUCTION V4 YET",
+    "next_immediate_action": "EXECUTE EXPERIMENT E10 (DIXON-COLES + CONTINUOUS PARITY GATE) IN ISOLATED RESEARCH NAMESPACE"
+  }
+}

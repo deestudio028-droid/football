@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-21T05:28:58.764083+00:00",
+  "historical_fixtures": 8983,
+  "oos_fixtures": 300,
+  "results_file": "full_score_matrix_results.json",
+  "report_file": "full_score_matrix_report.md",
+  "frozen_method_file": "full_score_matrix_method_frozen.json",
+  "frozen_method_hash": "cd44e1da88a50ac45e8383557ad5271f",
+  "integrity_passed": true,
+  "verdict": "B. PROMISING \u2014 NEEDS MORE VALIDATION",
+  "production_modified": false
+}

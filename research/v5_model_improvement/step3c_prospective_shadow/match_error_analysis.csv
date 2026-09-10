@@ -1,0 +1,34 @@
+fixture_id,matchup,actual_result,actual_score,v40_prediction,candidate_prediction,draw_risk_tier,classification
+420581351,Olympique Marseille vs Strasbourg,H,4.0-0.0,H,H,LOW,V4.0 correct / Candidate correct
+420581362,Arsenal vs Coventry City,H,3.0-0.0,H,H,LOW,V4.0 correct / Candidate correct
+420581363,Real Betis vs Real Sociedad,H,1.0-0.0,H,H,LOW,V4.0 correct / Candidate correct
+420581845,Hull City vs Manchester United,H,2.0-0.0,A,A,HIGH,Both wrong
+420582048,Nottingham Forest vs Leeds United,A,0.0-1.0,H,H,MEDIUM,Both wrong
+420582049,Ipswich Town vs Sunderland,H,2.0-1.0,A,A,MEDIUM,Both wrong
+420582050,Everton vs Crystal Palace,H,2.0-0.0,H,H,MEDIUM,V4.0 correct / Candidate correct
+420582189,Athletic Club vs Sevilla,A,1.0-3.0,H,H,MEDIUM,Both wrong
+420582220,Lens vs Auxerre,H,5.0-2.0,H,H,LOW,V4.0 correct / Candidate correct
+420582255,Inter vs Monza,H,4.0-1.0,H,H,LOW,V4.0 correct / Candidate correct
+420582256,Brentford vs Tottenham Hotspur,H,3.0-0.0,H,H,MEDIUM,V4.0 correct / Candidate correct
+420582254,Udinese vs Como,D,1.0-1.0,A,A,MEDIUM,Both wrong
+420582269,Valencia vs Celta de Vigo,D,0.0-0.0,H,H,MEDIUM,Both wrong
+420582305,Nice vs Lorient,D,0.0-0.0,H,H,HIGH,Both wrong
+420582304,Toulouse vs Olympique Lyonnais,A,0.0-2.0,A,A,HIGH,V4.0 correct / Candidate correct
+420582303,Troyes vs Paris,D,0.0-0.0,A,A,LOW,Both wrong
+420582302,Genoa vs Napoli,A,0.0-2.0,A,A,MEDIUM,V4.0 correct / Candidate correct
+420582301,Parma vs Cagliari,A,0.0-1.0,A,A,HIGH,V4.0 correct / Candidate correct
+420582306,Le Mans vs Brest,D,2.0-2.0,H,H,MEDIUM,Both wrong
+420582312,Espanyol vs Real Madrid,A,1.0-2.0,A,A,LOW,V4.0 correct / Candidate correct
+420583619,Angers SCO vs LOSC Lille,A,0.0-2.0,A,A,LOW,V4.0 correct / Candidate correct
+420583623,Brighton & Hove Albion vs Aston Villa,H,4.0-0.0,H,H,LOW,V4.0 correct / Candidate correct
+420583622,Manchester City vs AFC Bournemouth,H,2.0-1.0,H,H,LOW,V4.0 correct / Candidate correct
+420583743,Atlético de Madrid vs Villarreal,D,2.0-2.0,H,H,MEDIUM,Both wrong
+420583751,Le Havre vs Monaco,A,0.0-1.0,A,A,MEDIUM,V4.0 correct / Candidate correct
+420583753,Newcastle United vs Liverpool,D,2.0-2.0,A,A,HIGH,Both wrong
+420583777,Venezia vs Lecce,A,0.0-2.0,H,H,MEDIUM,Both wrong
+420583778,Frosinone vs Juventus,A,0.0-1.0,A,A,LOW,V4.0 correct / Candidate correct
+420583789,Getafe vs Racing Santander,H,1.0-0.0,H,H,HIGH,V4.0 correct / Candidate correct
+420583814,Rennes vs Paris Saint Germain,D,2.0-2.0,A,A,MEDIUM,Both wrong
+420583813,Atalanta vs Sassuolo,H,2.0-1.0,H,H,LOW,V4.0 correct / Candidate correct
+420583812,Torino vs AC Milan,A,1.0-2.0,A,A,HIGH,V4.0 correct / Candidate correct
+420583819,Elche vs FC Barcelona,A,0.0-5.0,A,A,LOW,V4.0 correct / Candidate correct

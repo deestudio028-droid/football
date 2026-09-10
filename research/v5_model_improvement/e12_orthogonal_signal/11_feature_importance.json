@@ -1,0 +1,86 @@
+[
+  {
+    "feature": "xg_implied_dominance",
+    "home_intensity_coef": 0.056784,
+    "away_intensity_coef": -0.073831,
+    "abs_importance": 0.130614
+  },
+  {
+    "feature": "match_xg_momentum_diff",
+    "home_intensity_coef": -0.039955,
+    "away_intensity_coef": 0.025316,
+    "abs_importance": 0.065271
+  },
+  {
+    "feature": "a_congestion_7d",
+    "home_intensity_coef": 0.022771,
+    "away_intensity_coef": -0.0259,
+    "abs_importance": 0.048671
+  },
+  {
+    "feature": "xg_matchup_delta",
+    "home_intensity_coef": 0.02629,
+    "away_intensity_coef": 0.0193,
+    "abs_importance": 0.045589
+  },
+  {
+    "feature": "away_fatigue_x_def",
+    "home_intensity_coef": -0.013701,
+    "away_intensity_coef": 0.026684,
+    "abs_importance": 0.040385
+  },
+  {
+    "feature": "a_venue_xgd",
+    "home_intensity_coef": 0.013066,
+    "away_intensity_coef": 0.015147,
+    "abs_importance": 0.028213
+  },
+  {
+    "feature": "h_venue_xgd",
+    "home_intensity_coef": 0.018749,
+    "away_intensity_coef": 0.000274,
+    "abs_importance": 0.019023
+  },
+  {
+    "feature": "venue_spec_xgd_diff",
+    "home_intensity_coef": 0.004536,
+    "away_intensity_coef": -0.010347,
+    "abs_importance": 0.014883
+  },
+  {
+    "feature": "rest_days_diff",
+    "home_intensity_coef": 0.000776,
+    "away_intensity_coef": 0.006599,
+    "abs_importance": 0.007376
+  },
+  {
+    "feature": "a_def_ewma5",
+    "home_intensity_coef": 0.006869,
+    "away_intensity_coef": -0.000445,
+    "abs_importance": 0.007314
+  },
+  {
+    "feature": "match_net_luck_diff",
+    "home_intensity_coef": 0.005121,
+    "away_intensity_coef": -0.001541,
+    "abs_importance": 0.006662
+  },
+  {
+    "feature": "h_def_ewma5",
+    "home_intensity_coef": 0.005466,
+    "away_intensity_coef": -0.000465,
+    "abs_importance": 0.005931
+  },
+  {
+    "feature": "a_fin_ewma5",
+    "home_intensity_coef": -0.003139,
+    "away_intensity_coef": 0.002728,
+    "abs_importance": 0.005868
+  },
+  {
+    "feature": "h_fin_ewma5",
+    "home_intensity_coef": 0.005439,
+    "away_intensity_coef": -0.000223,
+    "abs_importance": 0.005662
+  }
+]

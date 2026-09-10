@@ -1,0 +1,389 @@
+{
+  "generated_at": "2026-08-20T10:06:06.937487+00:00",
+  "experiment": "E4 \u2014 V3 vs V3 + Exponential Time Decay",
+  "execution_status": {
+    "experiment_A_v3": "PENDING \u2014 requires scikit-learn (per-fold refit)",
+    "experiment_B_v3_decay": "PENDING \u2014 depends on A",
+    "zero_decay_control": "PENDING \u2014 model-level control needs sklearn",
+    "diagnostic": "COMPLETE",
+    "test_suite": "COMPLETE \u2014 69/69 passed"
+  },
+  "dataset": {
+    "n_fixtures": 8983,
+    "leagues": [
+      "Bundesliga",
+      "La Liga",
+      "Ligue 1",
+      "Premier League",
+      "Serie A"
+    ],
+    "seasons": [
+      "2020/2021",
+      "2021/2022",
+      "2022/2023",
+      "2023/2024",
+      "2024/2025"
+    ],
+    "quarantined_season": "2025/2026",
+    "market_used": false,
+    "dixon_coles_used": false
+  },
+  "half_life_grid_days": [
+    60.0,
+    90.0,
+    120.0,
+    180.0,
+    240.0,
+    365.0,
+    540.0,
+    730.0,
+    null
+  ],
+  "signal_decay_equal_width_bands": {
+    "[0,120)": {
+      "n_fixtures": 8670,
+      "avg_matches_per_team": 12.5,
+      "correlation": 0.3841
+    },
+    "[120,240)": {
+      "n_fixtures": 7166,
+      "avg_matches_per_team": 11.5,
+      "correlation": 0.3481
+    },
+    "[240,360)": {
+      "n_fixtures": 5518,
+      "avg_matches_per_team": 12.2,
+      "correlation": 0.3162
+    },
+    "[360,480)": {
+      "n_fixtures": 5066,
+      "avg_matches_per_team": 12.8,
+      "correlation": 0.2938
+    },
+    "[480,600)": {
+      "n_fixtures": 4419,
+      "avg_matches_per_team": 11.9,
+      "correlation": 0.2803
+    },
+    "[600,720)": {
+      "n_fixtures": 3763,
+      "avg_matches_per_team": 12.2,
+      "correlation": 0.3048
+    }
+  },
+  "signal_decay_fixed_sample_size": {
+    "0d": {
+      "n_fixtures": 8153,
+      "correlation": 0.3756
+    },
+    "60d": {
+      "n_fixtures": 7476,
+      "correlation": 0.36
+    },
+    "120d": {
+      "n_fixtures": 6800,
+      "correlation": 0.351
+    },
+    "180d": {
+      "n_fixtures": 6147,
+      "correlation": 0.342
+    },
+    "240d": {
+      "n_fixtures": 5935,
+      "correlation": 0.3262
+    },
+    "365d": {
+      "n_fixtures": 5247,
+      "correlation": 0.3189
+    },
+    "540d": {
+      "n_fixtures": 4087,
+      "correlation": 0.3089
+    }
+  },
+  "implied_decay_from_fixed_n": {
+    "xi_per_day": 0.00035996,
+    "half_life_days": 1925.6,
+    "note": "Fitted to the fixed-N correlation curve, which controls for sample size. Very mild decay."
+  },
+  "walk_forward_proxy": {
+    "caveat": "Recency-weighted goal-rate model with no features. V3 has 87. Bounds effect size and reveals stability; does not predict V3's numbers.",
+    "folds": [
+      {
+        "test_season": "2022/2023",
+        "n_train": 3652,
+        "n_test": 1827,
+        "n_inner_splits": 1,
+        "selected_half_life_days": 240.0,
+        "selected_xi": 0.0028881132523331052,
+        "weight_profile": {
+          "xi": 0.0028881132523331052,
+          "half_life_days": 240.0,
+          "weights": {
+            "30d": 0.917004,
+            "90d": 0.771105,
+            "180d": 0.594604,
+            "365d": 0.348485,
+            "730d": 0.121441
+          }
+        },
+        "mean_inner_log_loss": 1.023016,
+        "xi_curve": [
+          {
+            "half_life_days": 60.0,
+            "xi": 0.011552453009332421,
+            "mean_inner_log_loss": 1.02955325
+          },
+          {
+            "half_life_days": 90.0,
+            "xi": 0.007701635339554948,
+            "mean_inner_log_loss": 1.02512857
+          },
+          {
+            "half_life_days": 120.0,
+            "xi": 0.0057762265046662105,
+            "mean_inner_log_loss": 1.0238077
+          },
+          {
+            "half_life_days": 180.0,
+            "xi": 0.003850817669777474,
+            "mean_inner_log_loss": 1.02312036
+          },
+          {
+            "half_life_days": 240.0,
+            "xi": 0.0028881132523331052,
+            "mean_inner_log_loss": 1.02301602
+          },
+          {
+            "half_life_days": 365.0,
+            "xi": 0.0018990333713971104,
+            "mean_inner_log_loss": 1.02307356
+          },
+          {
+            "half_life_days": 540.0,
+            "xi": 0.0012836058899258246,
+            "mean_inner_log_loss": 1.02319265
+          },
+          {
+            "half_life_days": 730.0,
+            "xi": 0.0009495166856985552,
+            "mean_inner_log_loss": 1.02328376
+          },
+          {
+            "half_life_days": null,
+            "xi": 0.0,
+            "mean_inner_log_loss": 1.02364317
+          }
+        ],
+        "A_log_loss": 1.020634,
+        "B_log_loss": 1.01984,
+        "delta_log_loss": 0.000794
+      },
+      {
+        "test_season": "2023/2024",
+        "n_train": 5479,
+        "n_test": 1752,
+        "n_inner_splits": 2,
+        "selected_half_life_days": 365.0,
+        "selected_xi": 0.0018990333713971104,
+        "weight_profile": {
+          "xi": 0.0018990333713971104,
+          "half_life_days": 365.0,
+          "weights": {
+            "30d": 0.944621,
+            "90d": 0.842895,
+            "180d": 0.710472,
+            "365d": 0.5,
+            "730d": 0.25
+          }
+        },
+        "mean_inner_log_loss": 1.021286,
+        "xi_curve": [
+          {
+            "half_life_days": 60.0,
+            "xi": 0.011552453009332421,
+            "mean_inner_log_loss": 1.03124655
+          },
+          {
+            "half_life_days": 90.0,
+            "xi": 0.007701635339554948,
+            "mean_inner_log_loss": 1.02550118
+          },
+          {
+            "half_life_days": 120.0,
+            "xi": 0.0057762265046662105,
+            "mean_inner_log_loss": 1.02337706
+          },
+          {
+            "half_life_days": 180.0,
+            "xi": 0.003850817669777474,
+            "mean_inner_log_loss": 1.02186469
+          },
+          {
+            "half_life_days": 240.0,
+            "xi": 0.0028881132523331052,
+            "mean_inner_log_loss": 1.02142779
+          },
+          {
+            "half_life_days": 365.0,
+            "xi": 0.0018990333713971104,
+            "mean_inner_log_loss": 1.02128647
+          },
+          {
+            "half_life_days": 540.0,
+            "xi": 0.0012836058899258246,
+            "mean_inner_log_loss": 1.02138868
+          },
+          {
+            "half_life_days": 730.0,
+            "xi": 0.0009495166856985552,
+            "mean_inner_log_loss": 1.02151207
+          },
+          {
+            "half_life_days": null,
+            "xi": 0.0,
+            "mean_inner_log_loss": 1.02213852
+          }
+        ],
+        "A_log_loss": 0.993689,
+        "B_log_loss": 0.99562,
+        "delta_log_loss": -0.001932
+      },
+      {
+        "test_season": "2024/2025",
+        "n_train": 7231,
+        "n_test": 1752,
+        "n_inner_splits": 3,
+        "selected_half_life_days": 730.0,
+        "selected_xi": 0.0009495166856985552,
+        "weight_profile": {
+          "xi": 0.0009495166856985552,
+          "half_life_days": 730.0,
+          "weights": {
+            "30d": 0.971916,
+            "90d": 0.918093,
+            "180d": 0.842895,
+            "365d": 0.707107,
+            "730d": 0.5
+          }
+        },
+        "mean_inner_log_loss": 1.012342,
+        "xi_curve": [
+          {
+            "half_life_days": 60.0,
+            "xi": 0.011552453009332421,
+            "mean_inner_log_loss": 1.02882258
+          },
+          {
+            "half_life_days": 90.0,
+            "xi": 0.007701635339554948,
+            "mean_inner_log_loss": 1.02148677
+          },
+          {
+            "half_life_days": 120.0,
+            "xi": 0.0057762265046662105,
+            "mean_inner_log_loss": 1.0181343
+          },
+          {
+            "half_life_days": 180.0,
+            "xi": 0.003850817669777474,
+            "mean_inner_log_loss": 1.01502604
+          },
+          {
+            "half_life_days": 240.0,
+            "xi": 0.0028881132523331052,
+            "mean_inner_log_loss": 1.01371194
+          },
+          {
+            "half_life_days": 365.0,
+            "xi": 0.0018990333713971104,
+            "mean_inner_log_loss": 1.01273107
+          },
+          {
+            "half_life_days": 540.0,
+            "xi": 0.0012836058899258246,
+            "mean_inner_log_loss": 1.0124054
+          },
+          {
+            "half_life_days": 730.0,
+            "xi": 0.0009495166856985552,
+            "mean_inner_log_loss": 1.0123425
+          },
+          {
+            "half_life_days": null,
+            "xi": 0.0,
+            "mean_inner_log_loss": 1.01265522
+          }
+        ],
+        "A_log_loss": 1.007096,
+        "B_log_loss": 1.003163,
+        "delta_log_loss": 0.003934
+      }
+    ],
+    "pooled": {
+      "n": 5331,
+      "A_log_loss": 1.007329,
+      "B_log_loss": 1.006399,
+      "delta_log_loss": 0.00093
+    },
+    "by_league": {
+      "Bundesliga": {
+        "n": 918,
+        "delta_log_loss": -0.000699
+      },
+      "La Liga": {
+        "n": 1140,
+        "delta_log_loss": -0.000366
+      },
+      "Ligue 1": {
+        "n": 992,
+        "delta_log_loss": -0.003486
+      },
+      "Premier League": {
+        "n": 1140,
+        "delta_log_loss": 0.003652
+      },
+      "Serie A": {
+        "n": 1141,
+        "delta_log_loss": 0.004655
+      }
+    },
+    "leagues_improved": 2,
+    "selected_half_lives": [
+      240.0,
+      365.0,
+      730.0
+    ],
+    "spread_ratio": 3.04,
+    "stability": "UNSTABLE"
+  },
+  "integrity": {
+    "data/models/v2_poisson_venue.pkl": {
+      "expected": "25935b4e93fc4074f67f16e3181ed4df",
+      "actual": "25935b4e93fc4074f67f16e3181ed4df",
+      "status": "identical"
+    },
+    "data/models/v1_logreg.pkl": {
+      "expected": "5e504427712b35778bb8a62a8496c7cd",
+      "actual": "5e504427712b35778bb8a62a8496c7cd",
+      "status": "identical"
+    },
+    "data/models/v3_poisson_venue_elo_candidate.pkl": {
+      "expected": "a2850a7687822a5916663301f5ccc96c",
+      "actual": "a2850a7687822a5916663301f5ccc96c",
+      "status": "identical"
+    },
+    "data/processed/features.db": {
+      "expected": "e7ebe7fc07040a5927683c35b6371e63",
+      "actual": "e7ebe7fc07040a5927683c35b6371e63",
+      "status": "identical"
+    },
+    "data/processed/matches.db": {
+      "expected": "fdeed042096fa1c851aaee6c84995247",
+      "actual": "fdeed042096fa1c851aaee6c84995247",
+      "status": "identical"
+    }
+  },
+  "decision": "INCONCLUSIVE",
+  "rationale": "Experiments A and B were not executed: scikit-learn is unavailable, so V3 could not be refit per fold with or without sample weights, and the \u00a719 zero-decay control could not be verified at the model level. The decision criteria require measured A vs B metrics."
+}

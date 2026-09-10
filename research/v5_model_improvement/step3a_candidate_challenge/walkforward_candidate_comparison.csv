@@ -1,0 +1,13 @@
+fold,candidate,accuracy_pct,log_loss,brier_score,macro_f1_pct,total_goal_mae,exact_score_accuracy_pct
+Fold 1 (2021/22),C0: V4.0 Production Baseline,52.3,0.9987,0.5952,39.37,1.3558,13.53
+Fold 1 (2021/22),C2: Platt Draw Calibration,52.35,0.997,0.5948,39.77,1.3543,13.31
+Fold 1 (2021/22),C4: Platt + Score-Space Blend,52.19,0.9967,0.5946,39.31,1.3543,13.31
+Fold 2 (2022/23),C0: V4.0 Production Baseline,52.93,0.9913,0.5904,39.22,1.2997,12.48
+Fold 2 (2022/23),C2: Platt Draw Calibration,52.82,0.9915,0.5912,39.15,1.2969,12.37
+Fold 2 (2022/23),C4: Platt + Score-Space Blend,52.93,0.991,0.5908,39.22,1.2969,12.37
+Fold 3 (2023/24),C0: V4.0 Production Baseline,54.05,0.9799,0.5819,40.8,1.3288,13.87
+Fold 3 (2023/24),C2: Platt Draw Calibration,54.11,0.9751,0.5802,40.96,1.3278,13.58
+Fold 3 (2023/24),C4: Platt + Score-Space Blend,54.05,0.975,0.5801,40.8,1.3278,13.58
+Fold 4 (2024/25),C0: V4.0 Production Baseline,53.54,0.9824,0.5844,40.23,1.3018,12.73
+Fold 4 (2024/25),C2: Platt Draw Calibration,53.48,0.9803,0.5841,40.22,1.2999,13.07
+Fold 4 (2024/25),C4: Platt + Score-Space Blend,53.54,0.9799,0.5838,40.25,1.2999,13.07

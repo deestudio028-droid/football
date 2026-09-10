@@ -1,0 +1,32 @@
+{
+  "frozen_at": "2026-08-21T05:23:00.367413+00:00",
+  "protocol_version": "1.0",
+  "training_scope": "2020/2021 through 2024/2025 (n=8,983 fixtures)",
+  "oos_holdout_scope": "2025/2026 quarantined",
+  "primary_candidate": {
+    "name": "Integration_B_Logistic_Bivariate_Calibrator",
+    "description": "Bivariate logistic calibration combining logit(P_D_V4) and |Delta Elo|",
+    "formula": "logit(P_D_new) = a0 + a1 * logit(P_D_V4) + a2 * (|Delta Elo| / 100)",
+    "coefficients": {
+      "a0_intercept": 0.321296,
+      "a1_logit_v4": 1.200282,
+      "a2_abs_elo": 0.012675
+    },
+    "redistribution_rule": "proportional_odds_preservation"
+  },
+  "secondary_candidate": {
+    "name": "Integration_A_Weighted_Blend",
+    "description": "Weighted blend of V4 P(Draw) and Linear Logistic Elo Draw Curve",
+    "formula": "P_D_new = 0.8 * P_D_V4 + 0.2 * LinearLogistic(|Delta Elo|)",
+    "curve_coefficients": {
+      "b0_intercept": -0.857117,
+      "b1_abs_elo": -0.001551
+    },
+    "blend_weight_w": 0.8,
+    "redistribution_rule": "proportional_odds_preservation"
+  },
+  "safety_constraints": {
+    "min_prob_clip": 1e-15,
+    "row_sum_tolerance": 1e-09
+  }
+}

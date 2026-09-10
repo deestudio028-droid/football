@@ -1,0 +1,4 @@
+segment,n_matches,e10_champion_rps,e10_champion_log_loss,e13_dynamic_rps,e13_dynamic_log_loss,delta_rps
+Promoted_Sparse_History_lt_5_matches,130,0.183828,0.951771,0.184691,0.954023,0.000863
+Developing_History_5_to_10_matches,152,0.214248,1.036564,0.215099,1.039146,0.000851
+Established_Teams_gt_10_matches,6800,0.199458,0.982774,0.200051,0.984709,0.000593

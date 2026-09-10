@@ -1,0 +1,6 @@
+candidate,mean_ece,home_ece,draw_ece,away_ece,log_loss,brier_score
+C0: V4.0 Production Baseline,0.0266,0.0232,0.0261,0.0306,0.9921,0.5907
+C1: Vector Scaling,0.0175,0.0203,0.0108,0.0213,0.9897,0.5898
+C2: Platt Draw Calibration,0.025,0.0322,0.012,0.0309,0.9904,0.5903
+C3: Score-Space / Coherent Matrix Blend,0.0219,0.0279,0.01,0.0277,0.9907,0.5904
+C4: Platt + Score-Space Blend,0.0243,0.034,0.0082,0.0309,0.9902,0.5902

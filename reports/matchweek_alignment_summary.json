@@ -1,0 +1,37 @@
+{
+  "season": "2026/2027",
+  "as_of": "2026-09-06",
+  "total_fixtures": 47,
+  "breakdown": [
+    {
+      "league": "Premier League",
+      "matchweek": "MW3",
+      "date_window": "2026-09-04 \u2192 2026-09-06",
+      "fixtures": 10
+    },
+    {
+      "league": "La Liga",
+      "matchweek": "MW4",
+      "date_window": "2026-09-03 \u2192 2026-09-07",
+      "fixtures": 10
+    },
+    {
+      "league": "Serie A",
+      "matchweek": "MW3",
+      "date_window": "2026-09-04 \u2192 2026-09-07",
+      "fixtures": 10
+    },
+    {
+      "league": "Bundesliga",
+      "matchweek": "MW2",
+      "date_window": "2026-09-04 \u2192 2026-09-06",
+      "fixtures": 9
+    },
+    {
+      "league": "Ligue 1",
+      "matchweek": "MW3",
+      "date_window": "2026-09-04 \u2192 2026-09-06",
+      "fixtures": 8
+    }
+  ]
+}

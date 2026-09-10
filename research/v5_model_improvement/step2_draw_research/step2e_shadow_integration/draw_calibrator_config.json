@@ -1,0 +1,29 @@
+{
+  "version": "step2e-shadow-1",
+  "method": "platt_logistic",
+  "parameters": {
+    "model_type": "LogisticRegression",
+    "slope_a": 0.9421034293933221,
+    "intercept_b": 0.12836262923594244,
+    "C": 1000.0,
+    "solver": "lbfgs"
+  },
+  "input_definition": {
+    "features": [
+      "v4_p_D"
+    ],
+    "transformation": "logit(p_D) = ln(p_D / (1 - p_D))",
+    "input_bounds": "[0.0, 1.0]"
+  },
+  "output_definition": {
+    "calibrated_draw": "sigmoid(slope_a * logit(p_D) + intercept_b)",
+    "redistribution_method": "proportional_non_draw",
+    "home_formula": "p_H * (1 - p_D_cal) / (1 - p_D)",
+    "away_formula": "p_A * (1 - p_D_cal) / (1 - p_D)"
+  },
+  "governance": {
+    "classification": "SHADOW CALIBRATOR ONLY — NON-MUTATING",
+    "target_model": "v4_poisson_venue_elo_online_ad",
+    "target_model_md5": "06841f0c03c8597b2b8cd8f8ab064864"
+  }
+}

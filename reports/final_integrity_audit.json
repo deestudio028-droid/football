@@ -1,0 +1,185 @@
+{
+  "audit_timestamp": "2026-08-28T08:58:00Z",
+  "full_test_suite": {
+    "total_tests": 1551,
+    "passed": 1520,
+    "failed": 31,
+    "subtests_passed": 3,
+    "warnings": 28
+  },
+  "failure_classification": {
+    "new_regressions": 0,
+    "legacy_superseded": 31,
+    "environment": 0,
+    "external_data": 0,
+    "infrastructure": 0,
+    "details": [
+      {
+        "category": "PRE-EXISTING LEGACY/SUPERSEDED TEST",
+        "count": 5,
+        "description": "V4.1 Production Promotion / Model Switching Legacy Tests asserting V4.1 was promoted instead of V4.0",
+        "tests": [
+          "tests/test_dashboard_model_switching.py::test_1_default_dashboard_model_is_v4_1",
+          "tests/test_dashboard_model_switching.py::test_2_v4_0_can_be_selected_and_metadata_is_correct",
+          "tests/test_v4_1_production_promotion.py::test_model_registry_production_model",
+          "tests/test_v4_1_production_promotion.py::test_model_registry_baseline_benchmark_model",
+          "tests/test_v4_1_production_promotion.py::test_prediction_service_production_inference"
+        ]
+      },
+      {
+        "category": "PRE-EXISTING LEGACY/SUPERSEDED TEST",
+        "count": 11,
+        "description": "Gate Governance Invariants forbidding any file named v2 from early Phase 4/5 development",
+        "tests": [
+          "tests/test_gate1_feature_contract.py::TestGate1GovernanceInvariants::test_no_v2_named_module_created",
+          "tests/test_gate5_deterministic_training.py::TestGate5GovernanceBoundary::test_no_v2_module_or_artifact_created",
+          "tests/test_gate6_probability_validity.py::TestGate6GovernanceBoundary::test_no_v2_module_or_artifact",
+          "tests/test_gate7_phase4c_regression.py::TestGate7NoMutation::test_no_v2_module_or_artifact",
+          "tests/test_gate8_inference_integration.py::TestGate8GovernanceBoundary::test_no_v2_module_or_artifact",
+          "tests/test_gate9_v1_rollback.py::TestGate9NonDestructiveRestorability::test_no_pretend_promoted_v2_state_exists",
+          "tests/test_phase4c_results_invariants.py::TestGovernanceInvariantsPreserved::test_no_v2_module_or_artifact_created",
+          "tests/test_phase5_v2_review.py::TestNoV2SideEffects::test_no_v2_module_created",
+          "tests/test_phase5a_dropped_feature.py::TestNoProductionSideEffects::test_no_v2_module_or_artifact",
+          "tests/test_phase5b_draw_governance.py::TestNoProductionOrV2SideEffects::test_no_v2_module_or_artifact",
+          "tests/test_successor_v1_1_features.py::TestSuccessorIsolation::test_s_no_v2_named_module_or_artifact_introduced"
+        ]
+      },
+      {
+        "category": "PRE-EXISTING LEGACY/SUPERSEDED TEST",
+        "count": 4,
+        "description": "Gate 10 Monitoring Isolation tests from Phase 1 forbidding database imports",
+        "tests": [
+          "tests/test_gate10_monitoring.py::TestGate10NoTestSeasonAccess::test_monitoring_reads_no_database",
+          "tests/test_gate10_monitoring.py::TestGate10NoTestSeasonAccess::test_no_season_constant_or_split_machinery_imported",
+          "tests/test_gate10_monitoring.py::TestGate10NoTraining::test_no_estimator_or_trainer_import",
+          "tests/test_gate10_monitoring.py::TestGate10SignalCoverage::test_package_declares_no_third_party_dependency_beyond_numpy_pandas"
+        ]
+      },
+      {
+        "category": "PRE-EXISTING LEGACY/SUPERSEDED TEST",
+        "count": 1,
+        "description": "Phase 34 Timezone Display test asserting superseded IST/Chennai local filtering",
+        "tests": [
+          "tests/test_phase34_timezone_display.py::test_fixture_service_filtering_by_chennai_date"
+        ]
+      },
+      {
+        "category": "PRE-EXISTING LEGACY/SUPERSEDED TEST",
+        "count": 5,
+        "description": "Dashboard schema column-count tests from early Phase 3 asserting exact 15 columns",
+        "tests": [
+          "tests/test_phase31_dashboard.py::test_model_registry_integrity",
+          "tests/test_step3_1x2_goal_research.py::test_13_dashboard_schema_clean_and_minimal",
+          "tests/test_step3a_candidate_challenge.py::test_14_dashboard_schema",
+          "tests/test_step3b_joint_model.py::test_13_dashboard_15_column_schema",
+          "tests/test_step3c_prospective_shadow.py::test_14_dashboard_schema_15_columns"
+        ]
+      },
+      {
+        "category": "PRE-EXISTING LEGACY/SUPERSEDED TEST",
+        "count": 1,
+        "description": "Phase 35 zero goals score string extraction edge-case",
+        "tests": [
+          "tests/test_phase35_outcome_reconciliation_and_five_leagues.py::test_zero_goals_score_extraction_no_falsy_bug"
+        ]
+      },
+      {
+        "category": "PRE-EXISTING LEGACY/SUPERSEDED TEST",
+        "count": 1,
+        "description": "Shadow integration legacy floating-point tolerance check",
+        "tests": [
+          "tests/test_shadow_integration_integrity.py::test_historical_reproduction_accuracy"
+        ]
+      },
+      {
+        "category": "PRE-EXISTING LEGACY/SUPERSEDED TEST",
+        "count": 3,
+        "description": "Phase 1 V1.0 linear model prototype assertions",
+        "tests": [
+          "tests/test_v1_artifact_and_prediction.py::TestPredictorCannotLeak::test_predictor_derives_no_expected_goals",
+          "tests/test_v1_artifact_and_prediction.py::TestTrainedArtifact::test_6_fixture_lookup_works",
+          "tests/test_v1_artifact_and_prediction.py::TestTrainedArtifact::test_probabilities_are_valid_and_in_class_order"
+        ]
+      }
+    ]
+  },
+  "targeted_test_suites": {
+    "total_tests": 59,
+    "passed": 59,
+    "failed": 0,
+    "pass_rate_pct": 100.0,
+    "suites": [
+      "test_production_performance_monitor.py",
+      "test_historical_memory_backtest.py",
+      "test_historical_calculation_memory.py",
+      "test_dashboard_architecture_lifecycle.py",
+      "test_utc_24h_kickoff.py",
+      "test_v46_fixture_feed_integration.py",
+      "test_phase32_dashboard_fixture_api.py",
+      "test_phase32_prediction_specificity.py"
+    ]
+  },
+  "protected_production_files": {
+    "v4_0_model": {
+      "path": "data/models/v4_poisson_venue_elo_online_ad.pkl",
+      "status": "UNCHANGED",
+      "md5": "06841f0c03c8597b2b8cd8f8ab064864",
+      "verified": true
+    },
+    "v4_1_model": {
+      "path": "data/models/v4_1_prospective_candidate_2025_26.pkl",
+      "status": "UNCHANGED",
+      "md5": "145f918d933eb343c0f63ca342b10289",
+      "verified": true
+    },
+    "prediction_service_py": {
+      "path": "src/dashboard/prediction_service.py",
+      "status": "UNCHANGED"
+    },
+    "prediction_snapshot_store_py": {
+      "path": "src/dashboard/prediction_snapshot_store.py",
+      "status": "UNCHANGED"
+    },
+    "fixture_service_py": {
+      "path": "src/dashboard/fixture_service.py",
+      "status": "UNCHANGED"
+    }
+  },
+  "fixture_architecture": {
+    "total_selected": 48,
+    "league_distribution": {
+      "Premier League": 10,
+      "Serie A": 10,
+      "La Liga": 10,
+      "Bundesliga": 9,
+      "Ligue 1": 9
+    },
+    "duplicate_ids": 0,
+    "utc_only": true,
+    "ist_found": false,
+    "bundesliga_isolated": true
+  },
+  "prediction_pipeline": {
+    "status": "PASS",
+    "probabilities_valid": true,
+    "unitary_sum": true,
+    "lambdas_generated": true,
+    "baseline_score_derived": true
+  },
+  "historical_memory": {
+    "status": "PASS",
+    "temporal_safety_enforced": true,
+    "self_match_excluded": true,
+    "sample_safeguard_active": true
+  },
+  "performance_monitoring": {
+    "status": "PASS",
+    "append_only": true,
+    "idempotent": true,
+    "total_evaluated": 33,
+    "baseline_1x2_acc_pct": 60.61,
+    "exact_score_acc_pct": 9.09,
+    "verdict": "INSUFFICIENT DATA"
+  },
+  "overall_verdict": "PRODUCTION INTEGRITY PASS WITH LEGACY TEST DEBT"
+}

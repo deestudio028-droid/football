@@ -1,0 +1,480 @@
+{
+  "generated_at": "2026-08-23T05:52:42.101649+00:00",
+  "experiment": "Phase 42 \u2014 Experiment E17 (Forecast Status Optimization & Decision Quality)",
+  "governance": {
+    "production_v4_status": "FROZEN_UNMODIFIED",
+    "e10_status": "CANDIDATE_FOR_PROSPECTIVE_TEST",
+    "protected_baseline_assets_verified": true,
+    "protected_asset_count": 20
+  },
+  "ablation_summary": [
+    {
+      "ablation_arm": "ARM_Benchmark_Pure_E10",
+      "description": "Pure E10 Champion Forecasts (Unmodified Baseline)",
+      "spearman_corr": 0.0,
+      "pearson_corr": 0.0,
+      "mae_expected_rps": 0.093021,
+      "top1_roc_auc": 0.5,
+      "brier_score": 0.585881,
+      "status_separation_rps": 0.0,
+      "complexity": "Baseline"
+    },
+    {
+      "ablation_arm": "ARM_A_E10_Probability_Geometry",
+      "description": "ARM A E10 Probability Geometry",
+      "spearman_corr": 0.4254,
+      "pearson_corr": 0.2497,
+      "mae_expected_rps": 0.08677,
+      "top1_roc_auc": 0.622,
+      "brier_score": 0.2437,
+      "status_separation_rps": 0.0664,
+      "complexity": "Low/Medium"
+    },
+    {
+      "ablation_arm": "ARM_B_E16_Reliability_Only",
+      "description": "ARM B E16 Reliability Only",
+      "spearman_corr": 0.4299,
+      "pearson_corr": 0.2621,
+      "mae_expected_rps": 0.086551,
+      "top1_roc_auc": 0.6245,
+      "brier_score": 0.2437,
+      "status_separation_rps": 0.0664,
+      "complexity": "Low/Medium"
+    },
+    {
+      "ablation_arm": "ARM_C_Entropy_Margin",
+      "description": "ARM C Entropy Margin",
+      "spearman_corr": 0.4295,
+      "pearson_corr": 0.264,
+      "mae_expected_rps": 0.086505,
+      "top1_roc_auc": 0.6234,
+      "brier_score": 0.2437,
+      "status_separation_rps": 0.0664,
+      "complexity": "Low/Medium"
+    },
+    {
+      "ablation_arm": "ARM_D_E16_Plus_Geometry",
+      "description": "ARM D E16 Plus Geometry",
+      "spearman_corr": 0.4151,
+      "pearson_corr": 0.2448,
+      "mae_expected_rps": 0.087004,
+      "top1_roc_auc": 0.6185,
+      "brier_score": 0.2437,
+      "status_separation_rps": 0.0664,
+      "complexity": "Low/Medium"
+    },
+    {
+      "ablation_arm": "ARM_E_E16_Plus_E15_Risk",
+      "description": "ARM E E16 Plus E15 Risk",
+      "spearman_corr": 0.4161,
+      "pearson_corr": 0.2467,
+      "mae_expected_rps": 0.086559,
+      "top1_roc_auc": 0.6197,
+      "brier_score": 0.2437,
+      "status_separation_rps": 0.0664,
+      "complexity": "Low/Medium"
+    },
+    {
+      "ablation_arm": "ARM_F_E16_E15_Elo_Maturity",
+      "description": "ARM F E16 E15 Elo Maturity",
+      "spearman_corr": 0.4074,
+      "pearson_corr": 0.2594,
+      "mae_expected_rps": 0.08717,
+      "top1_roc_auc": 0.6173,
+      "brier_score": 0.2437,
+      "status_separation_rps": 0.0664,
+      "complexity": "Low/Medium"
+    },
+    {
+      "ablation_arm": "ARM_G_Full_Causal_Registry",
+      "description": "ARM G Full Causal Registry",
+      "spearman_corr": 0.4109,
+      "pearson_corr": 0.2558,
+      "mae_expected_rps": 0.086771,
+      "top1_roc_auc": 0.6158,
+      "brier_score": 0.2437,
+      "status_separation_rps": 0.0664,
+      "complexity": "Low/Medium"
+    },
+    {
+      "ablation_arm": "ARM_H_Analytical_Status",
+      "description": "ARM H Analytical Status",
+      "spearman_corr": 0.4428,
+      "pearson_corr": 0.2707,
+      "mae_expected_rps": 0.091494,
+      "top1_roc_auc": 0.6314,
+      "brier_score": 0.2437,
+      "status_separation_rps": 0.0664,
+      "complexity": "Low/Medium"
+    },
+    {
+      "ablation_arm": "ARM_I_Best_Learned_Status",
+      "description": "ARM I Best Learned Status",
+      "spearman_corr": 0.4078,
+      "pearson_corr": 0.2443,
+      "mae_expected_rps": 0.085066,
+      "top1_roc_auc": 0.6129,
+      "brier_score": 0.2437,
+      "status_separation_rps": 0.0664,
+      "complexity": "Low/Medium"
+    }
+  ],
+  "fold_results": [
+    {
+      "fold": 1,
+      "test_season": "2022/2023",
+      "n_matches": 1827,
+      "spearman_corr": 0.3762,
+      "pearson_corr": 0.2316,
+      "strong_count": 561,
+      "lean_count": 596,
+      "caution_count": 0,
+      "avoid_count": 670
+    },
+    {
+      "fold": 2,
+      "test_season": "2023/2024",
+      "n_matches": 1752,
+      "spearman_corr": 0.4316,
+      "pearson_corr": 0.2445,
+      "strong_count": 549,
+      "lean_count": 285,
+      "caution_count": 274,
+      "avoid_count": 644
+    },
+    {
+      "fold": 3,
+      "test_season": "2024/2025",
+      "n_matches": 1752,
+      "spearman_corr": 0.4283,
+      "pearson_corr": 0.2421,
+      "strong_count": 612,
+      "lean_count": 276,
+      "caution_count": 404,
+      "avoid_count": 460
+    },
+    {
+      "fold": 4,
+      "test_season": "2025/2026",
+      "n_matches": 1751,
+      "spearman_corr": 0.4194,
+      "pearson_corr": 0.2723,
+      "strong_count": 519,
+      "lean_count": 203,
+      "caution_count": 611,
+      "avoid_count": 418
+    }
+  ],
+  "status_breakdown": [
+    {
+      "status": "STRONG",
+      "n_matches": 2241,
+      "coverage_pct": 31.64,
+      "actual_mean_rps": 0.161384,
+      "actual_mean_log_loss": 0.843169,
+      "actual_mean_brier": 0.487447,
+      "top1_accuracy_pct": 66.09,
+      "draw_ece": 0.0199,
+      "mean_entropy": 0.8626,
+      "mean_max_prob": 0.6498,
+      "mean_margin": 0.4435
+    },
+    {
+      "status": "LEAN",
+      "n_matches": 1360,
+      "coverage_pct": 19.2,
+      "actual_mean_rps": 0.203866,
+      "actual_mean_log_loss": 0.998641,
+      "actual_mean_brier": 0.596846,
+      "top1_accuracy_pct": 54.12,
+      "draw_ece": 0.0073,
+      "mean_entropy": 1.0255,
+      "mean_max_prob": 0.5078,
+      "mean_margin": 0.2434
+    },
+    {
+      "status": "CAUTION",
+      "n_matches": 1289,
+      "coverage_pct": 18.2,
+      "actual_mean_rps": 0.217374,
+      "actual_mean_log_loss": 1.068966,
+      "actual_mean_brier": 0.645816,
+      "top1_accuracy_pct": 43.52,
+      "draw_ece": 0.0301,
+      "mean_entropy": 1.0615,
+      "mean_max_prob": 0.4524,
+      "mean_margin": 0.1658
+    },
+    {
+      "status": "AVOID",
+      "n_matches": 2192,
+      "coverage_pct": 30.95,
+      "actual_mean_rps": 0.225213,
+      "actual_mean_log_loss": 1.066863,
+      "actual_mean_brier": 0.644466,
+      "top1_accuracy_pct": 44.89,
+      "draw_ece": 0.0108,
+      "mean_entropy": 1.0788,
+      "mean_max_prob": 0.4143,
+      "mean_margin": 0.1005
+    }
+  ],
+  "coverage_curves": [
+    {
+      "coverage_pct": 100,
+      "retained_matches": 7082,
+      "abstain_count": 0,
+      "retained_rps": 0.199489,
+      "retained_log_loss": 0.98336,
+      "retained_brier": 0.585881,
+      "draw_ece": 0.0069,
+      "top1_accuracy_pct": 53.12,
+      "mean_entropy": 0.997,
+      "mean_max_prob": 0.5137
+    },
+    {
+      "coverage_pct": 95,
+      "retained_matches": 6833,
+      "abstain_count": 249,
+      "retained_rps": 0.199058,
+      "retained_log_loss": 0.980918,
+      "retained_brier": 0.584207,
+      "draw_ece": 0.0062,
+      "top1_accuracy_pct": 53.39,
+      "mean_entropy": 0.9944,
+      "mean_max_prob": 0.5166
+    },
+    {
+      "coverage_pct": 90,
+      "retained_matches": 6415,
+      "abstain_count": 667,
+      "retained_rps": 0.197163,
+      "retained_log_loss": 0.975111,
+      "retained_brier": 0.580098,
+      "draw_ece": 0.008,
+      "top1_accuracy_pct": 53.95,
+      "mean_entropy": 0.9887,
+      "mean_max_prob": 0.5238
+    },
+    {
+      "coverage_pct": 85,
+      "retained_matches": 6070,
+      "abstain_count": 1012,
+      "retained_rps": 0.195341,
+      "retained_log_loss": 0.969284,
+      "retained_brier": 0.575982,
+      "draw_ece": 0.0092,
+      "top1_accuracy_pct": 54.61,
+      "mean_entropy": 0.9833,
+      "mean_max_prob": 0.5306
+    },
+    {
+      "coverage_pct": 80,
+      "retained_matches": 5715,
+      "abstain_count": 1367,
+      "retained_rps": 0.193124,
+      "retained_log_loss": 0.963054,
+      "retained_brier": 0.571595,
+      "draw_ece": 0.0115,
+      "top1_accuracy_pct": 55.26,
+      "mean_entropy": 0.9774,
+      "mean_max_prob": 0.5376
+    },
+    {
+      "coverage_pct": 75,
+      "retained_matches": 5324,
+      "abstain_count": 1758,
+      "retained_rps": 0.190991,
+      "retained_log_loss": 0.95539,
+      "retained_brier": 0.566245,
+      "draw_ece": 0.0121,
+      "top1_accuracy_pct": 55.99,
+      "mean_entropy": 0.9699,
+      "mean_max_prob": 0.5469
+    },
+    {
+      "coverage_pct": 70,
+      "retained_matches": 5006,
+      "abstain_count": 2076,
+      "retained_rps": 0.188956,
+      "retained_log_loss": 0.948677,
+      "retained_brier": 0.561536,
+      "draw_ece": 0.0135,
+      "top1_accuracy_pct": 56.47,
+      "mean_entropy": 0.963,
+      "mean_max_prob": 0.5552
+    },
+    {
+      "coverage_pct": 60,
+      "retained_matches": 4773,
+      "abstain_count": 2309,
+      "retained_rps": 0.187177,
+      "retained_log_loss": 0.942446,
+      "retained_brier": 0.557185,
+      "draw_ece": 0.0142,
+      "top1_accuracy_pct": 57.3,
+      "mean_entropy": 0.9574,
+      "mean_max_prob": 0.5618
+    },
+    {
+      "coverage_pct": 50,
+      "retained_matches": 3541,
+      "abstain_count": 3541,
+      "retained_rps": 0.176369,
+      "retained_log_loss": 0.898448,
+      "retained_brier": 0.526349,
+      "draw_ece": 0.0106,
+      "top1_accuracy_pct": 62.07,
+      "mean_entropy": 0.9215,
+      "mean_max_prob": 0.5992
+    }
+  ],
+  "separation_bootstrap": {
+    "STRONG_vs_AVOID": {
+      "delta_rps": -0.063671,
+      "ci_95": [
+        -0.070487,
+        -0.056264
+      ],
+      "p_value": 0.0,
+      "is_significant": true
+    },
+    "STRONG_vs_CAUTION": {
+      "delta_rps": -0.055893,
+      "ci_95": [
+        -0.06421,
+        -0.047385
+      ],
+      "p_value": 0.0,
+      "is_significant": true
+    },
+    "LEAN_vs_AVOID": {
+      "delta_rps": -0.021417,
+      "ci_95": [
+        -0.028251,
+        -0.014267
+      ],
+      "p_value": 0.0,
+      "is_significant": true
+    }
+  },
+  "league_breakdown": [
+    {
+      "league": "Premier League",
+      "n_matches": 1520,
+      "overall_rps": 0.1999,
+      "rps_strong": 0.16569,
+      "rps_lean": 0.208659,
+      "rps_caution": 0.216092,
+      "rps_avoid": 0.225104,
+      "top1_accuracy_strong": 64.76,
+      "spearman_corr": 0.4061,
+      "top1_roc_auc": 0.6131,
+      "is_monotonic": true
+    },
+    {
+      "league": "La Liga",
+      "n_matches": 1520,
+      "overall_rps": 0.198007,
+      "rps_strong": 0.157463,
+      "rps_lean": 0.198159,
+      "rps_caution": 0.214929,
+      "rps_avoid": 0.220219,
+      "top1_accuracy_strong": 68.89,
+      "spearman_corr": 0.3993,
+      "top1_roc_auc": 0.6114,
+      "is_monotonic": true
+    },
+    {
+      "league": "Bundesliga",
+      "n_matches": 1224,
+      "overall_rps": 0.20011,
+      "rps_strong": 0.159147,
+      "rps_lean": 0.202256,
+      "rps_caution": 0.226018,
+      "rps_avoid": 0.227347,
+      "top1_accuracy_strong": 66.26,
+      "spearman_corr": 0.4124,
+      "top1_roc_auc": 0.6433,
+      "is_monotonic": true
+    },
+    {
+      "league": "Serie A",
+      "n_matches": 1521,
+      "overall_rps": 0.195323,
+      "rps_strong": 0.162714,
+      "rps_lean": 0.194658,
+      "rps_caution": 0.212352,
+      "rps_avoid": 0.22378,
+      "top1_accuracy_strong": 64.38,
+      "spearman_corr": 0.4018,
+      "top1_roc_auc": 0.5953,
+      "is_monotonic": true
+    },
+    {
+      "league": "Ligue 1",
+      "n_matches": 1297,
+      "overall_rps": 0.205043,
+      "rps_strong": 0.160272,
+      "rps_lean": 0.215642,
+      "rps_caution": 0.223,
+      "rps_avoid": 0.230177,
+      "top1_accuracy_strong": 67.01,
+      "spearman_corr": 0.4141,
+      "top1_roc_auc": 0.6063,
+      "is_monotonic": true
+    }
+  ],
+  "early_season_breakdown": [
+    {
+      "segment": "First_1_Match_Of_Season",
+      "n_matches": 24,
+      "mean_rps": 0.175214,
+      "rps_strong": 0.129703,
+      "rps_avoid": 0.232578,
+      "strong_count": 10,
+      "avoid_count": 8
+    },
+    {
+      "segment": "First_3_Matches_Of_Season",
+      "n_matches": 99,
+      "mean_rps": 0.190724,
+      "rps_strong": 0.145735,
+      "rps_avoid": 0.231573,
+      "strong_count": 35,
+      "avoid_count": 32
+    },
+    {
+      "segment": "First_5_Matches_Of_Season",
+      "n_matches": 151,
+      "mean_rps": 0.194253,
+      "rps_strong": 0.158519,
+      "rps_avoid": 0.222142,
+      "strong_count": 47,
+      "avoid_count": 53
+    },
+    {
+      "segment": "First_10_Matches_Of_Season",
+      "n_matches": 296,
+      "mean_rps": 0.196683,
+      "rps_strong": 0.168015,
+      "rps_avoid": 0.218938,
+      "strong_count": 99,
+      "avoid_count": 106
+    },
+    {
+      "segment": "Remaining_Season_Matches",
+      "n_matches": 6786,
+      "mean_rps": 0.199611,
+      "rps_strong": 0.161077,
+      "rps_avoid": 0.225532,
+      "strong_count": 2142,
+      "avoid_count": 2086
+    }
+  ],
+  "verdict": {
+    "verdict": "E17 RESEARCH ONLY \u2014 KEEP E10 AS CHAMPION",
+    "sub_verdict": "E17 CONFIRMED AS ACTIONABLE FORECAST STATUS & DECISION QUALITY ENGINE",
+    "rationale": "E17 successfully builds and validates a pre-match Forecast Status Engine establishing a 4-tier decision taxonomy: STRONG (31.64% of fixtures, RPS = 0.161384, Top-1 Accuracy = 66.09%), LEAN (19.2%, RPS = 0.203866, Top-1 Accuracy = 54.12%), CAUTION (18.2%, RPS = 0.217374, Top-1 Accuracy = 43.52%), and AVOID (30.95%, RPS = 0.225213, Top-1 Accuracy = 44.89%). Pairwise cluster bootstrap confirms that STRONG vs AVOID separation is statistically significant (Delta RPS = -0.063671, 95% CI [-0.070487, -0.056264], p = 0.0). Under selective decision filtering @ 90% coverage, retained RPS improves to 0.197163. E17 operates strictly as a metadata and decision-quality layer without mutating E10's probability distribution. Pure E10 remains the official champion candidate."
+  }
+}

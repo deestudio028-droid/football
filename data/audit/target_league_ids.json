@@ -1,0 +1,45 @@
+{
+  "source": "GET /api/competitions?country_ids=45,8,3,32,4 (live call, 2026-08-16)",
+  "target_leagues": [
+    {
+      "id": 423,
+      "name": "Premier League",
+      "country": "England",
+      "country_id": 45,
+      "type": "League",
+      "current_season": 2263973
+    },
+    {
+      "id": 419,
+      "name": "La Liga",
+      "country": "Spain",
+      "country_id": 8,
+      "type": "League",
+      "current_season": 2244302
+    },
+    {
+      "id": 477,
+      "name": "Bundesliga",
+      "country": "Germany",
+      "country_id": 3,
+      "type": "League",
+      "current_season": 2305071
+    },
+    {
+      "id": 499,
+      "name": "Serie A",
+      "country": "Italy",
+      "country_id": 32,
+      "type": "League",
+      "current_season": 2224807
+    },
+    {
+      "id": 200,
+      "name": "Ligue 1",
+      "country": "France",
+      "country_id": 4,
+      "type": "League",
+      "current_season": 2254143
+    }
+  ]
+}

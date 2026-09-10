@@ -1,0 +1,5 @@
+{
+  "status": "INVALIDATED -- see stats_season_lookback_limitation.json",
+  "explanation": "This file originally attempted to compute per-league coverage percentages by calling GET /api/stats/season/{season_id} for the 2023/24 season of each of the 5 target leagues. All returned values were 0% across every field. Further investigation (see stats_season_lookback_limitation.json) revealed this is NOT a true coverage gap -- it is because /api/stats/season applies an undocumented, non-overridable 730-day rolling lookback window, and the 2023/24 season (ended May 2024) falls outside that window as of the current date. The underlying match data is intact (confirmed via raw /fixtures/between calls -- see xg_coverage_cutover_evidence.json and match_level_coverage_spotchecks.csv). Coverage/completeness for older seasons must be measured from raw fixture data, not from this endpoint.",
+  "superseded_by": ["stats_season_lookback_limitation.json", "xg_coverage_cutover_evidence.json", "match_level_coverage_spotchecks.csv"]
+}

@@ -1,0 +1,10 @@
+P(D) Bucket,Matches,Actual Draws,Actual Draw Rate (%),Average Predicted P(D) (%),Calibration Gap (Obs - Pred) (%),Status
+0-10%,288,31,10.76,7.44,3.33,Under-Predicting
+10-15%,598,87,14.55,12.89,1.66,Well-Calibrated
+15-20%,1473,339,23.01,17.81,5.21,Under-Predicting
+20-25%,3608,906,25.11,22.95,2.16,Well-Calibrated
+25-30%,4704,1347,28.64,26.87,1.77,Well-Calibrated
+30-35%,63,16,25.4,30.39,-4.99,Over-Predicting
+35-40%,0,0,0.0,0.0,0.0,Well-Calibrated
+40-45%,0,0,0.0,0.0,0.0,Well-Calibrated
+45%+,0,0,0.0,0.0,0.0,Well-Calibrated

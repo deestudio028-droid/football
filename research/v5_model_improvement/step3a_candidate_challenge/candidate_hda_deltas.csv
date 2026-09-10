@@ -1,0 +1,6 @@
+candidate,acc_delta,log_loss_delta,brier_delta,home_f1_delta,draw_f1_delta,away_f1_delta,macro_f1_delta,ece_delta
+C0: V4.0 Production Baseline,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+C1: Vector Scaling,-0.17,-0.0024,-0.0009,0.05,0.0,-0.4,-0.12,-0.0091
+C2: Platt Draw Calibration,-0.11,-0.0017,-0.0004,-0.14,0.0,0.05,-0.03,-0.0016
+C3: Score-Space / Coherent Matrix Blend,0.0,-0.0014,-0.0003,0.0,0.0,0.0,0.0,-0.0047
+C4: Platt + Score-Space Blend,-0.06,-0.0019,-0.0005,-0.07,0.0,0.0,-0.03,-0.0023

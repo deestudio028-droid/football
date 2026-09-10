@@ -1,0 +1,6 @@
+candidate,accuracy_pct,log_loss,brier_score,macro_f1_pct,home_f1_pct,draw_f1_pct,away_f1_pct,mean_ece
+V4.0 Baseline,51.97,0.9921,0.5907,38.69,64.44,0.0,51.62,0.0266
+Pure G2 Score-Space 1X2,51.97,0.9906,0.5905,38.69,64.44,0.0,51.62,0.0215
+Platt Draw Calibration (Step 2D/2E),51.86,0.9904,0.5903,38.66,64.3,0.0,51.67,0.025
+Joint Coherent Model (Platt + G2 Score-Space Blend),51.97,0.9903,0.5903,38.69,64.44,0.0,51.62,0.0217
+Stacked Risk-Informed Multiclass Model,22.96,1.4159,0.8519,17.52,25.8,0.0,26.77,0.1994

@@ -1,0 +1,262 @@
+{
+  "status_breakdown_table": [
+    {
+      "status": "STRONG",
+      "n_matches": 2241,
+      "coverage_pct": 31.64,
+      "actual_mean_rps": 0.161384,
+      "actual_mean_log_loss": 0.843169,
+      "actual_mean_brier": 0.487447,
+      "top1_accuracy_pct": 66.09,
+      "draw_ece": 0.0199,
+      "mean_entropy": 0.8626,
+      "mean_max_prob": 0.6498,
+      "mean_margin": 0.4435
+    },
+    {
+      "status": "LEAN",
+      "n_matches": 1360,
+      "coverage_pct": 19.2,
+      "actual_mean_rps": 0.203866,
+      "actual_mean_log_loss": 0.998641,
+      "actual_mean_brier": 0.596846,
+      "top1_accuracy_pct": 54.12,
+      "draw_ece": 0.0073,
+      "mean_entropy": 1.0255,
+      "mean_max_prob": 0.5078,
+      "mean_margin": 0.2434
+    },
+    {
+      "status": "CAUTION",
+      "n_matches": 1289,
+      "coverage_pct": 18.2,
+      "actual_mean_rps": 0.217374,
+      "actual_mean_log_loss": 1.068966,
+      "actual_mean_brier": 0.645816,
+      "top1_accuracy_pct": 43.52,
+      "draw_ece": 0.0301,
+      "mean_entropy": 1.0615,
+      "mean_max_prob": 0.4524,
+      "mean_margin": 0.1658
+    },
+    {
+      "status": "AVOID",
+      "n_matches": 2192,
+      "coverage_pct": 30.95,
+      "actual_mean_rps": 0.225213,
+      "actual_mean_log_loss": 1.066863,
+      "actual_mean_brier": 0.644466,
+      "top1_accuracy_pct": 44.89,
+      "draw_ece": 0.0108,
+      "mean_entropy": 1.0788,
+      "mean_max_prob": 0.4143,
+      "mean_margin": 0.1005
+    }
+  ],
+  "coverage_curve_table": [
+    {
+      "coverage_pct": 100,
+      "retained_matches": 7082,
+      "abstain_count": 0,
+      "retained_rps": 0.199489,
+      "retained_log_loss": 0.98336,
+      "retained_brier": 0.585881,
+      "draw_ece": 0.0069,
+      "top1_accuracy_pct": 53.12,
+      "mean_entropy": 0.997,
+      "mean_max_prob": 0.5137
+    },
+    {
+      "coverage_pct": 95,
+      "retained_matches": 6833,
+      "abstain_count": 249,
+      "retained_rps": 0.199058,
+      "retained_log_loss": 0.980918,
+      "retained_brier": 0.584207,
+      "draw_ece": 0.0062,
+      "top1_accuracy_pct": 53.39,
+      "mean_entropy": 0.9944,
+      "mean_max_prob": 0.5166
+    },
+    {
+      "coverage_pct": 90,
+      "retained_matches": 6415,
+      "abstain_count": 667,
+      "retained_rps": 0.197163,
+      "retained_log_loss": 0.975111,
+      "retained_brier": 0.580098,
+      "draw_ece": 0.008,
+      "top1_accuracy_pct": 53.95,
+      "mean_entropy": 0.9887,
+      "mean_max_prob": 0.5238
+    },
+    {
+      "coverage_pct": 85,
+      "retained_matches": 6070,
+      "abstain_count": 1012,
+      "retained_rps": 0.195341,
+      "retained_log_loss": 0.969284,
+      "retained_brier": 0.575982,
+      "draw_ece": 0.0092,
+      "top1_accuracy_pct": 54.61,
+      "mean_entropy": 0.9833,
+      "mean_max_prob": 0.5306
+    },
+    {
+      "coverage_pct": 80,
+      "retained_matches": 5715,
+      "abstain_count": 1367,
+      "retained_rps": 0.193124,
+      "retained_log_loss": 0.963054,
+      "retained_brier": 0.571595,
+      "draw_ece": 0.0115,
+      "top1_accuracy_pct": 55.26,
+      "mean_entropy": 0.9774,
+      "mean_max_prob": 0.5376
+    },
+    {
+      "coverage_pct": 75,
+      "retained_matches": 5324,
+      "abstain_count": 1758,
+      "retained_rps": 0.190991,
+      "retained_log_loss": 0.95539,
+      "retained_brier": 0.566245,
+      "draw_ece": 0.0121,
+      "top1_accuracy_pct": 55.99,
+      "mean_entropy": 0.9699,
+      "mean_max_prob": 0.5469
+    },
+    {
+      "coverage_pct": 70,
+      "retained_matches": 5006,
+      "abstain_count": 2076,
+      "retained_rps": 0.188956,
+      "retained_log_loss": 0.948677,
+      "retained_brier": 0.561536,
+      "draw_ece": 0.0135,
+      "top1_accuracy_pct": 56.47,
+      "mean_entropy": 0.963,
+      "mean_max_prob": 0.5552
+    },
+    {
+      "coverage_pct": 60,
+      "retained_matches": 4773,
+      "abstain_count": 2309,
+      "retained_rps": 0.187177,
+      "retained_log_loss": 0.942446,
+      "retained_brier": 0.557185,
+      "draw_ece": 0.0142,
+      "top1_accuracy_pct": 57.3,
+      "mean_entropy": 0.9574,
+      "mean_max_prob": 0.5618
+    },
+    {
+      "coverage_pct": 50,
+      "retained_matches": 3541,
+      "abstain_count": 3541,
+      "retained_rps": 0.176369,
+      "retained_log_loss": 0.898448,
+      "retained_brier": 0.526349,
+      "draw_ece": 0.0106,
+      "top1_accuracy_pct": 62.07,
+      "mean_entropy": 0.9215,
+      "mean_max_prob": 0.5992
+    }
+  ],
+  "separation_bootstrap_tests": {
+    "STRONG_vs_AVOID": {
+      "delta_rps": -0.063671,
+      "ci_95": [
+        -0.070487,
+        -0.056264
+      ],
+      "p_value": 0.0,
+      "is_significant": true
+    },
+    "STRONG_vs_CAUTION": {
+      "delta_rps": -0.055893,
+      "ci_95": [
+        -0.06421,
+        -0.047385
+      ],
+      "p_value": 0.0,
+      "is_significant": true
+    },
+    "LEAN_vs_AVOID": {
+      "delta_rps": -0.021417,
+      "ci_95": [
+        -0.028251,
+        -0.014267
+      ],
+      "p_value": 0.0,
+      "is_significant": true
+    }
+  },
+  "league_breakdown": [
+    {
+      "league": "Premier League",
+      "n_matches": 1520,
+      "overall_rps": 0.1999,
+      "rps_strong": 0.16569,
+      "rps_lean": 0.208659,
+      "rps_caution": 0.216092,
+      "rps_avoid": 0.225104,
+      "top1_accuracy_strong": 64.76,
+      "spearman_corr": 0.4061,
+      "top1_roc_auc": 0.6131,
+      "is_monotonic": true
+    },
+    {
+      "league": "La Liga",
+      "n_matches": 1520,
+      "overall_rps": 0.198007,
+      "rps_strong": 0.157463,
+      "rps_lean": 0.198159,
+      "rps_caution": 0.214929,
+      "rps_avoid": 0.220219,
+      "top1_accuracy_strong": 68.89,
+      "spearman_corr": 0.3993,
+      "top1_roc_auc": 0.6114,
+      "is_monotonic": true
+    },
+    {
+      "league": "Bundesliga",
+      "n_matches": 1224,
+      "overall_rps": 0.20011,
+      "rps_strong": 0.159147,
+      "rps_lean": 0.202256,
+      "rps_caution": 0.226018,
+      "rps_avoid": 0.227347,
+      "top1_accuracy_strong": 66.26,
+      "spearman_corr": 0.4124,
+      "top1_roc_auc": 0.6433,
+      "is_monotonic": true
+    },
+    {
+      "league": "Serie A",
+      "n_matches": 1521,
+      "overall_rps": 0.195323,
+      "rps_strong": 0.162714,
+      "rps_lean": 0.194658,
+      "rps_caution": 0.212352,
+      "rps_avoid": 0.22378,
+      "top1_accuracy_strong": 64.38,
+      "spearman_corr": 0.4018,
+      "top1_roc_auc": 0.5953,
+      "is_monotonic": true
+    },
+    {
+      "league": "Ligue 1",
+      "n_matches": 1297,
+      "overall_rps": 0.205043,
+      "rps_strong": 0.160272,
+      "rps_lean": 0.215642,
+      "rps_caution": 0.223,
+      "rps_avoid": 0.230177,
+      "top1_accuracy_strong": 67.01,
+      "spearman_corr": 0.4141,
+      "top1_roc_auc": 0.6063,
+      "is_monotonic": true
+    }
+  ]
+}

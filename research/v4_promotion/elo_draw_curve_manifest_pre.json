@@ -1,0 +1,77 @@
+{
+  "generated_at": "2026-08-21T05:23:00.367413+00:00",
+  "experiment": "Phase 3 Elo -> Empirical Draw Curve Research",
+  "pre_flight_audit": {
+    "data/models/v2_poisson_venue.pkl": {
+      "expected": "25935b4e93fc4074f67f16e3181ed4df",
+      "actual": "25935b4e93fc4074f67f16e3181ed4df",
+      "status": "identical"
+    },
+    "data/models/v1_logreg.pkl": {
+      "expected": "5e504427712b35778bb8a62a8496c7cd",
+      "actual": "5e504427712b35778bb8a62a8496c7cd",
+      "status": "identical"
+    },
+    "data/models/v3_poisson_venue_elo_candidate.pkl": {
+      "expected": "a2850a7687822a5916663301f5ccc96c",
+      "actual": "a2850a7687822a5916663301f5ccc96c",
+      "status": "identical"
+    },
+    "data/models/v4_poisson_venue_elo_online_ad.pkl": {
+      "expected": "06841f0c03c8597b2b8cd8f8ab064864",
+      "actual": "06841f0c03c8597b2b8cd8f8ab064864",
+      "status": "identical"
+    },
+    "data/processed/features.db": {
+      "expected": "e7ebe7fc07040a5927683c35b6371e63",
+      "actual": "e7ebe7fc07040a5927683c35b6371e63",
+      "status": "identical"
+    },
+    "data/processed/matches.db": {
+      "expected": "fdeed042096fa1c851aaee6c84995247",
+      "actual": "fdeed042096fa1c851aaee6c84995247",
+      "status": "identical"
+    },
+    "research/market_odds/odds_history.sqlite": {
+      "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+      "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+      "status": "identical"
+    },
+    "research/market_odds/research_dataset.sqlite": {
+      "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+      "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+      "status": "identical"
+    },
+    "research/v4_promotion/promotion_market_odds.sqlite": {
+      "expected": "f8a41b79cd33afb412ccd9ae2892a196",
+      "actual": "f8a41b79cd33afb412ccd9ae2892a196",
+      "status": "identical"
+    },
+    "research/v4_promotion/fresh_100_market_odds.sqlite": {
+      "expected": "2cb80b79d772fbedd4f3707b39a32c13",
+      "actual": "2cb80b79d772fbedd4f3707b39a32c13",
+      "status": "identical"
+    },
+    "research/v4_promotion/fresh_100_fixture_ids.json": {
+      "expected": "761ad5cc571643e6985e671bd9c3d83a",
+      "actual": "761ad5cc571643e6985e671bd9c3d83a",
+      "status": "identical"
+    },
+    "research/v4_promotion/fresh_extended_fixture_ids.json": {
+      "expected": "0526bfd6980dd51dae59c6f6aadab2f5",
+      "actual": "0526bfd6980dd51dae59c6f6aadab2f5",
+      "status": "identical"
+    },
+    "research/v4_promotion/fresh_extended_market_odds.sqlite": {
+      "expected": "b4889d1791723ea653057af51ca00f8e",
+      "actual": "b4889d1791723ea653057af51ca00f8e",
+      "status": "identical"
+    },
+    "research/v4_promotion/dixon_coles_rho_method_frozen.json": {
+      "expected": "822e742dcc82e5e96445b31c14c0c604",
+      "actual": "822e742dcc82e5e96445b31c14c0c604",
+      "status": "identical"
+    }
+  },
+  "status": "PRE_FLIGHT_PASSED"
+}

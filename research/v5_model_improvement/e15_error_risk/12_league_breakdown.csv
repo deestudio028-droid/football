@@ -1,0 +1,6 @@
+league,n_matches,mean_predicted_risk,actual_mean_rps,actual_mean_log_loss,risk_model_roc_auc
+Premier League,1520,0.1045,0.1999,0.976316,0.7512
+La Liga,1520,0.1,0.198007,0.979583,0.7583
+Bundesliga,1224,0.0938,0.20011,0.986526,0.7493
+Serie A,1521,0.1046,0.195323,0.985936,0.7616
+Ligue 1,1297,0.1044,0.205043,0.990031,0.7629

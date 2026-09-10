@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-08-21T04:46:53.833912+00:00",
+  "fixtures": 300,
+  "results_file": "v4_extended_300_validation_results.json",
+  "report_file": "v4_extended_300_validation_report.md",
+  "frozen_ids_md5": "0526bfd6980dd51dae59c6f6aadab2f5",
+  "market_db_md5": "b4889d1791723ea653057af51ca00f8e",
+  "v4_artifact_md5": "06841f0c03c8597b2b8cd8f8ab064864",
+  "integrity": true,
+  "causality": true,
+  "determinism": true,
+  "market_coverage": "300/300",
+  "overall": "COMPLETE",
+  "evidence_sufficient_for_promotion": false,
+  "v4_promoted": false
+}

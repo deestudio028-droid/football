@@ -1,0 +1,7 @@
+check_item,expected,actual,status,details
+Active Default Model in Registry,V4.0 Production,V4.0 Production,PASS,ModelRegistry.get_default_model() returns 'V4.0 Production'
+Production Model Role in Registry,v4_0_draw_champion,v4_0_draw_champion,PASS,ModelRegistry.get_production_model() binds strictly to V4.0 artifact
+V4.1 Role in Registry,RESEARCH,RESEARCH,PASS,V4.1 is strictly isolated as RESEARCH candidate
+Dashboard Active Model Key,"ACTIVE_MODEL_KEY = ""V4.0 Production""","ACTIVE_MODEL_KEY = ""V4.0 Production""",PASS,Dashboard hard-binds ACTIVE_MODEL_KEY to V4.0 Production
+Model Selector Dropdown in Dashboard UI,ABSENT (Removed),ABSENT,PASS,Dropdown UI completely removed in Step 2H-cleanup
+PredictionService Default Routing,V4.0 Production,V4.0 Production,PASS,PredictionService defaults to V4.0 Production on all calls

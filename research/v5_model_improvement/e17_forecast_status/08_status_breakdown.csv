@@ -1,0 +1,5 @@
+status,n_matches,coverage_pct,actual_mean_rps,actual_mean_log_loss,actual_mean_brier,top1_accuracy_pct,draw_ece,mean_entropy,mean_max_prob,mean_margin
+STRONG,2241,31.64,0.161384,0.843169,0.487447,66.09,0.0199,0.8626,0.6498,0.4435
+LEAN,1360,19.2,0.203866,0.998641,0.596846,54.12,0.0073,1.0255,0.5078,0.2434
+CAUTION,1289,18.2,0.217374,1.068966,0.645816,43.52,0.0301,1.0615,0.4524,0.1658
+AVOID,2192,30.95,0.225213,1.066863,0.644466,44.89,0.0108,1.0788,0.4143,0.1005

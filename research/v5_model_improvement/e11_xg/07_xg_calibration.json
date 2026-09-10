@@ -1,0 +1,650 @@
+{
+  "V4_Baseline": {
+    "H": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 71,
+        "mean_predicted": 0.0716,
+        "observed_frequency": 0.0563
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 483,
+        "mean_predicted": 0.159,
+        "observed_frequency": 0.1615
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 1025,
+        "mean_predicted": 0.2544,
+        "observed_frequency": 0.2224
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 1540,
+        "mean_predicted": 0.3509,
+        "observed_frequency": 0.3403
+      },
+      {
+        "bin": 4,
+        "range": "0.4-0.5",
+        "count": 1560,
+        "mean_predicted": 0.4487,
+        "observed_frequency": 0.4577
+      },
+      {
+        "bin": 5,
+        "range": "0.5-0.6",
+        "count": 1183,
+        "mean_predicted": 0.5471,
+        "observed_frequency": 0.5579
+      },
+      {
+        "bin": 6,
+        "range": "0.6-0.7",
+        "count": 706,
+        "mean_predicted": 0.6464,
+        "observed_frequency": 0.6742
+      },
+      {
+        "bin": 7,
+        "range": "0.7-0.8",
+        "count": 352,
+        "mean_predicted": 0.7434,
+        "observed_frequency": 0.7841
+      },
+      {
+        "bin": 8,
+        "range": "0.8-0.9",
+        "count": 140,
+        "mean_predicted": 0.8403,
+        "observed_frequency": 0.85
+      },
+      {
+        "bin": 9,
+        "range": "0.9-1.0",
+        "count": 22,
+        "mean_predicted": 0.9213,
+        "observed_frequency": 0.8182
+      }
+    ],
+    "D": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 88,
+        "mean_predicted": 0.0786,
+        "observed_frequency": 0.0795
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 1065,
+        "mean_predicted": 0.1675,
+        "observed_frequency": 0.1709
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 5929,
+        "mean_predicted": 0.2456,
+        "observed_frequency": 0.2697
+      }
+    ],
+    "A": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 322,
+        "mean_predicted": 0.0681,
+        "observed_frequency": 0.0621
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 1183,
+        "mean_predicted": 0.1553,
+        "observed_frequency": 0.12
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 1721,
+        "mean_predicted": 0.2509,
+        "observed_frequency": 0.2115
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 1665,
+        "mean_predicted": 0.3466,
+        "observed_frequency": 0.3255
+      },
+      {
+        "bin": 4,
+        "range": "0.4-0.5",
+        "count": 1121,
+        "mean_predicted": 0.4441,
+        "observed_frequency": 0.4434
+      },
+      {
+        "bin": 5,
+        "range": "0.5-0.6",
+        "count": 634,
+        "mean_predicted": 0.5435,
+        "observed_frequency": 0.5631
+      },
+      {
+        "bin": 6,
+        "range": "0.6-0.7",
+        "count": 294,
+        "mean_predicted": 0.644,
+        "observed_frequency": 0.5646
+      },
+      {
+        "bin": 7,
+        "range": "0.7-0.8",
+        "count": 104,
+        "mean_predicted": 0.7354,
+        "observed_frequency": 0.75
+      },
+      {
+        "bin": 8,
+        "range": "0.8-0.9",
+        "count": 38,
+        "mean_predicted": 0.8363,
+        "observed_frequency": 0.8158
+      }
+    ]
+  },
+  "E11_Arm_E_xG_Fatigue": {
+    "H": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 109,
+        "mean_predicted": 0.0697,
+        "observed_frequency": 0.1284
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 558,
+        "mean_predicted": 0.1584,
+        "observed_frequency": 0.1613
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 1075,
+        "mean_predicted": 0.2547,
+        "observed_frequency": 0.24
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 1425,
+        "mean_predicted": 0.3516,
+        "observed_frequency": 0.3439
+      },
+      {
+        "bin": 4,
+        "range": "0.4-0.5",
+        "count": 1396,
+        "mean_predicted": 0.4488,
+        "observed_frequency": 0.4563
+      },
+      {
+        "bin": 5,
+        "range": "0.5-0.6",
+        "count": 1128,
+        "mean_predicted": 0.5474,
+        "observed_frequency": 0.5541
+      },
+      {
+        "bin": 6,
+        "range": "0.6-0.7",
+        "count": 718,
+        "mean_predicted": 0.6459,
+        "observed_frequency": 0.6365
+      },
+      {
+        "bin": 7,
+        "range": "0.7-0.8",
+        "count": 435,
+        "mean_predicted": 0.744,
+        "observed_frequency": 0.754
+      },
+      {
+        "bin": 8,
+        "range": "0.8-0.9",
+        "count": 195,
+        "mean_predicted": 0.8419,
+        "observed_frequency": 0.841
+      },
+      {
+        "bin": 9,
+        "range": "0.9-1.0",
+        "count": 43,
+        "mean_predicted": 0.9267,
+        "observed_frequency": 0.7907
+      }
+    ],
+    "D": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 151,
+        "mean_predicted": 0.0758,
+        "observed_frequency": 0.1192
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 1241,
+        "mean_predicted": 0.1655,
+        "observed_frequency": 0.1902
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 5690,
+        "mean_predicted": 0.2447,
+        "observed_frequency": 0.2696
+      }
+    ],
+    "A": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 453,
+        "mean_predicted": 0.0664,
+        "observed_frequency": 0.0618
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 1190,
+        "mean_predicted": 0.1532,
+        "observed_frequency": 0.1345
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 1619,
+        "mean_predicted": 0.2495,
+        "observed_frequency": 0.2168
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 1528,
+        "mean_predicted": 0.3474,
+        "observed_frequency": 0.3187
+      },
+      {
+        "bin": 4,
+        "range": "0.4-0.5",
+        "count": 1105,
+        "mean_predicted": 0.4471,
+        "observed_frequency": 0.4416
+      },
+      {
+        "bin": 5,
+        "range": "0.5-0.6",
+        "count": 647,
+        "mean_predicted": 0.5456,
+        "observed_frequency": 0.5379
+      },
+      {
+        "bin": 6,
+        "range": "0.6-0.7",
+        "count": 341,
+        "mean_predicted": 0.6435,
+        "observed_frequency": 0.5777
+      },
+      {
+        "bin": 7,
+        "range": "0.7-0.8",
+        "count": 145,
+        "mean_predicted": 0.7413,
+        "observed_frequency": 0.6552
+      },
+      {
+        "bin": 8,
+        "range": "0.8-0.9",
+        "count": 50,
+        "mean_predicted": 0.8423,
+        "observed_frequency": 0.8
+      },
+      {
+        "bin": 9,
+        "range": "0.9-1.0",
+        "count": 4,
+        "mean_predicted": 0.9194,
+        "observed_frequency": 0.75
+      }
+    ]
+  },
+  "E11_Arm_F_E10_xG": {
+    "H": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 132,
+        "mean_predicted": 0.0709,
+        "observed_frequency": 0.1136
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 599,
+        "mean_predicted": 0.1578,
+        "observed_frequency": 0.1636
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 1153,
+        "mean_predicted": 0.2545,
+        "observed_frequency": 0.2524
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 1409,
+        "mean_predicted": 0.3513,
+        "observed_frequency": 0.3577
+      },
+      {
+        "bin": 4,
+        "range": "0.4-0.5",
+        "count": 1378,
+        "mean_predicted": 0.4477,
+        "observed_frequency": 0.463
+      },
+      {
+        "bin": 5,
+        "range": "0.5-0.6",
+        "count": 1095,
+        "mean_predicted": 0.5469,
+        "observed_frequency": 0.5626
+      },
+      {
+        "bin": 6,
+        "range": "0.6-0.7",
+        "count": 678,
+        "mean_predicted": 0.646,
+        "observed_frequency": 0.6372
+      },
+      {
+        "bin": 7,
+        "range": "0.7-0.8",
+        "count": 415,
+        "mean_predicted": 0.7439,
+        "observed_frequency": 0.7663
+      },
+      {
+        "bin": 8,
+        "range": "0.8-0.9",
+        "count": 184,
+        "mean_predicted": 0.8426,
+        "observed_frequency": 0.8315
+      },
+      {
+        "bin": 9,
+        "range": "0.9-1.0",
+        "count": 39,
+        "mean_predicted": 0.9276,
+        "observed_frequency": 0.8205
+      }
+    ],
+    "D": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 120,
+        "mean_predicted": 0.0754,
+        "observed_frequency": 0.1
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 916,
+        "mean_predicted": 0.1636,
+        "observed_frequency": 0.1801
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 5939,
+        "mean_predicted": 0.259,
+        "observed_frequency": 0.267
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 107,
+        "mean_predicted": 0.3045,
+        "observed_frequency": 0.2336
+      }
+    ],
+    "A": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 514,
+        "mean_predicted": 0.0661,
+        "observed_frequency": 0.07
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 1265,
+        "mean_predicted": 0.1534,
+        "observed_frequency": 0.1407
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 1656,
+        "mean_predicted": 0.2496,
+        "observed_frequency": 0.2264
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 1465,
+        "mean_predicted": 0.347,
+        "observed_frequency": 0.327
+      },
+      {
+        "bin": 4,
+        "range": "0.4-0.5",
+        "count": 1062,
+        "mean_predicted": 0.4456,
+        "observed_frequency": 0.451
+      },
+      {
+        "bin": 5,
+        "range": "0.5-0.6",
+        "count": 620,
+        "mean_predicted": 0.5452,
+        "observed_frequency": 0.5452
+      },
+      {
+        "bin": 6,
+        "range": "0.6-0.7",
+        "count": 318,
+        "mean_predicted": 0.6444,
+        "observed_frequency": 0.5692
+      },
+      {
+        "bin": 7,
+        "range": "0.7-0.8",
+        "count": 134,
+        "mean_predicted": 0.7433,
+        "observed_frequency": 0.694
+      },
+      {
+        "bin": 8,
+        "range": "0.8-0.9",
+        "count": 44,
+        "mean_predicted": 0.8441,
+        "observed_frequency": 0.7955
+      },
+      {
+        "bin": 9,
+        "range": "0.9-1.0",
+        "count": 4,
+        "mean_predicted": 0.9174,
+        "observed_frequency": 0.75
+      }
+    ]
+  },
+  "E11_LightGBM_Poisson": {
+    "H": [
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 324,
+        "mean_predicted": 0.1744,
+        "observed_frequency": 0.142
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 1264,
+        "mean_predicted": 0.2523,
+        "observed_frequency": 0.2247
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 1576,
+        "mean_predicted": 0.3501,
+        "observed_frequency": 0.3306
+      },
+      {
+        "bin": 4,
+        "range": "0.4-0.5",
+        "count": 1585,
+        "mean_predicted": 0.4481,
+        "observed_frequency": 0.4656
+      },
+      {
+        "bin": 5,
+        "range": "0.5-0.6",
+        "count": 1193,
+        "mean_predicted": 0.5477,
+        "observed_frequency": 0.565
+      },
+      {
+        "bin": 6,
+        "range": "0.6-0.7",
+        "count": 903,
+        "mean_predicted": 0.6464,
+        "observed_frequency": 0.7043
+      },
+      {
+        "bin": 7,
+        "range": "0.7-0.8",
+        "count": 235,
+        "mean_predicted": 0.7242,
+        "observed_frequency": 0.834
+      },
+      {
+        "bin": 8,
+        "range": "0.8-0.9",
+        "count": 2,
+        "mean_predicted": 0.8073,
+        "observed_frequency": 1.0
+      }
+    ],
+    "D": [
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 532,
+        "mean_predicted": 0.1829,
+        "observed_frequency": 0.141
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 6509,
+        "mean_predicted": 0.2572,
+        "observed_frequency": 0.2618
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 41,
+        "mean_predicted": 0.3036,
+        "observed_frequency": 0.2195
+      }
+    ],
+    "A": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 79,
+        "mean_predicted": 0.0914,
+        "observed_frequency": 0.0886
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 1549,
+        "mean_predicted": 0.1537,
+        "observed_frequency": 0.1181
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 1870,
+        "mean_predicted": 0.2517,
+        "observed_frequency": 0.2209
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 1602,
+        "mean_predicted": 0.3474,
+        "observed_frequency": 0.3527
+      },
+      {
+        "bin": 4,
+        "range": "0.4-0.5",
+        "count": 1139,
+        "mean_predicted": 0.4454,
+        "observed_frequency": 0.468
+      },
+      {
+        "bin": 5,
+        "range": "0.5-0.6",
+        "count": 676,
+        "mean_predicted": 0.5422,
+        "observed_frequency": 0.5607
+      },
+      {
+        "bin": 6,
+        "range": "0.6-0.7",
+        "count": 164,
+        "mean_predicted": 0.6291,
+        "observed_frequency": 0.7073
+      },
+      {
+        "bin": 7,
+        "range": "0.7-0.8",
+        "count": 3,
+        "mean_predicted": 0.7116,
+        "observed_frequency": 0.3333
+      }
+    ]
+  }
+}

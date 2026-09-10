@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-21T05:38:39.450584+00:00",
+  "historical_fixtures": 8983,
+  "oos_fixtures": 300,
+  "results_file": "market_calibration_results.json",
+  "report_file": "market_calibration_report.md",
+  "frozen_method_file": "market_calibration_method_frozen.json",
+  "frozen_method_hash": "550a0e1f1358a8359d7141b422521dd9",
+  "integrity_passed": true,
+  "verdict": "B. PROMISING \u2014 NEEDS MORE VALIDATION",
+  "production_modified": false
+}

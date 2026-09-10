@@ -1,0 +1,37 @@
+{
+  "verified_at": "2026-08-24T03:33:01.575861+00:00",
+  "v4_0_frozen_production": {
+    "path": "data/models/v4_poisson_venue_elo_online_ad.pkl",
+    "md5": "06841f0c03c8597b2b8cd8f8ab064864",
+    "status": "VERIFIED_BIT_IDENTICAL"
+  },
+  "v4_1_prospective_candidate": {
+    "path": "data/models/v4_1_prospective_candidate_2025_26.pkl",
+    "md5": "145f918d933eb343c0f63ca342b10289",
+    "sha256": "cbb00b32c3ce4dbf600564a95d11b67a0c236f6b34cd184a9ca8abcc8ab94ac8",
+    "file_size": 15506,
+    "status": "GENERATED_AND_LOCKED"
+  },
+  "protected_20_assets": {
+    "data/models/v4_poisson_venue_elo_online_ad.pkl": "VERIFIED_BIT_IDENTICAL",
+    "data/models/v3_poisson_venue_elo_candidate.pkl": "VERIFIED_BIT_IDENTICAL",
+    "data/models/v2_poisson_venue.pkl": "VERIFIED_BIT_IDENTICAL",
+    "data/models/v1_logreg.pkl": "VERIFIED_BIT_IDENTICAL",
+    "data/processed/matches.db": "VERIFIED_BIT_IDENTICAL",
+    "data/processed/features.db": "VERIFIED_BIT_IDENTICAL",
+    "research/market_odds/odds_history.sqlite": "VERIFIED_BIT_IDENTICAL",
+    "research/market_odds/research_dataset.sqlite": "VERIFIED_BIT_IDENTICAL",
+    "research/v4_promotion/promotion_market_odds.sqlite": "VERIFIED_BIT_IDENTICAL",
+    "research/v4_promotion/fresh_100_market_odds.sqlite": "VERIFIED_BIT_IDENTICAL",
+    "research/v4_promotion/fresh_100_fixture_ids.json": "VERIFIED_BIT_IDENTICAL",
+    "research/v4_promotion/fresh_extended_fixture_ids.json": "VERIFIED_BIT_IDENTICAL",
+    "research/v4_promotion/fresh_extended_market_odds.sqlite": "VERIFIED_BIT_IDENTICAL",
+    "research/v4_promotion/dixon_coles_rho_method_frozen.json": "VERIFIED_BIT_IDENTICAL",
+    "research/v4_promotion/elo_draw_curve_method_frozen.json": "VERIFIED_BIT_IDENTICAL",
+    "research/v4_promotion/full_score_matrix_method_frozen.json": "VERIFIED_BIT_IDENTICAL",
+    "research/v4_promotion/market_calibration_method_frozen.json": "VERIFIED_BIT_IDENTICAL",
+    "research/v4_promotion/draw_complementarity_method_frozen.json": "VERIFIED_BIT_IDENTICAL",
+    "research/v4_promotion/temporal_regime_method_frozen.json": "VERIFIED_BIT_IDENTICAL",
+    "research/v4_promotion/statistical_power_uncertainty_method_frozen.json": "VERIFIED_BIT_IDENTICAL"
+  }
+}

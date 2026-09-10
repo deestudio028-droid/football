@@ -1,0 +1,3 @@
+track,baseline_model,baseline_accuracy,baseline_log_loss,baseline_brier,baseline_ece,best_candidate,candidate_accuracy,candidate_log_loss,candidate_brier,candidate_ece,recommendation
+1X2 Prediction,V4.0 Production Baseline,51.97,0.9921,0.5907,0.0266,Candidate 4 (Platt Logistic Draw Calibration),51.86,0.9904,0.5903,0.025,Preserve V4.0 Production + Draw Risk Advisory Layer (Zero forced mutation)
+Goal & Score Prediction,V4.0 Poisson Goals,12.68,1.2972,0.9544,0.8539,Candidate G2 (Bivariate Dixon-Coles Joint PMF),12.34,1.2972,0.9544,0.8539,Bivariate Dixon-Coles Joint Score PMF generates optimal discrete score probabilities

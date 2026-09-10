@@ -1,0 +1,6 @@
+segment,n_matches,mean_rps,rps_strong,rps_avoid,strong_count,avoid_count
+First_1_Match_Of_Season,24,0.175214,0.129703,0.232578,10,8
+First_3_Matches_Of_Season,99,0.190724,0.145735,0.231573,35,32
+First_5_Matches_Of_Season,151,0.194253,0.158519,0.222142,47,53
+First_10_Matches_Of_Season,296,0.196683,0.168015,0.218938,99,106
+Remaining_Season_Matches,6786,0.199611,0.161077,0.225532,2142,2086

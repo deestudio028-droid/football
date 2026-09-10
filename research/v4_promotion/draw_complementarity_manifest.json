@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-21T05:49:20.667621+00:00",
+  "historical_fixtures": 8983,
+  "oos_fixtures": 300,
+  "results_file": "draw_complementarity_results.json",
+  "report_file": "draw_complementarity_report.md",
+  "frozen_method_file": "draw_complementarity_method_frozen.json",
+  "frozen_method_hash": "d4f7dc75785df076c105a6ebfc0a4d6e",
+  "integrity_passed": true,
+  "verdict": "B. PROMISING \u2014 NEEDS MORE VALIDATION",
+  "production_modified": false
+}

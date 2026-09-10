@@ -1,0 +1,6678 @@
+{
+  "generated_at": "2026-08-21T04:15:33.921888+00:00",
+  "experiment": "V4 fresh-100 OOS validation",
+  "sample_note": "Fresh 100 = next chronological FT fixtures after the frozen 50 (LIMIT 100 OFFSET 50). Zero overlap with the frozen 20 or 50. IDs frozen before evaluation.",
+  "selection_rule": "season_id IN (2025/26) AND status='FT' ORDER BY unix ASC, fixture_id ASC LIMIT 100 OFFSET 50",
+  "frozen_ids_md5": "761ad5cc571643e6985e671bd9c3d83a",
+  "fixture_ids": [
+    347954663,
+    347954664,
+    347954667,
+    347954668,
+    348751609,
+    348751610,
+    348751611,
+    348751703,
+    348751787,
+    348751939,
+    348751940,
+    348751941,
+    348751942,
+    348751943,
+    348751956,
+    348751957,
+    348751963,
+    348751964,
+    348751978,
+    348751979,
+    348751980,
+    348751981,
+    349634360,
+    349634361,
+    349634367,
+    347953750,
+    349634368,
+    354688065,
+    353028717,
+    353028745,
+    353028780,
+    353028781,
+    353028787,
+    353028790,
+    353832467,
+    353832631,
+    353832632,
+    353832633,
+    353832634,
+    353832677,
+    353832678,
+    353832679,
+    353832680,
+    353832931,
+    353832934,
+    353833353,
+    353833354,
+    353833355,
+    353833356,
+    353833367,
+    353833368,
+    353833382,
+    353833409,
+    353833410,
+    353833412,
+    353833413,
+    354688222,
+    354688223,
+    354688225,
+    354688327,
+    354688424,
+    354688599,
+    354688600,
+    354688601,
+    354688602,
+    354688603,
+    354688609,
+    354688610,
+    354688612,
+    354688615,
+    354688616,
+    353028788,
+    354688631,
+    354688632,
+    354688633,
+    354688636,
+    366806653,
+    367857373,
+    366806662,
+    365992301,
+    367329875,
+    367329916,
+    367329964,
+    367329965,
+    367329966,
+    367329967,
+    367329968,
+    365992304,
+    365992306,
+    365992307,
+    365992311,
+    365992315,
+    367857789,
+    367857372,
+    367330222,
+    365992317,
+    367330261,
+    367857786,
+    367330318,
+    365992305
+  ],
+  "composition": {
+    "Serie A": 21,
+    "Ligue 1": 17,
+    "La Liga": 22,
+    "Premier League": 22,
+    "Bundesliga": 18
+  },
+  "date_span": [
+    "2025-08-23",
+    "2025-09-13"
+  ],
+  "outcome_distribution": {
+    "H": 49,
+    "D": 22,
+    "A": 29
+  },
+  "artifacts": {
+    "V2": "25935b4e93fc4074f67f16e3181ed4df",
+    "V3": "a2850a7687822a5916663301f5ccc96c",
+    "V4": "06841f0c03c8597b2b8cd8f8ab064864",
+    "V4_training_seasons": [
+      "2020/2021",
+      "2021/2022",
+      "2022/2023",
+      "2023/2024",
+      "2024/2025"
+    ],
+    "V4_holdout_used": false
+  },
+  "market": {
+    "source": "fresh_100_market_odds.sqlite",
+    "md5": "2cb80b79d772fbedd4f3707b39a32c13",
+    "bookmaker": "Pinnacle",
+    "price": "closing",
+    "coverage": "100/100",
+    "role": "REFERENCE ONLY",
+    "in_feature_matrix": false
+  },
+  "per_match": [
+    {
+      "n": 1,
+      "fixture_id": 347954663,
+      "date": "2025-08-23",
+      "league": "Serie A",
+      "home": "AC Milan",
+      "away": "Cremonese",
+      "score": "1-2",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.522349,
+        "p_draw": 0.251106,
+        "p_away": 0.226544,
+        "pred": "H",
+        "confidence": 0.522349,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.576136,
+        "p_draw": 0.23548,
+        "p_away": 0.188384,
+        "pred": "H",
+        "confidence": 0.576136,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.601242,
+        "p_draw": 0.224239,
+        "p_away": 0.174518,
+        "pred": "H",
+        "confidence": 0.601242,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.705022,
+        "p_draw": 0.187641,
+        "p_away": 0.107336,
+        "pred": "H",
+        "confidence": 0.705022,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.591551,
+        0.954954
+      ],
+      "V3_lambda": [
+        1.734993,
+        0.879415
+      ],
+      "V4_lambda": [
+        1.839646,
+        0.875222
+      ]
+    },
+    {
+      "n": 2,
+      "fixture_id": 347954664,
+      "date": "2025-08-23",
+      "league": "Serie A",
+      "home": "Roma",
+      "away": "Bologna",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.426298,
+        "p_draw": 0.272418,
+        "p_away": 0.301285,
+        "pred": "H",
+        "confidence": 0.426298,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.431256,
+        "p_draw": 0.271431,
+        "p_away": 0.297313,
+        "pred": "H",
+        "confidence": 0.431256,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.434365,
+        "p_draw": 0.270681,
+        "p_away": 0.294955,
+        "pred": "H",
+        "confidence": 0.434365,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.441637,
+        "p_draw": 0.30169,
+        "p_away": 0.256672,
+        "pred": "H",
+        "confidence": 0.441637,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.339452,
+        1.080076
+      ],
+      "V3_lambda": [
+        1.353186,
+        1.074741
+      ],
+      "V4_lambda": [
+        1.362681,
+        1.072419
+      ]
+    },
+    {
+      "n": 3,
+      "fixture_id": 347954667,
+      "date": "2025-08-23",
+      "league": "Ligue 1",
+      "home": "Olympique Lyonnais",
+      "away": "Metz",
+      "score": "3-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.580629,
+        "p_draw": 0.224776,
+        "p_away": 0.194595,
+        "pred": "H",
+        "confidence": 0.580629,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.624987,
+        "p_draw": 0.209864,
+        "p_away": 0.165149,
+        "pred": "H",
+        "confidence": 0.624987,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.643852,
+        "p_draw": 0.201455,
+        "p_away": 0.154693,
+        "pred": "H",
+        "confidence": 0.643852,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.67562,
+        "p_draw": 0.189336,
+        "p_away": 0.135044,
+        "pred": "H",
+        "confidence": 0.67562,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.855812,
+        0.973508
+      ],
+      "V3_lambda": [
+        1.991926,
+        0.912882
+      ],
+      "V4_lambda": [
+        2.075737,
+        0.906147
+      ]
+    },
+    {
+      "n": 4,
+      "fixture_id": 347954668,
+      "date": "2025-08-23",
+      "league": "La Liga",
+      "home": "Levante",
+      "away": "FC Barcelona",
+      "score": "2-3",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.274624,
+        "p_draw": 0.235386,
+        "p_away": 0.48999,
+        "pred": "A",
+        "confidence": 0.48999,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.207573,
+        "p_draw": 0.217439,
+        "p_away": 0.574988,
+        "pred": "A",
+        "confidence": 0.574988,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.187708,
+        "p_draw": 0.203822,
+        "p_away": 0.60847,
+        "pred": "A",
+        "confidence": 0.60847,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.082515,
+        "p_draw": 0.128095,
+        "p_away": 0.78939,
+        "pred": "A",
+        "confidence": 0.78939,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.249658,
+        1.743489
+      ],
+      "V3_lambda": [
+        1.092248,
+        1.958504
+      ],
+      "V4_lambda": [
+        1.091737,
+        2.116919
+      ]
+    },
+    {
+      "n": 5,
+      "fixture_id": 348751609,
+      "date": "2025-08-24",
+      "league": "Premier League",
+      "home": "Crystal Palace",
+      "away": "Nottingham Forest",
+      "score": "1-1",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.444672,
+        "p_draw": 0.258837,
+        "p_away": 0.296491,
+        "pred": "H",
+        "confidence": 0.444672,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.455442,
+        "p_draw": 0.257051,
+        "p_away": 0.287507,
+        "pred": "H",
+        "confidence": 0.455442,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.454563,
+        "p_draw": 0.257571,
+        "p_away": 0.287867,
+        "pred": "H",
+        "confidence": 0.454563,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.403483,
+        "p_draw": 0.292253,
+        "p_away": 0.304263,
+        "pred": "H",
+        "confidence": 0.403483,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.468986,
+        1.150351
+      ],
+      "V3_lambda": [
+        1.496526,
+        1.134272
+      ],
+      "V4_lambda": [
+        1.491077,
+        1.13199
+      ]
+    },
+    {
+      "n": 6,
+      "fixture_id": 348751610,
+      "date": "2025-08-24",
+      "league": "Premier League",
+      "home": "Everton",
+      "away": "Brighton & Hove Albion",
+      "score": "2-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.334466,
+        "p_draw": 0.262346,
+        "p_away": 0.403188,
+        "pred": "A",
+        "confidence": 0.403188,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.330796,
+        "p_draw": 0.262153,
+        "p_away": 0.407051,
+        "pred": "A",
+        "confidence": 0.407051,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.328147,
+        "p_draw": 0.265312,
+        "p_away": 0.406541,
+        "pred": "A",
+        "confidence": 0.406541,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.330601,
+        "p_draw": 0.280544,
+        "p_away": 0.388856,
+        "pred": "A",
+        "confidence": 0.388856,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.232572,
+        1.379673
+      ],
+      "V3_lambda": [
+        1.224467,
+        1.387725
+      ],
+      "V4_lambda": [
+        1.195979,
+        1.362305
+      ]
+    },
+    {
+      "n": 7,
+      "fixture_id": 348751611,
+      "date": "2025-08-24",
+      "league": "Ligue 1",
+      "home": "Lorient",
+      "away": "Rennes",
+      "score": "4-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.395735,
+        "p_draw": 0.256631,
+        "p_away": 0.347634,
+        "pred": "H",
+        "confidence": 0.395735,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.379365,
+        "p_draw": 0.257628,
+        "p_away": 0.363007,
+        "pred": "H",
+        "confidence": 0.379365,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.369638,
+        "p_draw": 0.255304,
+        "p_away": 0.375058,
+        "pred": "A",
+        "confidence": 0.375058,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.344398,
+        "p_draw": 0.284145,
+        "p_away": 0.371457,
+        "pred": "A",
+        "confidence": 0.371457,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.412739,
+        1.307972
+      ],
+      "V3_lambda": [
+        1.37234,
+        1.336793
+      ],
+      "V4_lambda": [
+        1.37038,
+        1.382241
+      ]
+    },
+    {
+      "n": 8,
+      "fixture_id": 348751703,
+      "date": "2025-08-24",
+      "league": "Bundesliga",
+      "home": "FSV Mainz 05",
+      "away": "FC K\u00f6ln",
+      "score": "0-1",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.44826,
+        "p_draw": 0.236003,
+        "p_away": 0.315737,
+        "pred": "H",
+        "confidence": 0.44826,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.495514,
+        "p_draw": 0.229164,
+        "p_away": 0.275323,
+        "pred": "H",
+        "confidence": 0.495514,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.509553,
+        "p_draw": 0.230337,
+        "p_away": 0.260109,
+        "pred": "H",
+        "confidence": 0.509553,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.504302,
+        "p_draw": 0.258117,
+        "p_away": 0.237582,
+        "pred": "H",
+        "confidence": 0.504302,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.698165,
+        1.391744
+      ],
+      "V3_lambda": [
+        1.821504,
+        1.306257
+      ],
+      "V4_lambda": [
+        1.811888,
+        1.233513
+      ]
+    },
+    {
+      "n": 9,
+      "fixture_id": 348751787,
+      "date": "2025-08-24",
+      "league": "La Liga",
+      "home": "Osasuna",
+      "away": "Valencia",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.424067,
+        "p_draw": 0.263778,
+        "p_away": 0.312155,
+        "pred": "H",
+        "confidence": 0.424067,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.427065,
+        "p_draw": 0.263696,
+        "p_away": 0.309238,
+        "pred": "H",
+        "confidence": 0.427065,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.426695,
+        "p_draw": 0.265452,
+        "p_away": 0.307853,
+        "pred": "H",
+        "confidence": 0.426695,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.419451,
+        "p_draw": 0.306582,
+        "p_away": 0.273966,
+        "pred": "H",
+        "confidence": 0.419451,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.40128,
+        1.163287
+      ],
+      "V3_lambda": [
+        1.406183,
+        1.155663
+      ],
+      "V4_lambda": [
+        1.391901,
+        1.140481
+      ]
+    },
+    {
+      "n": 10,
+      "fixture_id": 348751939,
+      "date": "2025-08-24",
+      "league": "Ligue 1",
+      "home": "Le Havre",
+      "away": "Lens",
+      "score": "1-2",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.364832,
+        "p_draw": 0.259672,
+        "p_away": 0.375496,
+        "pred": "A",
+        "confidence": 0.375496,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.332925,
+        "p_draw": 0.259231,
+        "p_away": 0.407844,
+        "pred": "A",
+        "confidence": 0.407844,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.319935,
+        "p_draw": 0.259882,
+        "p_away": 0.420183,
+        "pred": "A",
+        "confidence": 0.420183,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.213168,
+        "p_draw": 0.256469,
+        "p_away": 0.530363,
+        "pred": "A",
+        "confidence": 0.530363,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.324972,
+        1.348008
+      ],
+      "V3_lambda": [
+        1.250872,
+        1.412637
+      ],
+      "V4_lambda": [
+        1.211248,
+        1.426986
+      ]
+    },
+    {
+      "n": 11,
+      "fixture_id": 348751940,
+      "date": "2025-08-24",
+      "league": "Ligue 1",
+      "home": "Strasbourg",
+      "away": "Nantes",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.48078,
+        "p_draw": 0.257122,
+        "p_away": 0.262098,
+        "pred": "H",
+        "confidence": 0.48078,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.506457,
+        "p_draw": 0.251605,
+        "p_away": 0.241937,
+        "pred": "H",
+        "confidence": 0.506457,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.511135,
+        "p_draw": 0.251753,
+        "p_away": 0.237113,
+        "pred": "H",
+        "confidence": 0.511135,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.567471,
+        "p_draw": 0.252071,
+        "p_away": 0.180458,
+        "pred": "H",
+        "confidence": 0.567471,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.518557,
+        1.049943
+      ],
+      "V3_lambda": [
+        1.582617,
+        1.010811
+      ],
+      "V4_lambda": [
+        1.582861,
+        0.99179
+      ]
+    },
+    {
+      "n": 12,
+      "fixture_id": 348751941,
+      "date": "2025-08-24",
+      "league": "Ligue 1",
+      "home": "Toulouse",
+      "away": "Brest",
+      "score": "2-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.432065,
+        "p_draw": 0.261383,
+        "p_away": 0.306552,
+        "pred": "H",
+        "confidence": 0.432065,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.426186,
+        "p_draw": 0.261997,
+        "p_away": 0.311817,
+        "pred": "H",
+        "confidence": 0.426186,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.429901,
+        "p_draw": 0.260802,
+        "p_away": 0.309297,
+        "pred": "H",
+        "confidence": 0.429901,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.436053,
+        "p_draw": 0.279879,
+        "p_away": 0.284068,
+        "pred": "H",
+        "confidence": 0.436053,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.431682,
+        1.163222
+      ],
+      "V3_lambda": [
+        1.418536,
+        1.174132
+      ],
+      "V4_lambda": [
+        1.433493,
+        1.175003
+      ]
+    },
+    {
+      "n": 13,
+      "fixture_id": 348751942,
+      "date": "2025-08-24",
+      "league": "Premier League",
+      "home": "Fulham",
+      "away": "Manchester United",
+      "score": "1-1",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.393705,
+        "p_draw": 0.256956,
+        "p_away": 0.349339,
+        "pred": "H",
+        "confidence": 0.393705,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.401956,
+        "p_draw": 0.256637,
+        "p_away": 0.341408,
+        "pred": "H",
+        "confidence": 0.401956,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.403496,
+        "p_draw": 0.256892,
+        "p_away": 0.339612,
+        "pred": "H",
+        "confidence": 0.403496,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.272245,
+        "p_draw": 0.269146,
+        "p_away": 0.45861,
+        "pred": "A",
+        "confidence": 0.45861,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.406216,
+        1.309666
+      ],
+      "V3_lambda": [
+        1.424031,
+        1.292214
+      ],
+      "V4_lambda": [
+        1.424612,
+        1.285654
+      ]
+    },
+    {
+      "n": 14,
+      "fixture_id": 348751943,
+      "date": "2025-08-24",
+      "league": "Bundesliga",
+      "home": "Borussia M\u00f6nchengladbach",
+      "away": "Hamburger SV",
+      "score": "0-0",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.357656,
+        "p_draw": 0.239231,
+        "p_away": 0.403114,
+        "pred": "A",
+        "confidence": 0.403114,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.366947,
+        "p_draw": 0.239467,
+        "p_away": 0.393586,
+        "pred": "A",
+        "confidence": 0.393586,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.376693,
+        "p_draw": 0.23862,
+        "p_away": 0.384687,
+        "pred": "A",
+        "confidence": 0.384687,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.530062,
+        "p_draw": 0.235565,
+        "p_away": 0.234373,
+        "pred": "H",
+        "confidence": 0.530062,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.485594,
+        1.590153
+      ],
+      "V3_lambda": [
+        1.507147,
+        1.568402
+      ],
+      "V4_lambda": [
+        1.539433,
+        1.55787
+      ]
+    },
+    {
+      "n": 15,
+      "fixture_id": 348751956,
+      "date": "2025-08-24",
+      "league": "Serie A",
+      "home": "Cagliari",
+      "away": "Fiorentina",
+      "score": "1-1",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.346659,
+        "p_draw": 0.272228,
+        "p_away": 0.381113,
+        "pred": "A",
+        "confidence": 0.381113,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.310996,
+        "p_draw": 0.270571,
+        "p_away": 0.418433,
+        "pred": "A",
+        "confidence": 0.418433,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.300717,
+        "p_draw": 0.268387,
+        "p_away": 0.430896,
+        "pred": "A",
+        "confidence": 0.430896,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.29956,
+        "p_draw": 0.300505,
+        "p_away": 0.399935,
+        "pred": "A",
+        "confidence": 0.399935,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.195432,
+        1.267265
+      ],
+      "V3_lambda": [
+        1.117344,
+        1.341641
+      ],
+      "V4_lambda": [
+        1.102265,
+        1.375208
+      ]
+    },
+    {
+      "n": 16,
+      "fixture_id": 348751957,
+      "date": "2025-08-24",
+      "league": "Serie A",
+      "home": "Como",
+      "away": "Lazio",
+      "score": "2-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.445401,
+        "p_draw": 0.264624,
+        "p_away": 0.289975,
+        "pred": "H",
+        "confidence": 0.445401,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.405864,
+        "p_draw": 0.269651,
+        "p_away": 0.324485,
+        "pred": "H",
+        "confidence": 0.405864,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.398382,
+        "p_draw": 0.268236,
+        "p_away": 0.333381,
+        "pred": "H",
+        "confidence": 0.398382,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.407129,
+        "p_draw": 0.283893,
+        "p_away": 0.308978,
+        "pred": "H",
+        "confidence": 0.407129,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.422369,
+        1.093829
+      ],
+      "V3_lambda": [
+        1.328916,
+        1.158338
+      ],
+      "V4_lambda": [
+        1.326702,
+        1.189826
+      ]
+    },
+    {
+      "n": 17,
+      "fixture_id": 348751963,
+      "date": "2025-08-24",
+      "league": "La Liga",
+      "home": "Real Sociedad",
+      "away": "Espanyol",
+      "score": "2-2",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.434634,
+        "p_draw": 0.260862,
+        "p_away": 0.304504,
+        "pred": "H",
+        "confidence": 0.434634,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.447366,
+        "p_draw": 0.259275,
+        "p_away": 0.293359,
+        "pred": "H",
+        "confidence": 0.447366,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.445333,
+        "p_draw": 0.262934,
+        "p_away": 0.291733,
+        "pred": "H",
+        "confidence": 0.445333,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.519314,
+        "p_draw": 0.277372,
+        "p_away": 0.203314,
+        "pred": "H",
+        "confidence": 0.519314,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.439394,
+        1.160748
+      ],
+      "V3_lambda": [
+        1.468446,
+        1.13789
+      ],
+      "V4_lambda": [
+        1.435821,
+        1.109541
+      ]
+    },
+    {
+      "n": 18,
+      "fixture_id": 348751964,
+      "date": "2025-08-24",
+      "league": "La Liga",
+      "home": "Villarreal",
+      "away": "Girona",
+      "score": "5-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.57411,
+        "p_draw": 0.228433,
+        "p_away": 0.197456,
+        "pred": "H",
+        "confidence": 0.57411,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.583318,
+        "p_draw": 0.225606,
+        "p_away": 0.191075,
+        "pred": "H",
+        "confidence": 0.583318,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.594293,
+        "p_draw": 0.218372,
+        "p_away": 0.187335,
+        "pred": "H",
+        "confidence": 0.594293,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.673031,
+        "p_draw": 0.195679,
+        "p_away": 0.13129,
+        "pred": "H",
+        "confidence": 0.673031,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.816752,
+        0.96395
+      ],
+      "V3_lambda": [
+        1.842926,
+        0.950611
+      ],
+      "V4_lambda": [
+        1.923527,
+        0.97903
+      ]
+    },
+    {
+      "n": 19,
+      "fixture_id": 348751978,
+      "date": "2025-08-24",
+      "league": "Serie A",
+      "home": "Atalanta",
+      "away": "Pisa",
+      "score": "1-1",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.425687,
+        "p_draw": 0.263725,
+        "p_away": 0.310588,
+        "pred": "H",
+        "confidence": 0.425687,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.485446,
+        "p_draw": 0.253993,
+        "p_away": 0.260561,
+        "pred": "H",
+        "confidence": 0.485446,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.515184,
+        "p_draw": 0.24451,
+        "p_away": 0.240306,
+        "pred": "H",
+        "confidence": 0.515184,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.682415,
+        "p_draw": 0.199335,
+        "p_away": 0.11825,
+        "pred": "H",
+        "confidence": 0.682415,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.40401,
+        1.159261
+      ],
+      "V3_lambda": [
+        1.549698,
+        1.063829
+      ],
+      "V4_lambda": [
+        1.654348,
+        1.048493
+      ]
+    },
+    {
+      "n": 20,
+      "fixture_id": 348751979,
+      "date": "2025-08-24",
+      "league": "Serie A",
+      "home": "Juventus",
+      "away": "Parma",
+      "score": "2-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.480068,
+        "p_draw": 0.263032,
+        "p_away": 0.256901,
+        "pred": "H",
+        "confidence": 0.480068,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.54802,
+        "p_draw": 0.245777,
+        "p_away": 0.206203,
+        "pred": "H",
+        "confidence": 0.54802,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.56373,
+        "p_draw": 0.241573,
+        "p_away": 0.194697,
+        "pred": "H",
+        "confidence": 0.56373,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.690127,
+        "p_draw": 0.197464,
+        "p_away": 0.11241,
+        "pred": "H",
+        "confidence": 0.690127,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.468168,
+        0.998161
+      ],
+      "V3_lambda": [
+        1.641816,
+        0.902035
+      ],
+      "V4_lambda": [
+        1.678378,
+        0.875069
+      ]
+    },
+    {
+      "n": 21,
+      "fixture_id": 348751980,
+      "date": "2025-08-24",
+      "league": "Ligue 1",
+      "home": "LOSC Lille",
+      "away": "Monaco",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.391492,
+        "p_draw": 0.26019,
+        "p_away": 0.348318,
+        "pred": "H",
+        "confidence": 0.391492,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.400005,
+        "p_draw": 0.259167,
+        "p_away": 0.340827,
+        "pred": "H",
+        "confidence": 0.400005,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.402245,
+        "p_draw": 0.25827,
+        "p_away": 0.339485,
+        "pred": "H",
+        "confidence": 0.402245,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.28209,
+        "p_draw": 0.263071,
+        "p_away": 0.45484,
+        "pred": "A",
+        "confidence": 0.45484,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.375719,
+        1.282646
+      ],
+      "V3_lambda": [
+        1.399581,
+        1.271693
+      ],
+      "V4_lambda": [
+        1.410919,
+        1.274954
+      ]
+    },
+    {
+      "n": 22,
+      "fixture_id": 348751981,
+      "date": "2025-08-24",
+      "league": "La Liga",
+      "home": "Real Oviedo",
+      "away": "Real Madrid",
+      "score": "0-3",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.305565,
+        "p_draw": 0.251149,
+        "p_away": 0.443285,
+        "pred": "A",
+        "confidence": 0.443285,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.256361,
+        "p_draw": 0.242656,
+        "p_away": 0.500983,
+        "pred": "A",
+        "confidence": 0.500983,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.243142,
+        "p_draw": 0.23861,
+        "p_away": 0.518248,
+        "pred": "A",
+        "confidence": 0.518248,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.082551,
+        "p_draw": 0.161338,
+        "p_away": 0.75611,
+        "pred": "A",
+        "confidence": 0.75611,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.232458,
+        1.535721
+      ],
+      "V3_lambda": [
+        1.123617,
+        1.668894
+      ],
+      "V4_lambda": [
+        1.099615,
+        1.717261
+      ]
+    },
+    {
+      "n": 23,
+      "fixture_id": 349634360,
+      "date": "2025-08-25",
+      "league": "Serie A",
+      "home": "Udinese",
+      "away": "Hellas Verona",
+      "score": "1-1",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.390393,
+        "p_draw": 0.279852,
+        "p_away": 0.329755,
+        "pred": "H",
+        "confidence": 0.390393,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.407194,
+        "p_draw": 0.278722,
+        "p_away": 0.314084,
+        "pred": "H",
+        "confidence": 0.407194,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.414088,
+        "p_draw": 0.278698,
+        "p_away": 0.307214,
+        "pred": "H",
+        "confidence": 0.414088,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.50475,
+        "p_draw": 0.289965,
+        "p_away": 0.205285,
+        "pred": "H",
+        "confidence": 0.50475,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.233771,
+        1.10995
+      ],
+      "V3_lambda": [
+        1.26847,
+        1.078065
+      ],
+      "V4_lambda": [
+        1.279003,
+        1.060613
+      ]
+    },
+    {
+      "n": 24,
+      "fixture_id": 349634361,
+      "date": "2025-08-25",
+      "league": "La Liga",
+      "home": "Athletic Club",
+      "away": "Rayo Vallecano",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.388907,
+        "p_draw": 0.263758,
+        "p_away": 0.347335,
+        "pred": "H",
+        "confidence": 0.388907,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.431955,
+        "p_draw": 0.259934,
+        "p_away": 0.30811,
+        "pred": "H",
+        "confidence": 0.431955,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.446244,
+        "p_draw": 0.263791,
+        "p_away": 0.289965,
+        "pred": "H",
+        "confidence": 0.446244,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.552281,
+        "p_draw": 0.272894,
+        "p_away": 0.174825,
+        "pred": "H",
+        "confidence": 0.552281,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.34306,
+        1.254346
+      ],
+      "V3_lambda": [
+        1.443482,
+        1.177451
+      ],
+      "V4_lambda": [
+        1.429985,
+        1.0989
+      ]
+    },
+    {
+      "n": 25,
+      "fixture_id": 349634367,
+      "date": "2025-08-25",
+      "league": "Serie A",
+      "home": "Inter",
+      "away": "Torino",
+      "score": "5-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.473855,
+        "p_draw": 0.262448,
+        "p_away": 0.263697,
+        "pred": "H",
+        "confidence": 0.473855,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.540346,
+        "p_draw": 0.245828,
+        "p_away": 0.213826,
+        "pred": "H",
+        "confidence": 0.540346,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.557141,
+        "p_draw": 0.242576,
+        "p_away": 0.200284,
+        "pred": "H",
+        "confidence": 0.557141,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.723858,
+        "p_draw": 0.175036,
+        "p_away": 0.101107,
+        "pred": "H",
+        "confidence": 0.723858,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.468119,
+        1.023997
+      ],
+      "V3_lambda": [
+        1.64255,
+        0.933463
+      ],
+      "V4_lambda": [
+        1.670961,
+        0.894064
+      ]
+    },
+    {
+      "n": 26,
+      "fixture_id": 347953750,
+      "date": "2025-08-25",
+      "league": "Premier League",
+      "home": "Newcastle United",
+      "away": "Liverpool",
+      "score": "2-3",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.439767,
+        "p_draw": 0.250917,
+        "p_away": 0.309316,
+        "pred": "H",
+        "confidence": 0.439767,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.400828,
+        "p_draw": 0.253963,
+        "p_away": 0.345208,
+        "pred": "H",
+        "confidence": 0.400828,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.401997,
+        "p_draw": 0.250038,
+        "p_away": 0.347965,
+        "pred": "H",
+        "confidence": 0.401997,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.316422,
+        "p_draw": 0.254229,
+        "p_away": 0.429349,
+        "pred": "A",
+        "confidence": 0.429349,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.533394,
+        1.245747
+      ],
+      "V3_lambda": [
+        1.444883,
+        1.322803
+      ],
+      "V4_lambda": [
+        1.482029,
+        1.361999
+      ]
+    },
+    {
+      "n": 27,
+      "fixture_id": 349634368,
+      "date": "2025-08-25",
+      "league": "La Liga",
+      "home": "Sevilla",
+      "away": "Getafe",
+      "score": "1-2",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.429285,
+        "p_draw": 0.260032,
+        "p_away": 0.310683,
+        "pred": "H",
+        "confidence": 0.429285,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.432583,
+        "p_draw": 0.259803,
+        "p_away": 0.307615,
+        "pred": "H",
+        "confidence": 0.432583,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.43038,
+        "p_draw": 0.264534,
+        "p_away": 0.305086,
+        "pred": "H",
+        "confidence": 0.43038,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.454283,
+        "p_draw": 0.313848,
+        "p_away": 0.231868,
+        "pred": "H",
+        "confidence": 0.454283,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.438989,
+        1.184189
+      ],
+      "V3_lambda": [
+        1.445428,
+        1.176908
+      ],
+      "V4_lambda": [
+        1.404139,
+        1.138522
+      ]
+    },
+    {
+      "n": 28,
+      "fixture_id": 354688065,
+      "date": "2025-08-27",
+      "league": "La Liga",
+      "home": "Celta de Vigo",
+      "away": "Real Betis",
+      "score": "1-1",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.362124,
+        "p_draw": 0.270411,
+        "p_away": 0.367465,
+        "pred": "A",
+        "confidence": 0.367465,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.359211,
+        "p_draw": 0.270654,
+        "p_away": 0.370135,
+        "pred": "A",
+        "confidence": 0.370135,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.365606,
+        "p_draw": 0.267121,
+        "p_away": 0.367273,
+        "pred": "A",
+        "confidence": 0.367273,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.409357,
+        "p_draw": 0.275358,
+        "p_away": 0.315286,
+        "pred": "H",
+        "confidence": 0.409357,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.241499,
+        1.252693
+      ],
+      "V3_lambda": [
+        1.233615,
+        1.256496
+      ],
+      "V4_lambda": [
+        1.27166,
+        1.275184
+      ]
+    },
+    {
+      "n": 29,
+      "fixture_id": 353028717,
+      "date": "2025-08-29",
+      "league": "Serie A",
+      "home": "Cremonese",
+      "away": "Sassuolo",
+      "score": "3-2",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.433159,
+        "p_draw": 0.262971,
+        "p_away": 0.30387,
+        "pred": "H",
+        "confidence": 0.433159,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.42578,
+        "p_draw": 0.264561,
+        "p_away": 0.309659,
+        "pred": "H",
+        "confidence": 0.42578,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.42837,
+        "p_draw": 0.260539,
+        "p_away": 0.311091,
+        "pred": "H",
+        "confidence": 0.42837,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.356326,
+        "p_draw": 0.296563,
+        "p_away": 0.347111,
+        "pred": "H",
+        "confidence": 0.356326,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.420286,
+        1.145079
+      ],
+      "V3_lambda": [
+        1.39756,
+        1.151235
+      ],
+      "V4_lambda": [
+        1.433523,
+        1.181907
+      ]
+    },
+    {
+      "n": 30,
+      "fixture_id": 353028745,
+      "date": "2025-08-29",
+      "league": "La Liga",
+      "home": "Elche",
+      "away": "Levante",
+      "score": "2-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.492657,
+        "p_draw": 0.248306,
+        "p_away": 0.259038,
+        "pred": "H",
+        "confidence": 0.492657,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.467381,
+        "p_draw": 0.25369,
+        "p_away": 0.278929,
+        "pred": "H",
+        "confidence": 0.467381,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.461621,
+        "p_draw": 0.253419,
+        "p_away": 0.28496,
+        "pred": "H",
+        "confidence": 0.461621,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.441078,
+        "p_draw": 0.29908,
+        "p_away": 0.259843,
+        "pred": "H",
+        "confidence": 0.441078,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.60767,
+        1.094987
+      ],
+      "V3_lambda": [
+        1.538273,
+        1.128715
+      ],
+      "V4_lambda": [
+        1.535279,
+        1.150487
+      ]
+    },
+    {
+      "n": 31,
+      "fixture_id": 353028780,
+      "date": "2025-08-29",
+      "league": "Bundesliga",
+      "home": "Hamburger SV",
+      "away": "St. Pauli",
+      "score": "0-2",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.437941,
+        "p_draw": 0.255607,
+        "p_away": 0.306453,
+        "pred": "H",
+        "confidence": 0.437941,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.447371,
+        "p_draw": 0.254454,
+        "p_away": 0.298175,
+        "pred": "H",
+        "confidence": 0.447371,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.440138,
+        "p_draw": 0.259012,
+        "p_away": 0.30085,
+        "pred": "H",
+        "confidence": 0.440138,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.396196,
+        "p_draw": 0.285633,
+        "p_away": 0.318171,
+        "pred": "H",
+        "confidence": 0.396196,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.488487,
+        1.202631
+      ],
+      "V3_lambda": [
+        1.510452,
+        1.185519
+      ],
+      "V4_lambda": [
+        1.461928,
+        1.162321
+      ]
+    },
+    {
+      "n": 32,
+      "fixture_id": 353028781,
+      "date": "2025-08-29",
+      "league": "Serie A",
+      "home": "Lecce",
+      "away": "AC Milan",
+      "score": "0-2",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.342412,
+        "p_draw": 0.269459,
+        "p_away": 0.388129,
+        "pred": "A",
+        "confidence": 0.388129,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.298656,
+        "p_draw": 0.266562,
+        "p_away": 0.434782,
+        "pred": "A",
+        "confidence": 0.434782,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.278854,
+        "p_draw": 0.265925,
+        "p_away": 0.455221,
+        "pred": "A",
+        "confidence": 0.455221,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.13907,
+        "p_draw": 0.239849,
+        "p_away": 0.62108,
+        "pred": "A",
+        "confidence": 0.62108,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.203629,
+        1.299639
+      ],
+      "V3_lambda": [
+        1.107474,
+        1.394181
+      ],
+      "V4_lambda": [
+        1.052292,
+        1.422951
+      ]
+    },
+    {
+      "n": 33,
+      "fixture_id": 353028787,
+      "date": "2025-08-29",
+      "league": "Ligue 1",
+      "home": "Lens",
+      "away": "Brest",
+      "score": "3-1",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.436486,
+        "p_draw": 0.258653,
+        "p_away": 0.304861,
+        "pred": "H",
+        "confidence": 0.436486,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.434982,
+        "p_draw": 0.258845,
+        "p_away": 0.306173,
+        "pred": "H",
+        "confidence": 0.434982,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.43702,
+        "p_draw": 0.2599,
+        "p_away": 0.30308,
+        "pred": "H",
+        "confidence": 0.43702,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.522881,
+        "p_draw": 0.251533,
+        "p_away": 0.225587,
+        "pred": "H",
+        "confidence": 0.522881,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.460286,
+        1.176676
+      ],
+      "V3_lambda": [
+        1.456678,
+        1.179223
+      ],
+      "V4_lambda": [
+        1.450488,
+        1.162984
+      ]
+    },
+    {
+      "n": 34,
+      "fixture_id": 353028790,
+      "date": "2025-08-29",
+      "league": "La Liga",
+      "home": "Valencia",
+      "away": "Getafe",
+      "score": "3-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.360725,
+        "p_draw": 0.275891,
+        "p_away": 0.363384,
+        "pred": "A",
+        "confidence": 0.363384,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.379372,
+        "p_draw": 0.275543,
+        "p_away": 0.345085,
+        "pred": "H",
+        "confidence": 0.379372,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.380682,
+        "p_draw": 0.279432,
+        "p_away": 0.339886,
+        "pred": "H",
+        "confidence": 0.380682,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.413321,
+        "p_draw": 0.320314,
+        "p_away": 0.266365,
+        "pred": "H",
+        "confidence": 0.413321,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.202631,
+        1.208123
+      ],
+      "V3_lambda": [
+        1.241787,
+        1.170932
+      ],
+      "V4_lambda": [
+        1.219211,
+        1.135767
+      ]
+    },
+    {
+      "n": 35,
+      "fixture_id": 353832467,
+      "date": "2025-08-30",
+      "league": "Premier League",
+      "home": "Chelsea",
+      "away": "Fulham",
+      "score": "2-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.595532,
+        "p_draw": 0.219399,
+        "p_away": 0.185069,
+        "pred": "H",
+        "confidence": 0.595532,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.592589,
+        "p_draw": 0.220481,
+        "p_away": 0.186931,
+        "pred": "H",
+        "confidence": 0.592589,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.58812,
+        "p_draw": 0.221515,
+        "p_away": 0.190366,
+        "pred": "H",
+        "confidence": 0.58812,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.585273,
+        "p_draw": 0.244595,
+        "p_away": 0.170132,
+        "pred": "H",
+        "confidence": 0.585273,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.90826,
+        0.960124
+      ],
+      "V3_lambda": [
+        1.897736,
+        0.962713
+      ],
+      "V4_lambda": [
+        1.889524,
+        0.973641
+      ]
+    },
+    {
+      "n": 36,
+      "fixture_id": 353832631,
+      "date": "2025-08-30",
+      "league": "Bundesliga",
+      "home": "RB Leipzig",
+      "away": "Heidenheim",
+      "score": "2-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.414138,
+        "p_draw": 0.246865,
+        "p_away": 0.338997,
+        "pred": "H",
+        "confidence": 0.414138,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.485805,
+        "p_draw": 0.237668,
+        "p_away": 0.276528,
+        "pred": "H",
+        "confidence": 0.485805,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.503542,
+        "p_draw": 0.234813,
+        "p_away": 0.261644,
+        "pred": "H",
+        "confidence": 0.503542,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.663804,
+        "p_draw": 0.187927,
+        "p_away": 0.148269,
+        "pred": "H",
+        "confidence": 0.663804,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.533387,
+        1.364962
+      ],
+      "V3_lambda": [
+        1.714923,
+        1.238204
+      ],
+      "V4_lambda": [
+        1.756467,
+        1.203196
+      ]
+    },
+    {
+      "n": 37,
+      "fixture_id": 353832632,
+      "date": "2025-08-30",
+      "league": "Bundesliga",
+      "home": "Werder Bremen",
+      "away": "Bayer 04 Leverkusen",
+      "score": "3-3",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.433699,
+        "p_draw": 0.247832,
+        "p_away": 0.318469,
+        "pred": "H",
+        "confidence": 0.433699,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.373485,
+        "p_draw": 0.25092,
+        "p_away": 0.375595,
+        "pred": "A",
+        "confidence": 0.375595,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.356179,
+        "p_draw": 0.249425,
+        "p_away": 0.394395,
+        "pred": "A",
+        "confidence": 0.394395,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.254516,
+        "p_draw": 0.245167,
+        "p_away": 0.500317,
+        "pred": "A",
+        "confidence": 0.500317,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.554482,
+        1.297648
+      ],
+      "V3_lambda": [
+        1.415967,
+        1.420647
+      ],
+      "V4_lambda": [
+        1.388057,
+        1.473155
+      ]
+    },
+    {
+      "n": 38,
+      "fixture_id": 353832633,
+      "date": "2025-08-30",
+      "league": "Bundesliga",
+      "home": "TSG Hoffenheim",
+      "away": "Eintracht Frankfurt",
+      "score": "1-3",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.341692,
+        "p_draw": 0.247094,
+        "p_away": 0.411214,
+        "pred": "A",
+        "confidence": 0.411214,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.326224,
+        "p_draw": 0.24602,
+        "p_away": 0.427756,
+        "pred": "A",
+        "confidence": 0.427756,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.32503,
+        "p_draw": 0.242305,
+        "p_away": 0.432665,
+        "pred": "A",
+        "confidence": 0.432665,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.352323,
+        "p_draw": 0.244396,
+        "p_away": 0.403281,
+        "pred": "A",
+        "confidence": 0.403281,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.370381,
+        1.526143
+      ],
+      "V3_lambda": [
+        1.335684,
+        1.563505
+      ],
+      "V4_lambda": [
+        1.364108,
+        1.608396
+      ]
+    },
+    {
+      "n": 39,
+      "fixture_id": 353832634,
+      "date": "2025-08-30",
+      "league": "Bundesliga",
+      "home": "VfB Stuttgart",
+      "away": "Borussia M\u00f6nchengladbach",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.583057,
+        "p_draw": 0.213074,
+        "p_away": 0.20387,
+        "pred": "H",
+        "confidence": 0.583057,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.596886,
+        "p_draw": 0.208888,
+        "p_away": 0.194226,
+        "pred": "H",
+        "confidence": 0.596886,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.605272,
+        "p_draw": 0.204139,
+        "p_away": 0.190589,
+        "pred": "H",
+        "confidence": 0.605272,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.617433,
+        "p_draw": 0.196109,
+        "p_away": 0.186458,
+        "pred": "H",
+        "confidence": 0.617433,
+        "correct": true
+      },
+      "V2_lambda": [
+        2.012434,
+        1.107421
+      ],
+      "V3_lambda": [
+        2.05645,
+        1.087879
+      ],
+      "V4_lambda": [
+        2.117731,
+        1.106337
+      ]
+    },
+    {
+      "n": 40,
+      "fixture_id": 353832677,
+      "date": "2025-08-30",
+      "league": "Premier League",
+      "home": "Manchester United",
+      "away": "Burnley",
+      "score": "3-2",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.558611,
+        "p_draw": 0.233263,
+        "p_away": 0.208126,
+        "pred": "H",
+        "confidence": 0.558611,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.585859,
+        "p_draw": 0.225371,
+        "p_away": 0.18877,
+        "pred": "H",
+        "confidence": 0.585859,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.5982,
+        "p_draw": 0.221536,
+        "p_away": 0.180264,
+        "pred": "H",
+        "confidence": 0.5982,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.699058,
+        "p_draw": 0.181257,
+        "p_away": 0.119685,
+        "pred": "H",
+        "confidence": 0.699058,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.770244,
+        0.983446
+      ],
+      "V3_lambda": [
+        1.843284,
+        0.940586
+      ],
+      "V4_lambda": [
+        1.877143,
+        0.921174
+      ]
+    },
+    {
+      "n": 41,
+      "fixture_id": 353832678,
+      "date": "2025-08-30",
+      "league": "Premier League",
+      "home": "Sunderland",
+      "away": "Brentford",
+      "score": "2-1",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.476519,
+        "p_draw": 0.255593,
+        "p_away": 0.267887,
+        "pred": "H",
+        "confidence": 0.476519,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.450805,
+        "p_draw": 0.260077,
+        "p_away": 0.289118,
+        "pred": "H",
+        "confidence": 0.450805,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.441426,
+        "p_draw": 0.258987,
+        "p_away": 0.299587,
+        "pred": "H",
+        "confidence": 0.441426,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.303274,
+        "p_draw": 0.289353,
+        "p_away": 0.407373,
+        "pred": "A",
+        "confidence": 0.407373,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.528839,
+        1.079143
+      ],
+      "V3_lambda": [
+        1.465608,
+        1.119633
+      ],
+      "V4_lambda": [
+        1.46375,
+        1.158701
+      ]
+    },
+    {
+      "n": 42,
+      "fixture_id": 353832679,
+      "date": "2025-08-30",
+      "league": "Premier League",
+      "home": "Tottenham Hotspur",
+      "away": "AFC Bournemouth",
+      "score": "0-1",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.447345,
+        "p_draw": 0.249255,
+        "p_away": 0.3034,
+        "pred": "H",
+        "confidence": 0.447345,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.418279,
+        "p_draw": 0.252554,
+        "p_away": 0.329167,
+        "pred": "H",
+        "confidence": 0.418279,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.414998,
+        "p_draw": 0.25008,
+        "p_away": 0.334922,
+        "pred": "H",
+        "confidence": 0.414998,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.508963,
+        "p_draw": 0.252452,
+        "p_away": 0.238586,
+        "pred": "H",
+        "confidence": 0.508963,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.558606,
+        1.239984
+      ],
+      "V3_lambda": [
+        1.487203,
+        1.29109
+      ],
+      "V4_lambda": [
+        1.504458,
+        1.326804
+      ]
+    },
+    {
+      "n": 43,
+      "fixture_id": 353832680,
+      "date": "2025-08-30",
+      "league": "Premier League",
+      "home": "Wolverhampton Wanderers",
+      "away": "Everton",
+      "score": "2-3",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.377666,
+        "p_draw": 0.270557,
+        "p_away": 0.351777,
+        "pred": "H",
+        "confidence": 0.377666,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.378429,
+        "p_draw": 0.270505,
+        "p_away": 0.351066,
+        "pred": "H",
+        "confidence": 0.378429,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.378535,
+        "p_draw": 0.27346,
+        "p_away": 0.348005,
+        "pred": "H",
+        "confidence": 0.378535,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.284781,
+        "p_draw": 0.29734,
+        "p_away": 0.417879,
+        "pred": "A",
+        "confidence": 0.417879,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.272146,
+        1.217918
+      ],
+      "V3_lambda": [
+        1.273989,
+        1.216663
+      ],
+      "V4_lambda": [
+        1.254031,
+        1.190583
+      ]
+    },
+    {
+      "n": 44,
+      "fixture_id": 353832931,
+      "date": "2025-08-30",
+      "league": "Ligue 1",
+      "home": "Lorient",
+      "away": "LOSC Lille",
+      "score": "1-7",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.475286,
+        "p_draw": 0.24832,
+        "p_away": 0.276394,
+        "pred": "H",
+        "confidence": 0.475286,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.411876,
+        "p_draw": 0.256838,
+        "p_away": 0.331286,
+        "pred": "H",
+        "confidence": 0.411876,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.391882,
+        "p_draw": 0.257904,
+        "p_away": 0.350214,
+        "pred": "H",
+        "confidence": 0.391882,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.296189,
+        "p_draw": 0.273926,
+        "p_away": 0.429885,
+        "pred": "A",
+        "confidence": 0.429885,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.595719,
+        1.157022
+      ],
+      "V3_lambda": [
+        1.439343,
+        1.264159
+      ],
+      "V4_lambda": [
+        1.394937,
+        1.304505
+      ]
+    },
+    {
+      "n": 45,
+      "fixture_id": 353832934,
+      "date": "2025-08-30",
+      "league": "La Liga",
+      "home": "Deportivo Alav\u00e9s",
+      "away": "Atl\u00e9tico de Madrid",
+      "score": "1-1",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.326173,
+        "p_draw": 0.264047,
+        "p_away": 0.40978,
+        "pred": "A",
+        "confidence": 0.40978,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.285134,
+        "p_draw": 0.259781,
+        "p_away": 0.455085,
+        "pred": "A",
+        "confidence": 0.455085,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.265309,
+        "p_draw": 0.260138,
+        "p_away": 0.474554,
+        "pred": "A",
+        "confidence": 0.474554,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.178009,
+        "p_draw": 0.263446,
+        "p_away": 0.558545,
+        "pred": "A",
+        "confidence": 0.558545,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.199362,
+        1.377337
+      ],
+      "V3_lambda": [
+        1.109101,
+        1.472747
+      ],
+      "V4_lambda": [
+        1.042762,
+        1.487891
+      ]
+    },
+    {
+      "n": 46,
+      "fixture_id": 353833353,
+      "date": "2025-08-30",
+      "league": "Serie A",
+      "home": "Bologna",
+      "away": "Como",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.339273,
+        "p_draw": 0.266372,
+        "p_away": 0.394354,
+        "pred": "A",
+        "confidence": 0.394354,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.386716,
+        "p_draw": 0.266,
+        "p_away": 0.347284,
+        "pred": "H",
+        "confidence": 0.386716,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.404264,
+        "p_draw": 0.264216,
+        "p_away": 0.33152,
+        "pred": "H",
+        "confidence": 0.404264,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.36086,
+        "p_draw": 0.30941,
+        "p_away": 0.32973,
+        "pred": "H",
+        "confidence": 0.36086,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.216744,
+        1.333376
+      ],
+      "V3_lambda": [
+        1.322106,
+        1.238485
+      ],
+      "V4_lambda": [
+        1.36692,
+        1.212061
+      ]
+    },
+    {
+      "n": 47,
+      "fixture_id": 353833354,
+      "date": "2025-08-30",
+      "league": "Serie A",
+      "home": "Parma",
+      "away": "Atalanta",
+      "score": "1-1",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.346922,
+        "p_draw": 0.267213,
+        "p_away": 0.385864,
+        "pred": "A",
+        "confidence": 0.385864,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.285842,
+        "p_draw": 0.262051,
+        "p_away": 0.452107,
+        "pred": "A",
+        "confidence": 0.452107,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.269962,
+        "p_draw": 0.256232,
+        "p_away": 0.473805,
+        "pred": "A",
+        "confidence": 0.473805,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.201628,
+        "p_draw": 0.246818,
+        "p_away": 0.551554,
+        "pred": "A",
+        "confidence": 0.551554,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.229295,
+        1.311599
+      ],
+      "V3_lambda": [
+        1.097068,
+        1.450676
+      ],
+      "V4_lambda": [
+        1.082153,
+        1.520994
+      ]
+    },
+    {
+      "n": 48,
+      "fixture_id": 353833355,
+      "date": "2025-08-30",
+      "league": "Premier League",
+      "home": "Leeds United",
+      "away": "Newcastle United",
+      "score": "0-0",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.250353,
+        "p_draw": 0.250322,
+        "p_away": 0.499325,
+        "pred": "A",
+        "confidence": 0.499325,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.227714,
+        "p_draw": 0.243793,
+        "p_away": 0.528493,
+        "pred": "A",
+        "confidence": 0.528493,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.218931,
+        "p_draw": 0.234799,
+        "p_away": 0.54627,
+        "pred": "A",
+        "confidence": 0.54627,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.289658,
+        "p_draw": 0.277818,
+        "p_away": 0.432523,
+        "pred": "A",
+        "confidence": 0.432523,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.049971,
+        1.591677
+      ],
+      "V3_lambda": [
+        1.002432,
+        1.663374
+      ],
+      "V4_lambda": [
+        1.022225,
+        1.757704
+      ]
+    },
+    {
+      "n": 49,
+      "fixture_id": 353833356,
+      "date": "2025-08-30",
+      "league": "Bundesliga",
+      "home": "FC Augsburg",
+      "away": "FC Bayern M\u00fcnchen",
+      "score": "2-3",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.222869,
+        "p_draw": 0.211625,
+        "p_away": 0.565507,
+        "pred": "A",
+        "confidence": 0.565507,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.191982,
+        "p_draw": 0.200354,
+        "p_away": 0.607664,
+        "pred": "A",
+        "confidence": 0.607664,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.176281,
+        "p_draw": 0.193936,
+        "p_away": 0.629783,
+        "pred": "A",
+        "confidence": 0.629783,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.08917,
+        "p_draw": 0.138781,
+        "p_away": 0.772049,
+        "pred": "A",
+        "confidence": 0.772049,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.222247,
+        2.053531
+      ],
+      "V3_lambda": [
+        1.148318,
+        2.176951
+      ],
+      "V4_lambda": [
+        1.105882,
+        2.240366
+      ]
+    },
+    {
+      "n": 50,
+      "fixture_id": 353833367,
+      "date": "2025-08-30",
+      "league": "Ligue 1",
+      "home": "Nantes",
+      "away": "Auxerre",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.343416,
+        "p_draw": 0.277469,
+        "p_away": 0.379116,
+        "pred": "A",
+        "confidence": 0.379116,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.343931,
+        "p_draw": 0.277403,
+        "p_away": 0.378665,
+        "pred": "A",
+        "confidence": 0.378665,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.344379,
+        "p_draw": 0.278432,
+        "p_away": 0.37719,
+        "pred": "A",
+        "confidence": 0.37719,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.402165,
+        "p_draw": 0.300335,
+        "p_away": 0.2975,
+        "pred": "H",
+        "confidence": 0.402165,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.155404,
+        1.228806
+      ],
+      "V3_lambda": [
+        1.156955,
+        1.228384
+      ],
+      "V4_lambda": [
+        1.151768,
+        1.219064
+      ]
+    },
+    {
+      "n": 51,
+      "fixture_id": 353833368,
+      "date": "2025-08-30",
+      "league": "La Liga",
+      "home": "Real Oviedo",
+      "away": "Real Sociedad",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.276047,
+        "p_draw": 0.25438,
+        "p_away": 0.469573,
+        "pred": "A",
+        "confidence": 0.469573,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.289533,
+        "p_draw": 0.256426,
+        "p_away": 0.454041,
+        "pred": "A",
+        "confidence": 0.454041,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.29267,
+        "p_draw": 0.259466,
+        "p_away": 0.447865,
+        "pred": "A",
+        "confidence": 0.447865,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.263068,
+        "p_draw": 0.31183,
+        "p_away": 0.425102,
+        "pred": "A",
+        "confidence": 0.425102,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.114504,
+        1.533966
+      ],
+      "V3_lambda": [
+        1.144851,
+        1.500496
+      ],
+      "V4_lambda": [
+        1.13453,
+        1.467416
+      ]
+    },
+    {
+      "n": 52,
+      "fixture_id": 353833382,
+      "date": "2025-08-30",
+      "league": "La Liga",
+      "home": "Girona",
+      "away": "Sevilla",
+      "score": "0-2",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.253238,
+        "p_draw": 0.251144,
+        "p_away": 0.495618,
+        "pred": "A",
+        "confidence": 0.495618,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.284905,
+        "p_draw": 0.256746,
+        "p_away": 0.45835,
+        "pred": "A",
+        "confidence": 0.45835,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.296358,
+        "p_draw": 0.257179,
+        "p_away": 0.446463,
+        "pred": "A",
+        "confidence": 0.446463,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.402157,
+        "p_draw": 0.296559,
+        "p_away": 0.301284,
+        "pred": "H",
+        "confidence": 0.402157,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.05543,
+        1.582081
+      ],
+      "V3_lambda": [
+        1.127987,
+        1.50223
+      ],
+      "V4_lambda": [
+        1.161072,
+        1.485342
+      ]
+    },
+    {
+      "n": 53,
+      "fixture_id": 353833409,
+      "date": "2025-08-30",
+      "league": "Serie A",
+      "home": "Napoli",
+      "away": "Cagliari",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.526371,
+        "p_draw": 0.251927,
+        "p_away": 0.221703,
+        "pred": "H",
+        "confidence": 0.526371,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.581045,
+        "p_draw": 0.235187,
+        "p_away": 0.183768,
+        "pred": "H",
+        "confidence": 0.581045,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.592224,
+        "p_draw": 0.233093,
+        "p_away": 0.174683,
+        "pred": "H",
+        "confidence": 0.592224,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.698072,
+        "p_draw": 0.200342,
+        "p_away": 0.101586,
+        "pred": "H",
+        "confidence": 0.698072,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.584528,
+        0.931595
+      ],
+      "V3_lambda": [
+        1.734521,
+        0.85955
+      ],
+      "V4_lambda": [
+        1.74756,
+        0.827615
+      ]
+    },
+    {
+      "n": 54,
+      "fixture_id": 353833410,
+      "date": "2025-08-30",
+      "league": "Serie A",
+      "home": "Pisa",
+      "away": "Roma",
+      "score": "0-1",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.384555,
+        "p_draw": 0.266267,
+        "p_away": 0.349178,
+        "pred": "H",
+        "confidence": 0.384555,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.349898,
+        "p_draw": 0.266951,
+        "p_away": 0.383151,
+        "pred": "A",
+        "confidence": 0.383151,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.337682,
+        "p_draw": 0.26666,
+        "p_away": 0.395657,
+        "pred": "A",
+        "confidence": 0.395657,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.170642,
+        "p_draw": 0.274688,
+        "p_away": 0.55467,
+        "pred": "A",
+        "confidence": 0.55467,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.31604,
+        1.241067
+      ],
+      "V3_lambda": [
+        1.238014,
+        1.308355
+      ],
+      "V4_lambda": [
+        1.210906,
+        1.333555
+      ]
+    },
+    {
+      "n": 55,
+      "fixture_id": 353833412,
+      "date": "2025-08-30",
+      "league": "Ligue 1",
+      "home": "Toulouse",
+      "away": "Paris Saint Germain",
+      "score": "3-6",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.199007,
+        "p_draw": 0.233794,
+        "p_away": 0.567199,
+        "pred": "A",
+        "confidence": 0.567199,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.167146,
+        "p_draw": 0.21899,
+        "p_away": 0.613864,
+        "pred": "A",
+        "confidence": 0.613864,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.165238,
+        "p_draw": 0.215088,
+        "p_away": 0.619675,
+        "pred": "A",
+        "confidence": 0.619675,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.100964,
+        "p_draw": 0.161886,
+        "p_away": 0.73715,
+        "pred": "A",
+        "confidence": 0.73715,
+        "correct": true
+      },
+      "V2_lambda": [
+        0.938232,
+        1.759472
+      ],
+      "V3_lambda": [
+        0.867174,
+        1.887532
+      ],
+      "V4_lambda": [
+        0.880184,
+        1.929184
+      ]
+    },
+    {
+      "n": 56,
+      "fixture_id": 353833413,
+      "date": "2025-08-30",
+      "league": "La Liga",
+      "home": "Real Madrid",
+      "away": "Mallorca",
+      "score": "2-1",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.909941,
+        "p_draw": 0.065735,
+        "p_away": 0.024324,
+        "pred": "H",
+        "confidence": 0.909941,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.909151,
+        "p_draw": 0.066273,
+        "p_away": 0.024576,
+        "pred": "H",
+        "confidence": 0.909151,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.903547,
+        "p_draw": 0.070399,
+        "p_away": 0.026053,
+        "pred": "H",
+        "confidence": 0.903547,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.838018,
+        "p_draw": 0.110958,
+        "p_away": 0.051024,
+        "pred": "H",
+        "confidence": 0.838018,
+        "correct": true
+      },
+      "V2_lambda": [
+        3.55927,
+        0.515123
+      ],
+      "V3_lambda": [
+        3.548593,
+        0.515747
+      ],
+      "V4_lambda": [
+        3.450994,
+        0.50814
+      ]
+    },
+    {
+      "n": 57,
+      "fixture_id": 354688222,
+      "date": "2025-08-31",
+      "league": "Premier League",
+      "home": "Brighton & Hove Albion",
+      "away": "Manchester City",
+      "score": "2-1",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.348173,
+        "p_draw": 0.264768,
+        "p_away": 0.387059,
+        "pred": "A",
+        "confidence": 0.387059,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.325162,
+        "p_draw": 0.263384,
+        "p_away": 0.411454,
+        "pred": "A",
+        "confidence": 0.411454,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.317446,
+        "p_draw": 0.260205,
+        "p_away": 0.422349,
+        "pred": "A",
+        "confidence": 0.422349,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.267699,
+        "p_draw": 0.267699,
+        "p_away": 0.464603,
+        "pred": "A",
+        "confidence": 0.464603,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.249188,
+        1.331938
+      ],
+      "V3_lambda": [
+        1.201203,
+        1.38521
+      ],
+      "V4_lambda": [
+        1.202099,
+        1.427578
+      ]
+    },
+    {
+      "n": 58,
+      "fixture_id": 354688223,
+      "date": "2025-08-31",
+      "league": "Premier League",
+      "home": "Nottingham Forest",
+      "away": "West Ham United",
+      "score": "0-3",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.547121,
+        "p_draw": 0.240613,
+        "p_away": 0.212266,
+        "pred": "H",
+        "confidence": 0.547121,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.547831,
+        "p_draw": 0.240114,
+        "p_away": 0.212055,
+        "pred": "H",
+        "confidence": 0.547831,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.548607,
+        "p_draw": 0.239612,
+        "p_away": 0.211781,
+        "pred": "H",
+        "confidence": 0.548607,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.576609,
+        "p_draw": 0.237402,
+        "p_away": 0.185989,
+        "pred": "H",
+        "confidence": 0.576609,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.694197,
+        0.956832
+      ],
+      "V3_lambda": [
+        1.699254,
+        0.958884
+      ],
+      "V4_lambda": [
+        1.704334,
+        0.96068
+      ]
+    },
+    {
+      "n": 59,
+      "fixture_id": 354688225,
+      "date": "2025-08-31",
+      "league": "Ligue 1",
+      "home": "Angers SCO",
+      "away": "Rennes",
+      "score": "1-1",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.369194,
+        "p_draw": 0.270523,
+        "p_away": 0.360284,
+        "pred": "H",
+        "confidence": 0.369194,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.336377,
+        "p_draw": 0.270462,
+        "p_away": 0.393161,
+        "pred": "A",
+        "confidence": 0.393161,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.321642,
+        "p_draw": 0.270084,
+        "p_away": 0.408274,
+        "pred": "A",
+        "confidence": 0.408274,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.201885,
+        "p_draw": 0.265543,
+        "p_away": 0.532573,
+        "pred": "A",
+        "confidence": 0.532573,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.25548,
+        1.23681
+      ],
+      "V3_lambda": [
+        1.182696,
+        1.30158
+      ],
+      "V4_lambda": [
+        1.148326,
+        1.329649
+      ]
+    },
+    {
+      "n": 60,
+      "fixture_id": 354688327,
+      "date": "2025-08-31",
+      "league": "Bundesliga",
+      "home": "VfL Wolfsburg",
+      "away": "FSV Mainz 05",
+      "score": "1-1",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.41962,
+        "p_draw": 0.25082,
+        "p_away": 0.32956,
+        "pred": "H",
+        "confidence": 0.41962,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.401751,
+        "p_draw": 0.251961,
+        "p_away": 0.346288,
+        "pred": "H",
+        "confidence": 0.401751,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.395609,
+        "p_draw": 0.252656,
+        "p_away": 0.351735,
+        "pred": "H",
+        "confidence": 0.395609,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.445492,
+        "p_draw": 0.265069,
+        "p_away": 0.289439,
+        "pred": "H",
+        "confidence": 0.445492,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.505134,
+        1.305896
+      ],
+      "V3_lambda": [
+        1.464205,
+        1.341728
+      ],
+      "V4_lambda": [
+        1.446578,
+        1.34986
+      ]
+    },
+    {
+      "n": 61,
+      "fixture_id": 354688424,
+      "date": "2025-08-31",
+      "league": "La Liga",
+      "home": "Celta de Vigo",
+      "away": "Villarreal",
+      "score": "1-1",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.192892,
+        "p_draw": 0.217446,
+        "p_away": 0.589662,
+        "pred": "A",
+        "confidence": 0.589662,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.207135,
+        "p_draw": 0.223719,
+        "p_away": 0.569146,
+        "pred": "A",
+        "confidence": 0.569146,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.215872,
+        "p_draw": 0.222758,
+        "p_away": 0.56137,
+        "pred": "A",
+        "confidence": 0.56137,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.29882,
+        "p_draw": 0.270475,
+        "p_away": 0.430705,
+        "pred": "A",
+        "confidence": 0.430705,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.015008,
+        1.941946
+      ],
+      "V3_lambda": [
+        1.043041,
+        1.87929
+      ],
+      "V4_lambda": [
+        1.093156,
+        1.8976
+      ]
+    },
+    {
+      "n": 62,
+      "fixture_id": 354688599,
+      "date": "2025-08-31",
+      "league": "Ligue 1",
+      "home": "Monaco",
+      "away": "Strasbourg",
+      "score": "3-2",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.359892,
+        "p_draw": 0.26897,
+        "p_away": 0.371138,
+        "pred": "A",
+        "confidence": 0.371138,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.388698,
+        "p_draw": 0.267779,
+        "p_away": 0.343523,
+        "pred": "H",
+        "confidence": 0.388698,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.403781,
+        "p_draw": 0.263788,
+        "p_away": 0.332431,
+        "pred": "H",
+        "confidence": 0.403781,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.688832,
+        "p_draw": 0.17656,
+        "p_away": 0.134607,
+        "pred": "H",
+        "confidence": 0.688832,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.246518,
+        1.270182
+      ],
+      "V3_lambda": [
+        1.312767,
+        1.217455
+      ],
+      "V4_lambda": [
+        1.369412,
+        1.217328
+      ]
+    },
+    {
+      "n": 63,
+      "fixture_id": 354688600,
+      "date": "2025-08-31",
+      "league": "Ligue 1",
+      "home": "Le Havre",
+      "away": "Nice",
+      "score": "3-1",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.361658,
+        "p_draw": 0.253727,
+        "p_away": 0.384615,
+        "pred": "A",
+        "confidence": 0.384615,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.316333,
+        "p_draw": 0.251625,
+        "p_away": 0.432043,
+        "pred": "A",
+        "confidence": 0.432043,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.299025,
+        "p_draw": 0.249919,
+        "p_away": 0.451057,
+        "pred": "A",
+        "confidence": 0.451057,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.28815,
+        "p_draw": 0.278007,
+        "p_away": 0.433844,
+        "pred": "A",
+        "confidence": 0.433844,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.365097,
+        1.415563
+      ],
+      "V3_lambda": [
+        1.261443,
+        1.516347
+      ],
+      "V4_lambda": [
+        1.221074,
+        1.556643
+      ]
+    },
+    {
+      "n": 64,
+      "fixture_id": 354688601,
+      "date": "2025-08-31",
+      "league": "Ligue 1",
+      "home": "Paris",
+      "away": "Metz",
+      "score": "3-2",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.612291,
+        "p_draw": 0.219684,
+        "p_away": 0.168026,
+        "pred": "H",
+        "confidence": 0.612291,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.608441,
+        "p_draw": 0.220944,
+        "p_away": 0.170615,
+        "pred": "H",
+        "confidence": 0.608441,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.606152,
+        "p_draw": 0.221914,
+        "p_away": 0.171935,
+        "pred": "H",
+        "confidence": 0.606152,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.552123,
+        "p_draw": 0.252101,
+        "p_away": 0.195776,
+        "pred": "H",
+        "confidence": 0.552123,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.881085,
+        0.86781
+      ],
+      "V3_lambda": [
+        1.870787,
+        0.874152
+      ],
+      "V4_lambda": [
+        1.861844,
+        0.875392
+      ]
+    },
+    {
+      "n": 65,
+      "fixture_id": 354688602,
+      "date": "2025-08-31",
+      "league": "Premier League",
+      "home": "Liverpool",
+      "away": "Arsenal",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.396111,
+        "p_draw": 0.237811,
+        "p_away": 0.366078,
+        "pred": "H",
+        "confidence": 0.396111,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.416269,
+        "p_draw": 0.236117,
+        "p_away": 0.347613,
+        "pred": "H",
+        "confidence": 0.416269,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.410811,
+        "p_draw": 0.238091,
+        "p_away": 0.351098,
+        "pred": "H",
+        "confidence": 0.410811,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.403575,
+        "p_draw": 0.285514,
+        "p_away": 0.310911,
+        "pred": "H",
+        "confidence": 0.403575,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.591055,
+        1.521619
+      ],
+      "V3_lambda": [
+        1.648355,
+        1.488937
+      ],
+      "V4_lambda": [
+        1.616884,
+        1.479088
+      ]
+    },
+    {
+      "n": 66,
+      "fixture_id": 354688603,
+      "date": "2025-08-31",
+      "league": "Bundesliga",
+      "home": "Borussia Dortmund",
+      "away": "FC Union Berlin",
+      "score": "3-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.547054,
+        "p_draw": 0.229747,
+        "p_away": 0.223199,
+        "pred": "H",
+        "confidence": 0.547054,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.582916,
+        "p_draw": 0.219494,
+        "p_away": 0.19759,
+        "pred": "H",
+        "confidence": 0.582916,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.60151,
+        "p_draw": 0.213531,
+        "p_away": 0.184959,
+        "pred": "H",
+        "confidence": 0.60151,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.677384,
+        "p_draw": 0.190011,
+        "p_away": 0.132605,
+        "pred": "H",
+        "confidence": 0.677384,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.816652,
+        1.07622
+      ],
+      "V3_lambda": [
+        1.921976,
+        1.02498
+      ],
+      "V4_lambda": [
+        1.9804,
+        1.000107
+      ]
+    },
+    {
+      "n": 67,
+      "fixture_id": 354688609,
+      "date": "2025-08-31",
+      "league": "Serie A",
+      "home": "Genoa",
+      "away": "Juventus",
+      "score": "0-1",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.295357,
+        "p_draw": 0.266513,
+        "p_away": 0.43813,
+        "pred": "A",
+        "confidence": 0.43813,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.27525,
+        "p_draw": 0.263333,
+        "p_away": 0.461417,
+        "pred": "A",
+        "confidence": 0.461417,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.264248,
+        "p_draw": 0.266989,
+        "p_away": 0.468763,
+        "pred": "A",
+        "confidence": 0.468763,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.177831,
+        "p_draw": 0.285817,
+        "p_away": 0.536352,
+        "pred": "A",
+        "confidence": 0.536352,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.098238,
+        1.39881
+      ],
+      "V3_lambda": [
+        1.056186,
+        1.449822
+      ],
+      "V4_lambda": [
+        1.000461,
+        1.427598
+      ]
+    },
+    {
+      "n": 68,
+      "fixture_id": 354688610,
+      "date": "2025-08-31",
+      "league": "Serie A",
+      "home": "Torino",
+      "away": "Fiorentina",
+      "score": "0-0",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.322064,
+        "p_draw": 0.262298,
+        "p_away": 0.415638,
+        "pred": "A",
+        "confidence": 0.415638,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.32288,
+        "p_draw": 0.26203,
+        "p_away": 0.41509,
+        "pred": "A",
+        "confidence": 0.41509,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.316475,
+        "p_draw": 0.265042,
+        "p_away": 0.418483,
+        "pred": "A",
+        "confidence": 0.418483,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.287884,
+        "p_draw": 0.324329,
+        "p_away": 0.387787,
+        "pred": "A",
+        "confidence": 0.387787,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.200341,
+        1.400409
+      ],
+      "V3_lambda": [
+        1.204377,
+        1.401697
+      ],
+      "V4_lambda": [
+        1.166878,
+        1.383182
+      ]
+    },
+    {
+      "n": 69,
+      "fixture_id": 354688612,
+      "date": "2025-08-31",
+      "league": "La Liga",
+      "home": "Real Betis",
+      "away": "Athletic Club",
+      "score": "1-2",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.427247,
+        "p_draw": 0.269747,
+        "p_away": 0.303006,
+        "pred": "H",
+        "confidence": 0.427247,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.413189,
+        "p_draw": 0.271323,
+        "p_away": 0.315488,
+        "pred": "H",
+        "confidence": 0.413189,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.40293,
+        "p_draw": 0.27393,
+        "p_away": 0.32314,
+        "pred": "H",
+        "confidence": 0.40293,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.309352,
+        "p_draw": 0.297815,
+        "p_away": 0.392833,
+        "pred": "A",
+        "confidence": 0.392833,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.360153,
+        1.100504
+      ],
+      "V3_lambda": [
+        1.328384,
+        1.124702
+      ],
+      "V4_lambda": [
+        1.293913,
+        1.128573
+      ]
+    },
+    {
+      "n": 70,
+      "fixture_id": 354688615,
+      "date": "2025-08-31",
+      "league": "Bundesliga",
+      "home": "FC K\u00f6ln",
+      "away": "SC Freiburg",
+      "score": "4-1",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.455808,
+        "p_draw": 0.248655,
+        "p_away": 0.295537,
+        "pred": "H",
+        "confidence": 0.455808,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.422052,
+        "p_draw": 0.253121,
+        "p_away": 0.324826,
+        "pred": "H",
+        "confidence": 0.422052,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.408818,
+        "p_draw": 0.256477,
+        "p_away": 0.334705,
+        "pred": "H",
+        "confidence": 0.408818,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.376465,
+        "p_draw": 0.284448,
+        "p_away": 0.339086,
+        "pred": "H",
+        "confidence": 0.376465,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.574074,
+        1.219257
+      ],
+      "V3_lambda": [
+        1.48801,
+        1.274515
+      ],
+      "V4_lambda": [
+        1.437304,
+        1.275974
+      ]
+    },
+    {
+      "n": 71,
+      "fixture_id": 354688616,
+      "date": "2025-08-31",
+      "league": "La Liga",
+      "home": "Espanyol",
+      "away": "Osasuna",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.39055,
+        "p_draw": 0.265852,
+        "p_away": 0.343598,
+        "pred": "H",
+        "confidence": 0.39055,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.384376,
+        "p_draw": 0.266483,
+        "p_away": 0.349141,
+        "pred": "H",
+        "confidence": 0.384376,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.386867,
+        "p_draw": 0.266508,
+        "p_away": 0.346625,
+        "pred": "H",
+        "confidence": 0.386867,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.384075,
+        "p_draw": 0.310973,
+        "p_away": 0.304952,
+        "pred": "H",
+        "confidence": 0.384075,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.330351,
+        1.230761
+      ],
+      "V3_lambda": [
+        1.314116,
+        1.239487
+      ],
+      "V4_lambda": [
+        1.318649,
+        1.233432
+      ]
+    },
+    {
+      "n": 72,
+      "fixture_id": 353028788,
+      "date": "2025-08-31",
+      "league": "Premier League",
+      "home": "Aston Villa",
+      "away": "Crystal Palace",
+      "score": "0-3",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.443612,
+        "p_draw": 0.265361,
+        "p_away": 0.291028,
+        "pred": "H",
+        "confidence": 0.443612,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.443239,
+        "p_draw": 0.265372,
+        "p_away": 0.291389,
+        "pred": "H",
+        "confidence": 0.443239,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.44551,
+        "p_draw": 0.263179,
+        "p_away": 0.29131,
+        "pred": "H",
+        "confidence": 0.44551,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.466372,
+        "p_draw": 0.281021,
+        "p_away": 0.252608,
+        "pred": "H",
+        "confidence": 0.466372,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.414456,
+        1.092494
+      ],
+      "V3_lambda": [
+        1.413923,
+        1.093496
+      ],
+      "V4_lambda": [
+        1.434045,
+        1.106736
+      ]
+    },
+    {
+      "n": 73,
+      "fixture_id": 354688631,
+      "date": "2025-08-31",
+      "league": "Serie A",
+      "home": "Inter",
+      "away": "Udinese",
+      "score": "1-2",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.542028,
+        "p_draw": 0.240851,
+        "p_away": 0.217121,
+        "pred": "H",
+        "confidence": 0.542028,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.612362,
+        "p_draw": 0.218182,
+        "p_away": 0.169456,
+        "pred": "H",
+        "confidence": 0.612362,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.635085,
+        "p_draw": 0.209977,
+        "p_away": 0.154938,
+        "pred": "H",
+        "confidence": 0.635085,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.752699,
+        "p_draw": 0.165799,
+        "p_away": 0.081502,
+        "pred": "H",
+        "confidence": 0.752699,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.692799,
+        0.976185
+      ],
+      "V3_lambda": [
+        1.900309,
+        0.884456
+      ],
+      "V4_lambda": [
+        1.969672,
+        0.852657
+      ]
+    },
+    {
+      "n": 74,
+      "fixture_id": 354688632,
+      "date": "2025-08-31",
+      "league": "Serie A",
+      "home": "Lazio",
+      "away": "Hellas Verona",
+      "score": "4-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.492624,
+        "p_draw": 0.26525,
+        "p_away": 0.242126,
+        "pred": "H",
+        "confidence": 0.492624,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.538083,
+        "p_draw": 0.253123,
+        "p_away": 0.208793,
+        "pred": "H",
+        "confidence": 0.538083,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.554772,
+        "p_draw": 0.247446,
+        "p_away": 0.197782,
+        "pred": "H",
+        "confidence": 0.554772,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.622178,
+        "p_draw": 0.244991,
+        "p_away": 0.132831,
+        "pred": "H",
+        "confidence": 0.622178,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.458647,
+        0.936417
+      ],
+      "V3_lambda": [
+        1.57421,
+        0.874608
+      ],
+      "V4_lambda": [
+        1.624095,
+        0.858088
+      ]
+    },
+    {
+      "n": 75,
+      "fixture_id": 354688633,
+      "date": "2025-08-31",
+      "league": "Ligue 1",
+      "home": "Olympique Lyonnais",
+      "away": "Olympique Marseille",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.347651,
+        "p_draw": 0.241147,
+        "p_away": 0.411202,
+        "pred": "A",
+        "confidence": 0.411202,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.353603,
+        "p_draw": 0.241489,
+        "p_away": 0.404909,
+        "pred": "A",
+        "confidence": 0.404909,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.354607,
+        "p_draw": 0.23747,
+        "p_away": 0.407923,
+        "pred": "A",
+        "confidence": 0.407923,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.325353,
+        "p_draw": 0.267562,
+        "p_away": 0.407085,
+        "pred": "A",
+        "confidence": 0.407085,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.440188,
+        1.585346
+      ],
+      "V3_lambda": [
+        1.453068,
+        1.570185
+      ],
+      "V4_lambda": [
+        1.494869,
+        1.61819
+      ]
+    },
+    {
+      "n": 76,
+      "fixture_id": 354688636,
+      "date": "2025-08-31",
+      "league": "La Liga",
+      "home": "Rayo Vallecano",
+      "away": "FC Barcelona",
+      "score": "1-1",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.157715,
+        "p_draw": 0.199428,
+        "p_away": 0.642857,
+        "pred": "A",
+        "confidence": 0.642857,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.139177,
+        "p_draw": 0.188929,
+        "p_away": 0.671894,
+        "pred": "A",
+        "confidence": 0.671894,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.133741,
+        "p_draw": 0.187278,
+        "p_away": 0.678981,
+        "pred": "A",
+        "confidence": 0.678981,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.131924,
+        "p_draw": 0.168047,
+        "p_away": 0.700029,
+        "pred": "A",
+        "confidence": 0.700029,
+        "correct": false
+      },
+      "V2_lambda": [
+        0.939635,
+        2.110732
+      ],
+      "V3_lambda": [
+        0.890734,
+        2.2006
+      ],
+      "V4_lambda": [
+        0.863713,
+        2.204347
+      ]
+    },
+    {
+      "n": 77,
+      "fixture_id": 366806653,
+      "date": "2025-09-12",
+      "league": "Bundesliga",
+      "home": "Bayer 04 Leverkusen",
+      "away": "Eintracht Frankfurt",
+      "score": "3-1",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.270594,
+        "p_draw": 0.239839,
+        "p_away": 0.489567,
+        "pred": "A",
+        "confidence": 0.489567,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.335761,
+        "p_draw": 0.246786,
+        "p_away": 0.417453,
+        "pred": "A",
+        "confidence": 0.417453,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.35551,
+        "p_draw": 0.247107,
+        "p_away": 0.397384,
+        "pred": "A",
+        "confidence": 0.397384,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.463047,
+        "p_draw": 0.253826,
+        "p_away": 0.283127,
+        "pred": "H",
+        "confidence": 0.463047,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.198661,
+        1.69323
+      ],
+      "V3_lambda": [
+        1.356626,
+        1.539716
+      ],
+      "V4_lambda": [
+        1.406602,
+        1.500514
+      ]
+    },
+    {
+      "n": 78,
+      "fixture_id": 367857373,
+      "date": "2025-09-12",
+      "league": "Ligue 1",
+      "home": "Olympique Marseille",
+      "away": "Lorient",
+      "score": "4-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.530102,
+        "p_draw": 0.22519,
+        "p_away": 0.244708,
+        "pred": "H",
+        "confidence": 0.530102,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.557516,
+        "p_draw": 0.218559,
+        "p_away": 0.223924,
+        "pred": "H",
+        "confidence": 0.557516,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.577856,
+        "p_draw": 0.2113,
+        "p_away": 0.210843,
+        "pred": "H",
+        "confidence": 0.577856,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.727598,
+        "p_draw": 0.162929,
+        "p_away": 0.109473,
+        "pred": "H",
+        "confidence": 0.727598,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.87851,
+        1.209822
+      ],
+      "V3_lambda": [
+        1.957533,
+        1.166647
+      ],
+      "V4_lambda": [
+        2.045406,
+        1.160311
+      ]
+    },
+    {
+      "n": 79,
+      "fixture_id": 366806662,
+      "date": "2025-09-12",
+      "league": "La Liga",
+      "home": "Sevilla",
+      "away": "Elche",
+      "score": "2-2",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.418077,
+        "p_draw": 0.258315,
+        "p_away": 0.323608,
+        "pred": "H",
+        "confidence": 0.418077,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.451496,
+        "p_draw": 0.254923,
+        "p_away": 0.293581,
+        "pred": "H",
+        "confidence": 0.451496,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.465346,
+        "p_draw": 0.254237,
+        "p_away": 0.280417,
+        "pred": "H",
+        "confidence": 0.465346,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.511183,
+        "p_draw": 0.284839,
+        "p_away": 0.203978,
+        "pred": "H",
+        "confidence": 0.511183,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.436798,
+        1.232493
+      ],
+      "V3_lambda": [
+        1.510999,
+        1.167859
+      ],
+      "V4_lambda": [
+        1.531429,
+        1.129999
+      ]
+    },
+    {
+      "n": 80,
+      "fixture_id": 365992301,
+      "date": "2025-09-13",
+      "league": "Premier League",
+      "home": "Arsenal",
+      "away": "Nottingham Forest",
+      "score": "3-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.577369,
+        "p_draw": 0.230459,
+        "p_away": 0.192172,
+        "pred": "H",
+        "confidence": 0.577369,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.604032,
+        "p_draw": 0.221126,
+        "p_away": 0.174842,
+        "pred": "H",
+        "confidence": 0.604032,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.609937,
+        "p_draw": 0.219882,
+        "p_away": 0.170181,
+        "pred": "H",
+        "confidence": 0.609937,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.684053,
+        "p_draw": 0.19739,
+        "p_away": 0.118557,
+        "pred": "H",
+        "confidence": 0.684053,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.790294,
+        0.926049
+      ],
+      "V3_lambda": [
+        1.874657,
+        0.895334
+      ],
+      "V4_lambda": [
+        1.88208,
+        0.878141
+      ]
+    },
+    {
+      "n": 81,
+      "fixture_id": 367329875,
+      "date": "2025-09-13",
+      "league": "La Liga",
+      "home": "Getafe",
+      "away": "Real Oviedo",
+      "score": "2-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.568289,
+        "p_draw": 0.243351,
+        "p_away": 0.188361,
+        "pred": "H",
+        "confidence": 0.568289,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.549352,
+        "p_draw": 0.249447,
+        "p_away": 0.201202,
+        "pred": "H",
+        "confidence": 0.549352,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.537191,
+        "p_draw": 0.255753,
+        "p_away": 0.207056,
+        "pred": "H",
+        "confidence": 0.537191,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.487435,
+        "p_draw": 0.321265,
+        "p_away": 0.191299,
+        "pred": "H",
+        "confidence": 0.487435,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.65844,
+        0.838185
+      ],
+      "V3_lambda": [
+        1.606583,
+        0.862284
+      ],
+      "V4_lambda": [
+        1.551005,
+        0.854926
+      ]
+    },
+    {
+      "n": 82,
+      "fixture_id": 367329916,
+      "date": "2025-09-13",
+      "league": "Serie A",
+      "home": "Cagliari",
+      "away": "Parma",
+      "score": "2-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.502136,
+        "p_draw": 0.261429,
+        "p_away": 0.236434,
+        "pred": "H",
+        "confidence": 0.502136,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.498737,
+        "p_draw": 0.262592,
+        "p_away": 0.238671,
+        "pred": "H",
+        "confidence": 0.498737,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.497155,
+        "p_draw": 0.261674,
+        "p_away": 0.241172,
+        "pred": "H",
+        "confidence": 0.497155,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.427397,
+        "p_draw": 0.309159,
+        "p_away": 0.263444,
+        "pred": "H",
+        "confidence": 0.427397,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.494549,
+        0.936181
+      ],
+      "V3_lambda": [
+        1.483353,
+        0.938066
+      ],
+      "V4_lambda": [
+        1.490076,
+        0.951624
+      ]
+    },
+    {
+      "n": 83,
+      "fixture_id": 367329964,
+      "date": "2025-09-13",
+      "league": "Bundesliga",
+      "home": "Heidenheim",
+      "away": "Borussia Dortmund",
+      "score": "0-2",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.152985,
+        "p_draw": 0.194109,
+        "p_away": 0.652906,
+        "pred": "A",
+        "confidence": 0.652906,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.150146,
+        "p_draw": 0.192164,
+        "p_away": 0.65769,
+        "pred": "A",
+        "confidence": 0.65769,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.150197,
+        "p_draw": 0.191211,
+        "p_away": 0.658592,
+        "pred": "A",
+        "confidence": 0.658592,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.178166,
+        "p_draw": 0.207675,
+        "p_away": 0.614159,
+        "pred": "A",
+        "confidence": 0.614159,
+        "correct": true
+      },
+      "V2_lambda": [
+        0.947898,
+        2.171735
+      ],
+      "V3_lambda": [
+        0.943312,
+        2.190927
+      ],
+      "V4_lambda": [
+        0.950964,
+        2.204975
+      ]
+    },
+    {
+      "n": 84,
+      "fixture_id": 367329965,
+      "date": "2025-09-13",
+      "league": "Bundesliga",
+      "home": "FC Union Berlin",
+      "away": "TSG Hoffenheim",
+      "score": "2-4",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.321683,
+        "p_draw": 0.250992,
+        "p_away": 0.427325,
+        "pred": "A",
+        "confidence": 0.427325,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.328881,
+        "p_draw": 0.251569,
+        "p_away": 0.41955,
+        "pred": "A",
+        "confidence": 0.41955,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.325885,
+        "p_draw": 0.252608,
+        "p_away": 0.421506,
+        "pred": "A",
+        "confidence": 0.421506,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.342043,
+        "p_draw": 0.283424,
+        "p_away": 0.374534,
+        "pred": "A",
+        "confidence": 0.374534,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.282029,
+        1.515377
+      ],
+      "V3_lambda": [
+        1.298034,
+        1.498154
+      ],
+      "V4_lambda": [
+        1.281465,
+        1.491784
+      ]
+    },
+    {
+      "n": 85,
+      "fixture_id": 367329966,
+      "date": "2025-09-13",
+      "league": "Bundesliga",
+      "home": "FSV Mainz 05",
+      "away": "RB Leipzig",
+      "score": "0-1",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.560201,
+        "p_draw": 0.229762,
+        "p_away": 0.210036,
+        "pred": "H",
+        "confidence": 0.560201,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.532653,
+        "p_draw": 0.236764,
+        "p_away": 0.230583,
+        "pred": "H",
+        "confidence": 0.532653,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.524875,
+        "p_draw": 0.239416,
+        "p_away": 0.235709,
+        "pred": "H",
+        "confidence": 0.524875,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.411861,
+        "p_draw": 0.25697,
+        "p_away": 0.331169,
+        "pred": "H",
+        "confidence": 0.411861,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.81031,
+        1.01513
+      ],
+      "V3_lambda": [
+        1.738195,
+        1.059823
+      ],
+      "V4_lambda": [
+        1.709154,
+        1.063446
+      ]
+    },
+    {
+      "n": 86,
+      "fixture_id": 367329967,
+      "date": "2025-09-13",
+      "league": "Bundesliga",
+      "home": "SC Freiburg",
+      "away": "VfB Stuttgart",
+      "score": "3-1",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.237774,
+        "p_draw": 0.224955,
+        "p_away": 0.537271,
+        "pred": "A",
+        "confidence": 0.537271,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.251109,
+        "p_draw": 0.228343,
+        "p_away": 0.520548,
+        "pred": "A",
+        "confidence": 0.520548,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.252081,
+        "p_draw": 0.22753,
+        "p_away": 0.520388,
+        "pred": "A",
+        "confidence": 0.520388,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.364239,
+        "p_draw": 0.271522,
+        "p_away": 0.364239,
+        "pred": "H",
+        "confidence": 0.364239,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.180083,
+        1.88016
+      ],
+      "V3_lambda": [
+        1.211812,
+        1.838377
+      ],
+      "V4_lambda": [
+        1.222857,
+        1.848681
+      ]
+    },
+    {
+      "n": 87,
+      "fixture_id": 367329968,
+      "date": "2025-09-13",
+      "league": "Bundesliga",
+      "home": "VfL Wolfsburg",
+      "away": "FC K\u00f6ln",
+      "score": "3-3",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.348565,
+        "p_draw": 0.244006,
+        "p_away": 0.407429,
+        "pred": "A",
+        "confidence": 0.407429,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.385637,
+        "p_draw": 0.244902,
+        "p_away": 0.369461,
+        "pred": "H",
+        "confidence": 0.385637,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.40513,
+        "p_draw": 0.245548,
+        "p_away": 0.349322,
+        "pred": "H",
+        "confidence": 0.40513,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.491328,
+        "p_draw": 0.262217,
+        "p_away": 0.246455,
+        "pred": "H",
+        "confidence": 0.491328,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.416262,
+        1.549504
+      ],
+      "V3_lambda": [
+        1.497453,
+        1.460903
+      ],
+      "V4_lambda": [
+        1.530137,
+        1.404417
+      ]
+    },
+    {
+      "n": 88,
+      "fixture_id": 365992304,
+      "date": "2025-09-13",
+      "league": "Premier League",
+      "home": "AFC Bournemouth",
+      "away": "Brighton & Hove Albion",
+      "score": "2-1",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.402704,
+        "p_draw": 0.25621,
+        "p_away": 0.341085,
+        "pred": "H",
+        "confidence": 0.402704,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.403773,
+        "p_draw": 0.25626,
+        "p_away": 0.339967,
+        "pred": "H",
+        "confidence": 0.403773,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.408807,
+        "p_draw": 0.2545,
+        "p_away": 0.336694,
+        "pred": "H",
+        "confidence": 0.408807,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.407059,
+        "p_draw": 0.269224,
+        "p_away": 0.323717,
+        "pred": "H",
+        "confidence": 0.407059,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.428966,
+        1.294654
+      ],
+      "V3_lambda": [
+        1.430432,
+        1.291385
+      ],
+      "V4_lambda": [
+        1.454305,
+        1.296387
+      ]
+    },
+    {
+      "n": 89,
+      "fixture_id": 365992306,
+      "date": "2025-09-13",
+      "league": "Premier League",
+      "home": "Crystal Palace",
+      "away": "Sunderland",
+      "score": "0-0",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.419603,
+        "p_draw": 0.269442,
+        "p_away": 0.310955,
+        "pred": "H",
+        "confidence": 0.419603,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.450269,
+        "p_draw": 0.265307,
+        "p_away": 0.284424,
+        "pred": "H",
+        "confidence": 0.450269,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.456702,
+        "p_draw": 0.263578,
+        "p_away": 0.279721,
+        "pred": "H",
+        "confidence": 0.456702,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.571636,
+        "p_draw": 0.260819,
+        "p_away": 0.167545,
+        "pred": "H",
+        "confidence": 0.571636,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.351608,
+        1.124105
+      ],
+      "V3_lambda": [
+        1.422496,
+        1.072961
+      ],
+      "V4_lambda": [
+        1.443133,
+        1.06878
+      ]
+    },
+    {
+      "n": 90,
+      "fixture_id": 365992307,
+      "date": "2025-09-13",
+      "league": "Premier League",
+      "home": "Everton",
+      "away": "Aston Villa",
+      "score": "0-0",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.424131,
+        "p_draw": 0.269894,
+        "p_away": 0.305975,
+        "pred": "H",
+        "confidence": 0.424131,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.399046,
+        "p_draw": 0.272401,
+        "p_away": 0.328553,
+        "pred": "H",
+        "confidence": 0.399046,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.386834,
+        "p_draw": 0.276791,
+        "p_away": 0.336376,
+        "pred": "H",
+        "confidence": 0.386834,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.366248,
+        "p_draw": 0.299543,
+        "p_away": 0.334209,
+        "pred": "H",
+        "confidence": 0.366248,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.354765,
+        1.107818
+      ],
+      "V3_lambda": [
+        1.298093,
+        1.151358
+      ],
+      "V4_lambda": [
+        1.247271,
+        1.143381
+      ]
+    },
+    {
+      "n": 91,
+      "fixture_id": 365992311,
+      "date": "2025-09-13",
+      "league": "Premier League",
+      "home": "Fulham",
+      "away": "Leeds United",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.487803,
+        "p_draw": 0.262984,
+        "p_away": 0.249212,
+        "pred": "H",
+        "confidence": 0.487803,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.513278,
+        "p_draw": 0.256901,
+        "p_away": 0.229821,
+        "pred": "H",
+        "confidence": 0.513278,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.531434,
+        "p_draw": 0.248533,
+        "p_away": 0.220033,
+        "pred": "H",
+        "confidence": 0.531434,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.470868,
+        "p_draw": 0.287545,
+        "p_away": 0.241586,
+        "pred": "H",
+        "confidence": 0.470868,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.473882,
+        0.972459
+      ],
+      "V3_lambda": [
+        1.537256,
+        0.935887
+      ],
+      "V4_lambda": [
+        1.616697,
+        0.943622
+      ]
+    },
+    {
+      "n": 92,
+      "fixture_id": 365992315,
+      "date": "2025-09-13",
+      "league": "Premier League",
+      "home": "Newcastle United",
+      "away": "Wolverhampton Wanderers",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.579296,
+        "p_draw": 0.237696,
+        "p_away": 0.183007,
+        "pred": "H",
+        "confidence": 0.579296,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.603595,
+        "p_draw": 0.228776,
+        "p_away": 0.167629,
+        "pred": "H",
+        "confidence": 0.603595,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.620216,
+        "p_draw": 0.219978,
+        "p_away": 0.159805,
+        "pred": "H",
+        "confidence": 0.620216,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.705038,
+        "p_draw": 0.189886,
+        "p_away": 0.105077,
+        "pred": "H",
+        "confidence": 0.705038,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.709169,
+        0.842852
+      ],
+      "V3_lambda": [
+        1.783446,
+        0.815546
+      ],
+      "V4_lambda": [
+        1.864986,
+        0.822128
+      ]
+    },
+    {
+      "n": 93,
+      "fixture_id": 367857789,
+      "date": "2025-09-13",
+      "league": "La Liga",
+      "home": "Real Sociedad",
+      "away": "Real Madrid",
+      "score": "1-2",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.182429,
+        "p_draw": 0.214497,
+        "p_away": 0.603074,
+        "pred": "A",
+        "confidence": 0.603074,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.167061,
+        "p_draw": 0.207472,
+        "p_away": 0.625467,
+        "pred": "A",
+        "confidence": 0.625467,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.16488,
+        "p_draw": 0.209372,
+        "p_away": 0.625749,
+        "pred": "A",
+        "confidence": 0.625749,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.166294,
+        "p_draw": 0.218277,
+        "p_away": 0.615429,
+        "pred": "A",
+        "confidence": 0.615429,
+        "correct": true
+      },
+      "V2_lambda": [
+        0.979277,
+        1.964374
+      ],
+      "V3_lambda": [
+        0.940273,
+        2.026002
+      ],
+      "V4_lambda": [
+        0.914564,
+        1.997512
+      ]
+    },
+    {
+      "n": 94,
+      "fixture_id": 367857372,
+      "date": "2025-09-13",
+      "league": "Ligue 1",
+      "home": "Nice",
+      "away": "Nantes",
+      "score": "1-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.577341,
+        "p_draw": 0.230222,
+        "p_away": 0.192436,
+        "pred": "H",
+        "confidence": 0.577341,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.605437,
+        "p_draw": 0.220648,
+        "p_away": 0.173915,
+        "pred": "H",
+        "confidence": 0.605437,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.61574,
+        "p_draw": 0.218161,
+        "p_away": 0.166099,
+        "pred": "H",
+        "confidence": 0.61574,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.60241,
+        "p_draw": 0.231564,
+        "p_away": 0.166026,
+        "pred": "H",
+        "confidence": 0.60241,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.793059,
+        0.928733
+      ],
+      "V3_lambda": [
+        1.878788,
+        0.893347
+      ],
+      "V4_lambda": [
+        1.895254,
+        0.866416
+      ]
+    },
+    {
+      "n": 95,
+      "fixture_id": 367330222,
+      "date": "2025-09-13",
+      "league": "Serie A",
+      "home": "Juventus",
+      "away": "Inter",
+      "score": "4-3",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.46612,
+        "p_draw": 0.244701,
+        "p_away": 0.289178,
+        "pred": "H",
+        "confidence": 0.46612,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.428558,
+        "p_draw": 0.249464,
+        "p_away": 0.321978,
+        "pred": "H",
+        "confidence": 0.428558,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.412019,
+        "p_draw": 0.25348,
+        "p_away": 0.334501,
+        "pred": "H",
+        "confidence": 0.412019,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.338141,
+        "p_draw": 0.318835,
+        "p_away": 0.343024,
+        "pred": "A",
+        "confidence": 0.343024,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.623861,
+        1.228053
+      ],
+      "V3_lambda": [
+        1.531479,
+        1.294969
+      ],
+      "V4_lambda": [
+        1.468696,
+        1.298465
+      ]
+    },
+    {
+      "n": 96,
+      "fixture_id": 365992317,
+      "date": "2025-09-13",
+      "league": "Premier League",
+      "home": "West Ham United",
+      "away": "Tottenham Hotspur",
+      "score": "0-3",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.472502,
+        "p_draw": 0.250343,
+        "p_away": 0.277155,
+        "pred": "H",
+        "confidence": 0.472502,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.466905,
+        "p_draw": 0.251171,
+        "p_away": 0.281924,
+        "pred": "H",
+        "confidence": 0.466905,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.460384,
+        "p_draw": 0.249898,
+        "p_away": 0.289718,
+        "pred": "H",
+        "confidence": 0.460384,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.282887,
+        "p_draw": 0.270498,
+        "p_away": 0.446615,
+        "pred": "A",
+        "confidence": 0.446615,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.573928,
+        1.14549
+      ],
+      "V3_lambda": [
+        1.561158,
+        1.15593
+      ],
+      "V4_lambda": [
+        1.566923,
+        1.190964
+      ]
+    },
+    {
+      "n": 97,
+      "fixture_id": 367330261,
+      "date": "2025-09-13",
+      "league": "Bundesliga",
+      "home": "FC Bayern M\u00fcnchen",
+      "away": "Hamburger SV",
+      "score": "5-0",
+      "actual": "H",
+      "V2": {
+        "p_home": 0.891098,
+        "p_draw": 0.073068,
+        "p_away": 0.035834,
+        "pred": "H",
+        "confidence": 0.891098,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.89184,
+        "p_draw": 0.072655,
+        "p_away": 0.035505,
+        "pred": "H",
+        "confidence": 0.89184,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.893275,
+        "p_draw": 0.071609,
+        "p_away": 0.035116,
+        "pred": "H",
+        "confidence": 0.893275,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.926272,
+        "p_draw": 0.041865,
+        "p_away": 0.031863,
+        "pred": "H",
+        "confidence": 0.926272,
+        "correct": true
+      },
+      "V2_lambda": [
+        3.715146,
+        0.733029
+      ],
+      "V3_lambda": [
+        3.720733,
+        0.730573
+      ],
+      "V4_lambda": [
+        3.752235,
+        0.736762
+      ]
+    },
+    {
+      "n": 98,
+      "fixture_id": 367857786,
+      "date": "2025-09-13",
+      "league": "La Liga",
+      "home": "Athletic Club",
+      "away": "Deportivo Alav\u00e9s",
+      "score": "0-1",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.516399,
+        "p_draw": 0.254939,
+        "p_away": 0.228662,
+        "pred": "H",
+        "confidence": 0.516399,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.551307,
+        "p_draw": 0.245113,
+        "p_away": 0.20358,
+        "pred": "H",
+        "confidence": 0.551307,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.55562,
+        "p_draw": 0.248204,
+        "p_away": 0.196176,
+        "pred": "H",
+        "confidence": 0.55562,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.608143,
+        "p_draw": 0.250476,
+        "p_away": 0.14138,
+        "pred": "H",
+        "confidence": 0.608143,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.555408,
+        0.942037
+      ],
+      "V3_lambda": [
+        1.647539,
+        0.89455
+      ],
+      "V4_lambda": [
+        1.616697,
+        0.847592
+      ]
+    },
+    {
+      "n": 99,
+      "fixture_id": 367330318,
+      "date": "2025-09-13",
+      "league": "Serie A",
+      "home": "Fiorentina",
+      "away": "Napoli",
+      "score": "1-3",
+      "actual": "A",
+      "V2": {
+        "p_home": 0.265027,
+        "p_draw": 0.266207,
+        "p_away": 0.468766,
+        "pred": "A",
+        "confidence": 0.468766,
+        "correct": true
+      },
+      "V3": {
+        "p_home": 0.273298,
+        "p_draw": 0.267743,
+        "p_away": 0.458959,
+        "pred": "A",
+        "confidence": 0.458959,
+        "correct": true
+      },
+      "V4": {
+        "p_home": 0.278665,
+        "p_draw": 0.268906,
+        "p_away": 0.452429,
+        "pred": "A",
+        "confidence": 0.452429,
+        "correct": true
+      },
+      "MARKET": {
+        "p_home": 0.224135,
+        "p_draw": 0.306801,
+        "p_away": 0.469064,
+        "pred": "A",
+        "confidence": 0.469064,
+        "correct": true
+      },
+      "V2_lambda": [
+        1.007238,
+        1.433705
+      ],
+      "V3_lambda": [
+        1.024793,
+        1.412644
+      ],
+      "V4_lambda": [
+        1.034738,
+        1.397069
+      ]
+    },
+    {
+      "n": 100,
+      "fixture_id": 365992305,
+      "date": "2025-09-13",
+      "league": "Premier League",
+      "home": "Brentford",
+      "away": "Chelsea",
+      "score": "2-2",
+      "actual": "D",
+      "V2": {
+        "p_home": 0.244488,
+        "p_draw": 0.246189,
+        "p_away": 0.509324,
+        "pred": "A",
+        "confidence": 0.509324,
+        "correct": false
+      },
+      "V3": {
+        "p_home": 0.25361,
+        "p_draw": 0.248536,
+        "p_away": 0.497854,
+        "pred": "A",
+        "confidence": 0.497854,
+        "correct": false
+      },
+      "V4": {
+        "p_home": 0.26312,
+        "p_draw": 0.248933,
+        "p_away": 0.487947,
+        "pred": "A",
+        "confidence": 0.487947,
+        "correct": false
+      },
+      "MARKET": {
+        "p_home": 0.21768,
+        "p_draw": 0.258026,
+        "p_away": 0.524294,
+        "pred": "A",
+        "confidence": 0.524294,
+        "correct": false
+      },
+      "V2_lambda": [
+        1.054021,
+        1.635845
+      ],
+      "V3_lambda": [
+        1.073434,
+        1.608134
+      ],
+      "V4_lambda": [
+        1.105659,
+        1.598789
+      ]
+    }
+  ],
+  "scorecard": {
+    "V2": {
+      "n": 100,
+      "correct": 51,
+      "accuracy": 0.51,
+      "log_loss": 0.989843,
+      "brier": 0.58957,
+      "rps": 0.209986,
+      "draw_recall": 0.0,
+      "ece": 0.031239
+    },
+    "V3": {
+      "n": 100,
+      "correct": 55,
+      "accuracy": 0.55,
+      "log_loss": 0.973907,
+      "brier": 0.577915,
+      "rps": 0.204401,
+      "draw_recall": 0.0,
+      "ece": 0.039763
+    },
+    "V4": {
+      "n": 100,
+      "correct": 54,
+      "accuracy": 0.54,
+      "log_loss": 0.970247,
+      "brier": 0.575139,
+      "rps": 0.20305,
+      "draw_recall": 0.0,
+      "ece": 0.043411
+    },
+    "MARKET": {
+      "n": 100,
+      "correct": 58,
+      "accuracy": 0.58,
+      "log_loss": 0.939937,
+      "brier": 0.554034,
+      "rps": 0.192421,
+      "draw_recall": 0.0,
+      "ece": 0.053511
+    }
+  },
+  "pairwise": {
+    "V4_vs_V2": {
+      "log_loss_delta": 0.019596,
+      "brier_delta": 0.014431,
+      "rps_delta": 0.006936,
+      "ece_delta": -0.012172,
+      "accuracy_delta": 0.03,
+      "correct_delta": 3,
+      "top_class_changes": 8
+    },
+    "V4_vs_V3": {
+      "log_loss_delta": 0.00366,
+      "brier_delta": 0.002776,
+      "rps_delta": 0.001351,
+      "ece_delta": -0.003648,
+      "accuracy_delta": -0.01,
+      "correct_delta": -1,
+      "top_class_changes": 1
+    },
+    "V4_vs_MARKET": {
+      "log_loss_delta": -0.03031,
+      "brier_delta": -0.021105,
+      "rps_delta": -0.010629,
+      "ece_delta": 0.0101,
+      "accuracy_delta": -0.04,
+      "correct_delta": -4,
+      "top_class_changes": 15
+    }
+  },
+  "buckets": {
+    "1-20": {
+      "V2": {
+        "n": 20,
+        "correct": 11,
+        "accuracy": 0.55,
+        "log_loss": 1.019721,
+        "brier": 0.606442,
+        "rps": 0.198353,
+        "draw_recall": 0.0,
+        "ece": 0.062984
+      },
+      "V3": {
+        "n": 20,
+        "correct": 11,
+        "accuracy": 0.55,
+        "log_loss": 1.01988,
+        "brier": 0.606243,
+        "rps": 0.198596,
+        "draw_recall": 0.0,
+        "ece": 0.06805
+      },
+      "V4": {
+        "n": 20,
+        "correct": 10,
+        "accuracy": 0.5,
+        "log_loss": 1.021449,
+        "brier": 0.607207,
+        "rps": 0.199251,
+        "draw_recall": 0.0,
+        "ece": 0.038114
+      },
+      "MARKET": {
+        "n": 20,
+        "correct": 10,
+        "accuracy": 0.5,
+        "log_loss": 0.99693,
+        "brier": 0.593862,
+        "rps": 0.19353,
+        "draw_recall": 0.0,
+        "ece": 0.061003
+      }
+    },
+    "21-40": {
+      "V2": {
+        "n": 20,
+        "correct": 13,
+        "accuracy": 0.65,
+        "log_loss": 0.934695,
+        "brier": 0.55035,
+        "rps": 0.20772,
+        "draw_recall": 0.0,
+        "ece": 0.113911
+      },
+      "V3": {
+        "n": 20,
+        "correct": 14,
+        "accuracy": 0.7,
+        "log_loss": 0.893813,
+        "brier": 0.519687,
+        "rps": 0.193032,
+        "draw_recall": 0.0,
+        "ece": 0.166231
+      },
+      "V4": {
+        "n": 20,
+        "correct": 14,
+        "accuracy": 0.7,
+        "log_loss": 0.883099,
+        "brier": 0.511545,
+        "rps": 0.188909,
+        "draw_recall": 0.0,
+        "ece": 0.16265
+      },
+      "MARKET": {
+        "n": 20,
+        "correct": 14,
+        "accuracy": 0.7,
+        "log_loss": 0.820007,
+        "brier": 0.468682,
+        "rps": 0.167564,
+        "draw_recall": 0.0,
+        "ece": 0.108255
+      }
+    },
+    "41-60": {
+      "V2": {
+        "n": 20,
+        "correct": 6,
+        "accuracy": 0.3,
+        "log_loss": 1.033032,
+        "brier": 0.621583,
+        "rps": 0.219836,
+        "draw_recall": 0.0,
+        "ece": 0.068603
+      },
+      "V3": {
+        "n": 20,
+        "correct": 8,
+        "accuracy": 0.4,
+        "log_loss": 1.006954,
+        "brier": 0.60444,
+        "rps": 0.210916,
+        "draw_recall": 0.0,
+        "ece": 0.106829
+      },
+      "V4": {
+        "n": 20,
+        "correct": 8,
+        "accuracy": 0.4,
+        "log_loss": 1.002913,
+        "brier": 0.602168,
+        "rps": 0.209371,
+        "draw_recall": 0.0,
+        "ece": 0.080923
+      },
+      "MARKET": {
+        "n": 20,
+        "correct": 9,
+        "accuracy": 0.45,
+        "log_loss": 1.008243,
+        "brier": 0.608218,
+        "rps": 0.211751,
+        "draw_recall": 0.0,
+        "ece": 0.113303
+      }
+    },
+    "61-80": {
+      "V2": {
+        "n": 20,
+        "correct": 9,
+        "accuracy": 0.45,
+        "log_loss": 1.03256,
+        "brier": 0.623984,
+        "rps": 0.228579,
+        "draw_recall": 0.0,
+        "ece": 0.067786
+      },
+      "V3": {
+        "n": 20,
+        "correct": 10,
+        "accuracy": 0.5,
+        "log_loss": 1.023596,
+        "brier": 0.616371,
+        "rps": 0.225086,
+        "draw_recall": 0.0,
+        "ece": 0.130983
+      },
+      "V4": {
+        "n": 20,
+        "correct": 10,
+        "accuracy": 0.5,
+        "log_loss": 1.020971,
+        "brier": 0.613917,
+        "rps": 0.224141,
+        "draw_recall": 0.0,
+        "ece": 0.053545
+      },
+      "MARKET": {
+        "n": 20,
+        "correct": 12,
+        "accuracy": 0.6,
+        "log_loss": 0.971005,
+        "brier": 0.568123,
+        "rps": 0.204112,
+        "draw_recall": 0.0,
+        "ece": 0.129343
+      }
+    },
+    "81-100": {
+      "V2": {
+        "n": 20,
+        "correct": 12,
+        "accuracy": 0.6,
+        "log_loss": 0.929206,
+        "brier": 0.54549,
+        "rps": 0.195439,
+        "draw_recall": 0.0,
+        "ece": 0.106025
+      },
+      "V3": {
+        "n": 20,
+        "correct": 12,
+        "accuracy": 0.6,
+        "log_loss": 0.925293,
+        "brier": 0.542833,
+        "rps": 0.194373,
+        "draw_recall": 0.0,
+        "ece": 0.136658
+      },
+      "V4": {
+        "n": 20,
+        "correct": 12,
+        "accuracy": 0.6,
+        "log_loss": 0.922805,
+        "brier": 0.54086,
+        "rps": 0.193577,
+        "draw_recall": 0.0,
+        "ece": 0.095807
+      },
+      "MARKET": {
+        "n": 20,
+        "correct": 13,
+        "accuracy": 0.65,
+        "log_loss": 0.903499,
+        "brier": 0.531286,
+        "rps": 0.185148,
+        "draw_recall": 0.0,
+        "ece": 0.110564
+      }
+    }
+  },
+  "by_league": {
+    "La Liga": {
+      "n": 22,
+      "V2": {
+        "n": 22,
+        "correct": 11,
+        "accuracy": 0.5,
+        "log_loss": 1.000893,
+        "brier": 0.600925,
+        "rps": 0.200812,
+        "draw_recall": 0.0,
+        "ece": 0.024622
+      },
+      "V3": {
+        "n": 22,
+        "correct": 12,
+        "accuracy": 0.545455,
+        "log_loss": 0.99102,
+        "brier": 0.593967,
+        "rps": 0.197163,
+        "draw_recall": 0.0,
+        "ece": 0.049932
+      },
+      "V4": {
+        "n": 22,
+        "correct": 12,
+        "accuracy": 0.545455,
+        "log_loss": 0.988301,
+        "brier": 0.59175,
+        "rps": 0.195821,
+        "draw_recall": 0.0,
+        "ece": 0.067769
+      },
+      "MARKET": {
+        "n": 22,
+        "correct": 12,
+        "accuracy": 0.545455,
+        "log_loss": 0.979749,
+        "brier": 0.58482,
+        "rps": 0.191004,
+        "draw_recall": 0.0,
+        "ece": 0.075622
+      }
+    },
+    "Premier League": {
+      "n": 22,
+      "V2": {
+        "n": 22,
+        "correct": 8,
+        "accuracy": 0.363636,
+        "log_loss": 1.05624,
+        "brier": 0.636526,
+        "rps": 0.220638,
+        "draw_recall": 0.0,
+        "ece": 0.088528
+      },
+      "V3": {
+        "n": 22,
+        "correct": 8,
+        "accuracy": 0.363636,
+        "log_loss": 1.043855,
+        "brier": 0.628065,
+        "rps": 0.216381,
+        "draw_recall": 0.0,
+        "ece": 0.101282
+      },
+      "V4": {
+        "n": 22,
+        "correct": 8,
+        "accuracy": 0.363636,
+        "log_loss": 1.041594,
+        "brier": 0.626606,
+        "rps": 0.215788,
+        "draw_recall": 0.0,
+        "ece": 0.10049
+      },
+      "MARKET": {
+        "n": 22,
+        "correct": 10,
+        "accuracy": 0.454545,
+        "log_loss": 1.024673,
+        "brier": 0.615967,
+        "rps": 0.212349,
+        "draw_recall": 0.0,
+        "ece": 0.096388
+      }
+    },
+    "Serie A": {
+      "n": 21,
+      "V2": {
+        "n": 21,
+        "correct": 12,
+        "accuracy": 0.571429,
+        "log_loss": 1.000984,
+        "brier": 0.593839,
+        "rps": 0.207337,
+        "draw_recall": 0.0,
+        "ece": 0.128072
+      },
+      "V3": {
+        "n": 21,
+        "correct": 14,
+        "accuracy": 0.666667,
+        "log_loss": 0.994857,
+        "brier": 0.587939,
+        "rps": 0.204851,
+        "draw_recall": 0.0,
+        "ece": 0.157179
+      },
+      "V4": {
+        "n": 21,
+        "correct": 14,
+        "accuracy": 0.666667,
+        "log_loss": 0.996705,
+        "brier": 0.588807,
+        "rps": 0.205169,
+        "draw_recall": 0.0,
+        "ece": 0.159698
+      },
+      "MARKET": {
+        "n": 21,
+        "correct": 13,
+        "accuracy": 0.619048,
+        "log_loss": 0.999626,
+        "brier": 0.586493,
+        "rps": 0.20391,
+        "draw_recall": 0.0,
+        "ece": 0.122521
+      }
+    },
+    "Bundesliga": {
+      "n": 18,
+      "V2": {
+        "n": 18,
+        "correct": 9,
+        "accuracy": 0.5,
+        "log_loss": 0.995495,
+        "brier": 0.592652,
+        "rps": 0.213213,
+        "draw_recall": 0.0,
+        "ece": 0.080849
+      },
+      "V3": {
+        "n": 18,
+        "correct": 9,
+        "accuracy": 0.5,
+        "log_loss": 0.968184,
+        "brier": 0.57296,
+        "rps": 0.203864,
+        "draw_recall": 0.0,
+        "ece": 0.155332
+      },
+      "V4": {
+        "n": 18,
+        "correct": 9,
+        "accuracy": 0.5,
+        "log_loss": 0.960678,
+        "brier": 0.567351,
+        "rps": 0.201145,
+        "draw_recall": 0.0,
+        "ece": 0.18149
+      },
+      "MARKET": {
+        "n": 18,
+        "correct": 11,
+        "accuracy": 0.611111,
+        "log_loss": 0.886485,
+        "brier": 0.521004,
+        "rps": 0.177558,
+        "draw_recall": 0.0,
+        "ece": 0.121145
+      }
+    },
+    "Ligue 1": {
+      "n": 17,
+      "V2": {
+        "n": 17,
+        "correct": 11,
+        "accuracy": 0.647059,
+        "log_loss": 0.869869,
+        "brier": 0.50557,
+        "rps": 0.207928,
+        "draw_recall": 0.0,
+        "ece": 0.148421
+      },
+      "V3": {
+        "n": 17,
+        "correct": 12,
+        "accuracy": 0.705882,
+        "log_loss": 0.841423,
+        "brier": 0.485105,
+        "rps": 0.198275,
+        "draw_recall": 0.0,
+        "ece": 0.170422
+      },
+      "V4": {
+        "n": 17,
+        "correct": 11,
+        "accuracy": 0.647059,
+        "log_loss": 0.832001,
+        "brier": 0.478404,
+        "rps": 0.195321,
+        "draw_recall": 0.0,
+        "ece": 0.15942
+      },
+      "MARKET": {
+        "n": 17,
+        "correct": 12,
+        "accuracy": 0.705882,
+        "log_loss": 0.761619,
+        "brier": 0.428921,
+        "rps": 0.170009,
+        "draw_recall": 0.0,
+        "ece": 0.155199
+      }
+    }
+  },
+  "history_20_50_100": {
+    "fresh_100": {
+      "V2": {
+        "n": 100,
+        "correct": 51,
+        "accuracy": 0.51,
+        "log_loss": 0.989843,
+        "brier": 0.58957,
+        "rps": 0.209986,
+        "draw_recall": 0.0,
+        "ece": 0.031239
+      },
+      "V3": {
+        "n": 100,
+        "correct": 55,
+        "accuracy": 0.55,
+        "log_loss": 0.973907,
+        "brier": 0.577915,
+        "rps": 0.204401,
+        "draw_recall": 0.0,
+        "ece": 0.039763
+      },
+      "V4": {
+        "n": 100,
+        "correct": 54,
+        "accuracy": 0.54,
+        "log_loss": 0.970247,
+        "brier": 0.575139,
+        "rps": 0.20305,
+        "draw_recall": 0.0,
+        "ece": 0.043411
+      },
+      "MARKET": {
+        "n": 100,
+        "correct": 58,
+        "accuracy": 0.58,
+        "log_loss": 0.939937,
+        "brier": 0.554034,
+        "rps": 0.192421,
+        "draw_recall": 0.0,
+        "ece": 0.053511
+      }
+    },
+    "twenty": {
+      "v2": {
+        "correct": 9,
+        "accuracy": 0.45,
+        "log_loss": 1.055447,
+        "brier": 0.635043,
+        "rps": 0.224113,
+        "draw_recall": 0.0,
+        "ece": 0.032585
+      },
+      "v3": {
+        "correct": 10,
+        "accuracy": 0.5,
+        "log_loss": 1.029123,
+        "brier": 0.615165,
+        "rps": 0.214882,
+        "draw_recall": 0.0,
+        "ece": 0.043508
+      },
+      "v4": {
+        "correct": 10,
+        "accuracy": 0.5,
+        "log_loss": 1.018902,
+        "brier": 0.607494,
+        "rps": 0.211658,
+        "draw_recall": 0.0,
+        "ece": 0.048332
+      },
+      "market": {
+        "correct": 8,
+        "accuracy": 0.4,
+        "log_loss": 0.991463,
+        "brier": 0.586132,
+        "rps": 0.20427,
+        "draw_recall": 0.0,
+        "ece": 0.143787
+      }
+    },
+    "fifty": {
+      "V2": {
+        "n": 50,
+        "correct": 26,
+        "accuracy": 0.52,
+        "log_loss": 1.019853,
+        "brier": 0.61059,
+        "rps": 0.224699,
+        "draw_recall": 0.0,
+        "ece": 0.025938
+      },
+      "V3": {
+        "n": 50,
+        "correct": 27,
+        "accuracy": 0.54,
+        "log_loss": 0.99776,
+        "brier": 0.593873,
+        "rps": 0.217163,
+        "draw_recall": 0.0,
+        "ece": 0.035622
+      },
+      "V4": {
+        "n": 50,
+        "correct": 27,
+        "accuracy": 0.54,
+        "log_loss": 0.98897,
+        "brier": 0.587532,
+        "rps": 0.214612,
+        "draw_recall": 0.0,
+        "ece": 0.028691
+      },
+      "MARKET": {
+        "n": 50,
+        "correct": 27,
+        "accuracy": 0.54,
+        "log_loss": 0.936019,
+        "brier": 0.552325,
+        "rps": 0.199077,
+        "draw_recall": 0.0,
+        "ece": 0.045967
+      }
+    }
+  },
+  "v4_vs_v3_change": {
+    "mean_abs_prob_change": 0.00691061,
+    "max_prob_change": 0.0334817,
+    "pct_materially_changed": 47.0,
+    "top_class_changes": 1,
+    "mean_abs_lambda_home_change": 0.03157339,
+    "mean_abs_lambda_away_change": 0.02501367,
+    "material_threshold": 0.01
+  },
+  "bootstrap": {
+    "V4_minus_V2": {
+      "mean_delta": -0.019596,
+      "ci_lower_2.5": -0.038155,
+      "ci_upper_97.5": -0.000571,
+      "pct_favouring_first": 97.73,
+      "ci_crosses_zero": false,
+      "n_resamples": 10000,
+      "seed": 20260820,
+      "interpretation": "negative = first model better on log loss"
+    },
+    "V4_minus_V3": {
+      "mean_delta": -0.00366,
+      "ci_lower_2.5": -0.008578,
+      "ci_upper_97.5": 0.001432,
+      "pct_favouring_first": 92.14,
+      "ci_crosses_zero": true,
+      "n_resamples": 10000,
+      "seed": 20260820,
+      "interpretation": "negative = first model better on log loss"
+    },
+    "V4_minus_MARKET": {
+      "mean_delta": 0.030311,
+      "ci_lower_2.5": -0.007758,
+      "ci_upper_97.5": 0.067944,
+      "pct_favouring_first": 5.96,
+      "ci_crosses_zero": true,
+      "n_resamples": 10000,
+      "seed": 20260820,
+      "interpretation": "negative = first model better on log loss"
+    }
+  },
+  "reliability": {
+    "V2": [
+      {
+        "bin_lo": 0.0,
+        "bin_hi": 0.1,
+        "n": 4,
+        "mean_predicted": 0.04974,
+        "observed_freq": 0.0,
+        "gap": -0.04974
+      },
+      {
+        "bin_lo": 0.1,
+        "bin_hi": 0.2,
+        "n": 15,
+        "mean_predicted": 0.185312,
+        "observed_freq": 0.066667,
+        "gap": -0.118646
+      },
+      {
+        "bin_lo": 0.2,
+        "bin_hi": 0.3,
+        "n": 131,
+        "mean_predicted": 0.252024,
+        "observed_freq": 0.244275,
+        "gap": -0.007749
+      },
+      {
+        "bin_lo": 0.3,
+        "bin_hi": 0.4,
+        "n": 71,
+        "mean_predicted": 0.347775,
+        "observed_freq": 0.323944,
+        "gap": -0.023831
+      },
+      {
+        "bin_lo": 0.4,
+        "bin_hi": 0.5,
+        "n": 50,
+        "mean_predicted": 0.444901,
+        "observed_freq": 0.48,
+        "gap": 0.035099
+      },
+      {
+        "bin_lo": 0.5,
+        "bin_hi": 0.6,
+        "n": 23,
+        "mean_predicted": 0.55465,
+        "observed_freq": 0.652174,
+        "gap": 0.097524
+      },
+      {
+        "bin_lo": 0.6,
+        "bin_hi": 0.7,
+        "n": 4,
+        "mean_predicted": 0.627782,
+        "observed_freq": 0.75,
+        "gap": 0.122218
+      },
+      {
+        "bin_lo": 0.7,
+        "bin_hi": 0.8,
+        "n": 0,
+        "mean_predicted": null,
+        "observed_freq": null,
+        "gap": null
+      },
+      {
+        "bin_lo": 0.8,
+        "bin_hi": 0.9,
+        "n": 1,
+        "mean_predicted": 0.891098,
+        "observed_freq": 1.0,
+        "gap": 0.108902
+      },
+      {
+        "bin_lo": 0.9,
+        "bin_hi": 1.0,
+        "n": 1,
+        "mean_predicted": 0.909941,
+        "observed_freq": 1.0,
+        "gap": 0.090059
+      }
+    ],
+    "V3": [
+      {
+        "bin_lo": 0.0,
+        "bin_hi": 0.1,
+        "n": 4,
+        "mean_predicted": 0.049752,
+        "observed_freq": 0.0,
+        "gap": -0.049752
+      },
+      {
+        "bin_lo": 0.1,
+        "bin_hi": 0.2,
+        "n": 20,
+        "mean_predicted": 0.177448,
+        "observed_freq": 0.15,
+        "gap": -0.027448
+      },
+      {
+        "bin_lo": 0.2,
+        "bin_hi": 0.3,
+        "n": 133,
+        "mean_predicted": 0.25154,
+        "observed_freq": 0.225564,
+        "gap": -0.025976
+      },
+      {
+        "bin_lo": 0.3,
+        "bin_hi": 0.4,
+        "n": 57,
+        "mean_predicted": 0.346696,
+        "observed_freq": 0.315789,
+        "gap": -0.030907
+      },
+      {
+        "bin_lo": 0.4,
+        "bin_hi": 0.5,
+        "n": 51,
+        "mean_predicted": 0.435713,
+        "observed_freq": 0.45098,
+        "gap": 0.015268
+      },
+      {
+        "bin_lo": 0.5,
+        "bin_hi": 0.6,
+        "n": 22,
+        "mean_predicted": 0.553534,
+        "observed_freq": 0.681818,
+        "gap": 0.128284
+      },
+      {
+        "bin_lo": 0.6,
+        "bin_hi": 0.7,
+        "n": 11,
+        "mean_predicted": 0.621403,
+        "observed_freq": 0.818182,
+        "gap": 0.196779
+      },
+      {
+        "bin_lo": 0.7,
+        "bin_hi": 0.8,
+        "n": 0,
+        "mean_predicted": null,
+        "observed_freq": null,
+        "gap": null
+      },
+      {
+        "bin_lo": 0.8,
+        "bin_hi": 0.9,
+        "n": 1,
+        "mean_predicted": 0.89184,
+        "observed_freq": 1.0,
+        "gap": 0.10816
+      },
+      {
+        "bin_lo": 0.9,
+        "bin_hi": 1.0,
+        "n": 1,
+        "mean_predicted": 0.909151,
+        "observed_freq": 1.0,
+        "gap": 0.090849
+      }
+    ],
+    "V4": [
+      {
+        "bin_lo": 0.0,
+        "bin_hi": 0.1,
+        "n": 4,
+        "mean_predicted": 0.050794,
+        "observed_freq": 0.0,
+        "gap": -0.050794
+      },
+      {
+        "bin_lo": 0.1,
+        "bin_hi": 0.2,
+        "n": 25,
+        "mean_predicted": 0.17598,
+        "observed_freq": 0.16,
+        "gap": -0.01598
+      },
+      {
+        "bin_lo": 0.2,
+        "bin_hi": 0.3,
+        "n": 129,
+        "mean_predicted": 0.251759,
+        "observed_freq": 0.224806,
+        "gap": -0.026953
+      },
+      {
+        "bin_lo": 0.3,
+        "bin_hi": 0.4,
+        "n": 56,
+        "mean_predicted": 0.347002,
+        "observed_freq": 0.303571,
+        "gap": -0.04343
+      },
+      {
+        "bin_lo": 0.4,
+        "bin_hi": 0.5,
+        "n": 48,
+        "mean_predicted": 0.43378,
+        "observed_freq": 0.479167,
+        "gap": 0.045386
+      },
+      {
+        "bin_lo": 0.5,
+        "bin_hi": 0.6,
+        "n": 21,
+        "mean_predicted": 0.548083,
+        "observed_freq": 0.619048,
+        "gap": 0.070964
+      },
+      {
+        "bin_lo": 0.6,
+        "bin_hi": 0.7,
+        "n": 15,
+        "mean_predicted": 0.624017,
+        "observed_freq": 0.8,
+        "gap": 0.175983
+      },
+      {
+        "bin_lo": 0.7,
+        "bin_hi": 0.8,
+        "n": 0,
+        "mean_predicted": null,
+        "observed_freq": null,
+        "gap": null
+      },
+      {
+        "bin_lo": 0.8,
+        "bin_hi": 0.9,
+        "n": 1,
+        "mean_predicted": 0.893275,
+        "observed_freq": 1.0,
+        "gap": 0.106725
+      },
+      {
+        "bin_lo": 0.9,
+        "bin_hi": 1.0,
+        "n": 1,
+        "mean_predicted": 0.903547,
+        "observed_freq": 1.0,
+        "gap": 0.096453
+      }
+    ],
+    "MARKET": [
+      {
+        "bin_lo": 0.0,
+        "bin_hi": 0.1,
+        "n": 7,
+        "mean_predicted": 0.065784,
+        "observed_freq": 0.142857,
+        "gap": 0.077073
+      },
+      {
+        "bin_lo": 0.1,
+        "bin_hi": 0.2,
+        "n": 54,
+        "mean_predicted": 0.156896,
+        "observed_freq": 0.092593,
+        "gap": -0.064303
+      },
+      {
+        "bin_lo": 0.2,
+        "bin_hi": 0.3,
+        "n": 102,
+        "mean_predicted": 0.262511,
+        "observed_freq": 0.254902,
+        "gap": -0.007609
+      },
+      {
+        "bin_lo": 0.3,
+        "bin_hi": 0.4,
+        "n": 51,
+        "mean_predicted": 0.335563,
+        "observed_freq": 0.333333,
+        "gap": -0.00223
+      },
+      {
+        "bin_lo": 0.4,
+        "bin_hi": 0.5,
+        "n": 36,
+        "mean_predicted": 0.433759,
+        "observed_freq": 0.527778,
+        "gap": 0.094019
+      },
+      {
+        "bin_lo": 0.5,
+        "bin_hi": 0.6,
+        "n": 21,
+        "mean_predicted": 0.537882,
+        "observed_freq": 0.380952,
+        "gap": -0.156929
+      },
+      {
+        "bin_lo": 0.6,
+        "bin_hi": 0.7,
+        "n": 17,
+        "mean_predicted": 0.654896,
+        "observed_freq": 0.882353,
+        "gap": 0.227457
+      },
+      {
+        "bin_lo": 0.7,
+        "bin_hi": 0.8,
+        "n": 10,
+        "mean_predicted": 0.736894,
+        "observed_freq": 0.7,
+        "gap": -0.036894
+      },
+      {
+        "bin_lo": 0.8,
+        "bin_hi": 0.9,
+        "n": 1,
+        "mean_predicted": 0.838018,
+        "observed_freq": 1.0,
+        "gap": 0.161982
+      },
+      {
+        "bin_lo": 0.9,
+        "bin_hi": 1.0,
+        "n": 1,
+        "mean_predicted": 0.926272,
+        "observed_freq": 1.0,
+        "gap": 0.073728
+      }
+    ]
+  },
+  "causality": {
+    "cutpoints": [
+      1,
+      21,
+      41,
+      61,
+      81,
+      100
+    ],
+    "max_diff": 0.0,
+    "passed": true
+  },
+  "determinism": {
+    "V2": 0.0,
+    "V3": 0.0,
+    "V4": 0.0,
+    "MARKET": 0.0,
+    "V4_lambda_home": 0.0,
+    "V4_lambda_away": 0.0,
+    "passed": true
+  },
+  "integrity": {
+    "pre": {
+      "data/models/v2_poisson_venue.pkl": {
+        "expected": "25935b4e93fc4074f67f16e3181ed4df",
+        "actual": "25935b4e93fc4074f67f16e3181ed4df",
+        "status": "identical"
+      },
+      "data/models/v1_logreg.pkl": {
+        "expected": "5e504427712b35778bb8a62a8496c7cd",
+        "actual": "5e504427712b35778bb8a62a8496c7cd",
+        "status": "identical"
+      },
+      "data/models/v3_poisson_venue_elo_candidate.pkl": {
+        "expected": "a2850a7687822a5916663301f5ccc96c",
+        "actual": "a2850a7687822a5916663301f5ccc96c",
+        "status": "identical"
+      },
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": {
+        "expected": "06841f0c03c8597b2b8cd8f8ab064864",
+        "actual": "06841f0c03c8597b2b8cd8f8ab064864",
+        "status": "identical"
+      },
+      "data/processed/features.db": {
+        "expected": "e7ebe7fc07040a5927683c35b6371e63",
+        "actual": "e7ebe7fc07040a5927683c35b6371e63",
+        "status": "identical"
+      },
+      "data/processed/matches.db": {
+        "expected": "fdeed042096fa1c851aaee6c84995247",
+        "actual": "fdeed042096fa1c851aaee6c84995247",
+        "status": "identical"
+      },
+      "research/market_odds/odds_history.sqlite": {
+        "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "status": "identical"
+      },
+      "research/market_odds/research_dataset.sqlite": {
+        "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_market_odds.sqlite": {
+        "expected": "2cb80b79d772fbedd4f3707b39a32c13",
+        "actual": "2cb80b79d772fbedd4f3707b39a32c13",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_fixture_ids.json": {
+        "expected": "761ad5cc571643e6985e671bd9c3d83a",
+        "actual": "761ad5cc571643e6985e671bd9c3d83a",
+        "status": "identical"
+      }
+    },
+    "post": {
+      "data/models/v2_poisson_venue.pkl": {
+        "expected": "25935b4e93fc4074f67f16e3181ed4df",
+        "actual": "25935b4e93fc4074f67f16e3181ed4df",
+        "status": "identical"
+      },
+      "data/models/v1_logreg.pkl": {
+        "expected": "5e504427712b35778bb8a62a8496c7cd",
+        "actual": "5e504427712b35778bb8a62a8496c7cd",
+        "status": "identical"
+      },
+      "data/models/v3_poisson_venue_elo_candidate.pkl": {
+        "expected": "a2850a7687822a5916663301f5ccc96c",
+        "actual": "a2850a7687822a5916663301f5ccc96c",
+        "status": "identical"
+      },
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": {
+        "expected": "06841f0c03c8597b2b8cd8f8ab064864",
+        "actual": "06841f0c03c8597b2b8cd8f8ab064864",
+        "status": "identical"
+      },
+      "data/processed/features.db": {
+        "expected": "e7ebe7fc07040a5927683c35b6371e63",
+        "actual": "e7ebe7fc07040a5927683c35b6371e63",
+        "status": "identical"
+      },
+      "data/processed/matches.db": {
+        "expected": "fdeed042096fa1c851aaee6c84995247",
+        "actual": "fdeed042096fa1c851aaee6c84995247",
+        "status": "identical"
+      },
+      "research/market_odds/odds_history.sqlite": {
+        "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "status": "identical"
+      },
+      "research/market_odds/research_dataset.sqlite": {
+        "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_market_odds.sqlite": {
+        "expected": "2cb80b79d772fbedd4f3707b39a32c13",
+        "actual": "2cb80b79d772fbedd4f3707b39a32c13",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_fixture_ids.json": {
+        "expected": "761ad5cc571643e6985e671bd9c3d83a",
+        "actual": "761ad5cc571643e6985e671bd9c3d83a",
+        "status": "identical"
+      }
+    },
+    "passed": true,
+    "frozen_20_50_unchanged": true,
+    "old_market_db_unchanged": true
+  },
+  "promotion": {
+    "promoted": false,
+    "note": "Strictly observational. V4 is NOT promoted."
+  }
+}

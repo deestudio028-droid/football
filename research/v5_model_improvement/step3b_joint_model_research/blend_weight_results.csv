@@ -1,0 +1,2 @@
+platt_component_weight,g2_score_space_component_weight,optimization_objective,training_dataset,holdout_log_loss,holdout_brier_score
+0.2108,0.7892,Multiclass Categorical Cross-Entropy (Log Loss),"Historical Era 2020/21–2024/25 (N=8,983)",0.9903,0.5903

@@ -1,0 +1,35 @@
+{
+  "note": "Sample validation evidence for Phase 1 ingestion build. Fetched via GET /api/fixtures/between?competitions=423&seasons=6484&from=1723507200&to=1730419200&include=stats (Premier League, 2024/25 season, Aug-Nov 2024 window). The raw web_fetch response was truncated by a tool-level save limit at ~82KB; 51 of the reported 90 fixtures were salvaged as complete, parseable JSON objects via bracket-depth extraction and used to validate the ingestion pipeline end-to-end (raw storage, normalization, SQLite upsert, dedup). No API token appears in this file or in any file the pipeline wrote.",
+  "api_info_block_observed": {
+    "page": 1,
+    "per_page": 250,
+    "total": 90,
+    "total_pages": 1,
+    "count": 90,
+    "next_page_url": false
+  },
+  "new_finding": "info.next_page_url can be the JSON boolean `false` (not only null or a URL string) when there is exactly one page. The client's pagination loop was already safe against this (short-circuit `and`), and a regression test was added to lock in the behavior.",
+  "fixtures_salvaged": 51,
+  "fixtures_reported_by_api": 90,
+  "xg_populated_count": 51,
+  "sample_fixture_ids": [
+    152908783,
+    153121362,
+    153121365,
+    153121359,
+    153121360,
+    153121361,
+    153121356,
+    153503377,
+    153503376,
+    153799322
+  ],
+  "validation_results": {
+    "raw_storage_roundtrip": "PASS - saved page reloads byte-identical to what was written",
+    "normalization_missing_field_tracking": "PASS - all 51 fixtures had >=1 explicitly-tracked missing field (elapsed_seconds/time_added/winning_team-on-draws/offsides-and-red-cards-when-zero-events are commonly null on real data; none were silently dropped)",
+    "sqlite_upsert_initial": "PASS - 51 fixtures in, 51 rows stored",
+    "sqlite_dedup_reingest_same_batch": "PASS - re-upserting the identical 51 records left the row count at 51 (no duplicates)",
+    "sqlite_dedup_updated_content_same_id": "PASS - upserting fixture 152908783 with a mutated home_goals value updated the existing row in place",
+    "token_leak_check": "PASS - token absent from raw JSON, normalized DB, and all log output after the api_client.py fix (see BUG_FOUND note in the final report)"
+  }
+}

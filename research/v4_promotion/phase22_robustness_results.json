@@ -1,0 +1,591 @@
+{
+  "generated_at": "2026-08-22T07:55:00Z",
+  "phase": "Phase 22 \u2014 V4.4 Robustness & Accuracy+Draw Optimization",
+  "v4_baseline": {
+    "accuracy_pct": 52.19,
+    "correct_matches": 679,
+    "draw_predictions": 0,
+    "correct_draws": 0,
+    "macro_f1": 0.3895
+  },
+  "v4_4_recommended_candidate": {
+    "config": {
+      "th": 0.26,
+      "mg": 0.1,
+      "cc": 0.46,
+      "ec": 100.0,
+      "tgc": 2.5
+    },
+    "accuracy_pct": 52.42,
+    "correct_matches": 682,
+    "net_gain_vs_v4": 3,
+    "draw_predictions": 80,
+    "correct_draws": 25,
+    "lost_v4_correct": 22,
+    "free_draws_gained": 25,
+    "draw_precision_pct": 31.2,
+    "draw_recall_pct": 7.6,
+    "draw_f1": 0.1217,
+    "macro_f1": 0.4309
+  },
+  "v4_3_previous_benchmark": {
+    "config": {
+      "th": 0.26,
+      "mg": 0.1,
+      "cc": 0.45,
+      "ec": 100.0,
+      "tgc": 2.5
+    },
+    "accuracy_pct": 52.5,
+    "correct_matches": 683,
+    "net_gain_vs_v4": 4,
+    "draw_predictions": 77,
+    "correct_draws": 24,
+    "lost_v4_correct": 20,
+    "free_draws_gained": 24,
+    "draw_precision_pct": 31.2,
+    "draw_recall_pct": 7.3,
+    "draw_f1": 0.1176,
+    "macro_f1": 0.4303
+  },
+  "rule_complexity_ablation": {
+    "Rule_A_5_Condition_V43": {
+      "config": {
+        "th": 0.26,
+        "mg": 0.1,
+        "cc": 0.45,
+        "ec": 100.0,
+        "tgc": 2.5
+      },
+      "accuracy_pct": 52.5,
+      "correct_matches": 683,
+      "net_gain_vs_v4": 4,
+      "draw_predictions": 77,
+      "correct_draws": 24,
+      "lost_v4_correct": 20,
+      "free_draws_gained": 24,
+      "draw_precision_pct": 31.2,
+      "draw_recall_pct": 7.3,
+      "draw_f1": 0.1176,
+      "macro_f1": 0.4303
+    },
+    "Rule_B_2_Condition": {
+      "config": {
+        "th": 0.28,
+        "mg": 1.0,
+        "cc": 0.42,
+        "ec": 1000.0,
+        "tgc": 10.0
+      },
+      "accuracy_pct": 51.04,
+      "correct_matches": 664,
+      "net_gain_vs_v4": -15,
+      "draw_predictions": 307,
+      "correct_draws": 94,
+      "lost_v4_correct": 109,
+      "free_draws_gained": 94,
+      "draw_precision_pct": 30.6,
+      "draw_recall_pct": 28.4,
+      "draw_f1": 0.2947,
+      "macro_f1": 0.4756
+    },
+    "Rule_C_3_Condition": {
+      "config": {
+        "th": 0.26,
+        "mg": 0.1,
+        "cc": 0.45,
+        "ec": 1000.0,
+        "tgc": 10.0
+      },
+      "accuracy_pct": 49.04,
+      "correct_matches": 638,
+      "net_gain_vs_v4": -41,
+      "draw_predictions": 420,
+      "correct_draws": 125,
+      "lost_v4_correct": 166,
+      "free_draws_gained": 125,
+      "draw_precision_pct": 29.8,
+      "draw_recall_pct": 37.8,
+      "draw_f1": 0.3329,
+      "macro_f1": 0.4686
+    },
+    "Rule_D_4_Condition": {
+      "config": {
+        "th": 0.26,
+        "mg": 0.1,
+        "cc": 0.45,
+        "ec": 1000.0,
+        "tgc": 2.5
+      },
+      "accuracy_pct": 51.81,
+      "correct_matches": 674,
+      "net_gain_vs_v4": -5,
+      "draw_predictions": 110,
+      "correct_draws": 33,
+      "lost_v4_correct": 38,
+      "free_draws_gained": 33,
+      "draw_precision_pct": 30.0,
+      "draw_recall_pct": 10.0,
+      "draw_f1": 0.1497,
+      "macro_f1": 0.4366
+    },
+    "Rule_E_V44_Robust_Optimal": {
+      "config": {
+        "th": 0.26,
+        "mg": 0.1,
+        "cc": 0.46,
+        "ec": 100.0,
+        "tgc": 2.5
+      },
+      "accuracy_pct": 52.42,
+      "correct_matches": 682,
+      "net_gain_vs_v4": 3,
+      "draw_predictions": 80,
+      "correct_draws": 25,
+      "lost_v4_correct": 22,
+      "free_draws_gained": 25,
+      "draw_precision_pct": 31.2,
+      "draw_recall_pct": 7.6,
+      "draw_f1": 0.1217,
+      "macro_f1": 0.4309
+    },
+    "Rule_F_High_Precision_Conservative": {
+      "config": {
+        "th": 0.26,
+        "mg": 0.1,
+        "cc": 0.45,
+        "ec": 80.0,
+        "tgc": 2.5
+      },
+      "accuracy_pct": 52.5,
+      "correct_matches": 683,
+      "net_gain_vs_v4": 4,
+      "draw_predictions": 66,
+      "correct_draws": 21,
+      "lost_v4_correct": 17,
+      "free_draws_gained": 21,
+      "draw_precision_pct": 31.8,
+      "draw_recall_pct": 6.3,
+      "draw_f1": 0.1058,
+      "macro_f1": 0.4263
+    }
+  },
+  "chronological_milestone_tracking": [
+    {
+      "milestone_n": 100,
+      "v4_accuracy_pct": 59.0,
+      "v4_3_accuracy_pct": 59.0,
+      "v4_4_accuracy_pct": 59.0,
+      "delta_v44_vs_v4": 0.0,
+      "v4_4_draw_predictions": 9,
+      "v4_4_correct_draws": 3,
+      "v4_4_draw_prec_pct": 33.3,
+      "v4_4_draw_rec_pct": 12.0,
+      "v4_4_draw_f1": 0.1765,
+      "v4_4_macro_f1": 0.4888
+    },
+    {
+      "milestone_n": 300,
+      "v4_accuracy_pct": 57.0,
+      "v4_3_accuracy_pct": 57.0,
+      "v4_4_accuracy_pct": 57.0,
+      "delta_v44_vs_v4": 0.0,
+      "v4_4_draw_predictions": 21,
+      "v4_4_correct_draws": 7,
+      "v4_4_draw_prec_pct": 33.3,
+      "v4_4_draw_rec_pct": 10.6,
+      "v4_4_draw_f1": 0.1609,
+      "v4_4_macro_f1": 0.467
+    },
+    {
+      "milestone_n": 450,
+      "v4_accuracy_pct": 55.11,
+      "v4_3_accuracy_pct": 55.11,
+      "v4_4_accuracy_pct": 55.33,
+      "delta_v44_vs_v4": 0.22,
+      "v4_4_draw_predictions": 32,
+      "v4_4_correct_draws": 11,
+      "v4_4_draw_prec_pct": 34.4,
+      "v4_4_draw_rec_pct": 9.5,
+      "v4_4_draw_f1": 0.1486,
+      "v4_4_macro_f1": 0.4621
+    },
+    {
+      "milestone_n": 600,
+      "v4_accuracy_pct": 54.17,
+      "v4_3_accuracy_pct": 54.5,
+      "v4_4_accuracy_pct": 54.67,
+      "delta_v44_vs_v4": 0.5,
+      "v4_4_draw_predictions": 43,
+      "v4_4_correct_draws": 15,
+      "v4_4_draw_prec_pct": 34.9,
+      "v4_4_draw_rec_pct": 9.7,
+      "v4_4_draw_f1": 0.1515,
+      "v4_4_macro_f1": 0.4573
+    },
+    {
+      "milestone_n": 750,
+      "v4_accuracy_pct": 53.33,
+      "v4_3_accuracy_pct": 53.73,
+      "v4_4_accuracy_pct": 53.73,
+      "delta_v44_vs_v4": 0.4,
+      "v4_4_draw_predictions": 52,
+      "v4_4_correct_draws": 18,
+      "v4_4_draw_prec_pct": 34.6,
+      "v4_4_draw_rec_pct": 9.3,
+      "v4_4_draw_f1": 0.1463,
+      "v4_4_macro_f1": 0.4484
+    },
+    {
+      "milestone_n": 900,
+      "v4_accuracy_pct": 53.11,
+      "v4_3_accuracy_pct": 53.22,
+      "v4_4_accuracy_pct": 53.11,
+      "delta_v44_vs_v4": 0.0,
+      "v4_4_draw_predictions": 60,
+      "v4_4_correct_draws": 18,
+      "v4_4_draw_prec_pct": 30.0,
+      "v4_4_draw_rec_pct": 7.8,
+      "v4_4_draw_f1": 0.1237,
+      "v4_4_macro_f1": 0.4391
+    },
+    {
+      "milestone_n": 1050,
+      "v4_accuracy_pct": 52.67,
+      "v4_3_accuracy_pct": 53.05,
+      "v4_4_accuracy_pct": 52.95,
+      "delta_v44_vs_v4": 0.29,
+      "v4_4_draw_predictions": 67,
+      "v4_4_correct_draws": 21,
+      "v4_4_draw_prec_pct": 31.3,
+      "v4_4_draw_rec_pct": 7.9,
+      "v4_4_draw_f1": 0.1265,
+      "v4_4_macro_f1": 0.4363
+    },
+    {
+      "milestone_n": 1301,
+      "v4_accuracy_pct": 52.19,
+      "v4_3_accuracy_pct": 52.5,
+      "v4_4_accuracy_pct": 52.42,
+      "delta_v44_vs_v4": 0.23,
+      "v4_4_draw_predictions": 80,
+      "v4_4_correct_draws": 25,
+      "v4_4_draw_prec_pct": 31.2,
+      "v4_4_draw_rec_pct": 7.6,
+      "v4_4_draw_f1": 0.1217,
+      "v4_4_macro_f1": 0.4309
+    }
+  ],
+  "error_transition_matrix": {
+    "v4_correct_to_correct_draw": 0,
+    "v4_wrong_to_correct_draw_FREE_WINS": 25,
+    "v4_correct_to_wrong_draw_SACRIFICED": 22,
+    "v4_wrong_to_wrong_draw_NEUTRAL": 33,
+    "total_draw_overrides": 80,
+    "override_precision_pct": 31.25
+  },
+  "override_causal_profiles": {
+    "successful_draw_overrides_n": 25,
+    "successful_profile_means": {
+      "mean_p_draw": 0.3336,
+      "mean_margin": 0.0404,
+      "mean_v4_conf": 0.4077,
+      "mean_abs_elo": 55.81,
+      "mean_tot_goals": 2.42
+    },
+    "failed_draw_overrides_n": 55,
+    "failed_profile_means": {
+      "mean_p_draw": 0.3358,
+      "mean_margin": 0.0271,
+      "mean_v4_conf": 0.3961,
+      "mean_abs_elo": 50.02,
+      "mean_tot_goals": 2.41
+    },
+    "sample_successful_matches": [
+      {
+        "fixture_id": 368374886,
+        "competition": "La Liga",
+        "teams": [
+          "Elche",
+          "Real Sociedad"
+        ],
+        "score": "1-1",
+        "v4_pred": "H",
+        "actual": "D",
+        "p_draw_v42": 0.336,
+        "winner_margin": 0.0152,
+        "v4_conf": 0.3846,
+        "abs_elo": 19.67,
+        "tot_goals": 2.45,
+        "abs_goal_diff": 0.09
+      },
+      {
+        "fixture_id": 374119973,
+        "competition": "Serie A",
+        "teams": [
+          "Genoa",
+          "Fiorentina"
+        ],
+        "score": "2-2",
+        "v4_pred": "H",
+        "actual": "D",
+        "p_draw_v42": 0.3421,
+        "winner_margin": 0.0258,
+        "v4_conf": 0.4041,
+        "abs_elo": 9.5,
+        "tot_goals": 2.37,
+        "abs_goal_diff": 0.18
+      },
+      {
+        "fixture_id": 374120056,
+        "competition": "Serie A",
+        "teams": [
+          "Cagliari",
+          "Genoa"
+        ],
+        "score": "3-3",
+        "v4_pred": "A",
+        "actual": "D",
+        "p_draw_v42": 0.34,
+        "winner_margin": 0.0107,
+        "v4_conf": 0.3823,
+        "abs_elo": 74.0,
+        "tot_goals": 2.34,
+        "abs_goal_diff": 0.09
+      },
+      {
+        "fixture_id": 368374898,
+        "competition": "La Liga",
+        "teams": [
+          "Real Oviedo",
+          "Rayo Vallecano"
+        ],
+        "score": "0-0",
+        "v4_pred": "A",
+        "actual": "D",
+        "p_draw_v42": 0.3303,
+        "winner_margin": 0.0789,
+        "v4_conf": 0.4475,
+        "abs_elo": 16.73,
+        "tot_goals": 2.46,
+        "abs_goal_diff": 0.34
+      },
+      {
+        "fixture_id": 368374902,
+        "competition": "La Liga",
+        "teams": [
+          "Mallorca",
+          "Osasuna"
+        ],
+        "score": "2-2",
+        "v4_pred": "H",
+        "actual": "D",
+        "p_draw_v42": 0.3272,
+        "winner_margin": 0.0565,
+        "v4_conf": 0.4161,
+        "abs_elo": 87.09,
+        "tot_goals": 2.47,
+        "abs_goal_diff": 0.21
+      },
+      {
+        "fixture_id": 368374913,
+        "competition": "La Liga",
+        "teams": [
+          "Real Oviedo",
+          "Mallorca"
+        ],
+        "score": "0-0",
+        "v4_pred": "A",
+        "actual": "D",
+        "p_draw_v42": 0.3373,
+        "winner_margin": 0.016,
+        "v4_conf": 0.3852,
+        "abs_elo": 64.55,
+        "tot_goals": 2.38,
+        "abs_goal_diff": 0.1
+      },
+      {
+        "fixture_id": 368374926,
+        "competition": "La Liga",
+        "teams": [
+          "Real Oviedo",
+          "Celta de Vigo"
+        ],
+        "score": "0-0",
+        "v4_pred": "A",
+        "actual": "D",
+        "p_draw_v42": 0.3288,
+        "winner_margin": 0.0823,
+        "v4_conf": 0.4486,
+        "abs_elo": 31.48,
+        "tot_goals": 2.46,
+        "abs_goal_diff": 0.35
+      },
+      {
+        "fixture_id": 374120212,
+        "competition": "Serie A",
+        "teams": [
+          "Cagliari",
+          "Pisa"
+        ],
+        "score": "2-2",
+        "v4_pred": "H",
+        "actual": "D",
+        "p_draw_v42": 0.3294,
+        "winner_margin": 0.0831,
+        "v4_conf": 0.4482,
+        "abs_elo": 74.55,
+        "tot_goals": 2.4,
+        "abs_goal_diff": 0.35
+      },
+      {
+        "fixture_id": 365992364,
+        "competition": "Premier League",
+        "teams": [
+          "Burnley",
+          "Everton"
+        ],
+        "score": "0-0",
+        "v4_pred": "A",
+        "actual": "D",
+        "p_draw_v42": 0.3291,
+        "winner_margin": 0.0571,
+        "v4_conf": 0.4187,
+        "abs_elo": 96.71,
+        "tot_goals": 2.42,
+        "abs_goal_diff": 0.23
+      },
+      {
+        "fixture_id": 368374931,
+        "competition": "La Liga",
+        "teams": [
+          "Osasuna",
+          "Athletic Club"
+        ],
+        "score": "1-1",
+        "v4_pred": "H",
+        "actual": "D",
+        "p_draw_v42": 0.3393,
+        "winner_margin": -0.0079,
+        "v4_conf": 0.3631,
+        "abs_elo": 23.79,
+        "tot_goals": 2.41,
+        "abs_goal_diff": 0.0
+      }
+    ]
+  },
+  "league_breakdown": {
+    "Bundesliga": {
+      "matches": 229,
+      "actual_draw_rate": 0.2576,
+      "v4_accuracy_pct": 56.77,
+      "v4_4_accuracy_pct": 56.77,
+      "delta_accuracy_pct": 0.0,
+      "draw_predictions": 0,
+      "correct_draws": 0,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "macro_f1": 0.4211
+    },
+    "La Liga": {
+      "matches": 278,
+      "actual_draw_rate": 0.2374,
+      "v4_accuracy_pct": 50.72,
+      "v4_4_accuracy_pct": 51.08,
+      "delta_accuracy_pct": 0.36,
+      "draw_predictions": 32,
+      "correct_draws": 9,
+      "draw_precision_pct": 28.1,
+      "draw_recall_pct": 13.6,
+      "draw_f1": 0.1837,
+      "macro_f1": 0.4278
+    },
+    "Ligue 1": {
+      "matches": 215,
+      "actual_draw_rate": 0.2465,
+      "v4_accuracy_pct": 53.02,
+      "v4_4_accuracy_pct": 53.02,
+      "delta_accuracy_pct": 0.0,
+      "draw_predictions": 13,
+      "correct_draws": 4,
+      "draw_precision_pct": 30.8,
+      "draw_recall_pct": 7.5,
+      "draw_f1": 0.1212,
+      "macro_f1": 0.4377
+    },
+    "Premier League": {
+      "matches": 290,
+      "actual_draw_rate": 0.2931,
+      "v4_accuracy_pct": 47.24,
+      "v4_4_accuracy_pct": 48.28,
+      "delta_accuracy_pct": 1.03,
+      "draw_predictions": 8,
+      "correct_draws": 4,
+      "draw_precision_pct": 50.0,
+      "draw_recall_pct": 4.7,
+      "draw_f1": 0.086,
+      "macro_f1": 0.3897
+    },
+    "Serie A": {
+      "matches": 289,
+      "actual_draw_rate": 0.2353,
+      "v4_accuracy_pct": 54.33,
+      "v4_4_accuracy_pct": 53.98,
+      "delta_accuracy_pct": -0.35,
+      "draw_predictions": 27,
+      "correct_draws": 8,
+      "draw_precision_pct": 29.6,
+      "draw_recall_pct": 11.8,
+      "draw_f1": 0.1684,
+      "macro_f1": 0.4632
+    }
+  },
+  "bootstrap_results": {
+    "v44_vs_v4": {
+      "mean_delta_accuracy_pct": 0.23255188316679473,
+      "ci_95_accuracy_pct": [
+        -0.8455034588777832,
+        1.2298232129131503
+      ],
+      "pct_samples_v44_ge_v4_acc": 69.66,
+      "pct_samples_v44_strictly_better_acc": 64.08,
+      "mean_delta_log_loss": 0.0002450863948486499,
+      "ci_95_log_loss": [
+        -0.005726779098145257,
+        0.006165631858748127
+      ],
+      "pct_samples_v44_better_ll": 46.52,
+      "mean_delta_rps": 0.0002960321179074142,
+      "ci_95_rps": [
+        -0.000421279111268804,
+        0.0010051262736506172
+      ]
+    },
+    "v44_vs_v43": {
+      "mean_delta_accuracy_pct": -0.07558800922367413,
+      "ci_95_accuracy_pct": [
+        -0.3074558032282959,
+        0.1537279016141424
+      ],
+      "pct_samples_v44_ge_v43_acc": 39.53
+    }
+  },
+  "anti_overfitting_evaluation": {
+    "discovery_half_n": 650,
+    "discovery_v4_accuracy_pct": 53.85,
+    "discovery_v4_4_accuracy_pct": 54.46,
+    "discovery_delta_accuracy_pct": 0.62,
+    "discovery_draw_predictions": 46,
+    "discovery_correct_draws": 16,
+    "discovery_draw_precision_pct": 34.8,
+    "blind_heldout_half_n": 651,
+    "blind_heldout_v4_accuracy_pct": 50.54,
+    "blind_heldout_v4_4_accuracy_pct": 50.38,
+    "blind_heldout_delta_accuracy_pct": -0.15,
+    "blind_heldout_draw_predictions": 34,
+    "blind_heldout_correct_draws": 9,
+    "blind_heldout_draw_precision_pct": 26.5,
+    "verdict": "FAIL \u2014 OVERFITTED"
+  }
+}

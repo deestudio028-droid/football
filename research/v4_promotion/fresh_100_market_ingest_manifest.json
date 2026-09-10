@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-08-21T04:00:13.248498+00:00",
+  "purpose": "Fresh 100-match OOS market reference (Phase 8 blocker)",
+  "frozen_ids_file": "fresh_100_fixture_ids.json",
+  "frozen_ids_md5": "761ad5cc571643e6985e671bd9c3d83a",
+  "output_database": "fresh_100_market_odds.sqlite",
+  "output_md5": "2cb80b79d772fbedd4f3707b39a32c13",
+  "output_sha256": "ecea9433932e3757cfaf8e614153706d4ffe3bdb0a7ad3172a216425b649f7a7",
+  "output_bytes": 57344,
+  "methodology": {
+    "bookmaker": "Pinnacle",
+    "bookmaker_id": 1,
+    "market": "ft_result",
+    "market_id": 6,
+    "price": "closing",
+    "peak_used": false,
+    "opening_used": false,
+    "fallback_bookmaker": false,
+    "devig": "power method, E2 module verbatim",
+    "data_class": "promotion-validation-only"
+  },
+  "results": {
+    "fixtures": 100,
+    "success": 100,
+    "failed": 0,
+    "failures": []
+  },
+  "validation": {
+    "coverage_100_of_100": true,
+    "pinnacle_only": true,
+    "closing_only": true,
+    "market_1x2_only": true,
+    "data_class_correct": true,
+    "devig_valid": true,
+    "probability_sums_ok": true,
+    "max_sum_deviation": 2.220446049250313e-16,
+    "no_outcome_columns": true
+  },
+  "integrity": {
+    "old_50_market_db_unchanged": true,
+    "old_50_md5_pre": "f8a41b79cd33afb412ccd9ae2892a196",
+    "old_50_md5_post": "f8a41b79cd33afb412ccd9ae2892a196",
+    "old_50_rows_pre": 50,
+    "old_50_rows_post": 50,
+    "protected_files_unchanged": true,
+    "frozen_20_50_outputs_unchanged": true
+  },
+  "overall_passed": true
+}

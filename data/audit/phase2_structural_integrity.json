@@ -1,0 +1,226 @@
+{
+  "total_rows": 10735,
+  "distinct_fixture_ids": 10735,
+  "duplicate_fixture_ids": [],
+  "raw_fixture_count": 10735,
+  "db_fixture_count": 10735,
+  "raw_only_ids": [],
+  "db_only_ids": [],
+  "raw_page_count": 60,
+  "raw_pages_invalid_json": [],
+  "window_page_check": {
+    "200:1400": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "200:209": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "200:2748": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "200:4629": {
+      "pages": 2,
+      "fixtures_sum": 306,
+      "info_total": 306,
+      "info_total_pages": 2
+    },
+    "200:6527": {
+      "pages": 2,
+      "fixtures_sum": 306,
+      "info_total": 306,
+      "info_total_pages": 2
+    },
+    "200:725793": {
+      "pages": 2,
+      "fixtures_sum": 306,
+      "info_total": 306,
+      "info_total_pages": 2
+    },
+    "419:1248": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "419:2858": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "419:429": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "419:4634": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "419:6435": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "419:762170": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "423:1470": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "423:2747": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "423:433": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "423:4630": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "423:6484": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "423:667780": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "477:1468": {
+      "pages": 2,
+      "fixtures_sum": 306,
+      "info_total": 306,
+      "info_total_pages": 2
+    },
+    "477:2745": {
+      "pages": 2,
+      "fixtures_sum": 306,
+      "info_total": 306,
+      "info_total_pages": 2
+    },
+    "477:4675": {
+      "pages": 2,
+      "fixtures_sum": 306,
+      "info_total": 306,
+      "info_total_pages": 2
+    },
+    "477:487": {
+      "pages": 2,
+      "fixtures_sum": 306,
+      "info_total": 306,
+      "info_total_pages": 2
+    },
+    "477:6597": {
+      "pages": 2,
+      "fixtures_sum": 306,
+      "info_total": 306,
+      "info_total_pages": 2
+    },
+    "477:725788": {
+      "pages": 2,
+      "fixtures_sum": 306,
+      "info_total": 306,
+      "info_total_pages": 2
+    },
+    "499:1555": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "499:2894": {
+      "pages": 2,
+      "fixtures_sum": 381,
+      "info_total": 381,
+      "info_total_pages": 2
+    },
+    "499:4724": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "499:509": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "499:602681": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    },
+    "499:6526": {
+      "pages": 2,
+      "fixtures_sum": 380,
+      "info_total": 380,
+      "info_total_pages": 2
+    }
+  },
+  "checkpoint_window_count": 30,
+  "checkpoint_not_complete": {},
+  "expected_window_count": 30,
+  "missing_windows_in_checkpoint": [],
+  "unexpected_windows_in_checkpoint": [],
+  "fixture_ids_appearing_in_multiple_windows": {},
+  "column_types_sample": {
+    "home_goals": "integer",
+    "away_goals": "integer",
+    "stat_home_xg": "null",
+    "stat_away_xg": "null",
+    "stat_home_xgot": "null",
+    "stat_away_xgot": "null",
+    "stat_shots": "integer",
+    "stat_home_shots": "integer",
+    "stat_shots_on": "integer",
+    "stat_home_possession": "integer",
+    "stat_corners": "integer",
+    "stat_home_fouls": "integer",
+    "stat_home_yellow_cards": "integer",
+    "stat_home_red_cards": "integer",
+    "stat_attacks": "integer",
+    "stat_dang_attacks": "integer",
+    "stat_home_pressure": "real",
+    "stat_tackles": "integer",
+    "stat_offsides": "integer",
+    "stat_goal_kicks": "null",
+    "stat_throw_ins": "null",
+    "unix": "integer",
+    "competition_id": "integer",
+    "season_id": "integer"
+  },
+  "mixed_type_findings": {}
+}

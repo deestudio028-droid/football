@@ -1,0 +1,152 @@
+{
+  "Ligue 1 2020/2021": {
+    "populated": 0,
+    "total": 380,
+    "pct_populated": 0.0
+  },
+  "Ligue 1 2021/2022": {
+    "populated": 0,
+    "total": 380,
+    "pct_populated": 0.0
+  },
+  "Ligue 1 2022/2023": {
+    "populated": 0,
+    "total": 380,
+    "pct_populated": 0.0
+  },
+  "Ligue 1 2023/2024": {
+    "populated": 63,
+    "total": 306,
+    "pct_populated": 20.6
+  },
+  "Ligue 1 2024/2025": {
+    "populated": 288,
+    "total": 306,
+    "pct_populated": 94.1
+  },
+  "Ligue 1 2025/2026": {
+    "populated": 288,
+    "total": 306,
+    "pct_populated": 94.1
+  },
+  "La Liga 2020/2021": {
+    "populated": 0,
+    "total": 380,
+    "pct_populated": 0.0
+  },
+  "La Liga 2021/2022": {
+    "populated": 0,
+    "total": 380,
+    "pct_populated": 0.0
+  },
+  "La Liga 2022/2023": {
+    "populated": 0,
+    "total": 380,
+    "pct_populated": 0.0
+  },
+  "La Liga 2023/2024": {
+    "populated": 81,
+    "total": 380,
+    "pct_populated": 21.3
+  },
+  "La Liga 2024/2025": {
+    "populated": 360,
+    "total": 380,
+    "pct_populated": 94.7
+  },
+  "La Liga 2025/2026": {
+    "populated": 360,
+    "total": 380,
+    "pct_populated": 94.7
+  },
+  "Premier League 2020/2021": {
+    "populated": 0,
+    "total": 380,
+    "pct_populated": 0.0
+  },
+  "Premier League 2021/2022": {
+    "populated": 0,
+    "total": 380,
+    "pct_populated": 0.0
+  },
+  "Premier League 2022/2023": {
+    "populated": 0,
+    "total": 380,
+    "pct_populated": 0.0
+  },
+  "Premier League 2023/2024": {
+    "populated": 79,
+    "total": 380,
+    "pct_populated": 20.8
+  },
+  "Premier League 2024/2025": {
+    "populated": 360,
+    "total": 380,
+    "pct_populated": 94.7
+  },
+  "Premier League 2025/2026": {
+    "populated": 360,
+    "total": 380,
+    "pct_populated": 94.7
+  },
+  "Bundesliga 2020/2021": {
+    "populated": 0,
+    "total": 306,
+    "pct_populated": 0.0
+  },
+  "Bundesliga 2021/2022": {
+    "populated": 0,
+    "total": 306,
+    "pct_populated": 0.0
+  },
+  "Bundesliga 2022/2023": {
+    "populated": 0,
+    "total": 306,
+    "pct_populated": 0.0
+  },
+  "Bundesliga 2023/2024": {
+    "populated": 63,
+    "total": 306,
+    "pct_populated": 20.6
+  },
+  "Bundesliga 2024/2025": {
+    "populated": 288,
+    "total": 306,
+    "pct_populated": 94.1
+  },
+  "Bundesliga 2025/2026": {
+    "populated": 288,
+    "total": 306,
+    "pct_populated": 94.1
+  },
+  "Serie A 2020/2021": {
+    "populated": 0,
+    "total": 380,
+    "pct_populated": 0.0
+  },
+  "Serie A 2021/2022": {
+    "populated": 0,
+    "total": 380,
+    "pct_populated": 0.0
+  },
+  "Serie A 2022/2023": {
+    "populated": 0,
+    "total": 381,
+    "pct_populated": 0.0
+  },
+  "Serie A 2023/2024": {
+    "populated": 83,
+    "total": 380,
+    "pct_populated": 21.8
+  },
+  "Serie A 2024/2025": {
+    "populated": 360,
+    "total": 380,
+    "pct_populated": 94.7
+  },
+  "Serie A 2025/2026": {
+    "populated": 360,
+    "total": 380,
+    "pct_populated": 94.7
+  }
+}

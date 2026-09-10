@@ -1,0 +1,5 @@
+fixture_id,date,kickoff_ist,competition,home_team,away_team,score,actual_outcome,v4_p_H,v4_p_D,v4_p_A,v4_decision,v4_correct,shadow_p_H,shadow_p_D,shadow_p_A,shadow_decision,shadow_correct,draw_delta,home_delta,away_delta,decision_changed,is_actual_draw
+420583814,2026-08-24,12:15 AM IST,Ligue 1,Rennes,Paris Saint Germain,2-2,D,0.343,0.245,0.412,A,False,0.3259,0.2825,0.3915,A,False,0.0375,-0.0171,-0.0205,False,True
+420583813,2026-08-24,12:15 AM IST,Serie A,Atalanta,Sassuolo,2-1,H,0.554,0.214,0.232,H,True,0.5285,0.2502,0.2213,H,True,0.0362,-0.0255,-0.0107,False,False
+420583812,2026-08-24,12:15 AM IST,Serie A,Torino,AC Milan,1-2,A,0.361,0.272,0.367,A,True,0.3421,0.3102,0.3477,A,True,0.0382,-0.0189,-0.0193,False,False
+420583819,2026-08-24,01:00 AM IST,La Liga,Elche,FC Barcelona,0-5,A,0.248,0.216,0.536,A,True,0.2365,0.2523,0.5112,A,True,0.0363,-0.0115,-0.0248,False,False

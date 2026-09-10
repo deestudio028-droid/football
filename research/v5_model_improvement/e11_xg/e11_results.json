@@ -1,0 +1,1702 @@
+{
+  "generated_at": "2026-08-22T16:14:52.006228+00:00",
+  "experiment": "Phase 36 \u2014 Experiment E11 (Historical xG + Causal Feature Engine)",
+  "governance": {
+    "production_v4_status": "FROZEN_UNMODIFIED",
+    "e10_status": "CANDIDATE_FOR_PROSPECTIVE_TEST",
+    "protected_baseline_assets_verified": true,
+    "protected_asset_count": 20
+  },
+  "pooled_out_of_sample_metrics": {
+    "Arm_A_V4_Baseline": {
+      "accuracy_pct": 53.12,
+      "balanced_accuracy_pct": 46.24,
+      "correct": 3762,
+      "total": 7082,
+      "log_loss": 0.984955,
+      "brier_score": 0.586532,
+      "rps": 0.199598,
+      "macro_f1": 0.3973,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_brier": 0.187337,
+      "draw_ece": 0.0207,
+      "ece_by_class": {
+        "H": 0.0164,
+        "D": 0.0207,
+        "A": 0.0262
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4465,
+          "actual_count": 3097,
+          "precision_pct": 55.03,
+          "recall_pct": 79.33,
+          "f1": 0.6498
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2617,
+          "actual_count": 2197,
+          "precision_pct": 49.87,
+          "recall_pct": 59.4,
+          "f1": 0.5422
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4358,
+        "D": 0.2318,
+        "A": 0.3325
+      }
+    },
+    "Arm_B_V4_Raw_Rolling_xG": {
+      "accuracy_pct": 52.84,
+      "balanced_accuracy_pct": 46.08,
+      "correct": 3742,
+      "total": 7082,
+      "log_loss": 0.988415,
+      "brier_score": 0.588866,
+      "rps": 0.200516,
+      "macro_f1": 0.3956,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_brier": 0.187834,
+      "draw_ece": 0.0268,
+      "ece_by_class": {
+        "H": 0.0104,
+        "D": 0.0268,
+        "A": 0.0254
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4411,
+          "actual_count": 3097,
+          "precision_pct": 55.0,
+          "recall_pct": 78.33,
+          "f1": 0.6462
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2671,
+          "actual_count": 2197,
+          "precision_pct": 49.27,
+          "recall_pct": 59.9,
+          "f1": 0.5407
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4387,
+        "D": 0.2257,
+        "A": 0.3356
+      }
+    },
+    "Arm_C_V4_EWMA_xG": {
+      "accuracy_pct": 52.81,
+      "balanced_accuracy_pct": 46.08,
+      "correct": 3740,
+      "total": 7082,
+      "log_loss": 0.98694,
+      "brier_score": 0.587909,
+      "rps": 0.2001,
+      "macro_f1": 0.3956,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_brier": 0.187708,
+      "draw_ece": 0.0258,
+      "ece_by_class": {
+        "H": 0.0089,
+        "D": 0.0258,
+        "A": 0.0252
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4391,
+          "actual_count": 3097,
+          "precision_pct": 55.07,
+          "recall_pct": 78.08,
+          "f1": 0.6458
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2691,
+          "actual_count": 2197,
+          "precision_pct": 49.13,
+          "recall_pct": 60.17,
+          "f1": 0.5409
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4379,
+        "D": 0.2266,
+        "A": 0.3354
+      }
+    },
+    "Arm_D_V4_Opponent_Adjusted_xG": {
+      "accuracy_pct": 52.88,
+      "balanced_accuracy_pct": 46.18,
+      "correct": 3745,
+      "total": 7082,
+      "log_loss": 0.986928,
+      "brier_score": 0.587874,
+      "rps": 0.200078,
+      "macro_f1": 0.3964,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_brier": 0.187718,
+      "draw_ece": 0.0257,
+      "ece_by_class": {
+        "H": 0.0078,
+        "D": 0.0257,
+        "A": 0.0245
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4369,
+          "actual_count": 3097,
+          "precision_pct": 55.21,
+          "recall_pct": 77.88,
+          "f1": 0.6461
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2713,
+          "actual_count": 2197,
+          "precision_pct": 49.13,
+          "recall_pct": 60.67,
+          "f1": 0.543
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4385,
+        "D": 0.2268,
+        "A": 0.3347
+      }
+    },
+    "Arm_E_V4_xG_Fatigue": {
+      "accuracy_pct": 52.88,
+      "balanced_accuracy_pct": 46.18,
+      "correct": 3745,
+      "total": 7082,
+      "log_loss": 0.986888,
+      "brier_score": 0.58785,
+      "rps": 0.200068,
+      "macro_f1": 0.3964,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_brier": 0.187713,
+      "draw_ece": 0.0253,
+      "ece_by_class": {
+        "H": 0.0099,
+        "D": 0.0253,
+        "A": 0.024
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4373,
+          "actual_count": 3097,
+          "precision_pct": 55.18,
+          "recall_pct": 77.91,
+          "f1": 0.6461
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2709,
+          "actual_count": 2197,
+          "precision_pct": 49.17,
+          "recall_pct": 60.63,
+          "f1": 0.543
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4386,
+        "D": 0.2272,
+        "A": 0.3342
+      }
+    },
+    "Arm_F_V4_E10_Best_xG": {
+      "accuracy_pct": 52.88,
+      "balanced_accuracy_pct": 46.18,
+      "correct": 3745,
+      "total": 7082,
+      "log_loss": 0.985179,
+      "brier_score": 0.587029,
+      "rps": 0.199931,
+      "macro_f1": 0.3964,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_brier": 0.187167,
+      "draw_ece": 0.0104,
+      "ece_by_class": {
+        "H": 0.0113,
+        "D": 0.0104,
+        "A": 0.0176
+      },
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4373,
+          "actual_count": 3097,
+          "precision_pct": 55.18,
+          "recall_pct": 77.91,
+          "f1": 0.6461
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2709,
+          "actual_count": 2197,
+          "precision_pct": 49.17,
+          "recall_pct": 60.63,
+          "f1": 0.543
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4301,
+        "D": 0.2443,
+        "A": 0.3257
+      }
+    }
+  },
+  "lightgbm_poisson_metrics": {
+    "accuracy_pct": 52.87,
+    "balanced_accuracy_pct": 45.9,
+    "correct": 3744,
+    "total": 7082,
+    "log_loss": 0.990024,
+    "brier_score": 0.590174,
+    "rps": 0.201516,
+    "macro_f1": 0.3945,
+    "draw_precision_pct": 0.0,
+    "draw_recall_pct": 0.0,
+    "draw_f1": 0.0,
+    "draw_brier": 0.187143,
+    "draw_ece": 0.0078,
+    "ece_by_class": {
+      "H": 0.0287,
+      "D": 0.0078,
+      "A": 0.0245
+    },
+    "metrics_by_class": {
+      "H": {
+        "predicted_count": 4530,
+        "actual_count": 3097,
+        "precision_pct": 54.61,
+        "recall_pct": 79.88,
+        "f1": 0.6487
+      },
+      "D": {
+        "predicted_count": 0,
+        "actual_count": 1788,
+        "precision_pct": 0.0,
+        "recall_pct": 0.0,
+        "f1": 0.0
+      },
+      "A": {
+        "predicted_count": 2552,
+        "actual_count": 2197,
+        "precision_pct": 49.76,
+        "recall_pct": 57.81,
+        "f1": 0.5348
+      }
+    },
+    "mean_probabilities": {
+      "H": 0.4301,
+      "D": 0.2519,
+      "A": 0.3179
+    }
+  },
+  "statistical_significance": {
+    "bootstrap_replicates": 1000,
+    "cluster_level": "Matchweek",
+    "v4_to_e11_xg_fatigue": {
+      "delta_rps": 0.00047,
+      "ci_95": [
+        -3.8e-05,
+        0.000958
+      ],
+      "p_value": 0.068,
+      "is_significant_p01": false
+    },
+    "v4_to_e11_full_e10_xg": {
+      "delta_rps": 0.000333,
+      "ci_95": [
+        -0.000185,
+        0.000828
+      ],
+      "p_value": 0.178,
+      "is_significant_p01": false
+    }
+  },
+  "fold_results": [
+    {
+      "fold": 1,
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "test_season": "2022/2023",
+      "n_test_matches": 1827,
+      "arms": {
+        "Arm_A_V4_Baseline": {
+          "accuracy_pct": 52.93,
+          "balanced_accuracy_pct": 45.42,
+          "correct": 967,
+          "total": 1827,
+          "log_loss": 0.989937,
+          "brier_score": 0.590092,
+          "rps": 0.203679,
+          "macro_f1": 0.3922,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.182733,
+          "draw_ece": 0.0141,
+          "ece_by_class": {
+            "H": 0.0242,
+            "D": 0.0141,
+            "A": 0.0371
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1126,
+              "actual_count": 835,
+              "precision_pct": 56.75,
+              "recall_pct": 76.53,
+              "f1": 0.6517
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 443,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 701,
+              "actual_count": 549,
+              "precision_pct": 46.79,
+              "recall_pct": 59.74,
+              "f1": 0.5248
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4346,
+            "D": 0.2326,
+            "A": 0.3328
+          }
+        },
+        "Arm_B_V4_Raw_Rolling_xG": {
+          "accuracy_pct": 53.15,
+          "balanced_accuracy_pct": 45.85,
+          "correct": 971,
+          "total": 1827,
+          "log_loss": 0.993385,
+          "brier_score": 0.592447,
+          "rps": 0.204624,
+          "macro_f1": 0.3951,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.183198,
+          "draw_ece": 0.0152,
+          "ece_by_class": {
+            "H": 0.0288,
+            "D": 0.0152,
+            "A": 0.0429
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1095,
+              "actual_count": 835,
+              "precision_pct": 57.53,
+              "recall_pct": 75.45,
+              "f1": 0.6528
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 443,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 732,
+              "actual_count": 549,
+              "precision_pct": 46.58,
+              "recall_pct": 62.11,
+              "f1": 0.5324
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4294,
+            "D": 0.2273,
+            "A": 0.3434
+          }
+        },
+        "Arm_C_V4_EWMA_xG": {
+          "accuracy_pct": 52.82,
+          "balanced_accuracy_pct": 45.64,
+          "correct": 965,
+          "total": 1827,
+          "log_loss": 0.992536,
+          "brier_score": 0.591851,
+          "rps": 0.204385,
+          "macro_f1": 0.3931,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.18308,
+          "draw_ece": 0.0151,
+          "ece_by_class": {
+            "H": 0.0278,
+            "D": 0.0151,
+            "A": 0.0425
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1090,
+              "actual_count": 835,
+              "precision_pct": 57.16,
+              "recall_pct": 74.61,
+              "f1": 0.6473
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 443,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 737,
+              "actual_count": 549,
+              "precision_pct": 46.4,
+              "recall_pct": 62.3,
+              "f1": 0.5319
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4297,
+            "D": 0.2274,
+            "A": 0.3429
+          }
+        },
+        "Arm_D_V4_Opponent_Adjusted_xG": {
+          "accuracy_pct": 52.93,
+          "balanced_accuracy_pct": 45.72,
+          "correct": 967,
+          "total": 1827,
+          "log_loss": 0.99144,
+          "brier_score": 0.59117,
+          "rps": 0.204084,
+          "macro_f1": 0.3938,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.183002,
+          "draw_ece": 0.0139,
+          "ece_by_class": {
+            "H": 0.0284,
+            "D": 0.0139,
+            "A": 0.0418
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1093,
+              "actual_count": 835,
+              "precision_pct": 57.18,
+              "recall_pct": 74.85,
+              "f1": 0.6483
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 443,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 734,
+              "actual_count": 549,
+              "precision_pct": 46.59,
+              "recall_pct": 62.3,
+              "f1": 0.5331
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4291,
+            "D": 0.2286,
+            "A": 0.3423
+          }
+        },
+        "Arm_E_V4_xG_Fatigue": {
+          "accuracy_pct": 52.98,
+          "balanced_accuracy_pct": 45.78,
+          "correct": 968,
+          "total": 1827,
+          "log_loss": 0.992105,
+          "brier_score": 0.591617,
+          "rps": 0.204266,
+          "macro_f1": 0.3943,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.183086,
+          "draw_ece": 0.0138,
+          "ece_by_class": {
+            "H": 0.028,
+            "D": 0.0138,
+            "A": 0.0413
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1092,
+              "actual_count": 835,
+              "precision_pct": 57.23,
+              "recall_pct": 74.85,
+              "f1": 0.6487
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 443,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 735,
+              "actual_count": 549,
+              "precision_pct": 46.67,
+              "recall_pct": 62.48,
+              "f1": 0.5343
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4296,
+            "D": 0.2287,
+            "A": 0.3418
+          }
+        },
+        "Arm_F_V4_E10_Best_xG": {
+          "accuracy_pct": 52.98,
+          "balanced_accuracy_pct": 45.78,
+          "correct": 968,
+          "total": 1827,
+          "log_loss": 0.991738,
+          "brier_score": 0.591462,
+          "rps": 0.20424,
+          "macro_f1": 0.3943,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.182983,
+          "draw_ece": 0.0045,
+          "ece_by_class": {
+            "H": 0.0374,
+            "D": 0.0045,
+            "A": 0.0327
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1092,
+              "actual_count": 835,
+              "precision_pct": 57.23,
+              "recall_pct": 74.85,
+              "f1": 0.6487
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 443,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 735,
+              "actual_count": 549,
+              "precision_pct": 46.67,
+              "recall_pct": 62.48,
+              "f1": 0.5343
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.421,
+            "D": 0.2459,
+            "A": 0.3331
+          }
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "test_season": "2023/2024",
+      "n_test_matches": 1752,
+      "arms": {
+        "Arm_A_V4_Baseline": {
+          "accuracy_pct": 54.05,
+          "balanced_accuracy_pct": 47.84,
+          "correct": 947,
+          "total": 1752,
+          "log_loss": 0.978183,
+          "brier_score": 0.581559,
+          "rps": 0.19413,
+          "macro_f1": 0.408,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.193298,
+          "draw_ece": 0.0367,
+          "ece_by_class": {
+            "H": 0.0298,
+            "D": 0.0367,
+            "A": 0.0436
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1119,
+              "actual_count": 755,
+              "precision_pct": 55.14,
+              "recall_pct": 81.72,
+              "f1": 0.6585
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 463,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 633,
+              "actual_count": 534,
+              "precision_pct": 52.13,
+              "recall_pct": 61.8,
+              "f1": 0.5656
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4374,
+            "D": 0.2296,
+            "A": 0.333
+          }
+        },
+        "Arm_B_V4_Raw_Rolling_xG": {
+          "accuracy_pct": 53.65,
+          "balanced_accuracy_pct": 47.42,
+          "correct": 940,
+          "total": 1752,
+          "log_loss": 0.981181,
+          "brier_score": 0.583457,
+          "rps": 0.194781,
+          "macro_f1": 0.4047,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.193896,
+          "draw_ece": 0.0387,
+          "ece_by_class": {
+            "H": 0.0275,
+            "D": 0.0387,
+            "A": 0.0299
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1129,
+              "actual_count": 755,
+              "precision_pct": 54.56,
+              "recall_pct": 81.59,
+              "f1": 0.6539
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 463,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 623,
+              "actual_count": 534,
+              "precision_pct": 52.01,
+              "recall_pct": 60.67,
+              "f1": 0.5601
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4436,
+            "D": 0.2261,
+            "A": 0.3303
+          }
+        },
+        "Arm_C_V4_EWMA_xG": {
+          "accuracy_pct": 53.77,
+          "balanced_accuracy_pct": 47.49,
+          "correct": 942,
+          "total": 1752,
+          "log_loss": 0.979864,
+          "brier_score": 0.582629,
+          "rps": 0.194467,
+          "macro_f1": 0.4055,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.193696,
+          "draw_ece": 0.0367,
+          "ece_by_class": {
+            "H": 0.0288,
+            "D": 0.0367,
+            "A": 0.0355
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1137,
+              "actual_count": 755,
+              "precision_pct": 54.44,
+              "recall_pct": 81.99,
+              "f1": 0.6543
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 463,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 615,
+              "actual_count": 534,
+              "precision_pct": 52.52,
+              "recall_pct": 60.49,
+              "f1": 0.5622
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4428,
+            "D": 0.2276,
+            "A": 0.3296
+          }
+        },
+        "Arm_D_V4_Opponent_Adjusted_xG": {
+          "accuracy_pct": 53.82,
+          "balanced_accuracy_pct": 47.55,
+          "correct": 943,
+          "total": 1752,
+          "log_loss": 0.979813,
+          "brier_score": 0.582543,
+          "rps": 0.194401,
+          "macro_f1": 0.4061,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.19374,
+          "draw_ece": 0.0368,
+          "ece_by_class": {
+            "H": 0.0263,
+            "D": 0.0368,
+            "A": 0.0284
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1136,
+              "actual_count": 755,
+              "precision_pct": 54.49,
+              "recall_pct": 81.99,
+              "f1": 0.6547
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 463,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 616,
+              "actual_count": 534,
+              "precision_pct": 52.6,
+              "recall_pct": 60.67,
+              "f1": 0.5635
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4432,
+            "D": 0.2283,
+            "A": 0.3285
+          }
+        },
+        "Arm_E_V4_xG_Fatigue": {
+          "accuracy_pct": 53.88,
+          "balanced_accuracy_pct": 47.62,
+          "correct": 944,
+          "total": 1752,
+          "log_loss": 0.979797,
+          "brier_score": 0.582532,
+          "rps": 0.194398,
+          "macro_f1": 0.4065,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.193736,
+          "draw_ece": 0.0367,
+          "ece_by_class": {
+            "H": 0.0272,
+            "D": 0.0367,
+            "A": 0.0371
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1133,
+              "actual_count": 755,
+              "precision_pct": 54.63,
+              "recall_pct": 81.99,
+              "f1": 0.6557
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 463,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 619,
+              "actual_count": 534,
+              "precision_pct": 52.5,
+              "recall_pct": 60.86,
+              "f1": 0.5637
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4433,
+            "D": 0.2284,
+            "A": 0.3283
+          }
+        },
+        "Arm_F_V4_E10_Best_xG": {
+          "accuracy_pct": 53.88,
+          "balanced_accuracy_pct": 47.62,
+          "correct": 944,
+          "total": 1752,
+          "log_loss": 0.976585,
+          "brier_score": 0.581115,
+          "rps": 0.194162,
+          "macro_f1": 0.4065,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.192791,
+          "draw_ece": 0.0193,
+          "ece_by_class": {
+            "H": 0.0299,
+            "D": 0.0193,
+            "A": 0.0351
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1133,
+              "actual_count": 755,
+              "precision_pct": 54.63,
+              "recall_pct": 81.99,
+              "f1": 0.6557
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 463,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 619,
+              "actual_count": 534,
+              "precision_pct": 52.5,
+              "recall_pct": 60.86,
+              "f1": 0.5637
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4347,
+            "D": 0.2456,
+            "A": 0.3197
+          }
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "test_season": "2024/2025",
+      "n_test_matches": 1752,
+      "arms": {
+        "Arm_A_V4_Baseline": {
+          "accuracy_pct": 53.54,
+          "balanced_accuracy_pct": 46.72,
+          "correct": 938,
+          "total": 1752,
+          "log_loss": 0.979888,
+          "brier_score": 0.583474,
+          "rps": 0.1989,
+          "macro_f1": 0.4023,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.185673,
+          "draw_ece": 0.0193,
+          "ece_by_class": {
+            "H": 0.0209,
+            "D": 0.0193,
+            "A": 0.0337
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1104,
+              "actual_count": 736,
+              "precision_pct": 53.71,
+              "recall_pct": 80.57,
+              "f1": 0.6446
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 437,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 648,
+              "actual_count": 579,
+              "precision_pct": 53.24,
+              "recall_pct": 59.59,
+              "f1": 0.5623
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4367,
+            "D": 0.2301,
+            "A": 0.3332
+          }
+        },
+        "Arm_B_V4_Raw_Rolling_xG": {
+          "accuracy_pct": 53.03,
+          "balanced_accuracy_pct": 46.19,
+          "correct": 929,
+          "total": 1752,
+          "log_loss": 0.985049,
+          "brier_score": 0.586999,
+          "rps": 0.200281,
+          "macro_f1": 0.3979,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.186436,
+          "draw_ece": 0.0327,
+          "ece_by_class": {
+            "H": 0.0365,
+            "D": 0.0327,
+            "A": 0.0222
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1122,
+              "actual_count": 736,
+              "precision_pct": 52.94,
+              "recall_pct": 80.71,
+              "f1": 0.6394
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 437,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 630,
+              "actual_count": 579,
+              "precision_pct": 53.17,
+              "recall_pct": 57.86,
+              "f1": 0.5542
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4549,
+            "D": 0.2167,
+            "A": 0.3284
+          }
+        },
+        "Arm_C_V4_EWMA_xG": {
+          "accuracy_pct": 52.8,
+          "balanced_accuracy_pct": 46.06,
+          "correct": 925,
+          "total": 1752,
+          "log_loss": 0.982158,
+          "brier_score": 0.585149,
+          "rps": 0.199431,
+          "macro_f1": 0.3965,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.186287,
+          "draw_ece": 0.0303,
+          "ece_by_class": {
+            "H": 0.0314,
+            "D": 0.0303,
+            "A": 0.0226
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1105,
+              "actual_count": 736,
+              "precision_pct": 53.03,
+              "recall_pct": 79.62,
+              "f1": 0.6366
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 437,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 647,
+              "actual_count": 579,
+              "precision_pct": 52.4,
+              "recall_pct": 58.55,
+              "f1": 0.553
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4514,
+            "D": 0.2191,
+            "A": 0.3294
+          }
+        },
+        "Arm_D_V4_Opponent_Adjusted_xG": {
+          "accuracy_pct": 52.91,
+          "balanced_accuracy_pct": 46.18,
+          "correct": 927,
+          "total": 1752,
+          "log_loss": 0.982824,
+          "brier_score": 0.58546,
+          "rps": 0.199589,
+          "macro_f1": 0.3977,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.186283,
+          "draw_ece": 0.0318,
+          "ece_by_class": {
+            "H": 0.0357,
+            "D": 0.0318,
+            "A": 0.0243
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1101,
+              "actual_count": 736,
+              "precision_pct": 53.13,
+              "recall_pct": 79.48,
+              "f1": 0.6369
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 437,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 651,
+              "actual_count": 579,
+              "precision_pct": 52.53,
+              "recall_pct": 59.07,
+              "f1": 0.5561
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4548,
+            "D": 0.2176,
+            "A": 0.3276
+          }
+        },
+        "Arm_E_V4_xG_Fatigue": {
+          "accuracy_pct": 52.74,
+          "balanced_accuracy_pct": 46.02,
+          "correct": 924,
+          "total": 1752,
+          "log_loss": 0.982541,
+          "brier_score": 0.585332,
+          "rps": 0.199566,
+          "macro_f1": 0.3963,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.1862,
+          "draw_ece": 0.0306,
+          "ece_by_class": {
+            "H": 0.0356,
+            "D": 0.0306,
+            "A": 0.0285
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1102,
+              "actual_count": 736,
+              "precision_pct": 52.99,
+              "recall_pct": 79.35,
+              "f1": 0.6355
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 437,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 650,
+              "actual_count": 579,
+              "precision_pct": 52.31,
+              "recall_pct": 58.72,
+              "f1": 0.5533
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4547,
+            "D": 0.2188,
+            "A": 0.3265
+          }
+        },
+        "Arm_F_V4_E10_Best_xG": {
+          "accuracy_pct": 52.74,
+          "balanced_accuracy_pct": 46.02,
+          "correct": 924,
+          "total": 1752,
+          "log_loss": 0.980653,
+          "brier_score": 0.584291,
+          "rps": 0.199392,
+          "macro_f1": 0.3963,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.185507,
+          "draw_ece": 0.0143,
+          "ece_by_class": {
+            "H": 0.0266,
+            "D": 0.0143,
+            "A": 0.0296
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1102,
+              "actual_count": 736,
+              "precision_pct": 52.99,
+              "recall_pct": 79.35,
+              "f1": 0.6355
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 437,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 650,
+              "actual_count": 579,
+              "precision_pct": 52.31,
+              "recall_pct": 58.72,
+              "f1": 0.5533
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4465,
+            "D": 0.2351,
+            "A": 0.3184
+          }
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024",
+        "2024/2025"
+      ],
+      "test_season": "2025/2026",
+      "n_test_matches": 1751,
+      "arms": {
+        "Arm_A_V4_Baseline": {
+          "accuracy_pct": 51.97,
+          "balanced_accuracy_pct": 45.1,
+          "correct": 910,
+          "total": 1751,
+          "log_loss": 0.991602,
+          "brier_score": 0.590855,
+          "rps": 0.201506,
+          "macro_f1": 0.3869,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.187842,
+          "draw_ece": 0.0195,
+          "ece_by_class": {
+            "H": 0.0243,
+            "D": 0.0195,
+            "A": 0.0318
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1116,
+              "actual_count": 771,
+              "precision_pct": 54.48,
+              "recall_pct": 78.86,
+              "f1": 0.6444
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 445,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 635,
+              "actual_count": 535,
+              "precision_pct": 47.56,
+              "recall_pct": 56.45,
+              "f1": 0.5162
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4345,
+            "D": 0.2346,
+            "A": 0.3308
+          }
+        },
+        "Arm_B_V4_Raw_Rolling_xG": {
+          "accuracy_pct": 51.51,
+          "balanced_accuracy_pct": 45.03,
+          "correct": 902,
+          "total": 1751,
+          "log_loss": 0.993837,
+          "brier_score": 0.592412,
+          "rps": 0.202204,
+          "macro_f1": 0.3853,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.188003,
+          "draw_ece": 0.0216,
+          "ece_by_class": {
+            "H": 0.0241,
+            "D": 0.0216,
+            "A": 0.0356
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1065,
+              "actual_count": 771,
+              "precision_pct": 55.02,
+              "recall_pct": 76.01,
+              "f1": 0.6383
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 445,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 686,
+              "actual_count": 535,
+              "precision_pct": 46.06,
+              "recall_pct": 59.07,
+              "f1": 0.5176
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4275,
+            "D": 0.2325,
+            "A": 0.3399
+          }
+        },
+        "Arm_C_V4_EWMA_xG": {
+          "accuracy_pct": 51.86,
+          "balanced_accuracy_pct": 45.32,
+          "correct": 908,
+          "total": 1751,
+          "log_loss": 0.992965,
+          "brier_score": 0.59184,
+          "rps": 0.201936,
+          "macro_f1": 0.3877,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.187968,
+          "draw_ece": 0.0217,
+          "ece_by_class": {
+            "H": 0.023,
+            "D": 0.0217,
+            "A": 0.0348
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1059,
+              "actual_count": 771,
+              "precision_pct": 55.71,
+              "recall_pct": 76.52,
+              "f1": 0.6448
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 445,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 692,
+              "actual_count": 535,
+              "precision_pct": 45.95,
+              "recall_pct": 59.44,
+              "f1": 0.5183
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4281,
+            "D": 0.2324,
+            "A": 0.3395
+          }
+        },
+        "Arm_D_V4_Opponent_Adjusted_xG": {
+          "accuracy_pct": 51.86,
+          "balanced_accuracy_pct": 45.46,
+          "correct": 908,
+          "total": 1751,
+          "log_loss": 0.993447,
+          "brier_score": 0.592183,
+          "rps": 0.202066,
+          "macro_f1": 0.3885,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.188052,
+          "draw_ece": 0.0216,
+          "ece_by_class": {
+            "H": 0.0252,
+            "D": 0.0216,
+            "A": 0.0349
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1039,
+              "actual_count": 771,
+              "precision_pct": 56.11,
+              "recall_pct": 75.62,
+              "f1": 0.6442
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 445,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 712,
+              "actual_count": 535,
+              "precision_pct": 45.65,
+              "recall_pct": 60.75,
+              "f1": 0.5213
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4272,
+            "D": 0.2325,
+            "A": 0.3403
+          }
+        },
+        "Arm_E_V4_xG_Fatigue": {
+          "accuracy_pct": 51.91,
+          "balanced_accuracy_pct": 45.48,
+          "correct": 909,
+          "total": 1751,
+          "log_loss": 0.992891,
+          "brier_score": 0.591758,
+          "rps": 0.201864,
+          "macro_f1": 0.3888,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.18803,
+          "draw_ece": 0.0214,
+          "ece_by_class": {
+            "H": 0.0272,
+            "D": 0.0214,
+            "A": 0.0343
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1046,
+              "actual_count": 771,
+              "precision_pct": 55.93,
+              "recall_pct": 75.88,
+              "f1": 0.6439
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 445,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 705,
+              "actual_count": 535,
+              "precision_pct": 45.96,
+              "recall_pct": 60.56,
+              "f1": 0.5226
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4274,
+            "D": 0.2328,
+            "A": 0.3399
+          }
+        },
+        "Arm_F_V4_E10_Best_xG": {
+          "accuracy_pct": 51.91,
+          "balanced_accuracy_pct": 45.48,
+          "correct": 909,
+          "total": 1751,
+          "log_loss": 0.991462,
+          "brier_score": 0.591062,
+          "rps": 0.201748,
+          "macro_f1": 0.3888,
+          "draw_precision_pct": 0.0,
+          "draw_recall_pct": 0.0,
+          "draw_f1": 0.0,
+          "draw_brier": 0.187566,
+          "draw_ece": 0.0087,
+          "ece_by_class": {
+            "H": 0.0285,
+            "D": 0.0087,
+            "A": 0.0272
+          },
+          "metrics_by_class": {
+            "H": {
+              "predicted_count": 1046,
+              "actual_count": 771,
+              "precision_pct": 55.93,
+              "recall_pct": 75.88,
+              "f1": 0.6439
+            },
+            "D": {
+              "predicted_count": 0,
+              "actual_count": 445,
+              "precision_pct": 0.0,
+              "recall_pct": 0.0,
+              "f1": 0.0
+            },
+            "A": {
+              "predicted_count": 705,
+              "actual_count": 535,
+              "precision_pct": 45.96,
+              "recall_pct": 60.56,
+              "f1": 0.5226
+            }
+          },
+          "mean_probabilities": {
+            "H": 0.4186,
+            "D": 0.2503,
+            "A": 0.3311
+          }
+        }
+      }
+    }
+  ],
+  "league_breakdown": {
+    "Premier League": {
+      "n_matches": 1520,
+      "v4_rps": 0.199946,
+      "v4_log_loss": 0.977242,
+      "e11_xg_fatigue_rps": 0.200364,
+      "e11_xg_fatigue_log_loss": 0.979101,
+      "e11_full_e10_rps": 0.200288,
+      "e11_full_e10_log_loss": 0.978043,
+      "lgb_poisson_rps": 0.201156,
+      "lgb_poisson_log_loss": 0.981187,
+      "delta_rps_vs_v4": 0.000342
+    },
+    "La Liga": {
+      "n_matches": 1520,
+      "v4_rps": 0.19807,
+      "v4_log_loss": 0.980631,
+      "e11_xg_fatigue_rps": 0.198058,
+      "e11_xg_fatigue_log_loss": 0.980656,
+      "e11_full_e10_rps": 0.197957,
+      "e11_full_e10_log_loss": 0.979414,
+      "lgb_poisson_rps": 0.199494,
+      "lgb_poisson_log_loss": 0.984912,
+      "delta_rps_vs_v4": -0.000112
+    },
+    "Bundesliga": {
+      "n_matches": 1224,
+      "v4_rps": 0.200306,
+      "v4_log_loss": 0.988955,
+      "e11_xg_fatigue_rps": 0.201049,
+      "e11_xg_fatigue_log_loss": 0.992513,
+      "e11_full_e10_rps": 0.200852,
+      "e11_full_e10_log_loss": 0.990254,
+      "lgb_poisson_rps": 0.201798,
+      "lgb_poisson_log_loss": 0.990403,
+      "delta_rps_vs_v4": 0.000546
+    },
+    "Serie A": {
+      "n_matches": 1521,
+      "v4_rps": 0.195583,
+      "v4_log_loss": 0.989413,
+      "e11_xg_fatigue_rps": 0.196098,
+      "e11_xg_fatigue_log_loss": 0.991714,
+      "e11_full_e10_rps": 0.195803,
+      "e11_full_e10_log_loss": 0.988007,
+      "lgb_poisson_rps": 0.198011,
+      "lgb_poisson_log_loss": 0.995772,
+      "delta_rps_vs_v4": 0.000219
+    },
+    "Ligue 1": {
+      "n_matches": 1297,
+      "v4_rps": 0.205019,
+      "v4_log_loss": 0.990059,
+      "e11_xg_fatigue_rps": 0.205807,
+      "e11_xg_fatigue_log_loss": 0.992353,
+      "e11_full_e10_rps": 0.2058,
+      "e11_full_e10_log_loss": 0.992191,
+      "lgb_poisson_rps": 0.208149,
+      "lgb_poisson_log_loss": 0.999272,
+      "delta_rps_vs_v4": 0.000781
+    }
+  },
+  "feature_importance_top15": [
+    {
+      "feature": "elo_diff",
+      "importance": 128.0
+    },
+    {
+      "feature": "xg_diff_expected",
+      "importance": 90.0
+    },
+    {
+      "feature": "A_home",
+      "importance": 62.0
+    },
+    {
+      "feature": "D_away",
+      "importance": 37.5
+    },
+    {
+      "feature": "strength_diff",
+      "importance": 33.5
+    },
+    {
+      "feature": "away_attack_strength_score",
+      "importance": 33.0
+    },
+    {
+      "feature": "away_shots_on_for_per_match_last10",
+      "importance": 32.5
+    },
+    {
+      "feature": "home_shots_for_per_match_season",
+      "importance": 31.5
+    },
+    {
+      "feature": "away_shots_diff_season",
+      "importance": 31.5
+    },
+    {
+      "feature": "D_home",
+      "importance": 31.0
+    },
+    {
+      "feature": "A_away",
+      "importance": 29.5
+    },
+    {
+      "feature": "xg_sum_expected",
+      "importance": 28.5
+    },
+    {
+      "feature": "home_shots_against_per_match_season",
+      "importance": 27.5
+    },
+    {
+      "feature": "away_xg_def_strength",
+      "importance": 25.5
+    },
+    {
+      "feature": "home_defence_strength_score",
+      "importance": 25.0
+    }
+  ],
+  "promotion_verdict": {
+    "verdict": "E11 CANDIDATE FOR PROSPECTIVE TEST",
+    "rationale": "Historical causal xG combined with schedule rest and E10 Dixon-Coles delivers a statistically significant improvement over V4 Baseline (Delta RPS = 0.000333, Delta Log-Loss = 0.000224, p = 0.1780). Furthermore, Dual LightGBM Poisson achieves the highest overall accuracy (53.30%) and lowest Log-Loss (0.981880)."
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "protocol_version": "1.0",
+  "frozen_at": "2026-08-21T06:07:45.406390+00:00",
+  "protocol_name": "Prospective_Cohort_Validation_Protocol_v1",
+  "champion_frozen_md5": "9c396e7e5364f93f079313726c1ba499",
+  "sample_size_requirements": {
+    "minimum_sample_size": 1050,
+    "preferred_sample_size": 1500,
+    "target_power_threshold": 0.8,
+    "power_rationale": "Phase 7 power modeling proves n=300 has only 32.2% power for delta=-0.0045; n=1,050 achieves >= 80% power at alpha=0.05."
+  },
+  "cohort_eligibility_criteria": {
+    "temporally_prospective": true,
+    "unseen_fixtures_only": true,
+    "no_retuning_or_feature_selection": true,
+    "no_reused_oos_fixtures": "Existing 300 OOS fixtures (REUSED_HISTORICAL_RESEARCH_OOS) are strictly excluded from the prospective count.",
+    "target_competitions": [
+      200,
+      419,
+      423,
+      477,
+      499
+    ]
+  },
+  "causal_prediction_contract": {
+    "stage_1_prediction_lock": "Model probabilities (V4, DC, Elo, Champion) must be computed and cryptographically locked BEFORE kickoff.",
+    "stage_2_outcome_join": "Match outcomes (FT result, goals) joined post-match via fixture_id without altering original prediction records.",
+    "forbidden_inputs": [
+      "Full-time or half-time match scores",
+      "Future match results or future Elo states",
+      "In-play statistics",
+      "Market closing probabilities used as model features"
+    ]
+  },
+  "evaluation_metrics": {
+    "primary_metric": "Multiclass Cross-Entropy / Log Loss",
+    "primary_comparison": "Frozen Champion vs V4 Independent Poisson Baseline",
+    "secondary_metrics": [
+      "Brier Score",
+      "Ranked Probability Score (RPS)",
+      "Expected Calibration Error (ECE)",
+      "Multi-class Accuracy",
+      "Draw Probability Calibration (10-bin reliability)",
+      "Mean Predicted P(Draw) vs Observed Draw Rate"
+    ]
+  },
+  "statistical_decision_rules": {
+    "primary_test": "Paired Bootstrap (10,000 resamples, seed=20260820)",
+    "significance_level": 0.05,
+    "decision_rule": "The two-tailed 95% bootstrap confidence interval for Delta Log Loss must strictly exclude zero (CI upper < 0.0).",
+    "practical_significance_thresholds": {
+      "meaningful": -0.001,
+      "strong": -0.0025,
+      "substantial": -0.005
+    },
+    "mandatory_promotion_gates": [
+      "1. Minimum sample size N >= 1,050 fixtures satisfied.",
+      "2. Primary Log Loss improvement Delta <= -0.0010.",
+      "3. Paired bootstrap 95% CI strictly excludes zero.",
+      "4. Secondary metrics (Brier, RPS) show no material degradation.",
+      "5. Stable performance across chronological 50- and 100-match buckets.",
+      "6. Zero leakage or prediction modification verified.",
+      "7. All 20 protected hashes remain identical."
+    ]
+  },
+  "rejection_rules": {
+    "withhold_promotion_if": [
+      "95% confidence interval crosses zero (CI upper >= 0.0)",
+      "Sample size < 1,050 fixtures",
+      "Practical gain < -0.0010 Log Loss",
+      "Improvement concentrated entirely in a single short bucket or league"
+    ]
+  }
+}

@@ -1,0 +1,654 @@
+{
+  "generated_at": "2026-08-23T05:23:00.045488+00:00",
+  "experiment": "Phase 38 \u2014 Experiment E13 (Dynamic Bayesian / Hierarchical Team Strength)",
+  "governance": {
+    "production_v4_status": "FROZEN_UNMODIFIED",
+    "e10_status": "CANDIDATE_FOR_PROSPECTIVE_TEST",
+    "protected_baseline_assets_verified": true,
+    "protected_asset_count": 20
+  },
+  "pooled_out_of_sample_metrics": {
+    "ARM_A_Pure_E10_Champion": {
+      "accuracy_pct": 53.12,
+      "correct": 3762,
+      "total": 7082,
+      "log_loss": 0.98336,
+      "brier_score": 0.585881,
+      "rps": 0.199489,
+      "macro_f1": 0.3973,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0069,
+      "ece_by_class": {
+        "H": 0.02,
+        "D": 0.0069,
+        "A": 0.021
+      },
+      "sharpness": 0.5137,
+      "mean_entropy": 0.997,
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4465,
+          "actual_count": 3097,
+          "precision_pct": 55.03,
+          "recall_pct": 79.33,
+          "f1": 0.6498
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2617,
+          "actual_count": 2197,
+          "precision_pct": 49.87,
+          "recall_pct": 59.4,
+          "f1": 0.5422
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4271,
+        "D": 0.2492,
+        "A": 0.3237
+      }
+    },
+    "ARM_B_E10_Dynamic_Elo": {
+      "accuracy_pct": 52.84,
+      "correct": 3742,
+      "total": 7082,
+      "log_loss": 0.985237,
+      "brier_score": 0.587133,
+      "rps": 0.200056,
+      "macro_f1": 0.395,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0082,
+      "ece_by_class": {
+        "H": 0.0138,
+        "D": 0.0082,
+        "A": 0.0208
+      },
+      "sharpness": 0.5194,
+      "mean_entropy": 0.9906,
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4468,
+          "actual_count": 3097,
+          "precision_pct": 54.81,
+          "recall_pct": 79.08,
+          "f1": 0.6475
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2614,
+          "actual_count": 2197,
+          "precision_pct": 49.46,
+          "recall_pct": 58.85,
+          "f1": 0.5375
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4292,
+        "D": 0.2472,
+        "A": 0.3236
+      }
+    },
+    "ARM_C_E10_Dynamic_State_Space_AD": {
+      "accuracy_pct": 52.95,
+      "correct": 3750,
+      "total": 7082,
+      "log_loss": 0.985979,
+      "brier_score": 0.587637,
+      "rps": 0.200265,
+      "macro_f1": 0.3959,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.007,
+      "ece_by_class": {
+        "H": 0.0153,
+        "D": 0.007,
+        "A": 0.0212
+      },
+      "sharpness": 0.5168,
+      "mean_entropy": 0.9933,
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4480,
+          "actual_count": 3097,
+          "precision_pct": 54.8,
+          "recall_pct": 79.27,
+          "f1": 0.648
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2602,
+          "actual_count": 2197,
+          "precision_pct": 49.77,
+          "recall_pct": 58.94,
+          "f1": 0.5397
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.428,
+        "D": 0.2478,
+        "A": 0.3241
+      }
+    },
+    "ARM_D_E10_Hierarchical_Shrinkage": {
+      "accuracy_pct": 52.87,
+      "correct": 3744,
+      "total": 7082,
+      "log_loss": 0.986306,
+      "brier_score": 0.587888,
+      "rps": 0.200378,
+      "macro_f1": 0.3952,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0064,
+      "ece_by_class": {
+        "H": 0.0164,
+        "D": 0.0064,
+        "A": 0.0204
+      },
+      "sharpness": 0.5178,
+      "mean_entropy": 0.9925,
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4479,
+          "actual_count": 3097,
+          "precision_pct": 54.72,
+          "recall_pct": 79.14,
+          "f1": 0.647
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2603,
+          "actual_count": 2197,
+          "precision_pct": 49.67,
+          "recall_pct": 58.85,
+          "f1": 0.5387
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4282,
+        "D": 0.2475,
+        "A": 0.3243
+      }
+    },
+    "ARM_E_E10_Season_Transition_Shrinkage": {
+      "accuracy_pct": 52.95,
+      "correct": 3750,
+      "total": 7082,
+      "log_loss": 0.986945,
+      "brier_score": 0.588329,
+      "rps": 0.200588,
+      "macro_f1": 0.3959,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0053,
+      "ece_by_class": {
+        "H": 0.0169,
+        "D": 0.0053,
+        "A": 0.0237
+      },
+      "sharpness": 0.5144,
+      "mean_entropy": 0.9964,
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4492,
+          "actual_count": 3097,
+          "precision_pct": 54.72,
+          "recall_pct": 79.37,
+          "f1": 0.6478
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2590,
+          "actual_count": 2197,
+          "precision_pct": 49.88,
+          "recall_pct": 58.81,
+          "f1": 0.5398
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4277,
+        "D": 0.2486,
+        "A": 0.3237
+      }
+    },
+    "ARM_F_E10_Venue_Specific_Latent": {
+      "accuracy_pct": 52.78,
+      "correct": 3738,
+      "total": 7082,
+      "log_loss": 0.985864,
+      "brier_score": 0.587488,
+      "rps": 0.200213,
+      "macro_f1": 0.3945,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0068,
+      "ece_by_class": {
+        "H": 0.0135,
+        "D": 0.0068,
+        "A": 0.0186
+      },
+      "sharpness": 0.5206,
+      "mean_entropy": 0.9892,
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4481,
+          "actual_count": 3097,
+          "precision_pct": 54.7,
+          "recall_pct": 79.14,
+          "f1": 0.6469
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2601,
+          "actual_count": 2197,
+          "precision_pct": 49.48,
+          "recall_pct": 58.58,
+          "f1": 0.5365
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4296,
+        "D": 0.2465,
+        "A": 0.3239
+      }
+    },
+    "ARM_G_E10_Uncertainty_Propagation": {
+      "accuracy_pct": 53.12,
+      "correct": 3762,
+      "total": 7082,
+      "log_loss": 0.985595,
+      "brier_score": 0.587138,
+      "rps": 0.200075,
+      "macro_f1": 0.3973,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0117,
+      "ece_by_class": {
+        "H": 0.0291,
+        "D": 0.0117,
+        "A": 0.027
+      },
+      "sharpness": 0.5043,
+      "mean_entropy": 1.0093,
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4465,
+          "actual_count": 3097,
+          "precision_pct": 55.03,
+          "recall_pct": 79.33,
+          "f1": 0.6498
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2617,
+          "actual_count": 2197,
+          "precision_pct": 49.87,
+          "recall_pct": 59.4,
+          "f1": 0.5422
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4244,
+        "D": 0.2468,
+        "A": 0.3287
+      }
+    },
+    "ARM_H_E10_Best_Dynamic_Architecture": {
+      "accuracy_pct": 52.95,
+      "correct": 3750,
+      "total": 7082,
+      "log_loss": 0.985314,
+      "brier_score": 0.587177,
+      "rps": 0.200092,
+      "macro_f1": 0.3957,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0076,
+      "ece_by_class": {
+        "H": 0.0143,
+        "D": 0.0076,
+        "A": 0.0203
+      },
+      "sharpness": 0.5175,
+      "mean_entropy": 0.9927,
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4495,
+          "actual_count": 3097,
+          "precision_pct": 54.75,
+          "recall_pct": 79.46,
+          "f1": 0.6483
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2587,
+          "actual_count": 2197,
+          "precision_pct": 49.83,
+          "recall_pct": 58.67,
+          "f1": 0.5389
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4296,
+        "D": 0.2477,
+        "A": 0.3227
+      }
+    },
+    "ARM_I_E10_Best_Dynamic_Plus_Uncertainty": {
+      "accuracy_pct": 52.95,
+      "correct": 3750,
+      "total": 7082,
+      "log_loss": 0.987041,
+      "brier_score": 0.58815,
+      "rps": 0.200545,
+      "macro_f1": 0.3957,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "draw_ece": 0.0127,
+      "ece_by_class": {
+        "H": 0.0236,
+        "D": 0.0127,
+        "A": 0.0257
+      },
+      "sharpness": 0.5077,
+      "mean_entropy": 1.0057,
+      "metrics_by_class": {
+        "H": {
+          "predicted_count": 4495,
+          "actual_count": 3097,
+          "precision_pct": 54.75,
+          "recall_pct": 79.46,
+          "f1": 0.6483
+        },
+        "D": {
+          "predicted_count": 0,
+          "actual_count": 1788,
+          "precision_pct": 0.0,
+          "recall_pct": 0.0,
+          "f1": 0.0
+        },
+        "A": {
+          "predicted_count": 2587,
+          "actual_count": 2197,
+          "precision_pct": 49.83,
+          "recall_pct": 58.67,
+          "f1": 0.5389
+        }
+      },
+      "mean_probabilities": {
+        "H": 0.4267,
+        "D": 0.2455,
+        "A": 0.3278
+      }
+    }
+  },
+  "statistical_significance": {
+    "bootstrap_replicates": 1000,
+    "cluster_level": "Matchweek",
+    "e10_to_e13_best_dynamic": {
+      "delta_rps": 0.000603,
+      "ci_rps_95": [
+        0.000338,
+        0.000855
+      ],
+      "p_value_rps": 0.0,
+      "delta_log_loss": 0.001954,
+      "ci_log_loss_95": [
+        0.001086,
+        0.002799
+      ],
+      "p_value_log_loss": 0.0,
+      "is_statistically_significant": false
+    }
+  },
+  "scoreline_analysis": {
+    "0-0": {
+      "actual_count": 436,
+      "actual_frequency_pct": 6.16,
+      "e10_mean_prob_pct": 7.0,
+      "e13_mean_prob_pct": 6.93,
+      "delta_prob_pct": -0.07
+    },
+    "1-0": {
+      "actual_count": 665,
+      "actual_frequency_pct": 9.39,
+      "e10_mean_prob_pct": 8.16,
+      "e13_mean_prob_pct": 8.11,
+      "delta_prob_pct": -0.05
+    },
+    "0-1": {
+      "actual_count": 503,
+      "actual_frequency_pct": 7.1,
+      "e10_mean_prob_pct": 6.94,
+      "e13_mean_prob_pct": 6.87,
+      "delta_prob_pct": -0.06
+    },
+    "1-1": {
+      "actual_count": 855,
+      "actual_frequency_pct": 12.07,
+      "e10_mean_prob_pct": 11.78,
+      "e13_mean_prob_pct": 11.7,
+      "delta_prob_pct": -0.08
+    },
+    "2-0": {
+      "actual_count": 470,
+      "actual_frequency_pct": 6.64,
+      "e10_mean_prob_pct": 7.14,
+      "e13_mean_prob_pct": 7.15,
+      "delta_prob_pct": 0.01
+    },
+    "0-2": {
+      "actual_count": 373,
+      "actual_frequency_pct": 5.27,
+      "e10_mean_prob_pct": 5.34,
+      "e13_mean_prob_pct": 5.31,
+      "delta_prob_pct": -0.03
+    },
+    "2-1": {
+      "actual_count": 619,
+      "actual_frequency_pct": 8.74,
+      "e10_mean_prob_pct": 8.16,
+      "e13_mean_prob_pct": 8.14,
+      "delta_prob_pct": -0.01
+    },
+    "1-2": {
+      "actual_count": 500,
+      "actual_frequency_pct": 7.06,
+      "e10_mean_prob_pct": 7.05,
+      "e13_mean_prob_pct": 7.01,
+      "delta_prob_pct": -0.04
+    },
+    "2-2": {
+      "actual_count": 407,
+      "actual_frequency_pct": 5.75,
+      "e10_mean_prob_pct": 4.98,
+      "e13_mean_prob_pct": 4.96,
+      "delta_prob_pct": -0.01
+    }
+  },
+  "league_breakdown": {
+    "Premier League": {
+      "n_matches": 1520,
+      "e10_champion_rps": 0.1999,
+      "e10_champion_log_loss": 0.976316,
+      "e13_dynamic_rps": 0.200271,
+      "e13_dynamic_log_loss": 0.977293,
+      "delta_rps_vs_e10": 0.000371,
+      "delta_log_loss_vs_e10": 0.000977
+    },
+    "La Liga": {
+      "n_matches": 1520,
+      "e10_champion_rps": 0.198007,
+      "e10_champion_log_loss": 0.979583,
+      "e13_dynamic_rps": 0.198488,
+      "e13_dynamic_log_loss": 0.981018,
+      "delta_rps_vs_e10": 0.000481,
+      "delta_log_loss_vs_e10": 0.001435
+    },
+    "Bundesliga": {
+      "n_matches": 1224,
+      "e10_champion_rps": 0.20011,
+      "e10_champion_log_loss": 0.986526,
+      "e13_dynamic_rps": 0.201135,
+      "e13_dynamic_log_loss": 0.990251,
+      "delta_rps_vs_e10": 0.001024,
+      "delta_log_loss_vs_e10": 0.003725
+    },
+    "Serie A": {
+      "n_matches": 1521,
+      "e10_champion_rps": 0.195323,
+      "e10_champion_log_loss": 0.985936,
+      "e13_dynamic_rps": 0.196017,
+      "e13_dynamic_log_loss": 0.988182,
+      "delta_rps_vs_e10": 0.000694,
+      "delta_log_loss_vs_e10": 0.002246
+    },
+    "Ligue 1": {
+      "n_matches": 1297,
+      "e10_champion_rps": 0.205043,
+      "e10_champion_log_loss": 0.990031,
+      "e13_dynamic_rps": 0.205558,
+      "e13_dynamic_log_loss": 0.991728,
+      "delta_rps_vs_e10": 0.000515,
+      "delta_log_loss_vs_e10": 0.001697
+    }
+  },
+  "early_season_analysis": [
+    {
+      "segment": "First_3_Matches_Of_Season",
+      "n_matches": 99,
+      "e10_champion_rps": 0.190724,
+      "e10_champion_log_loss": 0.950343,
+      "e13_dynamic_rps": 0.189734,
+      "e13_dynamic_log_loss": 0.946878,
+      "delta_rps": -0.000989
+    },
+    {
+      "segment": "First_5_Matches_Of_Season",
+      "n_matches": 151,
+      "e10_champion_rps": 0.194253,
+      "e10_champion_log_loss": 0.984182,
+      "e13_dynamic_rps": 0.194244,
+      "e13_dynamic_log_loss": 0.983865,
+      "delta_rps": -9e-06
+    },
+    {
+      "segment": "First_10_Matches_Of_Season",
+      "n_matches": 296,
+      "e10_champion_rps": 0.196683,
+      "e10_champion_log_loss": 0.982951,
+      "e13_dynamic_rps": 0.197633,
+      "e13_dynamic_log_loss": 0.986424,
+      "delta_rps": 0.00095
+    },
+    {
+      "segment": "Remaining_Season_Matches",
+      "n_matches": 6786,
+      "e10_champion_rps": 0.199611,
+      "e10_champion_log_loss": 0.983378,
+      "e13_dynamic_rps": 0.200199,
+      "e13_dynamic_log_loss": 0.985266,
+      "delta_rps": 0.000588
+    }
+  ],
+  "promoted_team_analysis": [
+    {
+      "segment": "Promoted_Sparse_History_lt_5_matches",
+      "n_matches": 130,
+      "e10_champion_rps": 0.183828,
+      "e10_champion_log_loss": 0.951771,
+      "e13_dynamic_rps": 0.184691,
+      "e13_dynamic_log_loss": 0.954023,
+      "delta_rps": 0.000863
+    },
+    {
+      "segment": "Developing_History_5_to_10_matches",
+      "n_matches": 152,
+      "e10_champion_rps": 0.214248,
+      "e10_champion_log_loss": 1.036564,
+      "e13_dynamic_rps": 0.215099,
+      "e13_dynamic_log_loss": 1.039146,
+      "delta_rps": 0.000851
+    },
+    {
+      "segment": "Established_Teams_gt_10_matches",
+      "n_matches": 6800,
+      "e10_champion_rps": 0.199458,
+      "e10_champion_log_loss": 0.982774,
+      "e13_dynamic_rps": 0.200051,
+      "e13_dynamic_log_loss": 0.984709,
+      "delta_rps": 0.000593
+    }
+  ],
+  "uncertainty_analysis": {
+    "mean_parameter_variance_home": 0.1239,
+    "mean_parameter_variance_away": 0.1239,
+    "mean_prediction_entropy_e10": 0.997,
+    "mean_prediction_entropy_e13_unc": 1.0093,
+    "sharpness_e10": 0.5137,
+    "sharpness_e13_unc": 0.5043
+  },
+  "promotion_verdict": {
+    "verdict": "E13 RESEARCH ONLY \u2014 KEEP E10 AS CHAMPION",
+    "rationale": "Dynamic state-space and hierarchical team strength yields an RPS of 0.200092 vs Pure E10 Champion 0.199489 (Delta RPS = +0.000603, p = 0.0000). While hierarchical shrinkage improved early-season stability for promoted teams, it provides no statistically significant gain over Pure E10 across the full 7,082 match sample. Pure E10 remains the champion."
+  }
+}

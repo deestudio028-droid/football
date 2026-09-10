@@ -1,0 +1,16 @@
+{
+  "candidate_name": "Joint Coherent Model (Step 3B)",
+  "model_version": "v5-joint-coherent-shadow-1",
+  "platt_blend_weight": 0.2108,
+  "score_space_blend_weight": 0.7892,
+  "platt_parameters": {
+    "a": 0.942103,
+    "b": 0.128363
+  },
+  "g2_parameters": {
+    "low_score_dampening_factor": 0.98,
+    "dixon_coles_rho_fallback": -0.056
+  },
+  "frozen_timestamp": "2026-08-24T20:10:00Z",
+  "governance": "STRICTLY_SHADOW_NO_PRODUCTION_MUTATION"
+}

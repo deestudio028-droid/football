@@ -1,0 +1,7 @@
+fixture_id,matchup,league,source_fixture_date,scheduled_kickoff_utc,scheduled_kickoff_ist,appears_under_correct_date_only,ist_display_valid
+420587329,Roma vs Fiorentina,Serie A,2026-08-24,2026-08-24T18:45:00.000000Z,2026-08-25 12:15 AM IST,True,True
+420587333,Fulham vs Chelsea,Premier League,2026-08-24,2026-08-24T19:00:00.000000Z,2026-08-25 12:30 AM IST,True,True
+420587334,Málaga vs Deportivo A Coruña,La Liga,2026-08-24,2026-08-24T19:30:00.000000Z,2026-08-25 01:00 AM IST,True,True
+420583812,Torino vs AC Milan,Serie A,2026-08-23,2026-08-23T18:45:00.000000Z,2026-08-24 12:15 AM IST,True,True
+420583814,Rennes vs Paris Saint Germain,Ligue 1,2026-08-23,2026-08-23T18:45:00.000000Z,2026-08-24 12:15 AM IST,True,True
+420583819,Elche vs FC Barcelona,La Liga,2026-08-23,2026-08-23T19:30:00.000000Z,2026-08-24 01:00 AM IST,True,True

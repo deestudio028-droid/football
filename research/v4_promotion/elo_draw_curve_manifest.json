@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-21T05:23:00.367413+00:00",
+  "historical_fixtures": 8983,
+  "oos_fixtures": 300,
+  "results_file": "elo_draw_curve_results.json",
+  "report_file": "elo_draw_curve_report.md",
+  "frozen_method_file": "elo_draw_curve_method_frozen.json",
+  "frozen_method_hash": "65dc2cf762f3d78abcf1a617ef23fe00",
+  "integrity_passed": true,
+  "verdict": "B. PROMISING \u2014 NEEDS MORE VALIDATION",
+  "production_modified": false
+}

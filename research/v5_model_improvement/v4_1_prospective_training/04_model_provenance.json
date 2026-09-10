@@ -1,0 +1,56 @@
+{
+  "model_identity": {
+    "model_name": "v4_1_prospective_candidate",
+    "model_version": "v4.1-champion-dc-elo-stacking-2025-26-trained",
+    "status": "PROSPECTIVE_TEST_CANDIDATE",
+    "artifact_path": "data\\models\\v4_1_prospective_candidate_2025_26.pkl",
+    "file_size_bytes": 15506,
+    "md5_hash": "145f918d933eb343c0f63ca342b10289",
+    "sha256_hash": "cbb00b32c3ce4dbf600564a95d11b67a0c236f6b34cd184a9ca8abcc8ab94ac8",
+    "created_at": "2026-08-24T03:33:01.550082+00:00"
+  },
+  "training_data": {
+    "training_seasons": [
+      "2020/2021",
+      "2021/2022",
+      "2022/2023",
+      "2023/2024",
+      "2024/2025",
+      "2025/2026"
+    ],
+    "training_matches_count": 10734,
+    "competitions_included": [
+      200,
+      419,
+      423,
+      477,
+      499
+    ],
+    "competition_names": [
+      "Ligue 1",
+      "La Liga",
+      "Premier League",
+      "Bundesliga",
+      "Serie A"
+    ],
+    "start_date": "2020-08-21T17:00:00.000000Z",
+    "cutoff_date": "2026-05-24T19:45:00.000000Z",
+    "unseen_test_data": "2026 Live Matches"
+  },
+  "architecture_hyperparameters": {
+    "n_features": 91,
+    "model_type": "PoissonRegressor",
+    "alpha": 1.0,
+    "max_iter": 2000,
+    "dixon_coles_rho": -0.08,
+    "elo_k": 20.0,
+    "elo_home_advantage": 100.0,
+    "online_ad_learning_rate": 0.02
+  },
+  "governance": {
+    "frozen_v4_production_hash": "06841f0c03c8597b2b8cd8f8ab064864",
+    "frozen_v4_unmodified": true,
+    "protected_20_assets_verified": true,
+    "prospective_data_excluded_from_training": true
+  }
+}

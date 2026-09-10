@@ -1,0 +1,5 @@
+Dataset,Matches (N),V4.0 Accuracy (%),Candidate Accuracy (%),V4.0 Draw Brier,Candidate Draw Brier,V4.0 Draw LogLoss,Candidate Draw LogLoss,V4.0 Draw ECE,Candidate Draw ECE,V4.0 Mean P(D) (%),Candidate Mean P(D) (%),Actual Draw Rate (%),V4.0 MC LogLoss,Candidate MC LogLoss,Decisions Changed,H -> D,A -> D,Draws Rescued,Damaged Wins,Net Gain/Loss
+Historical Training Era (2020/21 - 2024/25),8983,52.77,52.73,0.188244,0.187915,0.563268,0.562024,0.0239,0.0134,23.06,26.68,25.39,0.991588,0.990344,17,11,6,5,8,-3
+Untouched Holdout Season (2025/2026),1751,51.97,51.86,0.18787,0.18737,0.562633,0.560909,0.0261,0.012,22.86,26.46,25.41,0.992146,0.990422,3,2,1,0,2,-2
+"Full Combined Historical (N=10,734)",10734,52.64,52.59,0.188183,0.187826,0.563164,0.561842,0.0242,0.0129,23.03,26.65,25.4,0.991679,0.990357,20,13,7,5,10,-5
+"Recent Prospective Sample (Aug 22-24, 2026)",33,60.61,60.61,0.178051,0.179236,0.53697,0.541371,0.0407,0.0376,24.29,27.99,24.24,0.936499,0.9409,0,0,0,0,0,0

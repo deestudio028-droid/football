@@ -1,0 +1,123 @@
+{
+  "generated_at": "2026-08-20T15:18:27.267685+00:00",
+  "purpose": "V4 promotion validation \u2014 2025/26 market odds for 20 fixtures",
+  "data_class": "promotion-validation-only",
+  "output_database": "E:\\Football Prediction Project\\research\\v4_promotion\\promotion_market_odds.sqlite",
+  "methodology": {
+    "bookmaker": "Pinnacle",
+    "bookmaker_id": 1,
+    "market": "ft_result",
+    "market_id": 6,
+    "price": "closing",
+    "peak_used": false,
+    "opening_used": false,
+    "fallback_used": false,
+    "devig": "power method, E2 module verbatim"
+  },
+  "fixtures_targeted": 20,
+  "fixtures_ingested": 20,
+  "fixtures_failed": 0,
+  "verification": {
+    "coverage_20_of_20": true,
+    "probability_sums_ok": true,
+    "max_sum_deviation": 2.220446049250313e-16,
+    "all_rows_labelled": true,
+    "all_closing": true,
+    "no_outcome_reference": true
+  },
+  "e2_artefacts_pre": {
+    "research/market_odds/odds_history.sqlite": {
+      "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+      "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+      "sha256": "be370874f1f20a69c8550811816ac10805feec133d97495bda58a9d4e4983710",
+      "status": "identical"
+    },
+    "research/market_odds/research_dataset.sqlite": {
+      "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+      "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+      "sha256": "c6ef881171806b6b9d1d665a53707367cba809c1fb46d53e3c0b9b1af89953aa",
+      "status": "identical"
+    }
+  },
+  "e2_artefacts_post": {
+    "research/market_odds/odds_history.sqlite": {
+      "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+      "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+      "sha256": "be370874f1f20a69c8550811816ac10805feec133d97495bda58a9d4e4983710",
+      "status": "identical"
+    },
+    "research/market_odds/research_dataset.sqlite": {
+      "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+      "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+      "sha256": "c6ef881171806b6b9d1d665a53707367cba809c1fb46d53e3c0b9b1af89953aa",
+      "status": "identical"
+    }
+  },
+  "e2_artefacts_unchanged": true,
+  "protected_pre": {
+    "data/models/v2_poisson_venue.pkl": {
+      "expected": "25935b4e93fc4074f67f16e3181ed4df",
+      "actual": "25935b4e93fc4074f67f16e3181ed4df",
+      "sha256": "9e662d0dfb0a69e4fd6119dad7d089179aaa7f7248d80a1bddc1a03eee835b78",
+      "status": "identical"
+    },
+    "data/models/v1_logreg.pkl": {
+      "expected": "5e504427712b35778bb8a62a8496c7cd",
+      "actual": "5e504427712b35778bb8a62a8496c7cd",
+      "sha256": "20eca80229c39222541fe56f61800a75f744898c291f97c0848509aeeb50b6a2",
+      "status": "identical"
+    },
+    "data/models/v3_poisson_venue_elo_candidate.pkl": {
+      "expected": "a2850a7687822a5916663301f5ccc96c",
+      "actual": "a2850a7687822a5916663301f5ccc96c",
+      "sha256": "97cd5c4bdb63ba31424d8fa74ebe147471eca0376c637e4527e5e7bf05756362",
+      "status": "identical"
+    },
+    "data/processed/features.db": {
+      "expected": "e7ebe7fc07040a5927683c35b6371e63",
+      "actual": "e7ebe7fc07040a5927683c35b6371e63",
+      "sha256": "04b71da9b03efb7a5816ee68fc29ccada165bf3b6b1f6d2c552a9a557327816e",
+      "status": "identical"
+    },
+    "data/processed/matches.db": {
+      "expected": "fdeed042096fa1c851aaee6c84995247",
+      "actual": "fdeed042096fa1c851aaee6c84995247",
+      "sha256": "10d86d374bfd5c41afbe236f34255a5e01a3a03c0251ac7bc94f5d18f1c7bb42",
+      "status": "identical"
+    }
+  },
+  "protected_post": {
+    "data/models/v2_poisson_venue.pkl": {
+      "expected": "25935b4e93fc4074f67f16e3181ed4df",
+      "actual": "25935b4e93fc4074f67f16e3181ed4df",
+      "sha256": "9e662d0dfb0a69e4fd6119dad7d089179aaa7f7248d80a1bddc1a03eee835b78",
+      "status": "identical"
+    },
+    "data/models/v1_logreg.pkl": {
+      "expected": "5e504427712b35778bb8a62a8496c7cd",
+      "actual": "5e504427712b35778bb8a62a8496c7cd",
+      "sha256": "20eca80229c39222541fe56f61800a75f744898c291f97c0848509aeeb50b6a2",
+      "status": "identical"
+    },
+    "data/models/v3_poisson_venue_elo_candidate.pkl": {
+      "expected": "a2850a7687822a5916663301f5ccc96c",
+      "actual": "a2850a7687822a5916663301f5ccc96c",
+      "sha256": "97cd5c4bdb63ba31424d8fa74ebe147471eca0376c637e4527e5e7bf05756362",
+      "status": "identical"
+    },
+    "data/processed/features.db": {
+      "expected": "e7ebe7fc07040a5927683c35b6371e63",
+      "actual": "e7ebe7fc07040a5927683c35b6371e63",
+      "sha256": "04b71da9b03efb7a5816ee68fc29ccada165bf3b6b1f6d2c552a9a557327816e",
+      "status": "identical"
+    },
+    "data/processed/matches.db": {
+      "expected": "fdeed042096fa1c851aaee6c84995247",
+      "actual": "fdeed042096fa1c851aaee6c84995247",
+      "sha256": "10d86d374bfd5c41afbe236f34255a5e01a3a03c0251ac7bc94f5d18f1c7bb42",
+      "status": "identical"
+    }
+  },
+  "protected_unchanged": true,
+  "overall_passed": true
+}

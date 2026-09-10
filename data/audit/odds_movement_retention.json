@@ -1,0 +1,12 @@
+{
+  "page": 1,
+  "per_page": 500,
+  "count": 190,
+  "next_page_url": false,
+  "retention": {
+    "retention_days": 21,
+    "oldest_record_unix": 1769929856,
+    "days_until_oldest_deleted": 17,
+    "note": "Odds movement data is retained for 21 days (3 weeks). After this period, data is automatically cleaned. Use the odds/history endpoint for permanent historical records (opening, closing, peak)."
+  }
+}

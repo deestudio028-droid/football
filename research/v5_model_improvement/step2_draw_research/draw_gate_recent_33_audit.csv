@@ -1,0 +1,34 @@
+fixture_id,date_ist,kickoff_ist,league,home_team,away_team,score,actual_outcome,v4_0_p_H,v4_0_p_D,v4_0_p_A,v4_0_pred,v4_0_correct,prob_gap,lambda_total,abs_elo_diff,gate_p_D_ge_026,gate_gap_le_010,gate_conf_le_045,gate_elo_le_100,gate_ltot_le_250,gate_triggered,gate_decision,gate_correct,gate_impact
+420581351,2026-08-22,12:15 AM IST,Ligue 1,Olympique Marseille,Strasbourg,4-0,H,0.509,0.232,0.259,H,True,0.25,2.977,121.5,False,False,False,False,False,False,H,True,NO_CHANGE
+420581362,2026-08-22,12:30 AM IST,Premier League,Arsenal,Coventry City,3-0,H,0.62,0.184,0.196,H,True,0.424,2.751,397.0,False,False,False,False,False,False,H,True,NO_CHANGE
+420581363,2026-08-22,12:30 AM IST,La Liga,Real Betis,Real Sociedad,1-0,H,0.543,0.222,0.236,H,True,0.307,2.817,196.8,False,False,False,False,False,False,H,True,NO_CHANGE
+420581845,2026-08-22,05:00 PM IST,Premier League,Hull City,Manchester United,2-0,H,0.342,0.262,0.396,A,False,0.054,2.775,40.8,True,True,True,True,False,False,A,False,NO_CHANGE
+420582048,2026-08-22,07:30 PM IST,Premier League,Nottingham Forest,Leeds United,0-1,A,0.454,0.245,0.301,H,False,0.153,2.697,157.8,False,False,False,False,False,False,H,False,NO_CHANGE
+420582049,2026-08-22,07:30 PM IST,Premier League,Ipswich Town,Sunderland,2-1,H,0.316,0.271,0.413,A,False,0.097,2.653,20.0,True,True,True,True,False,False,A,False,NO_CHANGE
+420582050,2026-08-22,07:30 PM IST,Premier League,Everton,Crystal Palace,2-0,H,0.44,0.258,0.303,H,True,0.137,2.628,106.6,False,False,True,False,False,False,H,True,NO_CHANGE
+420582189,2026-08-22,08:30 PM IST,La Liga,Athletic Club,Sevilla,1-3,A,0.455,0.252,0.293,H,False,0.162,2.61,168.0,False,False,False,False,False,False,H,False,NO_CHANGE
+420582220,2026-08-22,08:45 PM IST,Ligue 1,Lens,Auxerre,5-2,H,0.61,0.195,0.195,H,True,0.415,2.916,273.4,False,False,False,False,False,False,H,True,NO_CHANGE
+420582254,2026-08-22,10:00 PM IST,Serie A,Udinese,Como,1-1,D,0.292,0.275,0.432,A,False,0.14,2.59,36.8,True,False,True,True,False,False,A,False,NO_CHANGE
+420582256,2026-08-22,10:00 PM IST,Premier League,Brentford,Tottenham Hotspur,3-0,H,0.422,0.243,0.335,H,True,0.087,2.68,196.8,False,True,True,False,False,False,H,True,NO_CHANGE
+420582255,2026-08-22,10:00 PM IST,Serie A,Inter,Monza,4-1,H,0.789,0.108,0.103,H,True,0.686,3.143,604.1,False,False,False,False,False,False,H,True,NO_CHANGE
+420582269,2026-08-22,11:00 PM IST,La Liga,Valencia,Celta de Vigo,0-0,D,0.464,0.264,0.272,H,False,0.192,2.614,68.6,True,False,False,True,False,False,H,False,NO_CHANGE
+420582301,2026-08-23,12:15 AM IST,Serie A,Parma,Cagliari,0-1,A,0.353,0.274,0.373,A,True,0.02,2.507,112.4,True,True,True,False,False,False,A,True,NO_CHANGE
+420582302,2026-08-23,12:15 AM IST,Serie A,Genoa,Napoli,0-2,A,0.277,0.263,0.46,A,True,0.183,2.563,107.1,True,False,False,False,False,False,A,True,NO_CHANGE
+420582303,2026-08-23,12:15 AM IST,Ligue 1,Troyes,Paris,0-0,D,0.226,0.233,0.541,A,False,0.315,2.903,84.5,False,False,False,True,False,False,A,False,NO_CHANGE
+420582304,2026-08-23,12:15 AM IST,Ligue 1,Toulouse,Olympique Lyonnais,0-2,A,0.338,0.267,0.395,A,True,0.057,2.824,24.3,True,True,True,True,False,False,A,True,NO_CHANGE
+420582305,2026-08-23,12:15 AM IST,Ligue 1,Nice,Lorient,0-0,D,0.393,0.265,0.341,H,False,0.052,2.682,95.8,True,True,True,True,False,False,H,False,NO_CHANGE
+420582306,2026-08-23,12:15 AM IST,Ligue 1,Le Mans,Brest,2-2,D,0.458,0.26,0.281,H,False,0.177,2.727,71.1,True,False,False,True,False,False,H,False,NO_CHANGE
+420582312,2026-08-23,01:00 AM IST,La Liga,Espanyol,Real Madrid,1-2,A,0.255,0.226,0.518,A,True,0.263,2.74,229.7,False,False,False,False,False,False,A,True,NO_CHANGE
+420583622,2026-08-23,06:30 PM IST,Premier League,Manchester City,AFC Bournemouth,2-1,H,0.607,0.192,0.201,H,True,0.406,2.908,276.2,False,False,False,False,False,False,H,True,NO_CHANGE
+420583619,2026-08-23,06:30 PM IST,Ligue 1,Angers SCO,LOSC Lille,0-2,A,0.222,0.245,0.533,A,True,0.311,2.544,164.0,False,False,False,False,False,False,A,True,NO_CHANGE
+420583623,2026-08-23,06:30 PM IST,Premier League,Brighton & Hove Albion,Aston Villa,4-0,H,0.481,0.244,0.275,H,True,0.206,2.774,104.5,False,False,False,False,False,False,H,True,NO_CHANGE
+420583743,2026-08-23,08:30 PM IST,La Liga,Atlético de Madrid,Villarreal,2-2,D,0.402,0.249,0.348,H,False,0.054,2.842,118.4,False,True,True,False,False,False,H,False,NO_CHANGE
+420583751,2026-08-23,08:45 PM IST,Ligue 1,Le Havre,Monaco,0-1,A,0.33,0.265,0.404,A,True,0.074,2.683,90.8,True,True,True,True,False,False,A,True,NO_CHANGE
+420583753,2026-08-23,09:00 PM IST,Premier League,Newcastle United,Liverpool,2-2,D,0.353,0.263,0.384,A,False,0.031,2.838,7.5,True,True,True,True,False,False,A,False,NO_CHANGE
+420583778,2026-08-23,10:00 PM IST,Serie A,Frosinone,Juventus,0-1,A,0.284,0.248,0.467,A,True,0.183,2.692,151.3,False,False,False,False,False,False,A,True,NO_CHANGE
+420583777,2026-08-23,10:00 PM IST,Serie A,Venezia,Lecce,0-2,A,0.4,0.284,0.316,H,False,0.084,2.418,82.1,True,True,True,True,True,True,D,False,NEUTRAL_OVERRIDE
+420583789,2026-08-23,11:00 PM IST,La Liga,Getafe,Racing Santander,1-0,H,0.389,0.277,0.334,H,True,0.055,2.444,110.8,True,True,True,False,True,False,H,True,NO_CHANGE
+420583814,2026-08-24,12:15 AM IST,Ligue 1,Rennes,Paris Saint Germain,2-2,D,0.343,0.245,0.412,A,False,0.069,3.019,95.7,False,True,True,True,False,False,A,False,NO_CHANGE
+420583813,2026-08-24,12:15 AM IST,Serie A,Atalanta,Sassuolo,2-1,H,0.554,0.214,0.232,H,True,0.322,2.779,266.4,False,False,False,False,False,False,H,True,NO_CHANGE
+420583812,2026-08-24,12:15 AM IST,Serie A,Torino,AC Milan,1-2,A,0.361,0.272,0.367,A,True,0.006,2.65,58.1,True,True,True,True,False,False,A,True,NO_CHANGE
+420583819,2026-08-24,01:00 AM IST,La Liga,Elche,FC Barcelona,0-5,A,0.248,0.216,0.536,A,True,0.288,2.676,321.8,False,False,False,False,False,False,A,True,NO_CHANGE

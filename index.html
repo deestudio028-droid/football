@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Prediction Dashboard | Upcoming Batch (10-Sep to 16-Sep 2026)</title>
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM: LIGHT CLEAN ANALYTICS DASHBOARD
+       Zero External Fonts | Zero CDNs | Zero Remote Assets | 100% Offline
+       ========================================================================== */
+    :root {
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-header-navy: #0f172a;
+      --bg-header-sub: #1e293b;
+      --border-subtle: #e2e8f0;
+      --border-medium: #cbd5e1;
+      --text-main: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      
+      --risk-low-bg: #dcfce7;
+      --risk-low-text: #166534;
+      --risk-low-border: #86efac;
+      --risk-med-bg: #fef9c3;
+      --risk-med-text: #854d0e;
+      --risk-med-border: #fde047;
+      --risk-high-bg: #ffedd5;
+      --risk-high-text: #9a3412;
+      --risk-high-border: #fdba74;
+
+      --blue-accent: #2563eb;
+      --blue-subtle: #eff6ff;
+      --mw-bg: #e0e7ff;
+      --mw-text: #3730a3;
+      --mw-border: #c7d2fe;
+
+      --radius-sm: 4px;
+      --radius-md: 6px;
+      --radius-lg: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      padding: 20px 24px;
+      line-height: 1.4;
+      font-size: 13px;
+    }
+
+    .container {
+      max-width: 1620px;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    .top-header {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .title-group h1 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--bg-header-navy);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 2px;
+      letter-spacing: -0.01em;
+    }
+
+    .subtitle-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 0.88rem;
+    }
+
+    .sub-title {
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .date-range-badge {
+      display: inline-block;
+      background: var(--blue-subtle);
+      color: var(--blue-accent);
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+      border: 1px solid #bfdbfe;
+    }
+
+    .mw-alignment-badge {
+      display: inline-block;
+      background: var(--mw-bg);
+      color: var(--mw-text);
+      font-weight: 700;
+      font-size: 0.78rem;
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--mw-border);
+    }
+
+    .meta-strip {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 6px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+
+    .meta-item strong {
+      color: var(--text-secondary);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-print {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: #f1f5f9;
+      color: var(--text-main);
+      border-color: #94a3b8;
+    }
+
+    /* KPI CARDS */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 1200px) {
+      .kpi-row { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .kpi-row { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .kpi-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .kpi-value {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.2;
+    }
+
+    .kpi-subtext {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    /* MULTI-FILTER PANEL */
+    .filter-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-secondary);
+      min-width: 90px;
+    }
+
+    .filter-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .filter-btn {
+      background: #f1f5f9;
+      border: 1px solid var(--border-medium);
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .filter-btn:hover {
+      background: #e2e8f0;
+      color: var(--text-main);
+    }
+
+    .filter-btn.active {
+      background: var(--bg-header-navy);
+      color: #ffffff;
+      border-color: var(--bg-header-navy);
+    }
+
+    .filter-count-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      background: rgba(0,0,0,0.08);
+      padding: 1px 5px;
+      border-radius: 9999px;
+      font-weight: 700;
+    }
+
+    .filter-btn.active .filter-count-badge {
+      background: rgba(255,255,255,0.25);
+      color: #ffffff;
+    }
+
+    .filter-status-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      padding-top: 4px;
+      border-top: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .search-input {
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm);
+      min-width: 200px;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--blue-accent);
+    }
+
+    /* TABLE */
+    .table-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      overflow-x: auto;
+    }
+
+    .prediction-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      text-align: left;
+      min-width: 1260px;
+    }
+
+    .prediction-table th {
+      background: var(--bg-header-navy);
+      padding: 10px 10px;
+      font-weight: 700;
+      font-size: 0.74rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      border: none;
+      color: #f1f5f9;
+      white-space: nowrap;
+    }
+
+    .prediction-table tbody tr {
+      border-bottom: 1px solid #f1f5f9;
+      transition: background-color 0.1s ease;
+    }
+
+    .prediction-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .prediction-table tbody tr:hover {
+      background-color: #f8fafc;
+    }
+
+    .prediction-table td {
+      padding: 7px 10px;
+      vertical-align: middle;
+      color: var(--text-main);
+      white-space: nowrap;
+    }
+
+    .col-date, .col-time {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    .league-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: #f1f5f9;
+      color: #334155;
+      padding: 2px 7px;
+      border-radius: var(--radius-sm);
+      border: 1px solid #cbd5e1;
+    }
+
+    .col-mw { text-align: center; }
+
+    .mw-tag {
+      display: inline-block;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: var(--mw-bg);
+      color: var(--mw-text);
+      padding: 2px 6px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--mw-border);
+      letter-spacing: 0.02em;
+    }
+
+    .home-team { font-weight: 700; color: var(--text-main); }
+    .away-team { font-weight: 500; color: var(--text-secondary); }
+
+    .col-prob {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.8rem;
+      color: #334155;
+      text-align: right;
+    }
+
+    .col-pred { text-align: center; }
+
+    .pred-badge {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      text-align: center;
+      border-radius: 4px;
+      font-weight: 800;
+      font-size: 0.78rem;
+    }
+
+    .pred-H { background: #dbeafe; color: #1e40af; }
+    .pred-D { background: #fef3c7; color: #92400e; }
+    .pred-A { background: #f3e8ff; color: #6b21a8; }
+
+    .col-pred-score { text-align: center; }
+
+    .pred-score-val {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-weight: 600;
+      color: #475569;
+      font-size: 0.88rem;
+    }
+
+    .col-actual-score { text-align: center; }
+
+    .score-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .ft-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #64748b;
+      background: #e2e8f0;
+      padding: 1px 4px;
+      border-radius: 3px;
+      letter-spacing: 0.02em;
+    }
+
+    .score-dash {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .col-status { text-align: center; }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.02em;
+    }
+
+    .status-finished { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .status-upcoming { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+    .status-live { background: #fef2f2; color: #b91c1c; border: 1px solid #fca5a5; }
+
+    .col-risk { text-align: left; }
+
+    .risk-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border-width: 1px;
+      border-style: solid;
+      white-space: nowrap;
+    }
+
+    .risk-dot { font-size: 0.65rem; }
+
+    .risk-low { background-color: var(--risk-low-bg); color: var(--risk-low-text); border-color: var(--risk-low-border); }
+    .risk-medium { background-color: var(--risk-med-bg); color: var(--risk-med-text); border-color: var(--risk-med-border); }
+    .risk-high { background-color: var(--risk-high-bg); color: var(--risk-high-text); border-color: var(--risk-high-border); }
+
+    .col-id { text-align: right; }
+
+    .fixture-id {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .empty-state {
+      display: none;
+      text-align: center;
+      padding: 48px 20px;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      border: 1px dashed var(--border-medium);
+      margin-top: 12px;
+    }
+  
+    /* LIVE SCORE UPDATE STYLING */
+    .live-status-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      border: 1px solid var(--border-medium);
+      background: #ffffff;
+      color: var(--text-secondary);
+    }
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: inline-block;
+    }
+    .live-dot.connecting {
+      background: #eab308;
+      animation: live-pulse 1.2s infinite ease-in-out;
+    }
+    .live-dot.offline {
+      background: #ef4444;
+    }
+    .live-dot.connected {
+      background: #22c55e;
+    }
+    @keyframes live-pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .status-live {
+      background: #fee2e2 !important;
+      color: #b91c1c !important;
+      border: 1px solid #fca5a5 !important;
+      animation: live-pulse 2s infinite ease-in-out;
+    }
+    .score-live {
+      color: #b91c1c !important;
+      font-weight: 800 !important;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="top-header">
+      <div class="title-group">
+        <h1>⚽ Upcoming Football Predictions &amp; Monitoring Dashboard</h1>
+        <div class="subtitle-row">
+          <span class="sub-title">2026/27 Domestic Season Pre-Match Monitoring Batch</span>
+          <span class="date-range-badge">10 Sep 2026 → 16 Sep 2026</span>
+          <span class="mw-alignment-badge">League-Specific Matchweeks (EPL MW4 • La Liga MW5/MW6 • Serie A MW4 • Bundesliga MW3 • Ligue 1 MW4)</span>
+        </div>
+        <div class="meta-strip">
+          <span class="meta-item"><strong>Model:</strong> V4.0 Production (Poisson + Venue + Online AD)</span>
+          <span>•</span>
+          <span class="meta-item"><strong>Batch Fixtures:</strong> 55 (0 Finished • 55 Upcoming)</span>
+          <span>•</span>
+          <span class="meta-item"><strong>Prediction Coverage:</strong> 55 / 55 (100.0%)</span>
+          <span>•</span>
+          <span class="meta-item"><strong>Status:</strong> Pre-Kickoff Forecast Lock</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="live-status-indicator" id="live-connection-widget" title="Live match scores & status updates">
+          <span class="live-dot connecting" id="live-status-dot"></span>
+          <span id="live-status-text">INITIALIZING</span>
+          <span style="color: var(--border-medium);">|</span>
+          <span id="live-last-updated" style="font-family: ui-monospace, monospace; font-size: 0.72rem; color: var(--text-muted);">Syncing...</span>
+        </div>
+
+        <button class="btn-print" onclick="window.print()" title="Print table or save as PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          Print / Save PDF
+        </button>
+      </div>
+    </header>
+
+    <!-- KPI ROW -->
+    <section class="kpi-row" aria-label="Executive Summary KPIs">
+      <div class="kpi-card">
+        <div class="kpi-label">1. Total Batch Fixtures</div>
+        <div class="kpi-value">55</div>
+        <div class="kpi-subtext">55 Upcoming • 0 Finished</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">2. Predictions Complete</div>
+        <div class="kpi-value" style="color: #15803d;">55</div>
+        <div class="kpi-subtext">100.0% verified pre-kickoff coverage</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">3. LOW Draw Risk</div>
+        <div class="kpi-value" style="color: var(--risk-low-text);">🟢 32</div>
+        <div class="kpi-subtext">58.2% low draw likelihood</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">4. MEDIUM Draw Risk</div>
+        <div class="kpi-value" style="color: var(--risk-med-text);">🟡 15</div>
+        <div class="kpi-subtext">27.3% moderate balance</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">5. HIGH Draw Risk</div>
+        <div class="kpi-value" style="color: var(--risk-high-text);">🟠 8</div>
+        <div class="kpi-subtext">14.5% elevated draw risk priority</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">6. Active Leagues &amp; MWs</div>
+        <div class="kpi-value" style="color: var(--mw-text); font-size: 1.15rem;">5 Leagues</div>
+        <div class="kpi-subtext">EPL MW4 • LL MW5/6 • SA MW4 • BL MW3 • L1 MW4</div>
+      </div>
+    </section>
+
+    <!-- MULTI-FILTER PANEL -->
+    <section class="filter-panel" aria-label="Multi-Filter Controls">
+      <!-- League Filter -->
+      <div class="filter-group">
+        <span class="filter-label">League:</span>
+        <div class="filter-btn-group" id="league-filters">
+          <button class="filter-btn active" data-league="ALL" onclick="setLeagueFilter('ALL')">
+            <span>ALL LEAGUES</span>
+            <span class="filter-count-badge">55</span>
+          </button>
+          <button class="filter-btn" data-league="Premier League" onclick="setLeagueFilter('Premier League')">
+            <span>Premier League</span>
+            <span class="filter-count-badge">10</span>
+          </button>
+          <button class="filter-btn" data-league="La Liga" onclick="setLeagueFilter('La Liga')">
+            <span>La Liga</span>
+            <span class="filter-count-badge">17</span>
+          </button>
+          <button class="filter-btn" data-league="Serie A" onclick="setLeagueFilter('Serie A')">
+            <span>Serie A</span>
+            <span class="filter-count-badge">10</span>
+          </button>
+          <button class="filter-btn" data-league="Bundesliga" onclick="setLeagueFilter('Bundesliga')">
+            <span>Bundesliga</span>
+            <span class="filter-count-badge">9</span>
+          </button>
+          <button class="filter-btn" data-league="Ligue 1" onclick="setLeagueFilter('Ligue 1')">
+            <span>Ligue 1</span>
+            <span class="filter-count-badge">9</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Matchweek Filter -->
+      <div class="filter-group">
+        <span class="filter-label">Matchweek:</span>
+        <div class="filter-btn-group" id="mw-filters">
+          <button class="filter-btn active" data-mw="ALL" onclick="setMwFilter('ALL')">
+            <span>ALL</span>
+            <span class="filter-count-badge">55</span>
+          </button>
+          <button class="filter-btn" data-mw="MW3" onclick="setMwFilter('MW3')">
+            <span>MW3 (Bundesliga)</span>
+            <span class="filter-count-badge">9</span>
+          </button>
+          <button class="filter-btn" data-mw="MW4" onclick="setMwFilter('MW4')">
+            <span>MW4 (EPL / SA / L1)</span>
+            <span class="filter-count-badge">29</span>
+          </button>
+          <button class="filter-btn" data-mw="MW5" onclick="setMwFilter('MW5')">
+            <span>MW5 (La Liga Weekend)</span>
+            <span class="filter-count-badge">10</span>
+          </button>
+          <button class="filter-btn" data-mw="MW6" onclick="setMwFilter('MW6')">
+            <span>MW6 (La Liga Midweek)</span>
+            <span class="filter-count-badge">7</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Date Filter -->
+      <div class="filter-group">
+        <span class="filter-label">Date (UTC):</span>
+        <div class="filter-btn-group" id="date-filters">
+          <button class="filter-btn active" data-date="ALL" onclick="setDateFilter('ALL')">
+            <span>ALL DATES</span>
+            <span class="filter-count-badge">55</span>
+          </button>
+          <button class="filter-btn" data-date="2026-09-11" onclick="setDateFilter('2026-09-11')">
+            <span>11 Sep (Fri)</span>
+            <span class="filter-count-badge">4</span>
+          </button>
+          <button class="filter-btn" data-date="2026-09-12" onclick="setDateFilter('2026-09-12')">
+            <span>12 Sep (Sat)</span>
+            <span class="filter-count-badge">25</span>
+          </button>
+          <button class="filter-btn" data-date="2026-09-13" onclick="setDateFilter('2026-09-13')">
+            <span>13 Sep (Sun)</span>
+            <span class="filter-count-badge">14</span>
+          </button>
+          <button class="filter-btn" data-date="2026-09-14" onclick="setDateFilter('2026-09-14')">
+            <span>14 Sep (Mon)</span>
+            <span class="filter-count-badge">5</span>
+          </button>
+          <button class="filter-btn" data-date="2026-09-15" onclick="setDateFilter('2026-09-15')">
+            <span>15 Sep (Tue)</span>
+            <span class="filter-count-badge">3</span>
+          </button>
+          <button class="filter-btn" data-date="2026-09-16" onclick="setDateFilter('2026-09-16')">
+            <span>16 Sep (Wed)</span>
+            <span class="filter-count-badge">4</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Draw Risk Filter -->
+      <div class="filter-group">
+        <span class="filter-label">Draw Risk:</span>
+        <div class="filter-btn-group" id="risk-filters">
+          <button class="filter-btn active" data-risk="ALL" onclick="setRiskFilter('ALL')">
+            <span>ALL</span>
+            <span class="filter-count-badge">55</span>
+          </button>
+          <button class="filter-btn" data-risk="LOW" onclick="setRiskFilter('LOW')">
+            <span>🟢 LOW</span>
+            <span class="filter-count-badge">32</span>
+          </button>
+          <button class="filter-btn" data-risk="MEDIUM" onclick="setRiskFilter('MEDIUM')">
+            <span>🟡 MEDIUM</span>
+            <span class="filter-count-badge">15</span>
+          </button>
+          <button class="filter-btn" data-risk="HIGH" onclick="setRiskFilter('HIGH')">
+            <span>🟠 HIGH</span>
+            <span class="filter-count-badge">8</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Match Status Filter -->
+      <div class="filter-group">
+        <span class="filter-label">Match Status:</span>
+        <div class="filter-btn-group" id="status-filters">
+          <button class="filter-btn active" data-status="ALL" onclick="setStatusFilter('ALL')">
+            <span>ALL</span>
+            <span class="filter-count-badge">55</span>
+          </button>
+          <button class="filter-btn" data-status="UPCOMING" id="filter-btn-upcoming" onclick="setStatusFilter('UPCOMING')">
+            <span>UPCOMING</span>
+            <span class="filter-count-badge">55</span>
+          </button>
+                    <button class="filter-btn" data-status="LIVE" onclick="setStatusFilter('LIVE')">
+            <span>LIVE</span>
+            <span class="filter-count-badge" id="badge-count-live">0</span>
+          </button>
+          <button class="filter-btn" data-status="FINISHED" id="filter-btn-finished" onclick="setStatusFilter('FINISHED')">
+            <span>FINISHED</span>
+            <span class="filter-count-badge">0</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="filter-status-row">
+        <div>
+          Showing: <strong id="visible-count">55</strong> of <strong>55</strong> fixtures | Active: <span id="active-summary">All Leagues • All Matchweeks • All Dates • All Risk • All Status</span>
+        </div>
+        <div>
+          <input type="text" id="search-input" class="search-input" placeholder="Search team or fixture ID..." oninput="handleSearch(this.value)">
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA TABLE (15 COLUMNS AS REQUIRED BY ROY) -->
+    <div class="table-container" id="table-wrapper">
+      <table class="prediction-table" id="prediction-table">
+        <thead>
+          <tr>
+            <th class="col-date">DATE (UTC)</th>
+            <th class="col-time">TIME</th>
+            <th class="col-league">LEAGUE</th>
+            <th class="col-mw">MATCHWEEK</th>
+            <th class="col-team">HOME TEAM</th>
+            <th class="col-team">AWAY TEAM</th>
+            <th class="col-prob">P(H)</th>
+            <th class="col-prob">P(D)</th>
+            <th class="col-prob">P(A)</th>
+            <th class="col-pred">PRED</th>
+            <th class="col-pred-score">PREDICTED SCORE</th>
+            <th class="col-actual-score">ACTUAL SCORE</th>
+            <th class="col-status">MATCH STATUS</th>
+            <th class="col-risk">DRAW RISK</th>
+            <th class="col-id">FIXTURE ID</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <tr class="match-row" data-fixture-id="420629293" data-league="Bundesliga" data-mw="MW3" data-date="2026-09-11" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-11</td>
+            <td class="col-time">18:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW3</span></td>
+            <td class="col-team home-team">FC Union Berlin</td>
+            <td class="col-team away-team">Schalke 04</td>
+            <td class="col-prob">47.8%</td>
+            <td class="col-prob">24.6%</td>
+            <td class="col-prob">27.6%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420629293</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420629297" data-league="Ligue 1" data-mw="MW4" data-date="2026-09-11" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-11</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Rennes</td>
+            <td class="col-team away-team">Olympique Marseille</td>
+            <td class="col-prob">45.9%</td>
+            <td class="col-prob">23.6%</td>
+            <td class="col-prob">30.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420629297</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420629296" data-league="Serie A" data-mw="MW4" data-date="2026-09-11" data-risk="HIGH" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-11</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Venezia</td>
+            <td class="col-team away-team">Fiorentina</td>
+            <td class="col-prob">36.0%</td>
+            <td class="col-prob">27.0%</td>
+            <td class="col-prob">37.0%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420629296</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420636977" data-league="La Liga" data-mw="MW5" data-date="2026-09-11" data-risk="HIGH" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-11</td>
+            <td class="col-time">19:00</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW5</span></td>
+            <td class="col-team home-team">Sevilla</td>
+            <td class="col-team away-team">Valencia</td>
+            <td class="col-prob">39.8%</td>
+            <td class="col-prob">26.7%</td>
+            <td class="col-prob">33.6%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420636977</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420636980" data-league="La Liga" data-mw="MW5" data-date="2026-09-12" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">12:00</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW5</span></td>
+            <td class="col-team home-team">Racing Santander</td>
+            <td class="col-team away-team">Deportivo Alavés</td>
+            <td class="col-prob">42.5%</td>
+            <td class="col-prob">26.0%</td>
+            <td class="col-prob">31.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420636980</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634429" data-league="Serie A" data-mw="MW4" data-date="2026-09-12" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">13:00</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Genoa</td>
+            <td class="col-team away-team">Frosinone</td>
+            <td class="col-prob">41.4%</td>
+            <td class="col-prob">26.0%</td>
+            <td class="col-prob">32.7%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420634429</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634488" data-league="Bundesliga" data-mw="MW3" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">13:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW3</span></td>
+            <td class="col-team home-team">Borussia Dortmund</td>
+            <td class="col-team away-team">Paderborn</td>
+            <td class="col-prob">56.5%</td>
+            <td class="col-prob">22.7%</td>
+            <td class="col-prob">20.8%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420634488</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634485" data-league="Bundesliga" data-mw="MW3" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">13:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW3</span></td>
+            <td class="col-team home-team">FC Augsburg</td>
+            <td class="col-team away-team">Bayer 04 Leverkusen</td>
+            <td class="col-prob">30.2%</td>
+            <td class="col-prob">23.5%</td>
+            <td class="col-prob">46.3%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420634485</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634484" data-league="Bundesliga" data-mw="MW3" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">13:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW3</span></td>
+            <td class="col-team home-team">FSV Mainz 05</td>
+            <td class="col-team away-team">Eintracht Frankfurt</td>
+            <td class="col-prob">46.9%</td>
+            <td class="col-prob">24.2%</td>
+            <td class="col-prob">28.9%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420634484</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634486" data-league="Bundesliga" data-mw="MW3" data-date="2026-09-12" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">13:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW3</span></td>
+            <td class="col-team home-team">SC Freiburg</td>
+            <td class="col-team away-team">Borussia Mönchengladbach</td>
+            <td class="col-prob">45.8%</td>
+            <td class="col-prob">25.0%</td>
+            <td class="col-prob">29.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420634486</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634487" data-league="Bundesliga" data-mw="MW3" data-date="2026-09-12" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">13:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW3</span></td>
+            <td class="col-team home-team">TSG Hoffenheim</td>
+            <td class="col-team away-team">VfB Stuttgart</td>
+            <td class="col-prob">43.0%</td>
+            <td class="col-prob">24.1%</td>
+            <td class="col-prob">32.9%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420634487</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634512" data-league="Premier League" data-mw="MW4" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">14:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">AFC Bournemouth</td>
+            <td class="col-team away-team">Brentford</td>
+            <td class="col-prob">51.6%</td>
+            <td class="col-prob">24.3%</td>
+            <td class="col-prob">24.1%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420634512</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634511" data-league="Premier League" data-mw="MW4" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">14:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Aston Villa</td>
+            <td class="col-team away-team">Nottingham Forest</td>
+            <td class="col-prob">44.7%</td>
+            <td class="col-prob">24.8%</td>
+            <td class="col-prob">30.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420634511</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634510" data-league="Premier League" data-mw="MW4" data-date="2026-09-12" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">14:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Chelsea</td>
+            <td class="col-team away-team">Hull City</td>
+            <td class="col-prob">44.3%</td>
+            <td class="col-prob">25.4%</td>
+            <td class="col-prob">30.3%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420634510</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634509" data-league="Premier League" data-mw="MW4" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">14:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Crystal Palace</td>
+            <td class="col-team away-team">Ipswich Town</td>
+            <td class="col-prob">53.1%</td>
+            <td class="col-prob">23.7%</td>
+            <td class="col-prob">23.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420634509</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634508" data-league="Premier League" data-mw="MW4" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">14:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Liverpool</td>
+            <td class="col-team away-team">Fulham</td>
+            <td class="col-prob">50.7%</td>
+            <td class="col-prob">24.1%</td>
+            <td class="col-prob">25.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420634508</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420636981" data-league="La Liga" data-mw="MW5" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">14:15</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW5</span></td>
+            <td class="col-team home-team">Osasuna</td>
+            <td class="col-team away-team">Espanyol</td>
+            <td class="col-prob">50.2%</td>
+            <td class="col-prob">24.3%</td>
+            <td class="col-prob">25.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420636981</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634716" data-league="Ligue 1" data-mw="MW4" data-date="2026-09-12" data-risk="HIGH" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">15:15</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Strasbourg</td>
+            <td class="col-team away-team">Monaco</td>
+            <td class="col-prob">40.3%</td>
+            <td class="col-prob">24.9%</td>
+            <td class="col-prob">34.8%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420634716</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420638007" data-league="Serie A" data-mw="MW4" data-date="2026-09-12" data-risk="HIGH" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">16:00</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Lazio</td>
+            <td class="col-team away-team">AC Milan</td>
+            <td class="col-prob">41.4%</td>
+            <td class="col-prob">26.4%</td>
+            <td class="col-prob">32.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420638007</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634771" data-league="Bundesliga" data-mw="MW3" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">16:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW3</span></td>
+            <td class="col-team home-team">FC Köln</td>
+            <td class="col-team away-team">Werder Bremen</td>
+            <td class="col-prob">48.1%</td>
+            <td class="col-prob">24.3%</td>
+            <td class="col-prob">27.6%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420634771</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420636985" data-league="La Liga" data-mw="MW5" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">16:30</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW5</span></td>
+            <td class="col-team home-team">Athletic Club</td>
+            <td class="col-team away-team">Elche</td>
+            <td class="col-prob">47.5%</td>
+            <td class="col-prob">25.8%</td>
+            <td class="col-prob">26.7%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420636985</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634770" data-league="Premier League" data-mw="MW4" data-date="2026-09-12" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">16:30</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Tottenham Hotspur</td>
+            <td class="col-team away-team">Everton</td>
+            <td class="col-prob">43.7%</td>
+            <td class="col-prob">25.8%</td>
+            <td class="col-prob">30.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420634770</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634862" data-league="Ligue 1" data-mw="MW4" data-date="2026-09-12" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Auxerre</td>
+            <td class="col-team away-team">Nice</td>
+            <td class="col-prob">45.0%</td>
+            <td class="col-prob">26.3%</td>
+            <td class="col-prob">28.7%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420634862</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634861" data-league="Ligue 1" data-mw="MW4" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Le Havre</td>
+            <td class="col-team away-team">Angers SCO</td>
+            <td class="col-prob">49.1%</td>
+            <td class="col-prob">25.8%</td>
+            <td class="col-prob">25.1%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420634861</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634860" data-league="Ligue 1" data-mw="MW4" data-date="2026-09-12" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Lorient</td>
+            <td class="col-team away-team">Toulouse</td>
+            <td class="col-prob">43.6%</td>
+            <td class="col-prob">25.6%</td>
+            <td class="col-prob">30.8%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420634860</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634859" data-league="Ligue 1" data-mw="MW4" data-date="2026-09-12" data-risk="HIGH" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Paris</td>
+            <td class="col-team away-team">Olympique Lyonnais</td>
+            <td class="col-prob">39.8%</td>
+            <td class="col-prob">25.7%</td>
+            <td class="col-prob">34.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420634859</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634858" data-league="Serie A" data-mw="MW4" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Atalanta</td>
+            <td class="col-team away-team">Cagliari</td>
+            <td class="col-prob">52.4%</td>
+            <td class="col-prob">24.2%</td>
+            <td class="col-prob">23.4%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420634858</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420636979" data-league="La Liga" data-mw="MW5" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">19:00</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW5</span></td>
+            <td class="col-team home-team">Real Madrid</td>
+            <td class="col-team away-team">Rayo Vallecano</td>
+            <td class="col-prob">56.6%</td>
+            <td class="col-prob">23.0%</td>
+            <td class="col-prob">20.4%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420636979</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634863" data-league="Premier League" data-mw="MW4" data-date="2026-09-12" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-12</td>
+            <td class="col-time">19:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Sunderland</td>
+            <td class="col-team away-team">Arsenal</td>
+            <td class="col-prob">27.1%</td>
+            <td class="col-prob">25.7%</td>
+            <td class="col-prob">47.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420634863</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420636984" data-league="La Liga" data-mw="MW5" data-date="2026-09-13" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">12:00</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW5</span></td>
+            <td class="col-team home-team">Celta de Vigo</td>
+            <td class="col-team away-team">Málaga</td>
+            <td class="col-prob">40.1%</td>
+            <td class="col-prob">26.0%</td>
+            <td class="col-prob">33.9%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420636984</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420637600" data-league="Ligue 1" data-mw="MW4" data-date="2026-09-13" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">13:00</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">LOSC Lille</td>
+            <td class="col-team away-team">Troyes</td>
+            <td class="col-prob">71.3%</td>
+            <td class="col-prob">17.8%</td>
+            <td class="col-prob">10.9%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420637600</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420637601" data-league="Premier League" data-mw="MW4" data-date="2026-09-13" data-risk="HIGH" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">13:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Coventry City</td>
+            <td class="col-team away-team">Brighton & Hove Albion</td>
+            <td class="col-prob">33.8%</td>
+            <td class="col-prob">25.7%</td>
+            <td class="col-prob">40.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420637601</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420637598" data-league="Serie A" data-mw="MW4" data-date="2026-09-13" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">13:00</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Lecce</td>
+            <td class="col-team away-team">Monza</td>
+            <td class="col-prob">44.9%</td>
+            <td class="col-prob">27.0%</td>
+            <td class="col-prob">28.1%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420637598</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420637864" data-league="Bundesliga" data-mw="MW3" data-date="2026-09-13" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">13:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW3</span></td>
+            <td class="col-team home-team">RB Leipzig</td>
+            <td class="col-team away-team">Hamburger SV</td>
+            <td class="col-prob">61.0%</td>
+            <td class="col-prob">20.8%</td>
+            <td class="col-prob">18.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420637864</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420636982" data-league="La Liga" data-mw="MW5" data-date="2026-09-13" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">14:15</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW5</span></td>
+            <td class="col-team home-team">Levante</td>
+            <td class="col-team away-team">FC Barcelona</td>
+            <td class="col-prob">29.9%</td>
+            <td class="col-prob">24.8%</td>
+            <td class="col-prob">45.4%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420636982</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420637968" data-league="Ligue 1" data-mw="MW4" data-date="2026-09-13" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">15:15</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Le Mans</td>
+            <td class="col-team away-team">Lens</td>
+            <td class="col-prob">28.6%</td>
+            <td class="col-prob">24.6%</td>
+            <td class="col-prob">46.9%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420637968</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420637973" data-league="Bundesliga" data-mw="MW3" data-date="2026-09-13" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">15:30</td>
+            <td class="col-league"><span class="league-tag">Bundesliga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW3</span></td>
+            <td class="col-team home-team">Elversberg</td>
+            <td class="col-team away-team">FC Bayern München</td>
+            <td class="col-prob">21.4%</td>
+            <td class="col-prob">21.4%</td>
+            <td class="col-prob">57.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420637973</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420637972" data-league="Premier League" data-mw="MW4" data-date="2026-09-13" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">15:30</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Manchester United</td>
+            <td class="col-team away-team">Manchester City</td>
+            <td class="col-prob">31.7%</td>
+            <td class="col-prob">24.9%</td>
+            <td class="col-prob">43.4%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420637972</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420637982" data-league="Serie A" data-mw="MW4" data-date="2026-09-13" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">16:00</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Napoli</td>
+            <td class="col-team away-team">Bologna</td>
+            <td class="col-prob">49.9%</td>
+            <td class="col-prob">25.5%</td>
+            <td class="col-prob">24.6%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420637982</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420636983" data-league="La Liga" data-mw="MW5" data-date="2026-09-13" data-risk="HIGH" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">16:30</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW5</span></td>
+            <td class="col-team home-team">Getafe</td>
+            <td class="col-team away-team">Deportivo A Coruña</td>
+            <td class="col-prob">39.1%</td>
+            <td class="col-prob">27.3%</td>
+            <td class="col-prob">33.6%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420636983</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420638008" data-league="Ligue 1" data-mw="MW4" data-date="2026-09-13" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Ligue 1</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Brest</td>
+            <td class="col-team away-team">Paris Saint Germain</td>
+            <td class="col-prob">21.9%</td>
+            <td class="col-prob">22.5%</td>
+            <td class="col-prob">55.6%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420638008</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420634723" data-league="Serie A" data-mw="MW4" data-date="2026-09-13" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Sassuolo</td>
+            <td class="col-team away-team">Juventus</td>
+            <td class="col-prob">25.9%</td>
+            <td class="col-prob">24.8%</td>
+            <td class="col-prob">49.2%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420634723</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420636978" data-league="La Liga" data-mw="MW5" data-date="2026-09-13" data-risk="HIGH" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-13</td>
+            <td class="col-time">19:00</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW5</span></td>
+            <td class="col-team home-team">Real Sociedad</td>
+            <td class="col-team away-team">Atlético de Madrid</td>
+            <td class="col-prob">36.6%</td>
+            <td class="col-prob">25.5%</td>
+            <td class="col-prob">37.9%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-high"><span class="risk-dot">●</span> 🟠 HIGH</span></td>
+            <td class="col-id"><span class="fixture-id">420636978</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420637599" data-league="Serie A" data-mw="MW4" data-date="2026-09-14" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-14</td>
+            <td class="col-time">16:30</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Como</td>
+            <td class="col-team away-team">Parma</td>
+            <td class="col-prob">62.5%</td>
+            <td class="col-prob">21.9%</td>
+            <td class="col-prob">15.6%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420637599</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420637534" data-league="Serie A" data-mw="MW4" data-date="2026-09-14" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-14</td>
+            <td class="col-time">16:30</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Torino</td>
+            <td class="col-team away-team">Roma</td>
+            <td class="col-prob">28.3%</td>
+            <td class="col-prob">25.0%</td>
+            <td class="col-prob">46.7%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420637534</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420644169" data-league="Serie A" data-mw="MW4" data-date="2026-09-14" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-14</td>
+            <td class="col-time">18:45</td>
+            <td class="col-league"><span class="league-tag">Serie A</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Inter</td>
+            <td class="col-team away-team">Udinese</td>
+            <td class="col-prob">61.9%</td>
+            <td class="col-prob">21.0%</td>
+            <td class="col-prob">17.0%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420644169</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420636976" data-league="La Liga" data-mw="MW5" data-date="2026-09-14" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-14</td>
+            <td class="col-time">19:00</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW5</span></td>
+            <td class="col-team home-team">Villarreal</td>
+            <td class="col-team away-team">Real Betis</td>
+            <td class="col-prob">45.5%</td>
+            <td class="col-prob">24.7%</td>
+            <td class="col-prob">29.8%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420636976</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420644172" data-league="Premier League" data-mw="MW4" data-date="2026-09-14" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-14</td>
+            <td class="col-time">19:00</td>
+            <td class="col-league"><span class="league-tag">Premier League</span></td>
+            <td class="col-mw"><span class="mw-tag">MW4</span></td>
+            <td class="col-team home-team">Leeds United</td>
+            <td class="col-team away-team">Newcastle United</td>
+            <td class="col-prob">42.3%</td>
+            <td class="col-prob">25.2%</td>
+            <td class="col-prob">32.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420644172</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420644690" data-league="La Liga" data-mw="MW6" data-date="2026-09-15" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-15</td>
+            <td class="col-time">17:00</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW6</span></td>
+            <td class="col-team home-team">Rayo Vallecano</td>
+            <td class="col-team away-team">Espanyol</td>
+            <td class="col-prob">51.2%</td>
+            <td class="col-prob">24.8%</td>
+            <td class="col-prob">24.0%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420644690</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420644698" data-league="La Liga" data-mw="MW6" data-date="2026-09-15" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-15</td>
+            <td class="col-time">18:00</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW6</span></td>
+            <td class="col-team home-team">Deportivo Alavés</td>
+            <td class="col-team away-team">Valencia</td>
+            <td class="col-prob">42.4%</td>
+            <td class="col-prob">26.5%</td>
+            <td class="col-prob">31.1%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420644698</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420644694" data-league="La Liga" data-mw="MW6" data-date="2026-09-15" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-15</td>
+            <td class="col-time">19:30</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW6</span></td>
+            <td class="col-team home-team">Elche</td>
+            <td class="col-team away-team">Real Madrid</td>
+            <td class="col-prob">27.2%</td>
+            <td class="col-prob">25.2%</td>
+            <td class="col-prob">47.6%</td>
+            <td class="col-pred"><span class="pred-badge pred-A">A</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">1-2</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420644694</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420644697" data-league="La Liga" data-mw="MW6" data-date="2026-09-16" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-16</td>
+            <td class="col-time">17:00</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW6</span></td>
+            <td class="col-team home-team">Atlético de Madrid</td>
+            <td class="col-team away-team">Osasuna</td>
+            <td class="col-prob">46.4%</td>
+            <td class="col-prob">24.7%</td>
+            <td class="col-prob">28.9%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420644697</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420644695" data-league="La Liga" data-mw="MW6" data-date="2026-09-16" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-16</td>
+            <td class="col-time">17:00</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW6</span></td>
+            <td class="col-team home-team">Deportivo A Coruña</td>
+            <td class="col-team away-team">Sevilla</td>
+            <td class="col-prob">42.6%</td>
+            <td class="col-prob">26.0%</td>
+            <td class="col-prob">31.5%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420644695</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420644693" data-league="La Liga" data-mw="MW6" data-date="2026-09-16" data-risk="LOW" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-16</td>
+            <td class="col-time">19:30</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW6</span></td>
+            <td class="col-team home-team">FC Barcelona</td>
+            <td class="col-team away-team">Racing Santander</td>
+            <td class="col-prob">63.8%</td>
+            <td class="col-prob">20.4%</td>
+            <td class="col-prob">15.9%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-low"><span class="risk-dot">●</span> 🟢 LOW</span></td>
+            <td class="col-id"><span class="fixture-id">420644693</span></td>
+          </tr>
+          <tr class="match-row" data-fixture-id="420644692" data-league="La Liga" data-mw="MW6" data-date="2026-09-16" data-risk="MEDIUM" data-status="UPCOMING" id="filter-btn-upcoming">
+            <td class="col-date">2026-09-16</td>
+            <td class="col-time">19:30</td>
+            <td class="col-league"><span class="league-tag">La Liga</span></td>
+            <td class="col-mw"><span class="mw-tag">MW6</span></td>
+            <td class="col-team home-team">Levante</td>
+            <td class="col-team away-team">Athletic Club</td>
+            <td class="col-prob">44.0%</td>
+            <td class="col-prob">25.2%</td>
+            <td class="col-prob">30.8%</td>
+            <td class="col-pred"><span class="pred-badge pred-H">H</span></td>
+            <td class="col-pred-score"><span class="pred-score-val">2-1</span></td>
+            <td class="col-actual-score"><span class="score-dash">—</span></td>
+            <td class="col-status"><span class="status-badge status-upcoming">UPCOMING</span></td>
+            <td class="col-risk"><span class="risk-badge risk-medium"><span class="risk-dot">●</span> 🟡 MEDIUM</span></td>
+            <td class="col-id"><span class="fixture-id">420644692</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="empty-state" id="empty-state">
+      <h3>No matches match the selected filter criteria</h3>
+      <p style="color: var(--text-muted); margin-top: 4px;">Try selecting different league, matchweek, or risk filters.</p>
+    </div>
+
+  </div>
+
+  <script>
+    /* ==========================================================================
+       CLIENT-SIDE MULTI-FILTERING (Zero External Dependencies, 100% Offline)
+       ========================================================================== */
+    var activeLeague = 'ALL';
+    var activeMw = 'ALL';
+    var activeDate = 'ALL';
+    var activeRisk = 'ALL';
+    var activeStatus = 'ALL';
+    var searchQuery = '';
+
+    function updateView() {
+      var rows = document.querySelectorAll('.match-row');
+      var visibleCount = 0;
+
+      rows.forEach(function(row) {
+        var l = row.getAttribute('data-league');
+        var mw = row.getAttribute('data-mw');
+        var d = row.getAttribute('data-date');
+        var r = row.getAttribute('data-risk');
+        var s = row.getAttribute('data-status');
+        var text = row.textContent.toLowerCase();
+
+        var matchLeague = (activeLeague === 'ALL' || l === activeLeague);
+        var matchMw = (activeMw === 'ALL' || mw === activeMw);
+        var matchDate = (activeDate === 'ALL' || d === activeDate);
+        var matchRisk = (activeRisk === 'ALL' || r === activeRisk);
+        var matchStatus = (activeStatus === 'ALL' || s === activeStatus);
+        var matchSearch = (!searchQuery || text.indexOf(searchQuery) !== -1);
+
+        if (matchLeague && matchMw && matchDate && matchRisk && matchStatus && matchSearch) {
+          row.style.display = '';
+          visibleCount++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      document.getElementById('visible-count').textContent = visibleCount;
+      var emptyState = document.getElementById('empty-state');
+      var tableWrapper = document.getElementById('table-wrapper');
+      if (visibleCount === 0) {
+        emptyState.style.display = 'block';
+        tableWrapper.style.display = 'none';
+      } else {
+        emptyState.style.display = 'none';
+        tableWrapper.style.display = 'block';
+      }
+
+      // Summary string
+      var summaryParts = [];
+      summaryParts.push(activeLeague === 'ALL' ? 'All Leagues' : activeLeague);
+      summaryParts.push(activeMw === 'ALL' ? 'All Matchweeks' : activeMw);
+      summaryParts.push(activeDate === 'ALL' ? 'All Dates' : activeDate);
+      summaryParts.push(activeRisk === 'ALL' ? 'All Risk' : activeRisk + ' Risk');
+      summaryParts.push(activeStatus === 'ALL' ? 'All Status' : activeStatus);
+      if (searchQuery) summaryParts.push('Search: "' + searchQuery + '"');
+      document.getElementById('active-summary').textContent = summaryParts.join(' • ');
+    }
+
+    function setLeagueFilter(league) {
+      activeLeague = league;
+      document.querySelectorAll('#league-filters .filter-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-league') === league);
+      });
+      updateView();
+    }
+
+    function setMwFilter(mw) {
+      activeMw = mw;
+      document.querySelectorAll('#mw-filters .filter-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-mw') === mw);
+      });
+      updateView();
+    }
+
+    function setDateFilter(date) {
+      activeDate = date;
+      document.querySelectorAll('#date-filters .filter-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-date') === date);
+      });
+      updateView();
+    }
+
+    function setRiskFilter(risk) {
+      activeRisk = risk;
+      document.querySelectorAll('#risk-filters .filter-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-risk') === risk);
+      });
+      updateView();
+    }
+
+    function setStatusFilter(status) {
+      activeStatus = status;
+      document.querySelectorAll('#status-filters .filter-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-status') === status);
+      });
+      updateView();
+    }
+
+    function handleSearch(val) {
+      searchQuery = val.trim().toLowerCase();
+      updateView();
+    }
+  
+    /* ==========================================================================
+       LIVE SCORES CLIENT INTEGRATION (OddAlerts API via Railway Backend)
+       - Polls /api/live-scores every 30 seconds
+       - Safe failover: Keeps existing static prediction data intact if backend is offline
+       - Never modifies pre-kickoff predictions (P(H), P(D), P(A), PRED, scores, Draw Risk)
+       - Only updates: ACTUAL SCORE, MATCH STATUS, and LIVE MINUTE
+       ========================================================================== */
+    // Configurable Railway backend URL (can be overridden via window.LIVE_SCORES_API_URL)
+    var LIVE_SCORES_API_URL = (window.LIVE_SCORES_API_URL || 'http://127.0.0.1:8000').replace(/\/+$/, '') + '/api/live-scores';
+    var POLLING_INTERVAL_MS = 30000;
+    var consecutiveFailures = 0;
+    var pollingTimer = null;
+
+    function setConnectionStatus(status, timeText) {
+      var dot = document.getElementById('live-status-dot');
+      var text = document.getElementById('live-status-text');
+      var timeEl = document.getElementById('live-last-updated');
+
+      if (!dot || !text || !timeEl) return;
+
+      if (status === 'connected') {
+        dot.className = 'live-dot connected';
+        text.textContent = 'LIVE DATA CONNECTED';
+        if (timeText) timeEl.textContent = 'Updated: ' + timeText;
+      } else if (status === 'reconnecting') {
+        dot.className = 'live-dot connecting';
+        text.textContent = 'RECONNECTING';
+        if (timeText) timeEl.textContent = timeText;
+      } else {
+        dot.className = 'live-dot offline';
+        text.textContent = 'LIVE DATA OFFLINE';
+        if (timeText) timeEl.textContent = timeText;
+      }
+    }
+
+    function updateStatusFilterCounts() {
+      var rows = document.querySelectorAll('.match-row');
+      var counts = { ALL: rows.length, UPCOMING: 0, LIVE: 0, FINISHED: 0 };
+
+      rows.forEach(function(r) {
+        var st = r.getAttribute('data-status') || 'UPCOMING';
+        if (counts.hasOwnProperty(st)) {
+          counts[st]++;
+        }
+      });
+
+      var badgeAll = document.querySelector('#status-filters [data-status="ALL"] .filter-count-badge');
+      var badgeUpcoming = document.querySelector('#status-filters [data-status="UPCOMING"] .filter-count-badge');
+      var badgeLive = document.getElementById('badge-count-live');
+      var badgeFinished = document.querySelector('#status-filters [data-status="FINISHED"] .filter-count-badge');
+
+      if (badgeAll) badgeAll.textContent = counts.ALL;
+      if (badgeUpcoming) badgeUpcoming.textContent = counts.UPCOMING;
+      if (badgeLive) badgeLive.textContent = counts.LIVE;
+      if (badgeFinished) badgeFinished.textContent = counts.FINISHED;
+    }
+
+    function applyLiveScores(data) {
+      if (!data || !data.scores) return;
+
+      var scoresMap = data.scores;
+      var hasAnyLive = false;
+
+      Object.keys(scoresMap).forEach(function(fid) {
+        var item = scoresMap[fid];
+        var row = document.querySelector('.match-row[data-fixture-id="' + fid + '"]');
+        if (!row) return;
+
+        var scoreCell = row.querySelector('.col-actual-score');
+        var statusCell = row.querySelector('.col-status');
+
+        if (!scoreCell || !statusCell) return;
+
+        var status = item.status || 'UPCOMING';
+        var statusLabel = item.status_label || status;
+        var displayScore = item.display_score || '—';
+        var isFinished = Boolean(item.is_finished);
+
+        // Map row data-status for client-side filtering
+        if (status === 'LIVE' || status === 'HT') {
+          row.setAttribute('data-status', 'LIVE');
+          hasAnyLive = true;
+        } else if (isFinished || status === 'FT' || status === 'AET' || status === 'PEN') {
+          row.setAttribute('data-status', 'FINISHED');
+        } else {
+          row.setAttribute('data-status', 'UPCOMING');
+        }
+
+        // Update Actual Score cell
+        if (status === 'UPCOMING' || displayScore === '—') {
+          scoreCell.innerHTML = '<span class="score-dash">—</span>';
+        } else if (isFinished) {
+          scoreCell.innerHTML = '<span class="score-badge">' + displayScore + ' <span class="ft-tag">' + status + '</span></span>';
+        } else {
+          scoreCell.innerHTML = '<span class="score-badge score-live">' + displayScore + '</span>';
+        }
+
+        // Update Match Status cell
+        if (status === 'UPCOMING') {
+          statusCell.innerHTML = '<span class="status-badge status-upcoming">UPCOMING</span>';
+        } else if (status === 'LIVE') {
+          statusCell.innerHTML = '<span class="status-badge status-live">' + statusLabel + '</span>';
+        } else if (status === 'HT') {
+          statusCell.innerHTML = '<span class="status-badge status-live" style="background:#fef3c7; color:#92400e; border-color:#fde047;">' + statusLabel + '</span>';
+        } else if (isFinished) {
+          statusCell.innerHTML = '<span class="status-badge status-finished">' + statusLabel + '</span>';
+        } else {
+          statusCell.innerHTML = '<span class="status-badge status-finished">' + statusLabel + '</span>';
+        }
+      });
+
+      updateStatusFilterCounts();
+      updateView();
+
+      var timeStr = new Date().toLocaleTimeString('en-GB', { timeZone: 'UTC' }) + ' UTC';
+      setConnectionStatus('connected', timeStr);
+      consecutiveFailures = 0;
+    }
+
+    function pollLiveScores() {
+      fetch(LIVE_SCORES_API_URL, { cache: 'no-store' })
+        .then(function(resp) {
+          if (!resp.ok) {
+            throw new Error('HTTP ' + resp.status);
+          }
+          return resp.json();
+        })
+        .then(function(json) {
+          applyLiveScores(json);
+        })
+        .catch(function(err) {
+          consecutiveFailures++;
+          var nowUtc = new Date().toLocaleTimeString('en-GB', { timeZone: 'UTC' }) + ' UTC';
+          if (consecutiveFailures >= 3) {
+            setConnectionStatus('offline', 'Offline (' + nowUtc + ')');
+          } else {
+            setConnectionStatus('reconnecting', 'Retrying (' + nowUtc + ')');
+          }
+          // Do NOT touch existing scores or throw errors; gracefully keep static predictions
+        });
+    }
+
+    // Start polling on DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+      pollLiveScores();
+      pollingTimer = setInterval(pollLiveScores, POLLING_INTERVAL_MS);
+    });
+
+  </script>
+</body>
+</html>

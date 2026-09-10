@@ -1,0 +1,181 @@
+{
+  "evaluation_timestamp": "2026-08-29T09:25:13.019817+00:00",
+  "sample_size": 33,
+  "evaluation_period": "2026-08-22 to 2026-08-22",
+  "v4_baseline": {
+    "accuracy_1x2_pct": 60.61,
+    "accuracy_1x2_ci_95": [
+      43.68,
+      75.32
+    ],
+    "correct_count": 20,
+    "total_count": 33,
+    "mean_brier_score": 0.5497,
+    "mean_log_loss": 0.9367,
+    "home_precision_pct": 61.11,
+    "home_predictions": 18,
+    "draw_precision_pct": 0.0,
+    "draw_predictions": 0,
+    "away_precision_pct": 60.0,
+    "away_predictions": 15,
+    "exact_score_accuracy_pct": 9.09,
+    "exact_score_ci_95": [
+      3.14,
+      23.57
+    ],
+    "exact_score_hits": 3
+  },
+  "confidence_stratification": [
+    {
+      "bucket": "40\u201349%",
+      "sample_count": 15,
+      "accuracy_pct": 40.0,
+      "correct_count": 6,
+      "average_predicted_prob_pct": 43.76,
+      "calibration_gap_pct": -3.76,
+      "mean_brier_score": 0.6596
+    },
+    {
+      "bucket": "50\u201359%",
+      "sample_count": 7,
+      "accuracy_pct": 85.71,
+      "correct_count": 6,
+      "average_predicted_prob_pct": 53.34,
+      "calibration_gap_pct": 32.37,
+      "mean_brier_score": 0.4151
+    },
+    {
+      "bucket": "60\u201369%",
+      "sample_count": 3,
+      "accuracy_pct": 100.0,
+      "correct_count": 3,
+      "average_predicted_prob_pct": 61.23,
+      "calibration_gap_pct": 38.77,
+      "mean_brier_score": 0.2255
+    },
+    {
+      "bucket": "70%+",
+      "sample_count": 1,
+      "accuracy_pct": 100.0,
+      "correct_count": 1,
+      "average_predicted_prob_pct": 78.9,
+      "calibration_gap_pct": 21.1,
+      "mean_brier_score": 0.0668
+    }
+  ],
+  "league_analysis": {
+    "La Liga": {
+      "sample_count": 7,
+      "accuracy_1x2_pct": 57.14,
+      "correct_count": 4,
+      "exact_score_accuracy_pct": 14.29,
+      "exact_score_hits": 1,
+      "mean_brier_score": 0.5708,
+      "mean_log_loss": 0.9694
+    },
+    "Ligue 1": {
+      "sample_count": 9,
+      "accuracy_1x2_pct": 55.56,
+      "correct_count": 5,
+      "exact_score_accuracy_pct": 0.0,
+      "exact_score_hits": 0,
+      "mean_brier_score": 0.6045,
+      "mean_log_loss": 1.0192
+    },
+    "Premier League": {
+      "sample_count": 9,
+      "accuracy_1x2_pct": 55.56,
+      "correct_count": 5,
+      "exact_score_accuracy_pct": 0.0,
+      "exact_score_hits": 0,
+      "mean_brier_score": 0.5301,
+      "mean_log_loss": 0.906
+    },
+    "Serie A": {
+      "sample_count": 8,
+      "accuracy_1x2_pct": 75.0,
+      "correct_count": 6,
+      "exact_score_accuracy_pct": 25.0,
+      "exact_score_hits": 2,
+      "mean_brier_score": 0.4916,
+      "mean_log_loss": 0.8496
+    }
+  },
+  "historical_memory_monitoring": {
+    "evidence_distribution": {
+      "HIGH": {
+        "sample_count": 0,
+        "accuracy_pct": 0.0,
+        "correct_count": 0
+      },
+      "MODERATE": {
+        "sample_count": 0,
+        "accuracy_pct": 0.0,
+        "correct_count": 0
+      },
+      "CAUTION": {
+        "sample_count": 0,
+        "accuracy_pct": 0.0,
+        "correct_count": 0
+      },
+      "INSUFFICIENT": {
+        "sample_count": 33,
+        "accuracy_pct": 60.61,
+        "correct_count": 20
+      }
+    },
+    "total_monitored": 33
+  },
+  "correct_score_refinement_monitoring": {
+    "baseline_exact_score_pct": 9.09,
+    "refined_exact_score_pct": 9.09,
+    "accuracy_delta_pct": 0.0,
+    "refinements_improved": 0,
+    "refinements_worsened": 0,
+    "refinements_unchanged": 33
+  },
+  "walk_forward_trend": [
+    {
+      "matches_evaluated": 5,
+      "cumulative_accuracy_1x2_pct": 60.0,
+      "cumulative_exact_score_pct": 0.0
+    },
+    {
+      "matches_evaluated": 10,
+      "cumulative_accuracy_1x2_pct": 60.0,
+      "cumulative_exact_score_pct": 0.0
+    },
+    {
+      "matches_evaluated": 15,
+      "cumulative_accuracy_1x2_pct": 53.33,
+      "cumulative_exact_score_pct": 0.0
+    },
+    {
+      "matches_evaluated": 20,
+      "cumulative_accuracy_1x2_pct": 55.0,
+      "cumulative_exact_score_pct": 5.0
+    },
+    {
+      "matches_evaluated": 25,
+      "cumulative_accuracy_1x2_pct": 60.0,
+      "cumulative_exact_score_pct": 4.0
+    },
+    {
+      "matches_evaluated": 30,
+      "cumulative_accuracy_1x2_pct": 56.67,
+      "cumulative_exact_score_pct": 3.33
+    },
+    {
+      "matches_evaluated": 33,
+      "cumulative_accuracy_1x2_pct": 60.61,
+      "cumulative_exact_score_pct": 9.09
+    }
+  ],
+  "data_integrity_audit": {
+    "total_records": 33,
+    "invalid_timing_count": 0,
+    "invalid_prob_count": 0,
+    "flagged_issues": []
+  },
+  "final_verdict": "INSUFFICIENT DATA"
+}

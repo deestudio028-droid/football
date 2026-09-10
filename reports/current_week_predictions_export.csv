@@ -1,0 +1,49 @@
+Fixture ID,Date (UTC),Kickoff (UTC),League,Home Team,Away Team,P(Home),P(Draw),P(Away),V4.0 Pred,Expected Goals H,Expected Goals A,Predicted Score,Draw Risk,Status
+420579222,2026-08-27,18:30,La Liga,Celta de Vigo,Osasuna,39.4%,25.3%,35.3%,H,1.10,0.99,2-1,LOW,FT
+420591557,2026-08-27,19:00,La Liga,FC Barcelona,Athletic Club,63.6%,17.3%,19.1%,H,1.78,0.54,2-0,LOW,FT
+420591910,2026-08-28,17:00,La Liga,Racing Santander,Elche,45.3%,25.5%,29.2%,H,1.27,0.82,2-1,LOW,FT
+420591966,2026-08-28,18:30,Bundesliga,FC Bayern München,VfB Stuttgart,67.3%,15.4%,17.2%,H,1.88,0.48,2-0,LOW,FT
+420591973,2026-08-28,18:45,Serie A,AC Milan,Venezia,56.5%,20.4%,23.1%,H,1.58,0.65,2-1,LOW,FT
+420592005,2026-08-28,19:00,Premier League,Crystal Palace,Manchester City,24.1%,22.5%,53.4%,A,0.68,1.50,1-2,LOW,FT
+420591974,2026-08-28,19:00,Ligue 1,LOSC Lille,Paris Saint Germain,35.5%,27.4%,37.2%,A,0.99,1.04,1-2,LOW,FT
+420592009,2026-08-28,19:30,La Liga,Deportivo Alavés,Villarreal,36.8%,26.2%,37.0%,A,1.03,1.04,1-2,LOW,FT
+420592461,2026-08-29,11:30,Premier League,Liverpool,Nottingham Forest,51.9%,21.6%,26.5%,H,1.45,0.74,2-1,LOW,NS
+420592585,2026-08-29,13:30,Bundesliga,FC Union Berlin,Eintracht Frankfurt,37.1%,27.2%,35.7%,H,1.04,1.00,2-1,LOW,NS
+420592586,2026-08-29,13:30,Bundesliga,FSV Mainz 05,Paderborn,48.5%,24.5%,27.0%,H,1.36,0.76,2-1,LOW,NS
+420592584,2026-08-29,13:30,Bundesliga,FC Köln,TSG Hoffenheim,37.8%,26.1%,36.1%,H,1.06,1.01,2-1,LOW,NS
+420592583,2026-08-29,13:30,Bundesliga,Elversberg,Bayer 04 Leverkusen,32.0%,24.5%,43.5%,A,0.90,1.22,1-2,LOW,NS
+420592587,2026-08-29,13:30,Bundesliga,RB Leipzig,Borussia Mönchengladbach,60.1%,19.6%,20.3%,H,1.68,0.57,2-0,LOW,NS
+420592601,2026-08-29,14:00,Premier League,Coventry City,Hull City,42.2%,25.7%,32.1%,H,1.18,0.90,2-1,LOW,NS
+420592602,2026-08-29,14:00,Premier League,AFC Bournemouth,Everton,51.7%,23.1%,25.2%,H,1.45,0.71,2-1,LOW,NS
+420592841,2026-08-29,15:00,La Liga,Levante,Real Betis,41.6%,26.2%,32.2%,H,1.17,0.90,2-1,LOW,NS
+420592903,2026-08-29,15:15,Ligue 1,Strasbourg,Lens,31.6%,26.1%,42.3%,A,0.89,1.18,1-2,LOW,NS
+420592941,2026-08-29,16:30,Premier League,Tottenham Hotspur,Newcastle United,41.4%,26.9%,31.7%,H,1.16,0.89,2-1,LOW,NS
+420592938,2026-08-29,16:30,Serie A,Sassuolo,Torino,40.1%,26.7%,33.2%,H,1.12,0.93,2-1,LOW,NS
+420592939,2026-08-29,16:30,Serie A,Monza,Udinese,29.3%,26.0%,44.7%,A,0.82,1.25,1-2,LOW,NS
+420592940,2026-08-29,16:30,Serie A,Fiorentina,Frosinone,44.3%,24.1%,31.6%,H,1.24,0.89,2-1,LOW,NS
+420592944,2026-08-29,16:30,Bundesliga,Borussia Dortmund,Hamburger SV,62.7%,18.3%,19.0%,H,1.76,0.53,2-0,LOW,NS
+420592952,2026-08-29,17:00,La Liga,Real Sociedad,Espanyol,46.3%,24.2%,29.5%,H,1.30,0.83,2-1,LOW,NS
+420592995,2026-08-29,18:45,Serie A,Juventus,Parma,67.4%,17.5%,15.2%,H,1.89,0.43,2-0,LOW,NS
+420592999,2026-08-29,18:45,Ligue 1,Auxerre,Angers SCO,52.5%,24.5%,23.0%,H,1.47,0.64,2-1,LOW,NS
+420592996,2026-08-29,18:45,Ligue 1,Olympique Lyonnais,Le Havre,55.9%,20.7%,23.3%,H,1.56,0.65,2-1,LOW,NS
+420592997,2026-08-29,18:45,Ligue 1,Lorient,Troyes,61.9%,19.5%,18.6%,H,1.73,0.52,2-0,LOW,NS
+420592998,2026-08-29,18:45,Ligue 1,Brest,Toulouse,39.7%,26.2%,34.1%,H,1.11,0.95,2-1,LOW,NS
+420593006,2026-08-29,19:30,La Liga,Sevilla,Atlético de Madrid,37.2%,26.4%,36.5%,H,1.04,1.02,2-1,LOW,NS
+420593586,2026-08-30,13:00,Premier League,Leeds United,Brentford,44.4%,26.0%,29.6%,H,1.24,0.83,2-1,LOW,NS
+420593587,2026-08-30,13:00,Premier League,Chelsea,Brighton & Hove Albion,35.6%,26.0%,38.4%,A,1.00,1.07,1-2,LOW,NS
+420593585,2026-08-30,13:00,Premier League,Sunderland,Fulham,40.0%,27.0%,33.0%,H,1.12,0.92,2-1,LOW,NS
+420593584,2026-08-30,13:00,Ligue 1,Paris,Nice,49.4%,25.2%,25.4%,H,1.38,0.71,2-1,LOW,NS
+420593696,2026-08-30,13:30,Bundesliga,SC Freiburg,Werder Bremen,48.5%,24.0%,27.5%,H,1.36,0.77,2-1,LOW,NS
+420593770,2026-08-30,15:00,La Liga,Real Madrid,Málaga,62.8%,18.0%,19.2%,H,1.76,0.54,2-0,LOW,NS
+420593778,2026-08-30,15:15,Ligue 1,Rennes,Le Mans,55.3%,20.7%,23.9%,H,1.55,0.67,2-1,LOW,NS
+420593779,2026-08-30,15:30,Premier League,Manchester United,Ipswich Town,65.9%,16.8%,17.3%,H,1.84,0.48,2-0,LOW,NS
+420593780,2026-08-30,15:30,Bundesliga,FC Augsburg,Schalke 04,50.6%,22.1%,27.3%,H,1.42,0.76,2-1,LOW,NS
+420593795,2026-08-30,16:30,Serie A,Napoli,Como,40.1%,26.5%,33.3%,H,1.12,0.93,2-1,LOW,NS
+420593808,2026-08-30,17:30,La Liga,Deportivo A Coruña,Valencia,41.0%,26.8%,32.2%,H,1.15,0.90,2-1,LOW,NS
+420593828,2026-08-30,18:45,Serie A,Cagliari,Inter,24.6%,21.4%,53.9%,A,0.69,1.51,1-2,LOW,NS
+420593827,2026-08-30,18:45,Serie A,Lazio,Genoa,48.2%,25.1%,26.7%,H,1.35,0.75,2-1,LOW,NS
+420593829,2026-08-30,18:45,Ligue 1,Monaco,Olympique Marseille,42.9%,24.4%,32.7%,H,1.20,0.92,2-1,LOW,NS
+420593832,2026-08-30,19:30,La Liga,Celta de Vigo,Athletic Club,36.7%,26.6%,36.7%,A,1.03,1.03,1-2,LOW,NS
+420599457,2026-08-31,16:30,Serie A,Lecce,Roma,23.0%,24.1%,52.9%,A,0.64,1.48,1-2,LOW,NS
+420599468,2026-08-31,18:45,Serie A,Atalanta,Bologna,47.4%,24.7%,27.9%,H,1.50,1.08,2-1,LOW,NS
+420599470,2026-08-31,19:00,Premier League,Aston Villa,Arsenal,30.7%,25.8%,43.4%,A,1.20,1.48,1-2,LOW,NS

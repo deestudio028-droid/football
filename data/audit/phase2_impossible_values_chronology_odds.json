@@ -1,0 +1,214 @@
+{
+  "impossible_values": {
+    "negative_home_goals": {
+      "count": 0,
+      "sample_fixture_ids": []
+    },
+    "negative_away_goals": {
+      "count": 0,
+      "sample_fixture_ids": []
+    },
+    "negative_shots": {
+      "count": 0,
+      "sample_fixture_ids": []
+    },
+    "negative_shots_on": {
+      "count": 0,
+      "sample_fixture_ids": []
+    },
+    "negative_cards": {
+      "count": 0,
+      "sample_fixture_ids": []
+    },
+    "negative_corners": {
+      "count": 0,
+      "sample_fixture_ids": []
+    },
+    "negative_fouls": {
+      "count": 0,
+      "sample_fixture_ids": []
+    },
+    "possession_out_of_range": {
+      "count": 0,
+      "sample_fixture_ids": []
+    },
+    "negative_xg": {
+      "count": 0,
+      "sample_fixture_ids": []
+    },
+    "negative_xgot": {
+      "count": 0,
+      "sample_fixture_ids": []
+    },
+    "invalid_unix_timestamp": {
+      "count": 0,
+      "sample_fixture_ids": []
+    },
+    "possession_sum_not_100": {
+      "count": 0,
+      "sample_fixture_ids": []
+    }
+  },
+  "chronological_out_of_season_window": [],
+  "future_fixtures": {
+    "count": 0,
+    "sample": []
+  },
+  "future_fixtures_marked_FT": 0,
+  "fixture_dir_id_mismatches": [],
+  "fixture_dir_id_mismatch_count": 0,
+  "db_rows_missing_comp_or_season_id": 0,
+  "rows_missing_home_away_identity": 0,
+  "odds_coverage": {
+    "Ligue 1 2020/2021": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "Ligue 1 2021/2022": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "Ligue 1 2022/2023": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "Ligue 1 2023/2024": {
+      "has_odds_true": 306,
+      "total": 306,
+      "pct": 100.0
+    },
+    "Ligue 1 2024/2025": {
+      "has_odds_true": 306,
+      "total": 306,
+      "pct": 100.0
+    },
+    "Ligue 1 2025/2026": {
+      "has_odds_true": 306,
+      "total": 306,
+      "pct": 100.0
+    },
+    "La Liga 2020/2021": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "La Liga 2021/2022": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "La Liga 2022/2023": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "La Liga 2023/2024": {
+      "has_odds_true": 376,
+      "total": 380,
+      "pct": 98.9
+    },
+    "La Liga 2024/2025": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "La Liga 2025/2026": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "Premier League 2020/2021": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "Premier League 2021/2022": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "Premier League 2022/2023": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "Premier League 2023/2024": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "Premier League 2024/2025": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "Premier League 2025/2026": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "Bundesliga 2020/2021": {
+      "has_odds_true": 306,
+      "total": 306,
+      "pct": 100.0
+    },
+    "Bundesliga 2021/2022": {
+      "has_odds_true": 306,
+      "total": 306,
+      "pct": 100.0
+    },
+    "Bundesliga 2022/2023": {
+      "has_odds_true": 306,
+      "total": 306,
+      "pct": 100.0
+    },
+    "Bundesliga 2023/2024": {
+      "has_odds_true": 306,
+      "total": 306,
+      "pct": 100.0
+    },
+    "Bundesliga 2024/2025": {
+      "has_odds_true": 306,
+      "total": 306,
+      "pct": 100.0
+    },
+    "Bundesliga 2025/2026": {
+      "has_odds_true": 306,
+      "total": 306,
+      "pct": 100.0
+    },
+    "Serie A 2020/2021": {
+      "has_odds_true": 379,
+      "total": 380,
+      "pct": 99.7
+    },
+    "Serie A 2021/2022": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "Serie A 2022/2023": {
+      "has_odds_true": 381,
+      "total": 381,
+      "pct": 100.0
+    },
+    "Serie A 2023/2024": {
+      "has_odds_true": 379,
+      "total": 380,
+      "pct": 99.7
+    },
+    "Serie A 2024/2025": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    },
+    "Serie A 2025/2026": {
+      "has_odds_true": 380,
+      "total": 380,
+      "pct": 100.0
+    }
+  }
+}

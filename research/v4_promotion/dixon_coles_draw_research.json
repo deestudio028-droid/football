@@ -1,0 +1,70 @@
+{
+  "generated_at": "2026-08-21T05:00:00.000000+00:00",
+  "phase": "DRAW RESEARCH — PHASE 1: DIXON–COLES",
+  "historical_training_set": {
+    "seasons": ["2020/2021", "2021/2022", "2022/2023", "2023/2024", "2024/2025"],
+    "n_fixtures": 8983,
+    "outcomes": {
+      "H": 3835,
+      "D": 2281,
+      "A": 2867,
+      "draw_rate_observed": 0.253924,
+      "poisson_independent_draw_rate": 0.249672,
+      "draw_deficit": 0.004253
+    },
+    "low_score_cells": {
+      "0-0": {"actual": 0.064010, "poisson_indep": 0.059779, "residual": 0.004231},
+      "1-0": {"actual": 0.090170, "poisson_indep": 0.091728, "residual": -0.001558},
+      "0-1": {"actual": 0.071357, "poisson_indep": 0.076675, "residual": -0.005318},
+      "1-1": {"actual": 0.123789, "poisson_indep": 0.117655, "residual": 0.006135}
+    },
+    "mle_rho_by_league": {
+      "Bundesliga": {"n": 1530, "mle_rho": -0.1138, "draw_rate": 0.2536},
+      "La Liga": {"n": 1900, "mle_rho": -0.0075, "draw_rate": 0.2700},
+      "Ligue 1": {"n": 1752, "mle_rho": -0.0617, "draw_rate": 0.2466},
+      "Premier League": {"n": 1900, "mle_rho": 0.0152, "draw_rate": 0.2279},
+      "Serie A": {"n": 1901, "mle_rho": -0.0359, "draw_rate": 0.2709},
+      "Pooled_Bivariate_MLE": {"n": 8983, "mle_rho": -0.0360},
+      "V4_Profile_LogLoss_Optimal_rho": {"n": 8983, "optimal_rho": -0.1000, "baseline_train_ll": 0.990586, "optimal_train_ll": 0.989008}
+    }
+  },
+  "oos_300_sample": {
+    "n": 300,
+    "actual_draws": 82,
+    "actual_draw_rate": 0.273333,
+    "v4_baseline": {
+      "rho": 0.0,
+      "log_loss": 0.992706,
+      "brier": 0.592932,
+      "rps": 0.198447,
+      "accuracy": 0.5000,
+      "mean_p_draw": 0.2352,
+      "draw_predictions": 0,
+      "draw_recall": 0.0
+    },
+    "market_reference": {
+      "log_loss": 0.982167,
+      "brier": 0.586734,
+      "rps": 0.196659,
+      "accuracy": 0.5067,
+      "mean_p_draw": 0.2555,
+      "draw_predictions": 0,
+      "draw_recall": 0.0
+    },
+    "counterfactual_sensitivity": [
+      {"rho": -0.150, "log_loss": 0.987885, "brier": 0.590260, "rps": 0.198001, "acc": 0.5000, "mean_p_draw": 0.2684, "draw_preds": 0, "draw_recall": 0.0},
+      {"rho": -0.125, "log_loss": 0.988247, "brier": 0.590469, "rps": 0.198036, "acc": 0.5000, "mean_p_draw": 0.2629, "draw_preds": 0, "draw_recall": 0.0},
+      {"rho": -0.100, "log_loss": 0.988780, "brier": 0.590772, "rps": 0.198087, "acc": 0.5000, "mean_p_draw": 0.2574, "draw_preds": 0, "draw_recall": 0.0},
+      {"rho": -0.075, "log_loss": 0.989487, "brier": 0.591170, "rps": 0.198153, "acc": 0.5000, "mean_p_draw": 0.2518, "draw_preds": 0, "draw_recall": 0.0},
+      {"rho": -0.050, "log_loss": 0.990374, "brier": 0.591663, "rps": 0.198235, "acc": 0.5000, "mean_p_draw": 0.2463, "draw_preds": 0, "draw_recall": 0.0},
+      {"rho": -0.025, "log_loss": 0.991445, "brier": 0.592250, "rps": 0.198333, "acc": 0.5000, "mean_p_draw": 0.2408, "draw_preds": 0, "draw_recall": 0.0},
+      {"rho": 0.000, "log_loss": 0.992706, "brier": 0.592932, "rps": 0.198447, "acc": 0.5000, "mean_p_draw": 0.2352, "draw_preds": 0, "draw_recall": 0.0},
+      {"rho": 0.025, "log_loss": 0.994164, "brier": 0.593709, "rps": 0.198576, "acc": 0.5000, "mean_p_draw": 0.2297, "draw_preds": 0, "draw_recall": 0.0},
+      {"rho": 0.050, "log_loss": 0.995824, "brier": 0.594581, "rps": 0.198722, "acc": 0.5000, "mean_p_draw": 0.2241, "draw_preds": 0, "draw_recall": 0.0}
+    ]
+  },
+  "research_verdict": {
+    "choice": "B. PROMISING BUT NEEDS FURTHER RESEARCH",
+    "summary": "Dixon-Coles low-score correction structurally addresses the empirical draw deficit in independent Poisson models (increasing mean P(D) from 0.2352 to 0.2574 and improving log loss by -0.003926 on the 300 OOS sample). However, because rho exhibits significant league-to-league heterogeneity (from -0.1138 in Bundesliga to +0.0152 in Premier League), a naive global constant rho risks misspecification across distinct domestic competitions. Isolated research implementation and league-specific/hierarchical validation is recommended."
+  }
+}

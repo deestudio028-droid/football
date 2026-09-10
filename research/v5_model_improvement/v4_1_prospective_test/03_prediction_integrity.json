@@ -1,0 +1,42 @@
+{
+  "manifest_version": "1.0",
+  "lock_timestamp": "2026-08-24T03:46:00.000000Z",
+  "information_cutoff_timestamp": "2026-05-24T19:45:00.000000Z",
+  "candidate_model": {
+    "model_name": "v4_1_prospective_candidate",
+    "model_version": "v4.1-champion-dc-elo-stacking-2025-26-trained",
+    "model_file": "data/models/v4_1_prospective_candidate_2025_26.pkl",
+    "md5_hash": "145f918d933eb343c0f63ca342b10289",
+    "sha256_hash": "cbb00b32c3ce4dbf600564a95d11b67a0c236f6b34cd184a9ca8abcc8ab94ac8",
+    "file_size_bytes": 15506,
+    "status": "PROSPECTIVE_TEST_LOCKED"
+  },
+  "frozen_production_model": {
+    "model_name": "v4_poisson_venue_elo_online_ad",
+    "model_file": "data/models/v4_poisson_venue_elo_online_ad.pkl",
+    "md5_hash": "06841f0c03c8597b2b8cd8f8ab064864",
+    "status": "FROZEN_UNTOUCHED"
+  },
+  "prospective_sample_counts": {
+    "total_fixtures_discovered": 103,
+    "eligible_pre_match_fixtures": 99,
+    "excluded_fixtures_count": 4,
+    "locked_predictions_count": 99
+  },
+  "league_breakdown": {
+    "La Liga": 24,
+    "Premier League": 21,
+    "Serie A": 19,
+    "Bundesliga": 18,
+    "Ligue 1": 17
+  },
+  "integrity_checks": {
+    "candidate_md5_verified": true,
+    "candidate_sha256_verified": true,
+    "production_v4_md5_verified": true,
+    "probability_simplex_satisfied_all": true,
+    "strictly_pre_kickoff_all": true,
+    "zero_outcome_leakage": true,
+    "duplicate_prediction_count": 0
+  }
+}

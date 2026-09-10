@@ -1,0 +1,217 @@
+{
+  "phase": "4C_final_comparison_prerun_manifest",
+  "authorized_decisions": {
+    "C": 1.0,
+    "epsilon_tie_threshold": null,
+    "epsilon_authorized": false,
+    "protocol": "docs/PHASE4C_V1_REPLACEMENT_DECISION_PROTOCOL.md"
+  },
+  "environment": {
+    "sklearn_version": "1.9.0",
+    "python_version": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "frozen_spec": {
+    "v1_feature_columns": [
+      "home_goals_for_per_match_season",
+      "home_goals_against_per_match_season",
+      "away_goals_for_per_match_season",
+      "away_goals_against_per_match_season",
+      "home_goals_for_per_match_last5",
+      "away_goals_for_per_match_last5",
+      "home_points_last5",
+      "away_points_last5",
+      "home_attack_strength_score",
+      "home_defence_strength_score",
+      "away_attack_strength_score",
+      "away_defence_strength_score",
+      "strength_diff",
+      "league_home_advantage_season",
+      "competition_id"
+    ],
+    "v1_n_features": 15,
+    "model_b_feature_columns": [
+      "home_goals_for_per_match_last5",
+      "home_goals_against_per_match_last5",
+      "home_goals_diff_last5",
+      "home_goals_for_per_match_last10",
+      "home_goals_against_per_match_last10",
+      "home_goals_diff_last10",
+      "home_goals_for_per_match_season",
+      "home_goals_against_per_match_season",
+      "home_goals_diff_season",
+      "away_goals_for_per_match_last5",
+      "away_goals_against_per_match_last5",
+      "away_goals_diff_last5",
+      "away_goals_for_per_match_last10",
+      "away_goals_against_per_match_last10",
+      "away_goals_diff_last10",
+      "away_goals_for_per_match_season",
+      "away_goals_against_per_match_season",
+      "away_goals_diff_season",
+      "home_points_last5",
+      "home_win_rate_last5",
+      "home_draw_rate_last5",
+      "home_loss_rate_last5",
+      "home_goal_diff_last5",
+      "home_points_last10",
+      "home_win_rate_last10",
+      "home_draw_rate_last10",
+      "home_loss_rate_last10",
+      "home_goal_diff_last10",
+      "away_points_last5",
+      "away_win_rate_last5",
+      "away_draw_rate_last5",
+      "away_loss_rate_last5",
+      "away_goal_diff_last5",
+      "away_points_last10",
+      "away_win_rate_last10",
+      "away_draw_rate_last10",
+      "away_loss_rate_last10",
+      "away_goal_diff_last10",
+      "home_attack_strength_score",
+      "home_defence_strength_score",
+      "away_attack_strength_score",
+      "away_defence_strength_score",
+      "strength_diff",
+      "competition_id",
+      "home_shots_for_per_match_last5",
+      "home_shots_against_per_match_last5",
+      "home_shots_diff_last5",
+      "home_shots_for_per_match_last10",
+      "home_shots_against_per_match_last10",
+      "home_shots_diff_last10",
+      "home_shots_for_per_match_season",
+      "home_shots_against_per_match_season",
+      "home_shots_diff_season",
+      "away_shots_for_per_match_last5",
+      "away_shots_against_per_match_last5",
+      "away_shots_diff_last5",
+      "away_shots_for_per_match_last10",
+      "away_shots_against_per_match_last10",
+      "away_shots_diff_last10",
+      "away_shots_for_per_match_season",
+      "away_shots_against_per_match_season",
+      "away_shots_diff_season",
+      "home_shots_on_for_per_match_last5",
+      "home_shots_on_against_per_match_last5",
+      "home_shots_on_diff_last5",
+      "home_shots_on_for_per_match_last10",
+      "home_shots_on_against_per_match_last10",
+      "home_shots_on_diff_last10",
+      "home_shots_on_for_per_match_season",
+      "home_shots_on_against_per_match_season",
+      "home_shots_on_diff_season",
+      "away_shots_on_for_per_match_last5",
+      "away_shots_on_against_per_match_last5",
+      "away_shots_on_diff_last5",
+      "away_shots_on_for_per_match_last10",
+      "away_shots_on_against_per_match_last10",
+      "away_shots_on_diff_last10",
+      "away_shots_on_for_per_match_season",
+      "away_shots_on_against_per_match_season",
+      "away_shots_on_diff_season"
+    ],
+    "model_b_n_features": 80,
+    "estimator": "LogisticRegression",
+    "estimator_kwargs": {
+      "max_iter": 2000,
+      "C": 1.0,
+      "random_state": 0
+    },
+    "preprocessing": "LogisticRegressionPreprocessor (median impute + standardize + one-hot competition_id), fit on FINAL_TRAIN_SEASONS only",
+    "calibration": "none (raw predict_proba)",
+    "class_order": [
+      "H",
+      "D",
+      "A"
+    ],
+    "final_train_seasons": [
+      "2020/2021",
+      "2021/2022",
+      "2022/2023",
+      "2023/2024",
+      "2024/2025"
+    ],
+    "final_test_seasons": [
+      "2025/2026"
+    ],
+    "model_version_unchanged": "v1.0",
+    "required_feature_version": "v1.0"
+  },
+  "locked_input_checksums": {
+    "data/processed/features.db": {
+      "expected": "e7ebe7fc07040a5927683c35b6371e63",
+      "actual": "e7ebe7fc07040a5927683c35b6371e63",
+      "match": true
+    },
+    "data/processed/matches.db": {
+      "expected": "fdeed042096fa1c851aaee6c84995247",
+      "actual": "fdeed042096fa1c851aaee6c84995247",
+      "match": true
+    },
+    "data/audit/phase3_model_comparison.json": {
+      "expected": "616279914b2730749d52eae15b5f96b9",
+      "actual": "616279914b2730749d52eae15b5f96b9",
+      "match": true
+    },
+    "data/audit/phase3_calibration_comparison.json": {
+      "expected": "d94ed430ab13337797f0592bf82878cb",
+      "actual": "d94ed430ab13337797f0592bf82878cb",
+      "match": true
+    },
+    "data/audit/phase4a_ablation_comparison.json": {
+      "expected": "075b0686bce20bfce9f7289fa37076c0",
+      "actual": "075b0686bce20bfce9f7289fa37076c0",
+      "match": true
+    },
+    "data/audit/phase4b_robustness_comparison.json": {
+      "expected": "97d0f8b8674c9bf8598b6c3d6b7c825c",
+      "actual": "97d0f8b8674c9bf8598b6c3d6b7c825c",
+      "match": true
+    },
+    "src/models/config.py": {
+      "expected": "c2ed32cb53ec34199fd245624afea4dd",
+      "actual": "c2ed32cb53ec34199fd245624afea4dd",
+      "match": true
+    },
+    "src/models/train.py": {
+      "expected": "21425459195311492f49e73f5ae38fe0",
+      "actual": "21425459195311492f49e73f5ae38fe0",
+      "match": true
+    },
+    "src/models/splits.py": {
+      "expected": "8b7991ab3739c7d4daa2bf1998163da4",
+      "actual": "8b7991ab3739c7d4daa2bf1998163da4",
+      "match": true
+    },
+    "src/models/evaluate.py": {
+      "expected": "4e9d9313867d47a19001a383a301c2fe",
+      "actual": "4e9d9313867d47a19001a383a301c2fe",
+      "match": true
+    },
+    "src/models/data.py": {
+      "expected": "b78e30eb45dbc46621c0160a188ce981",
+      "actual": "b78e30eb45dbc46621c0160a188ce981",
+      "match": true
+    },
+    "src/models/baselines.py": {
+      "expected": "42e64e3a0ba8c4bf8cf264f80cdcd208",
+      "actual": "42e64e3a0ba8c4bf8cf264f80cdcd208",
+      "match": true
+    },
+    "src/models/run_experiments.py": {
+      "expected": "546ea0105ca8b235ab80b393a58f2831",
+      "actual": "546ea0105ca8b235ab80b393a58f2831",
+      "match": true
+    }
+  },
+  "v1_locked_final_test_metrics": {
+    "log_loss": 1.012643607907126,
+    "brier": 0.6059500599589396,
+    "accuracy": 0.500856653340948,
+    "macro_f1": 0.3712753915810083,
+    "balanced_accuracy": 0.4321797560315324,
+    "n": 1751
+  }
+}

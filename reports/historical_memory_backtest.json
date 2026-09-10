@@ -1,0 +1,38 @@
+{
+  "audit_timestamp": "2026-08-28T07:35:00Z",
+  "dataset": {
+    "source": "research/v5_model_improvement/production_monitoring/fixture_outcome_audit.csv",
+    "sample_size": 33,
+    "competitions": {
+      "Ligue 1": 9,
+      "Premier League": 9,
+      "Serie A": 8,
+      "La Liga": 7
+    },
+    "date_range": "2026-08-21 to 2026-08-24"
+  },
+  "v4_baseline_metrics": {
+    "accuracy_1x2_pct": 60.61,
+    "correct_matches": 20,
+    "total_matches": 33,
+    "mean_brier_score": 0.5497,
+    "mean_log_loss": 0.9367,
+    "exact_score_accuracy_pct": 9.09
+  },
+  "historical_memory_evidence_metrics": {
+    "cross_league_evidence_distribution": {
+      "INSUFFICIENT": 33
+    },
+    "evidence_level_accuracy_pct": {
+      "INSUFFICIENT": 60.61
+    }
+  },
+  "score_refinement_metrics": {
+    "baseline_exact_score_accuracy_pct": 9.09,
+    "league_refined_exact_score_accuracy_pct": 9.09,
+    "cross_league_refined_exact_score_accuracy_pct": 9.09,
+    "score_accuracy_delta_pct": 0.0
+  },
+  "final_verdict": "INSUFFICIENT DATA",
+  "verdict_rationale": "Prospective sample size of N=33 completed matches from Matchday 1 is an initial cohort. Across this cohort, baseline 1X2 accuracy is 60.6% and baseline exact score accuracy is 9.1%. Historical memory successfully prevents false confidence claims (emitting INSUFFICIENT sample for early matches) and avoids performance degradation. However, sample size is below the statistical threshold for declaring an out-of-sample accuracy improvement. Verdict: INSUFFICIENT DATA."
+}

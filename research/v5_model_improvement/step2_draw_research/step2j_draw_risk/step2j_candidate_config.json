@@ -1,0 +1,25 @@
+{
+    "step": "Step 2J Draw Risk / Caution Intelligence Research",
+    "date": "2026-08-24",
+    "status": "RESEARCH COMPLETE \u2014 ZERO PRODUCTION MUTATION",
+    "v4_production_md5": "06841f0c03c8597b2b8cd8f8ab064864",
+    "v4_1_candidate_md5": "145f918d933eb343c0f63ca342b10289",
+    "primary_risk_architecture": "Architecture E: Combined Interpretable Composite Risk Score",
+    "risk_weights": {
+        "calibrated_draw_prob": 0.35,
+        "win_parity_margin": 0.3,
+        "score_space_draw_mass": 0.2,
+        "expected_goal_parity": 0.15
+    },
+    "tier_thresholds": {
+        "medium": 0.4,
+        "high": 0.65,
+        "critical": 0.8
+    },
+    "tier_definitions": {
+        "LOW": "Score < 0.40 (Decisive contest, strong baseline favorite reliability)",
+        "MEDIUM": "0.40 <= Score < 0.65 (Moderate contest, standard draw probability)",
+        "HIGH": "0.65 <= Score < 0.80 (Elevated draw risk, favorite win reliability drops significantly)",
+        "CRITICAL": "Score >= 0.80 (Extreme draw vulnerability, win parity tight, low-score regime)"
+    }
+}

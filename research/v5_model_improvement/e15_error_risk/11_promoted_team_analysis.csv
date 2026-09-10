@@ -1,0 +1,4 @@
+segment,n_matches,mean_predicted_risk,actual_mean_rps,actual_mean_log_loss,top10_risk_concentration_pct
+Promoted_Sparse_lt_5_matches,130,0.0637,0.183828,0.951771,3.08
+Developing_5_to_10_matches,152,0.0913,0.214248,1.036564,7.89
+Established_Teams_gt_10_matches,6800,0.1026,0.199458,0.982774,10.19

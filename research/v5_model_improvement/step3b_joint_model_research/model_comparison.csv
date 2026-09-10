@@ -1,0 +1,4 @@
+dimension,baseline_v4,joint_candidate,difference,significance
+Complete 1X2 Probabilities,"V4.0 Baseline (Log Loss: 0.9921, Brier: 0.5907, ECE: 0.0266)","Joint Coherent Model (Log Loss: 0.9902, Brier: 0.5902, ECE: 0.0243)","Log Loss -0.0019, Brier -0.0005, ECE -0.0023",Continuous Calibration Improvement Established; Argmax Accuracy Neutral
+Goal & Score Prediction,"V4.0 Poisson (Home MAE: 0.9544, Away MAE: 0.8539, Exact Acc: 12.34%)","Low-Score Corrected Dixon-Coles (Home MAE: 0.9513, Away MAE: 0.8494, Exact Acc: 12.45%)","Home MAE -0.0031, Away MAE -0.0045, Exact Acc +0.11%",Statistically Established (Home/Away MAE p < 0.05)
+Production Action,Sole Active Production Authority (MD5: 06841f0c03c8597b2b8cd8f8ab064864),Research / Shadow Candidate Only (Zero Mutation),Zero Production Impact,NO PRODUCTION PROMOTION

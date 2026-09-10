@@ -1,0 +1,252 @@
+{
+  "Premier League (423)": [
+    {
+      "season_id": 433,
+      "season_name": "2020/2021",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 1470,
+      "season_name": "2021/2022",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 2747,
+      "season_name": "2022/2023",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 4630,
+      "season_name": "2023/2024",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 6484,
+      "season_name": "2024/2025",
+      "played": 308,
+      "progress": 81
+    },
+    {
+      "season_id": 667780,
+      "season_name": "2025/2026",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 1036978,
+      "season_name": "2019/2020",
+      "played": null,
+      "progress": null
+    },
+    {
+      "season_id": 2263973,
+      "season_name": "2026/2027",
+      "played": null,
+      "progress": null
+    }
+  ],
+  "La Liga (419)": [
+    {
+      "season_id": 429,
+      "season_name": "2020/2021",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 1248,
+      "season_name": "2021/2022",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 2858,
+      "season_name": "2022/2023",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 4634,
+      "season_name": "2023/2024",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 6435,
+      "season_name": "2024/2025",
+      "played": 323,
+      "progress": 85
+    },
+    {
+      "season_id": 762170,
+      "season_name": "2025/2026",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 1037107,
+      "season_name": "2019/2020",
+      "played": null,
+      "progress": null
+    },
+    {
+      "season_id": 2244302,
+      "season_name": "2026/2027",
+      "played": null,
+      "progress": null
+    }
+  ],
+  "Bundesliga (477)": [
+    {
+      "season_id": 487,
+      "season_name": "2020/2021",
+      "played": 306,
+      "progress": 100
+    },
+    {
+      "season_id": 1468,
+      "season_name": "2021/2022",
+      "played": 306,
+      "progress": 100
+    },
+    {
+      "season_id": 2745,
+      "season_name": "2022/2023",
+      "played": 306,
+      "progress": 100
+    },
+    {
+      "season_id": 4675,
+      "season_name": "2023/2024",
+      "played": 306,
+      "progress": 100
+    },
+    {
+      "season_id": 6597,
+      "season_name": "2024/2025",
+      "played": 306,
+      "progress": 100
+    },
+    {
+      "season_id": 725788,
+      "season_name": "2025/2026",
+      "played": 306,
+      "progress": 100
+    },
+    {
+      "season_id": 1037054,
+      "season_name": "2019/2020",
+      "played": null,
+      "progress": null
+    },
+    {
+      "season_id": 2305071,
+      "season_name": "2026/2027",
+      "played": null,
+      "progress": null
+    }
+  ],
+  "Serie A (499)": [
+    {
+      "season_id": 509,
+      "season_name": "2020/2021",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 1555,
+      "season_name": "2021/2022",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 2894,
+      "season_name": "2022/2023",
+      "played": 381,
+      "progress": 100
+    },
+    {
+      "season_id": 4724,
+      "season_name": "2023/2024",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 6526,
+      "season_name": "2024/2025",
+      "played": 323,
+      "progress": 85
+    },
+    {
+      "season_id": 602681,
+      "season_name": "2025/2026",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 1037181,
+      "season_name": "2019/2020",
+      "played": null,
+      "progress": null
+    },
+    {
+      "season_id": 2224807,
+      "season_name": "2026/2027",
+      "played": null,
+      "progress": null
+    }
+  ],
+  "Ligue 1 (200)": [
+    {
+      "season_id": 209,
+      "season_name": "2020/2021",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 1400,
+      "season_name": "2021/2022",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 2748,
+      "season_name": "2022/2023",
+      "played": 380,
+      "progress": 100
+    },
+    {
+      "season_id": 4629,
+      "season_name": "2023/2024",
+      "played": 306,
+      "progress": 100
+    },
+    {
+      "season_id": 6527,
+      "season_name": "2024/2025",
+      "played": 306,
+      "progress": 100
+    },
+    {
+      "season_id": 725793,
+      "season_name": "2025/2026",
+      "played": 305,
+      "progress": 100
+    },
+    {
+      "season_id": 1036984,
+      "season_name": "2019/2020",
+      "played": null,
+      "progress": null
+    },
+    {
+      "season_id": 2254143,
+      "season_name": "2026/2027",
+      "played": null,
+      "progress": null
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+date,league,expected_source_fixtures,fetched_fixtures,database_fixtures,prediction_eligible_fixtures,predictions_generated,dashboard_displayed_fixtures,missing_fixtures,status
+2026-08-25,Premier League,0,0,0,0,0,0,0,NO_SCHEDULED_FIXTURES
+2026-08-25,La Liga,1,1,1,1,1,1,0,ACTIVE_MATCHDAY
+2026-08-25,Bundesliga,0,0,0,0,0,0,0,NO_SCHEDULED_FIXTURES
+2026-08-25,Serie A,0,0,0,0,0,0,0,NO_SCHEDULED_FIXTURES
+2026-08-25,Ligue 1,0,0,0,0,0,0,0,NO_SCHEDULED_FIXTURES

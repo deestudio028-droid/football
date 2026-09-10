@@ -1,0 +1,12 @@
+{
+  "finding": "GET /api/stats/season/{season_id} and GET /api/stats/fixture/{fixture_id} apply an undocumented, non-overridable 730-day rolling lookback window. Requesting aggregate team stats for a season_id that is more than ~2 years in the past silently returns zeroed-out records (played.total: 0, all stat totals 0) instead of an error.",
+  "evidence": {
+    "call": "GET /api/stats/season/4630 (Premier League, season 2023/2024 -- fully completed, played=380 per the competitions/seasons endpoint)",
+    "response_info": {"page": 1, "pages": 1, "per_page": 100, "total": 20, "include_frozen": false, "last_x": false, "include_avg": false, "include_friendlies": false, "lookback_days": 730},
+    "sample_team_result": {"team_id": 3998, "name": "West Ham United", "played": {"total": 0, "home": 0, "away": 0}, "xg_total": {"total": 0}, "coverage": "every coverage sub-field 0%"},
+    "override_attempt": "GET /api/stats/season/4630?lookback_days=1500 -- response info still shows lookback_days: 730, confirming the parameter is not user-configurable (at least not under that name)."
+  },
+  "contrast": "The SAME season's raw match data is fully intact and correctly populated via GET /api/fixtures/between?competitions=423&seasons=4630&include=stats -- confirmed with real, non-zero possession/cards/corners/shots data for August 2023 fixtures (see xg_coverage_cutover_evidence.json).",
+  "conclusion": "The pre-aggregated /stats/season and /stats/fixture rollup endpoints must NOT be used as the source of historical (>~2 seasons old) team-strength features. They are reliable only for the current and immediately preceding season. All historical rolling/aggregate features for backtesting must be computed by the project itself from raw /fixtures/between match data, not fetched pre-computed from OddAlerts.",
+  "impact_on_current_season": "Because the lookback window is rolling (today - 730 days), this will also eventually clip the start of any season as time passes -- e.g. by mid-2026 it already excludes the 2023/24 season entirely, and by 2027 it will start excluding parts of the 2024/25 season too. Any pipeline relying on this endpoint needs to account for this ongoing drift, which is another reason to self-compute rolling features from raw fixtures rather than depending on this endpoint."
+}

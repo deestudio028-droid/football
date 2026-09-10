@@ -1,0 +1,32 @@
+[
+  {
+    "label": "Premier League 2020/21",
+    "fixture_id": 210298,
+    "raw_to_db_match": true,
+    "mismatches": {}
+  },
+  {
+    "label": "La Liga 2024/25",
+    "fixture_id": 152781770,
+    "raw_to_db_match": true,
+    "mismatches": {}
+  },
+  {
+    "label": "Bundesliga 2025/26",
+    "fixture_id": 347217733,
+    "raw_to_db_match": true,
+    "mismatches": {}
+  },
+  {
+    "label": "Serie A 2022/23 (381-match season)",
+    "fixture_id": 10440772,
+    "raw_to_db_match": true,
+    "mismatches": {}
+  },
+  {
+    "label": "Ligue 1 2023/24",
+    "fixture_id": 45213869,
+    "raw_to_db_match": true,
+    "mismatches": {}
+  }
+]

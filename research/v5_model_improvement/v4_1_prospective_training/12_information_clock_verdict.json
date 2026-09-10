@@ -1,0 +1,51 @@
+{
+  "audit_timestamp": "2026-08-24T03:38:00.000000+00:00",
+  "audit_subject": {
+    "model_name": "v4_1_prospective_candidate",
+    "model_version": "v4.1-champion-dc-elo-stacking-2025-26-trained",
+    "artifact_path": "data/models/v4_1_prospective_candidate_2025_26.pkl",
+    "md5_hash": "145f918d933eb343c0f63ca342b10289",
+    "sha256_hash": "cbb00b32c3ce4dbf600564a95d11b67a0c236f6b34cd184a9ca8abcc8ab94ac8",
+    "file_size_bytes": 15506
+  },
+  "protected_baselines": {
+    "v4_0_frozen_production_hash": "06841f0c03c8597b2b8cd8f8ab064864",
+    "v4_0_status": "VERIFIED_UNMODIFIED",
+    "protected_20_assets_count": 20,
+    "protected_20_assets_status": "100_PERCENT_BIT_IDENTICAL"
+  },
+  "temporal_audit_findings": {
+    "historical_training_window": "2020-08-21T17:00:00.000000Z to 2026-05-24T19:45:00.000000Z",
+    "historical_training_matches": 10734,
+    "global_baseline_rates": {
+      "mu_home": 1.534843,
+      "mu_away": 1.273989,
+      "n_train": 10734
+    },
+    "expanding_baseline_comparison": {
+      "max_mu_home_difference": 0.058391,
+      "max_mu_away_difference": 0.050217,
+      "season_2025_26_mu_home_difference": 0.000389,
+      "season_2025_26_mu_away_difference": -0.008656
+    },
+    "feature_level_impact": {
+      "max_abs_state_difference": 0.003154,
+      "mean_abs_state_difference": 0.001359,
+      "pearson_correlation_global_vs_expanding": 0.99999869,
+      "is_statistically_significant": false
+    },
+    "prospective_firewall_verification": {
+      "live_2026_matches_included_in_training": 0,
+      "live_2026_goals_used_in_baseline": 0,
+      "live_2026_outcomes_leaked": 0,
+      "firewall_status": "100_PERCENT_SEALED"
+    }
+  },
+  "audit_verdict": {
+    "classification": "CLEAN — CAUSALLY VALID",
+    "verdict_code": "CLEAN",
+    "prospective_test_eligibility": "ELIGIBLE_FOR_PROSPECTIVE_TESTING",
+    "requires_code_mutation": false,
+    "rationale": "The Online Attack/Defense baseline rate calculation in V4.1 is a static scale parameter fitted strictly within the historical training partition (2020 through 2026). It contains zero 2026 prospective information. The state evolution is strictly causal via two-pass timestamp iteration, and the prospective 2026 test set remains completely unseen."
+  }
+}

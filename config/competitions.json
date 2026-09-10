@@ -1,0 +1,70 @@
+{
+  "_comment": "Target competitions and their known season IDs for the 2020/21-2025/26 historical window. Season IDs were captured via GET /api/competitions/:id?include=seasons during the original OddAlerts audit and re-verified in data/audit/target_league_seasons.json. The 2019/20 season_ids exist in the API but return played:null (empty shells) and are intentionally excluded. The 2026/27 season_ids are future/placeholder seasons and are also excluded.",
+  "competitions": [
+    {
+      "name": "Premier League",
+      "competition_id": 423,
+      "country_id": 45,
+      "seasons": [
+        {"season_id": 433, "season_name": "2020/2021"},
+        {"season_id": 1470, "season_name": "2021/2022"},
+        {"season_id": 2747, "season_name": "2022/2023"},
+        {"season_id": 4630, "season_name": "2023/2024"},
+        {"season_id": 6484, "season_name": "2024/2025"},
+        {"season_id": 667780, "season_name": "2025/2026"}
+      ]
+    },
+    {
+      "name": "La Liga",
+      "competition_id": 419,
+      "country_id": 8,
+      "seasons": [
+        {"season_id": 429, "season_name": "2020/2021"},
+        {"season_id": 1248, "season_name": "2021/2022"},
+        {"season_id": 2858, "season_name": "2022/2023"},
+        {"season_id": 4634, "season_name": "2023/2024"},
+        {"season_id": 6435, "season_name": "2024/2025"},
+        {"season_id": 762170, "season_name": "2025/2026"}
+      ]
+    },
+    {
+      "name": "Bundesliga",
+      "competition_id": 477,
+      "country_id": 3,
+      "seasons": [
+        {"season_id": 487, "season_name": "2020/2021"},
+        {"season_id": 1468, "season_name": "2021/2022"},
+        {"season_id": 2745, "season_name": "2022/2023"},
+        {"season_id": 4675, "season_name": "2023/2024"},
+        {"season_id": 6597, "season_name": "2024/2025"},
+        {"season_id": 725788, "season_name": "2025/2026"}
+      ]
+    },
+    {
+      "name": "Serie A",
+      "competition_id": 499,
+      "country_id": 32,
+      "seasons": [
+        {"season_id": 509, "season_name": "2020/2021"},
+        {"season_id": 1555, "season_name": "2021/2022"},
+        {"season_id": 2894, "season_name": "2022/2023"},
+        {"season_id": 4724, "season_name": "2023/2024"},
+        {"season_id": 6526, "season_name": "2024/2025"},
+        {"season_id": 602681, "season_name": "2025/2026"}
+      ]
+    },
+    {
+      "name": "Ligue 1",
+      "competition_id": 200,
+      "country_id": 4,
+      "seasons": [
+        {"season_id": 209, "season_name": "2020/2021"},
+        {"season_id": 1400, "season_name": "2021/2022"},
+        {"season_id": 2748, "season_name": "2022/2023"},
+        {"season_id": 4629, "season_name": "2023/2024"},
+        {"season_id": 6527, "season_name": "2024/2025"},
+        {"season_id": 725793, "season_name": "2025/2026"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+fold,candidate,accuracy_pct,log_loss,brier_score,macro_f1_pct,home_f1_pct,away_f1_pct,home_goal_mae,away_goal_mae,total_goal_mae,exact_score_pct
+Fold 1 (2021/22),V4.0 Baseline,52.3,0.9987,0.5952,39.37,63.81,54.3,0.9681,0.8844,1.3558,13.53
+Fold 1 (2021/22),Joint Coherent Model (Platt + G2 Score-Space Blend),52.3,0.9969,0.5945,39.37,63.81,54.3,0.9644,0.8804,1.3543,13.53
+Fold 2 (2022/23),V4.0 Baseline,52.93,0.9913,0.5904,39.22,65.17,52.48,0.9619,0.8367,1.2997,12.37
+Fold 2 (2022/23),Joint Coherent Model (Platt + G2 Score-Space Blend),52.93,0.9897,0.5901,39.22,65.17,52.48,0.9589,0.832,1.2969,12.37
+Fold 3 (2023/24),V4.0 Baseline,54.05,0.9799,0.5819,40.8,65.85,56.56,0.9629,0.8717,1.3288,13.58
+Fold 3 (2023/24),Joint Coherent Model (Platt + G2 Score-Space Blend),54.05,0.9754,0.5803,40.8,65.85,56.56,0.9595,0.8682,1.3278,13.58
+Fold 4 (2024/25),V4.0 Baseline,53.54,0.9824,0.5844,40.23,64.46,56.23,0.9371,0.8728,1.3018,12.84
+Fold 4 (2024/25),Joint Coherent Model (Platt + G2 Score-Space Blend),53.54,0.979,0.5832,40.23,64.46,56.23,0.9323,0.8709,1.2999,12.84

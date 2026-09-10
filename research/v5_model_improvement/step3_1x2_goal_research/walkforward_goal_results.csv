@@ -1,0 +1,21 @@
+fold,candidate,home_goal_mae,away_goal_mae,total_goal_mae,home_goal_rmse,away_goal_rmse,exact_score_accuracy_pct,btts_accuracy_pct,over_25_accuracy_pct,over_15_accuracy_pct
+Fold 1 (2021/22),Candidate G1: Poisson Baseline (V4.0),0.9681,0.8844,1.3558,1.2357,1.1166,13.53,55.09,54.76,76.67
+Fold 1 (2021/22),Candidate G2: Bivariate Dixon-Coles Joint PMF,0.9681,0.8844,1.3558,1.2357,1.1166,13.53,55.09,54.76,76.67
+Fold 1 (2021/22),Candidate G3: Zero-Inflated / Low-Score Corrected DC,0.9644,0.8804,1.3543,1.2365,1.117,13.31,55.59,55.37,76.67
+Fold 1 (2021/22),Candidate G4: Calibrated Ridge Goal Regressor,0.9713,0.9042,1.3719,1.2415,1.1231,13.36,54.05,53.94,76.67
+Fold 1 (2021/22),Candidate G5: Shared Coherent Joint Matrix Model,0.9681,0.8844,1.3558,1.2357,1.1166,13.53,55.09,54.76,76.67
+Fold 2 (2022/23),Candidate G1: Poisson Baseline (V4.0),0.9619,0.8367,1.2997,1.2375,1.0772,12.48,51.23,53.64,76.57
+Fold 2 (2022/23),Candidate G2: Bivariate Dixon-Coles Joint PMF,0.9619,0.8367,1.2997,1.2375,1.0772,12.48,51.23,53.64,76.57
+Fold 2 (2022/23),Candidate G3: Zero-Inflated / Low-Score Corrected DC,0.9589,0.832,1.2969,1.2386,1.0753,12.37,50.85,55.88,76.57
+Fold 2 (2022/23),Candidate G4: Calibrated Ridge Goal Regressor,0.9586,0.8514,1.3061,1.2375,1.0884,12.32,51.67,53.04,76.57
+Fold 2 (2022/23),Candidate G5: Shared Coherent Joint Matrix Model,0.9619,0.8367,1.2997,1.2375,1.0772,12.48,51.23,53.64,76.57
+Fold 3 (2023/24),Candidate G1: Poisson Baseline (V4.0),0.9629,0.8717,1.3288,1.2116,1.1005,13.87,54.45,57.71,78.42
+Fold 3 (2023/24),Candidate G2: Bivariate Dixon-Coles Joint PMF,0.9629,0.8717,1.3288,1.2116,1.1005,13.87,54.45,57.71,78.42
+Fold 3 (2023/24),Candidate G3: Zero-Inflated / Low-Score Corrected DC,0.9595,0.8682,1.3278,1.2124,1.1007,13.58,54.34,58.22,78.42
+Fold 3 (2023/24),Candidate G4: Calibrated Ridge Goal Regressor,0.964,0.8716,1.3304,1.2131,1.0996,13.36,55.37,57.59,78.42
+Fold 3 (2023/24),Candidate G5: Shared Coherent Joint Matrix Model,0.9629,0.8717,1.3288,1.2116,1.1005,13.87,54.45,57.71,78.42
+Fold 4 (2024/25),Candidate G1: Poisson Baseline (V4.0),0.9371,0.8728,1.3018,1.1865,1.1042,12.73,52.63,55.82,77.85
+Fold 4 (2024/25),Candidate G2: Bivariate Dixon-Coles Joint PMF,0.9371,0.8728,1.3018,1.1865,1.1042,12.73,52.63,55.82,77.85
+Fold 4 (2024/25),Candidate G3: Zero-Inflated / Low-Score Corrected DC,0.9323,0.8709,1.2999,1.1852,1.1051,13.07,52.11,56.74,77.85
+Fold 4 (2024/25),Candidate G4: Calibrated Ridge Goal Regressor,0.9385,0.8741,1.3022,1.1879,1.1045,12.33,52.23,55.99,77.85
+Fold 4 (2024/25),Candidate G5: Shared Coherent Joint Matrix Model,0.9371,0.8728,1.3018,1.1865,1.1042,12.73,52.63,55.82,77.85

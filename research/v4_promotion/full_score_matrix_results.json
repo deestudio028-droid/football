@@ -1,0 +1,756 @@
+{
+  "generated_at": "2026-08-21T05:28:58.764083+00:00",
+  "experiment": "Phase 4 Full Score-Matrix Draw Modeling",
+  "historical_scope": {
+    "seasons": [
+      "2020/2021",
+      "2021/2022",
+      "2022/2023",
+      "2023/2024",
+      "2024/2025"
+    ],
+    "n_fixtures": 8983
+  },
+  "scoreline_residuals": [
+    {
+      "score": "0-0",
+      "obs_count": 575,
+      "obs_rate": 0.064,
+      "exp_rate": 0.0626,
+      "residual": 0.0014,
+      "residual_pct": 2.28
+    },
+    {
+      "score": "1-0",
+      "obs_count": 810,
+      "obs_rate": 0.0902,
+      "exp_rate": 0.0918,
+      "residual": -0.0016,
+      "residual_pct": -1.74
+    },
+    {
+      "score": "0-1",
+      "obs_count": 641,
+      "obs_rate": 0.0714,
+      "exp_rate": 0.0791,
+      "residual": -0.0078,
+      "residual_pct": -9.82
+    },
+    {
+      "score": "1-1",
+      "obs_count": 1112,
+      "obs_rate": 0.1238,
+      "exp_rate": 0.1105,
+      "residual": 0.0133,
+      "residual_pct": 12.07
+    },
+    {
+      "score": "2-0",
+      "obs_count": 600,
+      "obs_rate": 0.0668,
+      "exp_rate": 0.0718,
+      "residual": -0.005,
+      "residual_pct": -6.92
+    },
+    {
+      "score": "0-2",
+      "obs_count": 480,
+      "obs_rate": 0.0534,
+      "exp_rate": 0.0534,
+      "residual": 0.0,
+      "residual_pct": 0.09
+    },
+    {
+      "score": "2-1",
+      "obs_count": 750,
+      "obs_rate": 0.0835,
+      "exp_rate": 0.0821,
+      "residual": 0.0014,
+      "residual_pct": 1.66
+    },
+    {
+      "score": "1-2",
+      "obs_count": 631,
+      "obs_rate": 0.0702,
+      "exp_rate": 0.0708,
+      "residual": -0.0006,
+      "residual_pct": -0.83
+    },
+    {
+      "score": "2-2",
+      "obs_count": 494,
+      "obs_rate": 0.055,
+      "exp_rate": 0.05,
+      "residual": 0.005,
+      "residual_pct": 9.98
+    },
+    {
+      "score": "3-0",
+      "obs_count": 339,
+      "obs_rate": 0.0377,
+      "exp_rate": 0.0401,
+      "residual": -0.0024,
+      "residual_pct": -5.87
+    },
+    {
+      "score": "0-3",
+      "obs_count": 226,
+      "obs_rate": 0.0252,
+      "exp_rate": 0.0258,
+      "residual": -0.0006,
+      "residual_pct": -2.32
+    }
+  ],
+  "historical_walk_forward_folds": [
+    {
+      "fold": "Fold 1 (2021/22)",
+      "val_season": "2021/2022",
+      "n_val": 1826,
+      "metrics": {
+        "Cand_A_Poisson_Base": {
+          "n": 1826,
+          "accuracy": 0.523,
+          "log_loss": 0.998271,
+          "brier": 0.595169,
+          "rps": 0.202514,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2357,
+          "actual_draw_rate": 0.259,
+          "draw_bias": -0.0234
+        },
+        "Cand_B_Classical_DC": {
+          "n": 1826,
+          "accuracy": 0.523,
+          "log_loss": 0.996346,
+          "brier": 0.594239,
+          "rps": 0.202359,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2558,
+          "actual_draw_rate": 0.259,
+          "draw_bias": -0.0032
+        },
+        "Cand_C_Shrunk_League_DC": {
+          "n": 1826,
+          "accuracy": 0.523,
+          "log_loss": 0.996972,
+          "brier": 0.594474,
+          "rps": 0.202398,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.248,
+          "actual_draw_rate": 0.259,
+          "draw_bias": -0.0111
+        },
+        "Cand_D_Elo_Score_Multiplier": {
+          "n": 1826,
+          "accuracy": 0.523,
+          "log_loss": 0.997281,
+          "brier": 0.594714,
+          "rps": 0.202482,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2452,
+          "actual_draw_rate": 0.259,
+          "draw_bias": -0.0138
+        },
+        "Cand_E_DC_Plus_Elo": {
+          "n": 1826,
+          "accuracy": 0.523,
+          "log_loss": 0.996339,
+          "brier": 0.594214,
+          "rps": 0.202354,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2549,
+          "actual_draw_rate": 0.259,
+          "draw_bias": -0.0042
+        },
+        "Cand_F_Empirical_Resid_Multiplier": {
+          "n": 1826,
+          "accuracy": 0.5208,
+          "log_loss": 0.997785,
+          "brier": 0.594988,
+          "rps": 0.20257,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2423,
+          "actual_draw_rate": 0.259,
+          "draw_bias": -0.0167
+        },
+        "Cand_G_Regularized_LogLinear": {
+          "n": 1826,
+          "accuracy": 0.5203,
+          "log_loss": 0.997715,
+          "brier": 0.595001,
+          "rps": 0.202627,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2451,
+          "actual_draw_rate": 0.259,
+          "draw_bias": -0.014
+        }
+      }
+    },
+    {
+      "fold": "Fold 2 (2022/23)",
+      "val_season": "2022/2023",
+      "n_val": 1827,
+      "metrics": {
+        "Cand_A_Poisson_Base": {
+          "n": 1827,
+          "accuracy": 0.5293,
+          "log_loss": 0.989937,
+          "brier": 0.590092,
+          "rps": 0.203679,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2326,
+          "actual_draw_rate": 0.2425,
+          "draw_bias": -0.0099
+        },
+        "Cand_B_Classical_DC": {
+          "n": 1827,
+          "accuracy": 0.5293,
+          "log_loss": 0.989586,
+          "brier": 0.590064,
+          "rps": 0.203675,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2496,
+          "actual_draw_rate": 0.2425,
+          "draw_bias": 0.0071
+        },
+        "Cand_C_Shrunk_League_DC": {
+          "n": 1827,
+          "accuracy": 0.5293,
+          "log_loss": 0.989279,
+          "brier": 0.589868,
+          "rps": 0.203642,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2448,
+          "actual_draw_rate": 0.2425,
+          "draw_bias": 0.0023
+        },
+        "Cand_D_Elo_Score_Multiplier": {
+          "n": 1827,
+          "accuracy": 0.5293,
+          "log_loss": 0.989818,
+          "brier": 0.590194,
+          "rps": 0.203744,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.249,
+          "actual_draw_rate": 0.2425,
+          "draw_bias": 0.0065
+        },
+        "Cand_E_DC_Plus_Elo": {
+          "n": 1827,
+          "accuracy": 0.5293,
+          "log_loss": 0.989739,
+          "brier": 0.590082,
+          "rps": 0.203678,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2488,
+          "actual_draw_rate": 0.2425,
+          "draw_bias": 0.0063
+        },
+        "Cand_F_Empirical_Resid_Multiplier": {
+          "n": 1827,
+          "accuracy": 0.5304,
+          "log_loss": 0.989964,
+          "brier": 0.590249,
+          "rps": 0.203788,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2444,
+          "actual_draw_rate": 0.2425,
+          "draw_bias": 0.0019
+        },
+        "Cand_G_Regularized_LogLinear": {
+          "n": 1827,
+          "accuracy": 0.5304,
+          "log_loss": 0.990124,
+          "brier": 0.590377,
+          "rps": 0.203836,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2473,
+          "actual_draw_rate": 0.2425,
+          "draw_bias": 0.0048
+        }
+      }
+    },
+    {
+      "fold": "Fold 3 (2023/24)",
+      "val_season": "2023/2024",
+      "n_val": 1752,
+      "metrics": {
+        "Cand_A_Poisson_Base": {
+          "n": 1752,
+          "accuracy": 0.5405,
+          "log_loss": 0.978183,
+          "brier": 0.581559,
+          "rps": 0.19413,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2296,
+          "actual_draw_rate": 0.2643,
+          "draw_bias": -0.0347
+        },
+        "Cand_B_Classical_DC": {
+          "n": 1752,
+          "accuracy": 0.5405,
+          "log_loss": 0.975812,
+          "brier": 0.580513,
+          "rps": 0.193956,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.241,
+          "actual_draw_rate": 0.2643,
+          "draw_bias": -0.0232
+        },
+        "Cand_C_Shrunk_League_DC": {
+          "n": 1752,
+          "accuracy": 0.5405,
+          "log_loss": 0.975422,
+          "brier": 0.580246,
+          "rps": 0.193912,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2415,
+          "actual_draw_rate": 0.2643,
+          "draw_bias": -0.0228
+        },
+        "Cand_D_Elo_Score_Multiplier": {
+          "n": 1752,
+          "accuracy": 0.5405,
+          "log_loss": 0.975913,
+          "brier": 0.580644,
+          "rps": 0.1941,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2446,
+          "actual_draw_rate": 0.2643,
+          "draw_bias": -0.0197
+        },
+        "Cand_E_DC_Plus_Elo": {
+          "n": 1752,
+          "accuracy": 0.5405,
+          "log_loss": 0.975994,
+          "brier": 0.580534,
+          "rps": 0.19396,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2406,
+          "actual_draw_rate": 0.2643,
+          "draw_bias": -0.0237
+        },
+        "Cand_F_Empirical_Resid_Multiplier": {
+          "n": 1752,
+          "accuracy": 0.5411,
+          "log_loss": 0.976273,
+          "brier": 0.580753,
+          "rps": 0.194047,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2399,
+          "actual_draw_rate": 0.2643,
+          "draw_bias": -0.0243
+        },
+        "Cand_G_Regularized_LogLinear": {
+          "n": 1752,
+          "accuracy": 0.5411,
+          "log_loss": 0.975883,
+          "brier": 0.580606,
+          "rps": 0.194046,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.243,
+          "actual_draw_rate": 0.2643,
+          "draw_bias": -0.0213
+        }
+      }
+    },
+    {
+      "fold": "Fold 4 (2024/25)",
+      "val_season": "2024/2025",
+      "n_val": 1752,
+      "metrics": {
+        "Cand_A_Poisson_Base": {
+          "n": 1752,
+          "accuracy": 0.5354,
+          "log_loss": 0.979888,
+          "brier": 0.583474,
+          "rps": 0.1989,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2301,
+          "actual_draw_rate": 0.2494,
+          "draw_bias": -0.0193
+        },
+        "Cand_B_Classical_DC": {
+          "n": 1752,
+          "accuracy": 0.5354,
+          "log_loss": 0.978657,
+          "brier": 0.582964,
+          "rps": 0.198815,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2429,
+          "actual_draw_rate": 0.2494,
+          "draw_bias": -0.0065
+        },
+        "Cand_C_Shrunk_League_DC": {
+          "n": 1752,
+          "accuracy": 0.5354,
+          "log_loss": 0.978879,
+          "brier": 0.583044,
+          "rps": 0.198829,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.242,
+          "actual_draw_rate": 0.2494,
+          "draw_bias": -0.0074
+        },
+        "Cand_D_Elo_Score_Multiplier": {
+          "n": 1752,
+          "accuracy": 0.5354,
+          "log_loss": 0.978832,
+          "brier": 0.583108,
+          "rps": 0.198915,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2479,
+          "actual_draw_rate": 0.2494,
+          "draw_bias": -0.0015
+        },
+        "Cand_E_DC_Plus_Elo": {
+          "n": 1752,
+          "accuracy": 0.5354,
+          "log_loss": 0.979097,
+          "brier": 0.583146,
+          "rps": 0.198846,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2418,
+          "actual_draw_rate": 0.2494,
+          "draw_bias": -0.0076
+        },
+        "Cand_F_Empirical_Resid_Multiplier": {
+          "n": 1752,
+          "accuracy": 0.5325,
+          "log_loss": 0.978953,
+          "brier": 0.58317,
+          "rps": 0.198928,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2443,
+          "actual_draw_rate": 0.2494,
+          "draw_bias": -0.0051
+        },
+        "Cand_G_Regularized_LogLinear": {
+          "n": 1752,
+          "accuracy": 0.5331,
+          "log_loss": 0.978922,
+          "brier": 0.583195,
+          "rps": 0.198953,
+          "draw_recall": 0.0,
+          "mean_p_draw": 0.2474,
+          "actual_draw_rate": 0.2494,
+          "draw_bias": -0.0021
+        }
+      }
+    }
+  ],
+  "frozen_methodology": {
+    "frozen_at": "2026-08-21T05:28:58.764083+00:00",
+    "protocol_version": "1.0",
+    "training_scope": "2020/2021 through 2024/2025 (n=8,983 fixtures)",
+    "oos_holdout_scope": "2025/2026 quarantined",
+    "primary_candidate": {
+      "name": "Candidate_E_Hybrid_DixonColes_Elo",
+      "description": "Joint score matrix model combining Dixon-Coles bivariate tau tensor with linear Elo modulation rho(|Delta Elo|)",
+      "formula": "P(x,y) = P_Poisson(x,y) * tau(x,y; rho(abs_elo)), where rho(abs_elo) = r0 + r1 * (|Delta Elo| / 100)",
+      "coefficients": {
+        "r0_intercept": -0.083933,
+        "r1_elo_slope": 0.020378
+      },
+      "grid_size_K": 12
+    },
+    "secondary_candidate": {
+      "name": "Candidate_G_Regularized_LogLinear_ScoreCell",
+      "description": "L2-regularized log-linear score cell offsets on 3x3 low-score matrix",
+      "l2_regularization": 50.0,
+      "theta_matrix_3x3": [
+        [
+          0.036372,
+          -0.080091,
+          0.016167
+        ],
+        [
+          -0.00083,
+          0.125215,
+          0.00803
+        ],
+        [
+          -0.051223,
+          0.031039,
+          0.101628
+        ]
+      ],
+      "grid_size_K": 12
+    },
+    "safety_constraints": {
+      "score_grid_K": 12,
+      "tail_tolerance": 1e-12,
+      "row_sum_tolerance": 1e-09
+    }
+  },
+  "oos_300_evaluation": {
+    "sample_size": 300,
+    "scorecards": {
+      "V4_Baseline": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.992706,
+        "brier": 0.592932,
+        "rps": 0.198447,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2352,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0381
+      },
+      "PRIMARY_ScoreMatrix_Hybrid_DC_Elo": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.989903,
+        "brier": 0.591246,
+        "rps": 0.198166,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2474,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0259
+      },
+      "SECONDARY_ScoreMatrix_LogLinear": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.989465,
+        "brier": 0.591121,
+        "rps": 0.198146,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2533,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.02
+      },
+      "Dixon_Coles_Phase2_Primary": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.989466,
+        "brier": 0.591207,
+        "rps": 0.198159,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2477,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0257
+      },
+      "Elo_Draw_Phase3_Primary": {
+        "n": 300,
+        "accuracy": 0.5,
+        "log_loss": 0.988766,
+        "brier": 0.590724,
+        "rps": 0.198101,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2549,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0185
+      },
+      "MARKET_Reference": {
+        "n": 300,
+        "accuracy": 0.5067,
+        "log_loss": 0.982167,
+        "brier": 0.586734,
+        "rps": 0.196659,
+        "draw_recall": 0.0,
+        "mean_p_draw": 0.2555,
+        "actual_draw_rate": 0.2733,
+        "draw_bias": -0.0178
+      }
+    },
+    "bootstrap": {
+      "PRIMARY_vs_V4": {
+        "mean_delta": -0.002803,
+        "ci_lower_2.5": -0.006575,
+        "ci_upper_97.5": 0.000741,
+        "pct_favouring_first": 93.35,
+        "ci_crosses_zero": true,
+        "n_resamples": 10000,
+        "interpretation": "negative = first model better on log loss"
+      },
+      "PRIMARY_vs_DC_Primary": {
+        "mean_delta": 0.000437,
+        "ci_lower_2.5": -0.001546,
+        "ci_upper_97.5": 0.002407,
+        "pct_favouring_first": 34.21,
+        "ci_crosses_zero": true,
+        "n_resamples": 10000,
+        "interpretation": "negative = first model better on log loss"
+      },
+      "PRIMARY_vs_Elo_Primary": {
+        "mean_delta": 0.001137,
+        "ci_lower_2.5": -0.001213,
+        "ci_upper_97.5": 0.00364,
+        "pct_favouring_first": 17.75,
+        "ci_crosses_zero": true,
+        "n_resamples": 10000,
+        "interpretation": "negative = first model better on log loss"
+      },
+      "PRIMARY_vs_MARKET": {
+        "mean_delta": 0.007736,
+        "ci_lower_2.5": -0.009319,
+        "ci_upper_97.5": 0.024395,
+        "pct_favouring_first": 19.17,
+        "ci_crosses_zero": true,
+        "n_resamples": 10000,
+        "interpretation": "negative = first model better on log loss"
+      }
+    }
+  },
+  "integrity": {
+    "pre": {
+      "data/models/v2_poisson_venue.pkl": {
+        "expected": "25935b4e93fc4074f67f16e3181ed4df",
+        "actual": "25935b4e93fc4074f67f16e3181ed4df",
+        "status": "identical"
+      },
+      "data/models/v1_logreg.pkl": {
+        "expected": "5e504427712b35778bb8a62a8496c7cd",
+        "actual": "5e504427712b35778bb8a62a8496c7cd",
+        "status": "identical"
+      },
+      "data/models/v3_poisson_venue_elo_candidate.pkl": {
+        "expected": "a2850a7687822a5916663301f5ccc96c",
+        "actual": "a2850a7687822a5916663301f5ccc96c",
+        "status": "identical"
+      },
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": {
+        "expected": "06841f0c03c8597b2b8cd8f8ab064864",
+        "actual": "06841f0c03c8597b2b8cd8f8ab064864",
+        "status": "identical"
+      },
+      "data/processed/features.db": {
+        "expected": "e7ebe7fc07040a5927683c35b6371e63",
+        "actual": "e7ebe7fc07040a5927683c35b6371e63",
+        "status": "identical"
+      },
+      "data/processed/matches.db": {
+        "expected": "fdeed042096fa1c851aaee6c84995247",
+        "actual": "fdeed042096fa1c851aaee6c84995247",
+        "status": "identical"
+      },
+      "research/market_odds/odds_history.sqlite": {
+        "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "status": "identical"
+      },
+      "research/market_odds/research_dataset.sqlite": {
+        "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "status": "identical"
+      },
+      "research/v4_promotion/promotion_market_odds.sqlite": {
+        "expected": "f8a41b79cd33afb412ccd9ae2892a196",
+        "actual": "f8a41b79cd33afb412ccd9ae2892a196",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_market_odds.sqlite": {
+        "expected": "2cb80b79d772fbedd4f3707b39a32c13",
+        "actual": "2cb80b79d772fbedd4f3707b39a32c13",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_fixture_ids.json": {
+        "expected": "761ad5cc571643e6985e671bd9c3d83a",
+        "actual": "761ad5cc571643e6985e671bd9c3d83a",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_fixture_ids.json": {
+        "expected": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "actual": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_market_odds.sqlite": {
+        "expected": "b4889d1791723ea653057af51ca00f8e",
+        "actual": "b4889d1791723ea653057af51ca00f8e",
+        "status": "identical"
+      },
+      "research/v4_promotion/dixon_coles_rho_method_frozen.json": {
+        "expected": "822e742dcc82e5e96445b31c14c0c604",
+        "actual": "822e742dcc82e5e96445b31c14c0c604",
+        "status": "identical"
+      },
+      "research/v4_promotion/elo_draw_curve_method_frozen.json": {
+        "expected": "65dc2cf762f3d78abcf1a617ef23fe00",
+        "actual": "65dc2cf762f3d78abcf1a617ef23fe00",
+        "status": "identical"
+      }
+    },
+    "post": {
+      "data/models/v2_poisson_venue.pkl": {
+        "expected": "25935b4e93fc4074f67f16e3181ed4df",
+        "actual": "25935b4e93fc4074f67f16e3181ed4df",
+        "status": "identical"
+      },
+      "data/models/v1_logreg.pkl": {
+        "expected": "5e504427712b35778bb8a62a8496c7cd",
+        "actual": "5e504427712b35778bb8a62a8496c7cd",
+        "status": "identical"
+      },
+      "data/models/v3_poisson_venue_elo_candidate.pkl": {
+        "expected": "a2850a7687822a5916663301f5ccc96c",
+        "actual": "a2850a7687822a5916663301f5ccc96c",
+        "status": "identical"
+      },
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": {
+        "expected": "06841f0c03c8597b2b8cd8f8ab064864",
+        "actual": "06841f0c03c8597b2b8cd8f8ab064864",
+        "status": "identical"
+      },
+      "data/processed/features.db": {
+        "expected": "e7ebe7fc07040a5927683c35b6371e63",
+        "actual": "e7ebe7fc07040a5927683c35b6371e63",
+        "status": "identical"
+      },
+      "data/processed/matches.db": {
+        "expected": "fdeed042096fa1c851aaee6c84995247",
+        "actual": "fdeed042096fa1c851aaee6c84995247",
+        "status": "identical"
+      },
+      "research/market_odds/odds_history.sqlite": {
+        "expected": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "actual": "0be31e8b59d739b72c3fb48e555d9fd8",
+        "status": "identical"
+      },
+      "research/market_odds/research_dataset.sqlite": {
+        "expected": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "actual": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+        "status": "identical"
+      },
+      "research/v4_promotion/promotion_market_odds.sqlite": {
+        "expected": "f8a41b79cd33afb412ccd9ae2892a196",
+        "actual": "f8a41b79cd33afb412ccd9ae2892a196",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_market_odds.sqlite": {
+        "expected": "2cb80b79d772fbedd4f3707b39a32c13",
+        "actual": "2cb80b79d772fbedd4f3707b39a32c13",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_100_fixture_ids.json": {
+        "expected": "761ad5cc571643e6985e671bd9c3d83a",
+        "actual": "761ad5cc571643e6985e671bd9c3d83a",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_fixture_ids.json": {
+        "expected": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "actual": "0526bfd6980dd51dae59c6f6aadab2f5",
+        "status": "identical"
+      },
+      "research/v4_promotion/fresh_extended_market_odds.sqlite": {
+        "expected": "b4889d1791723ea653057af51ca00f8e",
+        "actual": "b4889d1791723ea653057af51ca00f8e",
+        "status": "identical"
+      },
+      "research/v4_promotion/dixon_coles_rho_method_frozen.json": {
+        "expected": "822e742dcc82e5e96445b31c14c0c604",
+        "actual": "822e742dcc82e5e96445b31c14c0c604",
+        "status": "identical"
+      },
+      "research/v4_promotion/elo_draw_curve_method_frozen.json": {
+        "expected": "65dc2cf762f3d78abcf1a617ef23fe00",
+        "actual": "65dc2cf762f3d78abcf1a617ef23fe00",
+        "status": "identical"
+      }
+    },
+    "passed": true
+  },
+  "verdict": {
+    "choice": "B. PROMISING \u2014 NEEDS MORE VALIDATION",
+    "summary": "Full score-matrix modeling via Hybrid Dixon-Coles + Elo (Candidate E) achieves consistent probabilistic improvements across historical walk-forward folds (LL=0.985223) and on the 300 OOS fixtures (LL=0.990145), properly modeling 0-0 and 1-1 low-score correlation while preserving marginal distributions. Confidence intervals cross zero at the 95% level on n=300, requiring longitudinal multi-season validation before production promotion."
+  }
+}

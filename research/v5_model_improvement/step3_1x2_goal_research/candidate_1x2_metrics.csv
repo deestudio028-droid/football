@@ -1,0 +1,7 @@
+candidate,dataset,accuracy_pct,log_loss,brier_score,home_precision_pct,draw_precision_pct,away_precision_pct,home_recall_pct,draw_recall_pct,away_recall_pct,home_f1_pct,draw_f1_pct,away_f1_pct,macro_f1_pct,mean_calibration_ece,home_ece,draw_ece,away_ece
+V4.0 Baseline,"Untouched Holdout (N=1,751)",51.97,0.9921,0.5907,54.48,0.0,47.56,78.86,0.0,56.45,64.44,0.0,51.62,38.69,0.0266,0.0232,0.0261,0.0306
+Candidate 1: Temperature Scaling,"Untouched Holdout (N=1,751)",51.97,0.9922,0.5907,54.48,0.0,47.56,78.86,0.0,56.45,64.44,0.0,51.62,38.69,0.0268,0.024,0.0266,0.0296
+Candidate 2: Vector Scaling,"Untouched Holdout (N=1,751)",51.8,0.9897,0.5898,54.87,0.0,46.63,78.21,0.0,56.82,64.49,0.0,51.22,38.57,0.0175,0.0203,0.0108,0.0213
+Candidate 3: Multinomial Logistic Calibration,"Untouched Holdout (N=1,751)",22.79,1.4083,0.8531,26.43,0.0,20.47,23.35,0.0,40.93,24.79,0.0,27.29,17.36,0.2005,0.3002,0.0067,0.2947
+Candidate 4: Platt Calibrated Draw (Step 2D/2E),"Untouched Holdout (N=1,751)",51.86,0.9904,0.5903,54.4,0.0,47.63,78.6,0.0,56.45,64.3,0.0,51.67,38.66,0.025,0.0322,0.012,0.0309
+Candidate 5: Coherent Score-Space Bivariate Matrix,"Untouched Holdout (N=1,751)",51.97,0.9907,0.5904,54.48,0.0,47.56,78.86,0.0,56.45,64.44,0.0,51.62,38.69,0.0219,0.0279,0.01,0.0277

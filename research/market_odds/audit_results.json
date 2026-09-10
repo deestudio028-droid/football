@@ -1,0 +1,173 @@
+{
+  "generated_at": "2026-08-20T09:32:15.096822+00:00",
+  "coverage": {
+    "by_league": {
+      "Ligue 1": {
+        "total_fixtures": 1752,
+        "has_odds_flag": 1752,
+        "fetched_success": 710,
+        "fetched_empty": 1042,
+        "fetched_error": 0,
+        "complete_1x2": 710,
+        "complete_pct": 40.53
+      },
+      "La Liga": {
+        "total_fixtures": 1900,
+        "has_odds_flag": 1896,
+        "fetched_success": 873,
+        "fetched_empty": 1023,
+        "fetched_error": 0,
+        "complete_1x2": 873,
+        "complete_pct": 45.95
+      },
+      "Premier League": {
+        "total_fixtures": 1900,
+        "has_odds_flag": 1900,
+        "fetched_success": 865,
+        "fetched_empty": 1035,
+        "fetched_error": 0,
+        "complete_1x2": 865,
+        "complete_pct": 45.53
+      },
+      "Bundesliga": {
+        "total_fixtures": 1530,
+        "has_odds_flag": 1530,
+        "fetched_success": 687,
+        "fetched_empty": 843,
+        "fetched_error": 0,
+        "complete_1x2": 687,
+        "complete_pct": 44.9
+      },
+      "Serie A": {
+        "total_fixtures": 1901,
+        "has_odds_flag": 1899,
+        "fetched_success": 866,
+        "fetched_empty": 1033,
+        "fetched_error": 0,
+        "complete_1x2": 866,
+        "complete_pct": 45.55
+      }
+    },
+    "by_season": {
+      "2020/2021": {
+        "total_fixtures": 1826,
+        "complete_1x2": 0,
+        "complete_pct": 0.0
+      },
+      "2021/2022": {
+        "total_fixtures": 1826,
+        "complete_1x2": 0,
+        "complete_pct": 0.0
+      },
+      "2022/2023": {
+        "total_fixtures": 1827,
+        "complete_1x2": 522,
+        "complete_pct": 28.57
+      },
+      "2023/2024": {
+        "total_fixtures": 1752,
+        "complete_1x2": 1727,
+        "complete_pct": 98.57
+      },
+      "2024/2025": {
+        "total_fixtures": 1752,
+        "complete_1x2": 1752,
+        "complete_pct": 100.0
+      }
+    },
+    "pooled": {
+      "total_fixtures": 8983,
+      "has_odds_flag": 8977,
+      "fetched_success": 4001,
+      "fetched_empty": 4976,
+      "fetched_error": 0,
+      "complete_1x2": 4001,
+      "complete_pct": 44.54
+    },
+    "incomplete_count": 4982
+  },
+  "bookmakers": {
+    "Pinnacle": {
+      "bookmaker_id": 1,
+      "fixture_count": 4001,
+      "coverage_pct": 44.54,
+      "total_records": 12003,
+      "opening_available": 12003,
+      "closing_available": 12003,
+      "opening_pct": 100.0,
+      "closing_pct": 100.0
+    },
+    "Bet365": {
+      "bookmaker_id": 2,
+      "fixture_count": 4001,
+      "coverage_pct": 44.54,
+      "total_records": 12003,
+      "opening_available": 12003,
+      "closing_available": 12003,
+      "opening_pct": 100.0,
+      "closing_pct": 100.0
+    },
+    "1xBet": {
+      "bookmaker_id": 3,
+      "fixture_count": 4001,
+      "coverage_pct": 44.54,
+      "total_records": 12003,
+      "opening_available": 12003,
+      "closing_available": 12003,
+      "opening_pct": 100.0,
+      "closing_pct": 100.0
+    },
+    "WilliamHill": {
+      "bookmaker_id": 4,
+      "fixture_count": 4001,
+      "coverage_pct": 44.54,
+      "total_records": 12003,
+      "opening_available": 12003,
+      "closing_available": 12003,
+      "opening_pct": 100.0,
+      "closing_pct": 100.0
+    },
+    "Betfair Exchange": {
+      "bookmaker_id": 5,
+      "fixture_count": 694,
+      "coverage_pct": 7.73,
+      "total_records": 2082,
+      "opening_available": 2082,
+      "closing_available": 2082,
+      "opening_pct": 100.0,
+      "closing_pct": 100.0
+    }
+  },
+  "preferred_bookmaker_id": 1,
+  "opening_closing": {
+    "both": 50094,
+    "opening_only": 0,
+    "closing_only": 0,
+    "neither": 0,
+    "total_records": 50094
+  },
+  "causality": {
+    "opening": {
+      "classification": "ASSUMED PRE-MATCH",
+      "evidence": "OddAlerts defines 'opening' as the earliest recorded price. By definition this is the first price posted by a bookmaker, which occurs before the match. No independent timestamp exists on the odds/history endpoint to verify this.",
+      "risk": "LOW \u2014 earliest price is structurally pre-match"
+    },
+    "closing": {
+      "classification": "ASSUMED PRE-MATCH",
+      "evidence": "OddAlerts defines 'closing' as the final price before kickoff. The odds/movement endpoint (which has timestamps) confirms that movement data tracks pre-kickoff changes, and the retention note directs users to odds/history for 'permanent historical records (opening, closing, peak)'. No independent timestamp exists on odds/history records.",
+      "risk": "MODERATE \u2014 relies on OddAlerts' definition. Cannot independently verify that 'closing' was captured strictly before kickoff. Industry standard is that closing odds = final pre-match price, but edge cases (e.g., delayed kickoffs, in-play price captured as closing) cannot be ruled out without timestamps."
+    },
+    "peak": {
+      "classification": "UNKNOWN TIMING",
+      "evidence": "Peak is the highest price seen during the market's lifetime. It could have occurred at any point \u2014 early pre-match, late pre-match, or even in-play if the bookmaker offers in-play markets. No temporal information is available.",
+      "risk": "HIGH \u2014 must NOT be used as a model feature"
+    },
+    "independent_timestamp_available": false,
+    "movement_endpoint_retention_days": 21,
+    "recommendation": "Use CLOSING odds as the primary feature (most informative pre-match price, standard industry practice). Use OPENING odds as a robustness check. Do NOT use PEAK odds. Accept that pre-kickoff timing relies on OddAlerts' definition rather than independent verification."
+  },
+  "research_dataset": {
+    "path": "E:\\Football Prediction Project\\research\\market_odds\\research_dataset.sqlite",
+    "fixture_count": 4001
+  }
+}

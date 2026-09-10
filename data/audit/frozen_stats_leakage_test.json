@@ -1,0 +1,35 @@
+{
+  "test_description": "Compare OddAlerts' documented 'frozen pre-match stats' behavior (include_frozen=true) against a manually reconstructed leakage-safe pre-match rolling window, for a single real, verifiable fixture.",
+  "target_fixture": {
+    "id": 215022547,
+    "match": "Arsenal vs Manchester City",
+    "date": "2025-02-02",
+    "competition": "Premier League",
+    "season_id": 6484,
+    "home_played_field_on_fixture_object": 23,
+    "note": "home_played:23 on the fixture object itself is OddAlerts' own statement that Arsenal had played exactly 23 prior league matches this season before this kickoff."
+  },
+  "method_A_oddalerts_frozen_endpoint": {
+    "call": "GET /api/stats/fixture/215022547?include_frozen=true",
+    "result": {
+      "fixture_id_on_returned_record": null,
+      "played_total_returned": 38,
+      "interpretation": "38 is the FULL 2024/25 season total (season had 38 played by result-completion time of this audit), not a snapshot frozen at matchday 24. This includes matches that happened AFTER the target fixture -- i.e. future information leaking into what is documented as a pre-match feature."
+    }
+  },
+  "method_B_self_reconstructed_rolling_window": {
+    "call": "GET /api/fixtures/between?teams=5303&seasons=6484&from=1723500000&to=1738454400&include=stats  (Arsenal, 2024/25 season, strictly before the 2025-02-02 kickoff)",
+    "result": {
+      "fixtures_returned": 23,
+      "matches_this_exactly": "23 -- matches the fixture object's own home_played:23 field exactly, confirming this is the correct pre-match sample.",
+      "goals_for_sum": 44,
+      "goals_against_sum": 21,
+      "goals_for_per90": 1.91,
+      "goals_against_per90": 0.91,
+      "xg_for_sum_approx": 42.9,
+      "xg_against_sum_approx": 21.5,
+      "note": "All 23 matches had xg populated (all fell after the Feb-May 2024 xG cutover), so xG-based pre-match features are usable here specifically because this fixture is late enough in the 2024/25 season."
+    }
+  },
+  "conclusion": "Method A (OddAlerts' own include_frozen=true) is NOT leakage-safe as documented and should not be used for feature construction. Method B (pull raw fixtures via /fixtures/between filtered to teams+season+date-range strictly before kickoff, then aggregate ourselves) produces the exact correct sample size and is the recommended architecture. This is not a hypothetical recommendation -- it was verified end-to-end against a real match on real data in this test."
+}

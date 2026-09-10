@@ -1,0 +1,13 @@
+Experiment Type,Configuration,Draw ECE,Draw Brier,Draw Log Loss,MC Log Loss,Robustness Verdict
+Platt Regularization Sweep,C = 0.001,0.0006,0.188903,0.565093,0.994606,SENSITIVE
+Platt Regularization Sweep,C = 0.01,0.0083,0.187607,0.561418,0.990931,STABLE
+Platt Regularization Sweep,C = 0.1,0.0105,0.187258,0.560471,0.989984,STABLE
+Platt Regularization Sweep,C = 1.0,0.0111,0.187236,0.560438,0.989951,STABLE
+Platt Regularization Sweep,C = 10.0,0.0112,0.187234,0.560437,0.98995,STABLE
+Platt Regularization Sweep,C = 100.0,0.0103,0.187234,0.560437,0.98995,STABLE
+Platt Regularization Sweep,C = 1000.0,0.0103,0.187234,0.560437,0.989949,STABLE
+Feature-Aware Ablation,Full Model (11 features),0.003,0.187632,0.561401,0.990914,ROBUST
+Feature-Aware Ablation,"Without Score-Space (drop p_00, p_11, p_low, p_score)",0.0019,0.187489,0.561034,0.990547,ROBUST
+Feature-Aware Ablation,"Without Elo & AD (drop abs_elo_diff, ad_balance)",0.0041,0.187615,0.561356,0.990868,ROBUST
+Feature-Aware Ablation,"Without Goal Lambdas (drop lambda_total, lambda_gap)",0.0024,0.187592,0.561254,0.990767,ROBUST
+Feature-Aware Ablation,Minimal (only v4_p_D and prob_gap),0.0094,0.187273,0.560313,0.989826,ROBUST

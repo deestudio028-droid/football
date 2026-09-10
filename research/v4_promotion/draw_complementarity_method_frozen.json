@@ -1,0 +1,38 @@
+{
+  "frozen_at": "2026-08-21T05:49:20.667621+00:00",
+  "protocol_version": "1.0",
+  "training_scope": "2020/2021 through 2024/2025 (n=8,983 fixtures)",
+  "oos_holdout_scope": "2025/2026 quarantined",
+  "primary_hybrid": {
+    "name": "Hybrid_M06_DixonColes_plus_Elo",
+    "description": "Regularized logistic stacking of Dixon-Coles and Elo draw probabilities with proportional odds redistribution",
+    "intercept": 0.113028,
+    "weights": [
+      0.603705,
+      0.481218
+    ],
+    "l2_reg": 10.0,
+    "components": [
+      "Dixon-Coles Shrunk League MLE",
+      "Elo Bivariate Logistic Calibrator"
+    ]
+  },
+  "secondary_hybrid": {
+    "name": "Hybrid_M08_DixonColes_plus_Calibration",
+    "description": "Regularized logistic stacking of Dixon-Coles and Draw-Only Calibration probabilities with proportional odds redistribution",
+    "intercept": 0.112679,
+    "weights": [
+      0.606818,
+      0.477674
+    ],
+    "l2_reg": 10.0,
+    "components": [
+      "Dixon-Coles Shrunk League MLE",
+      "Draw-Only Logistic Calibrator"
+    ]
+  },
+  "safety_constraints": {
+    "min_prob_clip": 1e-15,
+    "row_sum_tolerance": 1e-09
+  }
+}

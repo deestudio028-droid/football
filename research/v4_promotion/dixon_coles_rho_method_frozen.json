@@ -1,0 +1,46 @@
+{
+  "frozen_at": "2026-08-21T05:15:50.921414+00:00",
+  "protocol_version": "1.0",
+  "training_scope": "2020/2021 through 2024/2025 (n=8,983 fixtures)",
+  "oos_holdout_scope": "2025/2026 quarantined",
+  "primary_candidate": {
+    "name": "Method_H_Shrunk_League_MLE",
+    "description": "DerSimonian-Laird Empirical Bayes shrinkage of league-specific MLE toward global historical MLE",
+    "global_prior_mean_rho": -0.055972,
+    "between_league_variance_tau_sq": 0.00183095,
+    "league_rhos": {
+      "Bundesliga": -0.106681,
+      "La Liga": -0.032592,
+      "Ligue 1": -0.069124,
+      "Premier League": -0.018391,
+      "Serie A": -0.062733
+    },
+    "raw_league_rhos": {
+      "Bundesliga": -0.13506,
+      "La Liga": -0.022166,
+      "Ligue 1": -0.075892,
+      "Premier League": 8.4e-05,
+      "Serie A": -0.065929
+    },
+    "shrinkage_weights": {
+      "Bundesliga": 0.6412,
+      "La Liga": 0.6916,
+      "Ligue 1": 0.6602,
+      "Premier League": 0.6704,
+      "Serie A": 0.679
+    }
+  },
+  "secondary_candidate": {
+    "name": "Method_C_Global_Historical_MLE",
+    "description": "Single global MLE estimated on all 8,983 historical matches",
+    "global_rho": -0.055972
+  },
+  "safety_constraints": {
+    "parameter_bounds": [
+      -0.25,
+      0.25
+    ],
+    "tail_tolerance": 1e-15,
+    "row_sum_tolerance": 1e-09
+  }
+}

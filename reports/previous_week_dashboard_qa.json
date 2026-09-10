@@ -1,0 +1,49 @@
+{
+  "qa_timestamp": "2026-08-29T09:20:00Z",
+  "audit_scope": "PREVIOUS_WEEK_DASHBOARD_VIEW_INTEGRATION",
+  "historical_cohort": {
+    "dataset_source": "reports/production_performance_ledger.jsonl",
+    "total_matches": 33,
+    "correct_predictions": 20,
+    "wrong_predictions": 13,
+    "accuracy_1x2_pct": 60.61,
+    "exact_score_hits": 3,
+    "exact_score_accuracy_pct": 9.09,
+    "league_distribution": {
+      "Premier League": 9,
+      "Ligue 1": 9,
+      "Serie A": 8,
+      "La Liga": 7,
+      "Bundesliga": 0
+    }
+  },
+  "predictions_recalculated": false,
+  "production_model_modified": false,
+  "historical_memory_modified": false,
+  "model_integrity": {
+    "v4_0_production_md5": "06841f0c03c8597b2b8cd8f8ab064864",
+    "v4_0_verified": true,
+    "v4_1_candidate_md5": "145f918d933eb343c0f63ca342b10289",
+    "v4_1_verified": true
+  },
+  "current_week_status": {
+    "total_selected": 48,
+    "target": 48,
+    "league_distribution": {
+      "Premier League": 10,
+      "Serie A": 10,
+      "La Liga": 10,
+      "Bundesliga": 9,
+      "Ligue 1": 9
+    },
+    "duplicate_fixtures": 0,
+    "bundesliga_isolated": true
+  },
+  "test_results": {
+    "new_suite_passed": "12 / 12 (100.0%)",
+    "targeted_suites_passed": "71 / 71 (100.0%)",
+    "new_regressions": 0,
+    "legacy_test_debt": 31
+  },
+  "final_status": "PASS WITH LEGACY TEST DEBT"
+}

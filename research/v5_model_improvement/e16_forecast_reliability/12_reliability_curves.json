@@ -1,0 +1,250 @@
+{
+  "decile_calibration_table": [
+    {
+      "decile": 1,
+      "n_matches": 730,
+      "mean_reliability_score": 0.4829,
+      "mean_predicted_rps": 0.258679,
+      "actual_mean_rps": 0.222416,
+      "actual_mean_log_loss": 1.065972,
+      "top1_accuracy_pct": 44.25,
+      "mean_entropy": 1.0775,
+      "mean_max_prob": 0.4159
+    },
+    {
+      "decile": 2,
+      "n_matches": 818,
+      "mean_reliability_score": 0.5344,
+      "mean_predicted_rps": 0.232784,
+      "actual_mean_rps": 0.226975,
+      "actual_mean_log_loss": 1.068687,
+      "top1_accuracy_pct": 44.87,
+      "mean_entropy": 1.0793,
+      "mean_max_prob": 0.4141
+    },
+    {
+      "decile": 3,
+      "n_matches": 595,
+      "mean_reliability_score": 0.5474,
+      "mean_predicted_rps": 0.226279,
+      "actual_mean_rps": 0.225269,
+      "actual_mean_log_loss": 1.065975,
+      "top1_accuracy_pct": 45.88,
+      "mean_entropy": 1.0798,
+      "mean_max_prob": 0.4129
+    },
+    {
+      "decile": 4,
+      "n_matches": 720,
+      "mean_reliability_score": 0.5602,
+      "mean_predicted_rps": 0.219901,
+      "actual_mean_rps": 0.219404,
+      "actual_mean_log_loss": 1.070153,
+      "top1_accuracy_pct": 42.5,
+      "mean_entropy": 1.0642,
+      "mean_max_prob": 0.4458
+    },
+    {
+      "decile": 5,
+      "n_matches": 678,
+      "mean_reliability_score": 0.563,
+      "mean_predicted_rps": 0.218503,
+      "actual_mean_rps": 0.218619,
+      "actual_mean_log_loss": 1.070262,
+      "top1_accuracy_pct": 43.51,
+      "mean_entropy": 1.0613,
+      "mean_max_prob": 0.4534
+    },
+    {
+      "decile": 6,
+      "n_matches": 862,
+      "mean_reliability_score": 0.581,
+      "mean_predicted_rps": 0.209523,
+      "actual_mean_rps": 0.203627,
+      "actual_mean_log_loss": 1.008857,
+      "top1_accuracy_pct": 52.67,
+      "mean_entropy": 1.033,
+      "mean_max_prob": 0.4983
+    },
+    {
+      "decile": 7,
+      "n_matches": 705,
+      "mean_reliability_score": 0.6082,
+      "mean_predicted_rps": 0.195919,
+      "actual_mean_rps": 0.200244,
+      "actual_mean_log_loss": 0.988984,
+      "top1_accuracy_pct": 56.88,
+      "mean_entropy": 0.9975,
+      "mean_max_prob": 0.5454
+    },
+    {
+      "decile": 8,
+      "n_matches": 620,
+      "mean_reliability_score": 0.6439,
+      "mean_predicted_rps": 0.178027,
+      "actual_mean_rps": 0.188918,
+      "actual_mean_log_loss": 0.956425,
+      "top1_accuracy_pct": 57.58,
+      "mean_entropy": 0.9549,
+      "mean_max_prob": 0.5852
+    },
+    {
+      "decile": 9,
+      "n_matches": 645,
+      "mean_reliability_score": 0.6983,
+      "mean_predicted_rps": 0.150852,
+      "actual_mean_rps": 0.160794,
+      "actual_mean_log_loss": 0.840134,
+      "top1_accuracy_pct": 67.6,
+      "mean_entropy": 0.8694,
+      "mean_max_prob": 0.6534
+    },
+    {
+      "decile": 10,
+      "n_matches": 709,
+      "mean_reliability_score": 0.8422,
+      "mean_predicted_rps": 0.078879,
+      "actual_mean_rps": 0.122682,
+      "actual_mean_log_loss": 0.67654,
+      "top1_accuracy_pct": 77.57,
+      "mean_entropy": 0.7287,
+      "mean_max_prob": 0.7384
+    }
+  ],
+  "coverage_curve_table": [
+    {
+      "coverage_pct": 100,
+      "retained_matches": 7082,
+      "abstain_count": 0,
+      "retained_rps": 0.199489,
+      "retained_log_loss": 0.98336,
+      "retained_brier": 0.585881,
+      "draw_ece": 0.0069,
+      "mean_entropy": 0.997,
+      "mean_max_prob": 0.5137
+    },
+    {
+      "coverage_pct": 95,
+      "retained_matches": 6833,
+      "abstain_count": 249,
+      "retained_rps": 0.199058,
+      "retained_log_loss": 0.980918,
+      "retained_brier": 0.584207,
+      "draw_ece": 0.0062,
+      "mean_entropy": 0.9944,
+      "mean_max_prob": 0.5166
+    },
+    {
+      "coverage_pct": 90,
+      "retained_matches": 6415,
+      "abstain_count": 667,
+      "retained_rps": 0.197163,
+      "retained_log_loss": 0.975111,
+      "retained_brier": 0.580098,
+      "draw_ece": 0.008,
+      "mean_entropy": 0.9887,
+      "mean_max_prob": 0.5238
+    },
+    {
+      "coverage_pct": 85,
+      "retained_matches": 6070,
+      "abstain_count": 1012,
+      "retained_rps": 0.195341,
+      "retained_log_loss": 0.969284,
+      "retained_brier": 0.575982,
+      "draw_ece": 0.0092,
+      "mean_entropy": 0.9833,
+      "mean_max_prob": 0.5306
+    },
+    {
+      "coverage_pct": 80,
+      "retained_matches": 5715,
+      "abstain_count": 1367,
+      "retained_rps": 0.193124,
+      "retained_log_loss": 0.963054,
+      "retained_brier": 0.571595,
+      "draw_ece": 0.0115,
+      "mean_entropy": 0.9774,
+      "mean_max_prob": 0.5376
+    },
+    {
+      "coverage_pct": 75,
+      "retained_matches": 5324,
+      "abstain_count": 1758,
+      "retained_rps": 0.190991,
+      "retained_log_loss": 0.95539,
+      "retained_brier": 0.566245,
+      "draw_ece": 0.0121,
+      "mean_entropy": 0.9699,
+      "mean_max_prob": 0.5469
+    },
+    {
+      "coverage_pct": 70,
+      "retained_matches": 5006,
+      "abstain_count": 2076,
+      "retained_rps": 0.188956,
+      "retained_log_loss": 0.948677,
+      "retained_brier": 0.561536,
+      "draw_ece": 0.0135,
+      "mean_entropy": 0.963,
+      "mean_max_prob": 0.5552
+    },
+    {
+      "coverage_pct": 60,
+      "retained_matches": 4773,
+      "abstain_count": 2309,
+      "retained_rps": 0.187177,
+      "retained_log_loss": 0.942446,
+      "retained_brier": 0.557185,
+      "draw_ece": 0.0142,
+      "mean_entropy": 0.9574,
+      "mean_max_prob": 0.5618
+    },
+    {
+      "coverage_pct": 50,
+      "retained_matches": 3541,
+      "abstain_count": 3541,
+      "retained_rps": 0.176369,
+      "retained_log_loss": 0.898448,
+      "retained_brier": 0.526349,
+      "draw_ece": 0.0106,
+      "mean_entropy": 0.9215,
+      "mean_max_prob": 0.5992
+    }
+  ],
+  "confidence_bands": [
+    {
+      "confidence_band": "HIGH_CONFIDENCE",
+      "n_matches": 2136,
+      "pct_of_total": 30.16,
+      "mean_reliability_score": 0.7247,
+      "actual_mean_rps": 0.158512,
+      "actual_mean_log_loss": 0.832794,
+      "top1_accuracy_pct": 66.85,
+      "mean_entropy": 0.8561,
+      "mean_max_prob": 0.6547
+    },
+    {
+      "confidence_band": "MODERATE_CONFIDENCE",
+      "n_matches": 2870,
+      "pct_of_total": 40.53,
+      "mean_reliability_score": 0.5751,
+      "actual_mean_rps": 0.211614,
+      "actual_mean_log_loss": 1.034923,
+      "top1_accuracy_pct": 48.75,
+      "mean_entropy": 1.0425,
+      "mean_max_prob": 0.4812
+    },
+    {
+      "confidence_band": "LOW_CONFIDENCE",
+      "n_matches": 2076,
+      "pct_of_total": 29.31,
+      "mean_reliability_score": 0.5194,
+      "actual_mean_rps": 0.224887,
+      "actual_mean_log_loss": 1.066993,
+      "top1_accuracy_pct": 45.04,
+      "mean_entropy": 1.079,
+      "mean_max_prob": 0.4137
+    }
+  ]
+}

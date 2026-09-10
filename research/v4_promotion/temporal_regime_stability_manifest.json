@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-21T05:56:45.616022+00:00",
+  "historical_fixtures": 8983,
+  "oos_fixtures": 300,
+  "results_file": "temporal_regime_stability_results.json",
+  "report_file": "temporal_regime_stability_report.md",
+  "frozen_method_file": "temporal_regime_method_frozen.json",
+  "frozen_method_hash": "4a4f72e1d288d2547272c9b30b0368df",
+  "integrity_passed": true,
+  "verdict": "B. PROMISING \u2014 NEEDS MORE VALIDATION",
+  "production_modified": false
+}

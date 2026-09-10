@@ -1,0 +1,26 @@
+# Security & Secrets - NEVER COMMIT
+.env
+*.env.*
+*.secret
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local SQLite Databases & Heavy Raw Data
+*.db
+*.sqlite
+*.sqlite3
+data_test.db
+data/processed/*.db
+data/raw/
+
+# Logs & Temporary Scratch Files
+logs/
+*.log
+scratch/
+.system_generated/

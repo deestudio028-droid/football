@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-21T05:15:50.921414+00:00",
+  "historical_fixtures": 8983,
+  "oos_fixtures": 300,
+  "results_file": "dixon_coles_rho_walkforward_results.json",
+  "report_file": "dixon_coles_rho_walkforward_report.md",
+  "frozen_method_file": "dixon_coles_rho_method_frozen.json",
+  "frozen_method_hash": "822e742dcc82e5e96445b31c14c0c604",
+  "integrity_passed": true,
+  "verdict": "B. PROMISING \u2014 NEEDS MORE VALIDATION",
+  "production_modified": false
+}

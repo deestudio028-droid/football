@@ -1,0 +1,90 @@
+{
+  "home_goals_for_per_match_last5": {
+    "null": 201,
+    "pct_null": 1.9
+  },
+  "home_goals_for_per_match_season": {
+    "null": 580,
+    "pct_null": 5.4
+  },
+  "away_goals_for_per_match_last5": {
+    "null": 210,
+    "pct_null": 2.0
+  },
+  "away_goals_for_per_match_season": {
+    "null": 584,
+    "pct_null": 5.4
+  },
+  "home_xg_for_per_match_last5": {
+    "null": 7077,
+    "pct_null": 65.9
+  },
+  "home_xg_for_per_match_season": {
+    "null": 7054,
+    "pct_null": 65.7
+  },
+  "home_shots_for_per_match_season": {
+    "null": 587,
+    "pct_null": 5.5
+  },
+  "home_shots_on_for_per_match_season": {
+    "null": 586,
+    "pct_null": 5.5
+  },
+  "home_points_last5": {
+    "null": 201,
+    "pct_null": 1.9
+  },
+  "home_points_last10": {
+    "null": 336,
+    "pct_null": 3.1
+  },
+  "home_attack_strength_score": {
+    "null": 30,
+    "pct_null": 0.3
+  },
+  "home_defence_strength_score": {
+    "null": 30,
+    "pct_null": 0.3
+  },
+  "strength_diff": {
+    "null": 30,
+    "pct_null": 0.3
+  },
+  "home_goals_for_home_venue_season": {
+    "null": 1164,
+    "pct_null": 10.8
+  },
+  "away_goals_for_away_venue_season": {
+    "null": 1164,
+    "pct_null": 10.8
+  },
+  "league_home_advantage_season": {
+    "null": 30,
+    "pct_null": 0.3
+  },
+  "home_fouls_per_match_season": {
+    "null": 586,
+    "pct_null": 5.5
+  },
+  "home_yellow_cards_per_match_season": {
+    "null": 585,
+    "pct_null": 5.4
+  },
+  "home_attacks_per_match_season": {
+    "null": 587,
+    "pct_null": 5.5
+  },
+  "home_pressure_per_match_season": {
+    "null": 592,
+    "pct_null": 5.5
+  },
+  "label_home_goals": {
+    "null": 1,
+    "pct_null": 0.0
+  },
+  "label_result": {
+    "null": 1,
+    "pct_null": 0.0
+  }
+}

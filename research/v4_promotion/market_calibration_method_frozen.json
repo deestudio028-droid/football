@@ -1,0 +1,35 @@
+{
+  "frozen_at": "2026-08-21T05:38:39.450584+00:00",
+  "protocol_version": "1.0",
+  "training_scope": "2020/2021 through 2024/2025 (n=8,983 fixtures)",
+  "oos_holdout_scope": "2025/2026 quarantined",
+  "primary_candidate": {
+    "name": "Candidate_C_Draw_Only_Logistic_Calibrator",
+    "description": "Post-hoc univariate logistic calibration on V4 P(Draw) with proportional relative odds preservation",
+    "formula": "logit(P_D_new) = alpha0 + alpha1 * logit(P_D_V4)",
+    "coefficients": {
+      "alpha0_intercept": 0.287304,
+      "alpha1_slope": 1.156252
+    },
+    "redistribution_rule": "proportional_odds_preservation"
+  },
+  "secondary_candidate": {
+    "name": "Candidate_B_Vector_Logit_Dirichlet",
+    "description": "L2-regularized constrained diagonal Dirichlet calibration across 3 classes",
+    "weights": [
+      1.177534,
+      1.033218,
+      1.19169
+    ],
+    "bias": [
+      -0.012219,
+      -0.007752,
+      0.019969
+    ],
+    "l2_regularization": 10.0
+  },
+  "safety_constraints": {
+    "min_prob_clip": 1e-15,
+    "row_sum_tolerance": 1e-09
+  }
+}

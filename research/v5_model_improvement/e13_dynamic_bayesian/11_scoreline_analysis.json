@@ -1,0 +1,65 @@
+{
+  "0-0": {
+    "actual_count": 436,
+    "actual_frequency_pct": 6.16,
+    "e10_mean_prob_pct": 7.0,
+    "e13_mean_prob_pct": 6.93,
+    "delta_prob_pct": -0.07
+  },
+  "1-0": {
+    "actual_count": 665,
+    "actual_frequency_pct": 9.39,
+    "e10_mean_prob_pct": 8.16,
+    "e13_mean_prob_pct": 8.11,
+    "delta_prob_pct": -0.05
+  },
+  "0-1": {
+    "actual_count": 503,
+    "actual_frequency_pct": 7.1,
+    "e10_mean_prob_pct": 6.94,
+    "e13_mean_prob_pct": 6.87,
+    "delta_prob_pct": -0.06
+  },
+  "1-1": {
+    "actual_count": 855,
+    "actual_frequency_pct": 12.07,
+    "e10_mean_prob_pct": 11.78,
+    "e13_mean_prob_pct": 11.7,
+    "delta_prob_pct": -0.08
+  },
+  "2-0": {
+    "actual_count": 470,
+    "actual_frequency_pct": 6.64,
+    "e10_mean_prob_pct": 7.14,
+    "e13_mean_prob_pct": 7.15,
+    "delta_prob_pct": 0.01
+  },
+  "0-2": {
+    "actual_count": 373,
+    "actual_frequency_pct": 5.27,
+    "e10_mean_prob_pct": 5.34,
+    "e13_mean_prob_pct": 5.31,
+    "delta_prob_pct": -0.03
+  },
+  "2-1": {
+    "actual_count": 619,
+    "actual_frequency_pct": 8.74,
+    "e10_mean_prob_pct": 8.16,
+    "e13_mean_prob_pct": 8.14,
+    "delta_prob_pct": -0.01
+  },
+  "1-2": {
+    "actual_count": 500,
+    "actual_frequency_pct": 7.06,
+    "e10_mean_prob_pct": 7.05,
+    "e13_mean_prob_pct": 7.01,
+    "delta_prob_pct": -0.04
+  },
+  "2-2": {
+    "actual_count": 407,
+    "actual_frequency_pct": 5.75,
+    "e10_mean_prob_pct": 4.98,
+    "e13_mean_prob_pct": 4.96,
+    "delta_prob_pct": -0.01
+  }
+}

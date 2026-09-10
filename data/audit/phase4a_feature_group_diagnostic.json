@@ -1,0 +1,576 @@
+{
+  "groups": {
+    "goals_core": [
+      "home_goals_for_per_match_last5",
+      "home_goals_against_per_match_last5",
+      "home_goals_diff_last5",
+      "home_goals_for_per_match_last10",
+      "home_goals_against_per_match_last10",
+      "home_goals_diff_last10",
+      "home_goals_for_per_match_season",
+      "home_goals_against_per_match_season",
+      "home_goals_diff_season",
+      "away_goals_for_per_match_last5",
+      "away_goals_against_per_match_last5",
+      "away_goals_diff_last5",
+      "away_goals_for_per_match_last10",
+      "away_goals_against_per_match_last10",
+      "away_goals_diff_last10",
+      "away_goals_for_per_match_season",
+      "away_goals_against_per_match_season",
+      "away_goals_diff_season"
+    ],
+    "goals_venue": [
+      "home_goals_for_home_venue_season",
+      "home_goals_against_home_venue_season",
+      "away_goals_for_away_venue_season",
+      "away_goals_against_away_venue_season"
+    ],
+    "form": [
+      "home_points_last5",
+      "home_win_rate_last5",
+      "home_draw_rate_last5",
+      "home_loss_rate_last5",
+      "home_goal_diff_last5",
+      "home_points_last10",
+      "home_win_rate_last10",
+      "home_draw_rate_last10",
+      "home_loss_rate_last10",
+      "home_goal_diff_last10",
+      "away_points_last5",
+      "away_win_rate_last5",
+      "away_draw_rate_last5",
+      "away_loss_rate_last5",
+      "away_goal_diff_last5",
+      "away_points_last10",
+      "away_win_rate_last10",
+      "away_draw_rate_last10",
+      "away_loss_rate_last10",
+      "away_goal_diff_last10"
+    ],
+    "shots_core": [
+      "home_shots_for_per_match_last5",
+      "home_shots_against_per_match_last5",
+      "home_shots_diff_last5",
+      "home_shots_for_per_match_last10",
+      "home_shots_against_per_match_last10",
+      "home_shots_diff_last10",
+      "home_shots_for_per_match_season",
+      "home_shots_against_per_match_season",
+      "home_shots_diff_season",
+      "away_shots_for_per_match_last5",
+      "away_shots_against_per_match_last5",
+      "away_shots_diff_last5",
+      "away_shots_for_per_match_last10",
+      "away_shots_against_per_match_last10",
+      "away_shots_diff_last10",
+      "away_shots_for_per_match_season",
+      "away_shots_against_per_match_season",
+      "away_shots_diff_season"
+    ],
+    "shots_on_core": [
+      "home_shots_on_for_per_match_last5",
+      "home_shots_on_against_per_match_last5",
+      "home_shots_on_diff_last5",
+      "home_shots_on_for_per_match_last10",
+      "home_shots_on_against_per_match_last10",
+      "home_shots_on_diff_last10",
+      "home_shots_on_for_per_match_season",
+      "home_shots_on_against_per_match_season",
+      "home_shots_on_diff_season",
+      "away_shots_on_for_per_match_last5",
+      "away_shots_on_against_per_match_last5",
+      "away_shots_on_diff_last5",
+      "away_shots_on_for_per_match_last10",
+      "away_shots_on_against_per_match_last10",
+      "away_shots_on_diff_last10",
+      "away_shots_on_for_per_match_season",
+      "away_shots_on_against_per_match_season",
+      "away_shots_on_diff_season"
+    ],
+    "xg_core": [
+      "home_xg_for_per_match_last5",
+      "home_xg_against_per_match_last5",
+      "home_xg_diff_last5",
+      "home_xg_for_per_match_last10",
+      "home_xg_against_per_match_last10",
+      "home_xg_diff_last10",
+      "home_xg_for_per_match_season",
+      "home_xg_against_per_match_season",
+      "home_xg_diff_season",
+      "away_xg_for_per_match_last5",
+      "away_xg_against_per_match_last5",
+      "away_xg_diff_last5",
+      "away_xg_for_per_match_last10",
+      "away_xg_against_per_match_last10",
+      "away_xg_diff_last10",
+      "away_xg_for_per_match_season",
+      "away_xg_against_per_match_season",
+      "away_xg_diff_season",
+      "home_xg_diff_form_last5",
+      "home_xg_diff_form_last10",
+      "away_xg_diff_form_last5",
+      "away_xg_diff_form_last10"
+    ],
+    "strength": [
+      "home_attack_strength_score",
+      "home_defence_strength_score",
+      "away_attack_strength_score",
+      "away_defence_strength_score",
+      "strength_diff"
+    ],
+    "competition_id": [
+      "competition_id"
+    ],
+    "league_home_advantage": [
+      "league_home_advantage_season"
+    ],
+    "league_mean_goals": [
+      "league_mean_goals_per_team_match_season"
+    ],
+    "tempo": [
+      "home_attacks_per_match_season",
+      "home_dang_attacks_per_match_season",
+      "home_pressure_per_match_season",
+      "away_attacks_per_match_season",
+      "away_dang_attacks_per_match_season",
+      "away_pressure_per_match_season"
+    ],
+    "discipline": [
+      "home_fouls_per_match_season",
+      "home_yellow_cards_per_match_season",
+      "away_fouls_per_match_season",
+      "away_yellow_cards_per_match_season"
+    ],
+    "venue_goal_diff": [
+      "home_team_home_goal_diff_season",
+      "away_team_away_goal_diff_season"
+    ],
+    "history_flags": [
+      "home_matches_played_before_target",
+      "away_matches_played_before_target",
+      "home_insufficient_history",
+      "away_insufficient_history"
+    ]
+  },
+  "group_sizes": {
+    "goals_core": 18,
+    "goals_venue": 4,
+    "form": 20,
+    "shots_core": 18,
+    "shots_on_core": 18,
+    "xg_core": 22,
+    "strength": 5,
+    "competition_id": 1,
+    "league_home_advantage": 1,
+    "league_mean_goals": 1,
+    "tempo": 6,
+    "discipline": 4,
+    "venue_goal_diff": 2,
+    "history_flags": 4
+  },
+  "per_fold_diagnostics": {
+    "fold_1": {
+      "n_train": 3652,
+      "groups": {
+        "goals_core": {
+          "n_columns": 18,
+          "all_null_columns": [],
+          "max_null_rate": 0.07639649507119387,
+          "min_null_rate": 0.04463307776560788
+        },
+        "goals_venue": {
+          "n_columns": 4,
+          "all_null_columns": [],
+          "max_null_rate": 0.10733844468784227,
+          "min_null_rate": 0.10733844468784227
+        },
+        "form": {
+          "n_columns": 20,
+          "all_null_columns": [],
+          "max_null_rate": 0.07639649507119387,
+          "min_null_rate": 0.04463307776560788
+        },
+        "shots_core": {
+          "n_columns": 18,
+          "all_null_columns": [],
+          "max_null_rate": 0.07721796276013143,
+          "min_null_rate": 0.04572836801752465
+        },
+        "shots_on_core": {
+          "n_columns": 18,
+          "all_null_columns": [],
+          "max_null_rate": 0.07721796276013143,
+          "min_null_rate": 0.04572836801752465
+        },
+        "xg_core": {
+          "n_columns": 22,
+          "all_null_columns": [
+            "home_xg_for_per_match_last5",
+            "home_xg_against_per_match_last5",
+            "home_xg_diff_last5",
+            "home_xg_for_per_match_last10",
+            "home_xg_against_per_match_last10",
+            "home_xg_diff_last10",
+            "home_xg_for_per_match_season",
+            "home_xg_against_per_match_season",
+            "home_xg_diff_season",
+            "away_xg_for_per_match_last5",
+            "away_xg_against_per_match_last5",
+            "away_xg_diff_last5",
+            "away_xg_for_per_match_last10",
+            "away_xg_against_per_match_last10",
+            "away_xg_diff_last10",
+            "away_xg_for_per_match_season",
+            "away_xg_against_per_match_season",
+            "away_xg_diff_season",
+            "home_xg_diff_form_last5",
+            "home_xg_diff_form_last10",
+            "away_xg_diff_form_last5",
+            "away_xg_diff_form_last10"
+          ],
+          "max_null_rate": 1.0,
+          "min_null_rate": 1.0
+        },
+        "strength": {
+          "n_columns": 5,
+          "all_null_columns": [],
+          "max_null_rate": 0.002738225629791895,
+          "min_null_rate": 0.002738225629791895
+        },
+        "competition_id": {
+          "n_columns": 1,
+          "all_null_columns": [],
+          "max_null_rate": 0.0,
+          "min_null_rate": 0.0
+        },
+        "league_home_advantage": {
+          "n_columns": 1,
+          "all_null_columns": [],
+          "max_null_rate": 0.002738225629791895,
+          "min_null_rate": 0.002738225629791895
+        },
+        "league_mean_goals": {
+          "n_columns": 1,
+          "all_null_columns": [],
+          "max_null_rate": 0.002738225629791895,
+          "min_null_rate": 0.002738225629791895
+        },
+        "tempo": {
+          "n_columns": 6,
+          "all_null_columns": [],
+          "max_null_rate": 0.056955093099671415,
+          "min_null_rate": 0.054764512595837894
+        },
+        "discipline": {
+          "n_columns": 4,
+          "all_null_columns": [],
+          "max_null_rate": 0.05585980284775466,
+          "min_null_rate": 0.05312157721796276
+        },
+        "venue_goal_diff": {
+          "n_columns": 2,
+          "all_null_columns": [],
+          "max_null_rate": 0.10733844468784227,
+          "min_null_rate": 0.10733844468784227
+        },
+        "history_flags": {
+          "n_columns": 4,
+          "all_null_columns": [],
+          "max_null_rate": 0.0,
+          "min_null_rate": 0.0
+        }
+      }
+    },
+    "fold_2": {
+      "n_train": 5479,
+      "groups": {
+        "goals_core": {
+          "n_columns": 18,
+          "all_null_columns": [],
+          "max_null_rate": 0.055484577477641905,
+          "min_null_rate": 0.032670195291111516
+        },
+        "goals_venue": {
+          "n_columns": 4,
+          "all_null_columns": [],
+          "max_null_rate": 0.10731885380543894,
+          "min_null_rate": 0.10731885380543894
+        },
+        "form": {
+          "n_columns": 20,
+          "all_null_columns": [],
+          "max_null_rate": 0.055484577477641905,
+          "min_null_rate": 0.032670195291111516
+        },
+        "shots_core": {
+          "n_columns": 18,
+          "all_null_columns": [],
+          "max_null_rate": 0.056032122650118636,
+          "min_null_rate": 0.03340025552108049
+        },
+        "shots_on_core": {
+          "n_columns": 18,
+          "all_null_columns": [],
+          "max_null_rate": 0.056032122650118636,
+          "min_null_rate": 0.03340025552108049
+        },
+        "xg_core": {
+          "n_columns": 22,
+          "all_null_columns": [
+            "home_xg_for_per_match_last5",
+            "home_xg_against_per_match_last5",
+            "home_xg_diff_last5",
+            "home_xg_for_per_match_last10",
+            "home_xg_against_per_match_last10",
+            "home_xg_diff_last10",
+            "home_xg_for_per_match_season",
+            "home_xg_against_per_match_season",
+            "home_xg_diff_season",
+            "away_xg_for_per_match_last5",
+            "away_xg_against_per_match_last5",
+            "away_xg_diff_last5",
+            "away_xg_for_per_match_last10",
+            "away_xg_against_per_match_last10",
+            "away_xg_diff_last10",
+            "away_xg_for_per_match_season",
+            "away_xg_against_per_match_season",
+            "away_xg_diff_season",
+            "home_xg_diff_form_last5",
+            "home_xg_diff_form_last10",
+            "away_xg_diff_form_last5",
+            "away_xg_diff_form_last10"
+          ],
+          "max_null_rate": 1.0,
+          "min_null_rate": 1.0
+        },
+        "strength": {
+          "n_columns": 5,
+          "all_null_columns": [],
+          "max_null_rate": 0.0027377258623836466,
+          "min_null_rate": 0.0027377258623836466
+        },
+        "competition_id": {
+          "n_columns": 1,
+          "all_null_columns": [],
+          "max_null_rate": 0.0,
+          "min_null_rate": 0.0
+        },
+        "league_home_advantage": {
+          "n_columns": 1,
+          "all_null_columns": [],
+          "max_null_rate": 0.0027377258623836466,
+          "min_null_rate": 0.0027377258623836466
+        },
+        "league_mean_goals": {
+          "n_columns": 1,
+          "all_null_columns": [],
+          "max_null_rate": 0.0027377258623836466,
+          "min_null_rate": 0.0027377258623836466
+        },
+        "tempo": {
+          "n_columns": 6,
+          "all_null_columns": [],
+          "max_null_rate": 0.055849607592626395,
+          "min_null_rate": 0.054389487132688444
+        },
+        "discipline": {
+          "n_columns": 4,
+          "all_null_columns": [],
+          "max_null_rate": 0.055119547362657416,
+          "min_null_rate": 0.05329439678773499
+        },
+        "venue_goal_diff": {
+          "n_columns": 2,
+          "all_null_columns": [],
+          "max_null_rate": 0.10731885380543894,
+          "min_null_rate": 0.10731885380543894
+        },
+        "history_flags": {
+          "n_columns": 4,
+          "all_null_columns": [],
+          "max_null_rate": 0.0,
+          "min_null_rate": 0.0
+        }
+      }
+    },
+    "fold_3": {
+      "n_train": 7231,
+      "groups": {
+        "goals_core": {
+          "n_columns": 18,
+          "all_null_columns": [],
+          "max_null_rate": 0.05421103581800581,
+          "min_null_rate": 0.025860876780528282
+        },
+        "goals_venue": {
+          "n_columns": 4,
+          "all_null_columns": [],
+          "max_null_rate": 0.10786889780113401,
+          "min_null_rate": 0.10786889780113401
+        },
+        "form": {
+          "n_columns": 20,
+          "all_null_columns": [],
+          "max_null_rate": 0.044392200248928225,
+          "min_null_rate": 0.025860876780528282
+        },
+        "shots_core": {
+          "n_columns": 18,
+          "all_null_columns": [],
+          "max_null_rate": 0.05504079657032222,
+          "min_null_rate": 0.02641405061540589
+        },
+        "shots_on_core": {
+          "n_columns": 18,
+          "all_null_columns": [],
+          "max_null_rate": 0.05504079657032222,
+          "min_null_rate": 0.02641405061540589
+        },
+        "xg_core": {
+          "n_columns": 22,
+          "all_null_columns": [],
+          "max_null_rate": 0.9775964596874568,
+          "min_null_rate": 0.9489697137325405
+        },
+        "strength": {
+          "n_columns": 5,
+          "all_null_columns": [],
+          "max_null_rate": 0.0027658691743880515,
+          "min_null_rate": 0.0027658691743880515
+        },
+        "competition_id": {
+          "n_columns": 1,
+          "all_null_columns": [],
+          "max_null_rate": 0.0,
+          "min_null_rate": 0.0
+        },
+        "league_home_advantage": {
+          "n_columns": 1,
+          "all_null_columns": [],
+          "max_null_rate": 0.0027658691743880515,
+          "min_null_rate": 0.0027658691743880515
+        },
+        "league_mean_goals": {
+          "n_columns": 1,
+          "all_null_columns": [],
+          "max_null_rate": 0.0027658691743880515,
+          "min_null_rate": 0.0027658691743880515
+        },
+        "tempo": {
+          "n_columns": 6,
+          "all_null_columns": [],
+          "max_null_rate": 0.05573226386391924,
+          "min_null_rate": 0.054487622735444614
+        },
+        "discipline": {
+          "n_columns": 4,
+          "all_null_columns": [],
+          "max_null_rate": 0.05504079657032222,
+          "min_null_rate": 0.0536578619831282
+        },
+        "venue_goal_diff": {
+          "n_columns": 2,
+          "all_null_columns": [],
+          "max_null_rate": 0.10786889780113401,
+          "min_null_rate": 0.10786889780113401
+        },
+        "history_flags": {
+          "n_columns": 4,
+          "all_null_columns": [],
+          "max_null_rate": 0.0,
+          "min_null_rate": 0.0
+        }
+      }
+    },
+    "final_test_train": {
+      "n_train": 8983,
+      "groups": {
+        "goals_core": {
+          "n_columns": 18,
+          "all_null_columns": [],
+          "max_null_rate": 0.054324835800957365,
+          "min_null_rate": 0.021485027273739285
+        },
+        "goals_venue": {
+          "n_columns": 4,
+          "all_null_columns": [],
+          "max_null_rate": 0.10820438606256262,
+          "min_null_rate": 0.10820438606256262
+        },
+        "form": {
+          "n_columns": 20,
+          "all_null_columns": [],
+          "max_null_rate": 0.0374039853055772,
+          "min_null_rate": 0.021485027273739285
+        },
+        "shots_core": {
+          "n_columns": 18,
+          "all_null_columns": [],
+          "max_null_rate": 0.055104085494823554,
+          "min_null_rate": 0.021930312813091393
+        },
+        "shots_on_core": {
+          "n_columns": 18,
+          "all_null_columns": [],
+          "max_null_rate": 0.05499276410998553,
+          "min_null_rate": 0.021930312813091393
+        },
+        "xg_core": {
+          "n_columns": 22,
+          "all_null_columns": [],
+          "max_null_rate": 0.7910497606590225,
+          "min_null_rate": 0.7745741957029946
+        },
+        "strength": {
+          "n_columns": 5,
+          "all_null_columns": [],
+          "max_null_rate": 0.0027830346209506847,
+          "min_null_rate": 0.0027830346209506847
+        },
+        "competition_id": {
+          "n_columns": 1,
+          "all_null_columns": [],
+          "max_null_rate": 0.0,
+          "min_null_rate": 0.0
+        },
+        "league_home_advantage": {
+          "n_columns": 1,
+          "all_null_columns": [],
+          "max_null_rate": 0.0027830346209506847,
+          "min_null_rate": 0.0027830346209506847
+        },
+        "league_mean_goals": {
+          "n_columns": 1,
+          "all_null_columns": [],
+          "max_null_rate": 0.0027830346209506847,
+          "min_null_rate": 0.0027830346209506847
+        },
+        "tempo": {
+          "n_columns": 6,
+          "all_null_columns": [],
+          "max_null_rate": 0.05554937103417566,
+          "min_null_rate": 0.054658799955471446
+        },
+        "discipline": {
+          "n_columns": 4,
+          "all_null_columns": [],
+          "max_null_rate": 0.05499276410998553,
+          "min_null_rate": 0.053990871646443284
+        },
+        "venue_goal_diff": {
+          "n_columns": 2,
+          "all_null_columns": [],
+          "max_null_rate": 0.10820438606256262,
+          "min_null_rate": 0.10820438606256262
+        },
+        "history_flags": {
+          "n_columns": 4,
+          "all_null_columns": [],
+          "max_null_rate": 0.0,
+          "min_null_rate": 0.0
+        }
+      }
+    }
+  }
+}

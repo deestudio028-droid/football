@@ -1,0 +1,6 @@
+candidate,dataset,home_goal_mae,away_goal_mae,total_goal_mae,home_goal_rmse,away_goal_rmse,exact_score_accuracy_pct,btts_accuracy_pct,over_25_accuracy_pct,over_15_accuracy_pct,mean_pred_home_goals,mean_actual_home_goals,mean_pred_away_goals,mean_actual_away_goals,mean_pred_total_goals,mean_actual_total_goals
+G0: V4.0 Poisson Baseline,"Untouched Holdout (N=1,751)",0.9544,0.8539,1.2972,1.178,1.0731,12.34,53.23,54.31,76.58,1.53,1.537,1.271,1.23,2.801,2.766
+G1: Bivariate Dixon-Coles,"Untouched Holdout (N=1,751)",0.9544,0.8539,1.2972,1.178,1.0731,12.34,53.23,54.31,76.58,1.53,1.537,1.271,1.23,2.801,2.766
+G2: Low-Score Corrected Dixon-Coles,"Untouched Holdout (N=1,751)",0.9513,0.8494,1.2961,1.1783,1.0722,12.45,52.08,54.31,76.58,1.499,1.537,1.246,1.23,2.745,2.766
+G3: Calibrated Goal Regressor,"Untouched Holdout (N=1,751)",0.9536,0.8535,1.297,1.1783,1.0726,12.39,52.2,54.03,76.58,1.531,1.537,1.265,1.23,2.797,2.766
+G4: Shared Coherent Joint Score Matrix,"Untouched Holdout (N=1,751)",0.9544,0.8539,1.2972,1.178,1.0731,12.34,53.23,54.31,76.58,1.53,1.537,1.271,1.23,2.801,2.766

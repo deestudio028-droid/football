@@ -1,0 +1,6 @@
+Feature Name,Role,Optimal Threshold,Rationale,Historical Draw Density When Active
+p_D (Model Draw Probability),Foundational Confidence Gate,>= 0.2600,Filters out all lopsided matches; requires baseline draw density before considering override.,28.64%
+prob_gap (|P(H) - P(A)|),Win Parity Stalemate Gate,<= 0.1000,Prevents overriding clear home/away favorites. Only activates when neither team has decisive win advantage.,29.67%
+"v4_conf (max(P(H), P(A)))",Favorite Confidence Cap,<= 0.4500,"Ensures that even if win gap is narrow, overall favorite confidence does not exceed 45%.",29.12%
+lambda_total (Expected Goals),Physical Goal Rate Gate,<= 2.5000,High-scoring matches (>2.7 goals) have significantly lower draw frequency (19.9%). Restricts overrides to low-scoring regimes.,30.92%
+abs_elo_diff (Team Strength Parity),Macro Team Quality Parity Gate,<= 100.0,Excludes mismatches where a heavy favorite has an unmodeled home disadvantage.,28.45%

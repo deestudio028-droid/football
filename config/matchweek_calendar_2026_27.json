@@ -1,0 +1,169 @@
+{
+  "_comment": "Official 2026/27 domestic-season Matchweek calendar alignment for Top 5 European leagues as of September 6, 2026 international break window. Sourced strictly from client specifications.",
+  "season": "2026/2027",
+  "international_break_as_of": "2026-09-06",
+  "leagues": {
+    "Premier League": {
+      "competition_id": 423,
+      "current_matchweek": "MW4",
+      "calendar": [
+        {
+          "matchweek": "MW1",
+          "start_date": "2026-08-21",
+          "end_date": "2026-08-25",
+          "notes": "Opening weekend"
+        },
+        {
+          "matchweek": "MW2",
+          "start_date": "2026-08-28",
+          "end_date": "2026-09-01",
+          "notes": "Previous audit batch"
+        },
+        {
+          "matchweek": "MW3",
+          "start_date": "2026-09-04",
+          "end_date": "2026-09-06",
+          "notes": "Pre-international break batch"
+        },
+        {
+          "matchweek": "MW4",
+          "start_date": "2026-09-12",
+          "end_date": "2026-09-14",
+          "notes": "Post-international break weekend"
+        }
+      ]
+    },
+    "La Liga": {
+      "competition_id": 419,
+      "current_matchweek": "MW5",
+      "calendar": [
+        {
+          "matchweek": "MW1",
+          "start_date": "2026-08-15",
+          "end_date": "2026-08-19",
+          "notes": "Early opening window"
+        },
+        {
+          "matchweek": "MW2",
+          "start_date": "2026-08-21",
+          "end_date": "2026-08-24",
+          "notes": "Midweek / weekend split"
+        },
+        {
+          "matchweek": "MW3",
+          "start_date": "2026-08-28",
+          "end_date": "2026-09-01",
+          "notes": "Previous audit batch"
+        },
+        {
+          "matchweek": "MW4",
+          "start_date": "2026-09-03",
+          "end_date": "2026-09-07",
+          "notes": "Pre-international break batch spanning Thursday to Monday"
+        },
+        {
+          "matchweek": "MW5",
+          "start_date": "2026-09-11",
+          "end_date": "2026-09-14",
+          "notes": "Post-international break weekend"
+        },
+        {
+          "matchweek": "MW6",
+          "start_date": "2026-09-15",
+          "end_date": "2026-09-17",
+          "notes": "Midweek round"
+        },
+        {
+          "matchweek": "MW7",
+          "start_date": "2026-09-18",
+          "end_date": "2026-09-20",
+          "notes": "Upcoming weekend round"
+        }
+      ]
+    },
+    "Serie A": {
+      "competition_id": 499,
+      "current_matchweek": "MW4",
+      "calendar": [
+        {
+          "matchweek": "MW1",
+          "start_date": "2026-08-22",
+          "end_date": "2026-08-25",
+          "notes": "Opening weekend"
+        },
+        {
+          "matchweek": "MW2",
+          "start_date": "2026-08-28",
+          "end_date": "2026-09-01",
+          "notes": "Previous audit batch"
+        },
+        {
+          "matchweek": "MW3",
+          "start_date": "2026-09-04",
+          "end_date": "2026-09-07",
+          "notes": "Pre-international break batch spanning Friday to Monday"
+        },
+        {
+          "matchweek": "MW4",
+          "start_date": "2026-09-11",
+          "end_date": "2026-09-14",
+          "notes": "Post-international break weekend"
+        }
+      ]
+    },
+    "Bundesliga": {
+      "competition_id": 477,
+      "current_matchweek": "MW3",
+      "calendar": [
+        {
+          "matchweek": "MW1",
+          "start_date": "2026-08-28",
+          "end_date": "2026-08-31",
+          "notes": "Opening weekend / previous audit batch"
+        },
+        {
+          "matchweek": "MW2",
+          "start_date": "2026-09-04",
+          "end_date": "2026-09-06",
+          "notes": "Pre-international break batch"
+        },
+        {
+          "matchweek": "MW3",
+          "start_date": "2026-09-11",
+          "end_date": "2026-09-13",
+          "notes": "Post-international break weekend"
+        }
+      ]
+    },
+    "Ligue 1": {
+      "competition_id": 200,
+      "current_matchweek": "MW4",
+      "calendar": [
+        {
+          "matchweek": "MW1",
+          "start_date": "2026-08-21",
+          "end_date": "2026-08-24",
+          "notes": "Opening weekend"
+        },
+        {
+          "matchweek": "MW2",
+          "start_date": "2026-08-28",
+          "end_date": "2026-08-31",
+          "notes": "Previous audit batch"
+        },
+        {
+          "matchweek": "MW3",
+          "start_date": "2026-09-04",
+          "end_date": "2026-09-06",
+          "notes": "Pre-international break batch"
+        },
+        {
+          "matchweek": "MW4",
+          "start_date": "2026-09-11",
+          "end_date": "2026-09-13",
+          "notes": "Post-international break weekend"
+        }
+      ]
+    }
+  }
+}

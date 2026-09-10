@@ -1,0 +1,289 @@
+{
+  "generated_at": "2026-08-21T07:00:18.989220+00:00",
+  "classification": "DATASET_INVENTORY_AND_PROSPECTIVE_COHORT_AUDIT",
+  "total_fixtures": 1752,
+  "status_breakdown": {
+    "completed_ft": 1751,
+    "abandoned": 1,
+    "upcoming": 0,
+    "other": 0
+  },
+  "league_breakdown": {
+    "Bundesliga": {
+      "total": 306,
+      "ft": 306,
+      "upcoming": 0,
+      "other": 0,
+      "earliest_date": "2025-08-22",
+      "latest_date": "2026-05-16"
+    },
+    "La Liga": {
+      "total": 380,
+      "ft": 380,
+      "upcoming": 0,
+      "other": 0,
+      "earliest_date": "2025-08-15",
+      "latest_date": "2026-05-24"
+    },
+    "Ligue 1": {
+      "total": 306,
+      "ft": 305,
+      "upcoming": 0,
+      "other": 1,
+      "earliest_date": "2025-08-15",
+      "latest_date": "2026-05-17"
+    },
+    "Premier League": {
+      "total": 380,
+      "ft": 380,
+      "upcoming": 0,
+      "other": 0,
+      "earliest_date": "2025-08-15",
+      "latest_date": "2026-05-24"
+    },
+    "Serie A": {
+      "total": 380,
+      "ft": 380,
+      "upcoming": 0,
+      "other": 0,
+      "earliest_date": "2025-08-23",
+      "latest_date": "2026-05-24"
+    }
+  },
+  "date_coverage": {
+    "earliest_date": "2025-08-15",
+    "latest_date": "2026-05-24",
+    "unique_match_dates": 178,
+    "monthly_breakdown": [
+      {
+        "month": "2025-08",
+        "total_fixtures": 126,
+        "completed_ft": 126,
+        "upcoming": 0
+      },
+      {
+        "month": "2025-09",
+        "total_fixtures": 153,
+        "completed_ft": 153,
+        "upcoming": 0
+      },
+      {
+        "month": "2025-10",
+        "total_fixtures": 165,
+        "completed_ft": 165,
+        "upcoming": 0
+      },
+      {
+        "month": "2025-11",
+        "total_fixtures": 188,
+        "completed_ft": 188,
+        "upcoming": 0
+      },
+      {
+        "month": "2025-12",
+        "total_fixtures": 170,
+        "completed_ft": 170,
+        "upcoming": 0
+      },
+      {
+        "month": "2026-01",
+        "total_fixtures": 223,
+        "completed_ft": 223,
+        "upcoming": 0
+      },
+      {
+        "month": "2026-02",
+        "total_fixtures": 193,
+        "completed_ft": 193,
+        "upcoming": 0
+      },
+      {
+        "month": "2026-03",
+        "total_fixtures": 166,
+        "completed_ft": 166,
+        "upcoming": 0
+      },
+      {
+        "month": "2026-04",
+        "total_fixtures": 181,
+        "completed_ft": 181,
+        "upcoming": 0
+      },
+      {
+        "month": "2026-05",
+        "total_fixtures": 187,
+        "completed_ft": 186,
+        "upcoming": 0
+      }
+    ]
+  },
+  "outcome_distribution": {
+    "home": {
+      "count": 771,
+      "pct": 44.03
+    },
+    "draw": {
+      "count": 445,
+      "pct": 25.41
+    },
+    "away": {
+      "count": 535,
+      "pct": 30.55
+    },
+    "actual_draw_rate": 0.25414
+  },
+  "cohort_overlap": {
+    "frozen_50": {
+      "count": 50,
+      "classification": "REUSED_HISTORICAL_VALIDATION"
+    },
+    "fresh_100": {
+      "count": 100,
+      "classification": "REUSED_HISTORICAL_COMPARATIVE_DIAGNOSTIC"
+    },
+    "fresh_extended_300": {
+      "count": 300,
+      "classification": "REUSED_HISTORICAL_RESEARCH_OOS"
+    },
+    "total_used_fixtures": 450,
+    "pairwise_disjoint": true,
+    "unused_2025_26_ft_candidates": 1301
+  },
+  "prospective_eligibility": {
+    "total_2025_26_ft": 1751,
+    "reused_cohort_fixtures": 450,
+    "potentially_fresh_candidates": 1301,
+    "missing_causal_features": 0,
+    "already_in_prospective_store": 0,
+    "final_eligible_candidate_count": 1301,
+    "actually_locked_live_prospective_count": 0
+  },
+  "feasibility_thresholds": [
+    {
+      "threshold": 100,
+      "available": true,
+      "remaining_needed": 0
+    },
+    {
+      "threshold": 300,
+      "available": true,
+      "remaining_needed": 0
+    },
+    {
+      "threshold": 500,
+      "available": true,
+      "remaining_needed": 0
+    },
+    {
+      "threshold": 750,
+      "available": true,
+      "remaining_needed": 0
+    },
+    {
+      "threshold": 1000,
+      "available": true,
+      "remaining_needed": 0
+    },
+    {
+      "threshold": 1050,
+      "available": true,
+      "remaining_needed": 0
+    },
+    {
+      "threshold": 1500,
+      "available": false,
+      "remaining_needed": 199
+    }
+  ],
+  "data_quality": {
+    "anomalies_detected": [
+      "Abandoned fixture present: fixture_id=420450481 (status='ABANDONED', goals=NaN)"
+    ],
+    "duplicate_fixture_ids": 0,
+    "duplicate_matches": 0,
+    "null_teams": 0,
+    "null_kickoffs": 0,
+    "abandoned_matches": 1
+  },
+  "feature_coverage": {
+    "v4_features_db": {
+      "available": 1301,
+      "total": 1301,
+      "coverage_pct": 100.0
+    },
+    "causal_elo": {
+      "available": 1301,
+      "total": 1301,
+      "coverage_pct": 100.0
+    },
+    "online_ad_states": {
+      "available": 1301,
+      "total": 1301,
+      "coverage_pct": 100.0
+    },
+    "league_identity": {
+      "available": 1301,
+      "total": 1301,
+      "coverage_pct": 100.0
+    },
+    "dc_rho_mapping": {
+      "available": 1301,
+      "total": 1301,
+      "coverage_pct": 100.0
+    }
+  },
+  "market_coverage": {
+    "with_market_reference": 450,
+    "without_market_reference": 1302,
+    "coverage_pct": 25.68,
+    "role": "REFERENCE ONLY"
+  },
+  "final_status": "DATASET SUFFICIENT FOR PROSPECTIVE COLLECTION",
+  "integrity_audit": {
+    "pre_flight": {
+      "data/models/v2_poisson_venue.pkl": "25935b4e93fc4074f67f16e3181ed4df",
+      "data/models/v1_logreg.pkl": "5e504427712b35778bb8a62a8496c7cd",
+      "data/models/v3_poisson_venue_elo_candidate.pkl": "a2850a7687822a5916663301f5ccc96c",
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": "06841f0c03c8597b2b8cd8f8ab064864",
+      "data/processed/features.db": "e7ebe7fc07040a5927683c35b6371e63",
+      "data/processed/matches.db": "fdeed042096fa1c851aaee6c84995247",
+      "research/market_odds/odds_history.sqlite": "0be31e8b59d739b72c3fb48e555d9fd8",
+      "research/market_odds/research_dataset.sqlite": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+      "research/v4_promotion/promotion_market_odds.sqlite": "f8a41b79cd33afb412ccd9ae2892a196",
+      "research/v4_promotion/fresh_100_market_odds.sqlite": "2cb80b79d772fbedd4f3707b39a32c13",
+      "research/v4_promotion/fresh_100_fixture_ids.json": "761ad5cc571643e6985e671bd9c3d83a",
+      "research/v4_promotion/fresh_extended_fixture_ids.json": "0526bfd6980dd51dae59c6f6aadab2f5",
+      "research/v4_promotion/fresh_extended_market_odds.sqlite": "b4889d1791723ea653057af51ca00f8e",
+      "research/v4_promotion/dixon_coles_rho_method_frozen.json": "822e742dcc82e5e96445b31c14c0c604",
+      "research/v4_promotion/elo_draw_curve_method_frozen.json": "65dc2cf762f3d78abcf1a617ef23fe00",
+      "research/v4_promotion/full_score_matrix_method_frozen.json": "cd44e1da88a50ac45e8383557ad5271f",
+      "research/v4_promotion/market_calibration_method_frozen.json": "550a0e1f1358a8359d7141b422521dd9",
+      "research/v4_promotion/draw_complementarity_method_frozen.json": "d4f7dc75785df076c105a6ebfc0a4d6e",
+      "research/v4_promotion/temporal_regime_method_frozen.json": "4a4f72e1d288d2547272c9b30b0368df",
+      "research/v4_promotion/statistical_power_uncertainty_method_frozen.json": "68d55b30789d40440a0c14cbfe225c7f"
+    },
+    "post_flight": {
+      "data/models/v2_poisson_venue.pkl": "25935b4e93fc4074f67f16e3181ed4df",
+      "data/models/v1_logreg.pkl": "5e504427712b35778bb8a62a8496c7cd",
+      "data/models/v3_poisson_venue_elo_candidate.pkl": "a2850a7687822a5916663301f5ccc96c",
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": "06841f0c03c8597b2b8cd8f8ab064864",
+      "data/processed/features.db": "e7ebe7fc07040a5927683c35b6371e63",
+      "data/processed/matches.db": "fdeed042096fa1c851aaee6c84995247",
+      "research/market_odds/odds_history.sqlite": "0be31e8b59d739b72c3fb48e555d9fd8",
+      "research/market_odds/research_dataset.sqlite": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+      "research/v4_promotion/promotion_market_odds.sqlite": "f8a41b79cd33afb412ccd9ae2892a196",
+      "research/v4_promotion/fresh_100_market_odds.sqlite": "2cb80b79d772fbedd4f3707b39a32c13",
+      "research/v4_promotion/fresh_100_fixture_ids.json": "761ad5cc571643e6985e671bd9c3d83a",
+      "research/v4_promotion/fresh_extended_fixture_ids.json": "0526bfd6980dd51dae59c6f6aadab2f5",
+      "research/v4_promotion/fresh_extended_market_odds.sqlite": "b4889d1791723ea653057af51ca00f8e",
+      "research/v4_promotion/dixon_coles_rho_method_frozen.json": "822e742dcc82e5e96445b31c14c0c604",
+      "research/v4_promotion/elo_draw_curve_method_frozen.json": "65dc2cf762f3d78abcf1a617ef23fe00",
+      "research/v4_promotion/full_score_matrix_method_frozen.json": "cd44e1da88a50ac45e8383557ad5271f",
+      "research/v4_promotion/market_calibration_method_frozen.json": "550a0e1f1358a8359d7141b422521dd9",
+      "research/v4_promotion/draw_complementarity_method_frozen.json": "d4f7dc75785df076c105a6ebfc0a4d6e",
+      "research/v4_promotion/temporal_regime_method_frozen.json": "4a4f72e1d288d2547272c9b30b0368df",
+      "research/v4_promotion/statistical_power_uncertainty_method_frozen.json": "68d55b30789d40440a0c14cbfe225c7f"
+    },
+    "all_identical": true
+  }
+}

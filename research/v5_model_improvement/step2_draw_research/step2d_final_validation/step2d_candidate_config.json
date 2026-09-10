@@ -1,0 +1,23 @@
+{
+  "candidate_id": "v4_0_platt_draw_calibrator_step2d",
+  "candidate_version": "v1.0-step2d-platt-logistic",
+  "category": "Continuous Probability Calibrator",
+  "description": "Parametric logistic logit-calibrator for V4.0 P(D) with proportional odds redistribution.",
+  "parameters": {
+    "model_type": "PlattLogisticRegression",
+    "C": 1000.0,
+    "solver": "lbfgs",
+    "slope_a": 0.7760256225390534,
+    "intercept_b": -0.1369421896124101
+  },
+  "statistical_validation": {
+    "n_walkforward_matches": 8908,
+    "logloss_improvement": 0.001915,
+    "logloss_p_value": "4.0279e-04",
+    "draw_ece_holdout": 0.0103,
+    "draw_ece_reduction_pct": 60.5,
+    "holdout_accuracy_preserved": 51.97,
+    "prospective_accuracy_preserved": 60.61
+  },
+  "governance_classification": "RESEARCH CANDIDATE \u2014 READY FOR INTEGRATION EVALUATION"
+}

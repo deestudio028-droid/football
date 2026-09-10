@@ -1,0 +1,5 @@
+risk_tier,match_count,pct_of_completed,actual_draw_count,actual_draw_rate_pct,v4_0_accuracy_pct,favorite_failure_rate_pct
+LOW,13,39.4,1,7.69,92.31,7.69
+MEDIUM,13,39.4,5,38.46,30.77,69.23
+HIGH,7,21.2,2,28.57,57.14,42.86
+CRITICAL,0,0.0,0,0.0,0.0,0.0

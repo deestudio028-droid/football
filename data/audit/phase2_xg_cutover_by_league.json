@@ -1,0 +1,72 @@
+{
+  "Premier League": {
+    "earliest_xg_populated_unix": 1710601200,
+    "latest_xg_populated_unix": 1779634800,
+    "last_null_xg_fixture": [
+      365992334,
+      "2025-10-05T13:00:00.000000Z"
+    ],
+    "first_populated_xg_fixture": [
+      109292220,
+      "2024-03-16T15:00:00.000000Z"
+    ],
+    "total_populated": 821,
+    "total_null": 1459
+  },
+  "La Liga": {
+    "earliest_xg_populated_unix": 1710532800,
+    "latest_xg_populated_unix": 1779649200,
+    "last_null_xg_fixture": [
+      368374936,
+      "2026-01-10T17:30:00.000000Z"
+    ],
+    "first_populated_xg_fixture": [
+      109834383,
+      "2024-03-15T20:00:00.000000Z"
+    ],
+    "total_populated": 807,
+    "total_null": 1473
+  },
+  "Bundesliga": {
+    "earliest_xg_populated_unix": 1710531000,
+    "latest_xg_populated_unix": 1778938200,
+    "last_null_xg_fixture": [
+      373090073,
+      "2026-01-10T17:30:00.000000Z"
+    ],
+    "first_populated_xg_fixture": [
+      109292218,
+      "2024-03-15T19:30:00.000000Z"
+    ],
+    "total_populated": 659,
+    "total_null": 1177
+  },
+  "Serie A": {
+    "earliest_xg_populated_unix": 1708968600,
+    "latest_xg_populated_unix": 1779651900,
+    "last_null_xg_fixture": [
+      374120263,
+      "2026-01-10T17:00:00.000000Z"
+    ],
+    "first_populated_xg_fixture": [
+      103372506,
+      "2024-02-26T17:30:00.000000Z"
+    ],
+    "total_populated": 811,
+    "total_null": 1470
+  },
+  "Ligue 1": {
+    "earliest_xg_populated_unix": 1710532800,
+    "latest_xg_populated_unix": 1779044400,
+    "last_null_xg_fixture": [
+      420451303,
+      "2025-11-08T16:00:00.000000Z"
+    ],
+    "first_populated_xg_fixture": [
+      109834382,
+      "2024-03-15T20:00:00.000000Z"
+    ],
+    "total_populated": 654,
+    "total_null": 1404
+  }
+}

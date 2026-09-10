@@ -1,0 +1,81 @@
+{
+    "step": "Step 2I Draw Decision Intelligence Research",
+    "date": "2026-08-24",
+    "governance_status": "RESEARCH ONLY \u2014 FROZEN BASELINE ACTIVE",
+    "v4_production_md5": "06841f0c03c8597b2b8cd8f8ab064864",
+    "v4_1_candidate_md5": "145f918d933eb343c0f63ca342b10289",
+    "policies_evaluated": [
+        "A_standard_argmax",
+        "B_win_margin_gate",
+        "C_calibrated_draw_thresh",
+        "D_draw_and_win_parity",
+        "E_draw_and_score_space",
+        "F_draw_and_low_goals",
+        "G_draw_and_elo_parity",
+        "H_draw_confidence_score",
+        "I_selective_draw_gate",
+        "J_platt_calibrated_argmax"
+    ],
+    "policy_parameters": {
+        "A_standard_argmax": {},
+        "B_win_margin_gate": {
+            "margin_thresh": 0.08
+        },
+        "C_calibrated_draw_thresh": {
+            "draw_thresh": 0.32
+        },
+        "D_draw_and_win_parity": {
+            "draw_thresh": 0.3,
+            "parity_thresh": 0.06
+        },
+        "E_draw_and_score_space": {
+            "draw_thresh": 0.29,
+            "score_thresh": 0.28
+        },
+        "F_draw_and_low_goals": {
+            "draw_thresh": 0.29,
+            "goal_thresh": 2.35
+        },
+        "G_draw_and_elo_parity": {
+            "draw_thresh": 0.29,
+            "elo_thresh": 60.0
+        },
+        "H_draw_confidence_score": {
+            "score_thresh": 0.34
+        },
+        "I_selective_draw_gate": {
+            "draw_thresh": 0.29,
+            "margin_thresh": 0.08,
+            "goal_thresh": 2.45,
+            "elo_thresh": 75.0
+        },
+        "J_platt_calibrated_argmax": {}
+    },
+    "draw_confidence_features": [
+        "cal_p_D",
+        "cal_win_diff",
+        "cal_win_to_draw_margin",
+        "lambda_total",
+        "lambda_gap",
+        "abs_elo_diff",
+        "p_score_space_draw",
+        "p_00",
+        "p_11",
+        "p_low_score_mass",
+        "ad_net_power_gap"
+    ],
+    "draw_confidence_intercept": -0.41291925028259424,
+    "draw_confidence_coefficients": {
+        "cal_p_D": 0.19169267776915216,
+        "cal_win_diff": 0.5018185389734784,
+        "cal_win_to_draw_margin": -0.19484180716474286,
+        "lambda_total": -0.2011426469899901,
+        "lambda_gap": -0.4714135636721438,
+        "abs_elo_diff": 0.00032572761861295117,
+        "p_score_space_draw": 0.4131051247382829,
+        "p_00": 0.16502615715612923,
+        "p_11": 0.108993596250291,
+        "p_low_score_mass": -0.17438510879693458,
+        "ad_net_power_gap": -0.1138417305200903
+    }
+}

@@ -1,0 +1,6 @@
+segment,n_matches,e10_champion_rps,e10_champion_log_loss,e14_moe_rps,e14_moe_log_loss,delta_rps
+First_1_Match_Of_Season,24,0.175214,0.880985,0.176113,0.883749,0.000899
+First_3_Matches_Of_Season,99,0.190724,0.950343,0.189987,0.947804,-0.000737
+First_5_Matches_Of_Season,151,0.194253,0.984182,0.19377,0.982518,-0.000483
+First_10_Matches_Of_Season,296,0.196683,0.982951,0.196437,0.982102,-0.000246
+Remaining_Season_Matches,6786,0.199611,0.983378,0.199611,0.983378,0.0

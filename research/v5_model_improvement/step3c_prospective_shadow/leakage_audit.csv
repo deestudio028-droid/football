@@ -1,0 +1,12 @@
+feature_name,source,available_timestamp,status,decision
+rolling_goals_scored_home,matches.db rolling historical fixtures,t < kickoff (Pre-match),PASS,CAUSAL_VALID
+rolling_goals_conceded_home,matches.db rolling historical fixtures,t < kickoff (Pre-match),PASS,CAUSAL_VALID
+home_elo_lagged,features.db pre-match Elo rating,t < kickoff (Pre-match),PASS,CAUSAL_VALID
+away_elo_lagged,features.db pre-match Elo rating,t < kickoff (Pre-match),PASS,CAUSAL_VALID
+online_attack_strength,features.db lagged attack exponential state,t < kickoff (Pre-match),PASS,CAUSAL_VALID
+online_defense_strength,features.db lagged defense exponential state,t < kickoff (Pre-match),PASS,CAUSAL_VALID
+venue_home_advantage_prior,Historical competition prior,t < kickoff (Pre-match),PASS,CAUSAL_VALID
+dixon_coles_rho_league,Historical frozen covariance parameter,t < kickoff (Pre-match),PASS,CAUSAL_VALID
+"platt_draw_parameters (a, b)",Step 2D frozen historical fit,t < kickoff (Pre-match),PASS,CAUSAL_VALID
+post_match_final_score,Post-match result,t >= FT (Post-kickoff),PASS,EXCLUDED_FROM_INFERENCE
+future_league_standings,Post-match standings update,t > kickoff,PASS,EXCLUDED_FROM_INFERENCE

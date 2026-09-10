@@ -1,0 +1,5 @@
+risk_model,roc_auc_top10,pr_auc_top10,brier_score_top10,recall_top10,roc_auc_top20,pr_auc_top20,correlation_actual_rps,correlation_actual_log_loss
+Logistic,0.7253,0.1706,0.0852,18.08,0.4809,0.1842,-0.0716,-0.0566
+GradientBoosting,0.7568,0.1986,0.1025,21.47,0.4766,0.1976,-0.0825,-0.0694
+ExpectedRPS,0.3662,0.0728,0.525,3.25,0.5622,0.218,0.2508,0.2732
+RuleBased,0.4068,0.0775,0.2602,3.81,0.572,0.2326,0.2152,0.2219

@@ -1,0 +1,45 @@
+{
+  "manifest_version": "1.0",
+  "phase": "Phase 26 — Activate True Live Prospective Collection for Frozen V4.6",
+  "frozen_at": "2026-08-22T09:30:00Z",
+  "model_id": "v4_6_physical_draw_gate",
+  "model_version": "v4.6-physical-draw-gate",
+  "validation_protocol_version": "1.0",
+  "frozen_parameters": {
+    "draw_prob_threshold": 0.2600,
+    "winner_margin_cap": 0.1000,
+    "v4_winner_conf_cap": 0.4500,
+    "abs_elo_cap": 100.0,
+    "tot_expected_goals_cap": 2.5000,
+    "low_score_prob_floor": 0.0000
+  },
+  "implementation_hashes": {
+    "src/models/v4_6_physical_draw_gate.py": "7aae0e7e22702facb32e5a67f66f9933",
+    "src/monitoring/v46_live_prospective_collector.py": "7649d03d3bcadfcb6ec677b1029c4902",
+    "src/monitoring/v46_outcome_reconciler.py": "cb91090539c289ad6564619b02dfd02f"
+  },
+  "database_target": "research/v4_promotion/live_v46_prospective.sqlite",
+  "target_competitions": [
+    {"id": 200, "name": "Bundesliga"},
+    {"id": 419, "name": "La Liga"},
+    {"id": 423, "name": "Ligue 1"},
+    {"id": 477, "name": "Premier League"},
+    {"id": 499, "name": "Serie A"}
+  ],
+  "sample_size_milestones": [
+    {"milestone": 100, "status": "PENDING"},
+    {"milestone": 300, "status": "PENDING"},
+    {"milestone": 450, "status": "PENDING"},
+    {"milestone": 600, "status": "PENDING"},
+    {"milestone": 750, "status": "PENDING"},
+    {"milestone": 900, "status": "PENDING"},
+    {"milestone": 1050, "status": "MANDATORY_POWER_GATE"},
+    {"milestone": 1301, "status": "PREFERRED_FULL_COHORT"}
+  ],
+  "security_and_causality_contracts": {
+    "pre_kickoff_immutable_lock": "prediction_timestamp < scheduled_kickoff strictly enforced with SHA-256 digest",
+    "two_stage_outcome_separation": "outcomes ingested post-match in separate match_outcomes table; predictions immutable",
+    "zero_historical_recycling": "all 1,751 matches in 2025/2026 DB and previous validation cohorts strictly rejected",
+    "zero_market_odds_access": "market odds isolated from prediction engine"
+  }
+}

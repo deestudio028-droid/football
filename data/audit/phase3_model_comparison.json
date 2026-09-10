@@ -1,0 +1,1147 @@
+{
+  "sklearn_version": "1.9.0",
+  "python_version": "3.13.14",
+  "n_total_labeled_rows": 10734,
+  "feature_columns": [
+    "competition_id",
+    "home_goals_for_per_match_last5",
+    "home_goals_for_per_match_last5_n",
+    "home_goals_for_per_match_last5_coverage_n",
+    "home_goals_against_per_match_last5",
+    "home_goals_against_per_match_last5_n",
+    "home_goals_against_per_match_last5_coverage_n",
+    "home_goals_diff_last5",
+    "home_goals_for_per_match_last10",
+    "home_goals_for_per_match_last10_n",
+    "home_goals_for_per_match_last10_coverage_n",
+    "home_goals_against_per_match_last10",
+    "home_goals_against_per_match_last10_n",
+    "home_goals_against_per_match_last10_coverage_n",
+    "home_goals_diff_last10",
+    "home_goals_for_per_match_season",
+    "home_goals_for_per_match_season_n",
+    "home_goals_for_per_match_season_coverage_n",
+    "home_goals_against_per_match_season",
+    "home_goals_against_per_match_season_n",
+    "home_goals_against_per_match_season_coverage_n",
+    "home_goals_diff_season",
+    "home_xg_for_per_match_last5",
+    "home_xg_for_per_match_last5_n",
+    "home_xg_for_per_match_last5_coverage_n",
+    "home_xg_against_per_match_last5",
+    "home_xg_against_per_match_last5_n",
+    "home_xg_against_per_match_last5_coverage_n",
+    "home_xg_diff_last5",
+    "home_xg_for_per_match_last10",
+    "home_xg_for_per_match_last10_n",
+    "home_xg_for_per_match_last10_coverage_n",
+    "home_xg_against_per_match_last10",
+    "home_xg_against_per_match_last10_n",
+    "home_xg_against_per_match_last10_coverage_n",
+    "home_xg_diff_last10",
+    "home_xg_for_per_match_season",
+    "home_xg_for_per_match_season_n",
+    "home_xg_for_per_match_season_coverage_n",
+    "home_xg_against_per_match_season",
+    "home_xg_against_per_match_season_n",
+    "home_xg_against_per_match_season_coverage_n",
+    "home_xg_diff_season",
+    "home_shots_for_per_match_last5",
+    "home_shots_for_per_match_last5_n",
+    "home_shots_for_per_match_last5_coverage_n",
+    "home_shots_against_per_match_last5",
+    "home_shots_against_per_match_last5_n",
+    "home_shots_against_per_match_last5_coverage_n",
+    "home_shots_diff_last5",
+    "home_shots_for_per_match_last10",
+    "home_shots_for_per_match_last10_n",
+    "home_shots_for_per_match_last10_coverage_n",
+    "home_shots_against_per_match_last10",
+    "home_shots_against_per_match_last10_n",
+    "home_shots_against_per_match_last10_coverage_n",
+    "home_shots_diff_last10",
+    "home_shots_for_per_match_season",
+    "home_shots_for_per_match_season_n",
+    "home_shots_for_per_match_season_coverage_n",
+    "home_shots_against_per_match_season",
+    "home_shots_against_per_match_season_n",
+    "home_shots_against_per_match_season_coverage_n",
+    "home_shots_diff_season",
+    "home_shots_on_for_per_match_last5",
+    "home_shots_on_for_per_match_last5_n",
+    "home_shots_on_for_per_match_last5_coverage_n",
+    "home_shots_on_against_per_match_last5",
+    "home_shots_on_against_per_match_last5_n",
+    "home_shots_on_against_per_match_last5_coverage_n",
+    "home_shots_on_diff_last5",
+    "home_shots_on_for_per_match_last10",
+    "home_shots_on_for_per_match_last10_n",
+    "home_shots_on_for_per_match_last10_coverage_n",
+    "home_shots_on_against_per_match_last10",
+    "home_shots_on_against_per_match_last10_n",
+    "home_shots_on_against_per_match_last10_coverage_n",
+    "home_shots_on_diff_last10",
+    "home_shots_on_for_per_match_season",
+    "home_shots_on_for_per_match_season_n",
+    "home_shots_on_for_per_match_season_coverage_n",
+    "home_shots_on_against_per_match_season",
+    "home_shots_on_against_per_match_season_n",
+    "home_shots_on_against_per_match_season_coverage_n",
+    "home_shots_on_diff_season",
+    "away_goals_for_per_match_last5",
+    "away_goals_for_per_match_last5_n",
+    "away_goals_for_per_match_last5_coverage_n",
+    "away_goals_against_per_match_last5",
+    "away_goals_against_per_match_last5_n",
+    "away_goals_against_per_match_last5_coverage_n",
+    "away_goals_diff_last5",
+    "away_goals_for_per_match_last10",
+    "away_goals_for_per_match_last10_n",
+    "away_goals_for_per_match_last10_coverage_n",
+    "away_goals_against_per_match_last10",
+    "away_goals_against_per_match_last10_n",
+    "away_goals_against_per_match_last10_coverage_n",
+    "away_goals_diff_last10",
+    "away_goals_for_per_match_season",
+    "away_goals_for_per_match_season_n",
+    "away_goals_for_per_match_season_coverage_n",
+    "away_goals_against_per_match_season",
+    "away_goals_against_per_match_season_n",
+    "away_goals_against_per_match_season_coverage_n",
+    "away_goals_diff_season",
+    "away_xg_for_per_match_last5",
+    "away_xg_for_per_match_last5_n",
+    "away_xg_for_per_match_last5_coverage_n",
+    "away_xg_against_per_match_last5",
+    "away_xg_against_per_match_last5_n",
+    "away_xg_against_per_match_last5_coverage_n",
+    "away_xg_diff_last5",
+    "away_xg_for_per_match_last10",
+    "away_xg_for_per_match_last10_n",
+    "away_xg_for_per_match_last10_coverage_n",
+    "away_xg_against_per_match_last10",
+    "away_xg_against_per_match_last10_n",
+    "away_xg_against_per_match_last10_coverage_n",
+    "away_xg_diff_last10",
+    "away_xg_for_per_match_season",
+    "away_xg_for_per_match_season_n",
+    "away_xg_for_per_match_season_coverage_n",
+    "away_xg_against_per_match_season",
+    "away_xg_against_per_match_season_n",
+    "away_xg_against_per_match_season_coverage_n",
+    "away_xg_diff_season",
+    "away_shots_for_per_match_last5",
+    "away_shots_for_per_match_last5_n",
+    "away_shots_for_per_match_last5_coverage_n",
+    "away_shots_against_per_match_last5",
+    "away_shots_against_per_match_last5_n",
+    "away_shots_against_per_match_last5_coverage_n",
+    "away_shots_diff_last5",
+    "away_shots_for_per_match_last10",
+    "away_shots_for_per_match_last10_n",
+    "away_shots_for_per_match_last10_coverage_n",
+    "away_shots_against_per_match_last10",
+    "away_shots_against_per_match_last10_n",
+    "away_shots_against_per_match_last10_coverage_n",
+    "away_shots_diff_last10",
+    "away_shots_for_per_match_season",
+    "away_shots_for_per_match_season_n",
+    "away_shots_for_per_match_season_coverage_n",
+    "away_shots_against_per_match_season",
+    "away_shots_against_per_match_season_n",
+    "away_shots_against_per_match_season_coverage_n",
+    "away_shots_diff_season",
+    "away_shots_on_for_per_match_last5",
+    "away_shots_on_for_per_match_last5_n",
+    "away_shots_on_for_per_match_last5_coverage_n",
+    "away_shots_on_against_per_match_last5",
+    "away_shots_on_against_per_match_last5_n",
+    "away_shots_on_against_per_match_last5_coverage_n",
+    "away_shots_on_diff_last5",
+    "away_shots_on_for_per_match_last10",
+    "away_shots_on_for_per_match_last10_n",
+    "away_shots_on_for_per_match_last10_coverage_n",
+    "away_shots_on_against_per_match_last10",
+    "away_shots_on_against_per_match_last10_n",
+    "away_shots_on_against_per_match_last10_coverage_n",
+    "away_shots_on_diff_last10",
+    "away_shots_on_for_per_match_season",
+    "away_shots_on_for_per_match_season_n",
+    "away_shots_on_for_per_match_season_coverage_n",
+    "away_shots_on_against_per_match_season",
+    "away_shots_on_against_per_match_season_n",
+    "away_shots_on_against_per_match_season_coverage_n",
+    "away_shots_on_diff_season",
+    "home_attacks_per_match_season",
+    "home_attacks_per_match_season_n",
+    "home_attacks_per_match_season_coverage_n",
+    "home_dang_attacks_per_match_season",
+    "home_dang_attacks_per_match_season_n",
+    "home_dang_attacks_per_match_season_coverage_n",
+    "home_pressure_per_match_season",
+    "home_pressure_per_match_season_n",
+    "home_pressure_per_match_season_coverage_n",
+    "home_fouls_per_match_season",
+    "home_fouls_per_match_season_n",
+    "home_fouls_per_match_season_coverage_n",
+    "home_yellow_cards_per_match_season",
+    "home_yellow_cards_per_match_season_n",
+    "home_yellow_cards_per_match_season_coverage_n",
+    "away_attacks_per_match_season",
+    "away_attacks_per_match_season_n",
+    "away_attacks_per_match_season_coverage_n",
+    "away_dang_attacks_per_match_season",
+    "away_dang_attacks_per_match_season_n",
+    "away_dang_attacks_per_match_season_coverage_n",
+    "away_pressure_per_match_season",
+    "away_pressure_per_match_season_n",
+    "away_pressure_per_match_season_coverage_n",
+    "away_fouls_per_match_season",
+    "away_fouls_per_match_season_n",
+    "away_fouls_per_match_season_coverage_n",
+    "away_yellow_cards_per_match_season",
+    "away_yellow_cards_per_match_season_n",
+    "away_yellow_cards_per_match_season_coverage_n",
+    "home_goals_for_home_venue_season",
+    "home_goals_for_home_venue_season_n",
+    "home_goals_against_home_venue_season",
+    "home_goals_against_home_venue_season_n",
+    "away_goals_for_away_venue_season",
+    "away_goals_for_away_venue_season_n",
+    "away_goals_against_away_venue_season",
+    "away_goals_against_away_venue_season_n",
+    "home_points_last5",
+    "home_points_last5_n",
+    "home_points_last5_coverage_n",
+    "home_win_rate_last5",
+    "home_draw_rate_last5",
+    "home_loss_rate_last5",
+    "home_goal_diff_last5",
+    "home_xg_diff_form_last5",
+    "home_xg_diff_form_last5_n",
+    "home_xg_diff_form_last5_coverage_n",
+    "home_points_last10",
+    "home_points_last10_n",
+    "home_points_last10_coverage_n",
+    "home_win_rate_last10",
+    "home_draw_rate_last10",
+    "home_loss_rate_last10",
+    "home_goal_diff_last10",
+    "home_xg_diff_form_last10",
+    "home_xg_diff_form_last10_n",
+    "home_xg_diff_form_last10_coverage_n",
+    "away_points_last5",
+    "away_points_last5_n",
+    "away_points_last5_coverage_n",
+    "away_win_rate_last5",
+    "away_draw_rate_last5",
+    "away_loss_rate_last5",
+    "away_goal_diff_last5",
+    "away_xg_diff_form_last5",
+    "away_xg_diff_form_last5_n",
+    "away_xg_diff_form_last5_coverage_n",
+    "away_points_last10",
+    "away_points_last10_n",
+    "away_points_last10_coverage_n",
+    "away_win_rate_last10",
+    "away_draw_rate_last10",
+    "away_loss_rate_last10",
+    "away_goal_diff_last10",
+    "away_xg_diff_form_last10",
+    "away_xg_diff_form_last10_n",
+    "away_xg_diff_form_last10_coverage_n",
+    "home_team_home_goal_diff_season",
+    "home_team_home_goal_diff_season_n",
+    "away_team_away_goal_diff_season",
+    "away_team_away_goal_diff_season_n",
+    "league_home_advantage_season",
+    "league_home_advantage_season_n",
+    "home_matches_played_before_target",
+    "away_matches_played_before_target",
+    "home_insufficient_history",
+    "away_insufficient_history",
+    "home_attack_strength_score",
+    "home_defence_strength_score",
+    "away_attack_strength_score",
+    "away_defence_strength_score",
+    "strength_diff",
+    "league_mean_goals_per_team_match_season",
+    "shrinkage_k"
+  ],
+  "folds": [
+    {
+      "fold_name": "fold_1",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022"
+      ],
+      "validation_seasons": [
+        "2022/2023"
+      ],
+      "n_train": 3652,
+      "n_val": 1827,
+      "train_missing_by_column": {
+        "home_goals_for_per_match_season": 194,
+        "home_goals_against_per_match_season": 194,
+        "away_goals_for_per_match_season": 198,
+        "away_goals_against_per_match_season": 198,
+        "home_goals_for_per_match_last5": 163,
+        "away_goals_for_per_match_last5": 170,
+        "home_points_last5": 163,
+        "away_points_last5": 170,
+        "home_attack_strength_score": 10,
+        "home_defence_strength_score": 10,
+        "away_attack_strength_score": 10,
+        "away_defence_strength_score": 10,
+        "strength_diff": 10,
+        "league_home_advantage_season": 10
+      },
+      "val_missing_by_column": {
+        "home_goals_for_per_match_season": 98,
+        "home_goals_against_per_match_season": 98,
+        "away_goals_for_per_match_season": 98,
+        "away_goals_against_per_match_season": 98,
+        "home_goals_for_per_match_last5": 16,
+        "away_goals_for_per_match_last5": 14,
+        "home_points_last5": 16,
+        "away_points_last5": 14,
+        "home_attack_strength_score": 5,
+        "home_defence_strength_score": 5,
+        "away_attack_strength_score": 5,
+        "away_defence_strength_score": 5,
+        "strength_diff": 5,
+        "league_home_advantage_season": 5
+      },
+      "model_metrics": {
+        "frequency_baseline": {
+          "log_loss": 1.0667137606565111,
+          "brier": 0.6450271955865924,
+          "macro_f1": 0.2091159529176058,
+          "balanced_accuracy": 0.3333333333333333,
+          "accuracy": 0.4570333880678708,
+          "confusion_matrix": [
+            [
+              835,
+              0,
+              0
+            ],
+            [
+              443,
+              0,
+              0
+            ],
+            [
+              549,
+              0,
+              0
+            ]
+          ],
+          "n": 1827,
+          "n_train": 3652,
+          "dropped_or_imputed": {}
+        },
+        "majority_class_baseline": {
+          "log_loss": 18.753402399426054,
+          "brier": 1.0859332238642583,
+          "macro_f1": 0.2091159529176058,
+          "balanced_accuracy": 0.3333333333333333,
+          "accuracy": 0.4570333880678708,
+          "confusion_matrix": [
+            [
+              835,
+              0,
+              0
+            ],
+            [
+              443,
+              0,
+              0
+            ],
+            [
+              549,
+              0,
+              0
+            ]
+          ],
+          "n": 1827,
+          "n_train": 3652,
+          "dropped_or_imputed": {}
+        },
+        "logistic_regression": {
+          "log_loss": 1.011709353872961,
+          "brier": 0.6053017519892322,
+          "macro_f1": 0.3802594687449878,
+          "balanced_accuracy": 0.432139568613865,
+          "accuracy": 0.50519978106185,
+          "confusion_matrix": [
+            [
+              621,
+              5,
+              209
+            ],
+            [
+              264,
+              6,
+              173
+            ],
+            [
+              244,
+              9,
+              296
+            ]
+          ],
+          "n": 1827,
+          "n_train": 3652,
+          "dropped_or_imputed": {
+            "home_goals_for_per_match_season": 194,
+            "home_goals_against_per_match_season": 194,
+            "away_goals_for_per_match_season": 198,
+            "away_goals_against_per_match_season": 198,
+            "home_goals_for_per_match_last5": 163,
+            "away_goals_for_per_match_last5": 170,
+            "home_points_last5": 163,
+            "away_points_last5": 170,
+            "home_attack_strength_score": 10,
+            "home_defence_strength_score": 10,
+            "away_attack_strength_score": 10,
+            "away_defence_strength_score": 10,
+            "strength_diff": 10,
+            "league_home_advantage_season": 10
+          }
+        },
+        "hist_gradient_boosting": {
+          "log_loss": 1.143027803451514,
+          "brier": 0.6723371415275617,
+          "macro_f1": 0.40045677895912185,
+          "balanced_accuracy": 0.40671441535141367,
+          "accuracy": 0.4559386973180077,
+          "confusion_matrix": [
+            [
+              528,
+              134,
+              173
+            ],
+            [
+              221,
+              74,
+              148
+            ],
+            [
+              246,
+              72,
+              231
+            ]
+          ],
+          "n": 1827,
+          "n_train": 3652,
+          "dropped_or_imputed": {}
+        }
+      }
+    },
+    {
+      "fold_name": "fold_2",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023"
+      ],
+      "validation_seasons": [
+        "2023/2024"
+      ],
+      "n_train": 5479,
+      "n_val": 1752,
+      "train_missing_by_column": {
+        "home_goals_for_per_match_season": 292,
+        "home_goals_against_per_match_season": 292,
+        "away_goals_for_per_match_season": 296,
+        "away_goals_against_per_match_season": 296,
+        "home_goals_for_per_match_last5": 179,
+        "away_goals_for_per_match_last5": 184,
+        "home_points_last5": 179,
+        "away_points_last5": 184,
+        "home_attack_strength_score": 15,
+        "home_defence_strength_score": 15,
+        "away_attack_strength_score": 15,
+        "away_defence_strength_score": 15,
+        "strength_diff": 15,
+        "league_home_advantage_season": 15
+      },
+      "val_missing_by_column": {
+        "home_goals_for_per_match_season": 96,
+        "home_goals_against_per_match_season": 96,
+        "away_goals_for_per_match_season": 96,
+        "away_goals_against_per_match_season": 96,
+        "home_goals_for_per_match_last5": 8,
+        "away_goals_for_per_match_last5": 10,
+        "home_points_last5": 8,
+        "away_points_last5": 10,
+        "home_attack_strength_score": 5,
+        "home_defence_strength_score": 5,
+        "away_attack_strength_score": 5,
+        "away_defence_strength_score": 5,
+        "strength_diff": 5,
+        "league_home_advantage_season": 5
+      },
+      "model_metrics": {
+        "frequency_baseline": {
+          "log_loss": 1.0772539362470797,
+          "brier": 0.6519502748783309,
+          "macro_f1": 0.2007711740460045,
+          "balanced_accuracy": 0.3333333333333333,
+          "accuracy": 0.4309360730593607,
+          "confusion_matrix": [
+            [
+              755,
+              0,
+              0
+            ],
+            [
+              463,
+              0,
+              0
+            ],
+            [
+              534,
+              0,
+              0
+            ]
+          ],
+          "n": 1752,
+          "n_train": 5479,
+          "dropped_or_imputed": {}
+        },
+        "majority_class_baseline": {
+          "log_loss": 19.654771727012527,
+          "brier": 1.1381278538812785,
+          "macro_f1": 0.2007711740460045,
+          "balanced_accuracy": 0.3333333333333333,
+          "accuracy": 0.4309360730593607,
+          "confusion_matrix": [
+            [
+              755,
+              0,
+              0
+            ],
+            [
+              463,
+              0,
+              0
+            ],
+            [
+              534,
+              0,
+              0
+            ]
+          ],
+          "n": 1752,
+          "n_train": 5479,
+          "dropped_or_imputed": {}
+        },
+        "logistic_regression": {
+          "log_loss": 0.9909156903035883,
+          "brier": 0.5915024107750169,
+          "macro_f1": 0.3981750671264897,
+          "balanced_accuracy": 0.4594246142874237,
+          "accuracy": 0.5199771689497716,
+          "confusion_matrix": [
+            [
+              601,
+              2,
+              152
+            ],
+            [
+              297,
+              6,
+              160
+            ],
+            [
+              223,
+              7,
+              304
+            ]
+          ],
+          "n": 1752,
+          "n_train": 5479,
+          "dropped_or_imputed": {
+            "home_goals_for_per_match_season": 292,
+            "home_goals_against_per_match_season": 292,
+            "away_goals_for_per_match_season": 296,
+            "away_goals_against_per_match_season": 296,
+            "home_goals_for_per_match_last5": 179,
+            "away_goals_for_per_match_last5": 184,
+            "home_points_last5": 179,
+            "away_points_last5": 184,
+            "home_attack_strength_score": 15,
+            "home_defence_strength_score": 15,
+            "away_attack_strength_score": 15,
+            "away_defence_strength_score": 15,
+            "strength_diff": 15,
+            "league_home_advantage_season": 15
+          }
+        },
+        "hist_gradient_boosting": {
+          "log_loss": 1.061590556907978,
+          "brier": 0.6295327925417803,
+          "macro_f1": 0.4326745324462242,
+          "balanced_accuracy": 0.44849841464278956,
+          "accuracy": 0.4908675799086758,
+          "confusion_matrix": [
+            [
+              518,
+              87,
+              150
+            ],
+            [
+              260,
+              66,
+              137
+            ],
+            [
+              182,
+              76,
+              276
+            ]
+          ],
+          "n": 1752,
+          "n_train": 5479,
+          "dropped_or_imputed": {}
+        }
+      }
+    },
+    {
+      "fold_name": "fold_3",
+      "train_seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024"
+      ],
+      "validation_seasons": [
+        "2024/2025"
+      ],
+      "n_train": 7231,
+      "n_val": 1752,
+      "train_missing_by_column": {
+        "home_goals_for_per_match_season": 388,
+        "home_goals_against_per_match_season": 388,
+        "away_goals_for_per_match_season": 392,
+        "away_goals_against_per_match_season": 392,
+        "home_goals_for_per_match_last5": 187,
+        "away_goals_for_per_match_last5": 194,
+        "home_points_last5": 187,
+        "away_points_last5": 194,
+        "home_attack_strength_score": 20,
+        "home_defence_strength_score": 20,
+        "away_attack_strength_score": 20,
+        "away_defence_strength_score": 20,
+        "strength_diff": 20,
+        "league_home_advantage_season": 20
+      },
+      "val_missing_by_column": {
+        "home_goals_for_per_match_season": 96,
+        "home_goals_against_per_match_season": 96,
+        "away_goals_for_per_match_season": 96,
+        "away_goals_against_per_match_season": 96,
+        "home_goals_for_per_match_last5": 6,
+        "away_goals_for_per_match_last5": 9,
+        "home_points_last5": 6,
+        "away_points_last5": 9,
+        "home_attack_strength_score": 5,
+        "home_defence_strength_score": 5,
+        "away_attack_strength_score": 5,
+        "away_defence_strength_score": 5,
+        "strength_diff": 5,
+        "league_home_advantage_season": 5
+      },
+      "model_metrics": {
+        "frequency_baseline": {
+          "log_loss": 1.0770550648484507,
+          "brier": 0.6523925623267031,
+          "macro_f1": 0.19721329046087888,
+          "balanced_accuracy": 0.3333333333333333,
+          "accuracy": 0.4200913242009132,
+          "confusion_matrix": [
+            [
+              736,
+              0,
+              0
+            ],
+            [
+              437,
+              0,
+              0
+            ],
+            [
+              579,
+              0,
+              0
+            ]
+          ],
+          "n": 1752,
+          "n_train": 7231,
+          "dropped_or_imputed": {}
+        },
+        "majority_class_baseline": {
+          "log_loss": 20.02933608289341,
+          "brier": 1.1598173515981736,
+          "macro_f1": 0.19721329046087888,
+          "balanced_accuracy": 0.3333333333333333,
+          "accuracy": 0.4200913242009132,
+          "confusion_matrix": [
+            [
+              736,
+              0,
+              0
+            ],
+            [
+              437,
+              0,
+              0
+            ],
+            [
+              579,
+              0,
+              0
+            ]
+          ],
+          "n": 1752,
+          "n_train": 7231,
+          "dropped_or_imputed": {}
+        },
+        "logistic_regression": {
+          "log_loss": 1.010331036537838,
+          "brier": 0.6041539853467631,
+          "macro_f1": 0.37620124735299987,
+          "balanced_accuracy": 0.4344926564646956,
+          "accuracy": 0.5011415525114156,
+          "confusion_matrix": [
+            [
+              581,
+              2,
+              153
+            ],
+            [
+              291,
+              2,
+              144
+            ],
+            [
+              279,
+              5,
+              295
+            ]
+          ],
+          "n": 1752,
+          "n_train": 7231,
+          "dropped_or_imputed": {
+            "home_goals_for_per_match_season": 388,
+            "home_goals_against_per_match_season": 388,
+            "away_goals_for_per_match_season": 392,
+            "away_goals_against_per_match_season": 392,
+            "home_goals_for_per_match_last5": 187,
+            "away_goals_for_per_match_last5": 194,
+            "home_points_last5": 187,
+            "away_points_last5": 194,
+            "home_attack_strength_score": 20,
+            "home_defence_strength_score": 20,
+            "away_attack_strength_score": 20,
+            "away_defence_strength_score": 20,
+            "strength_diff": 20,
+            "league_home_advantage_season": 20
+          }
+        },
+        "hist_gradient_boosting": {
+          "log_loss": 1.0628191756134457,
+          "brier": 0.6320213929838049,
+          "macro_f1": 0.42179517241235426,
+          "balanced_accuracy": 0.4338191340312936,
+          "accuracy": 0.4800228310502283,
+          "confusion_matrix": [
+            [
+              509,
+              93,
+              134
+            ],
+            [
+              239,
+              65,
+              133
+            ],
+            [
+              236,
+              76,
+              267
+            ]
+          ],
+          "n": 1752,
+          "n_train": 7231,
+          "dropped_or_imputed": {}
+        }
+      }
+    }
+  ],
+  "summary_across_folds": {
+    "frequency_baseline": {
+      "log_loss": {
+        "mean": 1.0736742539173472,
+        "std": 0.00492248157497185,
+        "values_by_fold": [
+          1.0667137606565111,
+          1.0772539362470797,
+          1.0770550648484507
+        ]
+      },
+      "brier": {
+        "mean": 0.6497900109305421,
+        "std": 0.003372655931376057,
+        "values_by_fold": [
+          0.6450271955865924,
+          0.6519502748783309,
+          0.6523925623267031
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.20236680580816305,
+        "std": 0.00498851173063343,
+        "values_by_fold": [
+          0.2091159529176058,
+          0.2007711740460045,
+          0.19721329046087888
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.3333333333333333,
+        "std": 0.0,
+        "values_by_fold": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ]
+      },
+      "accuracy": {
+        "mean": 0.43602026177604825,
+        "std": 0.015504101648010502,
+        "values_by_fold": [
+          0.4570333880678708,
+          0.4309360730593607,
+          0.4200913242009132
+        ]
+      }
+    },
+    "majority_class_baseline": {
+      "log_loss": {
+        "mean": 19.47917006977733,
+        "std": 0.5354927000245993,
+        "values_by_fold": [
+          18.753402399426054,
+          19.654771727012527,
+          20.02933608289341
+        ]
+      },
+      "brier": {
+        "mean": 1.1279594764479035,
+        "std": 0.031008203296021043,
+        "values_by_fold": [
+          1.0859332238642583,
+          1.1381278538812785,
+          1.1598173515981736
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.20236680580816305,
+        "std": 0.00498851173063343,
+        "values_by_fold": [
+          0.2091159529176058,
+          0.2007711740460045,
+          0.19721329046087888
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.3333333333333333,
+        "std": 0.0,
+        "values_by_fold": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ]
+      },
+      "accuracy": {
+        "mean": 0.43602026177604825,
+        "std": 0.015504101648010502,
+        "values_by_fold": [
+          0.4570333880678708,
+          0.4309360730593607,
+          0.4200913242009132
+        ]
+      }
+    },
+    "logistic_regression": {
+      "log_loss": {
+        "mean": 1.0043186935714623,
+        "std": 0.009494044172288853,
+        "values_by_fold": [
+          1.011709353872961,
+          0.9909156903035883,
+          1.010331036537838
+        ]
+      },
+      "brier": {
+        "mean": 0.6003193827036707,
+        "std": 0.006252124308819303,
+        "values_by_fold": [
+          0.6053017519892322,
+          0.5915024107750169,
+          0.6041539853467631
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.38487859440815914,
+        "std": 0.009546881874154138,
+        "values_by_fold": [
+          0.3802594687449878,
+          0.3981750671264897,
+          0.37620124735299987
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.4420189464553281,
+        "std": 0.012345099165778771,
+        "values_by_fold": [
+          0.432139568613865,
+          0.4594246142874237,
+          0.4344926564646956
+        ]
+      },
+      "accuracy": {
+        "mean": 0.5087728341743457,
+        "std": 0.008094036613942137,
+        "values_by_fold": [
+          0.50519978106185,
+          0.5199771689497716,
+          0.5011415525114156
+        ]
+      }
+    },
+    "hist_gradient_boosting": {
+      "log_loss": {
+        "mean": 1.0891458453243126,
+        "std": 0.03810359943362282,
+        "values_by_fold": [
+          1.143027803451514,
+          1.061590556907978,
+          1.0628191756134457
+        ]
+      },
+      "brier": {
+        "mean": 0.6446304423510489,
+        "std": 0.019617919826582723,
+        "values_by_fold": [
+          0.6723371415275617,
+          0.6295327925417803,
+          0.6320213929838049
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.41830882793923346,
+        "std": 0.013381874763471904,
+        "values_by_fold": [
+          0.40045677895912185,
+          0.4326745324462242,
+          0.42179517241235426
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.4296773213418323,
+        "std": 0.0173078326866068,
+        "values_by_fold": [
+          0.40671441535141367,
+          0.44849841464278956,
+          0.4338191340312936
+        ]
+      },
+      "accuracy": {
+        "mean": 0.4756097027589706,
+        "std": 0.014597111260896658,
+        "values_by_fold": [
+          0.4559386973180077,
+          0.4908675799086758,
+          0.4800228310502283
+        ]
+      }
+    }
+  },
+  "model_selection": {
+    "selected_model": "logistic_regression",
+    "selection_rule": "lowest mean validation log loss across folds 1-3; Brier score is tie-breaker when candidates are within 0.005 log loss of each other",
+    "candidate_mean_log_loss": {
+      "logistic_regression": 1.0043186935714623,
+      "hist_gradient_boosting": 1.0891458453243126
+    },
+    "tie_break_applied": false,
+    "beats_frequency_baseline": {
+      "logistic_regression": true,
+      "hist_gradient_boosting": false
+    }
+  },
+  "final_test": {
+    "n_train": 8983,
+    "n_test": 1751,
+    "train_missing_by_column": {
+      "home_goals_for_per_match_season": 484,
+      "home_goals_against_per_match_season": 484,
+      "away_goals_for_per_match_season": 488,
+      "away_goals_against_per_match_season": 488,
+      "home_goals_for_per_match_last5": 193,
+      "away_goals_for_per_match_last5": 203,
+      "home_points_last5": 193,
+      "away_points_last5": 203,
+      "home_attack_strength_score": 25,
+      "home_defence_strength_score": 25,
+      "away_attack_strength_score": 25,
+      "away_defence_strength_score": 25,
+      "strength_diff": 25,
+      "league_home_advantage_season": 25
+    },
+    "test_missing_by_column": {
+      "home_goals_for_per_match_season": 96,
+      "home_goals_against_per_match_season": 96,
+      "away_goals_for_per_match_season": 96,
+      "away_goals_against_per_match_season": 96,
+      "home_goals_for_per_match_last5": 8,
+      "away_goals_for_per_match_last5": 7,
+      "home_points_last5": 8,
+      "away_points_last5": 7,
+      "home_attack_strength_score": 5,
+      "home_defence_strength_score": 5,
+      "away_attack_strength_score": 5,
+      "away_defence_strength_score": 5,
+      "strength_diff": 5,
+      "league_home_advantage_season": 5
+    },
+    "model_metrics": {
+      "frequency_baseline": {
+        "log_loss": 1.0720870438762646,
+        "brier": 0.6485417043031518,
+        "macro_f1": 0.2038065027755749,
+        "balanced_accuracy": 0.3333333333333333,
+        "accuracy": 0.44031981724728725,
+        "confusion_matrix": [
+          [
+            771,
+            0,
+            0
+          ],
+          [
+            445,
+            0,
+            0
+          ],
+          [
+            535,
+            0,
+            0
+          ]
+        ],
+        "n": 1751,
+        "n_train": 8983,
+        "dropped_or_imputed": {}
+      },
+      "majority_class_baseline": {
+        "log_loss": 19.33066868475869,
+        "brier": 1.1193603655054254,
+        "macro_f1": 0.2038065027755749,
+        "balanced_accuracy": 0.3333333333333333,
+        "accuracy": 0.44031981724728725,
+        "confusion_matrix": [
+          [
+            771,
+            0,
+            0
+          ],
+          [
+            445,
+            0,
+            0
+          ],
+          [
+            535,
+            0,
+            0
+          ]
+        ],
+        "n": 1751,
+        "n_train": 8983,
+        "dropped_or_imputed": {}
+      },
+      "logistic_regression": {
+        "log_loss": 1.012643607907126,
+        "brier": 0.6059500599589396,
+        "macro_f1": 0.3712753915810083,
+        "balanced_accuracy": 0.4321797560315324,
+        "accuracy": 0.500856653340948,
+        "confusion_matrix": [
+          [
+            599,
+            2,
+            170
+          ],
+          [
+            293,
+            0,
+            152
+          ],
+          [
+            257,
+            0,
+            278
+          ]
+        ],
+        "n": 1751,
+        "n_train": 8983,
+        "dropped_or_imputed": {
+          "home_goals_for_per_match_season": 484,
+          "home_goals_against_per_match_season": 484,
+          "away_goals_for_per_match_season": 488,
+          "away_goals_against_per_match_season": 488,
+          "home_goals_for_per_match_last5": 193,
+          "away_goals_for_per_match_last5": 203,
+          "home_points_last5": 193,
+          "away_points_last5": 203,
+          "home_attack_strength_score": 25,
+          "home_defence_strength_score": 25,
+          "away_attack_strength_score": 25,
+          "away_defence_strength_score": 25,
+          "strength_diff": 25,
+          "league_home_advantage_season": 25
+        }
+      },
+      "hist_gradient_boosting": {
+        "log_loss": 1.0478148269159393,
+        "brier": 0.6265213380425456,
+        "macro_f1": 0.41935462020989106,
+        "balanced_accuracy": 0.4317194691769293,
+        "accuracy": 0.480868075385494,
+        "confusion_matrix": [
+          [
+            532,
+            80,
+            159
+          ],
+          [
+            236,
+            68,
+            141
+          ],
+          [
+            236,
+            57,
+            242
+          ]
+        ],
+        "n": 1751,
+        "n_train": 8983,
+        "dropped_or_imputed": {}
+      }
+    }
+  }
+}

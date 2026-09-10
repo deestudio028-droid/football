@@ -1,0 +1,397 @@
+{
+  "selected_model": "logistic_regression",
+  "n_folds": 3,
+  "diagnostics": {
+    "n": 5331,
+    "mean_predicted_probability": {
+      "H": 0.42330259449330393,
+      "D": 0.2538216306193289,
+      "A": 0.3228757748873672
+    },
+    "actual_class_frequency": {
+      "H": 0.43631588820108796,
+      "D": 0.2519227161883324,
+      "A": 0.31176139561057964
+    },
+    "mean_max_probability": 0.5062501104849133,
+    "argmax_counts": {
+      "H": 3401,
+      "D": 44,
+      "A": 1886
+    },
+    "argmax_percentage": {
+      "H": 0.6379666103920465,
+      "D": 0.008253610954792722,
+      "A": 0.35377977865316074
+    },
+    "mean_predicted_probability_by_actual_class": {
+      "H": {
+        "H": 0.4820223033779971,
+        "D": 0.24795981641397027,
+        "A": 0.2700178802080326,
+        "n": 2326
+      },
+      "D": {
+        "H": 0.4168731864325385,
+        "D": 0.25914473903791313,
+        "A": 0.32398207452954825,
+        "n": 1343
+      },
+      "A": {
+        "H": 0.34631863069054303,
+        "D": 0.25772394423876654,
+        "A": 0.39595742507069037,
+        "n": 1662
+      }
+    },
+    "log_loss": 1.0044226702217367,
+    "brier": 0.6003894779384141,
+    "ece": 0.005085147705460211,
+    "ece_definition": "Top-label confidence ECE (Guo et al. 2017): equal-width bins on the model's max predicted probability; per-bin |mean confidence - top-1 accuracy|, weighted by bin size.",
+    "ece_bin_table": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "mean_confidence": null,
+        "accuracy": null,
+        "abs_gap": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "mean_confidence": null,
+        "accuracy": null,
+        "abs_gap": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.30000000000000004,
+        "n": 0,
+        "mean_confidence": null,
+        "accuracy": null,
+        "abs_gap": null
+      },
+      {
+        "lower": 0.30000000000000004,
+        "upper": 0.4,
+        "n": 877,
+        "mean_confidence": 0.37668006878804017,
+        "accuracy": 0.3751425313568985,
+        "abs_gap": 0.0015375374311416556
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 2060,
+        "mean_confidence": 0.4468861821847265,
+        "accuracy": 0.4470873786407767,
+        "abs_gap": 0.0002011964560502122
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6000000000000001,
+        "n": 1325,
+        "mean_confidence": 0.5459286681177271,
+        "accuracy": 0.5547169811320755,
+        "abs_gap": 0.008788313014348348
+      },
+      {
+        "lower": 0.6000000000000001,
+        "upper": 0.7000000000000001,
+        "n": 742,
+        "mean_confidence": 0.6436869412120342,
+        "accuracy": 0.6361185983827493,
+        "abs_gap": 0.007568342829284869
+      },
+      {
+        "lower": 0.7000000000000001,
+        "upper": 0.8,
+        "n": 277,
+        "mean_confidence": 0.7426053138259463,
+        "accuracy": 0.7509025270758123,
+        "abs_gap": 0.008297213249865987
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 50,
+        "mean_confidence": 0.8242503160464019,
+        "accuracy": 0.94,
+        "abs_gap": 0.11574968395359808
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_confidence": null,
+        "accuracy": null,
+        "abs_gap": null
+      }
+    ]
+  },
+  "draw_probability_investigation": {
+    "n": 5331,
+    "empirical_draw_frequency": 0.2519227161883324,
+    "mean_predicted_p_draw_overall": 0.2538216306193289,
+    "mean_predicted_p_draw_when_actual_draw": 0.25914473903791313,
+    "mean_predicted_p_draw_when_actual_not_draw": 0.2520290191333312,
+    "argmax_draw_count": 44,
+    "argmax_draw_percentage": 0.008253610954792722,
+    "pct_draw_ranked_1st_of_3": 0.008253610954792722,
+    "pct_draw_ranked_2nd_of_3": 0.590320765334834,
+    "pct_draw_ranked_3rd_of_3": 0.40142562371037327,
+    "mean_predicted_minus_empirical_gap": 0.00189891443099649,
+    "top_line_heuristic_verdict": "A: mean predicted P(draw) is close to the empirical draw rate (within 0.03). Draw's near-zero argmax share looks like a structural argmax phenomenon (H or A usually edges it out), not evidence of miscalibration by this top-line check. See the Draw reliability-bin table for the rigorous per-probability-level answer.",
+    "caveat": "This is a descriptive top-line heuristic, not a statistical test, and does not alter the model regardless of its verdict. Read alongside the Draw reliability-bin table."
+  },
+  "reliability_bins": {
+    "home": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 60,
+        "mean_predicted_probability": 0.07983919989185875,
+        "observed_frequency": 0.1,
+        "abs_calibration_gap": 0.020160800108141252
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 388,
+        "mean_predicted_probability": 0.15709066826877613,
+        "observed_frequency": 0.18041237113402062,
+        "abs_calibration_gap": 0.023321702865244487
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.30000000000000004,
+        "n": 817,
+        "mean_predicted_probability": 0.2545736220872195,
+        "observed_frequency": 0.2558139534883721,
+        "abs_calibration_gap": 0.0012403314011525945
+      },
+      {
+        "lower": 0.30000000000000004,
+        "upper": 0.4,
+        "n": 1117,
+        "mean_predicted_probability": 0.3519950995785799,
+        "observed_frequency": 0.37242614145031333,
+        "abs_calibration_gap": 0.020431041871733446
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 1284,
+        "mean_predicted_probability": 0.44790261469621634,
+        "observed_frequency": 0.4517133956386293,
+        "abs_calibration_gap": 0.003810780942412939
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6000000000000001,
+        "n": 900,
+        "mean_predicted_probability": 0.5477648413579966,
+        "observed_frequency": 0.5711111111111111,
+        "abs_calibration_gap": 0.02334626975311449
+      },
+      {
+        "lower": 0.6000000000000001,
+        "upper": 0.7000000000000001,
+        "n": 516,
+        "mean_predicted_probability": 0.644584893612217,
+        "observed_frequency": 0.6531007751937985,
+        "abs_calibration_gap": 0.008515881581581453
+      },
+      {
+        "lower": 0.7000000000000001,
+        "upper": 0.8,
+        "n": 204,
+        "mean_predicted_probability": 0.7446245206207274,
+        "observed_frequency": 0.7450980392156863,
+        "abs_calibration_gap": 0.00047351859495892157
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 45,
+        "mean_predicted_probability": 0.8247756152178494,
+        "observed_frequency": 0.9333333333333333,
+        "abs_calibration_gap": 0.10855771811548398
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_predicted_probability": null,
+        "observed_frequency": null,
+        "abs_calibration_gap": null
+      }
+    ],
+    "draw": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 1,
+        "mean_predicted_probability": 0.0776067997251077,
+        "observed_frequency": 0.0,
+        "abs_calibration_gap": 0.0776067997251077
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 649,
+        "mean_predicted_probability": 0.17390465654100876,
+        "observed_frequency": 0.1926040061633282,
+        "abs_calibration_gap": 0.01869934962231945
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.30000000000000004,
+        "n": 3865,
+        "mean_predicted_probability": 0.2530353699793202,
+        "observed_frequency": 0.25304010349288486,
+        "abs_calibration_gap": 4.733513564669778e-06
+      },
+      {
+        "lower": 0.30000000000000004,
+        "upper": 0.4,
+        "n": 814,
+        "mean_predicted_probability": 0.32103592777693796,
+        "observed_frequency": 0.29484029484029484,
+        "abs_calibration_gap": 0.02619563293664312
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 2,
+        "mean_predicted_probability": 0.4382168781511841,
+        "observed_frequency": 0.0,
+        "abs_calibration_gap": 0.4382168781511841
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6000000000000001,
+        "n": 0,
+        "mean_predicted_probability": null,
+        "observed_frequency": null,
+        "abs_calibration_gap": null
+      },
+      {
+        "lower": 0.6000000000000001,
+        "upper": 0.7000000000000001,
+        "n": 0,
+        "mean_predicted_probability": null,
+        "observed_frequency": null,
+        "abs_calibration_gap": null
+      },
+      {
+        "lower": 0.7000000000000001,
+        "upper": 0.8,
+        "n": 0,
+        "mean_predicted_probability": null,
+        "observed_frequency": null,
+        "abs_calibration_gap": null
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 0,
+        "mean_predicted_probability": null,
+        "observed_frequency": null,
+        "abs_calibration_gap": null
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_predicted_probability": null,
+        "observed_frequency": null,
+        "abs_calibration_gap": null
+      }
+    ],
+    "away": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 228,
+        "mean_predicted_probability": 0.07377042377667369,
+        "observed_frequency": 0.05263157894736842,
+        "abs_calibration_gap": 0.021138844829305267
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 976,
+        "mean_predicted_probability": 0.15519520116082514,
+        "observed_frequency": 0.14754098360655737,
+        "abs_calibration_gap": 0.0076542175542677615
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.30000000000000004,
+        "n": 1403,
+        "mean_predicted_probability": 0.2507734740781788,
+        "observed_frequency": 0.23806129722024233,
+        "abs_calibration_gap": 0.012712176857936464
+      },
+      {
+        "lower": 0.30000000000000004,
+        "upper": 0.4,
+        "n": 1216,
+        "mean_predicted_probability": 0.3463727706967093,
+        "observed_frequency": 0.33881578947368424,
+        "abs_calibration_gap": 0.007556981223025061
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 779,
+        "mean_predicted_probability": 0.44501051799965546,
+        "observed_frequency": 0.44030808729139925,
+        "abs_calibration_gap": 0.004702430708256211
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6000000000000001,
+        "n": 425,
+        "mean_predicted_probability": 0.5420403012559799,
+        "observed_frequency": 0.52,
+        "abs_calibration_gap": 0.02204030125597989
+      },
+      {
+        "lower": 0.6000000000000001,
+        "upper": 0.7000000000000001,
+        "n": 226,
+        "mean_predicted_probability": 0.6416367490063071,
+        "observed_frequency": 0.5973451327433629,
+        "abs_calibration_gap": 0.0442916162629442
+      },
+      {
+        "lower": 0.7000000000000001,
+        "upper": 0.8,
+        "n": 73,
+        "mean_predicted_probability": 0.7369625989473801,
+        "observed_frequency": 0.7671232876712328,
+        "abs_calibration_gap": 0.03016068872385269
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 5,
+        "mean_predicted_probability": 0.819522623503374,
+        "observed_frequency": 1.0,
+        "abs_calibration_gap": 0.18047737649662599
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "mean_predicted_probability": null,
+        "observed_frequency": null,
+        "abs_calibration_gap": null
+      }
+    ]
+  }
+}

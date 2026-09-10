@@ -1,0 +1,20 @@
+{
+  "frozen_at": "2026-08-21T06:00:32.361390+00:00",
+  "protocol_version": "1.0",
+  "experiment": "Phase 7 Statistical Power, Multi-OOS Validation & Uncertainty Research",
+  "primary_model": "Phase 6 Expanding-Window DC+Elo Hybrid Champion",
+  "primary_baseline": "V4 Independent Poisson Baseline",
+  "primary_metric": "Multiclass Cross-Entropy / Log Loss",
+  "significance_rule": "Two-tailed paired bootstrap 95% confidence interval must strictly exclude zero (CI upper < 0.0)",
+  "practical_thresholds": {
+    "meaningful_gain": -0.001,
+    "strong_gain": -0.0025,
+    "substantial_gain": -0.005
+  },
+  "power_methodology": "Normal asymptotic power simulation based on empirical paired standard error",
+  "cluster_bootstrap_seeds": {
+    "primary": 20260820,
+    "resamples": 10000
+  },
+  "decision_rule": "If 95% CI crosses zero, report NOT STATISTICALLY DISTINGUISHABLE and withhold promotion."
+}

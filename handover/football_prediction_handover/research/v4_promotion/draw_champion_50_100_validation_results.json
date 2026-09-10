@@ -1,0 +1,484 @@
+{
+  "generated_at": "2026-08-21T06:50:44.394454+00:00",
+  "classification": "REUSED_HISTORICAL_COMPARATIVE_DIAGNOSTIC",
+  "model_id": "v4_draw_champion",
+  "model_version": "v4.0-champion-dc-elo-stacking",
+  "methodology_hash": "9c396e7e5364f93f079313726c1ba499",
+  "protocol_hash": "1311eb7fa75f51c77a1fc09c0cf4df68",
+  "cohort_50": {
+    "cohort": "50_match_validation_cohort",
+    "n_fixtures": 50,
+    "date_range": [
+      "2025-08-15",
+      "2025-08-23"
+    ],
+    "league_composition": {
+      "Bundesliga": 7,
+      "La Liga": 13,
+      "Ligue 1": 12,
+      "Premier League": 16,
+      "Serie A": 2
+    },
+    "outcome_distribution": {
+      "H": 25,
+      "D": 10,
+      "A": 15
+    },
+    "metrics_v4": {
+      "n": 50,
+      "correct": 27,
+      "accuracy": 0.54,
+      "log_loss": 0.98897,
+      "brier": 0.587532,
+      "rps": 0.214612,
+      "ece": 0.06005,
+      "mean_p_home": 0.431654,
+      "mean_p_draw": 0.239852,
+      "mean_p_away": 0.328494,
+      "actual_rate_home": 0.5,
+      "actual_rate_draw": 0.2,
+      "actual_rate_away": 0.3,
+      "draw_bias": 0.039852,
+      "draw_brier_component": 0.158307
+    },
+    "metrics_champion": {
+      "n": 50,
+      "correct": 27,
+      "accuracy": 0.54,
+      "log_loss": 0.98175,
+      "brier": 0.58347,
+      "rps": 0.213704,
+      "ece": 0.055024,
+      "mean_p_home": 0.439058,
+      "mean_p_draw": 0.229923,
+      "mean_p_away": 0.331019,
+      "actual_rate_home": 0.5,
+      "actual_rate_draw": 0.2,
+      "actual_rate_away": 0.3,
+      "draw_bias": 0.029923,
+      "draw_brier_component": 0.156063
+    },
+    "metrics_market": {
+      "n": 50,
+      "correct": 27,
+      "accuracy": 0.54,
+      "log_loss": 0.936019,
+      "brier": 0.552325,
+      "rps": 0.199077,
+      "ece": 0.09126,
+      "mean_p_home": 0.45738,
+      "mean_p_draw": 0.239866,
+      "mean_p_away": 0.302754,
+      "actual_rate_home": 0.5,
+      "actual_rate_draw": 0.2,
+      "actual_rate_away": 0.3,
+      "draw_bias": 0.039866,
+      "draw_brier_component": 0.154172
+    },
+    "deltas_champion_minus_v4": {
+      "delta_accuracy": 0.0,
+      "delta_log_loss": -0.00722,
+      "delta_brier": -0.004062,
+      "delta_rps": -0.000908,
+      "delta_ece": -0.005026,
+      "delta_mean_p_draw": -0.009929,
+      "delta_draw_bias": -0.009929
+    },
+    "draw_analysis": {
+      "v4_mean_pd": 0.239852,
+      "champ_mean_pd": 0.229923,
+      "actual_draw_rate": 0.2,
+      "v4_draw_bias": 0.039852,
+      "champ_draw_bias": 0.029923,
+      "v4_draw_brier": 0.158307,
+      "champ_draw_brier": 0.156063,
+      "fixtures_pd_increased": 16,
+      "fixtures_pd_decreased": 34,
+      "mean_abs_pd_change": 0.01596,
+      "v4_distribution": {
+        "min": 0.143,
+        "p25": 0.2332,
+        "median": 0.246,
+        "p75": 0.2575,
+        "max": 0.2736
+      },
+      "champion_distribution": {
+        "min": 0.0958,
+        "p25": 0.2166,
+        "median": 0.2409,
+        "p75": 0.2606,
+        "max": 0.2867
+      },
+      "draw_buckets": [
+        {
+          "bucket": "Low P(D) (< 0.23)",
+          "n": 16,
+          "v4_log_loss": 0.762126,
+          "champ_log_loss": 0.742142,
+          "delta_log_loss": -0.019984,
+          "actual_draw_rate": 0.0625,
+          "v4_mean_pd": 0.210437,
+          "champ_mean_pd": 0.180652
+        },
+        {
+          "bucket": "Med P(D) (0.23 - 0.28)",
+          "n": 32,
+          "v4_log_loss": 1.085535,
+          "champ_log_loss": 1.085905,
+          "delta_log_loss": 0.00037,
+          "actual_draw_rate": 0.25,
+          "v4_mean_pd": 0.253074,
+          "champ_mean_pd": 0.251143
+        },
+        {
+          "bucket": "High P(D) (>= 0.28)",
+          "n": 2,
+          "v4_log_loss": 1.258694,
+          "champ_log_loss": 1.232132,
+          "delta_log_loss": -0.026562,
+          "actual_draw_rate": 0.5,
+          "v4_mean_pd": 0.263623,
+          "champ_mean_pd": 0.284559
+        }
+      ]
+    },
+    "league_breakdown": {
+      "Bundesliga": {
+        "n": 7,
+        "v4_log_loss": 1.095386,
+        "champ_log_loss": 1.086813,
+        "delta_log_loss": -0.008573,
+        "actual_draw_rate": 0.142857,
+        "v4_mean_pd": 0.228231,
+        "champ_mean_pd": 0.222271
+      },
+      "La Liga": {
+        "n": 13,
+        "v4_log_loss": 1.019727,
+        "champ_log_loss": 1.019701,
+        "delta_log_loss": -2.6e-05,
+        "actual_draw_rate": 0.307692,
+        "v4_mean_pd": 0.241389,
+        "champ_mean_pd": 0.229076
+      },
+      "Ligue 1": {
+        "n": 12,
+        "v4_log_loss": 0.856152,
+        "champ_log_loss": 0.838848,
+        "delta_log_loss": -0.017304,
+        "actual_draw_rate": 0.083333,
+        "v4_mean_pd": 0.23733,
+        "champ_mean_pd": 0.230177
+      },
+      "Premier League": {
+        "n": 16,
+        "v4_log_loss": 1.011915,
+        "champ_log_loss": 1.005573,
+        "delta_log_loss": -0.006342,
+        "actual_draw_rate": 0.1875,
+        "v4_mean_pd": 0.241608,
+        "champ_mean_pd": 0.229801
+      },
+      "Serie A": {
+        "n": 2,
+        "v4_log_loss": 1.029958,
+        "champ_log_loss": 1.034177,
+        "delta_log_loss": 0.004219,
+        "actual_draw_rate": 0.5,
+        "v4_mean_pd": 0.27163,
+        "champ_mean_pd": 0.261655
+      }
+    },
+    "betting_diagnostics": {
+      "v4": {
+        "n_bets": 34,
+        "win_rate": 0.2059,
+        "total_pnl_units": -3.34,
+        "roi_pct": -9.82,
+        "max_drawdown_units": 9.47,
+        "edge_threshold": 0.05
+      },
+      "champion": {
+        "n_bets": 35,
+        "win_rate": 0.2,
+        "total_pnl_units": -4.34,
+        "roi_pct": -12.4,
+        "max_drawdown_units": 9.68,
+        "edge_threshold": 0.05
+      }
+    },
+    "paired_bootstrap": {
+      "point_estimate": -0.00722,
+      "ci_lower_2.5": -0.01743,
+      "ci_upper_97.5": 0.005454,
+      "pct_resamples_favoring_champion": 88.79,
+      "p_value_empirical": 0.1121,
+      "n_resamples": 10000,
+      "seed": 20260820,
+      "note": "EXPLORATORY_DIAGNOSTIC_ONLY"
+    },
+    "odds_invariance_max_diff": 1.7763568394002505e-15
+  },
+  "cohort_100": {
+    "cohort": "fresh_100_validation_cohort",
+    "n_fixtures": 100,
+    "date_range": [
+      "2025-08-23",
+      "2025-09-13"
+    ],
+    "league_composition": {
+      "Bundesliga": 18,
+      "La Liga": 22,
+      "Ligue 1": 17,
+      "Premier League": 22,
+      "Serie A": 21
+    },
+    "outcome_distribution": {
+      "H": 49,
+      "D": 22,
+      "A": 29
+    },
+    "metrics_v4": {
+      "n": 100,
+      "correct": 54,
+      "accuracy": 0.54,
+      "log_loss": 0.970247,
+      "brier": 0.575139,
+      "rps": 0.20305,
+      "ece": 0.079221,
+      "mean_p_home": 0.421445,
+      "mean_p_draw": 0.243369,
+      "mean_p_away": 0.335187,
+      "actual_rate_home": 0.49,
+      "actual_rate_draw": 0.22,
+      "actual_rate_away": 0.29,
+      "draw_bias": 0.023369,
+      "draw_brier_component": 0.169039
+    },
+    "metrics_champion": {
+      "n": 100,
+      "correct": 54,
+      "accuracy": 0.54,
+      "log_loss": 0.964988,
+      "brier": 0.572183,
+      "rps": 0.202345,
+      "ece": 0.071572,
+      "mean_p_home": 0.425497,
+      "mean_p_draw": 0.238477,
+      "mean_p_away": 0.336025,
+      "actual_rate_home": 0.49,
+      "actual_rate_draw": 0.22,
+      "actual_rate_away": 0.29,
+      "draw_bias": 0.018477,
+      "draw_brier_component": 0.167493
+    },
+    "metrics_market": {
+      "n": 100,
+      "correct": 58,
+      "accuracy": 0.58,
+      "log_loss": 0.939937,
+      "brier": 0.554034,
+      "rps": 0.192421,
+      "ece": 0.128888,
+      "mean_p_home": 0.42562,
+      "mean_p_draw": 0.251136,
+      "mean_p_away": 0.323244,
+      "actual_rate_home": 0.49,
+      "actual_rate_draw": 0.22,
+      "actual_rate_away": 0.29,
+      "draw_bias": 0.031136,
+      "draw_brier_component": 0.169192
+    },
+    "deltas_champion_minus_v4": {
+      "delta_accuracy": 0.0,
+      "delta_log_loss": -0.005259,
+      "delta_brier": -0.002956,
+      "delta_rps": -0.000705,
+      "delta_ece": -0.007649,
+      "delta_mean_p_draw": -0.004892,
+      "delta_draw_bias": -0.004892
+    },
+    "draw_analysis": {
+      "v4_mean_pd": 0.243369,
+      "champ_mean_pd": 0.238477,
+      "actual_draw_rate": 0.22,
+      "v4_draw_bias": 0.023369,
+      "champ_draw_bias": 0.018477,
+      "v4_draw_brier": 0.169039,
+      "champ_draw_brier": 0.167493,
+      "fixtures_pd_increased": 50,
+      "fixtures_pd_decreased": 50,
+      "mean_abs_pd_change": 0.013956,
+      "v4_distribution": {
+        "min": 0.0704,
+        "p25": 0.2344,
+        "median": 0.2526,
+        "p75": 0.263,
+        "max": 0.2794
+      },
+      "champion_distribution": {
+        "min": 0.0446,
+        "p25": 0.2108,
+        "median": 0.2539,
+        "p75": 0.2668,
+        "max": 0.2977
+      },
+      "draw_buckets": [
+        {
+          "bucket": "Low P(D) (< 0.23)",
+          "n": 34,
+          "v4_log_loss": 0.778807,
+          "champ_log_loss": 0.758437,
+          "delta_log_loss": -0.02037,
+          "actual_draw_rate": 0.117647,
+          "v4_mean_pd": 0.213399,
+          "champ_mean_pd": 0.189296
+        },
+        {
+          "bucket": "Med P(D) (0.23 - 0.28)",
+          "n": 54,
+          "v4_log_loss": 1.05826,
+          "champ_log_loss": 1.062761,
+          "delta_log_loss": 0.004501,
+          "actual_draw_rate": 0.240741,
+          "v4_mean_pd": 0.255827,
+          "champ_mean_pd": 0.258662
+        },
+        {
+          "bucket": "High P(D) (>= 0.28)",
+          "n": 12,
+          "v4_log_loss": 1.116601,
+          "champ_log_loss": 1.110239,
+          "delta_log_loss": -0.006362,
+          "actual_draw_rate": 0.416667,
+          "v4_mean_pd": 0.27222,
+          "champ_mean_pd": 0.286993
+        }
+      ]
+    },
+    "league_breakdown": {
+      "Bundesliga": {
+        "n": 18,
+        "v4_log_loss": 0.960678,
+        "champ_log_loss": 0.951118,
+        "delta_log_loss": -0.00956,
+        "actual_draw_rate": 0.222222,
+        "v4_mean_pd": 0.225016,
+        "champ_mean_pd": 0.222414
+      },
+      "La Liga": {
+        "n": 22,
+        "v4_log_loss": 0.988301,
+        "champ_log_loss": 0.985583,
+        "delta_log_loss": -0.002718,
+        "actual_draw_rate": 0.272727,
+        "v4_mean_pd": 0.240123,
+        "champ_mean_pd": 0.235515
+      },
+      "Ligue 1": {
+        "n": 17,
+        "v4_log_loss": 0.832001,
+        "champ_log_loss": 0.823938,
+        "delta_log_loss": -0.008063,
+        "actual_draw_rate": 0.058824,
+        "v4_mean_pd": 0.245378,
+        "champ_mean_pd": 0.242441
+      },
+      "Premier League": {
+        "n": 22,
+        "v4_log_loss": 1.041594,
+        "champ_log_loss": 1.039555,
+        "delta_log_loss": -0.002039,
+        "actual_draw_rate": 0.272727,
+        "v4_mean_pd": 0.248789,
+        "champ_mean_pd": 0.243279
+      },
+      "Serie A": {
+        "n": 21,
+        "v4_log_loss": 0.996705,
+        "champ_log_loss": 0.991367,
+        "delta_log_loss": -0.005338,
+        "actual_draw_rate": 0.238095,
+        "v4_mean_pd": 0.255194,
+        "champ_mean_pd": 0.247111
+      }
+    },
+    "betting_diagnostics": {
+      "v4": {
+        "n_bets": 64,
+        "win_rate": 0.25,
+        "total_pnl_units": -2.13,
+        "roi_pct": -3.33,
+        "max_drawdown_units": 22.2,
+        "edge_threshold": 0.05
+      },
+      "champion": {
+        "n_bets": 65,
+        "win_rate": 0.2462,
+        "total_pnl_units": -3.13,
+        "roi_pct": -4.82,
+        "max_drawdown_units": 22.2,
+        "edge_threshold": 0.05
+      }
+    },
+    "paired_bootstrap": {
+      "point_estimate": -0.005259,
+      "ci_lower_2.5": -0.011374,
+      "ci_upper_97.5": 0.001157,
+      "pct_resamples_favoring_champion": 94.62,
+      "p_value_empirical": 0.0538,
+      "n_resamples": 10000,
+      "seed": 20260820,
+      "note": "EXPLORATORY_DIAGNOSTIC_ONLY"
+    },
+    "odds_invariance_max_diff": 4.440892098500626e-16
+  },
+  "integrity_audit": {
+    "pre_flight": {
+      "data/models/v2_poisson_venue.pkl": "25935b4e93fc4074f67f16e3181ed4df",
+      "data/models/v1_logreg.pkl": "5e504427712b35778bb8a62a8496c7cd",
+      "data/models/v3_poisson_venue_elo_candidate.pkl": "a2850a7687822a5916663301f5ccc96c",
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": "06841f0c03c8597b2b8cd8f8ab064864",
+      "data/processed/features.db": "e7ebe7fc07040a5927683c35b6371e63",
+      "data/processed/matches.db": "fdeed042096fa1c851aaee6c84995247",
+      "research/market_odds/odds_history.sqlite": "0be31e8b59d739b72c3fb48e555d9fd8",
+      "research/market_odds/research_dataset.sqlite": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+      "research/v4_promotion/promotion_market_odds.sqlite": "f8a41b79cd33afb412ccd9ae2892a196",
+      "research/v4_promotion/fresh_100_market_odds.sqlite": "2cb80b79d772fbedd4f3707b39a32c13",
+      "research/v4_promotion/fresh_100_fixture_ids.json": "761ad5cc571643e6985e671bd9c3d83a",
+      "research/v4_promotion/fresh_extended_fixture_ids.json": "0526bfd6980dd51dae59c6f6aadab2f5",
+      "research/v4_promotion/fresh_extended_market_odds.sqlite": "b4889d1791723ea653057af51ca00f8e",
+      "research/v4_promotion/dixon_coles_rho_method_frozen.json": "822e742dcc82e5e96445b31c14c0c604",
+      "research/v4_promotion/elo_draw_curve_method_frozen.json": "65dc2cf762f3d78abcf1a617ef23fe00",
+      "research/v4_promotion/full_score_matrix_method_frozen.json": "cd44e1da88a50ac45e8383557ad5271f",
+      "research/v4_promotion/market_calibration_method_frozen.json": "550a0e1f1358a8359d7141b422521dd9",
+      "research/v4_promotion/draw_complementarity_method_frozen.json": "d4f7dc75785df076c105a6ebfc0a4d6e",
+      "research/v4_promotion/temporal_regime_method_frozen.json": "4a4f72e1d288d2547272c9b30b0368df",
+      "research/v4_promotion/statistical_power_uncertainty_method_frozen.json": "68d55b30789d40440a0c14cbfe225c7f"
+    },
+    "post_flight": {
+      "data/models/v2_poisson_venue.pkl": "25935b4e93fc4074f67f16e3181ed4df",
+      "data/models/v1_logreg.pkl": "5e504427712b35778bb8a62a8496c7cd",
+      "data/models/v3_poisson_venue_elo_candidate.pkl": "a2850a7687822a5916663301f5ccc96c",
+      "data/models/v4_poisson_venue_elo_online_ad.pkl": "06841f0c03c8597b2b8cd8f8ab064864",
+      "data/processed/features.db": "e7ebe7fc07040a5927683c35b6371e63",
+      "data/processed/matches.db": "fdeed042096fa1c851aaee6c84995247",
+      "research/market_odds/odds_history.sqlite": "0be31e8b59d739b72c3fb48e555d9fd8",
+      "research/market_odds/research_dataset.sqlite": "bdab370ffdfe5bbf8ff3a8a26e64471c",
+      "research/v4_promotion/promotion_market_odds.sqlite": "f8a41b79cd33afb412ccd9ae2892a196",
+      "research/v4_promotion/fresh_100_market_odds.sqlite": "2cb80b79d772fbedd4f3707b39a32c13",
+      "research/v4_promotion/fresh_100_fixture_ids.json": "761ad5cc571643e6985e671bd9c3d83a",
+      "research/v4_promotion/fresh_extended_fixture_ids.json": "0526bfd6980dd51dae59c6f6aadab2f5",
+      "research/v4_promotion/fresh_extended_market_odds.sqlite": "b4889d1791723ea653057af51ca00f8e",
+      "research/v4_promotion/dixon_coles_rho_method_frozen.json": "822e742dcc82e5e96445b31c14c0c604",
+      "research/v4_promotion/elo_draw_curve_method_frozen.json": "65dc2cf762f3d78abcf1a617ef23fe00",
+      "research/v4_promotion/full_score_matrix_method_frozen.json": "cd44e1da88a50ac45e8383557ad5271f",
+      "research/v4_promotion/market_calibration_method_frozen.json": "550a0e1f1358a8359d7141b422521dd9",
+      "research/v4_promotion/draw_complementarity_method_frozen.json": "d4f7dc75785df076c105a6ebfc0a4d6e",
+      "research/v4_promotion/temporal_regime_method_frozen.json": "4a4f72e1d288d2547272c9b30b0368df",
+      "research/v4_promotion/statistical_power_uncertainty_method_frozen.json": "68d55b30789d40440a0c14cbfe225c7f"
+    },
+    "all_identical": true
+  },
+  "formal_validation_statement": "Diagnostic comparative evaluation only; does NOT satisfy prospective N >= 1,050 confirmation threshold."
+}

@@ -1,0 +1,266 @@
+{
+  "generated_at": "2026-08-22T08:35:00Z",
+  "phase": "Phase 24 \u2014 V4.6 Physical Draw Gate Generalization & Blind Validation",
+  "root_cause_analysis": {
+    "group_a_good_overrides": {
+      "name": "Group A (Good Overrides)",
+      "count": 24,
+      "mean_p_draw": 0.334,
+      "mean_v4_conf": 0.4059,
+      "mean_margin": 0.0382,
+      "mean_abs_elo": 54.55,
+      "mean_tot_goals": 2.42,
+      "mean_abs_goal_diff": 0.18,
+      "mean_low_score_prob": 0.3146
+    },
+    "group_b_bad_overrides": {
+      "name": "Group B (Bad Overrides)",
+      "count": 53,
+      "mean_p_draw": 0.3362,
+      "mean_v4_conf": 0.394,
+      "mean_margin": 0.0248,
+      "mean_abs_elo": 48.78,
+      "mean_tot_goals": 2.41,
+      "mean_abs_goal_diff": 0.13,
+      "mean_low_score_prob": 0.3161
+    },
+    "group_c_missed_draws": {
+      "name": "Group C (Missed Draws)",
+      "count": 307,
+      "mean_p_draw": 0.2849,
+      "mean_v4_conf": 0.5088,
+      "mean_margin": 0.1931,
+      "mean_abs_elo": 154.34,
+      "mean_tot_goals": 2.79,
+      "mean_abs_goal_diff": 0.6,
+      "mean_low_score_prob": 0.274
+    },
+    "group_d_correct_retentions": {
+      "name": "Group D (Correct Retentions)",
+      "count": 659,
+      "mean_p_draw": 0.2675,
+      "mean_v4_conf": 0.5524,
+      "mean_margin": 0.2553,
+      "mean_abs_elo": 194.49,
+      "mean_tot_goals": 2.88,
+      "mean_abs_goal_diff": 0.81,
+      "mean_low_score_prob": 0.2607
+    }
+  },
+  "preset_evaluations": {
+    "V4_6_Robust_Physical_Gate": {
+      "config": {
+        "th": 0.26,
+        "mg": 0.1,
+        "cc": 0.45,
+        "ec": 75.0,
+        "tgc": 2.4,
+        "lsc": 0.24
+      },
+      "disc_accuracy_pct": 53.38,
+      "disc_delta": -0.46,
+      "disc_draw_preds": 14,
+      "disc_corr_draws": 3,
+      "disc_draw_prec": 21.4,
+      "blind_accuracy_pct": 50.84,
+      "blind_delta": 0.31,
+      "blind_draw_preds": 9,
+      "blind_corr_draws": 3,
+      "blind_draw_prec": 33.3,
+      "full_accuracy_pct": 52.11,
+      "full_correct": 678,
+      "full_net_gain": -1,
+      "full_draw_preds": 23,
+      "full_corr_draws": 6,
+      "full_draw_prec": 26.1,
+      "full_draw_rec": 1.8,
+      "full_draw_f1": 0.0339,
+      "full_macro_f1": 0.401
+    },
+    "V4_6_Conservative_Parity_Gate": {
+      "config": {
+        "th": 0.26,
+        "mg": 0.08,
+        "cc": 0.44,
+        "ec": 75.0,
+        "tgc": 2.4,
+        "lsc": 0.24
+      },
+      "disc_accuracy_pct": 53.38,
+      "disc_delta": -0.46,
+      "disc_draw_preds": 14,
+      "disc_corr_draws": 3,
+      "disc_draw_prec": 21.4,
+      "blind_accuracy_pct": 50.69,
+      "blind_delta": 0.15,
+      "blind_draw_preds": 8,
+      "blind_corr_draws": 2,
+      "blind_draw_prec": 25.0,
+      "full_accuracy_pct": 52.04,
+      "full_correct": 677,
+      "full_net_gain": -2,
+      "full_draw_preds": 22,
+      "full_corr_draws": 5,
+      "full_draw_prec": 22.7,
+      "full_draw_rec": 1.5,
+      "full_draw_f1": 0.0283,
+      "full_macro_f1": 0.3989
+    },
+    "V4_4_Previous_Baseline": {
+      "config": {
+        "th": 0.26,
+        "mg": 0.1,
+        "cc": 0.45,
+        "ec": 100.0,
+        "tgc": 2.5,
+        "lsc": 0.0
+      },
+      "disc_accuracy_pct": 54.31,
+      "disc_delta": 0.46,
+      "disc_draw_preds": 45,
+      "disc_corr_draws": 15,
+      "disc_draw_prec": 33.3,
+      "blind_accuracy_pct": 50.69,
+      "blind_delta": 0.15,
+      "blind_draw_preds": 32,
+      "blind_corr_draws": 9,
+      "blind_draw_prec": 28.1,
+      "full_accuracy_pct": 52.5,
+      "full_correct": 683,
+      "full_net_gain": 4,
+      "full_draw_preds": 77,
+      "full_corr_draws": 24,
+      "full_draw_prec": 31.2,
+      "full_draw_rec": 7.3,
+      "full_draw_f1": 0.1176,
+      "full_macro_f1": 0.4303
+    }
+  },
+  "lolo_generalization": {
+    "Bundesliga": {
+      "matches": 229,
+      "v4_accuracy_pct": 56.77,
+      "v4_6_accuracy_pct": 56.77,
+      "delta_accuracy_pct": 0.0,
+      "draw_predictions": 0,
+      "correct_draws": 0,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "macro_f1": 0.4211
+    },
+    "La Liga": {
+      "matches": 278,
+      "v4_accuracy_pct": 50.72,
+      "v4_6_accuracy_pct": 50.72,
+      "delta_accuracy_pct": 0.0,
+      "draw_predictions": 9,
+      "correct_draws": 2,
+      "draw_precision_pct": 22.2,
+      "draw_recall_pct": 3.0,
+      "draw_f1": 0.0533,
+      "macro_f1": 0.383
+    },
+    "Ligue 1": {
+      "matches": 215,
+      "v4_accuracy_pct": 53.02,
+      "v4_6_accuracy_pct": 52.56,
+      "delta_accuracy_pct": -0.47,
+      "draw_predictions": 2,
+      "correct_draws": 0,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "macro_f1": 0.397
+    },
+    "Premier League": {
+      "matches": 290,
+      "v4_accuracy_pct": 47.24,
+      "v4_6_accuracy_pct": 46.9,
+      "delta_accuracy_pct": -0.34,
+      "draw_predictions": 1,
+      "correct_draws": 0,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0,
+      "macro_f1": 0.356
+    },
+    "Serie A": {
+      "matches": 289,
+      "v4_accuracy_pct": 54.33,
+      "v4_6_accuracy_pct": 54.67,
+      "delta_accuracy_pct": 0.35,
+      "draw_predictions": 11,
+      "correct_draws": 4,
+      "draw_precision_pct": 36.4,
+      "draw_recall_pct": 5.9,
+      "draw_f1": 0.1013,
+      "macro_f1": 0.4447
+    }
+  },
+  "temporal_regimes": {
+    "Early Period (Matches 1-433)": {
+      "matches": 433,
+      "actual_draw_rate": 0.261,
+      "v4_accuracy_pct": 54.27,
+      "v4_6_accuracy_pct": 53.81,
+      "delta_accuracy_pct": -0.46,
+      "draw_predictions": 10,
+      "correct_draws": 3,
+      "draw_precision_pct": 30.0,
+      "draw_recall_pct": 2.7,
+      "draw_f1": 0.0488
+    },
+    "Mid Period (Matches 434-866)": {
+      "matches": 433,
+      "actual_draw_rate": 0.2471,
+      "v4_accuracy_pct": 52.89,
+      "v4_6_accuracy_pct": 52.66,
+      "delta_accuracy_pct": -0.23,
+      "draw_predictions": 6,
+      "correct_draws": 0,
+      "draw_precision_pct": 0.0,
+      "draw_recall_pct": 0.0,
+      "draw_f1": 0.0
+    },
+    "Late Period (Matches 867-1301)": {
+      "matches": 435,
+      "actual_draw_rate": 0.2552,
+      "v4_accuracy_pct": 49.43,
+      "v4_6_accuracy_pct": 49.89,
+      "delta_accuracy_pct": 0.46,
+      "draw_predictions": 7,
+      "correct_draws": 3,
+      "draw_precision_pct": 42.9,
+      "draw_recall_pct": 2.7,
+      "draw_f1": 0.0508
+    }
+  },
+  "error_economics": {
+    "gained_draw_wins_GAIN": 6,
+    "sacrificed_v4_correct_LOSS": 7,
+    "net_accuracy_gain_NET": -1,
+    "neutral_errors": 10,
+    "total_draw_overrides": 23,
+    "override_efficiency_pct": 26.09
+  },
+  "bootstrap_results": {
+    "v46_vs_v4": {
+      "mean_delta_accuracy_pct": -0.07395080707148348,
+      "ci_95_accuracy_pct": [
+        -0.6149116064565696,
+        0.4611837048424272
+      ],
+      "pct_samples_v46_ge_v4_acc": 44.61,
+      "pct_samples_v46_strictly_better_acc": 33.650000000000006
+    },
+    "v46_vs_v44": {
+      "mean_delta_accuracy_pct": -0.38209069946195234,
+      "ci_95_accuracy_pct": [
+        -1.2298232129131392,
+        0.4611837048424272
+      ],
+      "pct_samples_v46_ge_v44_acc": 21.17
+    }
+  }
+}

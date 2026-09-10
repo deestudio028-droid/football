@@ -1,0 +1,8 @@
+Method Name,Category,Draw Brier,Draw Log Loss,Draw ECE,Draw ROC AUC,Calib Slope,Calib Intercept,MC Brier Score,MC Log Loss,Home Brier,Away Brier,Counterfactual Acc (%),Draw Predictions,Draw Recall (%),Draw Precision (%),Mean |P'(D)-P(D)| (%),Status
+0. V4.0 Production Baseline,Baseline,0.18787,0.562633,0.0261,0.5679,0.7899,-0.1088,0.590695,0.992146,0.214494,0.18833,51.97,0,0.0,0.0,0.0,FROZEN BASELINE
+1. Isotonic Calibration,Non-Parametric,0.188281,0.598309,0.0169,0.5614,0.049,-1.0152,0.591616,1.027821,0.215391,0.187944,52.08,37,2.7,32.43,2.47,EVALUATED
+2. Platt / Logistic Calibration,Parametric Logit,0.187234,0.560437,0.0103,0.5679,1.0165,0.0293,0.590012,0.989949,0.214792,0.187986,51.97,0,0.0,0.0,2.34,EVALUATED
+3. Beta Calibration,Parametric Beta,0.187237,0.560507,0.0123,0.5679,1.0064,0.0186,0.590023,0.99002,0.214794,0.187993,51.97,0,0.0,0.0,2.34,EVALUATED
+4A. Feature-Aware Logistic Model,Multi-Feature Parametric,0.187632,0.561401,0.003,0.5617,0.9511,-0.0515,0.590775,0.990914,0.2151,0.188043,51.97,0,0.0,0.0,2.6,PROMISING (AUC/Brier Boost)
+4B. Feature-Aware GBDT Calibrator,Non-Linear Ensemble,0.190118,0.567637,0.0239,0.5453,0.456,-0.576,0.594688,0.99715,0.216597,0.187973,51.06,78,4.49,25.64,4.05,EVALUATED
+5. Score-Space Low-Score Stacking,Bivariate Score Space,0.187382,0.560938,0.0077,0.5673,0.9826,-0.0147,0.590341,0.990451,0.214909,0.18805,51.97,0,0.0,0.0,2.49,PROMISING (Clean Parametric)

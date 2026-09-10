@@ -1,0 +1,6 @@
+Signal Name,Hypothesis,Correlation (r),P-Value,Top Quartile Draw Rate (%),Bottom Quartile Draw Rate (%),Effect Size Ratio,Pre-Match Validity
+P(0-0) Scoreline Mass,Bivariate 0-0 scoreless draw probability,0.0869,1.98e-19,29.62,20.08,1.47,Strictly Causal Pre-Match
+P(1-1) Scoreline Mass,Bivariate 1-1 modal scoreline probability,0.1005,1.69e-25,30.14,20.04,1.5,Strictly Causal Pre-Match
+P(2-2) Scoreline Mass,Bivariate 2-2 high-scoring draw probability,0.0584,1.43e-09,26.15,21.65,1.21,Strictly Causal Pre-Match
+Low-Score Mass (<=2 Goals),Aggregated mass on scores with <= 2 total goals,0.0858,5.16e-19,29.25,20.75,1.41,Strictly Causal Pre-Match
+Score-Space Total Draw Mass,Sum of all diagonal elements in Dixon-Coles matrix,0.1018,3.96e-26,30.29,19.82,1.53,Strictly Causal Pre-Match

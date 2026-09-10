@@ -1,0 +1,347 @@
+{
+  "E10_Champion": {
+    "H": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 83,
+        "mean_predicted": 0.0713,
+        "observed_frequency": 0.0723
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 529,
+        "mean_predicted": 0.1576,
+        "observed_frequency": 0.1588
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 1103,
+        "mean_predicted": 0.254,
+        "observed_frequency": 0.2248
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 1570,
+        "mean_predicted": 0.3508,
+        "observed_frequency": 0.3541
+      },
+      {
+        "bin": 4,
+        "range": "0.4-0.5",
+        "count": 1528,
+        "mean_predicted": 0.4488,
+        "observed_frequency": 0.4732
+      },
+      {
+        "bin": 5,
+        "range": "0.5-0.6",
+        "count": 1116,
+        "mean_predicted": 0.5469,
+        "observed_frequency": 0.5699
+      },
+      {
+        "bin": 6,
+        "range": "0.6-0.7",
+        "count": 666,
+        "mean_predicted": 0.6455,
+        "observed_frequency": 0.6757
+      },
+      {
+        "bin": 7,
+        "range": "0.7-0.8",
+        "count": 336,
+        "mean_predicted": 0.7428,
+        "observed_frequency": 0.7976
+      },
+      {
+        "bin": 8,
+        "range": "0.8-0.9",
+        "count": 130,
+        "mean_predicted": 0.8403,
+        "observed_frequency": 0.8385
+      },
+      {
+        "bin": 9,
+        "range": "0.9-1.0",
+        "count": 21,
+        "mean_predicted": 0.9203,
+        "observed_frequency": 0.8095
+      }
+    ],
+    "D": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 69,
+        "mean_predicted": 0.0789,
+        "observed_frequency": 0.0725
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 762,
+        "mean_predicted": 0.1661,
+        "observed_frequency": 0.1496
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 6141,
+        "mean_predicted": 0.2604,
+        "observed_frequency": 0.2662
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 110,
+        "mean_predicted": 0.3039,
+        "observed_frequency": 0.3091
+      }
+    ],
+    "A": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 372,
+        "mean_predicted": 0.0682,
+        "observed_frequency": 0.0645
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 1268,
+        "mean_predicted": 0.1548,
+        "observed_frequency": 0.1301
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 1771,
+        "mean_predicted": 0.2508,
+        "observed_frequency": 0.2185
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 1605,
+        "mean_predicted": 0.3461,
+        "observed_frequency": 0.3371
+      },
+      {
+        "bin": 4,
+        "range": "0.4-0.5",
+        "count": 1066,
+        "mean_predicted": 0.4431,
+        "observed_frequency": 0.4559
+      },
+      {
+        "bin": 5,
+        "range": "0.5-0.6",
+        "count": 597,
+        "mean_predicted": 0.5427,
+        "observed_frequency": 0.5611
+      },
+      {
+        "bin": 6,
+        "range": "0.6-0.7",
+        "count": 280,
+        "mean_predicted": 0.6454,
+        "observed_frequency": 0.5821
+      },
+      {
+        "bin": 7,
+        "range": "0.7-0.8",
+        "count": 87,
+        "mean_predicted": 0.7382,
+        "observed_frequency": 0.7586
+      },
+      {
+        "bin": 8,
+        "range": "0.8-0.9",
+        "count": 36,
+        "mean_predicted": 0.8345,
+        "observed_frequency": 0.8333
+      }
+    ]
+  },
+  "E12_Bounded_Adjustment_B05": {
+    "H": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 137,
+        "mean_predicted": 0.0731,
+        "observed_frequency": 0.1022
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 675,
+        "mean_predicted": 0.1569,
+        "observed_frequency": 0.1674
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 1201,
+        "mean_predicted": 0.2528,
+        "observed_frequency": 0.259
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 1282,
+        "mean_predicted": 0.3508,
+        "observed_frequency": 0.3643
+      },
+      {
+        "bin": 4,
+        "range": "0.4-0.5",
+        "count": 1250,
+        "mean_predicted": 0.4487,
+        "observed_frequency": 0.4704
+      },
+      {
+        "bin": 5,
+        "range": "0.5-0.6",
+        "count": 1096,
+        "mean_predicted": 0.5474,
+        "observed_frequency": 0.5338
+      },
+      {
+        "bin": 6,
+        "range": "0.6-0.7",
+        "count": 792,
+        "mean_predicted": 0.646,
+        "observed_frequency": 0.6389
+      },
+      {
+        "bin": 7,
+        "range": "0.7-0.8",
+        "count": 427,
+        "mean_predicted": 0.7425,
+        "observed_frequency": 0.7681
+      },
+      {
+        "bin": 8,
+        "range": "0.8-0.9",
+        "count": 186,
+        "mean_predicted": 0.839,
+        "observed_frequency": 0.828
+      },
+      {
+        "bin": 9,
+        "range": "0.9-1.0",
+        "count": 36,
+        "mean_predicted": 0.9229,
+        "observed_frequency": 0.8611
+      }
+    ],
+    "D": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 105,
+        "mean_predicted": 0.0768,
+        "observed_frequency": 0.0857
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 979,
+        "mean_predicted": 0.165,
+        "observed_frequency": 0.1696
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 5887,
+        "mean_predicted": 0.2581,
+        "observed_frequency": 0.2692
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 111,
+        "mean_predicted": 0.3041,
+        "observed_frequency": 0.2523
+      }
+    ],
+    "A": [
+      {
+        "bin": 0,
+        "range": "0.0-0.1",
+        "count": 524,
+        "mean_predicted": 0.0675,
+        "observed_frequency": 0.063
+      },
+      {
+        "bin": 1,
+        "range": "0.1-0.2",
+        "count": 1414,
+        "mean_predicted": 0.1529,
+        "observed_frequency": 0.1429
+      },
+      {
+        "bin": 2,
+        "range": "0.2-0.3",
+        "count": 1555,
+        "mean_predicted": 0.2494,
+        "observed_frequency": 0.2302
+      },
+      {
+        "bin": 3,
+        "range": "0.3-0.4",
+        "count": 1305,
+        "mean_predicted": 0.3472,
+        "observed_frequency": 0.3318
+      },
+      {
+        "bin": 4,
+        "range": "0.4-0.5",
+        "count": 1052,
+        "mean_predicted": 0.4459,
+        "observed_frequency": 0.4354
+      },
+      {
+        "bin": 5,
+        "range": "0.5-0.6",
+        "count": 687,
+        "mean_predicted": 0.5458,
+        "observed_frequency": 0.5459
+      },
+      {
+        "bin": 6,
+        "range": "0.6-0.7",
+        "count": 349,
+        "mean_predicted": 0.6437,
+        "observed_frequency": 0.5587
+      },
+      {
+        "bin": 7,
+        "range": "0.7-0.8",
+        "count": 146,
+        "mean_predicted": 0.7372,
+        "observed_frequency": 0.7123
+      },
+      {
+        "bin": 8,
+        "range": "0.8-0.9",
+        "count": 48,
+        "mean_predicted": 0.8414,
+        "observed_frequency": 0.7917
+      },
+      {
+        "bin": 9,
+        "range": "0.9-1.0",
+        "count": 2,
+        "mean_predicted": 0.9053,
+        "observed_frequency": 0.5
+      }
+    ]
+  }
+}

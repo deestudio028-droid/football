@@ -1,25 +1,25 @@
 {
   "status_code": 200,
-  "cors_header": null,
+  "cors_header": "*",
   "top_level_keys": [
     "last_updated_utc",
     "active_fixtures_count",
     "cached",
     "scores"
   ],
-  "total_fixtures": 55,
-  "active_fixtures_count": 0,
+  "total_fixtures": 103,
+  "active_fixtures_count": 2,
   "cached": true,
-  "last_updated_utc": "2026-09-19T12:17:16.870436+00:00",
-  "sample_item": {
-    "fixture_id": 420629293,
+  "last_updated_utc": "2026-09-19T12:44:03.506759+00:00",
+  "sample_item_bayern": {
+    "fixture_id": 420656757,
     "status": "FT",
     "status_label": "FINISHED",
-    "home_goals": 1,
-    "away_goals": 3,
-    "display_score": "1-3",
-    "elapsed": 103,
-    "time_added": 12,
+    "home_goals": 7,
+    "away_goals": 0,
+    "display_score": "7-0",
+    "elapsed": 93,
+    "time_added": 3,
     "is_finished": true
   }
 }

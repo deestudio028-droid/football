@@ -1,16 +1,19 @@
 {
   "suite": "tests/test_phase15_live_score_integration.py",
   "status": "PASSED",
-  "tests_passed": 17,
+  "tests_passed": 24,
   "tests_failed": 0,
-  "execution_time_seconds": 0.09,
+  "execution_time_seconds": 1.39,
   "railway_backend": {
     "url": "https://web-production-d8a09.up.railway.app",
     "endpoint": "/api/live-scores",
     "health_endpoint": "/api/health",
+    "health_endpoint_root": "/health",
     "cors_origin": "*",
     "reachable": true,
-    "http_status": 200
+    "http_status": 200,
+    "fixtures_tracked": 103,
+    "completed_cached": 59
   },
   "invariants_verified": {
     "v4_model_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5",
@@ -24,7 +27,23 @@
     "zero_frontend_secrets": true,
     "zero_oddalerts_direct_browser_calls": true,
     "no_new_backend_created": true,
-    "protected_paths_git_status_clean": true
+    "protected_paths_git_status_clean": true,
+    "completed_score_retention": true,
+    "never_overwritten_by_null": true
+  },
+  "target_fixture_verification": {
+    "fixture_id": 420656757,
+    "home_team": "FC Bayern München",
+    "away_team": "FC Union Berlin",
+    "match_status": "FT",
+    "status_label": "FINISHED",
+    "actual_home_goals": 7,
+    "actual_away_goals": 0,
+    "display_score": "7-0",
+    "is_finished": true,
+    "predicted_score": "2-0",
+    "p_home": "77.6%",
+    "draw_risk": "LOW"
   },
   "signals_preserved": {
     "2_0_profile_count": 2,
@@ -56,5 +75,5 @@
       }
     ]
   },
-  "timestamp_utc": "2026-09-19T12:20:30.000000+00:00"
+  "timestamp_utc": "2026-09-19T12:45:00.000000+00:00"
 }

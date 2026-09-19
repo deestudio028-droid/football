@@ -215,8 +215,22 @@ class ProductionPerformanceMonitor:
             act_ag = _safe_int(row.get("actual_away_goals")) or 0
             act_score = f"{act_hg}-{act_ag}"
 
-            # Baseline score derived
-            if dec == "H":
+            # Baseline score derived (Canonical scoreline with fallback)
+            canon_sc = row.get("canonical_predicted_score") or row.get("predicted_score") or row.get("baseline_predicted_score")
+            lh_val = _safe_float(row.get("lambda_home", row.get("expected_home_goals")), -1.0)
+            la_val = _safe_float(row.get("lambda_away", row.get("expected_away_goals")), -1.0)
+
+            if canon_sc and isinstance(canon_sc, str) and "-" in canon_sc:
+                base_score = canon_sc
+            elif lh_val >= 0.0 and la_val >= 0.0:
+                try:
+                    from models.poisson import modal_scoreline, _grid_size
+                    K = _grid_size(float(max(lh_val, la_val)), 1e-4)
+                    sh, sa, _ = modal_scoreline(np.array([lh_val]), np.array([la_val]), K)
+                    base_score = f"{int(sh[0])}-{int(sa[0])}"
+                except Exception:
+                    base_score = f"{max(0, int(round(lh_val)))}-{max(0, int(round(la_val)))}"
+            elif dec == "H":
                 base_score = "2-1" if p_h < 0.60 else "2-0"
             elif dec == "A":
                 base_score = "1-2" if p_a < 0.60 else "0-2"

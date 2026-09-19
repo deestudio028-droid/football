@@ -55,6 +55,38 @@ class PredictionSnapshot:
     is_vulnerable_fixture: bool = False
     is_promoted_match: bool = False
     is_locked: bool = True
+    canonical_predicted_score: Optional[str] = None
+    predicted_score: Optional[str] = None
+    modal_scoreline_probability: Optional[float] = None
+    strong_home_profile: bool = False
+    is_2_0_profile: bool = False
+    signal_profile: Optional[str] = None
+
+    def __post_init__(self):
+        if not self.canonical_predicted_score:
+            try:
+                import numpy as np
+                from models.poisson import modal_scoreline, _grid_size
+                K = _grid_size(float(max(self.lambda_home, self.lambda_away)), 1e-4)
+                sh, sa, sp = modal_scoreline(np.array([self.lambda_home]), np.array([self.lambda_away]), K)
+                self.canonical_predicted_score = f"{int(sh[0])}-{int(sa[0])}"
+                self.modal_scoreline_probability = float(sp[0])
+            except Exception:
+                lh_r = max(0, int(round(self.lambda_home)))
+                la_r = max(0, int(round(self.lambda_away)))
+                self.canonical_predicted_score = f"{lh_r}-{la_r}"
+        if not self.predicted_score:
+            self.predicted_score = self.canonical_predicted_score
+        d_tier_norm = str(self.draw_risk_tier or "LOW").upper()
+        self.strong_home_profile = bool(self.p_home >= 0.60 and d_tier_norm == "LOW")
+        self.is_2_0_profile = bool(self.canonical_predicted_score == "2-0" and d_tier_norm == "LOW")
+        if self.is_2_0_profile:
+            self.signal_profile = "2-0_PROFILE"
+        elif self.strong_home_profile:
+            self.signal_profile = "STRONG_HOME_PROFILE"
+        else:
+            self.signal_profile = None
+
 
 
 class PredictionSnapshotStore:

@@ -82,7 +82,7 @@ from models.historical_draw_research_candidate import (
     compute_historical_dibp_matrix,
     predict_historical_candidate_h,
 )
-from models.poisson import predict_poisson
+from models.poisson import predict_poisson, modal_scoreline, _grid_size
 from models.v4_artifact import load_v4_artifact
 from models.v4_2_draw_resolution_candidate import (
     DrawResolutionConfig,
@@ -182,6 +182,16 @@ class SingleMatchPredictionResult:
     is_promoted_match: bool = False
     initialization_notes: Optional[str] = None
 
+    # Canonical V4 Scoreline & Signal Profile (Phase 14 fix)
+    canonical_predicted_score: str = "1-1"
+    predicted_score: str = "1-1"
+    modal_scoreline_probability: float = 0.0
+    strong_home_profile: bool = False
+    is_2_0_profile: bool = False
+    signal_profile: Optional[str] = None
+    v4_predicted_score: str = "1-1"
+
+
 
 @dataclass
 class DashboardMatchPrediction:
@@ -269,6 +279,15 @@ class DashboardMatchPrediction:
     feature_source: Optional[str] = None
     is_promoted_match: bool = False
     initialization_notes: Optional[str] = None
+
+    # Canonical V4 Scoreline & Signal Profile (Phase 14 fix)
+    canonical_predicted_score: Optional[str] = None
+    predicted_score: Optional[str] = None
+    modal_scoreline_probability: Optional[float] = None
+    strong_home_profile: bool = False
+    is_2_0_profile: bool = False
+    signal_profile: Optional[str] = None
+
 
 
 COMMON_ALIASES: Dict[str, str] = {
@@ -723,6 +742,41 @@ class PredictionService:
 
         is_prom = diag.get("home_promoted", False) or diag.get("away_promoted", False)
 
+        # Canonical V4 Scoreline & Signal Classification (Phase 14 fix)
+        try:
+            K_v4 = _grid_size(float(max(lh_v4, la_v4)), 1e-4)
+            sh_v4, sa_v4, sp_v4 = modal_scoreline(np.array([lh_v4]), np.array([la_v4]), K_v4)
+            v4_modal_score = f"{int(sh_v4[0])}-{int(sa_v4[0])}"
+            v4_modal_prob = float(sp_v4[0])
+        except Exception:
+            v4_modal_score = f"{max(0, int(round(lh_v4)))}-{max(0, int(round(la_v4)))}"
+            v4_modal_prob = 0.0
+
+        if model_key in ("V4.0 Production", "v4_0_draw_champion", "V4.0 Draw-Enhanced", "v4_0_draw_enhanced_candidate"):
+            canon_score = v4_modal_score
+            canon_prob = v4_modal_prob
+        else:
+            try:
+                eff_lh = lh_sel if lh_sel > 0 else lh_41
+                eff_la = la_sel if la_sel > 0 else la_41
+                K_sel = _grid_size(float(max(eff_lh, eff_la)), 1e-4)
+                sh_s, sa_s, sp_s = modal_scoreline(np.array([eff_lh]), np.array([eff_la]), K_sel)
+                canon_score = f"{int(sh_s[0])}-{int(sa_s[0])}"
+                canon_prob = float(sp_s[0])
+            except Exception:
+                canon_score = v4_modal_score
+                canon_prob = v4_modal_prob
+
+        d_tier_norm = str(risk_res.get("draw_risk_tier") or "LOW").upper()
+        is_strong_home = bool(p_h_sel >= 0.60 and d_tier_norm == "LOW")
+        is_20 = bool(canon_score == "2-0" and d_tier_norm == "LOW")
+        if is_20:
+            sig_prof = "2-0_PROFILE"
+        elif is_strong_home:
+            sig_prof = "STRONG_HOME_PROFILE"
+        else:
+            sig_prof = None
+
         sel_dict = {"H": round(p_h_sel, 3), "D": round(p_d_sel, 3), "A": round(p_a_sel, 3)}
         v4_1_dict = {"H": round(p_h_41, 3), "D": round(p_d_41, 3), "A": round(p_a_41, 3)}
         v4_champ_dict = {"H": round(float(p_ch[0]), 3), "D": round(float(p_ch[1]), 3), "A": round(float(p_ch[2]), 3)}
@@ -795,6 +849,13 @@ class PredictionService:
             feature_source=diag.get("feature_source", "Live Chronological Feature Context"),
             is_promoted_match=is_prom,
             initialization_notes="Promoted-team initialization used. Prediction is valid pre-match inference but should be treated as lower-confidence until fresh top-flight evidence accumulates." if is_prom else None,
+            canonical_predicted_score=canon_score,
+            predicted_score=canon_score,
+            modal_scoreline_probability=round(canon_prob, 4),
+            strong_home_profile=is_strong_home,
+            is_2_0_profile=is_20,
+            signal_profile=sig_prof,
+            v4_predicted_score=v4_modal_score,
         )
 
     def predict_manual_matchup(
@@ -910,6 +971,24 @@ class PredictionService:
                 a_elo = self._team_id_to_latest_elo.get(a_id, INIT_RATING) if a_id else INIT_RATING
                 elo_diff = (h_elo + HOME_ADVANTAGE) - a_elo
 
+                canonical_score = getattr(snap, "canonical_predicted_score", None) or getattr(snap, "predicted_score", None)
+                if not canonical_score:
+                    try:
+                        K_s = _grid_size(float(max(snap.lambda_home, snap.lambda_away)), 1e-4)
+                        sh_s, sa_s, sp_s = modal_scoreline(np.array([snap.lambda_home]), np.array([snap.lambda_away]), K_s)
+                        canonical_score = f"{int(sh_s[0])}-{int(sa_s[0])}"
+                        canon_prob_s = float(sp_s[0])
+                    except Exception:
+                        canonical_score = f"{max(0, int(round(snap.lambda_home)))}-{max(0, int(round(snap.lambda_away)))}"
+                        canon_prob_s = 0.0
+                else:
+                    canon_prob_s = getattr(snap, "modal_scoreline_probability", 0.0) or 0.0
+
+                d_tier_snap = str(snap.draw_risk_tier or "LOW").upper()
+                is_sh_snap = bool(snap.p_home >= 0.60 and d_tier_snap == "LOW")
+                is_20_snap = bool(canonical_score == "2-0" and d_tier_snap == "LOW")
+                sig_prof_snap = "2-0_PROFILE" if is_20_snap else ("STRONG_HOME_PROFILE" if is_sh_snap else None)
+
                 return DashboardMatchPrediction(
                     fixture_id=fixture.fixture_id,
                     home_team=fixture.home_team,
@@ -965,6 +1044,12 @@ class PredictionService:
                     v4_draw_enhanced_correct=sel_corr,
                     v4_6_correct=sel_corr,
                     hist_h_correct=sel_corr,
+                    canonical_predicted_score=canonical_score,
+                    predicted_score=canonical_score,
+                    modal_scoreline_probability=round(canon_prob_s, 4),
+                    strong_home_profile=is_sh_snap,
+                    is_2_0_profile=is_20_snap,
+                    signal_profile=sig_prof_snap,
                 )
 
         # Path A: Upcoming Match (now_dt < kickoff_dt)
@@ -1091,4 +1176,21 @@ class PredictionService:
             feature_source=res.feature_source,
             is_promoted_match=res.is_promoted_match,
             initialization_notes=res.initialization_notes,
+            canonical_predicted_score=res.canonical_predicted_score,
+            predicted_score=res.predicted_score,
+            modal_scoreline_probability=res.modal_scoreline_probability,
+            strong_home_profile=res.strong_home_profile,
+            is_2_0_profile=res.is_2_0_profile,
+            signal_profile=res.signal_profile,
         )
+
+
+_prediction_service_instance: Optional[PredictionService] = None
+
+
+def get_prediction_service() -> PredictionService:
+    """Singleton getter for PredictionService."""
+    global _prediction_service_instance
+    if _prediction_service_instance is None:
+        _prediction_service_instance = PredictionService()
+    return _prediction_service_instance

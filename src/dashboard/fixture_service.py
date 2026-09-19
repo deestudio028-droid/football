@@ -839,13 +839,21 @@ class FixtureService:
 
             lh = float(snap.expected_home_goals)
             la = float(snap.expected_away_goals)
-            lh_r = max(0, int(round(lh)))
-            la_r = max(0, int(round(la)))
-            if lh_r == la_r and dec == "H":
-                lh_r += 1
-            elif lh_r == la_r and dec == "A":
-                la_r += 1
-            pred_score = f"{lh_r}-{la_r}"
+            pred_score = getattr(snap, "canonical_predicted_score", None) or getattr(snap, "predicted_score", None)
+            if not pred_score:
+                try:
+                    import numpy as np
+                    from models.poisson import modal_scoreline, _grid_size
+                    K = _grid_size(float(max(lh, la)), 1e-4)
+                    sh, sa, _ = modal_scoreline(np.array([lh]), np.array([la]), K)
+                    pred_score = f"{int(sh[0])}-{int(sa[0])}"
+                except Exception:
+                    pred_score = f"{max(0, int(round(lh)))}-{max(0, int(round(la)))}"
+
+            d_tier = str(snap.draw_risk_tier or "LOW").upper()
+            is_sh = bool(p_h >= 0.60 and d_tier == "LOW")
+            is_20 = bool(pred_score == "2-0" and d_tier == "LOW")
+            sig_prof = "2-0_PROFILE" if is_20 else ("STRONG_HOME_PROFILE" if is_sh else None)
 
             is_corr = (dec == act_outcome)
             is_exact = (pred_score == act_score)
@@ -861,7 +869,6 @@ class FixtureService:
             date_str = k_utc[:10]
             time_str = k_utc[11:16] if len(k_utc) >= 16 else "--"
 
-            d_tier = str(snap.draw_risk_tier or "LOW").upper()
             badge = "🟢 LOW" if d_tier == "LOW" else ("🟡 MEDIUM" if d_tier in ("MEDIUM", "MODERATE") else "🟠 HIGH")
 
             records.append({
@@ -884,8 +891,13 @@ class FixtureService:
                 "P(A)": f"{p_a*100:.1f}%",
                 "predicted_outcome": dec,
                 "V4.0 Pred": dec,
+                "canonical_predicted_score": pred_score,
                 "baseline_predicted_score": pred_score,
                 "Predicted Score": pred_score,
+                "strong_home_profile": is_sh,
+                "is_2_0_profile": is_20,
+                "signal_profile": sig_prof,
+                "Signal": "🟢 2-0 Signal" if is_20 else ("🔵 Strong Home" if is_sh else "--"),
                 "expected_home_goals": round(lh, 2),
                 "expected_away_goals": round(la, 2),
                 "xG": f"{lh:.2f}-{la:.2f}",

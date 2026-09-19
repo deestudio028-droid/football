@@ -632,15 +632,22 @@ with tab_predictions_results:
                         p_h, p_d, p_a = "--", "--", "--"
                         sel_dec = "--"
 
-                    # Goal Prediction based on pre-match expected goals
-                    if pred.lambda_home is not None and pred.lambda_away is not None:
-                        lh_round = max(0, int(round(pred.lambda_home)))
-                        la_round = max(0, int(round(pred.lambda_away)))
-                        if lh_round == la_round and sel_dec == "H":
-                            lh_round += 1
-                        elif lh_round == la_round and sel_dec == "A":
-                            la_round += 1
-                        goal_pred_display = f"{lh_round}-{la_round}"
+                    # Goal Prediction based on pre-match expected goals (Canonical modal scoreline)
+                    if getattr(pred, "canonical_predicted_score", None):
+                        goal_pred_display = pred.canonical_predicted_score
+                        xg_display = f"{pred.lambda_home:.2f}-{pred.lambda_away:.2f}" if pred.lambda_home is not None and pred.lambda_away is not None else "--"
+                    elif getattr(pred, "predicted_score", None):
+                        goal_pred_display = pred.predicted_score
+                        xg_display = f"{pred.lambda_home:.2f}-{pred.lambda_away:.2f}" if pred.lambda_home is not None and pred.lambda_away is not None else "--"
+                    elif pred.lambda_home is not None and pred.lambda_away is not None:
+                        try:
+                            import numpy as np
+                            from models.poisson import modal_scoreline, _grid_size
+                            K = _grid_size(float(max(pred.lambda_home, pred.lambda_away)), 1e-4)
+                            sh, sa, _ = modal_scoreline(np.array([pred.lambda_home]), np.array([pred.lambda_away]), K)
+                            goal_pred_display = f"{int(sh[0])}-{int(sa[0])}"
+                        except Exception:
+                            goal_pred_display = f"{max(0, int(round(pred.lambda_home)))}-{max(0, int(round(pred.lambda_away)))}"
                         xg_display = f"{pred.lambda_home:.2f}-{pred.lambda_away:.2f}"
                     else:
                         goal_pred_display = "--"
@@ -649,6 +656,12 @@ with tab_predictions_results:
                     date_utc = fix.scheduled_kickoff[:10] if len(fix.scheduled_kickoff) >= 10 else "--"
                     kickoff_utc = format_kickoff_utc(fix.scheduled_kickoff, include_suffix=False)
                     
+                    sig_label = "--"
+                    if getattr(pred, "is_2_0_profile", False):
+                        sig_label = "🟢 2-0 Signal"
+                    elif getattr(pred, "strong_home_profile", False):
+                        sig_label = "🔵 Strong Home"
+
                     row = {
                         "Date (UTC)": date_utc,
                         "Kickoff (UTC)": kickoff_utc,
@@ -662,6 +675,7 @@ with tab_predictions_results:
                         "Predicted Score": goal_pred_display,
                         "xG": xg_display,
                         "Draw Risk": pred.draw_risk_badge or "--",
+                        "Signal Profile": sig_label,
                         "Historical Memory": "⚪ INSUFFICIENT", # Advisory status
                         "Model Identity": pred.prediction_model or ACTIVE_MODEL_KEY,
                     }

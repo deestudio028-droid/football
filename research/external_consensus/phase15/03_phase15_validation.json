@@ -1,0 +1,35 @@
+{
+  "total_fixtures": 48,
+  "date_window": "2026-09-18 to 2026-09-21 UTC",
+  "model_version": "V4.0 Production (Frozen)",
+  "model_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5",
+  "signal_counts": {
+    "2_0_profile_count": 2,
+    "strong_home_profile_count": 3,
+    "total_prioritized_signals": 3
+  },
+  "draw_risk_breakdown": {
+    "LOW": 6,
+    "MEDIUM": 32,
+    "HIGH": 10
+  },
+  "predicted_score_distribution": {
+    "2-0": 2,
+    "1-1": 36,
+    "1-0": 8,
+    "0-2": 1,
+    "2-1": 1
+  },
+  "outcome_distribution": {
+    "H": 36,
+    "A": 12
+  },
+  "league_breakdown": {
+    "Bundesliga": 9,
+    "Ligue 1": 9,
+    "Serie A": 10,
+    "La Liga": 10,
+    "Premier League": 10
+  },
+  "generated_at_utc": "2026-09-19T12:19:33.176459+00:00"
+}

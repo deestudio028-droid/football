@@ -1,0 +1,60 @@
+{
+  "suite": "tests/test_phase15_live_score_integration.py",
+  "status": "PASSED",
+  "tests_passed": 17,
+  "tests_failed": 0,
+  "execution_time_seconds": 0.09,
+  "railway_backend": {
+    "url": "https://web-production-d8a09.up.railway.app",
+    "endpoint": "/api/live-scores",
+    "health_endpoint": "/api/health",
+    "cors_origin": "*",
+    "reachable": true,
+    "http_status": 200
+  },
+  "invariants_verified": {
+    "v4_model_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5",
+    "static_predictions_hash": "d179d13dd87d45d323619e3238425c41b3ec1faf69c650b295a555982d07de16",
+    "fixture_count": 48,
+    "predictions_immutable": true,
+    "actual_score_dynamic": true,
+    "match_status_dynamic": true,
+    "live_minute_dynamic": true,
+    "polling_interval_seconds": 30,
+    "zero_frontend_secrets": true,
+    "zero_oddalerts_direct_browser_calls": true,
+    "no_new_backend_created": true,
+    "protected_paths_git_status_clean": true
+  },
+  "signals_preserved": {
+    "2_0_profile_count": 2,
+    "strong_home_profile_count": 3,
+    "matches": [
+      {
+        "fixture_id": 420656757,
+        "matchup": "FC Bayern München vs FC Union Berlin",
+        "league": "Bundesliga",
+        "predicted_score": "2-0",
+        "p_home": "77.6%",
+        "draw_risk": "LOW"
+      },
+      {
+        "fixture_id": 420657842,
+        "matchup": "Manchester City vs Sunderland",
+        "league": "Premier League",
+        "predicted_score": "2-0",
+        "p_home": "70.5%",
+        "draw_risk": "LOW"
+      },
+      {
+        "fixture_id": 420659393,
+        "matchup": "Bayer 04 Leverkusen vs RB Leipzig",
+        "league": "Bundesliga",
+        "predicted_score": "2-1",
+        "p_home": "62.8%",
+        "draw_risk": "LOW"
+      }
+    ]
+  },
+  "timestamp_utc": "2026-09-19T12:20:30.000000+00:00"
+}

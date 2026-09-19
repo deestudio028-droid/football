@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Big-5 Prediction Dashboard | 18–21 Sep 2026 | Football Prediction Lab</title>
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --bg-card: #1f2937;
+            --bg-card-hover: #283548;
+            --border-color: #374151;
+            --border-accent: #4b5563;
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --accent-green: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-cyan: #06b6d4;
+            --accent-red: #ef4444;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            padding: 24px;
+        }
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        /* Header */
+        .dashboard-header {
+            background: linear-gradient(135deg, #111827 0%, #1e293b 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 22px 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .title-group h1 {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .title-group p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 3px;
+        }
+        .header-controls-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+        .badge-row {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        .model-pill {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            font-family: monospace;
+        }
+        .sha-pill {
+            background: #1e293b;
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: monospace;
+        }
+
+        /* Live Status Bar */
+        .live-status-bar {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(17, 24, 39, 0.9);
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-family: monospace;
+        }
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .live-dot.connected {
+            background: #10b981;
+            box-shadow: 0 0 8px #10b981;
+        }
+        .live-dot.connecting {
+            background: #f59e0b;
+            box-shadow: 0 0 8px #f59e0b;
+        }
+        .live-dot.offline {
+            background: #ef4444;
+            box-shadow: 0 0 8px #ef4444;
+        }
+        .live-status-text {
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+        .live-time {
+            color: var(--text-muted);
+            border-left: 1px solid var(--border-color);
+            padding-left: 10px;
+        }
+
+        /* KPI Cards */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .kpi-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: transform 0.15s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--border-accent);
+        }
+        .kpi-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .kpi-val {
+            font-size: 26px;
+            font-weight: 800;
+            margin: 6px 0 2px 0;
+            color: #ffffff;
+        }
+        .kpi-subtext {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+        .val-amber { color: var(--accent-amber); }
+        .val-cyan { color: var(--accent-cyan); }
+        .val-green { color: var(--accent-green); }
+
+        /* Callout Box for Roy */
+        .roy-callout {
+            background: rgba(30, 41, 59, 0.7);
+            border-left: 4px solid var(--accent-amber);
+            border-radius: 0 10px 10px 0;
+            padding: 16px 24px;
+            margin-bottom: 24px;
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .roy-callout h3 {
+            font-size: 15px;
+            color: #fbbf24;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        .roy-callout p {
+            font-size: 13px;
+            color: #d1d5db;
+            margin-bottom: 6px;
+        }
+        .roy-callout p:last-child {
+            margin-bottom: 0;
+        }
+        .disclaimer-text {
+            font-size: 11px;
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        /* Prioritized Signals Section */
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffffff;
+        }
+        .signals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .signal-card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .border-amber {
+            border: 2px solid rgba(245, 158, 11, 0.6);
+            background: linear-gradient(180deg, #182030 0%, #111827 100%);
+        }
+        .border-cyan {
+            border: 2px solid rgba(6, 182, 212, 0.5);
+            background: linear-gradient(180deg, #152433 0%, #111827 100%);
+        }
+        .signal-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+        .signal-badge {
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 11px;
+            letter-spacing: 0.04em;
+        }
+        .badge-20 {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.5);
+        }
+        .badge-strong-home {
+            background: rgba(6, 182, 212, 0.2);
+            color: #38bdf8;
+            border: 1px solid rgba(6, 182, 212, 0.5);
+        }
+        .signal-league {
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+        .signal-time {
+            color: var(--text-muted);
+            font-family: monospace;
+        }
+        .signal-matchup {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .team {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .home-team { text-align: left; }
+        .away-team { text-align: right; }
+        .team-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .team-label {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+        .score-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 6px 16px;
+            background: #0f172a;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin: 0 12px;
+        }
+        .pred-score {
+            font-size: 22px;
+            font-weight: 800;
+            color: #34d399;
+            font-family: monospace;
+        }
+        .score-prob {
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+        .signal-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            background: rgba(0,0,0,0.25);
+            padding: 8px 12px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .metric-label {
+            font-size: 10px;
+            color: var(--text-secondary);
+            display: block;
+        }
+        .metric-val {
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .text-green { color: var(--accent-green); }
+        .text-muted { color: var(--text-secondary); }
+        .text-red { color: var(--accent-red); }
+        .badge-dr-low {
+            font-size: 11px;
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+        .signal-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+        }
+        .signal-subtext {
+            color: var(--text-secondary);
+        }
+        .signal-fid {
+            color: var(--text-muted);
+            font-family: monospace;
+        }
+
+        /* Table & Controls */
+        .controls-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+        .control-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-right: 4px;
+        }
+        .btn-filter {
+            background: #1e293b;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+        .btn-filter:hover {
+            background: #334155;
+            color: #ffffff;
+        }
+        .btn-filter.active {
+            background: #2563eb;
+            color: #ffffff;
+            border-color: #3b82f6;
+            font-weight: 600;
+        }
+        .search-box {
+            background: #1e293b;
+            border: 1px solid var(--border-color);
+            color: #ffffff;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            width: 220px;
+            outline: none;
+        }
+        .search-box:focus {
+            border-color: var(--accent-blue);
+        }
+
+        /* Table Container */
+        .table-responsive {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow-x: auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            margin-bottom: 32px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            text-align: left;
+        }
+        th {
+            background: #1e293b;
+            color: var(--text-secondary);
+            font-weight: 600;
+            padding: 12px 14px;
+            border-bottom: 2px solid var(--border-color);
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none;
+        }
+        th:hover {
+            color: #ffffff;
+        }
+        td {
+            padding: 10px 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            white-space: nowrap;
+        }
+        tr:hover {
+            background: rgba(255,255,255,0.03);
+        }
+        .row-20 {
+            background: rgba(245, 158, 11, 0.07);
+        }
+        .row-strong-home {
+            background: rgba(6, 182, 212, 0.05);
+        }
+        .row-live {
+            background: rgba(239, 68, 68, 0.08) !important;
+            border-left: 3px solid #ef4444;
+        }
+        .row-finished {
+            opacity: 0.9;
+        }
+        .badge-pred {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 11px;
+            text-align: center;
+        }
+        .pred-h { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+        .pred-d { background: rgba(156, 163, 175, 0.2); color: #e5e7eb; }
+        .pred-a { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+        .score-pill {
+            font-family: monospace;
+            font-weight: 700;
+            background: #0f172a;
+            border: 1px solid var(--border-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #ffffff;
+        }
+        .score-highlight {
+            border-color: #f59e0b;
+            color: #fbbf24;
+            background: rgba(245, 158, 11, 0.15);
+        }
+        .score-badge-live {
+            font-family: monospace;
+            font-weight: 800;
+            color: #f87171;
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .score-badge-ft {
+            font-family: monospace;
+            font-weight: 700;
+            color: #d1d5db;
+            background: rgba(107, 114, 128, 0.15);
+            border: 1px solid rgba(107, 114, 128, 0.3);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .score-dash {
+            color: var(--text-muted);
+            font-family: monospace;
+        }
+        .badge-tag {
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .tag-dr-low { color: #34d399; background: rgba(16, 185, 129, 0.1); }
+        .tag-dr-med { color: #fbbf24; background: rgba(245, 158, 11, 0.1); }
+        .tag-dr-high { color: #f87171; background: rgba(239, 68, 68, 0.1); }
+        .tag-sig-20 { color: #fbbf24; background: rgba(245, 158, 11, 0.2); font-weight: 700; }
+        .tag-sig-sh { color: #38bdf8; background: rgba(6, 182, 212, 0.2); font-weight: 700; }
+
+        /* Status Badges */
+        .badge-status {
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .status-upcoming {
+            color: #60a5fa;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        .status-live {
+            color: #f87171;
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            animation: pulse-live 1.8s infinite;
+        }
+        .status-ht {
+            color: #fbbf24;
+            background: rgba(245, 158, 11, 0.2);
+            border: 1px solid rgba(245, 158, 11, 0.5);
+        }
+        .status-finished {
+            color: #9ca3af;
+            background: rgba(107, 114, 128, 0.15);
+            border: 1px solid rgba(107, 114, 128, 0.3);
+        }
+        .status-other {
+            color: #f59e0b;
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        @keyframes pulse-live {
+            0% { opacity: 1; }
+            50% { opacity: 0.65; }
+            100% { opacity: 1; }
+        }
+
+        .fid-mono {
+            font-family: monospace;
+            color: var(--text-muted);
+            font-size: 11px;
+        }
+
+        /* Footer */
+        .dashboard-footer {
+            text-align: center;
+            padding: 24px;
+            color: var(--text-muted);
+            font-size: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-top">
+                <div class="title-group">
+                    <h1>⚽ Football Prediction Lab</h1>
+                    <p>Upcoming Big-5 European League Predictions • 18 Sep 2026 → 21 Sep 2026</p>
+                </div>
+                <div class="header-controls-group">
+                    <div class="live-status-bar">
+                        <span id="live-status-dot" class="live-dot connecting"></span>
+                        <span id="live-status-text" class="live-status-text">INITIALIZING LIVE FEED…</span>
+                        <span id="live-last-updated" class="live-time">LAST UPDATED: --:--:-- UTC</span>
+                    </div>
+                    <div class="badge-row">
+                        <span class="model-pill">V4.0 Production (Frozen)</span>
+                        <span class="sha-pill">SHA256: 1c7f1e69587f...acfbc5</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- KPI Summary Cards -->
+        <section class="kpi-grid">
+            <div class="kpi-card">
+                <span class="kpi-label">Upcoming Fixtures</span>
+                <span class="kpi-val">48</span>
+                <span class="kpi-subtext">Big-5 Leagues (Full MW)</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-label">🔥 2-0 Signals</span>
+                <span class="kpi-val val-amber">2</span>
+                <span class="kpi-subtext">Modal 2-0 + Low Draw Risk</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-label">⚡ Strong Home Signals</span>
+                <span class="kpi-val val-cyan">3</span>
+                <span class="kpi-subtext">P(H) ≥ 60% + Low Draw Risk</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-label">🟢 Low Draw Risk</span>
+                <span class="kpi-val val-green">6</span>
+                <span class="kpi-subtext">P(Draw) ≤ 23.0%</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-label">🟡 Med Draw Risk</span>
+                <span class="kpi-val">32</span>
+                <span class="kpi-subtext">23.0% &lt; P(Draw) &lt; 27.0%</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-label">🔴 High Draw Risk</span>
+                <span class="kpi-val text-red">10</span>
+                <span class="kpi-subtext">P(Draw) ≥ 27.0%</span>
+            </div>
+        </section>
+
+        <!-- Context Callout for Roy -->
+        <section class="roy-callout">
+            <h3>📌 Production Verification Briefing for Roy</h3>
+            <p><strong>Phase 14 Canonical Pathway Fix Active:</strong> This dashboard renders directly from the corrected canonical V4 production pipeline. The legacy presentation bug that flattened home predictions to "2-1" has been permanently eliminated. All predicted scorelines are genuine bivariate Poisson modal values computed directly from inverted expected goals.</p>
+            <p><strong>Live Score Polling (Phase 15.1):</strong> Live match scores, statuses, and minutes update automatically every 30 seconds via the deployed Railway backend. All pre-kickoff prediction features ($P(H), P(D), P(A)$, PRED, predicted scores, and Draw Risk) remain 100% immutable.</p>
+            <p class="disclaimer-text">Disclaimer: All predictions represent frozen mathematical models generated prior to kickoff. Past empirical win rates (e.g. Phase 12/13) do not guarantee future match outcomes.</p>
+        </section>
+
+        <!-- Prioritized Signals Section -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">🔥 Prioritized 2-0 & Strong Home Signals (3 Fixtures)</h2>
+            </div>
+            <div class="signals-grid">
+                
+            <div class="signal-card border-amber" data-signal-fid="420656757">
+                <div class="signal-card-header">
+                    <span class="signal-badge badge-20">🔥 2-0 PROFILE</span>
+                    <span class="signal-league">Bundesliga • MW4</span>
+                    <span class="signal-time">2026-09-18 18:30 UTC</span>
+                </div>
+                <div class="signal-matchup">
+                    <div class="team home-team">
+                        <span class="team-name">FC Bayern München</span>
+                        <span class="team-label">Home</span>
+                    </div>
+                    <div class="score-box">
+                        <span class="pred-score">2-0</span>
+                        <span class="score-prob">15.5% modal</span>
+                    </div>
+                    <div class="team away-team">
+                        <span class="team-name">FC Union Berlin</span>
+                        <span class="team-label">Away</span>
+                    </div>
+                </div>
+                <div class="signal-metrics">
+                    <div class="metric-item">
+                        <span class="metric-label">P(Home)</span>
+                        <span class="metric-val text-green">77.6%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">P(Draw)</span>
+                        <span class="metric-val text-muted">15.5%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">P(Away)</span>
+                        <span class="metric-val text-red">6.9%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Draw Risk</span>
+                        <span class="badge-dr-low">🟢 LOW</span>
+                    </div>
+                </div>
+                <div class="signal-footer">
+                    <span class="signal-subtext">Canonical Modal Score 2-0 • Low Draw Risk</span>
+                    <span class="signal-fid">FID #420656757</span>
+                </div>
+            </div>
+            
+            <div class="signal-card border-amber" data-signal-fid="420657842">
+                <div class="signal-card-header">
+                    <span class="signal-badge badge-20">🔥 2-0 PROFILE</span>
+                    <span class="signal-league">Premier League • MW5</span>
+                    <span class="signal-time">2026-09-20 13:00 UTC</span>
+                </div>
+                <div class="signal-matchup">
+                    <div class="team home-team">
+                        <span class="team-name">Manchester City</span>
+                        <span class="team-label">Home</span>
+                    </div>
+                    <div class="score-box">
+                        <span class="pred-score">2-0</span>
+                        <span class="score-prob">13.0% modal</span>
+                    </div>
+                    <div class="team away-team">
+                        <span class="team-name">Sunderland</span>
+                        <span class="team-label">Away</span>
+                    </div>
+                </div>
+                <div class="signal-metrics">
+                    <div class="metric-item">
+                        <span class="metric-label">P(Home)</span>
+                        <span class="metric-val text-green">70.5%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">P(Draw)</span>
+                        <span class="metric-val text-muted">18.4%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">P(Away)</span>
+                        <span class="metric-val text-red">11.2%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Draw Risk</span>
+                        <span class="badge-dr-low">🟢 LOW</span>
+                    </div>
+                </div>
+                <div class="signal-footer">
+                    <span class="signal-subtext">Canonical Modal Score 2-0 • Low Draw Risk</span>
+                    <span class="signal-fid">FID #420657842</span>
+                </div>
+            </div>
+            
+            <div class="signal-card border-cyan" data-signal-fid="420659393">
+                <div class="signal-card-header">
+                    <span class="signal-badge badge-strong-home">⚡ STRONG HOME</span>
+                    <span class="signal-league">Bundesliga • MW4</span>
+                    <span class="signal-time">2026-09-20 13:30 UTC</span>
+                </div>
+                <div class="signal-matchup">
+                    <div class="team home-team">
+                        <span class="team-name">Bayer 04 Leverkusen</span>
+                        <span class="team-label">Home</span>
+                    </div>
+                    <div class="score-box">
+                        <span class="pred-score">2-1</span>
+                        <span class="score-prob">9.5% modal</span>
+                    </div>
+                    <div class="team away-team">
+                        <span class="team-name">RB Leipzig</span>
+                        <span class="team-label">Away</span>
+                    </div>
+                </div>
+                <div class="signal-metrics">
+                    <div class="metric-item">
+                        <span class="metric-label">P(Home)</span>
+                        <span class="metric-val text-green">62.8%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">P(Draw)</span>
+                        <span class="metric-val text-muted">18.9%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">P(Away)</span>
+                        <span class="metric-val text-red">18.3%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Draw Risk</span>
+                        <span class="badge-dr-low">🟢 LOW</span>
+                    </div>
+                </div>
+                <div class="signal-footer">
+                    <span class="signal-subtext">High Decisiveness (P(H) ≥ 60%) • Low Draw Risk</span>
+                    <span class="signal-fid">FID #420659393</span>
+                </div>
+            </div>
+            
+            </div>
+        </section>
+
+        <!-- Main Fixture Table Controls -->
+        <section class="controls-card">
+            <div class="filter-group">
+                <span class="control-label">League:</span>
+                <button class="btn-filter active" onclick="setLeagueFilter('ALL', this)">All (48)</button>
+                <button class="btn-filter" onclick="setLeagueFilter('Premier League', this)">Premier League</button>
+                <button class="btn-filter" onclick="setLeagueFilter('La Liga', this)">La Liga</button>
+                <button class="btn-filter" onclick="setLeagueFilter('Serie A', this)">Serie A</button>
+                <button class="btn-filter" onclick="setLeagueFilter('Bundesliga', this)">Bundesliga</button>
+                <button class="btn-filter" onclick="setLeagueFilter('Ligue 1', this)">Ligue 1</button>
+            </div>
+            <div class="filter-group">
+                <span class="control-label">Signal:</span>
+                <button class="btn-filter active" onclick="setSignalFilter('ALL', this)">All</button>
+                <button class="btn-filter" onclick="setSignalFilter('2-0_PROFILE', this)">🔥 2-0 Only</button>
+                <button class="btn-filter" onclick="setSignalFilter('STRONG_HOME', this)">⚡ Strong Home</button>
+            </div>
+            <div class="filter-group">
+                <span class="control-label">Status:</span>
+                <button class="btn-filter active" onclick="setStatusFilter('ALL', this)">All (<span id="cnt-all">48</span>)</button>
+                <button class="btn-filter" onclick="setStatusFilter('LIVE', this)">🔴 Live (<span id="cnt-live">0</span>)</button>
+                <button class="btn-filter" onclick="setStatusFilter('UPCOMING', this)">🔵 Upcoming (<span id="cnt-upcoming">48</span>)</button>
+                <button class="btn-filter" onclick="setStatusFilter('FINISHED', this)">⚪ Finished (<span id="cnt-finished">0</span>)</button>
+            </div>
+            <div class="filter-group">
+                <span class="control-label">Draw Risk:</span>
+                <button class="btn-filter active" onclick="setDrawRiskFilter('ALL', this)">All</button>
+                <button class="btn-filter" onclick="setDrawRiskFilter('LOW', this)">🟢 Low</button>
+                <button class="btn-filter" onclick="setDrawRiskFilter('MEDIUM', this)">🟡 Med</button>
+                <button class="btn-filter" onclick="setDrawRiskFilter('HIGH', this)">🔴 High</button>
+            </div>
+            <div>
+                <input type="text" id="teamSearch" class="search-box" placeholder="Search team..." oninput="onSearchChange()">
+            </div>
+        </section>
+
+        <!-- Table View -->
+        <section class="table-responsive">
+            <table id="fixtureTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable('Date (UTC)')">Date ↕</th>
+                        <th onclick="sortTable('Time (UTC)')">Time ↕</th>
+                        <th onclick="sortTable('League')">League ↕</th>
+                        <th onclick="sortTable('Matchweek')">MW ↕</th>
+                        <th onclick="sortTable('Home Team')">Home Team ↕</th>
+                        <th onclick="sortTable('Away Team')">Away Team ↕</th>
+                        <th onclick="sortTable('p_home')">P(H) ↕</th>
+                        <th onclick="sortTable('p_draw')">P(D) ↕</th>
+                        <th onclick="sortTable('p_away')">P(A) ↕</th>
+                        <th onclick="sortTable('PRED')">PRED ↕</th>
+                        <th onclick="sortTable('canonical_predicted_score')">Predicted Score ↕</th>
+                        <th>Actual Score</th>
+                        <th onclick="sortTable('draw_risk_tier')">Draw Risk ↕</th>
+                        <th onclick="sortTable('signal_profile')">Signal ↕</th>
+                        <th onclick="sortTable('fixture_id')">FID ↕</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Populated via embedded JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <p>Football Prediction Lab • Phase 15.1 Live Score Integration • Generated 2026-09-19 12:19:33 UTC</p>
+            <p>Live Backend: https://web-production-d8a09.up.railway.app/api/live-scores (30s Polling)</p>
+            <p>Cryptographic Invariant: Frozen V4 Model SHA256 1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5</p>
+        </footer>
+    </div>
+
+    <!-- Embedded Vanilla JavaScript (Offline Capable + Live Polling) -->
+    <script>
+        const FIXTURES = [{"fixture_id": 420656757, "Date (UTC)": "2026-09-18", "Time (UTC)": "18:30", "League": "Bundesliga", "Matchweek": "MW4", "Home Team": "FC Bayern München", "Away Team": "FC Union Berlin", "P(H)": "77.6%", "P(D)": "15.5%", "P(A)": "6.9%", "p_home": 0.7765, "p_draw": 0.1548, "p_away": 0.0687, "PRED": "H", "Predicted Score": "2-0", "canonical_predicted_score": "2-0", "modal_scoreline_probability": 0.1554, "strong_home_profile": true, "is_2_0_profile": true, "signal_profile": "2-0_PROFILE", "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "LOW", "draw_risk_tier": "LOW", "draw_risk_score": 0.1548, "raw_draw_risk_tier": "LOW", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-18T18:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 2.3148, "lambda_away": 0.5327, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657505, "Date (UTC)": "2026-09-18", "Time (UTC)": "18:45", "League": "Ligue 1", "Matchweek": "MW5", "Home Team": "Monaco", "Away Team": "Lens", "P(H)": "42.0%", "P(D)": "24.1%", "P(A)": "34.0%", "p_home": 0.42, "p_draw": 0.2405, "p_away": 0.3395, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1105, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2405, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-18T18:45:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.6073, "lambda_away": 1.4232, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420656763, "Date (UTC)": "2026-09-18", "Time (UTC)": "18:45", "League": "Serie A", "Matchweek": "MW5", "Home Team": "Monza", "Away Team": "Sassuolo", "P(H)": "46.9%", "P(D)": "26.6%", "P(A)": "26.5%", "p_home": 0.4692, "p_draw": 0.2663, "p_away": 0.2645, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1258, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2663, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-18T18:45:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.4332, "lambda_away": 1.0049, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420654561, "Date (UTC)": "2026-09-18", "Time (UTC)": "19:00", "League": "La Liga", "Matchweek": "MW7", "Home Team": "Espanyol", "Away Team": "Elche", "P(H)": "44.1%", "P(D)": "26.1%", "P(A)": "29.8%", "p_home": 0.441, "p_draw": 0.2605, "p_away": 0.2985, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1239, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2605, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-18T19:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.4505, "lambda_away": 1.1454, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420656764, "Date (UTC)": "2026-09-18", "Time (UTC)": "19:00", "League": "Premier League", "Matchweek": "MW5", "Home Team": "Brentford", "Away Team": "Chelsea", "P(H)": "40.5%", "P(D)": "25.5%", "P(A)": "34.1%", "p_home": 0.4045, "p_draw": 0.2548, "p_away": 0.3407, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1206, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2548, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-18T19:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.4442, "lambda_away": 1.3045, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657711, "Date (UTC)": "2026-09-19", "Time (UTC)": "11:30", "League": "Premier League", "Matchweek": "MW5", "Home Team": "Tottenham Hotspur", "Away Team": "Aston Villa", "P(H)": "38.5%", "P(D)": "25.5%", "P(A)": "36.0%", "p_home": 0.385, "p_draw": 0.2548, "p_away": 0.3602, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1205, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2548, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T11:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.4072, "lambda_away": 1.3529, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420654558, "Date (UTC)": "2026-09-19", "Time (UTC)": "12:00", "League": "La Liga", "Matchweek": "MW7", "Home Team": "Osasuna", "Away Team": "Rayo Vallecano", "P(H)": "48.9%", "P(D)": "24.4%", "P(A)": "26.7%", "p_home": 0.4893, "p_draw": 0.2438, "p_away": 0.2668, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1153, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2438, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T12:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.6508, "lambda_away": 1.1548, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657746, "Date (UTC)": "2026-09-19", "Time (UTC)": "13:00", "League": "Serie A", "Matchweek": "MW5", "Home Team": "Bologna", "Away Team": "Torino", "P(H)": "44.3%", "P(D)": "27.9%", "P(A)": "27.8%", "p_home": 0.4432, "p_draw": 0.2787, "p_away": 0.2782, "PRED": "H", "Predicted Score": "1-0", "canonical_predicted_score": "1-0", "modal_scoreline_probability": 0.1323, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "HIGH", "draw_risk_tier": "HIGH", "draw_risk_score": 0.2787, "raw_draw_risk_tier": "HIGH", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T13:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.317, "lambda_away": 0.9814, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657745, "Date (UTC)": "2026-09-19", "Time (UTC)": "13:00", "League": "Serie A", "Matchweek": "MW5", "Home Team": "Udinese", "Away Team": "Cagliari", "P(H)": "39.5%", "P(D)": "26.8%", "P(A)": "33.7%", "p_home": 0.3947, "p_draw": 0.2682, "p_away": 0.3372, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1274, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2682, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T13:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.3206, "lambda_away": 1.1994, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657833, "Date (UTC)": "2026-09-19", "Time (UTC)": "13:30", "League": "Bundesliga", "Matchweek": "MW4", "Home Team": "Borussia Mönchengladbach", "Away Team": "FSV Mainz 05", "P(H)": "27.7%", "P(D)": "24.0%", "P(A)": "48.3%", "p_home": 0.2767, "p_draw": 0.24, "p_away": 0.4833, "PRED": "A", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1124, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.24, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T13:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.2203, "lambda_away": 1.6875, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657834, "Date (UTC)": "2026-09-19", "Time (UTC)": "13:30", "League": "Bundesliga", "Matchweek": "MW4", "Home Team": "Eintracht Frankfurt", "Away Team": "SC Freiburg", "P(H)": "33.1%", "P(D)": "23.9%", "P(A)": "43.0%", "p_home": 0.3307, "p_draw": 0.2392, "p_away": 0.4302, "PRED": "A", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1096, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2392, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T13:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.4096, "lambda_away": 1.6379, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657832, "Date (UTC)": "2026-09-19", "Time (UTC)": "13:30", "League": "Bundesliga", "Matchweek": "MW4", "Home Team": "Hamburger SV", "Away Team": "FC Köln", "P(H)": "40.0%", "P(D)": "25.0%", "P(A)": "35.0%", "p_home": 0.4002, "p_draw": 0.25, "p_away": 0.3498, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1174, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.25, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T13:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.4791, "lambda_away": 1.3671, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657831, "Date (UTC)": "2026-09-19", "Time (UTC)": "13:30", "League": "Bundesliga", "Matchweek": "MW4", "Home Team": "Werder Bremen", "Away Team": "FC Augsburg", "P(H)": "40.4%", "P(D)": "24.2%", "P(A)": "35.4%", "p_home": 0.4037, "p_draw": 0.2423, "p_away": 0.354, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1116, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2423, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T13:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.5598, "lambda_away": 1.4466, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657845, "Date (UTC)": "2026-09-19", "Time (UTC)": "14:00", "League": "Premier League", "Matchweek": "MW5", "Home Team": "Brighton & Hove Albion", "Away Team": "Arsenal", "P(H)": "30.0%", "P(D)": "27.3%", "P(A)": "42.7%", "p_home": 0.3002, "p_draw": 0.2732, "p_away": 0.4267, "PRED": "A", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1289, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "HIGH", "draw_risk_tier": "HIGH", "draw_risk_score": 0.2732, "raw_draw_risk_tier": "HIGH", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T14:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.0728, "lambda_away": 1.3347, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657844, "Date (UTC)": "2026-09-19", "Time (UTC)": "14:00", "League": "Premier League", "Matchweek": "MW5", "Home Team": "Everton", "Away Team": "Ipswich Town", "P(H)": "41.7%", "P(D)": "26.2%", "P(A)": "32.1%", "p_home": 0.4173, "p_draw": 0.2618, "p_away": 0.3208, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1245, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2618, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T14:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.4068, "lambda_away": 1.2002, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657841, "Date (UTC)": "2026-09-19", "Time (UTC)": "14:00", "League": "Premier League", "Matchweek": "MW5", "Home Team": "Newcastle United", "Away Team": "Hull City", "P(H)": "46.9%", "P(D)": "27.0%", "P(A)": "26.1%", "p_home": 0.469, "p_draw": 0.2697, "p_away": 0.2613, "PRED": "H", "Predicted Score": "1-0", "canonical_predicted_score": "1-0", "modal_scoreline_probability": 0.1297, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2697, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T14:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.4071, "lambda_away": 0.9766, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420654607, "Date (UTC)": "2026-09-19", "Time (UTC)": "14:15", "League": "La Liga", "Matchweek": "MW7", "Home Team": "Athletic Club", "Away Team": "Deportivo Alavés", "P(H)": "51.5%", "P(D)": "26.5%", "P(A)": "22.1%", "p_home": 0.5148, "p_draw": 0.2647, "p_away": 0.2205, "PRED": "H", "Predicted Score": "1-0", "canonical_predicted_score": "1-0", "modal_scoreline_probability": 0.1424, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2647, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T14:15:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.473, "lambda_away": 0.8632, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657503, "Date (UTC)": "2026-09-19", "Time (UTC)": "15:15", "League": "Ligue 1", "Matchweek": "MW5", "Home Team": "Paris", "Away Team": "Strasbourg", "P(H)": "42.5%", "P(D)": "26.8%", "P(A)": "30.8%", "p_home": 0.4245, "p_draw": 0.2678, "p_away": 0.3077, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1271, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2678, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T15:15:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.3709, "lambda_away": 1.1253, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657949, "Date (UTC)": "2026-09-19", "Time (UTC)": "16:00", "League": "Serie A", "Matchweek": "MW5", "Home Team": "Roma", "Away Team": "Inter", "P(H)": "39.8%", "P(D)": "26.2%", "P(A)": "34.0%", "p_home": 0.3978, "p_draw": 0.2623, "p_away": 0.3398, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1248, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2623, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T16:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.3704, "lambda_away": 1.2461, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420658031, "Date (UTC)": "2026-09-19", "Time (UTC)": "16:30", "League": "Bundesliga", "Matchweek": "MW4", "Home Team": "VfB Stuttgart", "Away Team": "Borussia Dortmund", "P(H)": "43.3%", "P(D)": "22.8%", "P(A)": "33.9%", "p_home": 0.433, "p_draw": 0.2282, "p_away": 0.3388, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.0994, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "LOW", "draw_risk_tier": "LOW", "draw_risk_score": 0.2282, "raw_draw_risk_tier": "LOW", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T16:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.7698, "lambda_away": 1.5454, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420654568, "Date (UTC)": "2026-09-19", "Time (UTC)": "16:30", "League": "La Liga", "Matchweek": "MW7", "Home Team": "Celta de Vigo", "Away Team": "Racing Santander", "P(H)": "43.4%", "P(D)": "24.5%", "P(A)": "32.2%", "p_home": 0.4335, "p_draw": 0.2447, "p_away": 0.3218, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1142, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2447, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T16:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.5851, "lambda_away": 1.3336, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420658030, "Date (UTC)": "2026-09-19", "Time (UTC)": "16:30", "League": "Premier League", "Matchweek": "MW5", "Home Team": "Nottingham Forest", "Away Team": "Coventry City", "P(H)": "44.9%", "P(D)": "25.5%", "P(A)": "29.7%", "p_home": 0.4487, "p_draw": 0.2547, "p_away": 0.2967, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.121, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2547, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T16:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.51, "lambda_away": 1.1793, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657509, "Date (UTC)": "2026-09-19", "Time (UTC)": "18:45", "League": "Ligue 1", "Matchweek": "MW5", "Home Team": "Angers SCO", "Away Team": "Troyes", "P(H)": "35.5%", "P(D)": "25.6%", "P(A)": "38.9%", "p_home": 0.3553, "p_draw": 0.2558, "p_away": 0.3888, "PRED": "A", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1211, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2558, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T18:45:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.3331, "lambda_away": 1.4063, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657507, "Date (UTC)": "2026-09-19", "Time (UTC)": "18:45", "League": "Ligue 1", "Matchweek": "MW5", "Home Team": "Le Mans", "Away Team": "Lorient", "P(H)": "35.1%", "P(D)": "30.7%", "P(A)": "34.2%", "p_home": 0.3508, "p_draw": 0.3073, "p_away": 0.3418, "PRED": "H", "Predicted Score": "1-0", "canonical_predicted_score": "1-0", "modal_scoreline_probability": 0.1356, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "HIGH", "draw_risk_tier": "HIGH", "draw_risk_score": 0.3073, "raw_draw_risk_tier": "HIGH", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T18:45:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.0149, "lambda_away": 0.9977, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657506, "Date (UTC)": "2026-09-19", "Time (UTC)": "18:45", "League": "Ligue 1", "Matchweek": "MW5", "Home Team": "Olympique Lyonnais", "Away Team": "Rennes", "P(H)": "48.3%", "P(D)": "22.7%", "P(A)": "29.0%", "p_home": 0.483, "p_draw": 0.2265, "p_away": 0.2905, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1007, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "LOW", "draw_risk_tier": "LOW", "draw_risk_score": 0.2265, "raw_draw_risk_tier": "LOW", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T18:45:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.8484, "lambda_away": 1.3918, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657502, "Date (UTC)": "2026-09-19", "Time (UTC)": "18:45", "League": "Ligue 1", "Matchweek": "MW5", "Home Team": "Toulouse", "Away Team": "Le Havre", "P(H)": "44.3%", "P(D)": "27.2%", "P(A)": "28.6%", "p_home": 0.4428, "p_draw": 0.2715, "p_away": 0.2857, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1281, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "HIGH", "draw_risk_tier": "HIGH", "draw_risk_score": 0.2715, "raw_draw_risk_tier": "HIGH", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T18:45:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.367, "lambda_away": 1.0411, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420658129, "Date (UTC)": "2026-09-19", "Time (UTC)": "18:45", "League": "Serie A", "Matchweek": "MW5", "Home Team": "Venezia", "Away Team": "Lazio", "P(H)": "41.9%", "P(D)": "25.7%", "P(A)": "32.4%", "p_home": 0.4185, "p_draw": 0.2573, "p_away": 0.3242, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1222, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2573, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T18:45:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.446, "lambda_away": 1.2415, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420654582, "Date (UTC)": "2026-09-19", "Time (UTC)": "19:00", "League": "La Liga", "Matchweek": "MW7", "Home Team": "Sevilla", "Away Team": "FC Barcelona", "P(H)": "14.6%", "P(D)": "19.8%", "P(A)": "65.6%", "p_home": 0.1462, "p_draw": 0.1978, "p_away": 0.656, "PRED": "A", "Predicted Score": "0-2", "canonical_predicted_score": "0-2", "modal_scoreline_probability": 0.1124, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "LOW", "draw_risk_tier": "LOW", "draw_risk_score": 0.1978, "raw_draw_risk_tier": "LOW", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-19T19:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 0.8767, "lambda_away": 2.1011, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420659043, "Date (UTC)": "2026-09-20", "Time (UTC)": "10:30", "League": "Serie A", "Matchweek": "MW5", "Home Team": "Fiorentina", "Away Team": "Napoli", "P(H)": "35.2%", "P(D)": "28.0%", "P(A)": "36.8%", "p_home": 0.3522, "p_draw": 0.2798, "p_away": 0.368, "PRED": "A", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1316, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "HIGH", "draw_risk_tier": "HIGH", "draw_risk_score": 0.2798, "raw_draw_risk_tier": "HIGH", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T10:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.1606, "lambda_away": 1.1929, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420654594, "Date (UTC)": "2026-09-20", "Time (UTC)": "12:00", "League": "La Liga", "Matchweek": "MW7", "Home Team": "Getafe", "Away Team": "Málaga", "P(H)": "40.5%", "P(D)": "27.7%", "P(A)": "31.8%", "p_home": 0.405, "p_draw": 0.2772, "p_away": 0.3178, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1305, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "HIGH", "draw_risk_tier": "HIGH", "draw_risk_score": 0.2772, "raw_draw_risk_tier": "HIGH", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T12:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.2751, "lambda_away": 1.096, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657508, "Date (UTC)": "2026-09-20", "Time (UTC)": "13:00", "League": "Ligue 1", "Matchweek": "MW5", "Home Team": "Auxerre", "Away Team": "Brest", "P(H)": "37.0%", "P(D)": "27.4%", "P(A)": "35.6%", "p_home": 0.3705, "p_draw": 0.2738, "p_away": 0.3557, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1297, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "HIGH", "draw_risk_tier": "HIGH", "draw_risk_score": 0.2738, "raw_draw_risk_tier": "HIGH", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T13:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.2362, "lambda_away": 1.2054, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420659114, "Date (UTC)": "2026-09-20", "Time (UTC)": "13:00", "League": "Premier League", "Matchweek": "MW5", "Home Team": "AFC Bournemouth", "Away Team": "Liverpool", "P(H)": "38.2%", "P(D)": "26.7%", "P(A)": "35.1%", "p_home": 0.3818, "p_draw": 0.2672, "p_away": 0.351, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.127, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2672, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T13:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.3039, "lambda_away": 1.2388, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657843, "Date (UTC)": "2026-09-20", "Time (UTC)": "13:00", "League": "Premier League", "Matchweek": "MW5", "Home Team": "Leeds United", "Away Team": "Crystal Palace", "P(H)": "45.3%", "P(D)": "25.7%", "P(A)": "29.1%", "p_home": 0.4527, "p_draw": 0.2567, "p_away": 0.2907, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1221, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2567, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T13:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.4968, "lambda_away": 1.1468, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657842, "Date (UTC)": "2026-09-20", "Time (UTC)": "13:00", "League": "Premier League", "Matchweek": "MW5", "Home Team": "Manchester City", "Away Team": "Sunderland", "P(H)": "70.5%", "P(D)": "18.4%", "P(A)": "11.2%", "p_home": 0.7048, "p_draw": 0.1837, "p_away": 0.1115, "PRED": "H", "Predicted Score": "2-0", "canonical_predicted_score": "2-0", "modal_scoreline_probability": 0.1302, "strong_home_profile": true, "is_2_0_profile": true, "signal_profile": "2-0_PROFILE", "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "LOW", "draw_risk_tier": "LOW", "draw_risk_score": 0.1837, "raw_draw_risk_tier": "LOW", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T13:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 2.1646, "lambda_away": 0.7252, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420659113, "Date (UTC)": "2026-09-20", "Time (UTC)": "13:00", "League": "Serie A", "Matchweek": "MW5", "Home Team": "Frosinone", "Away Team": "Como", "P(H)": "28.1%", "P(D)": "25.6%", "P(A)": "46.3%", "p_home": 0.2805, "p_draw": 0.2563, "p_away": 0.4632, "PRED": "A", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1219, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2563, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T13:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.1166, "lambda_away": 1.5109, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420659112, "Date (UTC)": "2026-09-20", "Time (UTC)": "13:00", "League": "Serie A", "Matchweek": "MW5", "Home Team": "Parma", "Away Team": "Genoa", "P(H)": "40.0%", "P(D)": "29.3%", "P(A)": "30.7%", "p_home": 0.4002, "p_draw": 0.293, "p_away": 0.3068, "PRED": "H", "Predicted Score": "1-0", "canonical_predicted_score": "1-0", "modal_scoreline_probability": 0.1353, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "HIGH", "draw_risk_tier": "HIGH", "draw_risk_score": 0.293, "raw_draw_risk_tier": "HIGH", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T13:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.1713, "lambda_away": 0.987, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420659393, "Date (UTC)": "2026-09-20", "Time (UTC)": "13:30", "League": "Bundesliga", "Matchweek": "MW4", "Home Team": "Bayer 04 Leverkusen", "Away Team": "RB Leipzig", "P(H)": "62.8%", "P(D)": "18.9%", "P(A)": "18.3%", "p_home": 0.6282, "p_draw": 0.1888, "p_away": 0.183, "PRED": "H", "Predicted Score": "2-1", "canonical_predicted_score": "2-1", "modal_scoreline_probability": 0.0952, "strong_home_profile": true, "is_2_0_profile": false, "signal_profile": "STRONG_HOME_PROFILE", "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "LOW", "draw_risk_tier": "LOW", "draw_risk_score": 0.1888, "raw_draw_risk_tier": "LOW", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T13:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 2.3436, "lambda_away": 1.2016, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420654564, "Date (UTC)": "2026-09-20", "Time (UTC)": "14:15", "League": "La Liga", "Matchweek": "MW7", "Home Team": "Atlético de Madrid", "Away Team": "Real Madrid", "P(H)": "38.2%", "P(D)": "23.6%", "P(A)": "38.2%", "p_home": 0.382, "p_draw": 0.236, "p_away": 0.382, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.106, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.236, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T14:15:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.5794, "lambda_away": 1.5794, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420657504, "Date (UTC)": "2026-09-20", "Time (UTC)": "15:15", "League": "Ligue 1", "Matchweek": "MW5", "Home Team": "Nice", "Away Team": "LOSC Lille", "P(H)": "32.8%", "P(D)": "28.2%", "P(A)": "39.1%", "p_home": 0.3277, "p_draw": 0.2817, "p_away": 0.3907, "PRED": "A", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1319, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "HIGH", "draw_risk_tier": "HIGH", "draw_risk_score": 0.2817, "raw_draw_risk_tier": "HIGH", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T15:15:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.0948, "lambda_away": 1.2228, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420659447, "Date (UTC)": "2026-09-20", "Time (UTC)": "15:30", "League": "Bundesliga", "Matchweek": "MW4", "Home Team": "Schalke 04", "Away Team": "Elversberg", "P(H)": "40.9%", "P(D)": "24.7%", "P(A)": "34.3%", "p_home": 0.4095, "p_draw": 0.2472, "p_away": 0.3433, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1155, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2472, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T15:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.5222, "lambda_away": 1.3739, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420659446, "Date (UTC)": "2026-09-20", "Time (UTC)": "15:30", "League": "Premier League", "Matchweek": "MW5", "Home Team": "Fulham", "Away Team": "Manchester United", "P(H)": "35.6%", "P(D)": "25.8%", "P(A)": "38.6%", "p_home": 0.3558, "p_draw": 0.2577, "p_away": 0.3865, "PRED": "A", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1222, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2577, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T15:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.3194, "lambda_away": 1.3861, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420659455, "Date (UTC)": "2026-09-20", "Time (UTC)": "16:00", "League": "Serie A", "Matchweek": "MW5", "Home Team": "Juventus", "Away Team": "Atalanta", "P(H)": "56.5%", "P(D)": "23.2%", "P(A)": "20.3%", "p_home": 0.565, "p_draw": 0.232, "p_away": 0.203, "PRED": "H", "Predicted Score": "1-0", "canonical_predicted_score": "1-0", "modal_scoreline_probability": 0.114, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.232, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T16:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.7813, "lambda_away": 0.9678, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420654708, "Date (UTC)": "2026-09-20", "Time (UTC)": "16:30", "League": "La Liga", "Matchweek": "MW7", "Home Team": "Deportivo A Coruña", "Away Team": "Real Betis", "P(H)": "36.5%", "P(D)": "25.5%", "P(A)": "38.0%", "p_home": 0.3648, "p_draw": 0.255, "p_away": 0.3802, "PRED": "A", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1206, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.255, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T16:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.3619, "lambda_away": 1.3957, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420654580, "Date (UTC)": "2026-09-20", "Time (UTC)": "16:30", "League": "La Liga", "Matchweek": "MW7", "Home Team": "Villarreal", "Away Team": "Levante", "P(H)": "52.0%", "P(D)": "24.8%", "P(A)": "23.2%", "p_home": 0.52, "p_draw": 0.2477, "p_away": 0.2323, "PRED": "H", "Predicted Score": "1-0", "canonical_predicted_score": "1-0", "modal_scoreline_probability": 0.1181, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2477, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T16:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.6235, "lambda_away": 0.9971, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420659463, "Date (UTC)": "2026-09-20", "Time (UTC)": "17:30", "League": "Bundesliga", "Matchweek": "MW4", "Home Team": "Paderborn", "Away Team": "TSG Hoffenheim", "P(H)": "38.5%", "P(D)": "23.1%", "P(A)": "38.5%", "p_home": 0.3847, "p_draw": 0.2308, "p_away": 0.3845, "PRED": "H", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.101, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2308, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T17:30:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.6432, "lambda_away": 1.6427, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420659485, "Date (UTC)": "2026-09-20", "Time (UTC)": "18:45", "League": "Ligue 1", "Matchweek": "MW5", "Home Team": "Olympique Marseille", "Away Team": "Paris Saint Germain", "P(H)": "28.7%", "P(D)": "23.5%", "P(A)": "47.8%", "p_home": 0.287, "p_draw": 0.235, "p_away": 0.478, "PRED": "A", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.1082, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.235, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T18:45:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.2999, "lambda_away": 1.74, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420659484, "Date (UTC)": "2026-09-20", "Time (UTC)": "18:45", "League": "Serie A", "Matchweek": "MW5", "Home Team": "AC Milan", "Away Team": "Lecce", "P(H)": "55.3%", "P(D)": "24.0%", "P(A)": "20.7%", "p_home": 0.5529, "p_draw": 0.2403, "p_away": 0.2068, "PRED": "H", "Predicted Score": "1-0", "canonical_predicted_score": "1-0", "modal_scoreline_probability": 0.1222, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "MEDIUM", "draw_risk_tier": "MEDIUM", "draw_risk_score": 0.2403, "raw_draw_risk_tier": "MEDIUM", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T18:45:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.6955, "lambda_away": 0.9349, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}, {"fixture_id": 420654586, "Date (UTC)": "2026-09-20", "Time (UTC)": "19:00", "League": "La Liga", "Matchweek": "MW7", "Home Team": "Valencia", "Away Team": "Real Sociedad", "P(H)": "35.1%", "P(D)": "27.8%", "P(A)": "37.1%", "p_home": 0.351, "p_draw": 0.2778, "p_away": 0.3712, "PRED": "A", "Predicted Score": "1-1", "canonical_predicted_score": "1-1", "modal_scoreline_probability": 0.131, "strong_home_profile": false, "is_2_0_profile": false, "signal_profile": null, "Actual Score": "—", "Match Status": "UPCOMING", "Draw Risk": "HIGH", "draw_risk_tier": "HIGH", "draw_risk_score": 0.2778, "raw_draw_risk_tier": "HIGH", "Status": "UPCOMING", "scheduled_kickoff": "2026-09-20T19:00:00.000000Z", "has_locked_snapshot": true, "snapshot_source": "v4_0_production_canonical_pipeline", "lambda_home": 1.1701, "lambda_away": 1.2116, "model_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"}];
+        const LIVE_SCORES_API_URL = 'https://web-production-d8a09.up.railway.app/api/live-scores';
+        const POLLING_INTERVAL_MS = 30000;
+
+        let currentLeague = 'ALL';
+        let currentSignal = 'ALL';
+        let currentStatusFilter = 'ALL';
+        let currentDrawRisk = 'ALL';
+        let searchQuery = '';
+        let sortKey = 'Date (UTC)';
+        let sortAsc = true;
+
+        let consecutiveFailures = 0;
+        let liveScoresMap = {};
+
+        function normalizeLiveItem(item) {
+            if (!item) {
+                return { status: 'UPCOMING', label: '🔵 UPCOMING', score: '—', isLive: false, isFinished: false };
+            }
+            const raw = (item.status || 'UPCOMING').toUpperCase();
+            const elapsed = item.elapsed != null ? item.elapsed : null;
+            const timeAdded = item.time_added != null ? item.time_added : null;
+            const hg = item.home_goals;
+            const ag = item.away_goals;
+
+            let scoreText = '—';
+            if (hg != null && ag != null) {
+                scoreText = hg + ' - ' + ag;
+            } else if (item.display_score && item.display_score !== '—') {
+                scoreText = item.display_score.replace('-', ' - ');
+            }
+
+            if (raw === 'LIVE') {
+                let minStr = '';
+                if (elapsed != null) {
+                    minStr = timeAdded ? ` ${elapsed}+${timeAdded}'` : ` ${elapsed}'`;
+                }
+                return {
+                    status: 'LIVE',
+                    label: `🔴 LIVE${minStr}`,
+                    score: scoreText !== '—' ? scoreText : '0 - 0',
+                    isLive: true,
+                    isFinished: false
+                };
+            }
+            if (raw === 'HT') {
+                return {
+                    status: 'LIVE',
+                    label: '🟡 HALF TIME',
+                    score: scoreText !== '—' ? scoreText : '0 - 0',
+                    isLive: true,
+                    isFinished: false
+                };
+            }
+            if (raw === 'FT' || raw === 'FINISHED') {
+                return {
+                    status: 'FINISHED',
+                    label: '⚪ FT',
+                    score: scoreText,
+                    isLive: false,
+                    isFinished: true
+                };
+            }
+            if (raw === 'AET') {
+                return {
+                    status: 'FINISHED',
+                    label: '⚪ FT AET',
+                    score: scoreText,
+                    isLive: false,
+                    isFinished: true
+                };
+            }
+            if (raw === 'PEN') {
+                return {
+                    status: 'FINISHED',
+                    label: '⚪ FT PEN',
+                    score: scoreText,
+                    isLive: false,
+                    isFinished: true
+                };
+            }
+            if (raw === 'POSTP') {
+                return { status: 'POSTP', label: 'POSTPONED', score: '—', isLive: false, isFinished: false };
+            }
+            if (raw === 'CANC') {
+                return { status: 'CANC', label: 'CANCELLED', score: '—', isLive: false, isFinished: false };
+            }
+            if (raw === 'SUSP') {
+                return { status: 'SUSP', label: 'SUSPENDED', score: scoreText, isLive: false, isFinished: false };
+            }
+            return { status: 'UPCOMING', label: '🔵 UPCOMING', score: '—', isLive: false, isFinished: false };
+        }
+
+        // Client-side persistent completed scores cache (persists across polling ticks)
+        window._persistedCompletedScores = window._persistedCompletedScores || {};
+
+        function getFixtureLiveInfo(f) {
+            const fidStr = String(f['fixture_id']);
+            let item = liveScoresMap[fidStr] || window._persistedCompletedScores[fidStr];
+            if (!item) {
+                const fallbackKey = `${f['Date (UTC)']}_${f['Home Team']}_${f['Away Team']}`.toLowerCase();
+                item = liveScoresMap[fallbackKey] || window._persistedCompletedScores[fallbackKey];
+            }
+            const norm = normalizeLiveItem(item);
+            if (norm.isFinished && item) {
+                window._persistedCompletedScores[fidStr] = item;
+            }
+            return norm;
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            let filtered = FIXTURES.filter(f => {
+                if (currentLeague !== 'ALL' && f['League'] !== currentLeague) return false;
+                if (currentSignal === '2-0_PROFILE' && !f['is_2_0_profile']) return false;
+                if (currentSignal === 'STRONG_HOME' && !f['strong_home_profile']) return false;
+                if (currentDrawRisk !== 'ALL' && f['draw_risk_tier'] !== currentDrawRisk) return false;
+
+                const liveInfo = getFixtureLiveInfo(f);
+                if (currentStatusFilter === 'LIVE' && !liveInfo.isLive) return false;
+                if (currentStatusFilter === 'UPCOMING' && liveInfo.status !== 'UPCOMING') return false;
+                if (currentStatusFilter === 'FINISHED' && !liveInfo.isFinished) return false;
+
+                if (searchQuery) {
+                    const q = searchQuery.toLowerCase();
+                    const home = (f['Home Team'] || '').toLowerCase();
+                    const away = (f['Away Team'] || '').toLowerCase();
+                    if (!home.includes(q) && !away.includes(q)) return false;
+                }
+                return true;
+            });
+
+            filtered.sort((a, b) => {
+                let vA = a[sortKey];
+                let vB = b[sortKey];
+                if (typeof vA === 'string') {
+                    vA = vA.toLowerCase();
+                    vB = (vB || '').toLowerCase();
+                }
+                if (vA < vB) return sortAsc ? -1 : 1;
+                if (vA > vB) return sortAsc ? 1 : -1;
+                return 0;
+            });
+
+            filtered.forEach(f => {
+                const tr = document.createElement('tr');
+                const liveInfo = getFixtureLiveInfo(f);
+
+                tr.className = 'match-row';
+                if (liveInfo.isLive) {
+                    tr.classList.add('row-live');
+                } else if (liveInfo.isFinished) {
+                    tr.classList.add('row-finished');
+                } else if (f['is_2_0_profile']) {
+                    tr.classList.add('row-20');
+                } else if (f['strong_home_profile']) {
+                    tr.classList.add('row-strong-home');
+                }
+
+                tr.setAttribute('data-fixture-id', f['fixture_id']);
+                tr.setAttribute('data-status', liveInfo.status);
+
+                // Pred badge
+                let predBadge = '';
+                if (f['PRED'] === 'H') predBadge = '<span class="badge-pred pred-h">HOME</span>';
+                else if (f['PRED'] === 'A') predBadge = '<span class="badge-pred pred-a">AWAY</span>';
+                else predBadge = '<span class="badge-pred pred-d">DRAW</span>';
+
+                // Predicted score pill (IMMUTABLE)
+                let scoreClass = (f['Predicted Score'] === '2-0') ? 'score-pill score-highlight' : 'score-pill';
+
+                // Actual score cell (DYNAMIC)
+                let actualScoreHtml = '<span class="score-dash">—</span>';
+                if (liveInfo.isLive) {
+                    actualScoreHtml = `<span class="score-badge-live">${liveInfo.score}</span>`;
+                } else if (liveInfo.isFinished) {
+                    actualScoreHtml = `<span class="score-badge-ft">${liveInfo.score}</span>`;
+                }
+
+                // Draw risk tag
+                let drTag = '';
+                if (f['draw_risk_tier'] === 'LOW') drTag = '<span class="badge-tag tag-dr-low">🟢 LOW</span>';
+                else if (f['draw_risk_tier'] === 'HIGH') drTag = '<span class="badge-tag tag-dr-high">🔴 HIGH</span>';
+                else drTag = '<span class="badge-tag tag-dr-med">🟡 MED</span>';
+
+                // Signal tag
+                let sigTag = '—';
+                if (f['is_2_0_profile']) sigTag = '<span class="badge-tag tag-sig-20">🔥 2-0</span>';
+                else if (f['strong_home_profile']) sigTag = '<span class="badge-tag tag-sig-sh">⚡ STRONG H</span>';
+
+                // Status cell (DYNAMIC)
+                let statusBadgeHtml = `<span class="badge-status status-upcoming">${liveInfo.label}</span>`;
+                if (liveInfo.isLive) {
+                    statusBadgeHtml = `<span class="badge-status status-live">${liveInfo.label}</span>`;
+                } else if (liveInfo.status === 'HT') {
+                    statusBadgeHtml = `<span class="badge-status status-ht">${liveInfo.label}</span>`;
+                } else if (liveInfo.isFinished) {
+                    statusBadgeHtml = `<span class="badge-status status-finished">${liveInfo.label}</span>`;
+                } else if (liveInfo.status !== 'UPCOMING') {
+                    statusBadgeHtml = `<span class="badge-status status-other">${liveInfo.label}</span>`;
+                }
+
+                tr.innerHTML = `
+                    <td>${f['Date (UTC)']}</td>
+                    <td>${f['Time (UTC)']}</td>
+                    <td><strong>${f['League']}</strong></td>
+                    <td>${f['Matchweek']}</td>
+                    <td><strong>${f['Home Team']}</strong></td>
+                    <td>${f['Away Team']}</td>
+                    <td style="color:#34d399; font-weight:600;">${f['P(H)']}</td>
+                    <td style="color:#9ca3af;">${f['P(D)']}</td>
+                    <td style="color:#f87171;">${f['P(A)']}</td>
+                    <td>${predBadge}</td>
+                    <td><span class="${scoreClass}">${f['Predicted Score']}</span></td>
+                    <td class="col-actual-score">${actualScoreHtml}</td>
+                    <td>${drTag}</td>
+                    <td>${sigTag}</td>
+                    <td class="fid-mono">${f['fixture_id']}</td>
+                    <td class="col-status">${statusBadgeHtml}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            updateStatusCounts();
+        }
+
+        function updateStatusCounts() {
+            let liveCnt = 0;
+            let finishedCnt = 0;
+            let upcomingCnt = 0;
+
+            FIXTURES.forEach(f => {
+                const info = getFixtureLiveInfo(f);
+                if (info.isLive) liveCnt++;
+                else if (info.isFinished) finishedCnt++;
+                else upcomingCnt++;
+            });
+
+            const elLive = document.getElementById('cnt-live');
+            const elUp = document.getElementById('cnt-upcoming');
+            const elFin = document.getElementById('cnt-finished');
+            const elAll = document.getElementById('cnt-all');
+
+            if (elLive) elLive.textContent = liveCnt;
+            if (elUp) elUp.textContent = upcomingCnt;
+            if (elFin) elFin.textContent = finishedCnt;
+            if (elAll) elAll.textContent = FIXTURES.length;
+        }
+
+        function setLeagueFilter(league, btn) {
+            currentLeague = league;
+            document.querySelectorAll('.filter-group:nth-child(1) .btn-filter').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderTable();
+        }
+
+        function setSignalFilter(signal, btn) {
+            currentSignal = signal;
+            document.querySelectorAll('.filter-group:nth-child(2) .btn-filter').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderTable();
+        }
+
+        function setStatusFilter(st, btn) {
+            currentStatusFilter = st;
+            document.querySelectorAll('.filter-group:nth-child(3) .btn-filter').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderTable();
+        }
+
+        function setDrawRiskFilter(dr, btn) {
+            currentDrawRisk = dr;
+            document.querySelectorAll('.filter-group:nth-child(4) .btn-filter').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderTable();
+        }
+
+        function onSearchChange() {
+            searchQuery = document.getElementById('teamSearch').value;
+            renderTable();
+        }
+
+        function sortTable(key) {
+            if (sortKey === key) {
+                sortAsc = !sortAsc;
+            } else {
+                sortKey = key;
+                sortAsc = true;
+            }
+            renderTable();
+        }
+
+        function setConnectionStatus(status, timeText) {
+            const dot = document.getElementById('live-status-dot');
+            const text = document.getElementById('live-status-text');
+            const timeEl = document.getElementById('live-last-updated');
+            if (!dot || !text || !timeEl) return;
+
+            if (status === 'connected') {
+                dot.className = 'live-dot connected';
+                text.textContent = '🟢 LIVE DATA CONNECTED';
+                if (timeText) timeEl.textContent = 'LAST UPDATED: ' + timeText;
+            } else if (status === 'reconnecting') {
+                dot.className = 'live-dot connecting';
+                text.textContent = '🟡 RECONNECTING…';
+                if (timeText) timeEl.textContent = 'LAST UPDATED: ' + timeText;
+            } else {
+                dot.className = 'live-dot offline';
+                text.textContent = '🔴 LIVE DATA OFFLINE';
+                if (timeText) timeEl.textContent = 'LAST UPDATED: ' + timeText;
+            }
+        }
+
+        function applyLiveScoresToDOM() {
+            // Fast in-place DOM update without re-sorting or breaking selections
+            FIXTURES.forEach(f => {
+                const fidStr = String(f['fixture_id']);
+                const row = document.querySelector(`.match-row[data-fixture-id="${fidStr}"]`);
+                if (!row) return;
+
+                const liveInfo = getFixtureLiveInfo(f);
+                row.setAttribute('data-status', liveInfo.status);
+
+                if (liveInfo.isLive) {
+                    row.classList.add('row-live');
+                    row.classList.remove('row-finished');
+                } else if (liveInfo.isFinished) {
+                    row.classList.add('row-finished');
+                    row.classList.remove('row-live');
+                } else {
+                    row.classList.remove('row-live', 'row-finished');
+                }
+
+                const scoreEl = row.querySelector('.col-actual-score');
+                if (scoreEl) {
+                    if (liveInfo.isLive) {
+                        scoreEl.innerHTML = `<span class="score-badge-live">${liveInfo.score}</span>`;
+                    } else if (liveInfo.isFinished) {
+                        scoreEl.innerHTML = `<span class="score-badge-ft">${liveInfo.score}</span>`;
+                    } else {
+                        scoreEl.innerHTML = `<span class="score-dash">—</span>`;
+                    }
+                }
+
+                const statusEl = row.querySelector('.col-status');
+                if (statusEl) {
+                    if (liveInfo.isLive) {
+                        statusEl.innerHTML = `<span class="badge-status status-live">${liveInfo.label}</span>`;
+                    } else if (liveInfo.status === 'HT') {
+                        statusEl.innerHTML = `<span class="badge-status status-ht">${liveInfo.label}</span>`;
+                    } else if (liveInfo.isFinished) {
+                        statusEl.innerHTML = `<span class="badge-status status-finished">${liveInfo.label}</span>`;
+                    } else if (liveInfo.status !== 'UPCOMING') {
+                        statusEl.innerHTML = `<span class="badge-status status-other">${liveInfo.label}</span>`;
+                    } else {
+                        statusEl.innerHTML = `<span class="badge-status status-upcoming">${liveInfo.label}</span>`;
+                    }
+                }
+            });
+
+            updateStatusCounts();
+        }
+
+        function pollLiveScores() {
+            const queryIds = FIXTURES.map(f => f['fixture_id']).join(',');
+            const targetUrl = LIVE_SCORES_API_URL + '?ids=' + encodeURIComponent(queryIds);
+            fetch(targetUrl, { cache: 'no-store' })
+                .then(resp => {
+                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                    return resp.json();
+                })
+                .then(data => {
+                    consecutiveFailures = 0;
+                    if (data && data.scores) {
+                        for (const [k, v] of Object.entries(data.scores)) {
+                            if (v && (v.is_finished || v.status === 'FT' || v.status === 'AET' || v.status === 'PEN')) {
+                                window._persistedCompletedScores[k] = v;
+                            }
+                        }
+                        liveScoresMap = Object.assign({}, window._persistedCompletedScores, data.scores);
+                        for (const [k, v] of Object.entries(window._persistedCompletedScores)) {
+                            const inc = data.scores[k];
+                            if (!inc || inc.status === 'UPCOMING' || inc.display_score === '—') {
+                                liveScoresMap[k] = v;
+                            }
+                        }
+                        applyLiveScoresToDOM();
+                    }
+                    const nowUtc = new Date().toISOString().substring(11, 19) + ' UTC';
+                    setConnectionStatus('connected', nowUtc);
+                })
+                .catch(err => {
+                    consecutiveFailures++;
+                    const nowUtc = new Date().toISOString().substring(11, 19) + ' UTC';
+                    if (consecutiveFailures >= 3) {
+                        setConnectionStatus('offline', nowUtc);
+                    } else {
+                        setConnectionStatus('reconnecting', nowUtc);
+                    }
+                    // Keep existing table intact; zero prediction modification
+                });
+        }
+
+        // Initial render on load and start 30s polling
+        window.addEventListener('DOMContentLoaded', () => {
+            renderTable();
+            pollLiveScores();
+            setInterval(pollLiveScores, POLLING_INTERVAL_MS);
+        });
+    </script>
+</body>
+</html>

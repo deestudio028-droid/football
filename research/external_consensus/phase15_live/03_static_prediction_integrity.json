@@ -1,0 +1,49 @@
+{
+  "total_fixtures": 48,
+  "frozen_prediction_sha256": "d179d13dd87d45d323619e3238425c41b3ec1faf69c650b295a555982d07de16",
+  "v4_model_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5",
+  "fields_immutable": [
+    "p_home",
+    "p_draw",
+    "p_away",
+    "PRED",
+    "canonical_predicted_score",
+    "draw_risk_tier",
+    "signal_profile",
+    "fixture_id",
+    "Home Team",
+    "Away Team",
+    "League",
+    "Matchweek",
+    "Date (UTC)",
+    "Time (UTC)"
+  ],
+  "fields_dynamic": [
+    "Actual Score",
+    "Match Status",
+    "Live Minute"
+  ],
+  "signal_fixtures_frozen": [
+    {
+      "fixture_id": 420656757,
+      "matchup": "FC Bayern M\u00fcnchen vs FC Union Berlin",
+      "pred_score": "2-0",
+      "signal": "2-0_PROFILE",
+      "p_home": 0.7765
+    },
+    {
+      "fixture_id": 420657842,
+      "matchup": "Manchester City vs Sunderland",
+      "pred_score": "2-0",
+      "signal": "2-0_PROFILE",
+      "p_home": 0.7048
+    },
+    {
+      "fixture_id": 420659393,
+      "matchup": "Bayer 04 Leverkusen vs RB Leipzig",
+      "pred_score": "2-1",
+      "signal": "STRONG_HOME_PROFILE",
+      "p_home": 0.6282
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "cohort": "2026-09-18 to 2026-09-21"
+  },
+  "F_2_0_signal": {
+    "fixtures": 2,
+    "correct_outcome": 2,
+    "exact_score": 0,
+    "outcome_accuracy": 1.0,
+    "exact_accuracy": 0.0,
+    "details": [
+      {
+        "fixture_id": "420656757",
+        "home": "FC Bayern München",
+        "away": "FC Union Berlin",
+        "pred": "2-0",
+        "actual": "7-0",
+        "outcome_ok": true,
+        "exact_ok": false,
+        "lambda_home": 2.3148,
+        "lambda_away": 0.5327,
+        "p_home": 0.7765
+      },
+      {
+        "fixture_id": "420657842",
+        "home": "Manchester City",
+        "away": "Sunderland",
+        "pred": "2-0",
+        "actual": "5-3",
+        "outcome_ok": true,
+        "exact_ok": false,
+        "lambda_home": 2.1646,
+        "lambda_away": 0.7252,
+        "p_home": 0.7048
+      }
+    ]
+  },
+  "G_strong_home_signal": {
+    "fixtures": 3,
+    "correct_outcome": 3,
+    "outcome_accuracy": 1.0,
+    "details": [
+      {
+        "fixture_id": "420656757",
+        "home": "FC Bayern München",
+        "away": "FC Union Berlin",
+        "pred": "H",
+        "actual": "H",
+        "pred_score": "2-0",
+        "actual_score": "7-0",
+        "is_2_0_profile": true,
+        "p_home": 0.7765
+      },
+      {
+        "fixture_id": "420657842",
+        "home": "Manchester City",
+        "away": "Sunderland",
+        "pred": "H",
+        "actual": "H",
+        "pred_score": "2-0",
+        "actual_score": "5-3",
+        "is_2_0_profile": true,
+        "p_home": 0.7048
+      },
+      {
+        "fixture_id": "420659393",
+        "home": "Bayer 04 Leverkusen",
+        "away": "RB Leipzig",
+        "pred": "H",
+        "actual": "H",
+        "pred_score": "2-1",
+        "actual_score": "2-0",
+        "is_2_0_profile": false,
+        "p_home": 0.6282
+      }
+    ]
+  },
+  "M_best_signals": [
+    {
+      "fixture_id": "420656757",
+      "home": "FC Bayern München",
+      "away": "FC Union Berlin",
+      "pred": "H",
+      "actual": "H",
+      "p_correct": 0.7765,
+      "score_pred": "2-0",
+      "score_actual": "7-0"
+    },
+    {
+      "fixture_id": "420657842",
+      "home": "Manchester City",
+      "away": "Sunderland",
+      "pred": "H",
+      "actual": "H",
+      "p_correct": 0.7048,
+      "score_pred": "2-0",
+      "score_actual": "5-3"
+    },
+    {
+      "fixture_id": "420654582",
+      "home": "Sevilla",
+      "away": "FC Barcelona",
+      "pred": "A",
+      "actual": "A",
+      "p_correct": 0.656,
+      "score_pred": "0-2",
+      "score_actual": "1-3"
+    },
+    {
+      "fixture_id": "420659393",
+      "home": "Bayer 04 Leverkusen",
+      "away": "RB Leipzig",
+      "pred": "H",
+      "actual": "H",
+      "p_correct": 0.6282,
+      "score_pred": "2-1",
+      "score_actual": "2-0"
+    },
+    {
+      "fixture_id": "420659455",
+      "home": "Juventus",
+      "away": "Atalanta",
+      "pred": "H",
+      "actual": "H",
+      "p_correct": 0.565,
+      "score_pred": "1-0",
+      "score_actual": "2-0"
+    },
+    {
+      "fixture_id": "420659484",
+      "home": "AC Milan",
+      "away": "Lecce",
+      "pred": "H",
+      "actual": "H",
+      "p_correct": 0.5529,
+      "score_pred": "1-0",
+      "score_actual": "3-0"
+    },
+    {
+      "fixture_id": "420654580",
+      "home": "Villarreal",
+      "away": "Levante",
+      "pred": "H",
+      "actual": "H",
+      "p_correct": 0.52,
+      "score_pred": "1-0",
+      "score_actual": "3-1"
+    },
+    {
+      "fixture_id": "420657833",
+      "home": "Borussia Mönchengladbach",
+      "away": "FSV Mainz 05",
+      "pred": "A",
+      "actual": "A",
+      "p_correct": 0.4833,
+      "score_pred": "1-1",
+      "score_actual": "3-4"
+    },
+    {
+      "fixture_id": "420657506",
+      "home": "Olympique Lyonnais",
+      "away": "Rennes",
+      "pred": "H",
+      "actual": "H",
+      "p_correct": 0.483,
+      "score_pred": "1-1",
+      "score_actual": "4-0"
+    },
+    {
+      "fixture_id": "420659485",
+      "home": "Olympique Marseille",
+      "away": "Paris Saint Germain",
+      "pred": "A",
+      "actual": "A",
+      "p_correct": 0.478,
+      "score_pred": "1-1",
+      "score_actual": "1-2"
+    }
+  ]
+}

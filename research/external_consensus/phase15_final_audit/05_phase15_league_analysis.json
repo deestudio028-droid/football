@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "cohort": "2026-09-18 to 2026-09-21"
+  },
+  "K_league_breakdown": {
+    "Bundesliga": {
+      "count": 9,
+      "accuracy_1x2": 0.6667,
+      "accuracy_exact": 0.0,
+      "mean_brier": 0.5281,
+      "mean_log_loss": 0.9037
+    },
+    "Ligue 1": {
+      "count": 9,
+      "accuracy_1x2": 0.7778,
+      "accuracy_exact": 0.0,
+      "mean_brier": 0.537,
+      "mean_log_loss": 0.9106
+    },
+    "Serie A": {
+      "count": 10,
+      "accuracy_1x2": 0.4,
+      "accuracy_exact": 0.1,
+      "mean_brier": 0.61,
+      "mean_log_loss": 1.021
+    },
+    "La Liga": {
+      "count": 10,
+      "accuracy_1x2": 0.6,
+      "accuracy_exact": 0.2,
+      "mean_brier": 0.6044,
+      "mean_log_loss": 1.0085
+    },
+    "Premier League": {
+      "count": 10,
+      "accuracy_1x2": 0.4,
+      "accuracy_exact": 0.1,
+      "mean_brier": 0.604,
+      "mean_log_loss": 1.0088
+    }
+  }
+}

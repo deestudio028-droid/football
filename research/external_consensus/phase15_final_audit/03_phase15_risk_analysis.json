@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "cohort": "2026-09-18 to 2026-09-21"
+  },
+  "E_draw_risk_by_tier": {
+    "LOW": {
+      "count": 6,
+      "actual_draws": 0,
+      "draw_rate": 0.0
+    },
+    "MEDIUM": {
+      "count": 32,
+      "actual_draws": 8,
+      "draw_rate": 0.25
+    },
+    "HIGH": {
+      "count": 10,
+      "actual_draws": 2,
+      "draw_rate": 0.2
+    }
+  },
+  "overall_draws": {
+    "actual": 10,
+    "total": 48,
+    "rate": 0.2083
+  },
+  "draw_risk_score_stats": {
+    "mean": 0.2511,
+    "by_tier": {
+      "LOW": 0.1966,
+      "MEDIUM": 0.2519,
+      "HIGH": 0.2814
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "audit_timestamp": "2026-09-21T03:06:04.716674Z",
+    "cohort": "2026-09-18 to 2026-09-21",
+    "leagues": [
+      "Premier League",
+      "La Liga",
+      "Serie A",
+      "Bundesliga",
+      "Ligue 1"
+    ],
+    "total_fixtures": 48,
+    "fixtures_completed": 48,
+    "fixtures_upcoming": 0,
+    "fixtures_postponed": 0,
+    "frozen_v4_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5",
+    "sportmonks_excluded": true
+  },
+  "A_1x2_accuracy": {
+    "correct": 27,
+    "total": 48,
+    "accuracy": 0.5625,
+    "actual_outcome_distribution": {
+      "H": 27,
+      "A": 11,
+      "D": 10
+    },
+    "predicted_outcome_distribution": {
+      "H": 36,
+      "A": 12
+    }
+  },
+  "B_exact_score": {
+    "correct": 4,
+    "total": 48,
+    "accuracy": 0.0833,
+    "exact_hits": [
+      {
+        "fixture_id": "420654558",
+        "home": "Osasuna",
+        "away": "Rayo Vallecano",
+        "score": "1-1",
+        "league": "La Liga"
+      },
+      {
+        "fixture_id": "420659043",
+        "home": "Fiorentina",
+        "away": "Napoli",
+        "score": "1-1",
+        "league": "Serie A"
+      },
+      {
+        "fixture_id": "420659446",
+        "home": "Fulham",
+        "away": "Manchester United",
+        "score": "1-1",
+        "league": "Premier League"
+      },
+      {
+        "fixture_id": "420654708",
+        "home": "Deportivo A Coruña",
+        "away": "Real Betis",
+        "score": "1-1",
+        "league": "La Liga"
+      }
+    ]
+  },
+  "C_brier_score": {
+    "mean": 0.578543,
+    "min": 0.078635,
+    "max": 0.882435,
+    "note": "Lower is better. Perfect = 0, Random baseline ≈ 0.667"
+  },
+  "D_log_loss": {
+    "mean": 0.973175,
+    "min": 0.252959,
+    "max": 1.430455,
+    "note": "Lower is better. Perfect = 0."
+  },
+  "H_high_confidence": {
+    "count": 3,
+    "correct": 3,
+    "accuracy": 1.0
+  },
+  "I_scoreline_distribution": {
+    "predicted": {
+      "1-1": 36,
+      "1-0": 8,
+      "2-0": 2,
+      "0-2": 1,
+      "2-1": 1
+    },
+    "actual": {
+      "2-1": 10,
+      "1-1": 5,
+      "0-1": 4,
+      "2-0": 4,
+      "3-0": 3,
+      "0-0": 3,
+      "1-3": 2,
+      "2-3": 2,
+      "2-2": 2,
+      "3-2": 2,
+      "1-0": 2,
+      "3-1": 2,
+      "7-0": 1,
+      "3-4": 1,
+      "5-0": 1
+    }
+  },
+  "J_calibration": {
+    "<30%": {
+      "count": 20,
+      "correct": 13,
+      "accuracy": 0.65,
+      "mean_p_correct": 0.4574
+    },
+    "30-50%": {
+      "count": 40,
+      "correct": 20,
+      "accuracy": 0.5,
+      "mean_p_correct": 0.3571
+    },
+    "50-65%": {
+      "count": 5,
+      "correct": 4,
+      "accuracy": 0.8,
+      "mean_p_correct": 0.5062
+    },
+    "65-80%": {
+      "count": 3,
+      "correct": 3,
+      "accuracy": 1.0,
+      "mean_p_correct": 0.7124
+    },
+    ">80%": {
+      "count": 0,
+      "correct": 0,
+      "accuracy": 0.0,
+      "mean_p_correct": 0.0
+    }
+  },
+  "N_phase14_canonical_fix": {
+    "fixtures_with_canonical_score": 48,
+    "2_0_predictions": 2,
+    "exact_2_0_hit": 0,
+    "note": "Phase 14 canonical fix: modal_scoreline() used instead of rounding lambda values."
+  },
+  "O_live_data_integrity": {
+    "total_queried": 48,
+    "ft_returned": 48,
+    "upcoming_remaining": 0,
+    "postponed": 0,
+    "errors": 0,
+    "completeness_pct": 100.0,
+    "source": "OddAlerts /fixtures/multiple",
+    "query_timestamp": "2026-09-21T03:06:04.716641Z"
+  },
+  "P_sportmonks": {
+    "excluded": true,
+    "reason": "Phase 15 production predictions were generated WITHOUT Sportmonks data.",
+    "v4_sha256_unchanged": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"
+  },
+  "Q_model_change_decision": {
+    "accuracy_1x2": 0.5625,
+    "mean_brier": 0.5785,
+    "mean_log_loss": 0.9732,
+    "principle": "ONE WEEK / ONE COHORT SHOULD NOT AUTOMATICALLY TRIGGER MODEL RETRAINING.",
+    "recommendation": "HOLD — analysis only. No retraining warranted from a single cohort.",
+    "rationale": "With 48 fixtures, accuracy=56.2%. Systematic analysis of multiple cohorts required before any model update."
+  },
+  "R_phase_comparison": {
+    "phase15": {
+      "cohort": "2026-09-18 to 2026-09-21",
+      "fixtures_completed": 48,
+      "accuracy_1x2": 0.5625,
+      "accuracy_exact": 0.0833,
+      "mean_brier": 0.5785,
+      "mean_log_loss": 0.9732
+    },
+    "phase14_reference": {
+      "cohort": "2026-09-10 to 2026-09-16",
+      "note": "Phase 14 reference metrics would go here from 02_phase14_metrics.json",
+      "accuracy_1x2": "see phase14 audit"
+    },
+    "note": "Phase-over-phase requires Phase 14 audit to be available."
+  }
+}

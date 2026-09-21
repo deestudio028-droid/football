@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "cohort": "2026-09-18 to 2026-09-21"
+  },
+  "2_0_profile": {
+    "v4": {
+      "label": "V4 Only",
+      "n": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "exact": 0,
+      "exact_accuracy": 0.0,
+      "actual_h": 2,
+      "actual_d": 0,
+      "actual_a": 0
+    },
+    "sm": {
+      "label": "Sportmonks Only",
+      "n": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "exact": 0,
+      "exact_accuracy": 0.0,
+      "actual_h": 2,
+      "actual_d": 0,
+      "actual_a": 0
+    },
+    "m3_50_50": {
+      "label": "50/50 Blend",
+      "n": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "exact": 0,
+      "exact_accuracy": 0.0,
+      "actual_h": 2,
+      "actual_d": 0,
+      "actual_a": 0
+    },
+    "m4_70_30": {
+      "label": "70/30 V4-Heavy",
+      "n": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "exact": 0,
+      "exact_accuracy": 0.0,
+      "actual_h": 2,
+      "actual_d": 0,
+      "actual_a": 0
+    },
+    "details": [
+      {
+        "fixture_id": "420656757",
+        "home": "FC Bayern München",
+        "away": "FC Union Berlin",
+        "v4_pred": "H",
+        "v4_score_pred": "2-0",
+        "sm_pred": "H",
+        "sm_pd": 0.15213,
+        "actual_outcome": "H",
+        "actual_score": "7-0",
+        "lambda_h": 2.3148,
+        "lambda_a": 0.5327
+      },
+      {
+        "fixture_id": "420657842",
+        "home": "Manchester City",
+        "away": "Sunderland",
+        "v4_pred": "H",
+        "v4_score_pred": "2-0",
+        "sm_pred": "H",
+        "sm_pd": 0.178664,
+        "actual_outcome": "H",
+        "actual_score": "5-3",
+        "lambda_h": 2.1646,
+        "lambda_a": 0.7252
+      }
+    ]
+  },
+  "strong_home_profile": {
+    "v4": {
+      "label": "V4 Only",
+      "n": 3,
+      "correct": 3,
+      "accuracy": 1.0,
+      "exact": 0,
+      "exact_accuracy": 0.0,
+      "actual_h": 3,
+      "actual_d": 0,
+      "actual_a": 0
+    },
+    "sm": {
+      "label": "Sportmonks Only",
+      "n": 3,
+      "correct": 3,
+      "accuracy": 1.0,
+      "exact": 0,
+      "exact_accuracy": 0.0,
+      "actual_h": 3,
+      "actual_d": 0,
+      "actual_a": 0
+    },
+    "m3_50_50": {
+      "label": "50/50 Blend",
+      "n": 3,
+      "correct": 3,
+      "accuracy": 1.0,
+      "exact": 0,
+      "exact_accuracy": 0.0,
+      "actual_h": 3,
+      "actual_d": 0,
+      "actual_a": 0
+    },
+    "details": [
+      {
+        "fixture_id": "420656757",
+        "home": "FC Bayern München",
+        "away": "FC Union Berlin",
+        "v4_pred": "H",
+        "sm_pred": "H",
+        "actual_outcome": "H",
+        "actual_score": "7-0",
+        "v4_is_2_0": true
+      },
+      {
+        "fixture_id": "420657842",
+        "home": "Manchester City",
+        "away": "Sunderland",
+        "v4_pred": "H",
+        "sm_pred": "H",
+        "actual_outcome": "H",
+        "actual_score": "5-3",
+        "v4_is_2_0": true
+      },
+      {
+        "fixture_id": "420659393",
+        "home": "Bayer 04 Leverkusen",
+        "away": "RB Leipzig",
+        "v4_pred": "H",
+        "sm_pred": "H",
+        "actual_outcome": "H",
+        "actual_score": "2-0",
+        "v4_is_2_0": false
+      }
+    ]
+  },
+  "draw_risk_by_tier": {
+    "LOW": {
+      "count": 6,
+      "actual_draws": 0,
+      "actual_draw_rate": 0.0,
+      "v4_pred_draws": 0,
+      "sm_pred_draws": 0,
+      "m3_pred_draws": 0
+    },
+    "MEDIUM": {
+      "count": 32,
+      "actual_draws": 8,
+      "actual_draw_rate": 0.25,
+      "v4_pred_draws": 0,
+      "sm_pred_draws": 0,
+      "m3_pred_draws": 0
+    },
+    "HIGH": {
+      "count": 10,
+      "actual_draws": 2,
+      "actual_draw_rate": 0.2,
+      "v4_pred_draws": 0,
+      "sm_pred_draws": 0,
+      "m3_pred_draws": 0
+    }
+  }
+}

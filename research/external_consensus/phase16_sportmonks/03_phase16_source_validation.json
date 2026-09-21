@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "audit_timestamp": "2026-09-21T10:34:52.136274+00:00",
+    "cohort": "2026-09-18 to 2026-09-21",
+    "total_fixtures": 48
+  },
+  "coverage": {
+    "sm_found": 48,
+    "sm_exact_match": 48,
+    "sm_substring_both_match": 0,
+    "sm_not_found": 0,
+    "sm_probs_valid": 48,
+    "sm_probs_invalid": 0,
+    "coverage_pct": 100.0,
+    "league_id_scrambling_detected": true
+  },
+  "temporal_status": {
+    "PRE_KICKOFF_VERIFIED": 0,
+    "TEMPORAL_UNKNOWN": 48,
+    "POST_KICKOFF": 0,
+    "NOT_AVAILABLE": 0,
+    "note": "Data retrieved post-kickoff. API provides no publication timestamp. Cannot classify as PRE_KICKOFF_VERIFIED."
+  },
+  "validation_checks": {
+    "fixture_id_mapping": "OddAlerts fixture_id primary key; Sportmonks matched by date+team name (league_id ignored due to scrambling)",
+    "home_team_mapping": "Normalized unicode-stripped comparison; exact or substring match",
+    "away_team_mapping": "Same as home team",
+    "competition_mapping": "OddAlerts league name → Sportmonks league_id lookup table",
+    "date_time_mapping": "Date (YYYY-MM-DD) matched exactly",
+    "probability_validity": "P(H)>=0, P(D)>=0, P(A)>=0 and sum≈1 enforced",
+    "probability_sum": "Renormalized after extraction",
+    "missing_values": "0 fixtures had invalid/missing probabilities",
+    "provider_status": "Sportmonks API returned 200 OK for all requests",
+    "temporal_metadata": "NOT AVAILABLE — Sportmonks does not expose prediction publication timestamp"
+  },
+  "fixture_validation_errors": []
+}

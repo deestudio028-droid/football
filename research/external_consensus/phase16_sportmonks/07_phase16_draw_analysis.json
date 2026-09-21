@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "cohort": "2026-09-18 to 2026-09-21",
+    "total_fixtures": 48,
+    "sm_covered_fixtures": 48,
+    "actual_draws_all_48": 10,
+    "actual_draws_sm_covered": 10,
+    "actual_draw_rate": 0.2083,
+    "note": "V4 predicted 0 draws out of 48 (0%) — Phase 15 key finding"
+  },
+  "draw_pd_stats_on_actual_draws": {
+    "v4": {
+      "label": "V4 (on actual draw fixtures)",
+      "n": 10,
+      "mean_pd": 0.2585,
+      "median_pd": 0.2577,
+      "min_pd": 0.2392,
+      "max_pd": 0.2798
+    },
+    "sportmonks": {
+      "label": "Sportmonks (on actual draw fixtures)",
+      "n": 10,
+      "mean_pd": 0.2603,
+      "median_pd": 0.2615,
+      "min_pd": 0.243,
+      "max_pd": 0.2769
+    }
+  },
+  "sportmonks_draw_impact": {
+    "sm_increases_pd": 25,
+    "sm_decreases_pd": 23,
+    "sm_makes_draw_argmax": 0,
+    "sm_removes_draw_argmax": 0,
+    "sm_changes_pred": 2,
+    "agreement_v4_sm": 46,
+    "disagreement_v4_sm": 2,
+    "agreement_rate": 0.9583
+  },
+  "draw_calibration_by_method": [
+    {
+      "method": "V4 Only",
+      "n": 48,
+      "actual_draws": 10,
+      "pred_draws": 0,
+      "actual_draw_rate": 0.2083,
+      "predicted_draw_rate": 0.0,
+      "calibration_gap": 0.2083
+    },
+    {
+      "method": "Sportmonks Only",
+      "n": 48,
+      "actual_draws": 10,
+      "pred_draws": 0,
+      "actual_draw_rate": 0.2083,
+      "predicted_draw_rate": 0.0,
+      "calibration_gap": 0.2083
+    },
+    {
+      "method": "50/50 Blend",
+      "n": 48,
+      "actual_draws": 10,
+      "pred_draws": 0,
+      "actual_draw_rate": 0.2083,
+      "predicted_draw_rate": 0.0,
+      "calibration_gap": 0.2083
+    },
+    {
+      "method": "70/30 V4-Heavy",
+      "n": 48,
+      "actual_draws": 10,
+      "pred_draws": 0,
+      "actual_draw_rate": 0.2083,
+      "predicted_draw_rate": 0.0,
+      "calibration_gap": 0.2083
+    },
+    {
+      "method": "30/70 SM-Heavy",
+      "n": 48,
+      "actual_draws": 10,
+      "pred_draws": 0,
+      "actual_draw_rate": 0.2083,
+      "predicted_draw_rate": 0.0,
+      "calibration_gap": 0.2083
+    }
+  ],
+  "actual_draw_fixtures": [
+    {
+      "fixture_id": "420654558",
+      "home": "Osasuna",
+      "away": "Rayo Vallecano",
+      "actual_score": "1-1",
+      "v4_pd": 0.2438,
+      "v4_pred": "H",
+      "sm_pd": 0.243,
+      "sm_pred": "H",
+      "m3_pd": 0.243412,
+      "m3_pred": "H",
+      "league": "La Liga",
+      "v4_draw_risk": "MEDIUM"
+    },
+    {
+      "fixture_id": "420657746",
+      "home": "Bologna",
+      "away": "Torino",
+      "actual_score": "1-1",
+      "v4_pd": 0.2787,
+      "v4_pred": "H",
+      "sm_pd": 0.2745,
+      "sm_pred": "H",
+      "m3_pd": 0.276586,
+      "m3_pred": "H",
+      "league": "Serie A",
+      "v4_draw_risk": "HIGH"
+    },
+    {
+      "fixture_id": "420657834",
+      "home": "Eintracht Frankfurt",
+      "away": "SC Freiburg",
+      "actual_score": "2-2",
+      "v4_pd": 0.2392,
+      "v4_pred": "A",
+      "sm_pd": 0.2503,
+      "sm_pred": "A",
+      "m3_pd": 0.244738,
+      "m3_pred": "A",
+      "league": "Bundesliga",
+      "v4_draw_risk": "MEDIUM"
+    },
+    {
+      "fixture_id": "420654607",
+      "home": "Athletic Club",
+      "away": "Deportivo Alavés",
+      "actual_score": "0-0",
+      "v4_pd": 0.2647,
+      "v4_pred": "H",
+      "sm_pd": 0.2588,
+      "sm_pred": "H",
+      "m3_pd": 0.26175,
+      "m3_pred": "H",
+      "league": "La Liga",
+      "v4_draw_risk": "MEDIUM"
+    },
+    {
+      "fixture_id": "420657949",
+      "home": "Roma",
+      "away": "Inter",
+      "actual_score": "2-2",
+      "v4_pd": 0.2623,
+      "v4_pred": "H",
+      "sm_pd": 0.2632,
+      "sm_pred": "H",
+      "m3_pd": 0.262763,
+      "m3_pred": "H",
+      "league": "Serie A",
+      "v4_draw_risk": "MEDIUM"
+    },
+    {
+      "fixture_id": "420659043",
+      "home": "Fiorentina",
+      "away": "Napoli",
+      "actual_score": "1-1",
+      "v4_pd": 0.2798,
+      "v4_pred": "A",
+      "sm_pd": 0.276917,
+      "sm_pred": "A",
+      "m3_pd": 0.278358,
+      "m3_pred": "A",
+      "league": "Serie A",
+      "v4_draw_risk": "HIGH"
+    },
+    {
+      "fixture_id": "420657843",
+      "home": "Leeds United",
+      "away": "Crystal Palace",
+      "actual_score": "0-0",
+      "v4_pd": 0.2567,
+      "v4_pred": "H",
+      "sm_pd": 0.2615,
+      "sm_pred": "H",
+      "m3_pd": 0.259087,
+      "m3_pred": "H",
+      "league": "Premier League",
+      "v4_draw_risk": "MEDIUM"
+    },
+    {
+      "fixture_id": "420659447",
+      "home": "Schalke 04",
+      "away": "Elversberg",
+      "actual_score": "0-0",
+      "v4_pd": 0.2472,
+      "v4_pred": "H",
+      "sm_pd": 0.254124,
+      "sm_pred": "H",
+      "m3_pd": 0.250662,
+      "m3_pred": "H",
+      "league": "Bundesliga",
+      "v4_draw_risk": "MEDIUM"
+    },
+    {
+      "fixture_id": "420659446",
+      "home": "Fulham",
+      "away": "Manchester United",
+      "actual_score": "1-1",
+      "v4_pd": 0.2577,
+      "v4_pred": "A",
+      "sm_pd": 0.2538,
+      "sm_pred": "A",
+      "m3_pd": 0.25575,
+      "m3_pred": "A",
+      "league": "Premier League",
+      "v4_draw_risk": "MEDIUM"
+    },
+    {
+      "fixture_id": "420654708",
+      "home": "Deportivo A Coruña",
+      "away": "Real Betis",
+      "actual_score": "1-1",
+      "v4_pd": 0.255,
+      "v4_pred": "A",
+      "sm_pd": 0.26692,
+      "sm_pred": "A",
+      "m3_pd": 0.26096,
+      "m3_pred": "A",
+      "league": "La Liga",
+      "v4_draw_risk": "MEDIUM"
+    }
+  ]
+}

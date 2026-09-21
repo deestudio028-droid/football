@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "method": "SPORTMONKS_ONLY",
+    "temporal_status": "TEMPORAL_UNKNOWN"
+  },
+  "results": {
+    "method": "Sportmonks Only",
+    "method_key": "m2_sm_only",
+    "total": 48,
+    "correct": 25,
+    "accuracy_1x2": 0.5208,
+    "exact_score_correct": 4,
+    "accuracy_exact": 0.0833,
+    "mean_brier": 0.580356,
+    "mean_log_loss": 0.975602,
+    "actual_h": 27,
+    "actual_d": 10,
+    "actual_a": 11,
+    "pred_draws": 0,
+    "draws_correct": 0,
+    "homes_correct": 21,
+    "aways_correct": 4,
+    "draw_accuracy": 0.0,
+    "home_accuracy": 0.7778,
+    "away_accuracy": 0.3636,
+    "actual_draw_rate": 0.2083,
+    "predicted_draw_rate": 0.0,
+    "draw_calibration_gap": 0.2083
+  }
+}

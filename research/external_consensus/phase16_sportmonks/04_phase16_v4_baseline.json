@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "method": "V4_ONLY",
+    "frozen_sha256": "1c7f1e69587f0520edc371f62942d6269541410e7687525ba13c3c26c4acfbc5"
+  },
+  "full_48": {
+    "method": "V4 Only (Full 48)",
+    "method_key": "v4_full_48",
+    "total": 48,
+    "correct": 27,
+    "accuracy_1x2": 0.5625,
+    "exact_score_correct": 4,
+    "accuracy_exact": 0.0833,
+    "mean_brier": 0.578543,
+    "mean_log_loss": 0.973175,
+    "actual_h": 27,
+    "actual_d": 10,
+    "actual_a": 11,
+    "pred_draws": 0,
+    "draws_correct": 0,
+    "draw_accuracy": 0.0,
+    "home_accuracy": 0.8519,
+    "away_accuracy": 0.3636,
+    "actual_draw_rate": 0.2083,
+    "predicted_draw_rate": 0.0,
+    "draw_calibration_gap": 0.2083
+  },
+  "sm_covered_subset": {
+    "method": "V4 Only (SM-covered subset)",
+    "method_key": "m1_v4_only",
+    "total": 48,
+    "correct": 27,
+    "accuracy_1x2": 0.5625,
+    "exact_score_correct": 4,
+    "accuracy_exact": 0.0833,
+    "mean_brier": 0.578543,
+    "mean_log_loss": 0.973175,
+    "actual_h": 27,
+    "actual_d": 10,
+    "actual_a": 11,
+    "pred_draws": 0,
+    "draws_correct": 0,
+    "homes_correct": 23,
+    "aways_correct": 4,
+    "draw_accuracy": 0.0,
+    "home_accuracy": 0.8519,
+    "away_accuracy": 0.3636,
+    "actual_draw_rate": 0.2083,
+    "predicted_draw_rate": 0.0,
+    "draw_calibration_gap": 0.2083
+  }
+}

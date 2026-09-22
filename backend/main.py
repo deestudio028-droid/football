@@ -64,6 +64,17 @@ DEFAULT_55_FIXTURE_IDS = [
     420644698, 420644694, 420644697, 420644695, 420644693, 420644692
 ]
 
+# Canonical Oct 9-13, 2026 fixtures (48 fixtures)
+DEFAULT_OCT_48_FIXTURE_IDS = [
+    420679102, 420660812, 420654657, 420665726, 420654552, 420669055, 420678999,
+    420679178, 420679177, 420679170, 420679131, 420665971, 420665977, 420665902,
+    420665723, 420654587, 420660809, 420668930, 420679145, 420654560, 420665724,
+    420669040, 420660811, 420660813, 420660810, 420660806, 420654590, 420668928,
+    420654608, 420669061, 420668931, 420665875, 420665914, 420660808, 420679118,
+    420654705, 420660888, 420665834, 420678977, 420668934, 420654530, 420669035,
+    420660807, 420654589, 420668921, 420668929, 420665848, 420654559
+]
+
 
 def load_target_fixture_ids() -> List[int]:
     """Load target fixture IDs from all upcoming batch ledgers, falling back to static lists."""
@@ -82,8 +93,8 @@ def load_target_fixture_ids() -> List[int]:
             except Exception as exc:
                 logger.warning(f"Could not read fixture IDs from {ledger_file}: {exc}")
 
-    # Ensure all Phase 15 and previous fixtures are included
-    for fid in DEFAULT_PHASE15_48_FIXTURE_IDS + DEFAULT_55_FIXTURE_IDS:
+    # Ensure all Phase 15, earlier batch, and Oct fixtures are included
+    for fid in DEFAULT_PHASE15_48_FIXTURE_IDS + DEFAULT_55_FIXTURE_IDS + DEFAULT_OCT_48_FIXTURE_IDS:
         fids_set[fid] = None
 
     return list(fids_set.keys())
